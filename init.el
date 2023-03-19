@@ -24,6 +24,7 @@
 
 (setq default-buffer-file-coding-system 'utf-8-unix)
 
+(setq ring-bell-function #'ignore)
 (setq scroll-error-top-bottom t)
 (setq disabled-command-function nil)
 (setq suggest-key-bindings t)
