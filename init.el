@@ -1,15 +1,12 @@
-;; -*- lexical-binding: t; -*-
+;;; -*- lexical-binding: t; -*-
+;;; habamax: personal emacs configuration
 
-;; habamax: personal emacs configuration
-
+(setq user-full-name "Maxim Kim"
+      user-mail-address "habamax@gmail.com")
 
 (setq custom-file (concat user-emacs-directory "custom.el"))
 (when (file-exists-p custom-file)
   (load custom-file))
-
-
-(setq user-full-name "Maxim Kim"
-      user-mail-address "habamax@gmail.com")
 
 (set-language-environment 'utf-8)
 (set-default-coding-systems 'utf-8)
@@ -20,7 +17,6 @@
   (setq default-process-coding-system '(utf-8-dos . cp1251-dos)))
 
 (setq default-buffer-file-coding-system 'utf-8-unix)
-
 (setq ring-bell-function #'ignore)
 (setq scroll-error-top-bottom t)
 (setq disabled-command-function nil)
