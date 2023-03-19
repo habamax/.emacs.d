@@ -36,7 +36,9 @@
 (savehist-mode 1)
 
 (setq ido-enable-flex-matching t
-      ido-use-virtual-buffers t)
+      ido-use-virtual-buffers t
+      ido-create-new-buffer 'always
+      ido-use-filename-at-point 'guess)
 (ido-mode 1)
 
 (winner-mode t)
