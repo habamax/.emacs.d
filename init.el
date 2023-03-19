@@ -50,6 +50,12 @@
 (setq auto-mode-alist
       (append '(("\\.txt\\'" . rst-mode)) auto-mode-alist))
 
+
+(if (window-system)
+    (cd "~/"))
+
+
+
 ;; packages
 (setq-default
  package-native-compile t
@@ -69,7 +75,5 @@
 
 (use-package which-key
   :config (which-key-mode))
-
-
 
 (add-hook 'emacs-startup-hook #'(lambda () (message "%s" (emacs-init-time))))
