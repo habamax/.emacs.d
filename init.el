@@ -7,9 +7,6 @@
 (when (file-exists-p custom-file)
   (load custom-file))
 
-(defconst +IS-OSX+ (eq system-type 'darwin))
-(defconst +IS-WINDOWS+ (eq system-type 'windows-nt))
-
 
 (setq user-full-name "Maxim Kim"
       user-mail-address "habamax@gmail.com")

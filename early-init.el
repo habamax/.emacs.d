@@ -1,7 +1,9 @@
+(defconst +IS-OSX+ (eq system-type 'darwin))
+(defconst +IS-WINDOWS+ (eq system-type 'windows-nt))
+
 (setq-default
  load-prefer-newer t)
  
-
 (setq-default
  default-frame-alist
  '((fullscreen . maximized)
