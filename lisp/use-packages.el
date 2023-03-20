@@ -16,4 +16,5 @@
   :bind ("C-c g" . magit-status))
 
 (use-package markdown-mode
+  :mode "\\.txt$"
   :config (setq markdown-asymmetric-header t))

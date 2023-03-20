@@ -43,9 +43,6 @@
 
 (winner-mode t)
 
-(setq auto-mode-alist
-      (append '(("\\.txt\\'" . rst-mode)) auto-mode-alist))
-
 (add-to-list 'load-path (expand-file-name "lisp/" user-emacs-directory))
 (load "use-packages")
 
