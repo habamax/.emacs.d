@@ -1,5 +1,5 @@
-;; wildcharm-theme.el -- port of my vim-wildcharm colorscheme
-;; Author: Maxim Kim <habamax@gmail.com>
+;;; wildcharm-theme.el -- port of my vim-wildcharm colorscheme
+;;; Author: Maxim Kim <habamax@gmail.com>
 
 
 (deftheme wildcharm "Vibrant and playful.")
