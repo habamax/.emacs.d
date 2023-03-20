@@ -12,17 +12,18 @@
 (set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (setq default-input-method 'russian-computer)
-
+(setq default-buffer-file-coding-system 'utf-8-unix)
 (when +IS-WINDOWS+
   (setq default-process-coding-system '(utf-8-dos . cp1251-dos)))
 
-(setq default-buffer-file-coding-system 'utf-8-unix)
 (setq ring-bell-function #'ignore)
 (setq scroll-error-top-bottom t)
 (setq disabled-command-function nil)
 (setq suggest-key-bindings t)
 (setq-default fill-column 80)
 (setq-default indent-tabs-mode nil)
+
+;; ripgrep as grep
 (setq grep-command "rg -nS --no-heading ")
 (setq grep-use-null-device nil)
 
