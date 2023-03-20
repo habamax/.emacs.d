@@ -4,7 +4,9 @@
 
 (deftheme wildcharm "Vibrant and playful.")
 
-(let ((fg "#d0d0d0")(bg "#1c1f26")
+(let ((class256 '((class color) (min-colors 256)))
+      (classTC '((class color) (min-colors 257)))
+      (fg "#d0d0d0")(bg "#1c1f26")
       (color00 "#000000")(color08 "#767676")
       (color01 "#d7005f")(color09 "#ff5f87")
       (color02 "#00af5f")(color10 "#00d75f")
@@ -20,79 +22,80 @@
   (custom-theme-set-faces
    'wildcharm
 
-   `(default ((t (:background ,bg :foreground ,fg))))
-   '(cursor ((nil (:background "#ffffff"))))
+   `(default ((,classTC (:background ,bg :foreground ,fg))
+              (t (:background nil :foreground nil))))
+   `(cursor ((,classTC (:background "#ffffff"))))
 
    ;; UI
-   `(minibuffer-prompt ((t (:foreground ,color11 :weight bold))))
-   `(mode-line ((t (:background ,colorLA :foreground ,color07 :box (:line-width 1 :color ,color00)))))
-   `(mode-line-inactive ((t (:background ,colorLI :foreground ,color08 :box (:line-width 1 :color ,color00)))))
+   `(minibuffer-prompt ((,class256 (:foreground ,color11 :weight bold))))
+   `(mode-line ((,class256 (:background ,colorLA :foreground ,color07 :box (:line-width 1 :color ,color00)))))
+   `(mode-line-inactive ((,class256 (:background ,colorLI :foreground ,color08 :box (:line-width 1 :color ,color00)))))
    `(vertical-border ((nil (:foreground ,color08))))
    `(fringe ((nil (:background ,color00))))
    `(highlight ((nil (:foreground ,color00 :background ,color12))))
 
-   `(isearch ((t (:background ,color11 :foreground ,color00))))
-   `(lazy-highlight ((t (:background ,color10 :foreground ,color00))))
-   `(isearch-fail ((t (:background ,color09 :foreground ,color00))))
-   `(match ((t (:background ,color06 :foreground ,color00))))
+   `(isearch ((,class256 (:background ,color11 :foreground ,color00))))
+   `(lazy-highlight ((,class256 (:background ,color10 :foreground ,color00))))
+   `(isearch-fail ((,class256 (:background ,color09 :foreground ,color00))))
+   `(match ((,class256 (:background ,color06 :foreground ,color00))))
 
-   `(region ((t (:background ,color04 :foreground ,bg))))
+   `(region ((,class256 (:background ,color04 :foreground ,bg))))
 
-   `(line-number ((t (:foreground ,colorNT))))
-   `(line-number-current-line ((t (:foreground ,color03 :weight bold))))
-   `(warning ((t (:foreground ,color03 :weight bold))))
-   `(error ((t (:foreground ,color09 :weight bold))))
-   `(success ((t (:foreground ,color10 :weight bold))))
-   `(shadow ((t (:foreground ,colorNT))))
-   `(trailing-whitespace ((t (:foreground ,color01 :weight bold))))
+   `(line-number ((,class256 (:foreground ,colorNT))))
+   `(line-number-current-line ((,class256 (:foreground ,color03 :weight bold))))
+   `(warning ((,class256 (:foreground ,color03 :weight bold))))
+   `(error ((,class256 (:foreground ,color09 :weight bold))))
+   `(success ((,class256 (:foreground ,color10 :weight bold))))
+   `(shadow ((,class256 (:foreground ,colorNT))))
+   `(trailing-whitespace ((,class256 (:foreground ,color01 :weight bold))))
 
    ;; syntax
-   `(font-lock-string-face ((t (:foreground ,color10))))
-   `(font-lock-comment-face ((t (:foreground ,color08))))
-   `(font-lock-keyword-face ((t (:foreground ,color12))))
-   `(font-lock-preprocessor-face ((t (:foreground ,color14))))
-   `(font-lock-builtin-face ((t (:foreground ,color05))))
-   `(font-lock-type-face ((t (:foreground ,color11))))
-   `(font-lock-function-name-face ((t (:foreground ,color13))))
-   `(font-lock-variable-name-face ((t (:foreground ,color06))))
-   `(font-lock-constant-face ((t (:foreground ,color09))))
+   `(font-lock-string-face ((,class256 (:foreground ,color10))))
+   `(font-lock-comment-face ((,class256 (:foreground ,color08))))
+   `(font-lock-keyword-face ((,class256 (:foreground ,color12))))
+   `(font-lock-preprocessor-face ((,class256 (:foreground ,color14))))
+   `(font-lock-builtin-face ((,class256 (:foreground ,color05))))
+   `(font-lock-type-face ((,class256 (:foreground ,color11))))
+   `(font-lock-function-name-face ((,class256 (:foreground ,color13))))
+   `(font-lock-variable-name-face ((,class256 (:foreground ,color06))))
+   `(font-lock-constant-face ((,class256 (:foreground ,color09))))
 
-   `(font-lock-warning-face ((t (:foreground ,color03 :weight bold))))
+   `(font-lock-warning-face ((,class256 (:foreground ,color03 :weight bold))))
 
    ;; parenthesis and pairs
-   `(show-paren-match ((t :foreground ,colorMP :weight bold)))
+   `(show-paren-match ((,class256 :foreground ,colorMP :weight bold)))
 
    ;; links
-   `(link ((t (:foreground ,fg :underline (:color, fg)))))
-   `(link-visited ((t (:foreground ,color07 :underline (:color ,color07)))))
+   `(link ((,class256 (:foreground ,fg :underline (:color, fg)))))
+   `(link-visited ((,class256 (:foreground ,color07 :underline (:color ,color07)))))
 
    ;; dired
-   '(dired-directory ((t (:inherit font-lock-keyword-face :weight bold))))
+   `(dired-directory ((,class256 (:inherit font-lock-keyword-face :weight bold))))
 
    ;; ido
-   `(ido-only-match ((t (:foreground ,color10))))
-   `(ido-virtual ((t (:foreground ,color08))))
-   `(ido-subdir ((t (:foreground ,color08))))
+   `(ido-only-match ((,class256 (:foreground ,color10))))
+   `(ido-virtual ((,class256 (:foreground ,color08))))
+   `(ido-subdir ((,class256 (:foreground ,color08))))
 
    ;; compilation
-   `(compilation-mode-line-fail ((t (:foreground ,color01 :weight bold))))
-   `(compilation-mode-line-exit ((t (:foreground ,color02 :weight bold))))
-   `(compilation-line-number ((t (:foreground ,color08))))
-   `(compilation-line-number ((t (:foreground ,color08))))
+   `(compilation-mode-line-fail ((,class256 (:foreground ,color01 :weight bold))))
+   `(compilation-mode-line-exit ((,class256 (:foreground ,color02 :weight bold))))
+   `(compilation-line-number ((,class256 (:foreground ,color08))))
+   `(compilation-line-number ((,class256 (:foreground ,color08))))
 
    ;; whitespace
-   `(whitespace-space ((t (:background nil :foreground ,colorNT))))
-   '(whitespace-line ((t nil)))
-   '(whitespace-trailing ((t (:inherit 'trailing-whitespace))))
-   '(whitespace-indentation ((t (:inherit 'whitespace-space))))
-   '(whitespace-tab ((t (:inherit 'whitespace-space))))
-   `(whitespace-empty ((t (:background ,color03))))
+   `(whitespace-space ((,class256 (:background nil :foreground ,colorNT))))
+   `(whitespace-line ((,class256 nil)))
+   `(whitespace-trailing ((,class256 (:inherit 'trailing-whitespace))))
+   `(whitespace-indentation ((,class256 (:inherit 'whitespace-space))))
+   `(whitespace-tab ((,class256 (:inherit 'whitespace-space))))
+   `(whitespace-empty ((,class256 (:background ,color03))))
 
    ;; markdown
-   `(markdown-header-face ((t (:foreground ,color15 :weight bold))))
-   `(markdown-code-face ((t (:foreground ,fg))))
-   `(markdown-list-face ((t (:foreground ,color09))))
-   `(markdown-markup-face ((t (:foreground ,color08))))      
+   `(markdown-header-face ((,class256 (:foreground ,color15 :weight bold))))
+   `(markdown-code-face ((,class256 (:foreground ,fg))))
+   `(markdown-list-face ((,class256 (:foreground ,color09))))
+   `(markdown-markup-face ((,class256 (:foreground ,color08))))
 
    ))
 
