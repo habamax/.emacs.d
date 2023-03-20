@@ -17,7 +17,7 @@
       (color07 "#d0d0d0")(color15 "#ffffff")
       (colorMP "#ff00af")(colorNT "#585858")
       (colorLA "#444444")(colorLI "#303030")
-      (colorSP "#875fff"))
+      (colorSP "#875fff")(colorHL "#3a3d42"))
 
   (custom-theme-set-faces
    'wildcharm
@@ -30,10 +30,11 @@
    `(minibuffer-prompt ((,class256 (:foreground ,color11 :weight bold))))
    `(mode-line ((,class256 (:background ,colorLA :foreground ,color07 :box (:line-width 1 :color ,color00)))))
    `(mode-line-inactive ((,class256 (:background ,colorLI :foreground ,color08 :box (:line-width 1 :color ,color00)))))
-   `(vertical-border ((nil (:foreground ,color08))))
-   `(fringe ((nil (:background ,color00))))
-   `(highlight ((nil (:foreground ,color00 :background ,color12))))
-
+   `(vertical-border ((,class256 (:foreground ,color08))))
+   `(fringe ((,class256 (:background ,color00))))
+   `(highlight ((,class256 (:foreground ,color00 :background ,color12))))
+   `(hl-line ((,class256 (:foreground nil :background ,colorHL))))
+   
    `(isearch ((,class256 (:background ,color11 :foreground ,color00))))
    `(lazy-highlight ((,class256 (:background ,color10 :foreground ,color00))))
    `(isearch-fail ((,class256 (:background ,color09 :foreground ,color00))))
