@@ -108,6 +108,14 @@
    `(markdown-language-keyword-face ((,class256 (:foreground ,color06))))
    `(markdown-gfm-checkbox-face ((,class256 (:foreground ,color08))))
 
+   ;; diff
+   `(diff-header ((,class256 (:foreground ,color12 :weight bold))))
+   `(diff-file-header ((,class256 (:foreground ,color15))))
+   `(diff-hunk-header ((,class256 (:foreground ,color11 :weight bold))))
+   
+   ;; git-commit
+   `(git-commit-summary ((,class256 (:foreground ,color15 :weight bold))))
+   `(git-commit-nonempty-second-line ((,class256 (:foreground ,color09 :weight bold))))
    ))
 
 ;;;###autoload
