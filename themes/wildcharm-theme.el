@@ -17,7 +17,8 @@
       (color07 "#d0d0d0")(color15 "#ffffff")
       (colorMP "#ff00af")(colorNT "#585858")
       (colorMLA1 "#404348")(colorMLI1 "#303338")
-      (colorMLA2 "#444444")(colorMLI2 "#303030")      
+      (colorMLA2 "#444444")(colorMLI2 "#303030")
+      (colorFr "#12161a")
       (colorSP "#875fff")(colorHL "#3a3d42"))
 
   (custom-theme-set-faces
@@ -34,7 +35,8 @@
    `(mode-line-inactive ((,class256 (:background ,colorMLI1 :foreground ,color08 :box (:line-width 1 :color ,color00)))
                          (,classTTY (:background ,colorMLI2 :foreground ,color08))))
    `(vertical-border ((,class256 (:foreground ,color08))))
-   `(fringe ((,class256 (:background ,color00))))
+   `(fringe ((,class256 (:background ,colorFr))
+             (,classTTY (:background ,color00))))
    `(highlight ((,class256 (:foreground ,color00 :background ,color12))))
    `(hl-line ((,class256 (:foreground nil :background ,colorHL))))
    
