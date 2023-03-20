@@ -43,6 +43,7 @@
    `(warning ((t (:foreground ,color03 :weight bold))))
    `(error ((t (:foreground ,color09 :weight bold))))
    `(success ((t (:foreground ,color10 :weight bold))))
+   `(shadow ((t (:foreground ,colorNT))))
    `(trailing-whitespace ((t (:foreground ,color01 :weight bold))))
 
    ;; syntax
@@ -73,17 +74,26 @@
    `(ido-virtual ((t (:foreground ,color08))))
    `(ido-subdir ((t (:foreground ,color08))))
 
+   ;; compilation
    `(compilation-mode-line-fail ((t (:foreground ,color01 :weight bold))))
    `(compilation-mode-line-exit ((t (:foreground ,color02 :weight bold))))
    `(compilation-line-number ((t (:foreground ,color08))))
    `(compilation-line-number ((t (:foreground ,color08))))
 
+   ;; whitespace
    `(whitespace-space ((t (:background nil :foreground ,colorNT))))
    '(whitespace-line ((t nil)))
    '(whitespace-trailing ((t (:inherit 'trailing-whitespace))))
    '(whitespace-indentation ((t (:inherit 'whitespace-space))))
    '(whitespace-tab ((t (:inherit 'whitespace-space))))
    `(whitespace-empty ((t (:background ,color03))))
+
+   ;; markdown
+   `(markdown-header-face ((t (:foreground ,color15 :weight bold))))
+   `(markdown-code-face ((t (:foreground ,fg))))
+   `(markdown-list-face ((t (:foreground ,color09))))
+   `(markdown-markup-face ((t (:foreground ,color08))))      
+
    ))
 
 ;;;###autoload
