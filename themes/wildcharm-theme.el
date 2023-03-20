@@ -100,9 +100,10 @@
    ;; markdown
    `(markdown-header-face ((,class256 (:foreground ,color15 :weight bold))))
    `(markdown-header-delimiter-face ((,class256 (:foreground ,color12 :weight bold))))
+   `(markdown-header-rule-face ((,class256 (:foreground ,color12 :weight bold))))
    `(markdown-code-face ((,class256 (:foreground ,fg))))
    `(markdown-list-face ((,class256 (:foreground ,color11))))
-   `(markdown-markup-face ((,class256 (:foreground ,color13))))
+   `(markdown-markup-face ((,class256 (:foreground ,color08))))
    `(markdown-inline-code-face ((,class256 (:foreground ,color02))))
    `(markdown-language-keyword-face ((,class256 (:foreground ,color06))))
    `(markdown-gfm-checkbox-face ((,class256 (:foreground ,color08))))
