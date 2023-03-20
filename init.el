@@ -27,6 +27,10 @@
 (setq grep-command "rg -nS --no-heading ")
 (setq grep-use-null-device nil)
 
+;; dired
+(setq ls-lisp-dirs-first t)
+(setq dired-listing-switches "-al --group-directories-first")
+
 ;; Store all backup and autosave files in the tmp dir
 (setq backup-directory-alist `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
