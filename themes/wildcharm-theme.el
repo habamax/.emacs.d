@@ -5,7 +5,7 @@
 (deftheme wildcharm "Vibrant and playful.")
 
 (let ((class256 '((class color) (min-colors 256)))
-      (classTC '((class color) (min-colors 257)))
+      (classTTY '((type tty) (min-colors 16)))
       (fg "#d0d0d0")(bg "#1c1f26")
       (color00 "#000000")(color08 "#767676")
       (color01 "#d7005f")(color09 "#ff5f87")
@@ -22,9 +22,9 @@
   (custom-theme-set-faces
    'wildcharm
 
-   `(default ((,classTC (:background ,bg :foreground ,fg))
-              (t (:background nil :foreground nil))))
-   `(cursor ((,classTC (:background "#ffffff"))))
+   `(default ((,classTTY (:background nil, :foreground nil))
+              (t (:background ,bg :foreground ,fg))))
+   `(cursor ((t (:background "#ffffff"))))
 
    ;; UI
    `(minibuffer-prompt ((,class256 (:foreground ,color11 :weight bold))))
