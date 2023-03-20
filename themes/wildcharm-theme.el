@@ -16,7 +16,8 @@
       (color06 "#00afaf")(color14 "#00d7d7")
       (color07 "#d0d0d0")(color15 "#ffffff")
       (colorMP "#ff00af")(colorNT "#585858")
-      (colorLA "#444444")(colorLI "#303030")
+      (colorMLA1 "#404348")(colorMLI1 "#303338")
+      (colorMLA2 "#444444")(colorMLI2 "#303030")      
       (colorSP "#875fff")(colorHL "#3a3d42"))
 
   (custom-theme-set-faces
@@ -28,8 +29,10 @@
 
    ;; UI
    `(minibuffer-prompt ((,class256 (:foreground ,color11 :weight bold))))
-   `(mode-line ((,class256 (:background ,colorLA :foreground ,color07 :box (:line-width 1 :color ,color00)))))
-   `(mode-line-inactive ((,class256 (:background ,colorLI :foreground ,color08 :box (:line-width 1 :color ,color00)))))
+   `(mode-line ((,class256 (:background ,colorMLA1 :foreground ,color07 :box (:line-width 1 :color ,color00)))
+                (,classTTY (:background ,colorMLA2 :foreground ,color07))))
+   `(mode-line-inactive ((,class256 (:background ,colorMLI1 :foreground ,color08 :box (:line-width 1 :color ,color00)))
+                         (,classTTY (:background ,colorMLI2 :foreground ,color08))))
    `(vertical-border ((,class256 (:foreground ,color08))))
    `(fringe ((,class256 (:background ,color00))))
    `(highlight ((,class256 (:foreground ,color00 :background ,color12))))
