@@ -1,6 +1,7 @@
 (setq-default
  package-native-compile t
  use-package-always-ensure t
+ use-package-always-defer t
  use-package-enable-imenu-support t)
 
 (require 'use-package)
@@ -14,5 +15,5 @@
   :commands (magit-status)
   :bind ("C-c g" . magit-status))
 
-(use-package which-key
-  :config (which-key-mode))
+(use-package markdown-mode
+  :config (setq markdown-asymmetric-header t))
