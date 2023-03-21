@@ -16,7 +16,8 @@
       inhibit-splash-screen t
       initial-scratch-message ";; Welcome, habamax!\n;; Have fun with Emacs!\n\n")
 
-(add-to-list 'default-frame-alist '(font . "JetBrains Mono NL-14"))
+(if (display-graphic-p)
+    (add-to-list 'default-frame-alist '(font . "JetBrains Mono NL-14")))
 
 (add-to-list 'custom-theme-load-path (expand-file-name "themes/" user-emacs-directory))
 (load-theme 'wildcharm t)
