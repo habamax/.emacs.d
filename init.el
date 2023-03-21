@@ -79,6 +79,7 @@
   :bind ("C-w" . habamax/kill-region)
   :bind ("M-w" . habamax/kill-ring-save)
   :bind ([remap dabbrev-expand] . hippie-expand)
+  :bind ([remap list-buffers] . ibuffer)
   :config
   (defvar habamax-duplicate-line-map
     (let ((map (make-sparse-keymap)))
