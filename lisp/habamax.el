@@ -233,8 +233,7 @@ See `sort-regexp-fields'."
   (when (string-match "[0-9]\\{4\\}-[0-9]\\{2\\}-[0-9]\\{2\\}" (concat "" (thing-at-point 'symbol t)))
     (let ((bounds (bounds-of-thing-at-point 'symbol)))
       (delete-region (car bounds) (cdr bounds))))
-  (insert (format-time-string "%Y-%m-%d"))
-  )
+  (insert (format-time-string "%Y-%m-%d")))
 
 
 ;;;###autoload
