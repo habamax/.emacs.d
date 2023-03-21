@@ -48,10 +48,43 @@
 
 (winner-mode t)
 
-(add-to-list 'load-path (expand-file-name "lisp/" user-emacs-directory))
-(load "use-packages")
-
 (if (window-system)
     (cd "~/"))
 
+
+;;; use packages
+(setq-default
+ package-native-compile t
+ use-package-always-ensure t
+ use-package-always-defer t
+ use-package-enable-imenu-support t)
+
+(require 'use-package)
+
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") 'append)
+
+(use-package habamax
+  :load-path "lisp"
+  :bind ("M-;" . habamax/toggle-comment)
+  :bind ("C-M-;" . habamax/comment-fill-aligned)
+  :bind ("C-c d" . habamax/duplicate-line)
+  :bind ("M-n" . habamax/move-line-down)
+  :bind ("M-p" . habamax/move-line-up)
+  :bind ("C-w" . habamax/kill-region)
+  :bind ("M-w" . habamax/kill-ring-save))
+
+(use-package smex :bind (("M-x" . smex)))
+
+(use-package magit
+  :defer
+  :commands (magit-status)
+  :bind ("C-c g" . magit-status))
+
+(use-package markdown-mode
+  :mode "\\.txt$"
+  :config (setq markdown-asymmetric-header t))
+
+
+
+;;; How long it took this time?
 (add-hook 'emacs-startup-hook #'(lambda () (message "%s" (emacs-init-time))))
