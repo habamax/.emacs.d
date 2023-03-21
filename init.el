@@ -65,6 +65,7 @@
 
 (use-package habamax
   :load-path "lisp"
+  :bind ("C-x o" . habamax/other-window)
   :bind ("M-;" . habamax/toggle-comment)
   :bind ("C-M-;" . habamax/comment-fill-aligned)
   :bind ("C-c d" . habamax/duplicate-line)
