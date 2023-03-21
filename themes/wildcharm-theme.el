@@ -79,8 +79,8 @@
    `(dired-directory ((,class256 (:inherit font-lock-keyword-face :weight bold))))
 
    ;; ido
-   `(ido-only-match ((,class256 (:foreground ,color02 :weight bold))))
    `(ido-first-match ((,class256 (:foreground ,color10 :weight bold))))
+   `(ido-only-match ((,class256 (:inherit 'ido-first-match))))
    `(ido-virtual ((,class256 (:foreground ,color08))))
    `(ido-subdir ((,class256 (:foreground ,color15 :weight bold))))
    ; check how good it is
