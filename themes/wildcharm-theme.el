@@ -79,9 +79,12 @@
    `(dired-directory ((,class256 (:inherit font-lock-keyword-face :weight bold))))
 
    ;; ido
-   `(ido-only-match ((,class256 (:foreground ,color10))))
+   `(ido-only-match ((,class256 (:foreground ,color02 :weight bold))))
+   `(ido-first-match ((,class256 (:foreground ,color10 :weight bold))))
    `(ido-virtual ((,class256 (:foreground ,color08))))
-   `(ido-subdir ((,class256 (:foreground ,color08))))
+   `(ido-subdir ((,class256 (:foreground ,color15 :weight bold))))
+   ; check how good it is
+   `(ido-indicator ((,class256 (:background ,color01 :foreground ,color11))))
 
    ;; compilation
    `(compilation-mode-line-fail ((,class256 (:foreground ,color01 :weight bold))))
