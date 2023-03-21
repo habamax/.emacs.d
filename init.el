@@ -72,7 +72,14 @@
   :bind ("M-n" . habamax/move-line-down)
   :bind ("M-p" . habamax/move-line-up)
   :bind ("C-w" . habamax/kill-region)
-  :bind ("M-w" . habamax/kill-ring-save))
+  :bind ("M-w" . habamax/kill-ring-save)
+  :config
+  (defvar habamax-duplicate-line-map
+    (let ((map (make-sparse-keymap)))
+      (define-key map "d" 'habamax/duplicate-line)
+      map)
+    "Press d to duplicate line.")
+  (put 'habamax/duplicate-line 'repeat-map 'habamax-duplicate-line-map))
 
 (use-package smex :bind (("M-x" . smex)))
 
