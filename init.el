@@ -49,8 +49,6 @@
       ido-use-filename-at-point 'guess)
 (ido-mode 1)
 
-(winner-mode t)
-
 (if (window-system)
     (cd "~/"))
 
