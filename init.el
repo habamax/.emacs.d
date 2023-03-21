@@ -35,6 +35,8 @@
 (setq backup-directory-alist `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
 
+(setq vc-follow-symlinks t)
+
 (electric-pair-mode t)
 (delete-selection-mode t)
 (save-place-mode 1)
