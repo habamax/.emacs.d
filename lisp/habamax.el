@@ -250,18 +250,5 @@ See `sort-regexp-fields'."
   (replace-regexp "^\n\\{2,\\}" "\n" nil start end))
 
 
-;;;###autoload
-(defun habamax/other-window (count &optional all-frames)
-  "Wrapper around `other-window' to continue to jump to other with key o."
-  (interactive "p")
-  (other-window count all-frames)
-  (message "Use o to jump to next window.")
-  (set-transient-map
-   (let ((map (make-sparse-keymap)))
-     (define-key map (kbd "o")
-       (lambda () (interactive) (habamax/other-window 1)))
-     map)))
-
-
 
 (provide 'habamax)

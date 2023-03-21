@@ -39,6 +39,7 @@
 (delete-selection-mode t)
 (save-place-mode 1)
 (savehist-mode 1)
+(repeat-mode t)
 
 (setq ido-enable-flex-matching t
       ido-use-virtual-buffers t
@@ -65,7 +66,6 @@
 
 (use-package habamax
   :load-path "lisp"
-  :bind ("C-x o" . habamax/other-window)
   :bind ("M-;" . habamax/toggle-comment)
   :bind ("C-c M-;" . habamax/comment-fill-aligned)
   :bind ("C-c d" . habamax/duplicate-line)
