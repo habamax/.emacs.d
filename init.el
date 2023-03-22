@@ -30,6 +30,7 @@
 ;; dired
 (setq ls-lisp-dirs-first t)
 (setq dired-listing-switches "-al --group-directories-first")
+(setq dired-dwim-target t)
 
 ;; Store all backup and autosave files in the tmp dir
 (setq backup-directory-alist `((".*" . ,temporary-file-directory)))
@@ -54,6 +55,10 @@
 
 
 ;;; use packages
+(unless (package-installed-p 'use-package)
+    (package-refresh-contents)
+    (package-install 'use-package))
+
 (setq-default
  package-native-compile t
  use-package-always-ensure t
