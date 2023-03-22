@@ -124,7 +124,7 @@
    erc-track-minor-mode t
    erc-autojoin-channels-alist '(("Libera.Chat" "#emacs" "#vim" "#python" "#c")))
   (setq erc-timestamp-only-if-changed-flag nil
-        erc-timestamp-format "[%H:%M] "
+        erc-timestamp-format "%H:%M "
         erc-fill-prefix "      "
         erc-insert-timestamp-function 'erc-insert-timestamp-left))
 
