@@ -119,6 +119,31 @@
    ;; git-commit
    `(git-commit-summary ((,class256 (:foreground ,color15 :weight bold))))
    `(git-commit-nonempty-second-line ((,class256 (:foreground ,color09 :weight bold))))
+
+   ;; erc
+   `(erc-timestamp-face ((,class256 (:foreground ,color08))))
+   `(erc-notice-face ((,class256 (:foreground ,colorSP))))
+   `(erc-nick-default-face ((,class256 (:foreground ,color04))))
+   `(erc-current-nick-face ((,class256 (:foreground ,color09))))
+   `(erc-input-face ((,class256 (:foreground ,color02))))
+   `(erc-button ((,class256 (:foreground nil :background nil :underline t))))
+   `(erc-prompt-face ((,class256 (:foreground ,color13 :background nil :weight bold))))
+   `(fg:erc-color-face0 ((,class256 (:foreground ,color00))))
+   `(fg:erc-color-face1 ((,class256 (:foreground ,color01))))
+   `(fg:erc-color-face2 ((,class256 (:foreground ,color02))))
+   `(fg:erc-color-face3 ((,class256 (:foreground ,color03))))
+   `(fg:erc-color-face4 ((,class256 (:foreground ,color04))))
+   `(fg:erc-color-face5 ((,class256 (:foreground ,color05))))
+   `(fg:erc-color-face6 ((,class256 (:foreground ,color06))))
+   `(fg:erc-color-face7 ((,class256 (:foreground ,color07))))
+   `(fg:erc-color-face8 ((,class256 (:foreground ,color08))))
+   `(fg:erc-color-face9 ((,class256 (:foreground ,color09))))
+   `(fg:erc-color-face10 ((,class256 (:foreground ,color10))))
+   `(fg:erc-color-face11 ((,class256 (:foreground ,color11))))
+   `(fg:erc-color-face12 ((,class256 (:foreground ,color12))))
+   `(fg:erc-color-face13 ((,class256 (:foreground ,color13))))
+   `(fg:erc-color-face14 ((,class256 (:foreground ,color14))))
+   `(fg:erc-color-face15 ((,class256 (:foreground ,color15))))
    ))
 
 ;;;###autoload
