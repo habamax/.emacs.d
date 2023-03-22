@@ -11,3 +11,4 @@
 /auto-save-list/
 /eshell/
 /bookmarks
+*.elc
