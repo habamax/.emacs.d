@@ -57,7 +57,7 @@
 
    ;; syntax
    `(font-lock-string-face ((,class256 (:foreground ,color10))))
-   `(font-lock-comment-face ((,class256 (:foreground ,color08))))
+   `(font-lock-comment-face ((,class256 (:foreground ,color08 :slant italic))))
    `(font-lock-keyword-face ((,class256 (:foreground ,color12))))
    `(font-lock-preprocessor-face ((,class256 (:foreground ,color14))))
    `(font-lock-builtin-face ((,class256 (:foreground ,color05))))
