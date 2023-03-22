@@ -85,7 +85,7 @@
    ;; widget
    `(widget-field ((,class256 (:foreground ,fg :background ,colorNT :extend t))))
    
-   `(header-line ((,class256 (:foreground ,bg :background ,color03 :extend t))))
+   `(header-line ((,class256 (:foreground ,fg :background ,colorNT :extend t))))
    
    ;; dired
    `(dired-directory ((,class256 (:inherit font-lock-keyword-face :weight bold))))
@@ -140,6 +140,7 @@
    `(erc-nick-msg-face ((,class256 (:foreground ,color11))))
    `(erc-input-face ((,class256 (:foreground ,color02))))
    `(erc-error-face ((,class256 (:foreground ,color01))))
+   `(erc-dangerous-host-face ((,class256 (:foreground ,color01))))
    `(erc-direct-msg-face ((,class256 (:foreground ,color03))))
    `(erc-button ((,class256 (:foreground nil :background nil :underline t))))
    `(erc-prompt-face ((,class256 (:foreground ,color13 :background nil :weight bold))))
