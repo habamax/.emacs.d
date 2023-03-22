@@ -79,7 +79,6 @@
   :bind ("C-w" . habamax/kill-region)
   :bind ("M-w" . habamax/kill-ring-save)
   :bind ("C-<tab>" . habamax/next-buffer-like-this)
-  :bind ([remap dabbrev-expand] . hippie-expand)
   :bind ([remap list-buffers] . ibuffer)
   :config
   (defvar habamax-duplicate-line-map
