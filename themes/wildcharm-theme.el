@@ -8,7 +8,7 @@
       (classTTY '((type tty) (min-colors 16)))
       (fg "#d0d0d0")(bg "#1c1f26")
       (color00 "#000000")(color08 "#767676")
-      (color01 "#d7005f")(color09 "#ff5f87")
+      (color01 "#d75f5f")(color09 "#ff5f87")
       (color02 "#00af5f")(color10 "#00d75f")
       (color03 "#d78700")(color11 "#ffaf00")
       (color04 "#0087d7")(color12 "#00afff")
