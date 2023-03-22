@@ -105,7 +105,11 @@
 
 (use-package markdown-mode
   :mode "\\.txt$"
-  :config (setq markdown-asymmetric-header t))
+  :config
+  (setq markdown-asymmetric-header t)
+  (set-face-attribute 'markdown-header-face-1 nil :height 1.6)
+  (set-face-attribute 'markdown-header-face-2 nil :height 1.4)
+  (set-face-attribute 'markdown-header-face-3 nil :height 1.2))
 
 
 
