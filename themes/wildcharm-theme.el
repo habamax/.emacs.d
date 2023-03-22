@@ -75,6 +75,18 @@
    `(link ((,class256 (:foreground ,fg :underline (:color, fg)))))
    `(link-visited ((,class256 (:foreground ,color07 :underline (:color ,color07)))))
 
+   ;; completion
+   `(completions-common-part ((,class256 (:foreground ,color12 :weight bold))))
+   `(completions-first-difference ((,class256 (:foreground ,color13))))
+
+   ;; help
+   `(help-key-binding ((,class256 (:foreground ,color06 :background nil :box (:line-width (1 . -1) :color ,color06)))))
+
+   ;; widget
+   `(widget-field ((,class256 (:foreground ,fg :background ,colorNT :extend t))))
+   
+   `(header-line ((,class256 (:foreground ,bg :background ,color03 :extend t))))
+   
    ;; dired
    `(dired-directory ((,class256 (:inherit font-lock-keyword-face :weight bold))))
 
