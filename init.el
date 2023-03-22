@@ -108,10 +108,21 @@
   :mode "\\.txt$"
   :config
   (setq markdown-asymmetric-header t)
-  (set-face-attribute 'markdown-header-face-1 nil :height 1.6)
-  (set-face-attribute 'markdown-header-face-2 nil :height 1.4)
-  (set-face-attribute 'markdown-header-face-3 nil :height 1.2))
+  (set-face-attribute 'markdown-header-face-1 nil :height 1.4)
+  (set-face-attribute 'markdown-header-face-2 nil :height 1.2)
+  (set-face-attribute 'markdown-header-face-3 nil :height 1.1))
 
+(use-package erc
+  :ensure nil
+  :commands (erc)
+  :config
+  (setq erc-hide-list '("JOIN" "PART" "QUIT"))
+  (setq erc-join-buffer 'bury)
+
+  (setq
+   erc-nick '("habamax" "mxmkm")
+   erc-track-minor-mode t
+   erc-autojoin-channels-alist '(("libera.chat" "#emacs" "#vim" "#python" "#c"))))
 
 
 ;;; How long it took this time?
