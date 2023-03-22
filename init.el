@@ -116,17 +116,16 @@
   :ensure nil
   :commands (erc)
   :config
-  (setq erc-hide-list '("JOIN" "PART" "QUIT"))
-  (setq erc-join-buffer 'bury)
-
   (setq
    erc-nick '("habamax" "mxmkm")
    erc-track-minor-mode t
+   erc-hide-list '("JOIN" "PART" "QUIT")
+   erc-join-buffer 'bury
    erc-autojoin-channels-alist '(("Libera.Chat" "#emacs" "#vim" "#python" "#c")))
   (setq erc-timestamp-only-if-changed-flag nil
-        erc-timestamp-format "%H:%M "
-        erc-fill-prefix "      "
-        erc-insert-timestamp-function 'erc-insert-timestamp-left))
+        erc-timestamp-format "[%H:%M] "
+        erc-insert-timestamp-function 'erc-insert-timestamp-left
+        erc-fill-column 100))
 
 
 ;;; How long it took this time?
