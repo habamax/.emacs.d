@@ -1,5 +1,6 @@
 ;;; habamax.el  -*- lexical-binding: t; -*-
 
+
 ;;; Comment a line.
 ;;;###autoload
 (defun habamax/toggle-comment (arg)
@@ -43,7 +44,6 @@ c:
 (defun habamax/duplicate-line (arg)
   "Duplicate current line, leaving point in lower line."
   (interactive "*p")
-
   (let ((bol (save-excursion (beginning-of-line) (point)))
         eol)
     (save-excursion
@@ -56,28 +56,6 @@ c:
           (insert line)
           (setq count (1- count))))))
   (next-line arg))
-
-
-;;;###autoload
-(defun habamax/duplicate-line-inc-numbers (num-lines)
-  "Duplicate line, preserving cursor column, and increments any numbers found.
-  Duplicate a block of optional NUM-LINES lines.  If no optional argument is given,
-  then only one line is copied."
-  (interactive "p")
-  (if (not num-lines) (setq num-lines 0) (setq num-lines (1- num-lines)))
-  (let* ((col (current-column))
-         (bol (save-excursion (forward-line (- num-lines)) (beginning-of-line) (point)))
-         (eol (progn (end-of-line) (point)))
-         (line (buffer-substring bol eol)))
-    (goto-char bol)
-    (while (re-search-forward "[0-9]+" eol 1)
-      (let ((num (string-to-number (buffer-substring
-                                    (match-beginning 0) (match-end 0)))))
-        (replace-match (int-to-string (1+ num))))
-      (setq eol (save-excursion (goto-char eol) (end-of-line) (point))))
-    (goto-char bol)
-    (insert line "\n")
-    (move-to-column col)))
 
 
 ;;;###autoload
@@ -97,35 +75,6 @@ c:
   (transpose-lines 1)
   (forward-line -1)
   (indent-according-to-mode))
-
-
-;;;###autoload
-(defun habamax/toggle-window-split ()
-  "Change vertical and horizontal splits"
-  (interactive)
-  (if (= (count-windows) 2)
-      (let* ((this-win-buffer (window-buffer))
-             (next-win-buffer (window-buffer (next-window)))
-             (this-win-edges (window-edges (selected-window)))
-             (next-win-edges (window-edges (next-window)))
-             (this-win-2nd (not (and (<= (car this-win-edges)
-                                         (car next-win-edges))
-                                     (<= (cadr this-win-edges)
-                                         (cadr next-win-edges)))))
-             (splitter
-              (if (= (car this-win-edges)
-                     (car (window-edges (next-window))))
-                  'split-window-horizontally
-                'split-window-vertically)))
-        (delete-other-windows)
-        (let ((first-win (selected-window)))
-          (funcall splitter)
-          (if this-win-2nd (other-window 1))
-          (set-window-buffer (selected-window) this-win-buffer)
-          (set-window-buffer (next-window) next-win-buffer)
-          (select-window first-win)
-          (if this-win-2nd (other-window 1))))))
-
 
 
 ;; Next buffer with the same mode
@@ -156,8 +105,6 @@ c:
          (not (equal mode-name b-mode))
          (not (equal b-name (buffer-name))))
       (previous-buffer))))
-
-
 
 
 ;;;###autoload
@@ -193,7 +140,6 @@ c:
     (kill-ring-save (line-beginning-position) (line-beginning-position 2))))
 
 
-
 ;;;; sort words
 ;;;###autoload
 (defun habamax/sort-words (reverse beg end)
@@ -207,6 +153,7 @@ affects the sort order.
 See `sort-regexp-fields'."
   (interactive "*P\nr")
   (sort-regexp-fields reverse "\\w+" "\\&" beg end))
+
 
 ;;;; dates
 ;;;###autoload
@@ -231,7 +178,6 @@ See `sort-regexp-fields'."
   "Delete all but one blank lines in a region."
   (interactive "r")
   (replace-regexp "^\n\\{2,\\}" "\n" nil start end))
-
 
 
 (provide 'habamax)
