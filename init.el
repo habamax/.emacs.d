@@ -82,6 +82,15 @@
     "Press d to duplicate line.")
   (put 'habamax/duplicate-line 'repeat-map 'habamax-duplicate-line-map))
 
+(use-package whitespace
+  :ensure nil
+  :commands (whitespace-mode)
+  :config
+  (setq whitespace-style '(face trailing tabs spaces tab-mark space-mark))
+  (setq whitespace-display-mappings '((tab-mark 9 [8250 9])
+                                      (space-mark 32 [183][46])
+                                      (space-mark 160 [164][95]))))
+
 (use-package smex :bind (("M-x" . smex)))
 
 (use-package magit
@@ -96,4 +105,4 @@
 
 
 ;;; How long it took this time?
-(add-hook 'emacs-startup-hook #'(lambda () (message "%s" (emacs-init-time))))
+(add-hook 'emacs-startup-hook (lambda () (message "%s" (emacs-init-time))))
