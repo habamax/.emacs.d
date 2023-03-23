@@ -116,14 +116,17 @@
   :ensure nil
   :commands erc
   :config
-  (setq
-   erc-nick '("habamax" "mxmkm")
-   erc-track-minor-mode t
-   erc-hide-list '("JOIN" "PART" "QUIT")
-   erc-join-buffer 'bury
-   erc-autojoin-channels-alist '(("Libera.Chat" "#emacs" "#vim" "#python"))
-   erc-server-reconnect-attempts 5
-   erc-server-reconnect-timeout 3)
+  (setq erc-nick '("habamax" "mxmkm")
+        erc-track-minor-mode t
+        erc-hide-list '("JOIN" "PART" "QUIT")
+        erc-join-buffer 'bury
+        erc-autojoin-channels-alist '(("Libera.Chat" "#emacs" "#vim" "#python"))
+        erc-server-reconnect-attempts 5
+        erc-server-reconnect-timeout 3)
+  (setq erc-rename-buffers t
+        erc-kill-buffer-on-part t
+        erc-kill-queries-on-quit t
+        erc-kill-server-buffer-on-quit t)
   (setq erc-prompt-for-password nil
         erc-prompt-for-nickserv-password nil)
   (setq erc-timestamp-only-if-changed-flag nil
