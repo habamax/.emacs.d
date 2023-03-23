@@ -121,7 +121,11 @@
    erc-track-minor-mode t
    erc-hide-list '("JOIN" "PART" "QUIT")
    erc-join-buffer 'bury
-   erc-autojoin-channels-alist '(("Libera.Chat" "#emacs" "#vim" "#python" "#c")))
+   erc-autojoin-channels-alist '(("Libera.Chat" "#emacs" "#vim" "#python" "#c"))
+   erc-server-reconnect-attempts 5
+   erc-server-reconnect-timeout 3)
+  (setq erc-prompt-for-password nil
+        erc-prompt-for-nickserv-password nil)
   (setq erc-timestamp-only-if-changed-flag nil
         erc-timestamp-format "[%H:%M] "
         erc-insert-timestamp-function 'erc-insert-timestamp-left
