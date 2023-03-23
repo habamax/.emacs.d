@@ -167,6 +167,20 @@
    `(fg:erc-color-face13 ((,class256 (:foreground ,color13))))
    `(fg:erc-color-face14 ((,class256 (:foreground ,color14))))
    `(fg:erc-color-face15 ((,class256 (:foreground ,color15))))
+
+   ;; elfeed
+   `(elfeed-log-date-face ((,class256 (:foreground ,color03))))
+   `(elfeed-log-error-level-face ((,class256 (:foreground ,color01))))
+   `(elfeed-log-warn-level-face ((,class256 (:foreground ,color03))))
+   `(elfeed-log-info-level-face ((,class256 (:foreground ,color04))))
+   `(elfeed-log-debug-level-face ((,class256 (:foreground ,color05))))
+   `(elfeed-search-date-face ((,class256 (:foreground ,color08))))
+   `(elfeed-search-feed-face ((,class256 (:foreground ,color08))))
+   `(elfeed-search-tag-face ((,class256 (:foreground ,color02))))
+   `(elfeed-search-unread-title-face ((,class256 (:foreground ,color06 :weight bold))))
+   `(elfeed-search-unread-count-face ((,class256 (:foreground ,color12))))
+   `(elfeed-search-title-face ((,class256 (:foreground ,color07))))
+   
    ))
 
 ;;;###autoload
