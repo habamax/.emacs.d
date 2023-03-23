@@ -80,6 +80,7 @@
   :bind ("M-w" . habamax/kill-ring-save)
   :bind ("C-<tab>" . habamax/next-buffer-like-this)
   :bind ("C-`" . habamax/previous-buffer-like-this)
+  :bind ("C-c id" . habamax/insert-current-date)
   :bind ([remap list-buffers] . ibuffer)
   :config
   ;; (add-hook 'server-switch-hook 'habamax/focus-frame)

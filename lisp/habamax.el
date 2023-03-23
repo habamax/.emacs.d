@@ -155,7 +155,6 @@ See `sort-regexp-fields'."
   (sort-regexp-fields reverse "\\w+" "\\&" beg end))
 
 
-;;;; dates
 ;;;###autoload
 (defun habamax/insert-current-date ()
   "Insert current date. Replace ISO date under cursor with current date."
