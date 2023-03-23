@@ -134,7 +134,7 @@
 
    ;; erc
    `(erc-timestamp-face ((,class256 (:foreground ,color08))))
-   `(erc-notice-face ((,class256 (:foreground ,colorSP))))
+   `(erc-notice-face ((,class256 (:foreground ,color08))))
    `(erc-nick-default-face ((,class256 (:foreground ,color04))))
    `(erc-current-nick-face ((,class256 (:foreground ,color09))))
    `(erc-nick-msg-face ((,class256 (:foreground ,color11))))
@@ -144,6 +144,7 @@
    `(erc-direct-msg-face ((,class256 (:foreground ,color03))))
    `(erc-button ((,class256 (:foreground nil :background nil :underline t))))
    `(erc-prompt-face ((,class256 (:foreground ,color13 :background nil :weight bold))))
+   `(erc-action-face ((,class256 (:foreground ,colorSP :background nil))))
    `(fg:erc-color-face0 ((,class256 (:foreground ,color00))))
    `(fg:erc-color-face1 ((,class256 (:foreground ,color01))))
    `(fg:erc-color-face2 ((,class256 (:foreground ,color02))))
