@@ -147,6 +147,13 @@
   :config
   (editorconfig-mode 1))
 
+(use-package elfeed
+  :commands elfeed
+  :config
+  (setq elfeed-feeds
+        '(("https://www.reddit.com/r/emacs/.rss" reddit emacs)
+          ("https://emacsredux.com/atom.xml" emacs))))
+
 
 ;;; How long it took this time?
 (add-hook 'emacs-startup-hook (lambda () (message "%s" (emacs-init-time))))
