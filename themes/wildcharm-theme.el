@@ -55,6 +55,12 @@
    `(shadow ((,class256 (:foreground ,colorNT))))
    `(trailing-whitespace ((,class256 (:foreground ,color01 :weight bold))))
 
+   ;; glyphs
+   `(escape-glyph ((,class256 (:foreground ,colorSP))))
+   `(homoglyph ((,class256 (:inherit 'escape-glyph))))
+   `(nobreak-hyphen ((,class256 (:inherit 'escape-glyph))))
+   `(nobreak-space ((,class256 (:foreground ,colorSP :underline t))))
+
    ;; syntax
    `(font-lock-string-face ((,class256 (:foreground ,color10))))
    `(font-lock-comment-face ((,class256 (:foreground ,color08 :slant italic))))
