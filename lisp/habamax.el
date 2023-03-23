@@ -180,4 +180,9 @@ See `sort-regexp-fields'."
   (replace-regexp "^\n\\{2,\\}" "\n" nil start end))
 
 
+;;;###autoload
+(defun habamax/focus-frame ()
+  (select-frame-set-input-focus (selected-frame)))
+
+
 (provide 'habamax)

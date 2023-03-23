@@ -82,6 +82,10 @@
   :bind ("C-`" . habamax/previous-buffer-like-this)
   :bind ([remap list-buffers] . ibuffer)
   :config
+  ;; (add-hook 'server-switch-hook 'habamax/focus-frame)
+  ;; emacsclient to focus new frame
+  (add-hook 'server-after-make-frame-hook 'habamax/focus-frame)
+
   (defvar habamax-duplicate-line-map
     (let ((map (make-sparse-keymap)))
       (define-key map "d" 'habamax/duplicate-line)
