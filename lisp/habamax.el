@@ -180,6 +180,16 @@ See `sort-regexp-fields'."
 
 
 ;;;###autoload
+(defun habamax/insert-meeting-notes ()
+  (interactive)
+  (save-excursion
+    (insert "# " (format-time-string "%Y-%m-%d") " Meeting Notes\n\n")
+    (insert "## Attendees\n\n")
+    (insert "## Status\n\n\n\n"))
+  (forward-line 3))
+
+
+;;;###autoload
 (defun habamax/focus-frame ()
   (select-frame-set-input-focus (selected-frame)))
 
