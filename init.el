@@ -79,6 +79,7 @@
   :bind ("C-w" . habamax/kill-region)
   :bind ("M-w" . habamax/kill-ring-save)
   :bind ("C-<tab>" . habamax/next-buffer-like-this)
+  :bind ("C-`" . habamax/previous-buffer-like-this)
   :bind ([remap list-buffers] . ibuffer)
   :config
   (defvar habamax-duplicate-line-map
