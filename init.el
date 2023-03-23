@@ -139,6 +139,9 @@
   :config
   (add-to-list 'erc-modules 'hl-nicks))
 
+(use-package editorconfig
+  :config
+  (editorconfig-mode 1))
 
 ;;; How long it took this time?
 (add-hook 'emacs-startup-hook (lambda () (message "%s" (emacs-init-time))))
