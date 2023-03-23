@@ -114,7 +114,7 @@
 
 (use-package erc
   :ensure nil
-  :commands (erc)
+  :commands erc
   :config
   (setq
    erc-nick '("habamax" "mxmkm")
@@ -130,6 +130,11 @@
         erc-timestamp-format "[%H:%M] "
         erc-insert-timestamp-function 'erc-insert-timestamp-left
         erc-fill-column 100))
+
+(use-package erc-hl-nicks
+  :after erc
+  :config
+  (add-to-list 'erc-modules 'hl-nicks))
 
 
 ;;; How long it took this time?
