@@ -152,7 +152,9 @@
   :config
   (setq elfeed-feeds
         '(("https://www.reddit.com/r/emacs/.rss" reddit emacs)
-          ("https://emacsredux.com/atom.xml" emacs))))
+          ("https://emacsredux.com/atom.xml" emacs)
+          ("https://www.opennet.ru/opennews/opennews_all_utf.rss" news)
+          ("https://www.linux.org.ru/section-rss.jsp?section=1" news))))
 
 
 ;;; How long it took this time?
