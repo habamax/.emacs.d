@@ -24,11 +24,59 @@
   (custom-theme-set-faces
    'wildcharm
 
+   ;;; standard faces
    `(default ((,classTTY (:background nil, :foreground nil))
               (t (:background ,bg :foreground ,fg))))
+   `(shadow ((,class256 (:foreground ,colorNT))))
+   `(link ((,class256 (:foreground ,fg :underline t))))
+   `(link-visited ((,class256 (:foreground ,color08 :underline t))))
+   `(highlight ((,class256 (:foreground ,color00 :background ,color12))))
+   `(region ((,class256 (:background ,color04 :foreground ,bg))))
+   `(secondary-selection ((,class256 (:background ,color06 :foreground ,bg))))
+   `(trailing-whitespace ((,class256 (:foreground ,color01 :weight bold))))
+   `(line-number ((,class256 (:foreground ,colorNT))))
+   `(line-number-current-line ((,class256 (:foreground ,color03 :weight bold))))
+   ;; -line-number-major-tick
+   ;; -line-number-minor-tick
+   ;; -fill-column-indicator
+   `(escape-glyph ((,class256 (:foreground ,colorSP))))
+   `(homoglyph ((,class256 (:inherit 'escape-glyph))))
+   `(nobreak-space ((,class256 (:foreground ,colorSP :underline t))))
+   `(nobreak-hyphen ((,class256 (:inherit 'escape-glyph))))
+   `(mode-line ((,class256 (:background ,colorMLA1 :foreground ,color07 :box (:line-width 1 :color ,color00)))
+                (,classTTY (:background ,colorMLA2 :foreground ,color07))))
+   `(mode-line-inactive ((,class256 (:background ,colorMLI1 :foreground ,color08 :box (:line-width 1 :color ,color00)))
+                         (,classTTY (:background ,colorMLI2 :foreground ,color08))))
+   ;; -mode-line-highlight
+   ;; -mode-line-emphasis
+   ;; -mode-line-buffer-id
+   `(header-line ((,class256 (:foreground ,fg :background ,colorHr :extend t))))
+   `(vertical-border ((,class256 (:foreground ,colorHr))))
+   ;; -window-divider '((t :foreground "gray60"))
+   ;; -window-divider-first-pixel
+   ;; -window-divider-last-pixel
+   ;; -internal-border
+   ;; -child-frame-border
+   `(minibuffer-prompt ((,class256 (:foreground ,color11 :weight bold))))
+   `(fringe ((,class256 (:background ,colorFr))
+             (,classTTY (:background ,color00))))
+   ;; -scroll-bar
    `(cursor ((t (:background "#ffffff"))))
-
-   ;; syntax
+   ;; -tool-bar
+   ;; -tab-bar
+   ;; -tab-line
+   ;; -menu
+   `(help-key-binding ((,class256 (:foreground ,color06 :background nil :box (:line-width (1 . -1) :color ,color06)))))
+   `(error ((,class256 (:foreground ,color09 :weight bold))))
+   `(warning ((,class256 (:foreground ,color03 :weight bold))))
+   `(success ((,class256 (:foreground ,color10 :weight bold))))
+   ;; -tty-menu-enabled-face
+   ;; -tty-menu-disabled-face
+   ;; -tty-menu-selected-face
+   `(show-paren-match ((,class256 :foreground ,colorMP :weight bold)))
+   `(show-paren-mismatch ((,class256 :foreground ,color07 :background ,color01 :weight bold)))
+   
+   ;;; syntax
    `(font-lock-string-face ((,class256 (:foreground ,color10))))
    `(font-lock-comment-face ((,class256 (:foreground ,color08 :slant italic))))
    `(font-lock-keyword-face ((,class256 (:foreground ,color12))))
@@ -39,78 +87,46 @@
    `(font-lock-variable-name-face ((,class256 (:foreground ,color06))))
    `(font-lock-constant-face ((,class256 (:foreground ,color09))))
 
+   ;;; other font-lock?
    `(font-lock-warning-face ((,class256 (:foreground ,color03 :weight bold))))
 
-   ;; UI
-   `(minibuffer-prompt ((,class256 (:foreground ,color11 :weight bold))))
-   `(mode-line ((,class256 (:background ,colorMLA1 :foreground ,color07 :box (:line-width 1 :color ,color00)))
-                (,classTTY (:background ,colorMLA2 :foreground ,color07))))
-   `(mode-line-inactive ((,class256 (:background ,colorMLI1 :foreground ,color08 :box (:line-width 1 :color ,color00)))
-                         (,classTTY (:background ,colorMLI2 :foreground ,color08))))
-   `(vertical-border ((,class256 (:foreground ,color08))))
-   `(fringe ((,class256 (:background ,colorFr))
-             (,classTTY (:background ,color00))))
-   `(highlight ((,class256 (:foreground ,color00 :background ,color12))))
-   `(hl-line ((,class256 (:foreground nil :background ,colorHL))))
-   
+   ;;; isearch
    `(isearch ((,class256 (:background ,color11 :foreground ,color00))))
    `(lazy-highlight ((,class256 (:background ,color10 :foreground ,color00))))
    `(isearch-fail ((,class256 (:background ,color09 :foreground ,color00))))
+
+   ;;; replace.el
    `(match ((,class256 (:background ,color06 :foreground ,color00))))
+   
+   ;;; global-hl-line-mode
+   `(hl-line ((,class256 (:foreground nil :background ,colorHL))))
 
-   `(region ((,class256 (:background ,color04 :foreground ,bg))))
-
-   `(line-number ((,class256 (:foreground ,colorNT))))
-   `(line-number-current-line ((,class256 (:foreground ,color03 :weight bold))))
-   `(warning ((,class256 (:foreground ,color03 :weight bold))))
-   `(error ((,class256 (:foreground ,color09 :weight bold))))
-   `(success ((,class256 (:foreground ,color10 :weight bold))))
-   `(shadow ((,class256 (:foreground ,colorNT))))
-   `(trailing-whitespace ((,class256 (:foreground ,color01 :weight bold))))
-
-   ;; glyphs
-   `(escape-glyph ((,class256 (:foreground ,colorSP))))
-   `(homoglyph ((,class256 (:inherit 'escape-glyph))))
-   `(nobreak-hyphen ((,class256 (:inherit 'escape-glyph))))
-   `(nobreak-space ((,class256 (:foreground ,colorSP :underline t))))
-
-   ;; parenthesis and pairs
-   `(show-paren-match ((,class256 :foreground ,colorMP :weight bold)))
-
-   ;; links
-   `(link ((,class256 (:foreground ,fg :underline t))))
-   `(link-visited ((,class256 (:foreground ,color08 :underline t))))
-
-   ;; completion
+   ;;; completion
    `(completions-common-part ((,class256 (:foreground ,color12 :weight bold))))
    `(completions-first-difference ((,class256 (:foreground ,color13))))
 
-   ;; help
-   `(help-key-binding ((,class256 (:foreground ,color06 :background nil :box (:line-width (1 . -1) :color ,color06)))))
 
-   ;; widget
+   ;;; widget
    `(widget-field ((,class256 (:foreground ,fg :background ,colorHr :extend t))))
    
-   `(header-line ((,class256 (:foreground ,fg :background ,colorHr :extend t))))
-   
-   ;; dired
+   ;;; dired
    `(dired-directory ((,class256 (:inherit font-lock-keyword-face :weight bold))))
 
-   ;; ido
+   ;;; ido
    `(ido-first-match ((,class256 (:foreground ,color10 :weight bold))))
    `(ido-only-match ((,class256 (:inherit 'ido-first-match))))
    `(ido-virtual ((,class256 (:foreground ,color08))))
    `(ido-subdir ((,class256 (:foreground ,color15 :weight bold))))
-   ; check how good it is
+   ;; check how good it is
    `(ido-indicator ((,class256 (:background ,color01 :foreground ,color11))))
 
-   ;; compilation
+   ;;; compilation
    `(compilation-mode-line-fail ((,class256 (:foreground ,color01 :weight bold))))
    `(compilation-mode-line-exit ((,class256 (:foreground ,color02 :weight bold))))
    `(compilation-line-number ((,class256 (:foreground ,color08))))
    `(compilation-line-number ((,class256 (:foreground ,color08))))
 
-   ;; whitespace
+   ;;; whitespace
    `(whitespace-space ((,class256 (:background nil :foreground ,colorNT))))
    `(whitespace-line ((,class256 nil)))
    `(whitespace-trailing ((,class256 (:inherit 'trailing-whitespace))))
@@ -118,13 +134,13 @@
    `(whitespace-tab ((,class256 (:inherit 'whitespace-space))))
    `(whitespace-empty ((,class256 (:background ,color03))))
 
-   ;; message
+   ;;; message
    `(message-header-name ((,class256 (:foreground ,color05))))
    `(message-header-subject ((,class256 (:foreground ,color06 :weight bold))))
    `(message-header-to ((,class256 (:foreground ,color06))))
    `(message-header-other ((,class256 (:foreground ,color08))))
    
-   ;; markdown
+   ;;; markdown
    `(markdown-header-face ((,class256 (:foreground ,color15 :weight bold))))
    `(markdown-header-delimiter-face ((,class256 (:foreground ,color12 :weight bold))))
    `(markdown-header-rule-face ((,class256 (:foreground ,color12 :weight bold))))
@@ -135,16 +151,16 @@
    `(markdown-language-keyword-face ((,class256 (:foreground ,color06))))
    `(markdown-gfm-checkbox-face ((,class256 (:foreground ,color08))))
 
-   ;; diff
+   ;;; diff
    `(diff-header ((,class256 (:foreground ,color12 :weight bold))))
    `(diff-file-header ((,class256 (:foreground ,color15))))
    `(diff-hunk-header ((,class256 (:foreground ,color11 :weight bold))))
    
-   ;; git-commit
+   ;;; git-commit
    `(git-commit-summary ((,class256 (:foreground ,color15 :weight bold))))
    `(git-commit-nonempty-second-line ((,class256 (:foreground ,color09 :weight bold))))
 
-   ;; magit
+   ;;; magit
    `(magit-section-heading ((,class256 (:foreground ,color11 :weight bold))))
    `(magit-section-heading-selection ((,class256 (:foreground ,color03))))
    `(magit-section-highlight ((,class256 (:background ,colorHL))))
@@ -156,7 +172,7 @@
    `(magit-bisect-good ((,class256 (:foreground ,color02))))
    `(magit-bisect-skip ((,class256 (:foreground ,color03))))
    
-   ;; erc
+   ;;; erc
    `(erc-timestamp-face ((,class256 (:foreground ,color08))))
    `(erc-notice-face ((,class256 (:foreground ,color08))))
    `(erc-nick-default-face ((,class256 (:foreground ,color04))))
