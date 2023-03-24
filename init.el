@@ -171,3 +171,6 @@
 
 (use-package webpaste
   :commands (webpaste-paste-buffer webpaste-paste-region))
+
+(use-package lorem-ipsum
+  :commands (lorem-ipsum-insert-sentences lorem-ipsum-insert-paragraphs))
