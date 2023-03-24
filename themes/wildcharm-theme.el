@@ -118,6 +118,12 @@
    `(whitespace-tab ((,class256 (:inherit 'whitespace-space))))
    `(whitespace-empty ((,class256 (:background ,color03))))
 
+   ;; message
+   `(message-header-name ((,class256 (:foreground ,color05))))
+   `(message-header-subject ((,class256 (:foreground ,color06 :weight bold))))
+   `(message-header-to ((,class256 (:foreground ,color06))))
+   `(message-header-other ((,class256 (:foreground ,color08))))
+   
    ;; markdown
    `(markdown-header-face ((,class256 (:foreground ,color15 :weight bold))))
    `(markdown-header-delimiter-face ((,class256 (:foreground ,color12 :weight bold))))
