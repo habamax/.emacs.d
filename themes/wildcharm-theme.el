@@ -145,6 +145,8 @@
    `(git-commit-nonempty-second-line ((,class256 (:foreground ,color09 :weight bold))))
 
    ;; magit
+   `(magit-section-heading ((,class256 (:foreground ,color11 :weight bold))))
+   `(magit-section-heading-selection ((,class256 (:foreground ,color03))))
    `(magit-section-highlight ((,class256 (:background ,colorHL))))
    `(magit-branch-local ((,class256 (:foreground ,color12))))
    `(magit-branch-remote ((,class256 (:foreground ,color10))))
