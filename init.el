@@ -1,6 +1,9 @@
 ;;; -*- lexical-binding: t; -*-
 ;;; habamax: personal emacs configuration
 
+;;; How long it took this time?
+(add-hook 'emacs-startup-hook (lambda () (message "%s" (emacs-init-time))))
+
 (setq user-full-name "Maxim Kim"
       user-mail-address "habamax@gmail.com")
 
@@ -168,7 +171,3 @@
 
 (use-package webpaste
   :commands (webpaste-paste-buffer webpaste-paste-region))
-
-
-;;; How long it took this time?
-(add-hook 'emacs-startup-hook (lambda () (message "%s" (emacs-init-time))))
