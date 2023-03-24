@@ -113,6 +113,9 @@
 
 (use-package markdown-mode
   :mode "\\.txt$"
+  :bind (:map markdown-mode-map
+              ("M-n" . nil)
+              ("M-p" . nil))
   :config
   (setq markdown-asymmetric-header t)
   (set-face-attribute 'markdown-header-face-1 nil :height 1.4)
