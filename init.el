@@ -54,6 +54,7 @@
       ido-use-filename-at-point 'guess
       ido-use-url-at-point t)
 (ido-mode 1)
+(fido-mode 1)
 
 (if (window-system)
     (cd "~/"))
@@ -108,8 +109,6 @@
   (setq whitespace-display-mappings '((tab-mark 9 [8250 9])
                                       (space-mark 32 [183][46])
                                       (space-mark 160 [164][95]))))
-
-(use-package smex :bind (("M-x" . smex)))
 
 (use-package magit
   :commands (magit-status)
