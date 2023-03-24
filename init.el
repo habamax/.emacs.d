@@ -141,10 +141,7 @@
         erc-insert-timestamp-function 'erc-insert-timestamp-left
         erc-fill-column 100))
 
-(use-package erc-hl-nicks
-  :after erc
-  :config
-  (add-to-list 'erc-modules 'hl-nicks))
+(use-package erc-hl-nicks :after erc)
 
 (use-package editorconfig
   :config
