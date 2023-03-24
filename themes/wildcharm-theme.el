@@ -74,7 +74,7 @@
    ;; -tty-menu-disabled-face
    ;; -tty-menu-selected-face
    `(show-paren-match ((,class256 :foreground ,colorMP :weight bold)))
-   `(show-paren-mismatch ((,class256 :foreground ,color07 :background ,color01 :weight bold)))
+   `(show-paren-mismatch ((,class256 :foreground ,color15 :background ,color01 :weight bold)))
    
    ;;; syntax
    `(font-lock-string-face ((,class256 (:foreground ,color10))))
