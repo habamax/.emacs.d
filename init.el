@@ -123,6 +123,11 @@
   (set-face-attribute 'markdown-header-face-2 nil :height 1.2)
   (set-face-attribute 'markdown-header-face-3 nil :height 1.1))
 
+(use-package multiple-cursors
+  :bind (("C->" . mc/mark-next-like-this)
+         ("C-<" . mc/mark-previous-like-this)
+         ("C-c C->" . mc/mark-all-like-this)))
+
 (use-package erc
   :ensure nil
   :commands erc
