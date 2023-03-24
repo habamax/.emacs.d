@@ -144,6 +144,16 @@
    `(git-commit-summary ((,class256 (:foreground ,color15 :weight bold))))
    `(git-commit-nonempty-second-line ((,class256 (:foreground ,color09 :weight bold))))
 
+   ;; magit
+   `(magit-section-highlight ((,class256 (:background ,colorHL))))
+   `(magit-branch-local ((,class256 (:foreground ,color12))))
+   `(magit-branch-remote ((,class256 (:foreground ,color10))))
+   `(magit-cherry-equivalent ((,class256 (:foreground ,color13))))
+   `(magit-cherry-unmatched ((,class256 (:foreground ,color14))))
+   `(magit-bisect-bad ((,class256 (:foreground ,color01))))
+   `(magit-bisect-good ((,class256 (:foreground ,color02))))
+   `(magit-bisect-skip ((,class256 (:foreground ,color03))))
+   
    ;; erc
    `(erc-timestamp-face ((,class256 (:foreground ,color08))))
    `(erc-notice-face ((,class256 (:foreground ,color08))))
