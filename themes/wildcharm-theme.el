@@ -18,7 +18,7 @@
       (colorMP "#ff00af")(colorNT "#585858")
       (colorMLA1 "#404348")(colorMLI1 "#303338")
       (colorMLA2 "#444444")(colorMLI2 "#303030")
-      (colorFr "#12161a")
+      (colorFr "#12161a")(colorHr "#32363a")
       (colorSP "#875fff")(colorHL "#3a3d42"))
 
   (custom-theme-set-faces
@@ -27,6 +27,19 @@
    `(default ((,classTTY (:background nil, :foreground nil))
               (t (:background ,bg :foreground ,fg))))
    `(cursor ((t (:background "#ffffff"))))
+
+   ;; syntax
+   `(font-lock-string-face ((,class256 (:foreground ,color10))))
+   `(font-lock-comment-face ((,class256 (:foreground ,color08 :slant italic))))
+   `(font-lock-keyword-face ((,class256 (:foreground ,color12))))
+   `(font-lock-preprocessor-face ((,class256 (:foreground ,color14))))
+   `(font-lock-builtin-face ((,class256 (:foreground ,color05))))
+   `(font-lock-type-face ((,class256 (:foreground ,color11))))
+   `(font-lock-function-name-face ((,class256 (:foreground ,color13))))
+   `(font-lock-variable-name-face ((,class256 (:foreground ,color06))))
+   `(font-lock-constant-face ((,class256 (:foreground ,color09))))
+
+   `(font-lock-warning-face ((,class256 (:foreground ,color03 :weight bold))))
 
    ;; UI
    `(minibuffer-prompt ((,class256 (:foreground ,color11 :weight bold))))
@@ -61,19 +74,6 @@
    `(nobreak-hyphen ((,class256 (:inherit 'escape-glyph))))
    `(nobreak-space ((,class256 (:foreground ,colorSP :underline t))))
 
-   ;; syntax
-   `(font-lock-string-face ((,class256 (:foreground ,color10))))
-   `(font-lock-comment-face ((,class256 (:foreground ,color08 :slant italic))))
-   `(font-lock-keyword-face ((,class256 (:foreground ,color12))))
-   `(font-lock-preprocessor-face ((,class256 (:foreground ,color14))))
-   `(font-lock-builtin-face ((,class256 (:foreground ,color05))))
-   `(font-lock-type-face ((,class256 (:foreground ,color11))))
-   `(font-lock-function-name-face ((,class256 (:foreground ,color13))))
-   `(font-lock-variable-name-face ((,class256 (:foreground ,color06))))
-   `(font-lock-constant-face ((,class256 (:foreground ,color09))))
-
-   `(font-lock-warning-face ((,class256 (:foreground ,color03 :weight bold))))
-
    ;; parenthesis and pairs
    `(show-paren-match ((,class256 :foreground ,colorMP :weight bold)))
 
@@ -89,9 +89,9 @@
    `(help-key-binding ((,class256 (:foreground ,color06 :background nil :box (:line-width (1 . -1) :color ,color06)))))
 
    ;; widget
-   `(widget-field ((,class256 (:foreground ,fg :background ,colorNT :extend t))))
+   `(widget-field ((,class256 (:foreground ,fg :background ,colorHr :extend t))))
    
-   `(header-line ((,class256 (:foreground ,fg :background ,colorNT :extend t))))
+   `(header-line ((,class256 (:foreground ,fg :background ,colorHr :extend t))))
    
    ;; dired
    `(dired-directory ((,class256 (:inherit font-lock-keyword-face :weight bold))))
