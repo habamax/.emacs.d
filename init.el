@@ -177,3 +177,5 @@
 
 (use-package lorem-ipsum
   :commands (lorem-ipsum-insert-sentences lorem-ipsum-insert-paragraphs))
+
+(use-package gdscript-mode)
