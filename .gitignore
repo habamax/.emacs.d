@@ -13,3 +13,4 @@
 /bookmarks
 *.elc
 /url/
+/.mc-lists.el
