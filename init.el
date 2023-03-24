@@ -48,7 +48,8 @@
 (setq ido-enable-flex-matching t
       ido-use-virtual-buffers t
       ido-create-new-buffer 'always
-      ido-use-filename-at-point 'guess)
+      ido-use-filename-at-point 'guess
+      ido-use-url-at-point t)
 (ido-mode 1)
 
 (if (window-system)
