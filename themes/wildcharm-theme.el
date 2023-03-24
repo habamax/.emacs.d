@@ -78,8 +78,8 @@
    `(show-paren-match ((,class256 :foreground ,colorMP :weight bold)))
 
    ;; links
-   `(link ((,class256 (:foreground ,fg :underline (:color, fg)))))
-   `(link-visited ((,class256 (:foreground ,color08 :underline (:color ,color08)))))
+   `(link ((,class256 (:foreground ,fg :underline t))))
+   `(link-visited ((,class256 (:foreground ,color08 :underline t))))
 
    ;; completion
    `(completions-common-part ((,class256 (:foreground ,color12 :weight bold))))
