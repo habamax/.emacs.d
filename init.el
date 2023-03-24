@@ -153,7 +153,10 @@
         erc-insert-timestamp-function 'erc-insert-timestamp-left
         erc-fill-column 100))
 
-(use-package erc-hl-nicks :after erc)
+(use-package erc-hl-nicks
+  :after erc
+  :config
+  (erc-hl-nicks-force-nick-face "habamax" (face-attribute 'erc-current-nick-face :foreground)))
 
 (use-package editorconfig
   :config
