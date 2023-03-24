@@ -79,7 +79,7 @@
 
    ;; links
    `(link ((,class256 (:foreground ,fg :underline (:color, fg)))))
-   `(link-visited ((,class256 (:foreground ,color07 :underline (:color ,color07)))))
+   `(link-visited ((,class256 (:foreground ,color08 :underline (:color ,color08)))))
 
    ;; completion
    `(completions-common-part ((,class256 (:foreground ,color12 :weight bold))))
