@@ -65,8 +65,7 @@ c:
   (let ((column (current-column)))
     (transpose-lines 1)
     (forward-line -2)
-    (move-to-column column t)
-    (indent-according-to-mode)))
+    (move-to-column column t)))
 
 
 ;;;###autoload
@@ -77,8 +76,7 @@ c:
     (forward-line 1)
     (transpose-lines 1)
     (forward-line -1)
-    (move-to-column column t)
-    (indent-according-to-mode)))
+    (move-to-column column t)))
 
 
 ;; Next buffer with the same mode
