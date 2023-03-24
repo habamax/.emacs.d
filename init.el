@@ -166,6 +166,9 @@
           ("https://www.linux.org.ru/section-rss.jsp?section=1" news)
           ("https://news.ycombinator.com/rss" news))))
 
+(use-package webpaste
+  :commands (webpaste-paste-buffer webpaste-paste-region))
+
 
 ;;; How long it took this time?
 (add-hook 'emacs-startup-hook (lambda () (message "%s" (emacs-init-time))))

@@ -14,3 +14,4 @@
 *.elc
 /url/
 /.mc-lists.el
+/request/
