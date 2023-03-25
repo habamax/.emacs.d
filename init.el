@@ -25,8 +25,10 @@
 (setq suggest-key-bindings t)
 (setq-default fill-column 80)
 (setq-default indent-tabs-mode nil)
-(setq shr-use-fonts nil)
 (setq-default isearch-lazy-count t)
+
+;; Simple HTML renderer to use default font.
+(setq shr-use-fonts nil)
 
 ;; ripgrep as grep
 (setq grep-command "rg -nS --no-heading ")
