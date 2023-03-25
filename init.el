@@ -56,6 +56,19 @@
 (ido-mode 1)
 (fido-mode 1)
 
+;; ;;; try when emacs 29 is out
+;; (setq completion-styles '(flex)
+;;       completion-auto-wrap t
+;;       completion-auto-help 'always
+;;       completion-auto-select 'second-tab
+;;       completion-show-help nil
+;;       completions-max-height 15
+;;       max-mini-window-height 10)
+;; (setq icomplete-show-matches-on-no-input t)
+;; (icomplete-mode 1)
+
+
+
 (if (window-system)
     (cd "~/"))
 
