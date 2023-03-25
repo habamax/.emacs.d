@@ -101,16 +101,17 @@
    ;;; global-hl-line-mode
    `(hl-line ((,class256 (:foreground nil :background ,colorHL))))
 
-   ;;; completion
-   `(completions-common-part ((,class256 (:foreground ,color12 :weight bold))))
-   `(completions-first-difference ((,class256 (:foreground ,color13))))
-
-
    ;;; widget
    `(widget-field ((,class256 (:foreground ,fg :background ,colorHr :extend t))))
    
    ;;; dired
    `(dired-directory ((,class256 (:inherit font-lock-keyword-face :weight bold))))
+
+   ;;; completion
+   `(icomplete-first-match ((,class256 (:foreground ,color10 :weight bold))))
+   `(icomplete-selected-match ((,class256 (:background ,colorHL))))
+   `(completions-common-part ((,class256 (:foreground ,color12 :weight bold))))
+   `(completions-first-difference ((,class256 (:foreground ,color13))))
 
    ;;; ido
    `(ido-first-match ((,class256 (:foreground ,color10 :weight bold))))
