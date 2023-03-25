@@ -56,6 +56,9 @@
 (ido-mode 1)
 (fido-mode 1)
 
+(setq completion-auto-help 'always
+      completion-show-help nil)
+
 ;; ;;; try when emacs 29 is out
 ;; (setq completion-styles '(flex)
 ;;       completion-auto-wrap t
