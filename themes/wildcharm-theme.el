@@ -204,7 +204,7 @@
    `(fg:erc-color-face14 ((,class256 (:foreground ,color14))))
    `(fg:erc-color-face15 ((,class256 (:foreground ,color15))))
 
-   ;; elfeed
+   ;;; elfeed
    `(elfeed-log-date-face ((,class256 (:foreground ,color03))))
    `(elfeed-log-error-level-face ((,class256 (:foreground ,color01))))
    `(elfeed-log-warn-level-face ((,class256 (:foreground ,color03))))
@@ -216,6 +216,21 @@
    `(elfeed-search-unread-title-face ((,class256 (:foreground ,color06 :weight bold))))
    `(elfeed-search-unread-count-face ((,class256 (:foreground ,color12))))
    `(elfeed-search-title-face ((,class256 (:foreground ,color07))))
+
+   ;;; eshell
+   `(eshell-prompt ((,class256 (:foreground ,color13 :weight bold))))
+   `(eshell-ls-directory ((,class256 (:foreground ,color12 :weight bold))))
+   `(eshell-ls-symlink ((,class256 (:foreground ,color14 :weight bold))))
+   `(eshell-ls-executable ((,class256 (:foreground ,color10 :weight bold))))
+   `(eshell-ls-clutter ((,class256 (:foreground ,color01))))
+   `(eshell-ls-archive ((,class256 (:foreground ,color03))))
+   `(eshell-ls-backup ((,class256 (:foreground ,color08))))
+   `(eshell-ls-unreadable ((,class256 (:foreground ,colorNT))))
+   `(eshell-ls-missing ((,class256 (:foreground ,color15 :background ,color01))))
+   `(eshell-ls-product ((,class256 (:foreground ,color15))))
+   `(eshell-ls-readonly ((,class256 (:foreground ,color08))))
+   `(eshell-ls-special ((,class256 (:foreground ,color05))))
+   
    
    ))
 
