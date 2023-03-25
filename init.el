@@ -131,7 +131,7 @@
 
 (use-package magit
   :commands (magit-status)
-  :bind ("C-c g" . magit-status))
+  :bind ("C-c g" . magit-file-dispatch))
 
 (use-package markdown-mode
   :mode "\\.txt$"
