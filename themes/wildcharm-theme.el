@@ -106,6 +106,7 @@
    
    ;;; dired
    `(dired-directory ((,class256 (:inherit font-lock-keyword-face :weight bold))))
+   `(dired-broken-symlink ((,class256 (:foreground ,color15 :background ,color01))))
 
    ;;; completion
    `(icomplete-first-match ((,class256 (:foreground ,color10 :weight bold))))
