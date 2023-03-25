@@ -19,7 +19,8 @@
       (colorMLA1 "#404348")(colorMLI1 "#303338")
       (colorMLA2 "#444444")(colorMLI2 "#303030")
       (colorFr "#12161a")(colorHr "#32363a")
-      (colorSP "#875fff")(colorHL "#3a3d42"))
+      (colorSP "#875fff")(colorHL "#3a3d42")
+      (colorMt "#3a3632"))
 
   (custom-theme-set-faces
    'wildcharm
@@ -96,8 +97,8 @@
    `(isearch-fail ((,class256 (:background ,color09 :foreground ,color00))))
 
    ;;; replace.el
-   `(match ((,class256 (:background ,color06 :foreground ,color00))))
-   
+   `(match ((,class256 (:background ,colorMt))))
+
    ;;; global-hl-line-mode
    `(hl-line ((,class256 (:foreground nil :background ,colorHL))))
 
