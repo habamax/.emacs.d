@@ -168,7 +168,7 @@
 (use-package erc-hl-nicks
   :after erc
   :config
-  (erc-hl-nicks-force-nick-face "habamax" (face-attribute 'erc-current-nick-face :foreground)))
+  (erc-hl-nicks-force-nick-face "habamax" (face-attribute 'font-lock-constant-face :foreground)))
 
 (use-package editorconfig
   :config
