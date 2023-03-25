@@ -26,6 +26,7 @@
 (setq-default fill-column 80)
 (setq-default indent-tabs-mode nil)
 (setq shr-use-fonts nil)
+(setq-default isearch-lazy-count t)
 
 ;; ripgrep as grep
 (setq grep-command "rg -nS --no-heading ")
