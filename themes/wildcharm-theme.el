@@ -186,7 +186,7 @@
    `(erc-direct-msg-face ((,class256 (:foreground ,color03))))
    `(erc-button ((,class256 (:foreground nil :background nil :underline t))))
    `(erc-prompt-face ((,class256 (:foreground ,color13 :background nil :weight bold))))
-   `(erc-action-face ((,class256 (:foreground ,colorSP :background nil))))
+   `(erc-action-face ((,class256 (:foreground ,color08 :background nil :slant italic))))
    `(fg:erc-color-face0 ((,class256 (:foreground ,color00))))
    `(fg:erc-color-face1 ((,class256 (:foreground ,color01))))
    `(fg:erc-color-face2 ((,class256 (:foreground ,color02))))
