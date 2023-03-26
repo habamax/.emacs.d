@@ -139,6 +139,10 @@
    `(whitespace-tab ((,class256 (:inherit 'whitespace-space))))
    `(whitespace-empty ((,class256 (:background ,color03))))
 
+   ;;; vc
+   `(log-view-message ((,class256 (:foreground ,color08))))
+   `(log-view-commit-body ((,class256 (:foreground ,fg))))
+   
    ;;; message
    `(message-header-name ((,class256 (:foreground ,color05))))
    `(message-header-subject ((,class256 (:foreground ,color06 :weight bold))))
