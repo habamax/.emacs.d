@@ -43,7 +43,7 @@
 
 ;; dired
 (setq ls-lisp-dirs-first t)
-(setq dired-listing-switches "-al --group-directories-first")
+(setq dired-listing-switches "-lah --group-directories-first")
 (setq dired-dwim-target t)
 
 ;; Store all backup and autosave files in the tmp dir
