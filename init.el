@@ -38,13 +38,13 @@
 (setq shr-use-fonts nil)
 
 ;; ripgrep as grep
-(setq grep-command "rg -nS --no-heading ")
-(setq grep-use-null-device nil)
+(setq grep-command "rg -nS --no-heading "
+      grep-use-null-device nil)
 
 ;; dired
 (setq ls-lisp-dirs-first t)
-(setq dired-listing-switches "-lah --group-directories-first")
-(setq dired-dwim-target t)
+(setq dired-listing-switches "-lah --group-directories-first"
+      dired-dwim-target t)
 
 ;; Store all backup and autosave files in the tmp dir
 (setq backup-directory-alist `((".*" . ,temporary-file-directory)))
