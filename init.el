@@ -139,6 +139,7 @@
               ("M-n" . nil)
               ("M-p" . nil))
   :config
+  (setq markdown-unordered-list-item-prefix "  - ")
   (setq markdown-asymmetric-header t)
   (set-face-attribute 'markdown-header-face-1 nil :height 1.4)
   (set-face-attribute 'markdown-header-face-2 nil :height 1.2)
