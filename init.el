@@ -6,7 +6,10 @@
 
 ;; disable gc for init
 (setq gc-cons-threshold 64000000)
-(add-hook 'after-init-hook #'(lambda () (setq gc-cons-threshold 2000000)))
+(add-hook 'after-init-hook #'(lambda () (setq gc-cons-threshold (default-value 'gc-cons-threshold))))
+
+;; emacsclient to focus new frame
+(add-hook 'server-after-make-frame-hook (lambda () (select-frame-set-input-focus (selected-frame))))
 
 (setq user-full-name "Maxim Kim"
       user-mail-address "habamax@gmail.com")
@@ -113,10 +116,6 @@
   :bind ("C-c in" . habamax/insert-meeting-notes)
   :bind ([remap list-buffers] . ibuffer)
   :config
-  ;; (add-hook 'server-switch-hook 'habamax/focus-frame)
-  ;; emacsclient to focus new frame
-  (add-hook 'server-after-make-frame-hook 'habamax/focus-frame)
-
   (defvar habamax-duplicate-line-map
     (let ((map (make-sparse-keymap)))
       (define-key map "d" 'habamax/duplicate-line)
