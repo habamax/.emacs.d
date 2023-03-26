@@ -64,8 +64,12 @@
    ;; -scroll-bar
    `(cursor ((t (:background "#ffffff"))))
    ;; -tool-bar
-   ;; -tab-bar
-   ;; -tab-line
+   `(tab-bar ((,class256 (:background ,colorMLI1 :foreground ,color08))
+                         (,classTTY (:background ,colorMLI2 :foreground ,color08))))
+   `(tab-bar-tab ((,class256 (:background ,bg :foreground ,color15 :weight bold))
+              (,classTTY (:background ,bg :foreground ,color15 :weight bold))))   
+   `(tab-bar-tab-inactive ((,class256 (:background ,colorMLA1 :foreground ,color07))
+              (,classTTY (:background ,colorMLA2 :foreground ,color07))))
    ;; -menu
    `(help-key-binding ((,class256 (:foreground ,color06 :background nil :box (:line-width (1 . -1) :color ,color06)))))
    `(error ((,class256 (:foreground ,color09 :weight bold))))
