@@ -191,9 +191,4 @@ See `sort-regexp-fields'."
   (forward-line 3))
 
 
-;;;###autoload
-(defun habamax/focus-frame ()
-  (select-frame-set-input-focus (selected-frame)))
-
-
 (provide 'habamax)
