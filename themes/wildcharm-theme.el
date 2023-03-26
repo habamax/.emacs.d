@@ -110,6 +110,7 @@
    `(widget-field ((,class256 (:foreground ,fg :background ,colorHr :extend t))))
    
    ;;; dired
+   `(dired-header ((,class256 (:foreground ,color15 :weight bold))))
    `(dired-directory ((,class256 (:inherit font-lock-keyword-face :weight bold))))
    `(dired-symlink ((,class256 (:foreground ,color14 :weight bold :inherit nil))))
    `(dired-broken-symlink ((,class256 (:foreground ,color15 :background ,color01))))
