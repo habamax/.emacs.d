@@ -6,7 +6,7 @@
 
 ;; disable gc for init
 (setq gc-cons-threshold 64000000)
-(add-hook 'after-init-hook #'(lambda () (setq gc-cons-threshold (default-value 'gc-cons-threshold))))
+(add-hook 'after-init-hook (lambda () (setq gc-cons-threshold (default-value 'gc-cons-threshold))))
 
 ;; emacsclient to focus new frame
 (add-hook 'server-after-make-frame-hook (lambda () (select-frame-set-input-focus (selected-frame))))
