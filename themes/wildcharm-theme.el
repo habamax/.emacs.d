@@ -44,14 +44,14 @@
    `(homoglyph ((,class256 (:inherit 'escape-glyph))))
    `(nobreak-space ((,class256 (:foreground ,colorSP :underline t))))
    `(nobreak-hyphen ((,class256 (:inherit 'escape-glyph))))
-   `(mode-line ((,class256 (:background ,colorMLA1 :foreground ,color07 :box (:line-width 1 :color ,color00)))
+   `(mode-line ((,class256 (:background ,colorMLA1 :foreground ,color07 :box (:line-width 1 :color ,colorNT)))
                 (,classTTY (:background ,colorMLA2 :foreground ,color07))))
    `(mode-line-inactive ((,class256 (:background ,colorMLI1 :foreground ,color08 :box (:line-width 1 :color ,color00)))
                          (,classTTY (:background ,colorMLI2 :foreground ,color08))))
    ;; -mode-line-highlight
    ;; -mode-line-emphasis
    ;; -mode-line-buffer-id
-   `(header-line ((,class256 (:foreground ,fg :background ,colorHr :extend t))))
+   `(header-line ((,class256 (:foreground ,fg :background ,colorHr :extend t  :box (:line-width 1 :color ,color00)))))
    `(vertical-border ((,class256 (:foreground ,colorHr))))
    ;; -window-divider '((t :foreground "gray60"))
    ;; -window-divider-first-pixel
