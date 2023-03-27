@@ -48,9 +48,9 @@
                 (,classTTY (:background ,color-mode-line-active-2 :foreground ,color07))))
    `(mode-line-inactive ((,class256 (:background ,color-mode-line-inactive-1 :foreground ,color08 :box (:line-width 1 :color ,color00)))
                          (,classTTY (:background ,color-mode-line-inactive-2 :foreground ,color08))))
-   ;; -mode-line-highlight
-   ;; -mode-line-emphasis
-   ;; -mode-line-buffer-id
+   `(mode-line-highlight ((,class256 (:background ,color00 :box (:line-width 1 :color ,color-non-text)))))
+   `(mode-line-emphasis ((,class256 (:weight bold))))
+   `(mode-line-buffer-id ((,class256 (:weight bold))))
    `(header-line ((,class256 (:foreground ,fg :background ,color-header-line :extend t  :box (:line-width 1 :color ,color00)))))
    `(vertical-border ((,class256 (:foreground ,color-header-line))))
    ;; -window-divider '((t :foreground "gray60"))
