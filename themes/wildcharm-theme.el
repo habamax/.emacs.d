@@ -15,12 +15,12 @@
       (color05 "#d787d7")(color13 "#ff87ff")
       (color06 "#00afaf")(color14 "#00d7d7")
       (color07 "#d0d0d0")(color15 "#ffffff")
-      (colorMP "#ff00af")(colorNT "#585858")
-      (colorMLA1 "#404348")(colorMLI1 "#303338")
-      (colorMLA2 "#444444")(colorMLI2 "#303030")
-      (colorFr "#12161a")(colorHr "#32363a")
-      (colorSP "#875fff")(colorHL "#3a3d42")
-      (colorMt "#3a3632"))
+      (color-match-paren "#ff00af")(color-non-text "#585858")
+      (color-mode-line-active-1 "#404348")(color-mode-line-inactive-1 "#303338")
+      (color-mode-line-active-2 "#444444")(color-mode-line-inactive-2 "#303030")
+      (color-fringe "#12161a")(color-header-line "#32363a")
+      (color-special "#875fff")(color-hl-line "#3a3d42")
+      (color-match "#3a3632"))
 
   (custom-theme-set-faces
    'wildcharm
@@ -28,48 +28,48 @@
    ;;; standard faces
    `(default ((,classTTY (:background nil, :foreground nil))
               (t (:background ,bg :foreground ,fg))))
-   `(shadow ((,class256 (:foreground ,colorNT))))
+   `(shadow ((,class256 (:foreground ,color-non-text))))
    `(link ((,class256 (:foreground ,fg :underline t))))
    `(link-visited ((,class256 (:foreground ,color08 :underline t))))
    `(highlight ((,class256 (:foreground ,color00 :background ,color12))))
    `(region ((,class256 (:background ,color04 :foreground ,bg))))
    `(secondary-selection ((,class256 (:background ,color06 :foreground ,bg))))
    `(trailing-whitespace ((,class256 (:foreground ,color01 :weight bold))))
-   `(line-number ((,class256 (:foreground ,colorNT))))
+   `(line-number ((,class256 (:foreground ,color-non-text))))
    `(line-number-current-line ((,class256 (:foreground ,color03 :weight bold))))
    ;; -line-number-major-tick
    ;; -line-number-minor-tick
    ;; -fill-column-indicator
-   `(escape-glyph ((,class256 (:foreground ,colorSP))))
+   `(escape-glyph ((,class256 (:foreground ,color-special))))
    `(homoglyph ((,class256 (:inherit 'escape-glyph))))
-   `(nobreak-space ((,class256 (:foreground ,colorSP :underline t))))
+   `(nobreak-space ((,class256 (:foreground ,color-special :underline t))))
    `(nobreak-hyphen ((,class256 (:inherit 'escape-glyph))))
-   `(mode-line ((,class256 (:background ,colorMLA1 :foreground ,color07 :box (:line-width 1 :color ,colorNT)))
-                (,classTTY (:background ,colorMLA2 :foreground ,color07))))
-   `(mode-line-inactive ((,class256 (:background ,colorMLI1 :foreground ,color08 :box (:line-width 1 :color ,color00)))
-                         (,classTTY (:background ,colorMLI2 :foreground ,color08))))
+   `(mode-line ((,class256 (:background ,color-mode-line-active-1 :foreground ,color07 :box (:line-width 1 :color ,color-non-text)))
+                (,classTTY (:background ,color-mode-line-active-2 :foreground ,color07))))
+   `(mode-line-inactive ((,class256 (:background ,color-mode-line-inactive-1 :foreground ,color08 :box (:line-width 1 :color ,color00)))
+                         (,classTTY (:background ,color-mode-line-inactive-2 :foreground ,color08))))
    ;; -mode-line-highlight
    ;; -mode-line-emphasis
    ;; -mode-line-buffer-id
-   `(header-line ((,class256 (:foreground ,fg :background ,colorHr :extend t  :box (:line-width 1 :color ,color00)))))
-   `(vertical-border ((,class256 (:foreground ,colorHr))))
+   `(header-line ((,class256 (:foreground ,fg :background ,color-header-line :extend t  :box (:line-width 1 :color ,color00)))))
+   `(vertical-border ((,class256 (:foreground ,color-header-line))))
    ;; -window-divider '((t :foreground "gray60"))
    ;; -window-divider-first-pixel
    ;; -window-divider-last-pixel
    ;; -internal-border
    ;; -child-frame-border
    `(minibuffer-prompt ((,class256 (:foreground ,color11 :weight bold))))
-   `(fringe ((,class256 (:background ,colorFr))
+   `(fringe ((,class256 (:background ,color-fringe))
              (,classTTY (:background ,color00))))
    ;; -scroll-bar
    `(cursor ((t (:background "#ffffff"))))
    ;; -tool-bar
-   `(tab-bar ((,classTTY (:background ,colorMLI2 :foreground ,color08))
-              (,class256 (:background ,colorMLI1 :foreground ,color08))))
-   `(tab-bar-tab ((,classTTY (:background ,colorMLA2 :foreground ,color15 :weight bold))
+   `(tab-bar ((,classTTY (:background ,color-mode-line-inactive-2 :foreground ,color08))
+              (,class256 (:background ,color-mode-line-inactive-1 :foreground ,color08))))
+   `(tab-bar-tab ((,classTTY (:background ,color-mode-line-active-2 :foreground ,color15 :weight bold))
                   (,class256 (:background ,bg :foreground ,color15 :weight bold))))   
-   `(tab-bar-tab-inactive ((,classTTY (:background ,colorMLI2 :foreground ,color07))
-                           (,class256 (:background ,colorMLA1 :foreground ,color07))))
+   `(tab-bar-tab-inactive ((,classTTY (:background ,color-mode-line-inactive-2 :foreground ,color07))
+                           (,class256 (:background ,color-mode-line-active-1 :foreground ,color07))))
    ;; -menu
    `(help-key-binding ((,class256 (:foreground ,color06 :background nil :box (:line-width (1 . -1) :color ,color06)))))
    `(error ((,class256 (:foreground ,color09 :weight bold))))
@@ -78,8 +78,8 @@
    ;; -tty-menu-enabled-face
    ;; -tty-menu-disabled-face
    ;; -tty-menu-selected-face
-   `(show-paren-match ((,class256 :foreground ,colorMP :weight bold)))
-   `(show-paren-mismatch ((,class256 :foreground ,color15 :background ,colorMP :weight bold)))
+   `(show-paren-match ((,class256 :foreground ,color-match-paren :weight bold)))
+   `(show-paren-mismatch ((,class256 :foreground ,color15 :background ,color-match-paren :weight bold)))
    
    ;;; syntax
    `(font-lock-string-face ((,class256 (:foreground ,color10))))
@@ -101,13 +101,13 @@
    `(isearch-fail ((,class256 (:background ,color09 :foreground ,color00))))
 
    ;;; replace.el
-   `(match ((,class256 (:background ,colorMt))))
+   `(match ((,class256 (:background ,color-match))))
 
    ;;; global-hl-line-mode
-   `(hl-line ((,class256 (:foreground nil :background ,colorHL))))
+   `(hl-line ((,class256 (:foreground nil :background ,color-hl-line))))
 
    ;;; widget
-   `(widget-field ((,class256 (:foreground ,fg :background ,colorHr :extend t))))
+   `(widget-field ((,class256 (:foreground ,fg :background ,color-header-line :extend t))))
    
    ;;; dired
    `(dired-header ((,class256 (:foreground ,color15 :weight bold))))
@@ -118,7 +118,7 @@
 
    ;;; completion
    `(icomplete-first-match ((,class256 (:foreground ,color10 :weight bold))))
-   `(icomplete-selected-match ((,class256 (:background ,colorHL))))
+   `(icomplete-selected-match ((,class256 (:background ,color-hl-line))))
    `(completions-common-part ((,class256 (:foreground ,color12 :weight bold))))
    `(completions-first-difference ((,class256 (:foreground ,color13))))
 
@@ -137,7 +137,7 @@
    `(compilation-line-number ((,class256 (:foreground ,color08))))
 
    ;;; whitespace
-   `(whitespace-space ((,class256 (:background nil :foreground ,colorNT))))
+   `(whitespace-space ((,class256 (:background nil :foreground ,color-non-text))))
    `(whitespace-line ((,class256 nil)))
    `(whitespace-trailing ((,class256 (:inherit 'trailing-whitespace))))
    `(whitespace-indentation ((,class256 (:inherit 'whitespace-space))))
@@ -177,7 +177,7 @@
    ;;; magit
    `(magit-section-heading ((,class256 (:foreground ,color11 :weight bold))))
    `(magit-section-heading-selection ((,class256 (:foreground ,color03))))
-   `(magit-section-highlight ((,class256 (:background ,colorHL))))
+   `(magit-section-highlight ((,class256 (:background ,color-hl-line))))
    `(magit-branch-local ((,class256 (:foreground ,color12))))
    `(magit-branch-remote ((,class256 (:foreground ,color10))))
    `(magit-cherry-equivalent ((,class256 (:foreground ,color13))))
@@ -192,7 +192,7 @@
    `(erc-nick-default-face ((,class256 (:foreground ,color04))))
    `(erc-current-nick-face ((,class256 (:foreground ,color09))))
    `(erc-nick-msg-face ((,class256 (:foreground ,color11))))
-   `(erc-input-face ((,class256 (:foreground ,color02))))
+   `(erc-input-face ((,class256 (:foreground ,color10))))
    `(erc-error-face ((,class256 (:foreground ,color01))))
    `(erc-dangerous-host-face ((,class256 (:foreground ,color01))))
    `(erc-direct-msg-face ((,class256 (:foreground ,color03))))
@@ -237,7 +237,7 @@
    `(eshell-ls-clutter ((,class256 (:foreground ,color01))))
    `(eshell-ls-archive ((,class256 (:foreground ,color03))))
    `(eshell-ls-backup ((,class256 (:foreground ,color08))))
-   `(eshell-ls-unreadable ((,class256 (:foreground ,colorNT))))
+   `(eshell-ls-unreadable ((,class256 (:foreground ,color-non-text))))
    `(eshell-ls-missing ((,class256 (:foreground ,color15 :background ,color01))))
    `(eshell-ls-product ((,class256 (:foreground ,color15))))
    `(eshell-ls-readonly ((,class256 (:foreground ,color08))))
