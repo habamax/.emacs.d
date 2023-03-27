@@ -81,7 +81,7 @@
    `(show-paren-match ((,class256 :foreground ,color-match-paren :weight bold)))
    `(show-paren-mismatch ((,class256 :foreground ,color15 :background ,color-match-paren :weight bold)))
    
-   ;;; syntax
+   ;;; font-lock
    `(font-lock-string-face ((,class256 (:foreground ,color10))))
    `(font-lock-comment-face ((,class256 (:foreground ,color08))))
    `(font-lock-keyword-face ((,class256 (:foreground ,color12))))
@@ -91,8 +91,6 @@
    `(font-lock-function-name-face ((,class256 (:foreground ,color13))))
    `(font-lock-variable-name-face ((,class256 (:foreground ,color06))))
    `(font-lock-constant-face ((,class256 (:foreground ,color09))))
-
-   ;;; other font-lock?
    `(font-lock-warning-face ((,class256 (:foreground ,color03 :weight bold))))
 
    ;;; isearch
