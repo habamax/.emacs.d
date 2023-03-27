@@ -164,7 +164,7 @@
   :ensure nil
   :commands erc
   :config
-  (erc-notifications-mode t)
+  (when (not +IS-WINDOWS+) (erc-notifications-mode t))
   (setq erc-nick '("habamax" "mxmkm")
         erc-track-minor-mode t
         erc-hide-list '("JOIN" "PART" "QUIT")
