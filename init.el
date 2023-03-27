@@ -21,8 +21,8 @@
 (if +IS-WINDOWS+
     (cond ((find-font (font-spec :name "JetBrains Mono NL"))
            (add-to-list 'default-frame-alist '(font . "JetBrains Mono NL-13")))
-          ((find-font (font-spec :name "Cascadia Mono"))
-           (add-to-list 'default-frame-alist '(font . "Cascadia Mono-13")))
+          ((find-font (font-spec :name "Cascadia Mono SemiLight"))
+           (add-to-list 'default-frame-alist '(font . "Cascadia Mono SemiLight-13")))
           ((find-font (font-spec :name "Consolas"))
            (add-to-list 'default-frame-alist '(font . "Consolas-13"))))
   (add-to-list 'default-frame-alist '(font . "Monospace-13")))
