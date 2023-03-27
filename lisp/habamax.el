@@ -168,20 +168,6 @@ See `sort-regexp-fields'."
 
 
 ;;;###autoload
-(defun habamax/flush-blank-lines (start end)
-  "Delete all blank lines in a region."
-  (interactive "r")
-  (flush-lines "^\\s-*$" start end nil))
-
-
-;;;###autoload
-(defun habamax/collapse-blank-lines (start end)
-  "Delete all but one blank lines in a region."
-  (interactive "r")
-  (replace-regexp "^\n\\{2,\\}" "\n" nil start end))
-
-
-;;;###autoload
 (defun habamax/insert-meeting-notes ()
   (interactive)
   (save-excursion
