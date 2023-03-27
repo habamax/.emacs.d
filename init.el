@@ -139,6 +139,24 @@
                                       (space-mark 32 [183][46])
                                       (space-mark 160 [164][95]))))
 
+(use-package gnus
+  :ensure nil
+  :commands gnus
+  :config
+  (setq 
+   user-full-name "Maxim Kim"
+   user-mail-address "habamax@gmail.com"
+   send-mail-function 'smtpmail-send-it
+   smtpmail-smtp-server "smtp.gmail.com"
+   smtpmail-stream-type 'starttls
+   smtpmail-smtp-service 587
+   gnus-select-method
+   '(nnimap "gmail"
+            (nnimap-address "imap.gmail.com")
+            (nnimap-server-port 993)
+            (nnimap-stream ssl)
+            (nnmail-expiry-wait immediate))))
+
 (use-package magit
   :commands (magit-status)
   :bind ("C-c g" . magit-file-dispatch))
