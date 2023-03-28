@@ -130,6 +130,15 @@
     "Press d to duplicate line.")
   (put 'habamax/duplicate-line 'repeat-map 'habamax-duplicate-line-map))
 
+(use-package habamax-compile
+  :load-path "lisp"
+  :commands (habamax-compile/run-c-file habamax-compile/run-python-file)
+  :init
+  (add-hook 'c-mode-hook
+            (lambda () (local-set-key [f5] 'habamax-compile/run-c-file)))
+  (add-hook 'python-mode-hook
+            (lambda () (local-set-key [f5] 'habamax-compile/run-python-file))))
+
 (use-package whitespace
   :ensure nil
   :commands (whitespace-mode)
