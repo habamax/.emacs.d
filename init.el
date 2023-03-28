@@ -110,25 +110,20 @@
 
 (use-package habamax
   :load-path "lisp"
-  :bind ("M-;" . habamax/toggle-comment)
-  :bind ("C-c M-;" . habamax/comment-fill-aligned)
-  :bind ("C-c d" . habamax/duplicate-line)
-  :bind ("M-n" . habamax/move-line-down)
-  :bind ("M-p" . habamax/move-line-up)
-  :bind ("C-w" . habamax/kill-region)
-  :bind ("M-w" . habamax/kill-ring-save)
-  :bind ("C-<tab>" . habamax/next-buffer-like-this)
-  :bind ("C-`" . habamax/previous-buffer-like-this)
-  :bind ("C-c id" . habamax/insert-current-date)
-  :bind ("C-c in" . habamax/insert-meeting-notes)
-  :bind ([remap list-buffers] . ibuffer)
-  :config
-  (defvar habamax-duplicate-line-map
-    (let ((map (make-sparse-keymap)))
-      (define-key map "d" 'habamax/duplicate-line)
-      map)
-    "Press d to duplicate line.")
-  (put 'habamax/duplicate-line 'repeat-map 'habamax-duplicate-line-map))
+  :bind (("M-;" . habamax/toggle-comment)
+         ("C-c M-;" . habamax/comment-fill-aligned)
+         ("M-n" . habamax/move-line-down)
+         ("M-p" . habamax/move-line-up)
+         ("C-w" . habamax/kill-region)
+         ("M-w" . habamax/kill-ring-save)
+         ("C-<tab>" . habamax/next-buffer-like-this)
+         ("C-`" . habamax/previous-buffer-like-this)
+         ("C-c id" . habamax/insert-current-date)
+         ("C-c in" . habamax/insert-meeting-notes)
+         ([remap list-buffers] . ibuffer)
+         ("C-c d" . habamax/duplicate-line)
+         :repeat-map habamax-duplicate-line-repeat-map
+         ("d" . habamax/duplicate-line)))
 
 (use-package habamax-compile
   :load-path "lisp"
