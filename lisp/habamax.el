@@ -146,10 +146,7 @@ c:
 (defun habamax/grep-current-word ()
   "Search current word using `grep' and `grep-command'"
   (interactive)
-  (grep
-   (concat grep-command 
-           (current-word)
-           " .")))
+  (grep (concat grep-command (current-word) " .")))
 
 
 ;;;; sort words
