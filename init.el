@@ -208,8 +208,7 @@
         erc-kill-queries-on-quit t
         erc-kill-server-buffer-on-quit t)
   (setq erc-prompt-for-password nil
-        erc-prompt-for-nickserv-password nil)
-  (setq erc-timestamp-format "[%H:%M]"))
+        erc-prompt-for-nickserv-password nil))
 
 (use-package erc-hl-nicks
   :after erc
