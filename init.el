@@ -124,7 +124,9 @@
          ("C-c d" . habamax/duplicate-line)
          ("M-s g" . habamax/grep-current-word)
          :repeat-map habamax-duplicate-line-repeat-map
-         ("d" . habamax/duplicate-line)))
+         ("d" . habamax/duplicate-line)
+         :repeat-map habamax-other-frame-map
+         ("o" . other-frame)))
 
 (use-package habamax-compile
   :load-path "lisp"
