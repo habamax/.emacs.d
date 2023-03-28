@@ -24,5 +24,11 @@
        (concat "python " (shell-quote-argument file-name))))))
 
 
+;;;###autoload
+(defun habamax-compile/run-cargo ()
+  "Cargo run rust project"
+  (interactive)
+  (compile "cargo run"))
+
 
 (provide 'habamax-compile)

@@ -131,12 +131,16 @@
 
 (use-package habamax-compile
   :load-path "lisp"
-  :commands (habamax-compile/run-c-file habamax-compile/run-python-file)
+  :commands (habamax-compile/run-c-file
+             habamax-compile/run-python-file
+             habamax-compile/run-cargo)
   :init
   (add-hook 'c-mode-hook
             (lambda () (local-set-key [f5] 'habamax-compile/run-c-file)))
   (add-hook 'python-mode-hook
-            (lambda () (local-set-key [f5] 'habamax-compile/run-python-file))))
+            (lambda () (local-set-key [f5] 'habamax-compile/run-python-file)))
+  (add-hook 'rust-mode-hook
+            (lambda () (local-set-key [f5] 'habamax-compile/run-cargo))))
 
 (use-package whitespace
   :ensure nil
@@ -224,3 +228,5 @@
   :commands (lorem-ipsum-insert-sentences lorem-ipsum-insert-paragraphs))
 
 (use-package gdscript-mode)
+
+(use-package rust-mode)
