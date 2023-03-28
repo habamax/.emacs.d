@@ -214,15 +214,7 @@
   :config
   (editorconfig-mode 1))
 
-(use-package elfeed
-  :commands elfeed
-  :config
-  (setq elfeed-feeds
-        '(("https://www.reddit.com/r/emacs/.rss" reddit emacs)
-          ("https://emacsredux.com/atom.xml" emacs)
-          ("https://www.opennet.ru/opennews/opennews_all_utf.rss" news)
-          ("https://www.linux.org.ru/section-rss.jsp?section=1" news)
-          ("https://news.ycombinator.com/rss" news))))
+(use-package elfeed :commands elfeed)
 
 (use-package webpaste
   :commands (webpaste-paste-buffer webpaste-paste-region))
