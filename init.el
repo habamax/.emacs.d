@@ -124,6 +124,7 @@
          ([remap list-buffers] . ibuffer)
          ("C-c d" . habamax/duplicate-line)
          ("M-s g" . habamax/grep-current-word)
+         ("C-c m" . imenu)
          :repeat-map habamax-duplicate-line-repeat-map
          ("d" . habamax/duplicate-line)
          :repeat-map habamax-other-frame-map
