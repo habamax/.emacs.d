@@ -142,6 +142,16 @@ c:
     (kill-ring-save (line-beginning-position) (line-beginning-position 2))))
 
 
+;;;###autoload
+(defun habamax/grep-current-word ()
+  "Search current word using `grep' and `grep-command'"
+  (interactive)
+  (grep
+   (concat grep-command 
+           (current-word)
+           " .")))
+
+
 ;;;; sort words
 ;;;###autoload
 (defun habamax/sort-words (reverse beg end)

@@ -122,6 +122,7 @@
          ("C-c in" . habamax/insert-meeting-notes)
          ([remap list-buffers] . ibuffer)
          ("C-c d" . habamax/duplicate-line)
+         ("M-s g" . habamax/grep-current-word)
          :repeat-map habamax-duplicate-line-repeat-map
          ("d" . habamax/duplicate-line)))
 
