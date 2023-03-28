@@ -118,8 +118,8 @@
          ("M-p" . habamax/move-line-up)
          ("C-w" . habamax/kill-region)
          ("M-w" . habamax/kill-ring-save)
-         ("C-<tab>" . habamax/next-buffer-like-this)
-         ("C-`" . habamax/previous-buffer-like-this)
+         ("C-c b" . habamax/next-buffer-like-this)
+         ("C-c B" . habamax/previous-buffer-like-this)
          ("C-c id" . habamax/insert-current-date)
          ("C-c in" . habamax/insert-meeting-notes)
          ([remap list-buffers] . ibuffer)
@@ -130,6 +130,9 @@
          ("C-c W" . winner-redo)
          :repeat-map habamax-duplicate-line-repeat-map
          ("d" . habamax/duplicate-line)
+         :repeat-map habamax-buffers-like-this-map
+         ("b" . habamax/next-buffer-like-this)
+         ("B" . habamax/previous-buffer-like-this)
          :repeat-map habamax-other-frame-map
          ("o" . other-frame)
          :repeat-map habamax-winner-map
