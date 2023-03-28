@@ -4,11 +4,11 @@
 ;;; How long it took this time?
 (add-hook 'emacs-startup-hook (lambda () (message "%s" (emacs-init-time))))
 
-;; disable gc for init
+;;; disable gc for init
 (setq gc-cons-threshold 64000000)
 (add-hook 'after-init-hook (lambda () (setq gc-cons-threshold (default-value 'gc-cons-threshold))))
 
-;; emacsclient to focus new frame
+;;; emacsclient to focus new frame
 (add-hook 'server-after-make-frame-hook (lambda () (select-frame-set-input-focus (selected-frame))))
 
 (setq user-full-name "Maxim Kim"
@@ -41,19 +41,19 @@
 (setq-default indent-tabs-mode nil)
 (setq-default isearch-lazy-count t)
 
-;; Simple HTML renderer to use default font.
+;;; Simple HTML renderer to use default font.
 (setq shr-use-fonts nil)
 
-;; ripgrep as grep
+;;; ripgrep as grep
 (setq grep-command "rg -nS --no-heading "
       grep-use-null-device nil)
 
-;; dired
+;;; dired
 (setq ls-lisp-dirs-first t)
 (setq dired-listing-switches "-lah --group-directories-first"
       dired-dwim-target t)
 
-;; Store all backup and autosave files in the tmp dir
+;;; Store all backup and autosave files in the tmp dir
 (setq backup-directory-alist `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
 
@@ -65,6 +65,7 @@
 (savehist-mode 1)
 (repeat-mode t)
 
+;;; completions
 (setq ido-enable-flex-matching t
       ido-use-virtual-buffers t
       ido-create-new-buffer 'always
