@@ -64,6 +64,7 @@
 (save-place-mode 1)
 (savehist-mode 1)
 (repeat-mode t)
+(winner-mode t)
 
 ;;; completions
 (setq ido-enable-flex-matching t
@@ -125,10 +126,15 @@
          ("C-c d" . habamax/duplicate-line)
          ("M-s g" . habamax/grep-current-word)
          ("C-c m" . imenu)
+         ("C-c w" . winner-undo)
+         ("C-c W" . winner-redo)
          :repeat-map habamax-duplicate-line-repeat-map
          ("d" . habamax/duplicate-line)
          :repeat-map habamax-other-frame-map
-         ("o" . other-frame)))
+         ("o" . other-frame)
+         :repeat-map habamax-winner-map
+         ("w" . winner-undo)
+         ("W" . winner-redo)))
 
 (use-package habamax-compile
   :load-path "lisp"
