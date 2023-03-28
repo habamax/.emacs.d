@@ -216,10 +216,6 @@
   :config
   (erc-hl-nicks-force-nick-face "habamax" (face-attribute 'font-lock-constant-face :foreground)))
 
-(use-package editorconfig
-  :config
-  (editorconfig-mode 1))
-
 (use-package elfeed :commands elfeed)
 
 (use-package webpaste
