@@ -16,11 +16,9 @@
 
 ;;;###autoload
 (defun habamax-compile/run-python-file ()
-  "Compile and run single c file"
+  "Compile and run single python file"
   (interactive)
-  (unless (or (file-exists-p "makefile")
-              (file-exists-p "Makefile")
-              (not buffer-file-name))
+  (unless (not buffer-file-name)
     (let ((file-name buffer-file-name))
       (compile
        (concat "python " (shell-quote-argument file-name))))))
