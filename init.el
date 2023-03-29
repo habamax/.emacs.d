@@ -234,5 +234,5 @@
   :commands (lorem-ipsum-insert-sentences lorem-ipsum-insert-paragraphs))
 
 (use-package gdscript-mode)
-
+(use-package zig-mode)
 (use-package rust-mode)
