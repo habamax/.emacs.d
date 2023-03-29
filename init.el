@@ -59,6 +59,8 @@
 
 (setq vc-follow-symlinks t)
 
+(setq tab-bar-show 1)
+
 (electric-pair-mode t)
 (delete-selection-mode t)
 (save-place-mode 1)
