@@ -40,6 +40,7 @@
 (setq-default fill-column 80)
 (setq-default indent-tabs-mode nil)
 (setq-default isearch-lazy-count t)
+(setq describe-bindings-outline t)
 
 ;;; Simple HTML renderer to use default font.
 (setq shr-use-fonts nil)
@@ -214,9 +215,7 @@
         erc-autojoin-channels-alist '(("Libera.Chat" "#emacs" "#vim" "#python"))
         erc-server-reconnect-attempts 5
         erc-server-reconnect-timeout 3)
-  (setq erc-rename-buffers t
-        erc-kill-buffer-on-part t
-        erc-kill-queries-on-quit t
+  (setq erc-kill-queries-on-quit t
         erc-kill-server-buffer-on-quit t)
   (setq erc-prompt-for-password nil
         erc-prompt-for-nickserv-password nil))
