@@ -151,8 +151,8 @@
   (add-hook 'c-mode-hook
             (lambda ()
               (local-set-key [f5] 'habamax-compile/run-c-file)
-              (c-set-style "bsd")
-              (setq c-basic-offset 4)))
+              (c-set-style "linux")
+              (setq-local c-basic-offset 4)))
   (add-hook 'python-mode-hook
             (lambda () (local-set-key [f5] 'habamax-compile/run-python-file)))
   (add-hook 'rust-mode-hook
