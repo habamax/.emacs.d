@@ -215,7 +215,7 @@
         erc-track-minor-mode t
         erc-hide-list '("JOIN" "PART" "QUIT")
         erc-join-buffer 'bury
-        erc-autojoin-channels-alist '(("Libera.Chat" "#emacs" "#vim" "#python"))
+        erc-autojoin-channels-alist '(("Libera.Chat" "#emacs" "#vim" "#python" "#zig"))
         erc-server-reconnect-attempts 5
         erc-server-reconnect-timeout 3)
   (setq erc-kill-queries-on-quit t
