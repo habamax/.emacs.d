@@ -52,15 +52,16 @@
    `(mode-line-emphasis ((,class256 (:weight bold))))
    `(mode-line-buffer-id ((,class256 (:weight bold))))
    `(header-line ((,class256 (:foreground ,fg :background ,color-header-line :extend t  :box (:line-width 1 :color ,color00)))))
-   `(vertical-border ((,class256 (:foreground ,color-header-line))))
+   `(vertical-border ((,classTTY (:background ,color-mode-line-inactive-2 :foreground ,color-mode-line-inactive-2))
+                      (,class256 (:foreground ,color-header-line))))
    ;; -window-divider '((t :foreground "gray60"))
    ;; -window-divider-first-pixel
    ;; -window-divider-last-pixel
    ;; -internal-border
    ;; -child-frame-border
    `(minibuffer-prompt ((,class256 (:foreground ,color11 :weight bold))))
-   `(fringe ((,class256 (:background ,color-fringe))
-             (,classTTY (:background ,color00))))
+   `(fringe ((,classTTY (:foreground ,color02 :background ,color01))
+             (,class256 (:background ,color-fringe))))
    ;; -scroll-bar
    `(cursor ((t (:background "#ffffff"))))
    ;; -tool-bar
