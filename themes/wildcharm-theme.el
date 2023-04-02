@@ -149,8 +149,8 @@
    
    ;;; message
    `(message-header-name ((,class256 (:foreground ,color05))))
-   `(message-header-subject ((,class256 (:foreground ,color06 :weight bold))))
-   `(message-header-to ((,class256 (:foreground ,color06))))
+   `(message-header-subject ((,class256 (:foreground ,color15 :weight bold))))
+   `(message-header-to ((,class256 (:foreground ,color15))))
    `(message-header-other ((,class256 (:foreground ,color08))))
    
    ;;; markdown
