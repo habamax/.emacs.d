@@ -222,9 +222,9 @@
    `(elfeed-log-info-level-face ((,class256 (:foreground ,color04))))
    `(elfeed-log-debug-level-face ((,class256 (:foreground ,color05))))
    `(elfeed-search-date-face ((,class256 (:foreground ,color08))))
-   `(elfeed-search-feed-face ((,class256 (:foreground ,color08))))
-   `(elfeed-search-tag-face ((,class256 (:foreground ,color02))))
-   `(elfeed-search-unread-title-face ((,class256 (:foreground ,color06 :weight bold))))
+   `(elfeed-search-feed-face ((,class256 (:foreground ,color02))))
+   `(elfeed-search-tag-face ((,class256 (:foreground ,color11))))
+   `(elfeed-search-unread-title-face ((,class256 (:foreground ,color15 :weight bold))))
    `(elfeed-search-unread-count-face ((,class256 (:foreground ,color12))))
    `(elfeed-search-title-face ((,class256 (:foreground ,color07))))
 
