@@ -20,7 +20,7 @@
 
 (if +IS-WINDOWS+
     (cond ((find-font (font-spec :name "JetBrains Mono NL"))
-           (add-to-list 'default-frame-alist '(font . "JetBrains Mono NL-16")))
+           (add-to-list 'default-frame-alist '(font . "JetBrains Mono NL-14")))
           ((find-font (font-spec :name "Consolas"))
            (add-to-list 'default-frame-alist '(font . "Consolas-16"))))
   (add-to-list 'default-frame-alist '(font . "Monospace-16")))
