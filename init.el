@@ -20,10 +20,10 @@
 
 (if +IS-WINDOWS+
     (cond ((find-font (font-spec :name "JetBrains Mono NL"))
-           (add-to-list 'default-frame-alist '(font . "JetBrains Mono NL-13")))
+           (add-to-list 'default-frame-alist '(font . "JetBrains Mono NL-16")))
           ((find-font (font-spec :name "Consolas"))
-           (add-to-list 'default-frame-alist '(font . "Consolas-13"))))
-  (add-to-list 'default-frame-alist '(font . "Monospace-13")))
+           (add-to-list 'default-frame-alist '(font . "Consolas-16"))))
+  (add-to-list 'default-frame-alist '(font . "Monospace-16")))
 
 (set-language-environment 'utf-8)
 (set-default-coding-systems 'utf-8)
