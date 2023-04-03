@@ -168,6 +168,15 @@
    `(diff-header ((,class256 (:foreground ,color12 :weight bold))))
    `(diff-file-header ((,class256 (:foreground ,color15))))
    `(diff-hunk-header ((,class256 (:foreground ,color11 :weight bold))))
+
+   ;;; vc
+   `(vc-edited-state ((,class256 (:foreground ,color03))))
+   `(vc-conflict-state ((,class256 (:foreground ,color01))))
+   `(vc-locally-added-state ((,class256 (:foreground ,color06))))
+   `(vc-locked-state ((,class256 (:foreground ,color04))))
+   `(vc-missing-state ((,class256 (:foreground ,color05))))
+   `(vc-needs-update-state ((,class256 (:foreground ,color02))))
+   `(vc-removed-state ((,class256 (:foreground ,color09))))
    
    ;;; git-commit
    `(git-commit-summary ((,class256 (:foreground ,color15 :weight bold))))
