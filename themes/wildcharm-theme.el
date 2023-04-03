@@ -114,7 +114,7 @@
    `(dired-symlink ((,class256 (:foreground ,color14 :weight bold :inherit nil))))
    `(dired-broken-symlink ((,class256 (:foreground ,color15 :background ,color01))))
    `(dired-special ((,class256 (:foreground ,color05 :inherit nil))))
-   `(dired-perm-write ((,class256 (:foreground ,color01 :inherit nil))))
+   `(dired-perm-write ((,class256 (:foreground ,color03 :inherit nil))))
 
    ;;; completion
    `(icomplete-first-match ((,class256 (:foreground ,color10 :weight bold))))
