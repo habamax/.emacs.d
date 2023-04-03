@@ -53,7 +53,7 @@
    `(mode-line-buffer-id ((,class256 (:weight bold))))
    `(header-line ((,class256 (:foreground ,fg :background ,color-header-line :extend t  :box (:line-width 1 :color ,color00)))))
    `(vertical-border ((,classTTY (:background ,color-mode-line-inactive-2 :foreground ,color-mode-line-inactive-2))
-                      (,class256 (:foreground ,color-header-line))))
+                      (,class256 (:foreground ,color-non-text))))
    ;; -window-divider '((t :foreground "gray60"))
    ;; -window-divider-first-pixel
    ;; -window-divider-last-pixel
@@ -150,8 +150,8 @@
    
    ;;; message
    `(message-header-name ((,class256 (:foreground ,color05))))
-   `(message-header-subject ((,class256 (:foreground ,color06 :weight bold))))
-   `(message-header-to ((,class256 (:foreground ,color06))))
+   `(message-header-subject ((,class256 (:foreground ,color15 :weight bold))))
+   `(message-header-to ((,class256 (:foreground ,color15))))
    `(message-header-other ((,class256 (:foreground ,color08))))
    
    ;;; markdown
@@ -232,11 +232,11 @@
    `(elfeed-log-info-level-face ((,class256 (:foreground ,color04))))
    `(elfeed-log-debug-level-face ((,class256 (:foreground ,color05))))
    `(elfeed-search-date-face ((,class256 (:foreground ,color08))))
+   `(elfeed-search-title-face ((,class256 (:foreground ,color07))))
+   `(elfeed-search-unread-title-face ((,class256 (:foreground ,color15 :weight bold))))
    `(elfeed-search-feed-face ((,class256 (:foreground ,color02))))
    `(elfeed-search-tag-face ((,class256 (:foreground ,color11))))
-   `(elfeed-search-unread-title-face ((,class256 (:foreground ,color06 :weight bold))))
    `(elfeed-search-unread-count-face ((,class256 (:foreground ,color12))))
-   `(elfeed-search-title-face ((,class256 (:foreground ,color07))))
 
    ;;; eshell
    `(eshell-prompt ((,class256 (:foreground ,color13 :weight bold))))
