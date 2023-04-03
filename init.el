@@ -19,10 +19,12 @@
   (load custom-file))
 
 (if +IS-WINDOWS+
-    (cond ((find-font (font-spec :name "JetBrains Mono NL"))
+    (cond ((find-font (font-spec :name "Cascadia Mono SemiLight"))
+           (add-to-list 'default-frame-alist '(font . "Cascadia Mono SemiLight-14")))
+          ((find-font (font-spec :name "JetBrains Mono NL"))
            (add-to-list 'default-frame-alist '(font . "JetBrains Mono NL-14")))
           ((find-font (font-spec :name "Consolas"))
-           (add-to-list 'default-frame-alist '(font . "Consolas-16"))))
+           (add-to-list 'default-frame-alist '(font . "Consolas-14"))))
   (add-to-list 'default-frame-alist '(font . "Monospace-16")))
 
 (set-language-environment 'utf-8)
