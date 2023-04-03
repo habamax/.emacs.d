@@ -149,8 +149,8 @@
    
    ;;; message
    `(message-header-name ((,class256 (:foreground ,color05))))
-   `(message-header-subject ((,class256 (:foreground ,color15 :weight bold))))
-   `(message-header-to ((,class256 (:foreground ,color15))))
+   `(message-header-subject ((,class256 (:foreground ,color06 :weight bold))))
+   `(message-header-to ((,class256 (:foreground ,color06))))
    `(message-header-other ((,class256 (:foreground ,color08))))
    
    ;;; markdown
@@ -224,7 +224,7 @@
    `(elfeed-search-date-face ((,class256 (:foreground ,color08))))
    `(elfeed-search-feed-face ((,class256 (:foreground ,color02))))
    `(elfeed-search-tag-face ((,class256 (:foreground ,color11))))
-   `(elfeed-search-unread-title-face ((,class256 (:foreground ,color15 :weight bold))))
+   `(elfeed-search-unread-title-face ((,class256 (:foreground ,color06 :weight bold))))
    `(elfeed-search-unread-count-face ((,class256 (:foreground ,color12))))
    `(elfeed-search-title-face ((,class256 (:foreground ,color07))))
 
