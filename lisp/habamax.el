@@ -21,31 +21,6 @@ Otherwise call well known `comment-dwim'"
 
 
 ;;;###autoload
-(defun habamax/comment-fill-aligned (arg)
-  "Comment out the current line using fill-column to pad and align with comment chars.
-
-For the fill-column set to 80 it should look like:
-
-elisp:
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; hello ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-c:
-/************************************* hello  *************************************/
-"
-  (interactive "p")
-  (comment-normalize-vars)
-  (let* ((comment-style 'aligned)
-         (beg (line-beginning-position))
-         (end (line-end-position))
-         (com-add (/ (- fill-column
-                        (- end beg)
-                        (string-width comment-start)
-                        (* 2 (string-width comment-padding))
-                        (string-width comment-end)) 2)))
-    (comment-region beg end (+ comment-add com-add))))
-
-
-;;;###autoload
 (defun habamax/duplicate-line (arg)
   "Duplicate current line, leaving point in lower line."
   (interactive "*p")
