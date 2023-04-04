@@ -1,4 +1,9 @@
-;;; habamax.el  -*- lexical-binding: t; -*-
+;;; habamax.el --- miscelaneous habamax functions -*- lexical-binding: t; -*-
+;;; Commentary:
+;;  Bunch of misc functions.
+
+
+;;; Code:
 
 
 ;;; Comment a line.
@@ -192,3 +197,5 @@ See `sort-regexp-fields'."
 
 
 (provide 'habamax)
+
+;;; habamax.el ends here
