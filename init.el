@@ -1,6 +1,8 @@
 ;;; init.el --- emacs init file -*- lexical-binding: t; -*-
+
 ;;; Commentary:
-;;; habamax personal Emacs configuration
+
+;; habamax's personal Emacs configuration
 
 ;;; Code:
 

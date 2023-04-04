@@ -1,10 +1,10 @@
 ;;; habamax.el --- miscelaneous habamax functions -*- lexical-binding: t; -*-
+
 ;;; Commentary:
+
 ;;  Bunch of misc functions.
 
-
 ;;; Code:
-
 
 ;;; Comment a line.
 ;;;###autoload
