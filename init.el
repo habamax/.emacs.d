@@ -132,6 +132,7 @@
          ([remap list-buffers] . ibuffer)
          ("C-c d" . habamax/duplicate-line)
          ("M-s g" . habamax/grep-current-word)
+         ("M-s t" . habamax/grep-todo)
          ("C-c m" . imenu)
          ("C-c w" . winner-undo)
          ("C-c W" . winner-redo)
