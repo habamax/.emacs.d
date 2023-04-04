@@ -13,7 +13,7 @@
      ("https://www.youtube.com/feeds/videos.xml?channel_id=UCo4EukJcKyZL6oXoLfsWxfA" youtube game)
      ("https://www.youtube.com/feeds/videos.xml?channel_id=UCrqM0Ym_NbK1fqeQG2VIohg" youtube programming)))
  '(package-selected-packages
-   '(ement zig-mode rust-mode gdscript-mode lorem-ipsum webpaste multiple-cursors elfeed editorconfig erc-hl-nicks markdown-mode magit use-package)))
+   '(zig-mode rust-mode gdscript-mode lorem-ipsum webpaste multiple-cursors elfeed editorconfig erc-hl-nicks markdown-mode magit use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

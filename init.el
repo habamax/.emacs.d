@@ -237,8 +237,6 @@
 
 (use-package elfeed :commands elfeed)
 
-(use-package ement :commands ement-connect)
-
 (use-package webpaste
   :commands (webpaste-paste-buffer webpaste-paste-region))
 
