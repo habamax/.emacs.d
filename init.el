@@ -1,5 +1,8 @@
-;;; -*- lexical-binding: t; -*-
-;;; habamax: personal emacs configuration
+;;; init.el --- emacs init file -*- lexical-binding: t; -*-
+;;; Commentary:
+;;; habamax personal Emacs configuration
+
+;;; Code:
 
 ;;; How long it took this time?
 (add-hook 'emacs-startup-hook (lambda () (message "%s" (emacs-init-time))))
@@ -173,7 +176,7 @@
   :ensure nil
   :commands gnus
   :config
-  (setq 
+  (setq
    user-full-name "Maxim Kim"
    user-mail-address "habamax@gmail.com"
    send-mail-function 'smtpmail-send-it
@@ -241,3 +244,5 @@
 (use-package gdscript-mode)
 (use-package zig-mode)
 (use-package rust-mode)
+
+;;; init.el ends here
