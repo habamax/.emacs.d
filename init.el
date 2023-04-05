@@ -179,8 +179,6 @@
   :commands gnus
   :config
   (setq
-   user-full-name "Maxim Kim"
-   user-mail-address "habamax@gmail.com"
    send-mail-function 'smtpmail-send-it
    smtpmail-smtp-server "smtp.gmail.com"
    smtpmail-stream-type 'starttls
