@@ -30,12 +30,14 @@
            (add-to-list 'default-frame-alist '(font . "Consolas-14"))))
   (add-to-list 'default-frame-alist '(font . "Monospace-16")))
 
-(set-language-environment 'utf-8)
-(set-default-coding-systems 'utf-8)
-;; (set-terminal-coding-system 'utf-8)
-;; (setq default-buffer-file-coding-system 'utf-8-unix)
-;; (when +IS-WINDOWS+
-;;   (setq default-process-coding-system '(utf-8-dos . cp1251-dos)))
+(when +IS-WINDOWS+
+  (set-language-environment 'utf-8)
+  (setq default-buffer-file-coding-system 'utf-8-unix)
+  ;; This has no effect, it worked previously for win7 I had at the time.
+  ;; Nowadays with win11 and emacs28.2 it doesn't affect ripgrep or grep:
+  ;; I can't search for text in RU.
+  (setq default-process-coding-system '(utf-8-dos . windows-1251-dos)))
+
 (setq default-input-method 'russian-computer)
 
 (setq ring-bell-function #'ignore)
