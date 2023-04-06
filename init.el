@@ -45,6 +45,7 @@
 (setq-default fill-column 80)
 (setq-default indent-tabs-mode nil)
 (setq-default isearch-lazy-count t)
+(setq-default abbrev-mode t)
 (setq describe-bindings-outline t)
 
 ;;; Simple HTML renderer to use default font.
