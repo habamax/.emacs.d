@@ -138,6 +138,10 @@
          ("C-c m" . imenu)
          ("C-c w" . winner-undo)
          ("C-c W" . winner-redo)
+         ("M-<right>" . windmove-swap-states-right)
+         ("M-<left>" . windmove-swap-states-left)
+         ("M-<up>" . windmove-swap-states-up)
+         ("M-<down>" . windmove-swap-states-down)
          :repeat-map habamax-duplicate-line-repeat-map
          ("d" . habamax/duplicate-line)
          :repeat-map habamax-buffers-like-this-map
