@@ -147,8 +147,7 @@
          ("o" . other-frame)
          :repeat-map habamax-winner-map
          ("w" . winner-undo)
-         ("W" . winner-redo))
-  :custom-face (font-lock-comment-face ((t (:slant italic)))))
+         ("W" . winner-redo)))
 
 (use-package habamax-compile
   :load-path "lisp"
