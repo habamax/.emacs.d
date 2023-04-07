@@ -101,7 +101,6 @@
 ;; (icomplete-mode 1)
 
 
-
 (if (window-system)
     (cd "~/"))
 
