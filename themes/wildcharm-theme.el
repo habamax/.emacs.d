@@ -225,6 +225,15 @@
    `(fg:erc-color-face14 ((,class256 (:foreground ,color14))))
    `(fg:erc-color-face15 ((,class256 (:foreground ,color15))))
 
+   ;;; rcirc
+   `(rcirc-server ((,class256 (:foreground ,color08))))
+   `(rcirc-timestamp ((,class256 (:foreground ,color08))))
+   `(rcirc-prompt ((,class256 (:foreground ,color13))))
+   `(rcirc-url ((,class256 (:foreground nil :background nil :underline t))))
+   `(rcirc-my-nick ((,class256 (:foreground ,color09 :weight bold))))
+   `(rcirc-nick-in-message ((,class256 (:foreground ,color09 :weight bold))))
+   `(rcirc-other-nick ((,class256 (:foreground ,color11))))
+
    ;;; elfeed
    `(elfeed-log-date-face ((,class256 (:foreground ,color03))))
    `(elfeed-log-error-level-face ((,class256 (:foreground ,color01))))
