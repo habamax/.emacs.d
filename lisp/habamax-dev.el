@@ -1,7 +1,7 @@
-;;; habamax-compile.el  -*- lexical-binding: t; -*-
+;;; habamax-dev.el  -*- lexical-binding: t; -*-
 
 ;;;###autoload
-(defun habamax-compile/run-c-file ()
+(defun habamax-dev/run-c-file ()
   "Compile and run single c file"
   (interactive)
   (unless (or (file-exists-p "makefile")
@@ -15,7 +15,7 @@
 
 
 ;;;###autoload
-(defun habamax-compile/run-python-file ()
+(defun habamax-dev/run-python-file ()
   "Compile and run single python file"
   (interactive)
   (unless (not buffer-file-name)
@@ -25,10 +25,10 @@
 
 
 ;;;###autoload
-(defun habamax-compile/run-cargo ()
+(defun habamax-dev/run-cargo ()
   "Cargo run rust project"
   (interactive)
   (compile "cargo run"))
 
 
-(provide 'habamax-compile)
+(provide 'habamax-dev)

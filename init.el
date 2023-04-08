@@ -154,22 +154,22 @@
          ("W" . winner-redo))
     :custom-face (font-lock-comment-face ((t (:slant italic)))))
 
-(use-package habamax-compile
+(use-package habamax-dev
   :load-path "lisp"
-  :commands (habamax-compile/run-c-file
-             habamax-compile/run-python-file
-             habamax-compile/run-cargo)
+  :commands (habamax-dev/run-c-file
+             habamax-dev/run-python-file
+             habamax-dev/run-cargo)
   :init
   (add-hook 'c-mode-hook
             (lambda ()
-              (local-set-key [f5] 'habamax-compile/run-c-file)
+              (local-set-key [f5] 'habamax-dev/run-c-file)
               (c-set-style "linux")
               (setq-local c-basic-offset 4)
               (c-toggle-comment-style -1)))
   (add-hook 'python-mode-hook
-            (lambda () (local-set-key [f5] 'habamax-compile/run-python-file)))
+            (lambda () (local-set-key [f5] 'habamax-dev/run-python-file)))
   (add-hook 'rust-mode-hook
-            (lambda () (local-set-key [f5] 'habamax-compile/run-cargo))))
+            (lambda () (local-set-key [f5] 'habamax-dev/run-cargo))))
 
 (use-package whitespace
   :ensure nil
