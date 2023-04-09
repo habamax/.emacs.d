@@ -152,8 +152,33 @@
    `(message-header-name ((,class256 (:foreground ,color05))))
    `(message-header-subject ((,class256 (:foreground ,color15 :weight bold))))
    `(message-header-to ((,class256 (:foreground ,color15))))
-   `(message-header-other ((,class256 (:foreground ,color08))))
-   
+   `(message-header-other ((,class256 (:foreground ,fg))))
+   `(message-separator ((,class256 (:foreground ,color08))))
+
+   ;;; gnus
+   `(gnus-button ((,class256 (:underline t))))
+   `(gnus-group-mail-3-empty ((,class256 (:foreground ,fg))))
+   `(gnus-group-mail-3 ((,class256 (:foreground ,color06 :weight bold))))
+   `(gnus-summary-selected ((,class256 (:background ,color06 :foreground ,bg :underline nil))))
+   `(gnus-summary-normal-unread ((,class256 (:foreground ,color15 :weight bold))))
+   `(gnus-summary-normal-read ((,class256 (:foreground ,fg))))
+   `(gnus-summary-normal-ticked ((,class256 (:foreground ,color03))))
+   `(gnus-summary-cancelled ((,class256 (:foreground ,color01 :background nil))))
+   `(gnus-header-name ((,class256 (:foreground ,color05))))
+   `(gnus-header-from ((,class256 (:foreground ,fg :weight normal))))
+   `(gnus-header-content ((,class256 (:foreground ,fg :weight normal :slant normal))))
+   `(gnus-header-subject ((,class256 (:foreground ,color15 :weight bold))))
+   `(gnus-cite-attribution ((,class256 (:foreground ,color14 :weight bold :slant normal :underline nil))))
+   `(gnus-cite-1 ((,class256 (:foreground ,fg))))
+
+   ;;; shr
+   `(shr-h1 ((,class256 (:foreground ,color15 :weight bold :height 1.6))))
+   `(shr-h2 ((,class256 (:foreground ,color15 :weight bold :height 1.4))))
+   `(shr-h3 ((,class256 (:foreground ,color15 :weight bold :height 1.2))))
+   `(shr-h4 ((,class256 (:foreground ,color15 :weight bold :height 1.1))))
+   `(shr-h5 ((,class256 (:foreground ,color15 :weight bold :height 1.0))))
+   `(shr-h6 ((,class256 (:foreground ,color15 :weight bold :height 1.0))))
+
    ;;; markdown
    `(markdown-header-face ((,class256 (:foreground ,color15 :weight bold))))
    `(markdown-header-delimiter-face ((,class256 (:foreground ,color12 :weight bold))))
@@ -260,8 +285,7 @@
    `(eshell-ls-product ((,class256 (:foreground ,color15))))
    `(eshell-ls-readonly ((,class256 (:foreground ,color08))))
    `(eshell-ls-special ((,class256 (:foreground ,color05))))
-   
-   
+
    ))
 
 ;;;###autoload
