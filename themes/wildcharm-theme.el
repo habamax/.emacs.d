@@ -163,6 +163,7 @@
    `(gnus-summary-normal-unread ((,class256 (:foreground ,color15 :weight bold))))
    `(gnus-summary-normal-read ((,class256 (:foreground ,fg))))
    `(gnus-summary-normal-ticked ((,class256 (:foreground ,color03))))
+   `(gnus-summary-normal-ancient ((,class256 (:foreground ,color08))))
    `(gnus-summary-cancelled ((,class256 (:foreground ,color01 :background nil))))
    `(gnus-header-name ((,class256 (:foreground ,color05))))
    `(gnus-header-from ((,class256 (:foreground ,fg :weight normal))))
