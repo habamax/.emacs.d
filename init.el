@@ -184,17 +184,30 @@
   :ensure nil
   :commands gnus
   :config
+  (setq send-mail-function 'smtpmail-send-it
+        smtpmail-smtp-server "smtp.gmail.com"
+        smtpmail-stream-type 'starttls
+        smtpmail-smtp-service 587)
+  (setq gnus-select-method
+        '(nnimap "gmail"
+                 (nnimap-address "imap.gmail.com")
+                 (nnimap-server-port 993)
+                 (nnimap-stream ssl)
+                 (nnmail-expiry-wait immediate)))
+  (setq nnmail-expiry-target "nnimap+gmail:[Gmail]/Trash"
+        nnmail-expiry-wait 'immediate)
   (setq
-   send-mail-function 'smtpmail-send-it
-   smtpmail-smtp-server "smtp.gmail.com"
-   smtpmail-stream-type 'starttls
-   smtpmail-smtp-service 587
-   gnus-select-method
-   '(nnimap "gmail"
-            (nnimap-address "imap.gmail.com")
-            (nnimap-server-port 993)
-            (nnimap-stream ssl)
-            (nnmail-expiry-wait immediate))))
+   gnus-summary-line-format "%U%R%z %&user-date; │ %(%-23,23f%) │ %B%S\n"
+   gnus-user-date-format-alist '((t . "%Y-%m-%d %H:%M"))
+   gnus-summary-thread-gathering-function 'gnus-gather-threads-by-references
+   ;; gnus-thread-sort-functions '(not gnus-thread-sort-by-date)
+   gnus-thread-sort-functions '((not gnus-thread-sort-by-number))
+   gnus-sum-thread-tree-false-root ""
+   gnus-sum-thread-tree-indent " "
+   gnus-sum-thread-tree-leaf-with-other "├► "
+   gnus-sum-thread-tree-root ""
+   gnus-sum-thread-tree-single-leaf "╰► "
+   gnus-sum-thread-tree-vertical "│"))
 
 (use-package magit
   :commands (magit-status)
