@@ -209,7 +209,8 @@
    gnus-sum-thread-tree-leaf-with-other "├► "
    gnus-sum-thread-tree-root ""
    gnus-sum-thread-tree-single-leaf "╰► "
-   gnus-sum-thread-tree-vertical "│"))
+   gnus-sum-thread-tree-vertical "│")
+  (add-hook 'gnus-group-mode-hook 'gnus-topic-mode))
 
 (use-package magit
   :commands (magit-status)
