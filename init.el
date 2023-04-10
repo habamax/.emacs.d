@@ -203,7 +203,6 @@
    gnus-summary-line-format "%U%R%z %&user-date; ┃ %(%-23,23f%) ┃ %B%S\n"
    gnus-user-date-format-alist '((t . "%Y-%m-%d %H:%M"))
    gnus-summary-thread-gathering-function 'gnus-gather-threads-by-references
-   ;; gnus-thread-sort-functions '(not gnus-thread-sort-by-date)
    gnus-thread-sort-functions '((not gnus-thread-sort-by-number))
    gnus-sum-thread-tree-false-root ""
    gnus-sum-thread-tree-indent " "
