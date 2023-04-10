@@ -199,7 +199,15 @@
    `(gnus-cite-attribution ((,class256 (:foreground ,color10 :weight bold :slant normal :underline nil))))
    `(gnus-cite-1 ((,class256 (:foreground ,color10))))
    `(gnus-cite-2 ((,class256 (:foreground ,color11))))
-   `(gnus-cite-3 ((,class256 (:foreground ,color08))))
+   `(gnus-cite-3 ((,class256 (:foreground ,color12))))
+   `(gnus-cite-4 ((,class256 (:foreground ,color13))))
+   `(gnus-cite-5 ((,class256 (:foreground ,color14))))
+   `(gnus-cite-6 ((,class256 (:foreground ,color02))))
+   `(gnus-cite-7 ((,class256 (:foreground ,color03))))
+   `(gnus-cite-8 ((,class256 (:foreground ,color04))))
+   `(gnus-cite-9 ((,class256 (:foreground ,color05))))
+   `(gnus-cite-10 ((,class256 (:foreground ,color06))))
+   `(gnus-cite-11 ((,class256 (:foreground ,color08))))
 
    ;;; shr
    `(shr-h1 ((,class256 (:foreground ,color15 :weight bold :height 1.6))))
