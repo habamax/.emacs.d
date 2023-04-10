@@ -195,6 +195,8 @@
                  (nnimap-server-port 993)
                  (nnimap-stream ssl)
                  (nnmail-expiry-wait immediate)))
+  (setq gnus-secondary-select-methods
+        '((nntp "news.gwene.org")))
   (setq nnmail-expiry-target "nnimap+gmail:[Gmail]/Trash"
         nnmail-expiry-wait 'immediate)
   (setq
