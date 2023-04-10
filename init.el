@@ -122,7 +122,7 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") 'append)
 
 (use-package habamax
-  :load-path "lisp"
+  :load-path "site-lisp"
   :bind (("M-;" . habamax/toggle-comment)
          ("M-n" . habamax/move-line-down)
          ("M-p" . habamax/move-line-up)
@@ -156,7 +156,7 @@
     :custom-face (font-lock-comment-face ((t (:slant italic)))))
 
 (use-package habamax-dev
-  :load-path "lisp"
+  :load-path "site-lisp"
   :commands (habamax-dev/run-c-file
              habamax-dev/run-python-file
              habamax-dev/run-cargo)
