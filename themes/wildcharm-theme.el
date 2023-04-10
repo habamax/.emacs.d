@@ -153,7 +153,8 @@
    `(message-header-subject ((,class256 (:foreground ,color15 :weight bold))))
    `(message-header-to ((,class256 (:foreground ,color15))))
    `(message-header-other ((,class256 (:foreground ,fg))))
-   `(message-separator ((,class256 (:foreground ,color08))))
+   `(message-header-cc ((,class256 (:foreground ,color08))))
+   `(message-separator ((,class256 (:foreground ,fg :background ,color-header-line :extend t))))
 
    ;;; gnus
    `(gnus-button ((,class256 (:underline t))))
