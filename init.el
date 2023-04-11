@@ -40,6 +40,7 @@
 
 (setq default-input-method 'russian-computer)
 
+(defalias 'yes-or-no-p 'y-or-n-p)
 (setq ring-bell-function #'ignore)
 (setq scroll-error-top-bottom t)
 (setq disabled-command-function nil)
