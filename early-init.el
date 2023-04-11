@@ -1,3 +1,14 @@
+;;; early-init.el --- emacs early init file -*- lexical-binding: t; -*-
+
+;;; Commentary:
+
+;; habamax's personal Emacs configuration
+
+;; Things to be loaded early, like theme, which would prevent unwanted white
+;; background turning into dark one.
+
+;;; Code:
+
 (defconst +IS-OSX+ (eq system-type 'darwin))
 (defconst +IS-WINDOWS+ (eq system-type 'windows-nt))
 
@@ -18,3 +29,5 @@
 
 (add-to-list 'custom-theme-load-path (expand-file-name "themes/" user-emacs-directory))
 (load-theme 'wildcharm t)
+
+;;; early-init.el ends here
