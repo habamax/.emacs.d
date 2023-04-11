@@ -217,6 +217,9 @@
    `(shr-h5 ((,class256 (:foreground ,color15 :weight bold :height 1.0))))
    `(shr-h6 ((,class256 (:foreground ,color15 :weight bold :height 1.0))))
 
+   `(dictionary-word-definition-face ((,class256 (:family nil))))
+   `(dictionary-reference-face ((,class256 (:foreground ,color03))))
+
    ;;; markdown
    `(markdown-header-face ((,class256 (:foreground ,color15 :weight bold))))
    `(markdown-header-delimiter-face ((,class256 (:foreground ,color12 :weight bold))))
