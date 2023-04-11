@@ -212,6 +212,8 @@
    gnus-sum-thread-tree-root ""
    gnus-sum-thread-tree-single-leaf "╰► "
    gnus-sum-thread-tree-vertical "│")
+  (setq gnus-list-groups-with-ticked-articles nil)
+  (setq gnus-group-mode-line-format "%%b")
   (add-hook 'gnus-group-mode-hook 'gnus-topic-mode))
 
 (use-package magit
