@@ -120,6 +120,20 @@
 
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") 'append)
 
+(use-package windows
+  :ensure nil
+  :bind (("C-c w" . winner-undo)
+         ("C-c W" . winner-redo)
+         ("M-<right>" . windmove-swap-states-right)
+         ("M-<left>" . windmove-swap-states-left)
+         ("M-<up>" . windmove-swap-states-up)
+         ("M-<down>" . windmove-swap-states-down)
+         :repeat-map habamax-other-frame-map
+         ("o" . other-frame)
+         :repeat-map habamax-winner-map
+         ("w" . winner-undo)
+         ("W" . winner-redo)))
+
 (use-package habamax
   :load-path "site-lisp"
   :bind (("M-;" . habamax/toggle-comment)
@@ -136,22 +150,11 @@
          ("M-s g" . habamax/grep-current-word)
          ("M-s t" . habamax/grep-todo)
          ("C-c m" . imenu)
-         ("C-c w" . winner-undo)
-         ("C-c W" . winner-redo)
-         ("M-<right>" . windmove-swap-states-right)
-         ("M-<left>" . windmove-swap-states-left)
-         ("M-<up>" . windmove-swap-states-up)
-         ("M-<down>" . windmove-swap-states-down)
          :repeat-map habamax-duplicate-line-repeat-map
          ("d" . habamax/duplicate-line)
          :repeat-map habamax-buffers-like-this-map
          ("b" . habamax/next-buffer-like-this)
-         ("B" . habamax/previous-buffer-like-this)
-         :repeat-map habamax-other-frame-map
-         ("o" . other-frame)
-         :repeat-map habamax-winner-map
-         ("w" . winner-undo)
-         ("W" . winner-redo))
+         ("B" . habamax/previous-buffer-like-this))
     :custom-face (font-lock-comment-face ((t (:slant italic)))))
 
 (use-package habamax-dev
