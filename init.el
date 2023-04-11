@@ -102,10 +102,8 @@
 ;; (setq icomplete-show-matches-on-no-input t)
 ;; (icomplete-mode 1)
 
-
 (if (window-system)
     (cd "~/"))
-
 
 ;;; use packages
 (unless (package-installed-p 'use-package)
