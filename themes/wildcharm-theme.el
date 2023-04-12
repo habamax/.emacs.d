@@ -26,7 +26,7 @@
       (color-diff-added-fg "#afffaf")
       (color-diff-removed-bg "#4f3f3f")(color-diff-removed-bg-tty "#5f0000")
       (color-diff-refine-removed-bg "#6f4f3f")(color-diff-refine-removed-bg-tty "#870000")
-      (color-diff-removed-fg "#ffafaf"))
+      (color-diff-removed-fg "#ffd7d7"))
 
   (custom-theme-set-faces
    'wildcharm
