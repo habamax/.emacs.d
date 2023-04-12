@@ -22,9 +22,10 @@
       (color-special "#875fff")(color-hl-line "#3a3d42")
       (color-match "#3a3632")
       (color-diff-added-bg "#3f4f3f")(color-diff-added-bg-tty "#005f00")
-      (color-diff-refine-added-bg "#3f5f3f")(color-diff-refine-added-bg-tty "#00875f")
+      (color-diff-refine-added-bg "#3f6f4f")(color-diff-refine-added-bg-tty "#00875f")
       (color-diff-added-fg "#afffaf")
       (color-diff-removed-bg "#4f3f3f")(color-diff-removed-bg-tty "#5f0000")
+      (color-diff-refine-removed-bg "#6f4f3f")(color-diff-refine-removed-bg-tty "#875f00")
       (color-diff-removed-fg "#ffafaf"))
 
   (custom-theme-set-faces
@@ -247,6 +248,8 @@
                         (,class256 (:foreground ,color-diff-added-fg :background ,color-diff-refine-added-bg))))
    `(diff-removed ((,classTTY (:foreground ,color-diff-removed-fg :background ,color-diff-removed-bg-tty))
                    (,class256 (:foreground ,color-diff-removed-fg :background ,color-diff-removed-bg))))
+   `(diff-refine-removed ((,classTTY (:foreground ,color-diff-removed-fg :background ,color-diff-refine-removed-bg-tty))
+                          (,class256 (:foreground ,color-diff-removed-fg :background ,color-diff-refine-removed-bg))))
    `(diff-indicator-removed ((t (:inherit 'diff-removed :foreground ,color09))))
 
    ;;; vc
