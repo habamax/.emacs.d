@@ -171,6 +171,12 @@ See `sort-regexp-fields'."
   (forward-line 3))
 
 
+;;;###autoload
+(defun habamax/recentf-open ()
+  (interactive)
+  (find-file (completing-read "Open recent: " recentf-list)))
+
+
 (provide 'habamax)
 
 ;;; habamax.el ends here

@@ -76,16 +76,9 @@
 (delete-selection-mode t)
 (save-place-mode 1)
 (savehist-mode 1)
+(recentf-mode 1)
 (repeat-mode t)
 (winner-mode t)
-
-;;; completions
-(setq ido-enable-flex-matching t
-      ido-use-virtual-buffers t
-      ido-create-new-buffer 'always
-      ido-use-filename-at-point 'guess
-      ido-use-url-at-point t)
-(ido-mode 1)
 (fido-mode 1)
 
 (setq completion-auto-help 'always
@@ -141,6 +134,7 @@
          ("M-p" . habamax/move-line-up)
          ("C-w" . habamax/kill-region)
          ("M-w" . habamax/kill-ring-save)
+         ("C-x C-r" . habamax/recentf-open)
          ("C-c b" . habamax/next-buffer-like-this)
          ("C-c B" . habamax/previous-buffer-like-this)
          ("C-c id" . habamax/insert-current-date)
