@@ -7,7 +7,7 @@
 (let ((class256 '((class color) (min-colors 256)))
       (classTTY '((type tty) (min-colors 16)))
       (fg "#d0d0d0")(bg "#1c1f26")
-      (color00 "#000000")(color08 "#767676")
+      (color00 "#000000")(color08 "#808080")
       (color01 "#d75f5f")(color09 "#ff5f87")
       (color02 "#00af5f")(color10 "#00d75f")
       (color03 "#d78700")(color11 "#ffaf00")
@@ -22,10 +22,10 @@
       (color-special "#875fff")(color-hl-line "#3a3d42")
       (color-match "#3a3632")
       (color-diff-added-bg "#3f4f3f")(color-diff-added-bg-tty "#005f00")
-      (color-diff-refine-added-bg "#3f6f4f")(color-diff-refine-added-bg-tty "#00875f")
+      (color-diff-refine-added-bg "#3f6f4f")(color-diff-refine-added-bg-tty "#005f5f")
       (color-diff-added-fg "#afffaf")
       (color-diff-removed-bg "#4f3f3f")(color-diff-removed-bg-tty "#5f0000")
-      (color-diff-refine-removed-bg "#6f4f3f")(color-diff-refine-removed-bg-tty "#875f00")
+      (color-diff-refine-removed-bg "#6f4f3f")(color-diff-refine-removed-bg-tty "#870000")
       (color-diff-removed-fg "#ffafaf"))
 
   (custom-theme-set-faces
