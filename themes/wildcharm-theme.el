@@ -58,8 +58,8 @@
    `(mode-line-emphasis ((,class256 (:weight bold))))
    `(mode-line-buffer-id ((,class256 (:weight bold))))
    `(header-line ((,class256 (:foreground ,fg :background ,color-header-line :extend t  :box (:line-width 1 :color ,color00)))))
-   `(vertical-border ((,classTTY (:background ,color-mode-line-inactive-2 :foreground ,color-mode-line-inactive-2))
-                      (,class256 (:foreground ,color-non-text))))
+   `(vertical-border ((,class256 (:background ,color-mode-line-inactive-2 :foreground ,color-mode-line-inactive-2))
+                      (,classTTY (:background ,color-mode-line-inactive-2 :foreground ,color-mode-line-inactive-2))))
    ;; -window-divider '((t :foreground "gray60"))
    ;; -window-divider-first-pixel
    ;; -window-divider-last-pixel
@@ -71,12 +71,11 @@
    ;; -scroll-bar
    `(cursor ((t (:background "#ffffff"))))
    ;; -tool-bar
-   `(tab-bar ((,classTTY (:background ,color-mode-line-inactive-2 :foreground ,color08))
-              (,class256 (:background ,color-mode-line-inactive-1 :foreground ,color08))))
-   `(tab-bar-tab ((,classTTY (:background ,color-mode-line-active-2 :foreground ,color15 :weight bold))
-                  (,class256 (:background ,bg :foreground ,color15 :weight bold))))   
-   `(tab-bar-tab-inactive ((,classTTY (:background ,color-mode-line-inactive-2 :foreground ,color07))
-                           (,class256 (:background ,color-mode-line-active-1 :foreground ,color07))))
+   `(tab-bar ((,class256 (:background ,color-mode-line-inactive-1 :foreground ,color08))
+              (,classTTY (:background ,color-mode-line-inactive-2 :foreground ,color08))))
+   `(tab-bar-tab ((,class256 (:background ,color-mode-line-active-1 :foreground ,color15 :weight bold :box (:line-width 1 :color ,color-non-text)))
+                  (,classTTY (:background ,color-mode-line-active-2 :foreground ,color15 :weight bold))))   
+   `(tab-bar-tab-inactive ((t (:background nil :foreground ,color07))))
    ;; -menu
    `(help-key-binding ((,class256 (:foreground ,color06 :background nil :box (:line-width (1 . -1) :color ,color06)))))
    `(error ((,class256 (:foreground ,color09 :weight bold))))
@@ -223,6 +222,7 @@
    `(shr-h5 ((,class256 (:foreground ,color15 :weight bold :height 1.0))))
    `(shr-h6 ((,class256 (:foreground ,color15 :weight bold :height 1.0))))
 
+   ;;; dictionary
    `(dictionary-word-definition-face ((,class256 (:family nil))))
    `(dictionary-reference-face ((,class256 (:foreground ,color03))))
 
@@ -241,15 +241,15 @@
    `(diff-header ((,class256 (:foreground ,color12 :weight bold))))
    `(diff-file-header ((,class256 (:foreground ,color15))))
    `(diff-hunk-header ((,class256 (:foreground ,color11 :weight bold))))
-   `(diff-added ((,classTTY (:foreground ,color-diff-added-fg :background ,color-diff-added-bg-tty))
-                 (,class256 (:foreground ,color-diff-added-fg :background ,color-diff-added-bg))))
+   `(diff-added ((,class256 (:foreground ,color-diff-added-fg :background ,color-diff-added-bg))
+                 (,classTTY (:foreground ,color-diff-added-fg :background ,color-diff-added-bg-tty))))
    `(diff-indicator-added ((t (:inherit 'diff-added :foreground ,color10))))
-   `(diff-refine-added ((,classTTY (:foreground ,color-diff-added-fg :background ,color-diff-refine-added-bg-tty))
-                        (,class256 (:foreground ,color-diff-added-fg :background ,color-diff-refine-added-bg))))
-   `(diff-removed ((,classTTY (:foreground ,color-diff-removed-fg :background ,color-diff-removed-bg-tty))
-                   (,class256 (:foreground ,color-diff-removed-fg :background ,color-diff-removed-bg))))
-   `(diff-refine-removed ((,classTTY (:foreground ,color-diff-removed-fg :background ,color-diff-refine-removed-bg-tty))
-                          (,class256 (:foreground ,color-diff-removed-fg :background ,color-diff-refine-removed-bg))))
+   `(diff-refine-added ((,class256 (:foreground ,color-diff-added-fg :background ,color-diff-refine-added-bg))
+                        (,classTTY (:foreground ,color-diff-added-fg :background ,color-diff-refine-added-bg-tty))))
+   `(diff-removed ((,class256 (:foreground ,color-diff-removed-fg :background ,color-diff-removed-bg))
+                   (,classTTY (:foreground ,color-diff-removed-fg :background ,color-diff-removed-bg-tty))))
+   `(diff-refine-removed ((,class256 (:foreground ,color-diff-removed-fg :background ,color-diff-refine-removed-bg))
+                          (,classTTY (:foreground ,color-diff-removed-fg :background ,color-diff-refine-removed-bg-tty))))
    `(diff-indicator-removed ((t (:inherit 'diff-removed :foreground ,color09))))
 
    ;;; vc
@@ -285,10 +285,10 @@
    `(magit-diffstat-removed ((,class256 (:foreground ,color09))))
 
    ;;; smerge
-   `(smerge-lower ((,classTTY (:background ,color-diff-added-bg-tty))
-                   (,class256 (:background ,color-diff-added-bg))))
-   `(smerge-upper ((,classTTY (:background ,color-diff-removed-bg-tty))
-                   (,class256 (:background ,color-diff-removed-bg))))
+   `(smerge-lower ((,class256 (:background ,color-diff-added-bg))
+                   (,classTTY (:background ,color-diff-added-bg-tty))))
+   `(smerge-upper ((,class256 (:background ,color-diff-removed-bg))
+                   (,classTTY (:background ,color-diff-removed-bg-tty))))
    `(smerge-refined-added ((t (:foreground ,color00 :background ,color02))))
    `(smerge-refined-removed ((t (:foreground ,color00 :background ,color01))))
    
