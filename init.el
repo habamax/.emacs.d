@@ -79,7 +79,7 @@
 (recentf-mode 1)
 (repeat-mode t)
 (winner-mode t)
-(fido-mode 1)
+(fido-vertical-mode 1)
 
 (setq completion-auto-help 'always
       completion-show-help nil)
