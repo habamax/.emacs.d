@@ -276,12 +276,13 @@
    `(magit-bisect-bad ((,class256 (:foreground ,color01))))
    `(magit-bisect-good ((,class256 (:foreground ,color02))))
    `(magit-bisect-skip ((,class256 (:foreground ,color03))))
-
    `(magit-diff-added ((t (:inherit 'diff-added))))
    `(magit-diff-added-highlight ((t (:inherit 'diff-added))))
    `(magit-diff-removed ((t (:inherit 'diff-removed))))
    `(magit-diff-removed-highlight ((t (:inherit 'diff-removed))))
    `(magit-diff-lines-heading ((,class256 (:foreground ,color15 :background ,color02))))
+   `(magit-diffstat-added ((,class256 (:foreground ,color10))))
+   `(magit-diffstat-removed ((,class256 (:foreground ,color09))))
 
    ;;; smerge
    `(smerge-lower ((,classTTY (:background ,color-diff-added-bg-tty))
