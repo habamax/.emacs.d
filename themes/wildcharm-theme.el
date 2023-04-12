@@ -20,7 +20,9 @@
       (color-mode-line-active-2 "#444444")(color-mode-line-inactive-2 "#303030")
       (color-fringe "#12161a")(color-header-line "#32363a")
       (color-special "#875fff")(color-hl-line "#3a3d42")
-      (color-match "#3a3632"))
+      (color-match "#3a3632")
+      (color-diff-added-bg "#3f4f3f")(color-diff-added-bg-tty "#005f00")
+      (color-diff-added-fg "#afffaf"))
 
   (custom-theme-set-faces
    'wildcharm
@@ -235,6 +237,9 @@
    `(diff-header ((,class256 (:foreground ,color12 :weight bold))))
    `(diff-file-header ((,class256 (:foreground ,color15))))
    `(diff-hunk-header ((,class256 (:foreground ,color11 :weight bold))))
+   `(diff-added ((,classTTY ((:foreground ,color-diff-added-fg :background ,color-diff-added-bg-tty)))
+                 (,class256 (:foreground ,color-diff-added-fg :background ,color-diff-added-bg))))
+   `(diff-indicator-added ((t (:inherit 'diff-added :foreground ,color10))))
 
    ;;; vc
    `(vc-edited-state ((,class256 (:foreground ,color03))))
@@ -260,6 +265,11 @@
    `(magit-bisect-bad ((,class256 (:foreground ,color01))))
    `(magit-bisect-good ((,class256 (:foreground ,color02))))
    `(magit-bisect-skip ((,class256 (:foreground ,color03))))
+
+   `(magit-diff-added ((t (:inherit 'diff-added))))
+   `(magit-diff-added-highlight ((t (:inherit 'diff-added))))
+   `(magit-diff-lines-heading ((,class256 (:foreground ,color15 :background ,color02))))
+
    
    ;;; erc
    `(erc-timestamp-face ((,class256 (:foreground ,color08))))
