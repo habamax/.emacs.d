@@ -22,7 +22,9 @@
       (color-special "#875fff")(color-hl-line "#3a3d42")
       (color-match "#3a3632")
       (color-diff-added-bg "#3f4f3f")(color-diff-added-bg-tty "#005f00")
-      (color-diff-added-fg "#afffaf"))
+      (color-diff-added-fg "#afffaf")
+      (color-diff-removed-bg "#4f3f3f")(color-diff-removed-bg-tty "#5f0000")
+      (color-diff-removed-fg "#ffafaf"))
 
   (custom-theme-set-faces
    'wildcharm
@@ -237,9 +239,12 @@
    `(diff-header ((,class256 (:foreground ,color12 :weight bold))))
    `(diff-file-header ((,class256 (:foreground ,color15))))
    `(diff-hunk-header ((,class256 (:foreground ,color11 :weight bold))))
-   `(diff-added ((,classTTY ((:foreground ,color-diff-added-fg :background ,color-diff-added-bg-tty)))
+   `(diff-added ((,classTTY (:foreground ,color-diff-added-fg :background ,color-diff-added-bg-tty))
                  (,class256 (:foreground ,color-diff-added-fg :background ,color-diff-added-bg))))
    `(diff-indicator-added ((t (:inherit 'diff-added :foreground ,color10))))
+   `(diff-removed ((,classTTY (:foreground ,color-diff-removed-fg :background ,color-diff-removed-bg-tty))
+                   (,class256 (:foreground ,color-diff-removed-fg :background ,color-diff-removed-bg))))
+   `(diff-indicator-removed ((t (:inherit 'diff-removed :foreground ,color09))))
 
    ;;; vc
    `(vc-edited-state ((,class256 (:foreground ,color03))))
@@ -268,8 +273,17 @@
 
    `(magit-diff-added ((t (:inherit 'diff-added))))
    `(magit-diff-added-highlight ((t (:inherit 'diff-added))))
+   `(magit-diff-removed ((t (:inherit 'diff-removed))))
+   `(magit-diff-removed-highlight ((t (:inherit 'diff-removed))))
    `(magit-diff-lines-heading ((,class256 (:foreground ,color15 :background ,color02))))
 
+   ;;; smerge
+   `(smerge-lower ((,classTTY (:background ,color-diff-added-bg-tty))
+                   (,class256 (:background ,color-diff-added-bg))))
+   `(smerge-upper ((,classTTY (:background ,color-diff-removed-bg-tty))
+                   (,class256 (:background ,color-diff-removed-bg))))
+   `(smerge-refined-added ((t (:foreground ,color00 :background ,color02))))
+   `(smerge-refined-removed ((t (:foreground ,color00 :background ,color01))))
    
    ;;; erc
    `(erc-timestamp-face ((,class256 (:foreground ,color08))))
