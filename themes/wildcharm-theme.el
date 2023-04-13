@@ -16,7 +16,7 @@
       (color05 "#d787d7")(color13 "#ff87ff")
       (color06 "#00afaf")(color14 "#00d7d7")
       (color07 "#d0d0d0")(color15 "#ffffff")
-      (color-comment "#6d7a81")
+      (color-comment "#707a83")
       (color-match-paren "#ff00af")(color-non-text "#585858")
       (color-mode-line-active-1 "#404348")(color-mode-line-inactive-1 "#303338")
       (color-mode-line-active-2 "#444444")(color-mode-line-inactive-2 "#303030")
