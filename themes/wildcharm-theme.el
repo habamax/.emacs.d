@@ -4,7 +4,8 @@
 
 (deftheme wildcharm "Vibrant and playful.")
 
-(let ((class256 '((class color) (min-colors 256)))
+(let ((classTC '((class color) (min-colors 257)))
+      (class256 '((class color) (min-colors 256)))
       (classTTY '((type tty) (min-colors 16)))
       (fg "#d0d0d0")(bg "#1c1f26")
       (color00 "#000000")(color08 "#808080")
@@ -15,6 +16,7 @@
       (color05 "#d787d7")(color13 "#ff87ff")
       (color06 "#00afaf")(color14 "#00d7d7")
       (color07 "#d0d0d0")(color15 "#ffffff")
+      (color-comment "#6d7a81")
       (color-match-paren "#ff00af")(color-non-text "#585858")
       (color-mode-line-active-1 "#404348")(color-mode-line-inactive-1 "#303338")
       (color-mode-line-active-2 "#444444")(color-mode-line-inactive-2 "#303030")
@@ -89,7 +91,8 @@
    
    ;;; font-lock
    `(font-lock-string-face ((,class256 (:foreground ,color10))))
-   `(font-lock-comment-face ((,class256 (:foreground ,color08))))
+   `(font-lock-comment-face ((,classTC (:foreground ,color-comment))
+                             (t (:foreground ,color08))))
    `(font-lock-keyword-face ((,class256 (:foreground ,color12))))
    `(font-lock-preprocessor-face ((,class256 (:foreground ,color14))))
    `(font-lock-builtin-face ((,class256 (:foreground ,color05))))
