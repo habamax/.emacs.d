@@ -133,7 +133,8 @@
    ;;; ido
    `(ido-first-match ((,class256 (:foreground ,color10 :weight bold))))
    `(ido-only-match ((,class256 (:inherit 'ido-first-match))))
-   `(ido-virtual ((,class256 (:foreground ,color08))))
+   `(ido-virtual ((,classTC (:foreground ,color-comment))
+                  (,class256 (:foreground ,color08))))
    `(ido-subdir ((,class256 (:foreground ,color15 :weight bold))))
    ;; check how good it is
    `(ido-indicator ((,class256 (:background ,color01 :foreground ,color11))))
@@ -141,8 +142,8 @@
    ;;; compilation
    `(compilation-mode-line-fail ((,class256 (:foreground ,color01 :weight bold))))
    `(compilation-mode-line-exit ((,class256 (:foreground ,color02 :weight bold))))
-   `(compilation-line-number ((,class256 (:foreground ,color08))))
-   `(compilation-line-number ((,class256 (:foreground ,color08))))
+   `(compilation-line-number ((,classTC (:foreground ,color-comment))
+                              (,class256 (:foreground ,color08))))
 
    ;;; whitespace
    `(whitespace-space ((,class256 (:background nil :foreground ,color-non-text))))
@@ -153,7 +154,8 @@
    `(whitespace-empty ((,class256 (:background ,color03))))
 
    ;;; vc
-   `(log-view-message ((,class256 (:foreground ,color08))))
+   `(log-view-message ((,classTC (:foreground ,color-comment))
+                       (,class256 (:foreground ,color08))))
    `(log-view-commit-body ((,class256 (:foreground ,fg))))
    
    ;;; message
@@ -161,7 +163,8 @@
    `(message-header-subject ((,class256 (:foreground ,color15 :weight bold))))
    `(message-header-to ((,class256 (:foreground ,color15))))
    `(message-header-other ((,class256 (:foreground ,fg))))
-   `(message-header-cc ((,class256 (:foreground ,color08))))
+   `(message-header-cc ((,classTC (:foreground ,color-comment))
+                        (,class256 (:foreground ,color08))))
    `(message-separator ((,class256 (:foreground ,fg :background ,color-header-line :extend t))))
 
    ;;; gnus
@@ -235,10 +238,12 @@
    `(markdown-header-rule-face ((,class256 (:foreground ,color12 :weight bold))))
    `(markdown-code-face ((,class256 (:foreground ,fg))))
    `(markdown-list-face ((,class256 (:foreground ,color11))))
-   `(markdown-markup-face ((,class256 (:foreground ,color08))))
+   `(markdown-markup-face ((,classTC (:foreground ,color-comment))
+                           (,class256 (:foreground ,color08))))
    `(markdown-inline-code-face ((,class256 (:foreground ,color02))))
    `(markdown-language-keyword-face ((,class256 (:foreground ,color06))))
-   `(markdown-gfm-checkbox-face ((,class256 (:foreground ,color08))))
+   `(markdown-gfm-checkbox-face ((,classTC (:foreground ,color-comment))
+                                 (,class256 (:foreground ,color08))))
 
    ;;; diff
    `(diff-header ((,class256 (:foreground ,color12 :weight bold))))
@@ -296,8 +301,10 @@
    `(smerge-refined-removed ((t (:foreground ,color00 :background ,color01))))
    
    ;;; erc
-   `(erc-timestamp-face ((,class256 (:foreground ,color08))))
-   `(erc-notice-face ((,class256 (:foreground ,color08))))
+   `(erc-timestamp-face ((,classTC (:foreground ,color-comment))
+                         (,class256 (:foreground ,color08))))
+   `(erc-notice-face ((,classTC (:foreground ,color-comment))
+                      (,class256 (:foreground ,color08))))
    `(erc-nick-default-face ((,class256 (:foreground ,color04))))
    `(erc-current-nick-face ((,class256 (:foreground ,color09))))
    `(erc-nick-msg-face ((,class256 (:foreground ,color11))))
@@ -326,8 +333,10 @@
    `(fg:erc-color-face15 ((,class256 (:foreground ,color15))))
 
    ;;; rcirc
-   `(rcirc-server ((,class256 (:foreground ,color08))))
-   `(rcirc-timestamp ((,class256 (:foreground ,color08))))
+   `(rcirc-server ((,classTC (:foreground ,color-comment))
+                   (,class256 (:foreground ,color08))))
+   `(rcirc-timestamp ((,classTC (:foreground ,color-comment))
+                      (,class256 (:foreground ,color08))))
    `(rcirc-prompt ((,class256 (:foreground ,color13))))
    `(rcirc-url ((,class256 (:foreground nil :background nil :underline t))))
    `(rcirc-my-nick ((,class256 (:foreground ,color09 :weight bold))))
@@ -340,7 +349,8 @@
    `(elfeed-log-warn-level-face ((,class256 (:foreground ,color03))))
    `(elfeed-log-info-level-face ((,class256 (:foreground ,color04))))
    `(elfeed-log-debug-level-face ((,class256 (:foreground ,color05))))
-   `(elfeed-search-date-face ((,class256 (:foreground ,color08))))
+   `(elfeed-search-date-face ((,classTC (:foreground ,color-comment))
+                              (,class256 (:foreground ,color08))))
    `(elfeed-search-title-face ((,class256 (:foreground ,color07))))
    `(elfeed-search-unread-title-face ((,class256 (:foreground ,color15 :weight bold))))
    `(elfeed-search-feed-face ((,class256 (:foreground ,color02))))
@@ -354,11 +364,13 @@
    `(eshell-ls-executable ((,class256 (:foreground ,color10 :weight bold))))
    `(eshell-ls-clutter ((,class256 (:foreground ,color01))))
    `(eshell-ls-archive ((,class256 (:foreground ,color03))))
-   `(eshell-ls-backup ((,class256 (:foreground ,color08))))
+   `(eshell-ls-backup ((,classTC (:foreground ,color-comment))
+                       (,class256 (:foreground ,color08))))
    `(eshell-ls-unreadable ((,class256 (:foreground ,color-non-text))))
    `(eshell-ls-missing ((,class256 (:foreground ,color15 :background ,color01))))
    `(eshell-ls-product ((,class256 (:foreground ,color15))))
-   `(eshell-ls-readonly ((,class256 (:foreground ,color08))))
+   `(eshell-ls-readonly ((,classTC (:foreground ,color-comment))
+                         (,class256 (:foreground ,color08))))
    `(eshell-ls-special ((,class256 (:foreground ,color05))))
 
    ))
