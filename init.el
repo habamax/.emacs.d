@@ -128,7 +128,7 @@
          :repeat-map habamax-winner-map
          ("w" . winner-undo)
          ("W" . winner-redo))
-  :config
+  :init
   (setq display-buffer-alist
         '(("\\*e?shell\\*"
            (display-buffer-in-side-window)
