@@ -168,6 +168,13 @@
   (add-hook 'rust-mode-hook
             (lambda () (local-set-key [f5] 'habamax-dev/run-cargo))))
 
+(use-package dictionary
+  :ensure nil
+  :commands dictionary-lookup-definition
+  :bind ("C-c l" . dictionary-lookup-definition)
+  :config
+  (setq dictionary-server "dict.org"))
+
 (use-package whitespace
   :ensure nil
   :commands (whitespace-mode)
