@@ -115,7 +115,8 @@
 
 (use-package windows
   :ensure nil
-  :bind (("C-c w" . winner-undo)
+  :bind (("<f8>" . window-toggle-side-windows)
+         ("C-c w" . winner-undo)
          ("C-c W" . winner-redo)
          ("M-<right>" . windmove-swap-states-right)
          ("M-<left>" . windmove-swap-states-left)
@@ -126,7 +127,19 @@
          ("o" . other-frame)
          :repeat-map habamax-winner-map
          ("w" . winner-undo)
-         ("W" . winner-redo)))
+         ("W" . winner-redo))
+  :config
+  (setq display-buffer-alist
+        '(("\\*e?shell\\*"
+           (display-buffer-in-side-window)
+           (window-height . 0.3)
+           (side . top)
+           (slot . 0))
+          ("\\*\\(grep\\|compilation\\|godot - .+\\)\\*"
+           (display-buffer-in-side-window)
+           (window-height . 0.3)
+           (side . bottom)
+           (slot . 0)))))
 
 (use-package habamax
   :load-path "site-lisp"
