@@ -20,6 +20,7 @@
       (color-match-paren "#ff00af")(color-non-text "#585858")
       (color-mode-line-active-1 "#404348")(color-mode-line-inactive-1 "#303338")
       (color-mode-line-active-2 "#444444")(color-mode-line-inactive-2 "#303030")
+      (color-menu "#262626")
       (color-fringe "#12161a")(color-header-line "#32363a")
       (color-special "#875fff")(color-hl-line "#3a3d42")
       (color-match "#3a3632")
@@ -78,14 +79,15 @@
    `(tab-bar-tab ((,class256 (:background ,color-mode-line-active-1 :foreground ,color15 :weight bold :box (:line-width 1 :color ,color-non-text)))
                   (,classTTY (:background ,color-mode-line-active-2 :foreground ,color15 :weight bold))))   
    `(tab-bar-tab-inactive ((t (:background nil :foreground ,color07))))
-   ;; -menu
    `(help-key-binding ((,class256 (:foreground ,color06 :background nil :box (:line-width (1 . -1) :color ,color06)))))
    `(error ((,class256 (:foreground ,color09 :weight bold))))
    `(warning ((,class256 (:foreground ,color03 :weight bold))))
    `(success ((,class256 (:foreground ,color10 :weight bold))))
-   ;; -tty-menu-enabled-face
-   ;; -tty-menu-disabled-face
-   ;; -tty-menu-selected-face
+   `(menu ((t (:background ,color-mode-line-inactive-2 :foreground ,color07))))
+   `(tty-menu-enabled-face ((t (:background ,color-menu :foreground ,color07))))
+   `(tty-menu-disabled-face ((t (:background ,color-menu :foreground ,color08))))
+   `(tty-menu-selected-face ((t (:background ,color-mode-line-active-2 :foreground ,color07 :weight bold))))
+   
    `(show-paren-match ((,class256 :foreground ,color-match-paren :weight bold)))
    `(show-paren-mismatch ((,class256 :foreground ,color15 :background ,color-match-paren :weight bold)))
    
