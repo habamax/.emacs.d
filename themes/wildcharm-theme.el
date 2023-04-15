@@ -84,7 +84,7 @@
    `(tab-bar ((,class256 (:background ,color-mode-line-inactive-1 :foreground ,darkgrey))
               (,classTTY (:background ,color-mode-line-inactive-2 :foreground ,darkgrey))))
    `(tab-bar-tab ((,class256 (:background ,color-mode-line-active-1 :foreground ,white :weight bold :box (:line-width 1 :color ,color-non-text)))
-                  (,classTTY (:background ,color-mode-line-active-2 :foreground ,white :weight bold))))   
+                  (,classTTY (:background ,color-mode-line-active-2 :foreground ,white :weight bold))))
    `(tab-bar-tab-inactive ((t (:background nil :foreground ,grey))))
    `(help-key-binding ((,class256 (:foreground ,cyan :background nil :box (:line-width (1 . -1) :color ,cyan)))))
    `(error ((,class256 (:foreground ,bright-red :weight bold))))
