@@ -241,6 +241,7 @@
               ("M-n" . nil)
               ("M-p" . nil))
   :config
+  (setq markdown-fontify-code-blocks-natively t)
   (setq markdown-unordered-list-item-prefix "  - ")
   (setq markdown-asymmetric-header t)
   (setq markdown-command "pandoc -s -M fontsize=18pt -M maxwidth=42em")
