@@ -271,9 +271,10 @@
   (setq markdown-unordered-list-item-prefix "  - ")
   (setq markdown-asymmetric-header t)
   (setq markdown-command "pandoc -s -M fontsize=18pt -M maxwidth=42em --highlight-style tango")
-  (set-face-attribute 'markdown-header-face-1 nil :height 1.4)
-  (set-face-attribute 'markdown-header-face-2 nil :height 1.2)
-  (set-face-attribute 'markdown-header-face-3 nil :height 1.1))
+  :custom-face
+  (markdown-header-face-1 ((t (:height 1.4))))
+  (markdown-header-face-2 ((t (:height 1.2))))
+  (markdown-header-face-3 ((t (:height 1.1)))))
 
 (use-package multiple-cursors
   :bind (("C->" . mc/mark-next-like-this)
