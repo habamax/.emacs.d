@@ -239,22 +239,21 @@
   :ensure nil
   :mode (("\\.org$" . org-mode))
   :config
-  (setq org-export-headline-levels 6
+  (setq org-export-headline-levels 5
         org-export-with-email t
         org-html-doctype "html5"
         org-html-html5-fancy t
         org-html-validation-link nil)
-  (setq org-html-head
-        (concat "<style>"
-                "h1{font-size:2em}"
-                "h2{font-size:2em}"
-                "h3{font-size:1.5em}"
-                "h4{font-size:1.3em}"
-                "h5{font-size:1.1em}"
-                "h6{font-size:1.1em}"
-                "h7{font-size:1.1em;font-weight:bold}"
-                "pre.src{background:#1c1f26;color:#d0d0d0}"
-                "</style>"))
+  (setq org-html-head-include-default-style nil
+        org-html-htmlize-output-type 'css)
+  (setq org-html-style 
+        (concat "<style type=\"text/css\">\n"
+                "<!--/*--><![CDATA[/*><!--*/\n"
+                (with-temp-buffer
+                  (insert-file-contents (concat user-emacs-directory "org/org.css"))
+                  (buffer-string))
+                "/*]]>*/-->\n"
+                "</style>\n"))
   :custom-face
   (org-level-1 ((t (:height 1.4))))
   (org-level-2 ((t (:height 1.3))))
@@ -270,7 +269,7 @@
   (setq markdown-fontify-code-blocks-natively t)
   (setq markdown-unordered-list-item-prefix "  - ")
   (setq markdown-asymmetric-header t)
-  (setq markdown-command "pandoc -s -M fontsize=18pt -M maxwidth=42em --highlight-style tango")
+  (setq markdown-command "pandoc -s -M fontsize=18pt -M maxwidth=60em --highlight-style tango")
   :custom-face
   (markdown-header-face-1 ((t (:height 1.4))))
   (markdown-header-face-2 ((t (:height 1.2))))
