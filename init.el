@@ -235,6 +235,32 @@
   :commands (magit-status)
   :bind ("C-x g" . magit-file-dispatch))
 
+(use-package org
+  :ensure nil
+  :mode (("\\.org$" . org-mode))
+  :config
+  (setq org-export-headline-levels 6
+        org-export-with-email t
+        org-html-doctype "html5"
+        org-html-html5-fancy t
+        org-html-validation-link nil)
+  (setq org-html-head
+        (concat "<style>"
+                "h1{font-size:2em}"
+                "h2{font-size:2em}"
+                "h3{font-size:1.5em}"
+                "h4{font-size:1.3em}"
+                "h5{font-size:1.1em}"
+                "h6{font-size:1.1em}"
+                "h7{font-size:1.1em;font-weight:bold}"
+                "pre.src{background:#1c1f26;color:#d0d0d0}"
+                "</style>"))
+  :custom-face
+  (org-level-1 ((t (:height 1.4))))
+  (org-level-2 ((t (:height 1.3))))
+  (org-level-3 ((t (:height 1.2))))
+  (org-level-4 ((t (:height 1.1)))))
+
 (use-package markdown-mode
   :mode "\\.txt$"
   :bind (:map markdown-mode-map
