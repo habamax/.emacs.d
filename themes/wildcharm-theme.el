@@ -176,6 +176,26 @@
                         (,class256 (:foreground ,darkgrey))))
    `(message-separator ((,class256 (:foreground ,fg :background ,header-line :extend t))))
 
+   ;;; org
+   `(org-document-title ((,class256 (:foreground ,white :weight bold))))
+   `(org-document-info ((,class256 (:foreground ,fg))))
+   `(org-document-info-keyword ((,class256 (:foreground ,special))))
+   `(org-meta-line ((,class256 (:foreground ,special))))
+   `(org-block ((,class256 (:foreground ,fg))))
+   `(org-block-begin-line ((,class256 (:foreground ,special))))
+   `(org-block-end-line ((,class256 (:inherit org-block-begin-line))))
+   `(org-level-1 ((,class256 (:foreground ,white :weight bold))))
+   `(org-level-2 ((,class256 (:foreground ,white :weight bold))))
+   `(org-level-3 ((,class256 (:foreground ,white :weight bold))))
+   `(org-level-4 ((,class256 (:foreground ,white :weight bold))))
+   `(org-level-5 ((,class256 (:foreground ,white :weight bold))))
+   `(org-level-6 ((,class256 (:foreground ,white :weight bold))))
+   `(org-level-7 ((,class256 (:foreground ,white :weight bold))))
+   `(org-level-8 ((,class256 (:foreground ,white :weight bold))))
+   `(org-todo ((,class256 (:foreground ,bright-red :weight bold))))
+   `(org-done ((,class256 (:foreground ,bright-green :weight bold))))
+   `(org-headline-done ((,class256 (:foreground ,nil))))
+   
    ;;; gnus
    `(gnus-button ((,class256 (:underline t))))
    `(gnus-group-mail-1 ((,class256 (:foreground ,bright-green :weight bold))))
