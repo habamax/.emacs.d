@@ -348,32 +348,32 @@ p.verse {
 
 /* highglighting */
 .org-function-name {
-    color:#00f
+    color:#af00af
 }
 .org-keyword {
-    color:#a020f0
+    color:#005faf
 }
 .org-builtin {
-    color:#483d8b
+    color:#870087
 }
-.org-string {
-    color:#8b2252
+.org-string, .org-doc {
+    color:#008700
 }
 .org-comment,
 .org-comment-delimiter {
-    color:#b22222
+    color:#8a8a8a
 }
 .org-preprocessor {
-    color:#483d8b
+    color:#008787
 }
 .org-type {
-    color:#228b22
+    color:#af5f00
 }
 .org-variable-name {
-    color:sienna
+    color:#870087
 }
 .org-constant {
-    color:#008b8b
+    color:#af0000
 }
 .org-warning {
     color:#ff8c00;
@@ -384,7 +384,7 @@ p.verse {
     font-weight:700
 }
 .org-escape-glyph {
-    color:brown
+    color:#8700ff
 }
 .org-src-container {
     border:1px solid #ccc;
