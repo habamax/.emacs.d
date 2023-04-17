@@ -11,9 +11,10 @@
 
 (deftheme wildcharm "Vibrant and playful.")
 
-(let ((classTC '((class color) (min-colors 257)))
+(let ((classGUI '((type gtk)))
+      (classTC '((class color) (min-colors 257)))
       (class256 '((class color) (min-colors 256)))
-      (classTTY '((type tty) (min-colors 16)))
+      (class16 '((type color) (min-colors 16)))
       (fg "#d0d0d0")(bg "#1c1f26")
       (black "#000000")(darkgrey "#808080")
       (red "#d75f5f")(bright-red "#ff5f87")
@@ -42,8 +43,8 @@
    'wildcharm
 
    ;;; standard faces
-   `(default ((,classTTY (:background nil, :foreground nil))
-              (t (:background ,bg :foreground ,fg))))
+   `(default ((,classGUI (:background ,bg :foreground ,fg))
+              (t (:background nil, :foreground nil))))
    `(shadow ((,class256 (:foreground ,non-text))))
    `(link ((,class256 (:foreground ,fg :underline t))))
    `(link-visited ((,class256 (:foreground ,darkgrey :underline t))))
@@ -61,29 +62,29 @@
    `(nobreak-space ((,class256 (:foreground ,special :underline t))))
    `(nobreak-hyphen ((,class256 (:inherit 'escape-glyph))))
    `(mode-line ((,class256 (:background ,mode-line-active-1 :foreground ,grey :box (:line-width 1 :color ,non-text)))
-                (,classTTY (:background ,mode-line-active-2 :foreground ,grey))))
+                (,class16 (:background ,mode-line-active-2 :foreground ,grey))))
    `(mode-line-inactive ((,class256 (:background ,mode-line-inactive-1 :foreground ,darkgrey :box (:line-width 1 :color ,black)))
-                         (,classTTY (:background ,mode-line-inactive-2 :foreground ,darkgrey))))
+                         (,class16 (:background ,mode-line-inactive-2 :foreground ,darkgrey))))
    `(mode-line-highlight ((,class256 (:background ,black :box (:line-width 1 :color ,non-text)))))
    `(mode-line-emphasis ((,class256 (:weight bold))))
    `(mode-line-buffer-id ((,class256 (:weight bold))))
    `(header-line ((,class256 (:foreground ,fg :background ,header-line :extend t  :box (:line-width 1 :color ,black)))))
    `(vertical-border ((,class256 (:background ,mode-line-inactive-2 :foreground ,mode-line-inactive-2))
-                      (,classTTY (:background ,mode-line-inactive-2 :foreground ,mode-line-inactive-2))))
+                      (,class16 (:background ,mode-line-inactive-2 :foreground ,mode-line-inactive-2))))
    ;; -window-divider '((t :foreground "gray60"))
    ;; -window-divider-first-pixel
    ;; -window-divider-last-pixel
    ;; -internal-border
    ;; -child-frame-border
    `(minibuffer-prompt ((,class256 (:foreground ,bright-yellow :weight bold))))
-   `(fringe ((,class256 (:background ,fringe))))
+   `(fringe ((,classGUI (:background ,fringe))))
    ;; -scroll-bar
    `(cursor ((t (:background "#ffffff"))))
    ;; -tool-bar
    `(tab-bar ((,class256 (:background ,mode-line-inactive-1 :foreground ,darkgrey))
-              (,classTTY (:background ,mode-line-inactive-2 :foreground ,darkgrey))))
+              (,class16 (:background ,mode-line-inactive-2 :foreground ,darkgrey))))
    `(tab-bar-tab ((,class256 (:background ,mode-line-active-1 :foreground ,white :weight bold :box (:line-width 1 :color ,non-text)))
-                  (,classTTY (:background ,mode-line-active-2 :foreground ,white :weight bold))))
+                  (,class16 (:background ,mode-line-active-2 :foreground ,white :weight bold))))
    `(tab-bar-tab-inactive ((t (:background nil :foreground ,grey))))
    `(help-key-binding ((,class256 (:foreground ,cyan :background nil :box (:line-width (1 . -1) :color ,cyan)))))
    `(error ((,class256 (:foreground ,bright-red :weight bold))))
@@ -281,14 +282,14 @@
    `(diff-file-header ((,class256 (:foreground ,white))))
    `(diff-hunk-header ((,class256 (:foreground ,bright-yellow :weight bold))))
    `(diff-added ((,class256 (:foreground ,diff-added-fg :background ,diff-added-bg))
-                 (,classTTY (:foreground ,diff-added-fg :background ,diff-added-bg-tty))))
+                 (,class16 (:foreground ,diff-added-fg :background ,diff-added-bg-tty))))
    `(diff-indicator-added ((t (:inherit 'diff-added :foreground ,bright-green))))
    `(diff-refine-added ((,class256 (:foreground ,diff-added-fg :background ,diff-refine-added-bg))
-                        (,classTTY (:foreground ,diff-added-fg :background ,diff-refine-added-bg-tty))))
+                        (,class16 (:foreground ,diff-added-fg :background ,diff-refine-added-bg-tty))))
    `(diff-removed ((,class256 (:foreground ,diff-removed-fg :background ,diff-removed-bg))
-                   (,classTTY (:foreground ,diff-removed-fg :background ,diff-removed-bg-tty))))
+                   (,class16 (:foreground ,diff-removed-fg :background ,diff-removed-bg-tty))))
    `(diff-refine-removed ((,class256 (:foreground ,diff-removed-fg :background ,diff-refine-removed-bg))
-                          (,classTTY (:foreground ,diff-removed-fg :background ,diff-refine-removed-bg-tty))))
+                          (,class16 (:foreground ,diff-removed-fg :background ,diff-refine-removed-bg-tty))))
    `(diff-indicator-removed ((t (:inherit 'diff-removed :foreground ,bright-red))))
 
    ;;; vc
@@ -325,9 +326,9 @@
 
    ;;; smerge
    `(smerge-lower ((,class256 (:background ,diff-added-bg))
-                   (,classTTY (:background ,diff-added-bg-tty))))
+                   (,class16 (:background ,diff-added-bg-tty))))
    `(smerge-upper ((,class256 (:background ,diff-removed-bg))
-                   (,classTTY (:background ,diff-removed-bg-tty))))
+                   (,class16 (:background ,diff-removed-bg-tty))))
    `(smerge-refined-added ((t (:foreground ,black :background ,green))))
    `(smerge-refined-removed ((t (:foreground ,black :background ,red))))
    
