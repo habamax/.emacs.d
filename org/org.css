@@ -548,6 +548,9 @@ p.verse {
 .org-src-container>pre.src-scala:before {
     content:"Scala"
 }
+.org-src-container>pre.src-elisp:before {
+    content:"Elisp"
+}
 .org-src-container>pre.src-scheme:before {
     content:"Scheme"
 }
