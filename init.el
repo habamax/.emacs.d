@@ -248,11 +248,9 @@
         org-html-htmlize-output-type 'css)
   (setq org-html-style 
         (concat "<style type=\"text/css\">\n"
-                "<!--/*--><![CDATA[/*><!--*/\n"
                 (with-temp-buffer
                   (insert-file-contents (concat user-emacs-directory "org/org.css"))
                   (buffer-string))
-                "/*]]>*/-->\n"
                 "</style>\n"))
   :custom-face
   (org-level-1 ((t (:height 1.4))))
