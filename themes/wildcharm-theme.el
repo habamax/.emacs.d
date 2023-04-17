@@ -180,6 +180,7 @@
    `(org-document-info ((,class256 (:foreground ,fg))))
    `(org-document-info-keyword ((,class256 (:foreground ,special))))
    `(org-meta-line ((,class256 (:foreground ,special))))
+   `(org-code ((,class256 (:foreground ,yellow))))
    `(org-block ((,class256 (:foreground ,fg))))
    `(org-block-begin-line ((,class256 (:foreground ,special))))
    `(org-block-end-line ((,class256 (:inherit org-block-begin-line))))
