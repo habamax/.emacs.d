@@ -374,6 +374,12 @@
    `(rcirc-nick-in-message ((,class256 (:foreground ,bright-red :weight bold))))
    `(rcirc-other-nick ((,class256 (:foreground ,bright-yellow))))
 
+   ;;; calendar
+   `(calendar-month-header ((,class256 (:foreground ,white :weight bold))))
+   `(calendar-weekday-header ((,class256 (:foreground ,bright-yellow))))
+   `(calendar-weekend-header ((,class256 (:foreground ,bright-blue))))
+   `(calendar-today ((,class256 (:foreground ,bright-green))))
+   
    ;;; elfeed
    `(elfeed-log-date-face ((,class256 (:foreground ,yellow))))
    `(elfeed-log-error-level-face ((,class256 (:foreground ,red))))
