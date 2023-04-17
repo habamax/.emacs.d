@@ -242,9 +242,10 @@
   :config
   (setq org-directory "~/docs"
         org-default-notes-file (concat org-directory "/notes.org"))
-  (setq org-export-headline-levels 5
-        org-export-with-email t
-        org-html-doctype "html5"
+  (setq org-export-with-sub-superscripts '{}
+        org-export-headline-levels 5
+        org-export-with-email t)
+  (setq org-html-doctype "html5"
         org-html-html5-fancy t
         org-html-checkbox-type 'html
         org-html-validation-link nil)
