@@ -311,6 +311,5 @@
 
 (use-package gdscript-mode)
 (use-package zig-mode)
-(use-package rust-mode)
 
 ;;; init.el ends here
