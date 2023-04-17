@@ -22,7 +22,7 @@ body {
     .content {
         background-color:#fff;
         border: 1px solid #e0e0e0;
-        padding: 1em 2em;
+        padding: 2cm;
     }
 }
 @media print {
@@ -340,6 +340,7 @@ p.verse {
     padding:2px 5px;
     margin:auto 1px;
     border:1px solid #ddd;
+    background-color:#f7f7f3;
     border-radius:3px;
     background-clip:padding-box;
     color:#000;
@@ -388,7 +389,7 @@ p.verse {
 }
 .org-src-container {
     border:1px solid #ccc;
-    box-shadow:3px 3px 3px #eee;
+    background-color:#f7f7f3;
     border-radius: 3px;
     font-family:monospace;
     margin:1em auto;
@@ -407,7 +408,7 @@ p.verse {
 .org-src-container>pre:before {
     display:block;
     position:absolute;
-    background-color:#b3b3b3;
+    background-color:#888;
     top:0;
     right:0;
     padding:0 .5em;
