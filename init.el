@@ -240,6 +240,8 @@
   :ensure nil
   :mode (("\\.org$" . org-mode))
   :config
+  (setq org-directory "~/docs"
+        org-default-notes-file (concat org-directory "/notes.org"))
   (setq org-export-headline-levels 5
         org-export-with-email t
         org-html-doctype "html5"
