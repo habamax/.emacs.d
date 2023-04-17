@@ -196,6 +196,7 @@
    `(org-done ((,class256 (:foreground ,bright-green :weight bold))))
    `(org-headline-done ((,class256 (:foreground ,nil))))
    `(org-checkbox ((,class256 (:foreground ,darkgrey :weight normal))))
+   `(org-dispatcher-highlight ((,class256 (:foreground ,bright-red :weight bold))))
    
    ;;; gnus
    `(gnus-button ((,class256 (:underline t))))
