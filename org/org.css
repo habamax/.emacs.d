@@ -395,8 +395,14 @@ p.verse {
     padding:.1em .5em;
     position:relative
 }
+@media print {
+    .org-src-container>pre {
+        overflow:auto;
+        white-space: pre-wrap;
+    }
+}
 .org-src-container>pre {
-    overflow:auto
+    overflow:auto;
 }
 .org-src-container>pre:before {
     display:block;
