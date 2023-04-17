@@ -76,8 +76,7 @@
    ;; -internal-border
    ;; -child-frame-border
    `(minibuffer-prompt ((,class256 (:foreground ,bright-yellow :weight bold))))
-   `(fringe ((,classTTY (:foreground ,green :background ,red))
-             (,class256 (:background ,fringe))))
+   `(fringe ((,class256 (:background ,fringe))))
    ;; -scroll-bar
    `(cursor ((t (:background "#ffffff"))))
    ;; -tool-bar
