@@ -165,9 +165,9 @@ See `sort-regexp-fields'."
 (defun habamax/insert-meeting-notes ()
   (interactive)
   (save-excursion
-    (insert "# " (format-time-string "%Y-%m-%d") " Meeting Notes\n\n")
-    (insert "## Attendees\n\n")
-    (insert "## Status\n\n\n\n"))
+    (insert "* " (format-time-string "%Y-%m-%d") "\n\n")
+    (insert "** Attendees\n\n")
+    (insert "** Status\n\n"))
   (forward-line 3))
 
 
