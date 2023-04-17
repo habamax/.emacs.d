@@ -244,6 +244,7 @@
         org-export-with-email t
         org-html-doctype "html5"
         org-html-html5-fancy t
+        org-html-checkbox-type 'html
         org-html-validation-link nil)
   (setq org-html-head-include-default-style nil
         org-html-htmlize-output-type 'css)
