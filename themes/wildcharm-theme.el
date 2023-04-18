@@ -195,6 +195,7 @@
    `(org-level-8 ((,class256 (:foreground ,white :weight bold))))
    `(org-todo ((,class256 (:foreground ,bright-red :weight bold))))
    `(org-done ((,class256 (:foreground ,bright-green :weight bold))))
+   `(org-date ((,class256 (:foreground ,bright-cyan))))
    `(org-headline-done ((,class256 (:foreground ,nil))))
    `(org-checkbox ((,class256 (:foreground ,darkgrey :weight normal))))
    `(org-dispatcher-highlight ((,class256 (:foreground ,bright-red :weight bold))))
