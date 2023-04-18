@@ -11,7 +11,7 @@
 
 (deftheme wildcharm "Vibrant and playful.")
 
-(let ((classGUI '((type gtk)))
+(let ((classGUI (display-graphic-p))
       (classTC '((class color) (min-colors 257)))
       (class256 '((class color) (min-colors 256)))
       (class16 '((type color) (min-colors 16)))
