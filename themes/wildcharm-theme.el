@@ -182,6 +182,7 @@
    `(org-document-info-keyword ((,class256 (:foreground ,special))))
    `(org-meta-line ((,class256 (:foreground ,special))))
    `(org-code ((,class256 (:foreground ,yellow))))
+   `(org-tag ((,class256 (:foreground ,bright-blue))))
    `(org-block ((,class256 (:foreground ,fg))))
    `(org-block-begin-line ((,class256 (:foreground ,special))))
    `(org-block-end-line ((,class256 (:inherit org-block-begin-line))))
