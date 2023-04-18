@@ -11,12 +11,10 @@
 
 (deftheme wildcharm "Vibrant and playful.")
 
-(let ((classX '((type x)))
-      (classW32 '((type w32)))
-      (classOSX '((type ns)))
-      (classTC '((class color) (min-colors 257)))
+(let ((classTC '((class color) (min-colors 257)))
       (class256 '((class color) (min-colors 256)))
       (class16 '((class color) (min-colors 16)))
+      (classTTY '((type tty)))
       (fg "#d0d0d0")(bg "#1c1f26")
       (black "#000000")(darkgrey "#808080")
       (red "#d75f5f")(bright-red "#ff5f87")
@@ -45,8 +43,8 @@
    'wildcharm
 
    ;;; standard faces
-   `(default ((,classX ,classW32 ,classOSX (:background ,bg :foreground ,fg))
-              (t (:background nil, :foreground nil))))
+   `(default ((,classTTY (:background nil, :foreground nil))
+              (t (:background ,bg :foreground ,fg))))
    `(shadow ((,class256 (:foreground ,non-text))))
    `(link ((,class256 (:foreground ,fg :underline t))))
    `(link-visited ((,class256 (:foreground ,darkgrey :underline t))))
@@ -79,7 +77,7 @@
    ;; -internal-border
    ;; -child-frame-border
    `(minibuffer-prompt ((,class256 (:foreground ,bright-yellow :weight bold))))
-   `(fringe ((,classX ,classW32 ,classOSX (:background ,fringe))))
+   `(fringe ((t (:background ,fringe))))
    ;; -scroll-bar
    `(cursor ((t (:background "#ffffff"))))
    ;; -tool-bar
