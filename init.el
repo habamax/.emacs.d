@@ -122,8 +122,6 @@
          ("M-<left>" . windmove-swap-states-left)
          ("M-<up>" . windmove-swap-states-up)
          ("M-<down>" . windmove-swap-states-down)
-         ("M-o" . other-window)
-         ("M-O" . other-frame)
          :repeat-map habamax-other-frame-map
          ("o" . other-frame)
          :repeat-map habamax-winner-map
