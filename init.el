@@ -151,7 +151,6 @@
          ("C-c b" . habamax/next-buffer-like-this)
          ("C-c B" . habamax/previous-buffer-like-this)
          ("C-c id" . habamax/insert-current-date)
-         ("C-c in" . habamax/insert-meeting-notes)
          ([remap list-buffers] . ibuffer)
          ("C-c d" . habamax/duplicate-line)
          ("M-s g" . habamax/grep-current-word)

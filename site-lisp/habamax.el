@@ -162,16 +162,6 @@ See `sort-regexp-fields'."
 
 
 ;;;###autoload
-(defun habamax/insert-meeting-notes ()
-  (interactive)
-  (save-excursion
-    (insert "* " (format-time-string "%Y-%m-%d") "\n\n")
-    (insert "** Attendees\n\n")
-    (insert "** Status\n\n"))
-  (forward-line 3))
-
-
-;;;###autoload
 (defun habamax/recentf-open ()
   (interactive)
   (find-file (completing-read "Open recent: " recentf-list)))
