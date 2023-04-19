@@ -198,12 +198,13 @@
    `(org-level-8 ((,class256 (:foreground ,white :weight bold))))
    `(org-todo ((,class256 (:foreground ,bright-red :weight bold))))
    `(org-done ((,class256 (:foreground ,bright-green :weight bold))))
-   `(org-date ((,class256 (:foreground ,bright-cyan))))
+   `(org-date ((,class256 (:foreground ,darkgrey :underline t))))
    `(org-headline-done ((,class256 (:foreground ,nil))))
    `(org-checkbox ((,class256 (:foreground ,darkgrey :weight normal))))
    `(org-dispatcher-highlight ((,class256 (:foreground ,bright-red :weight bold))))
    `(org-agenda-structure ((,class256 (:foreground ,white :weight bold))))
    `(org-agenda-date ((,class256 (:foreground ,fg :weight normal))))
+   `(org-agenda-done ((,class256 (:foreground ,bright-green))))
    `(org-agenda-date-today ((,class256 (:foreground ,bright-green :weight bold :slant normal))))
    
    ;;; gnus
