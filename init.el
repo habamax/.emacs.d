@@ -32,11 +32,7 @@
 
 (when +IS-WINDOWS+
   (set-language-environment 'utf-8)
-  (setq default-buffer-file-coding-system 'utf-8-unix)
-  ;; This has no effect, it worked previously for win7 I had at the time.
-  ;; Nowadays with win11 and emacs28.2 it doesn't affect ripgrep or grep:
-  ;; I can't search for text in RU.
-  (setq default-process-coding-system '(utf-8-dos . windows-1251-dos)))
+  (setq default-buffer-file-coding-system 'utf-8-unix))
 
 (setq default-input-method 'russian-computer)
 
