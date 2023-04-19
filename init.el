@@ -236,22 +236,25 @@
 
 (use-package org
   :ensure nil
-  :bind (("C-c oc" . org-capture))
+  :bind (("C-c oc" . org-capture)
+         ("C-c oa" . org-agenda))
   :mode (("\\.org$" . org-mode))
   :config
-  (setq org-directory "~/docs"
-        org-default-notes-file (concat org-directory "/notes.org"))
+  (setq org-directory "~/docs")
+  (setq org-agenda-files '("todo.org" "notes.org"))
+  (setq org-refile-use-outline-path 'file
+        org-refile-targets '((org-agenda-files :maxlevel . 1)))
   (setq org-capture-templates
-      '(("t" "Todo" entry (file "~/docs/todo.org")
+      '(("t" "Todo" entry (file "todo.org")
          "* TODO %?\n%U" :empty-lines 1 :prepend t)
-        ("T" "Todo with link" entry (file "~/docs/todo.org")
+        ("T" "Todo with link" entry (file "todo.org")
          "* TODO %?\n%U\n\n%i\n%a" :empty-lines 1 :prepend t)
-        ("j" "Journal" entry (file "~/docs/journal/2023.org")
+        ("j" "Journal" entry (file "journal/2023.org")
          "* %<%Y-%m-%d %H:%M> %?\n\n%i\n" :empty-lines 1 :prepend t)
-        ("J" "Journal with link" entry (file "~/docs/journal/2023.org")
+        ("J" "Journal with link" entry (file "journal/2023.org")
          "* %<%Y-%m-%d %H:%M> %?\n%i\n%a" :empty-lines 1 :prepend t)
-        ("m" "Meeting notes" entry (file "~/docs/journal/2023.org")
-         "* %<%Y-%m-%d %H:%M> Meeting Notes\n\n** Attendees\n\n%?\n\n** Status\n\n" :empty-lines 1 :prepend t)))
+        ("m" "Meeting notes" entry (file "journal/2023.org")
+         "* %<%Y-%m-%d %H:%M> Meeting Notes\n\n*Attendees:*\n\n%?\n\n*Status:*\n\n" :empty-lines 1 :prepend t)))
   (setq org-export-with-sub-superscripts '{}
         org-export-headline-levels 5
         org-export-with-email t)
