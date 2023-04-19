@@ -210,6 +210,8 @@
    `(org-scheduled ((,class256 (:foreground ,yellow))))
    `(org-upcoming-deadline ((,class256 (:foreground ,bright-yellow))))
    `(org-imminent-deadline ((,class256 (:foreground ,bright-yellow :weight bold))))
+   `(org-time-grid ((,class256 (:foreground ,non-text))))
+   `(org-agenda-current-time ((,class256 (:foreground ,cyan))))
    
    ;;; gnus
    `(gnus-button ((,class256 (:underline t))))
