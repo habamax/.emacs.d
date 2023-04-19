@@ -181,6 +181,8 @@
    `(org-document-info ((,class256 (:foreground ,fg))))
    `(org-document-info-keyword ((,class256 (:foreground ,special))))
    `(org-meta-line ((,class256 (:foreground ,special))))
+   `(org-special-keyword ((,class256 (:foreground ,special))))
+   `(org-drawer ((,class256 (:foreground ,special))))
    `(org-code ((,class256 (:foreground ,yellow))))
    `(org-tag ((,class256 (:foreground ,bright-blue))))
    `(org-block ((,class256 (:foreground ,fg))))
@@ -200,6 +202,9 @@
    `(org-headline-done ((,class256 (:foreground ,nil))))
    `(org-checkbox ((,class256 (:foreground ,darkgrey :weight normal))))
    `(org-dispatcher-highlight ((,class256 (:foreground ,bright-red :weight bold))))
+   `(org-agenda-structure ((,class256 (:foreground ,white :weight bold))))
+   `(org-agenda-date ((,class256 (:foreground ,fg :weight normal))))
+   `(org-agenda-date-today ((,class256 (:foreground ,bright-green :weight bold :slant normal))))
    
    ;;; gnus
    `(gnus-button ((,class256 (:underline t))))
