@@ -31,7 +31,6 @@
       (menu "#262626")
       (fringe "#12161a")(header-line "#32363a")
       (special "#875fff")(hl-line "#3a3d42")
-      (match "#3a3632")
       (diff-added-bg "#3f4f3f")(diff-added-bg-tty "#005f00")
       (diff-refine-added-bg "#3f6f4f")(diff-refine-added-bg-tty "#005f5f")
       (diff-added-fg "#afffaf")
@@ -48,7 +47,7 @@
    `(shadow ((,class256 (:foreground ,non-text))))
    `(link ((,class256 (:foreground ,fg :underline t))))
    `(link-visited ((,class256 (:foreground ,darkgrey :underline t))))
-   `(highlight ((,class256 (:foreground ,black :background ,bright-blue))))
+   `(highlight ((,class256 (:background ,bright-blue :foreground ,black))))
    `(region ((,class256 (:background ,blue :foreground ,bg))))
    `(secondary-selection ((,class256 (:background ,cyan :foreground ,bg))))
    `(trailing-whitespace ((,class256 (:foreground ,red :weight bold))))
@@ -68,7 +67,7 @@
    `(mode-line-highlight ((,class256 (:background ,black :box (:line-width 1 :color ,non-text)))))
    `(mode-line-emphasis ((,class256 (:weight bold))))
    `(mode-line-buffer-id ((,class256 (:weight bold))))
-   `(header-line ((,class256 (:foreground ,fg :background ,header-line :extend t  :box (:line-width 1 :color ,black)))))
+   `(header-line ((,class256 (:background ,header-line :foreground ,fg :extend t  :box (:line-width 1 :color ,black)))))
    `(vertical-border ((,class256 (:background ,mode-line-inactive-2 :foreground ,mode-line-inactive-2))
                       (,class16 (:background ,mode-line-inactive-2 :foreground ,mode-line-inactive-2))))
    ;; -window-divider '((t :foreground "gray60"))
@@ -86,7 +85,7 @@
    `(tab-bar-tab ((,class256 (:background ,mode-line-active-1 :foreground ,white :weight bold :box (:line-width 1 :color ,non-text)))
                   (,class16 (:background ,mode-line-active-2 :foreground ,white :weight bold))))
    `(tab-bar-tab-inactive ((t (:background nil :foreground ,grey))))
-   `(help-key-binding ((,class256 (:foreground ,cyan :background nil :box (:line-width (1 . -1) :color ,cyan)))))
+   `(help-key-binding ((,class256 (:background nil :foreground ,cyan :box (:line-width (1 . -1) :color ,cyan)))))
    `(error ((,class256 (:foreground ,bright-red :weight bold))))
    `(warning ((,class256 (:foreground ,yellow :weight bold))))
    `(success ((,class256 (:foreground ,bright-green :weight bold))))
@@ -96,7 +95,7 @@
    `(tty-menu-selected-face ((t (:background ,mode-line-active-2 :foreground ,grey :weight bold))))
    
    `(show-paren-match ((,class256 :foreground ,match-paren :weight bold)))
-   `(show-paren-mismatch ((,class256 :foreground ,white :background ,match-paren :weight bold)))
+   `(show-paren-mismatch ((,class256 :background ,match-paren :foreground ,white :weight bold)))
    
    ;;; font-lock
    `(font-lock-string-face ((,class256 (:foreground ,bright-green))))
@@ -117,19 +116,19 @@
    `(isearch-fail ((,class256 (:background ,bright-red :foreground ,black))))
 
    ;;; replace.el
-   `(match ((,class256 (:background ,match))))
+   `(match ((,class256 (:background ,cyan :foreground ,black))))
 
    ;;; global-hl-line-mode
-   `(hl-line ((,class256 (:foreground nil :background ,hl-line))))
+   `(hl-line ((,class256 (:background ,hl-line :foreground nil))))
 
    ;;; widget
-   `(widget-field ((,class256 (:foreground ,fg :background ,header-line :extend t))))
+   `(widget-field ((,class256 (:background ,header-line :foreground ,fg :extend t))))
    
    ;;; dired
    `(dired-header ((,class256 (:foreground ,white :weight bold))))
    `(dired-directory ((,class256 (:inherit font-lock-keyword-face :weight bold))))
    `(dired-symlink ((,class256 (:foreground ,bright-cyan :weight bold :inherit nil))))
-   `(dired-broken-symlink ((,class256 (:foreground ,white :background ,red))))
+   `(dired-broken-symlink ((,class256 (:background ,red :foreground ,white))))
    `(dired-special ((,class256 (:foreground ,magenta :inherit nil))))
    `(dired-perm-write ((,class256 (:foreground ,yellow :inherit nil))))
 
@@ -174,7 +173,7 @@
    `(message-header-other ((,class256 (:foreground ,fg))))
    `(message-header-cc ((,classTC (:foreground ,comment))
                         (,class256 (:foreground ,darkgrey))))
-   `(message-separator ((,class256 (:foreground ,fg :background ,header-line :extend t))))
+   `(message-separator ((,class256 (:background ,header-line :foreground ,fg :extend t))))
 
    ;;; org
    `(org-document-title ((,class256 (:foreground ,white :weight bold))))
@@ -248,7 +247,7 @@
    `(gnus-summary-normal-read ((,class256 (:foreground ,fg))))
    `(gnus-summary-normal-ticked ((,class256 (:foreground ,bright-yellow))))
    `(gnus-summary-normal-ancient ((,class256 (:foreground ,fg))))
-   `(gnus-summary-cancelled ((,class256 (:foreground ,red :background nil))))
+   `(gnus-summary-cancelled ((,class256 (:background nil :foreground ,red))))
    `(gnus-header-name ((,class256 (:foreground ,magenta))))
    `(gnus-header-from ((,class256 (:foreground ,fg :weight normal))))
    `(gnus-header-content ((,class256 (:foreground ,fg :weight normal :slant normal))))
@@ -295,15 +294,15 @@
    `(diff-header ((,class256 (:foreground ,bright-blue :weight bold))))
    `(diff-file-header ((,class256 (:foreground ,white))))
    `(diff-hunk-header ((,class256 (:foreground ,bright-yellow :weight bold))))
-   `(diff-added ((,class256 (:foreground ,diff-added-fg :background ,diff-added-bg))
-                 (,class16 (:foreground ,diff-added-fg :background ,diff-added-bg-tty))))
+   `(diff-added ((,class256 (:background ,diff-added-bg :foreground ,diff-added-fg))
+                 (,class16 (:background ,diff-added-bg-tty :foreground ,diff-added-fg))))
    `(diff-indicator-added ((t (:inherit 'diff-added :foreground ,bright-green))))
-   `(diff-refine-added ((,class256 (:foreground ,diff-added-fg :background ,diff-refine-added-bg))
-                        (,class16 (:foreground ,diff-added-fg :background ,diff-refine-added-bg-tty))))
-   `(diff-removed ((,class256 (:foreground ,diff-removed-fg :background ,diff-removed-bg))
-                   (,class16 (:foreground ,diff-removed-fg :background ,diff-removed-bg-tty))))
-   `(diff-refine-removed ((,class256 (:foreground ,diff-removed-fg :background ,diff-refine-removed-bg))
-                          (,class16 (:foreground ,diff-removed-fg :background ,diff-refine-removed-bg-tty))))
+   `(diff-refine-added ((,class256 (:background ,diff-refine-added-bg :foreground ,diff-added-fg))
+                        (,class16 (:background ,diff-refine-added-bg-tty :foreground ,diff-added-fg))))
+   `(diff-removed ((,class256 (:background ,diff-removed-bg :foreground ,diff-removed-fg))
+                   (,class16 (:background ,diff-removed-bg-tty :foreground ,diff-removed-fg))))
+   `(diff-refine-removed ((,class256 (:background ,diff-refine-removed-bg :foreground ,diff-removed-fg))
+                          (,class16 (:background ,diff-refine-removed-bg-tty :foreground ,diff-removed-fg))))
    `(diff-indicator-removed ((t (:inherit 'diff-removed :foreground ,bright-red))))
 
    ;;; vc
@@ -334,7 +333,7 @@
    `(magit-diff-added-highlight ((t (:inherit 'diff-added))))
    `(magit-diff-removed ((t (:inherit 'diff-removed))))
    `(magit-diff-removed-highlight ((t (:inherit 'diff-removed))))
-   `(magit-diff-lines-heading ((,class256 (:foreground ,white :background ,green))))
+   `(magit-diff-lines-heading ((,class256 (:background ,green :foreground ,white))))
    `(magit-diffstat-added ((,class256 (:foreground ,bright-green))))
    `(magit-diffstat-removed ((,class256 (:foreground ,bright-red))))
 
@@ -343,8 +342,8 @@
                    (,class16 (:background ,diff-added-bg-tty))))
    `(smerge-upper ((,class256 (:background ,diff-removed-bg))
                    (,class16 (:background ,diff-removed-bg-tty))))
-   `(smerge-refined-added ((t (:foreground ,black :background ,green))))
-   `(smerge-refined-removed ((t (:foreground ,black :background ,red))))
+   `(smerge-refined-added ((t (:background ,green :foreground ,black))))
+   `(smerge-refined-removed ((t (:background ,red :foreground ,black))))
    
    ;;; erc
    `(erc-timestamp-face ((,classTC (:foreground ,comment))
@@ -358,9 +357,9 @@
    `(erc-error-face ((,class256 (:foreground ,red))))
    `(erc-dangerous-host-face ((,class256 (:foreground ,red))))
    `(erc-direct-msg-face ((,class256 (:foreground ,yellow))))
-   `(erc-button ((,class256 (:foreground nil :background nil :underline t))))
-   `(erc-prompt-face ((,class256 (:foreground ,bright-magenta :background nil :weight bold))))
-   `(erc-action-face ((,class256 (:foreground ,cyan :background nil :weight bold))))
+   `(erc-button ((,class256 (:background nil :foreground nil :underline t))))
+   `(erc-prompt-face ((,class256 (:background nil :foreground ,bright-magenta :weight bold))))
+   `(erc-action-face ((,class256 (:background nil :foreground ,cyan :weight bold))))
    `(fg:erc-face0 ((,class256 (:foreground ,black))))
    `(fg:erc-face1 ((,class256 (:foreground ,red))))
    `(fg:erc-face2 ((,class256 (:foreground ,green))))
@@ -384,7 +383,7 @@
    `(rcirc-timestamp ((,classTC (:foreground ,comment))
                       (,class256 (:foreground ,darkgrey))))
    `(rcirc-prompt ((,class256 (:foreground ,bright-magenta))))
-   `(rcirc-url ((,class256 (:foreground nil :background nil :underline t))))
+   `(rcirc-url ((,class256 (:background nil :foreground nil :underline t))))
    `(rcirc-my-nick ((,class256 (:foreground ,bright-red :weight bold))))
    `(rcirc-nick-in-message ((,class256 (:foreground ,bright-red :weight bold))))
    `(rcirc-other-nick ((,class256 (:foreground ,bright-yellow))))
@@ -419,7 +418,7 @@
    `(eshell-ls-backup ((,classTC (:foreground ,comment))
                        (,class256 (:foreground ,darkgrey))))
    `(eshell-ls-unreadable ((,class256 (:foreground ,non-text))))
-   `(eshell-ls-missing ((,class256 (:foreground ,white :background ,red))))
+   `(eshell-ls-missing ((,class256 (:background ,red :foreground ,white))))
    `(eshell-ls-product ((,class256 (:foreground ,white))))
    `(eshell-ls-readonly ((,classTC (:foreground ,comment))
                          (,class256 (:foreground ,darkgrey))))
