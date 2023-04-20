@@ -13,13 +13,40 @@ body {
     line-height:1.4em;
     font-family:sans-serif;
 }
-.note {
+
+.note::before, .warning::before, .tip::before, .caution::before, .important::before {
+    content: attr(class);
+    text-transform: uppercase;
+    font-weight: 500;
+    width: fit-content;
+    padding: 0 0.5rem;
+    border-radius: 0.45rem;
+    display: block;
+    color: #fff;
+    position: absolute;
+    transform: translate(-1.5rem,-70%);
+}
+.note::before {
+    background-color: #217ee7;
+}
+.warning::before {
+    background-color: #e18114;
+}
+.tip::before {
+    background-color: #41af46;
+}
+.caution::before {
+    background-color: #a0439c;
+}
+.important::before {
+    background-color: #d32f2f;
+}
+.note, .warning, .tip, .important, .caution {
     background-color: #fafafa;
     border: none;
     border-radius: 0.25em;
     margin: 1.3rem 2%;
     padding: 0.25em 1em;
-    box-shadow: 0 0 0.5em rgba( 0, 0, 0, 0.2 )
 }
 
 @media screen {
