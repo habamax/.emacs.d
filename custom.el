@@ -13,7 +13,7 @@
      ("https://www.youtube.com/feeds/videos.xml?channel_id=UCo4EukJcKyZL6oXoLfsWxfA" youtube game)
      ("https://www.youtube.com/feeds/videos.xml?channel_id=UCrqM0Ym_NbK1fqeQG2VIohg" youtube programming)))
  '(package-selected-packages
-   '(htmlize zig-mode gdscript-mode lorem-ipsum webpaste multiple-cursors elfeed editorconfig erc-hl-nicks markdown-mode magit use-package))
+   '(htmlize zig-mode gdscript-mode lorem-ipsum webpaste elfeed editorconfig erc-hl-nicks markdown-mode magit use-package))
  '(warning-suppress-types '((org) (org))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
