@@ -476,7 +476,7 @@ pre.example, .org-src-container>pre {
     background-color:#888;
     top:0;
     right:0;
-    padding:0 .5em;
+    padding:1mm 2mm;
     border-bottom-left-radius:8px;
     border-top-right-radius:2px;
     border:0;
