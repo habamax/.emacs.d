@@ -458,7 +458,11 @@ pre.example, .org-src-container {
     position:relative
 }
 pre.example {
-    padding: 1em;
+    padding:1em 0.5em;
+}
+pre.src {
+    padding:1em 0.2em;
+    margin:0;
 }
 @media print {
     pre, .org-src-container>pre {
@@ -489,6 +493,9 @@ pre.example, .org-src-container>pre {
 }
 .org-src-container>pre.src-emacs-lisp:before {
     content:"Emacs Lisp"
+}
+.org-src-container>pre.src-elisp:before {
+    content:"Emacs Lisp";
 }
 .org-src-container>pre.src-R:before {
     content:"R"
@@ -610,9 +617,6 @@ pre.example, .org-src-container>pre {
 }
 .org-src-container>pre.src-scala:before {
     content:"Scala"
-}
-.org-src-container>pre.src-elisp:before {
-    content:"Elisp"
 }
 .org-src-container>pre.src-scheme:before {
     content:"Scheme"
