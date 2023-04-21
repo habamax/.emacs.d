@@ -6,7 +6,7 @@ html {
 body {
     color:#000;
     margin: 0 auto;
-    max-width: 60em;
+    max-width: 50em;
     hyphens: auto;
     overflow-wrap: break-word;
     font-size:12pt;
@@ -23,7 +23,7 @@ body {
     border-radius: 0.45rem;
     display: block;
     color: #fff;
-    position: absolute;
+    position: relative;
     transform: translate(-1.5rem,-70%);
 }
 .note::before {
@@ -60,11 +60,11 @@ body {
         padding: 2cm;
     }
     .sidebar {
-        max-width: 40%;
+        max-width: 22em;
         border: 1px solid #e0e0e0;
         border-radius: 0.5em;
         background-color: #fff;
-        margin: 0.5em -33em 0.5em 1em;
+        margin: 0.5em -30em 0.5em 1em;
         padding: 0.5em;
         padding-left: 0.7em;
         clear: right;
@@ -441,7 +441,7 @@ p.verse {
 .org-escape-glyph {
     color:#8700ff
 }
-.org-src-container {
+pre.example, .org-src-container {
     border:1px solid #ccc;
     background-color:#f7f7f3;
     border-radius: 3px;
@@ -450,13 +450,16 @@ p.verse {
     padding:.1em .5em;
     position:relative
 }
+pre.example {
+    padding: 1em;
+}
 @media print {
-    .org-src-container>pre {
+    pre, .org-src-container>pre {
         overflow:auto;
         white-space: pre-wrap;
     }
 }
-.org-src-container>pre {
+pre.example, .org-src-container>pre {
     overflow:auto;
 }
 .org-src-container>pre:before {
