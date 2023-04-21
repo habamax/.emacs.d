@@ -209,7 +209,7 @@
    `(org-agenda-structure ((,class256 (:foreground ,white :weight bold))))
    `(org-agenda-date ((,class256 (:foreground ,fg :weight normal))))
    `(org-agenda-done ((,class256 (:foreground ,bright-green))))
-   `(org-agenda-date-today ((,class256 (:foreground ,bright-cyan :weight bold :slant normal))))
+   `(org-agenda-date-today ((,class256 (:foreground ,bright-magenta :weight bold :slant normal))))
    `(org-scheduled-today ((,class256 (:foreground ,bright-green))))
    `(org-scheduled ((,class256 (:foreground ,yellow))))
    `(org-scheduled-previously ((,class256 (:foreground ,red))))
