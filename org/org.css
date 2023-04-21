@@ -452,7 +452,9 @@ pre.example, .org-src-container {
     border:1px solid #ccc;
     background-color:#f7f7f3;
     border-radius: 3px;
+    line-height:1.3;
     font-family:monospace;
+    font-size: 10pt;
     margin:1em auto;
     padding:.1em .5em;
     position:relative
@@ -480,7 +482,7 @@ pre.example, .org-src-container>pre {
     border-top-right-radius:2px;
     border:0;
     color:#fff;
-    font-size:80%
+    font-size:10pt;
 }
 .org-src-container>pre.src-sh:before {
     content:"sh"
