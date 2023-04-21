@@ -140,6 +140,7 @@
 (use-package habamax
   :load-path "site-lisp"
   :bind (("M-;" . habamax/toggle-comment)
+         ("M-o" . delete-blank-lines)
          ("M-n" . habamax/move-line-down)
          ("M-p" . habamax/move-line-up)
          ("C-w" . habamax/kill-region)
