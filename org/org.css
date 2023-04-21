@@ -202,7 +202,8 @@ textarea {
 }
 .title {
     margin:.8em auto;
-    color:#000
+    color:#000;
+    border-bottom: none;
 }
 .subtitle {
     font-size:1.1em;
@@ -256,6 +257,7 @@ img {
 }
 h1, h2, h3, h4, h5, h6 {
     color:#000000;
+    border-bottom: thin solid #e1e1e1;
     line-height:1em;
     margin-top:1.5em;
     margin-bottom:0.5em;
