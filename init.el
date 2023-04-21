@@ -271,6 +271,8 @@
                   (buffer-string))
                 "</style>\n"))
   :custom-face
+  (org-agenda-structure ((t (:height 1.3))))
+  (org-agenda-date-today ((t (:height 1.2))))
   (org-level-1 ((t (:height 1.4))))
   (org-level-2 ((t (:height 1.3))))
   (org-level-3 ((t (:height 1.2))))
