@@ -172,9 +172,7 @@
               (setq-local c-basic-offset 4)
               (c-toggle-comment-style -1)))
   (add-hook 'python-mode-hook
-            (lambda () (local-set-key [f5] 'habamax-dev/run-python-file)))
-  (add-hook 'rust-mode-hook
-            (lambda () (local-set-key [f5] 'habamax-dev/run-cargo))))
+            (lambda () (local-set-key [f5] 'habamax-dev/run-python-file))))
 
 (use-package dictionary
   :ensure nil
