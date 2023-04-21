@@ -45,9 +45,13 @@ body {
     background-color: #fafafa;
     border: none;
     border-radius: 0.25em;
-    margin: 1.3rem 2%;
+    margin: 2em 2%;
     padding: 0.25em 1em;
 }
+.note > p, .warning > p, .tip > p, .important > p, .caution > p {
+    margin-top:0;
+}
+
 @media screen {
     body {
         background-color:#f0f0f0;
@@ -416,7 +420,8 @@ p.verse {
 }
 .org-comment,
 .org-comment-delimiter {
-    color:#8a8a8a
+    color:#8a8a8a;
+    font-style:italic;
 }
 .org-preprocessor {
     color:#008787
