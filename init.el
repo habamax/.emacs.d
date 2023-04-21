@@ -44,6 +44,7 @@
 (setq-default fill-column 80)
 (setq-default indent-tabs-mode nil)
 (setq-default isearch-lazy-count t)
+(setq search-whitespace-regexp ".*?")
 (setq-default abbrev-mode t)
 (setq-default line-number-mode t)
 (setq describe-bindings-outline t)
