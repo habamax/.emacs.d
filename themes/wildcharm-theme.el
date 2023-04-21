@@ -185,6 +185,7 @@
    `(org-special-keyword ((,class256 (:foreground ,special))))
    `(org-drawer ((,class256 (:foreground ,special))))
    `(org-code ((,class256 (:foreground ,yellow))))
+   `(org-verbatim ((,class256 (:inherit org-code))))
    `(org-tag ((,class256 (:foreground ,bright-blue))))
    `(org-block ((,classTC (:background ,block :foreground ,fg))
                 (,class256 (:background ,block-tty :foreground ,fg))))
