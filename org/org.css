@@ -48,7 +48,6 @@ body {
     margin: 1.3rem 2%;
     padding: 0.25em 1em;
 }
-
 @media screen {
     body {
         background-color:#f0f0f0;
@@ -60,12 +59,31 @@ body {
         border: 1px solid #e0e0e0;
         padding: 2cm;
     }
+    .sidebar {
+        max-width: 40%;
+        border: 1px solid #e0e0e0;
+        border-radius: 0.5em;
+        background-color: #fff;
+        margin: 0.5em -33em 0.5em 1em;
+        padding: 0.5em;
+        padding-left: 0.7em;
+        clear: right;
+        float: right;
+        font-size: small;
+    }
 }
 @media print {
     body {
         background-color: transparent;
         margin: 0 auto;
         padding: 3em 3em 2em 2em;
+    }
+    .sidebar {
+        border: 1px solid #e0e0e0;
+        border-radius: 0.5em;
+        background-color: #fff;
+        padding: 0.5em;
+        font-size: small;
     }
 }
 a {
