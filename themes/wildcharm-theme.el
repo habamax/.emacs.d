@@ -212,6 +212,7 @@
    `(org-agenda-date-today ((,class256 (:foreground ,bright-cyan :weight bold :slant normal))))
    `(org-scheduled-today ((,class256 (:foreground ,bright-green))))
    `(org-scheduled ((,class256 (:foreground ,yellow))))
+   `(org-scheduled-previously ((,class256 (:foreground ,red))))
    `(org-upcoming-deadline ((,class256 (:foreground ,bright-yellow))))
    `(org-imminent-deadline ((,class256 (:foreground ,bright-yellow :weight bold))))
    `(org-time-grid ((,class256 (:foreground ,non-text))))
