@@ -484,6 +484,7 @@ pre.example, .org-src-container>pre {
     border-top-right-radius:2px;
     border:0;
     color:#fff;
+    font-size: 80%;
 }
 .org-src-container>pre.src-sh:before {
     content:"sh"
