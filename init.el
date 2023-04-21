@@ -266,11 +266,13 @@
   (define-skeleton org-ad-warning "Org warning admonition" nil "#+begin_warning\n" _ "\n#+end_warning")
   (define-skeleton org-ad-caution "Org caution admonition" nil "#+begin_caution\n" _ "\n#+end_caution")
   (define-skeleton org-ad-important "Org important admonition" nil "#+begin_important\n" _ "\n#+end_important")
+  (define-skeleton org-src "Org source block" nil "#+begin_src" _ "\n#+end_src")
   (define-abbrev org-mode-abbrev-table "bnot" "" 'org-ad-note :system t)
   (define-abbrev org-mode-abbrev-table "btip" "" 'org-ad-tip :system t)
   (define-abbrev org-mode-abbrev-table "bwar" "" 'org-ad-warn :system t)
   (define-abbrev org-mode-abbrev-table "bcau" "" 'org-ad-caution :system t)
   (define-abbrev org-mode-abbrev-table "bimp" "" 'org-ad-important :system t)
+  (define-abbrev org-mode-abbrev-table "bsrc" "" 'org-src :system t)
   :custom-face
   (org-agenda-structure ((t (:height 1.3))))
   (org-agenda-date-today ((t (:height 1.2))))
