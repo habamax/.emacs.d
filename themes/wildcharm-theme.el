@@ -57,7 +57,7 @@
    `(line-number-current-line ((,class256 (:foreground ,yellow :weight bold))))
    `(line-number-major-tick ((,class256 (:foreground ,darkgrey :weight bold))))
    `(line-number-minor-tick ((,class256 (:foreground ,darkgrey))))
-   ;; -fill-column-indicator
+   ;; fill-column-indicator, default is shadow and it is good enough
    `(escape-glyph ((,class256 (:foreground ,special))))
    `(homoglyph ((,class256 (:inherit 'escape-glyph))))
    `(nobreak-space ((,class256 (:foreground ,special :underline t))))
