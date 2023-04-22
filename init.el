@@ -165,6 +165,10 @@
   (add-hook 'python-mode-hook
             (lambda () (local-set-key [f5] 'habamax-dev/run-python-file))))
 
+(use-package marginalia
+  :init
+  (marginalia-mode))
+
 (use-package dictionary
   :ensure nil
   :commands dictionary-lookup-definition

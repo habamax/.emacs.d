@@ -12,7 +12,7 @@
      ("opennet.ru" "https://www.opennet.ru/opennews/opennews_all_utf.rss" nil nil nil)))
  '(newsticker-url-list-defaults nil)
  '(package-selected-packages
-   '(rainbow-mode htmlize zig-mode gdscript-mode lorem-ipsum webpaste editorconfig erc-hl-nicks markdown-mode magit use-package))
+   '(marginalia rainbow-mode htmlize zig-mode gdscript-mode lorem-ipsum webpaste editorconfig erc-hl-nicks markdown-mode magit use-package))
  '(warning-suppress-types '((org) (org))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
