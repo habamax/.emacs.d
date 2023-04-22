@@ -139,6 +139,8 @@
    `(icomplete-selected-match ((,class256 (:background ,hl-line))))
    `(completions-common-part ((,class256 (:foreground ,bright-blue :weight bold))))
    `(completions-first-difference ((,class256 (:foreground ,bright-magenta))))
+   `(completions-annotations ((,classTC (:foreground ,comment))
+                              (t (:foreground ,darkgrey))))
 
    ;;; ido
    `(ido-first-match ((,class256 (:foreground ,bright-green :weight bold))))
