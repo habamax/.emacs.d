@@ -311,14 +311,18 @@
   (setq erc-kill-queries-on-quit t
         erc-kill-server-buffer-on-quit t)
   (setq erc-prompt-for-password nil
-        erc-prompt-for-nickserv-password nil))
+        erc-prompt-for-nickserv-password nil)
+  (defun habamax/erc-layout ()
+    (interactive)
+    (delete-other-windows)
+    (switch-to-buffer "#emacs")
+    (switch-to-buffer-other-window "#vim")
+    (other-window 1)))
 
 (use-package erc-hl-nicks
   :after erc
   :config
   (erc-hl-nicks-force-nick-face "habamax" (face-attribute 'font-lock-constant-face :foreground)))
-
-(use-package elfeed :commands elfeed)
 
 (use-package webpaste
   :commands (webpaste-paste-buffer webpaste-paste-region))
