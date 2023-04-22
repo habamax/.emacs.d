@@ -10,6 +10,7 @@
      ("Planet Emacs" "https://planet.emacslife.com/atom.xml" nil nil nil)
      ("linux.org.ru" "https://www.linux.org.ru/section-rss.jsp?section=1" nil nil nil)
      ("opennet.ru" "https://www.opennet.ru/opennews/opennews_all_utf.rss" nil nil nil)))
+ '(newsticker-url-list-defaults nil)
  '(package-selected-packages
    '(rainbow-mode htmlize zig-mode gdscript-mode lorem-ipsum webpaste editorconfig erc-hl-nicks markdown-mode magit use-package))
  '(warning-suppress-types '((org) (org))))
