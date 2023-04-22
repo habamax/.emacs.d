@@ -248,6 +248,8 @@
          "* %<%Y-%m-%d %H:%M> %?\n\n%i\n" :empty-lines 1 :prepend t)
         ("J" "Journal with link" entry (file "journal/2023.org")
          "* %<%Y-%m-%d %H:%M> %?\n%i\n%a" :empty-lines 1 :prepend t)
+        ("r" "Random note" entry (file "notes.org")
+         "* %<%Y-%m-%d %H:%M> %?\n\n%i\n" :empty-lines 1 :prepend t)
         ("m" "Meeting notes" entry (file "journal/2023.org")
          "* %<%Y-%m-%d %H:%M> Meeting Notes\n\n*Attendees:*\n\n%?\n\n*Status:*\n\n" :empty-lines 1 :prepend t)))
   (setq org-export-with-sub-superscripts '{}
