@@ -72,11 +72,11 @@
    `(header-line ((,class256 (:background ,header-line :foreground ,fg :extend t  :box (:line-width 1 :color ,black)))))
    `(vertical-border ((,class256 (:background ,mode-line-inactive-2 :foreground ,mode-line-inactive-2))
                       (,class16 (:background ,mode-line-inactive-2 :foreground ,mode-line-inactive-2))))
-   ;; -window-divider '((t :foreground "gray60"))
-   ;; -window-divider-first-pixel
-   ;; -window-divider-last-pixel
-   ;; -internal-border
-   ;; -child-frame-border
+   `(window-divider ((t (:foreground ,mode-line-inactive-1))))
+   `(window-divider-first-pixel ((t (:foreground ,mode-line-active-1))))
+   `(window-divider-last-pixel ((t (:foreground ,mode-line-active-1))))
+   ;; internal-border, not sure what exactly it affects...
+   ;; child-frame-border, not sure neither...
    `(minibuffer-prompt ((,class256 (:foreground ,bright-yellow :weight bold))))
    `(fringe ((t (:background ,fringe))))
    ;; -scroll-bar
