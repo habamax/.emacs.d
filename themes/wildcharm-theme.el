@@ -55,8 +55,8 @@
    `(trailing-whitespace ((,class256 (:foreground ,red :weight bold))))
    `(line-number ((,class256 (:foreground ,non-text))))
    `(line-number-current-line ((,class256 (:foreground ,yellow :weight bold))))
-   ;; -line-number-major-tick
-   ;; -line-number-minor-tick
+   `(line-number-major-tick ((,class256 (:foreground ,darkgrey :weight bold))))
+   `(line-number-minor-tick ((,class256 (:foreground ,darkgrey))))
    ;; -fill-column-indicator
    `(escape-glyph ((,class256 (:foreground ,special))))
    `(homoglyph ((,class256 (:inherit 'escape-glyph))))
