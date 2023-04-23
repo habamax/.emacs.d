@@ -79,7 +79,7 @@
    ;; internal-border, not sure what exactly it affects...
    ;; child-frame-border, not sure neither...
    `(minibuffer-prompt ((,class256 (:foreground ,bright-yellow :weight bold))))
-   `(fringe ((t (:background ,bg))))
+   `(fringe ((t (:foreground ,non-text :background ,bg))))
    ;; -scroll-bar
    `(cursor ((t (:background "#ffffff"))))
    ;; -tool-bar
