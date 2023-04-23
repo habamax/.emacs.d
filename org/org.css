@@ -78,8 +78,22 @@ body {
 @media print {
     body {
         background-color: transparent;
+        color: black;
         margin: 0 auto;
         padding: 3em 3em 2em 2em;
+    }
+    p {
+        orphans: 3;
+        widows: 3;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        orphans: 3;
+        widows: 3;
+        page-break-after: avoid;
+    }
+    .note, .warning, .tip, .important, .caution {
+        orphans: 3;
+        widows: 3;
     }
     .sidebar {
         border: 1px solid #e0e0e0;
@@ -87,6 +101,16 @@ body {
         background-color: #fff;
         padding: 0.5em;
         font-size: small;
+    }
+
+    pre, .org-src-container>pre {
+        overflow:auto;
+        white-space: pre-wrap;
+    }
+    .org-src-container>pre:before {
+        page-break-after: avoid;
+        orphans: 3;
+        widows: 3;
     }
 }
 a {
@@ -463,12 +487,6 @@ pre.example {
 pre.src {
     padding:1em 0.2em;
     margin:0;
-}
-@media print {
-    pre, .org-src-container>pre {
-        overflow:auto;
-        white-space: pre-wrap;
-    }
 }
 pre.example, .org-src-container>pre {
     overflow:auto;
