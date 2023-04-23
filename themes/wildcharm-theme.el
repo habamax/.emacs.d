@@ -273,6 +273,8 @@
    `(gnus-cite-9 ((,class256 (:foreground ,magenta))))
    `(gnus-cite-10 ((,class256 (:foreground ,cyan))))
    `(gnus-cite-11 ((,class256 (:foreground ,darkgrey))))
+   `(mm-uu-extract ((,classTC (:background ,block :foreground ,yellow))
+                    (,class256 (:background ,block-tty :foreground ,yellow))))
 
    ;;; shr
    `(shr-h1 ((,class256 (:foreground ,white :weight bold :height 1.6))))
