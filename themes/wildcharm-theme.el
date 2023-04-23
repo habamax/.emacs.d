@@ -29,7 +29,7 @@
       (mode-line-active-1 "#404348")(mode-line-inactive-1 "#303338")
       (mode-line-active-2 "#444444")(mode-line-inactive-2 "#303030")
       (menu "#262626")
-      (fringe "#12161a")(header-line "#32363a")
+      (header-line "#32363a")
       (special "#875fff")(hl-line "#3a3d42")
       (block "#121214")(block-border "#181a1c")
       (block-tty "#121212")
@@ -70,15 +70,16 @@
    `(mode-line-emphasis ((,class256 (:weight bold))))
    `(mode-line-buffer-id ((,class256 (:weight bold))))
    `(header-line ((,class256 (:background ,header-line :foreground ,fg :extend t  :box (:line-width 1 :color ,black)))))
-   `(vertical-border ((,class256 (:background ,mode-line-inactive-2 :foreground ,mode-line-inactive-2))
-                      (,class16 (:background ,mode-line-inactive-2 :foreground ,mode-line-inactive-2))))
+   `(vertical-border ((,classTTY (:background ,mode-line-inactive-2 :foreground ,mode-line-inactive-2))
+                      (,class256 (:background ,non-text :foreground ,non-text))
+))
    `(window-divider ((t (:foreground ,mode-line-inactive-1))))
    `(window-divider-first-pixel ((t (:foreground ,mode-line-active-1))))
    `(window-divider-last-pixel ((t (:foreground ,mode-line-active-1))))
    ;; internal-border, not sure what exactly it affects...
    ;; child-frame-border, not sure neither...
    `(minibuffer-prompt ((,class256 (:foreground ,bright-yellow :weight bold))))
-   `(fringe ((t (:background ,fringe))))
+   `(fringe ((t (:background ,bg))))
    ;; -scroll-bar
    `(cursor ((t (:background "#ffffff"))))
    ;; -tool-bar
