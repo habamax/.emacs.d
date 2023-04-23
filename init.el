@@ -296,11 +296,7 @@
   (setq markdown-fontify-code-blocks-natively t)
   (setq markdown-unordered-list-item-prefix "  - ")
   (setq markdown-asymmetric-header t)
-  (setq markdown-command "pandoc -s -M fontsize=18pt -M maxwidth=60em --highlight-style tango")
-  :custom-face
-  (markdown-header-face-1 ((t (:height 1.4))))
-  (markdown-header-face-2 ((t (:height 1.2))))
-  (markdown-header-face-3 ((t (:height 1.1)))))
+  (setq markdown-command "pandoc -s -M fontsize=18pt -M maxwidth=60em --highlight-style tango"))
 
 (use-package erc
   :ensure nil
