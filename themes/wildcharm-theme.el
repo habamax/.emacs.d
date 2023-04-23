@@ -180,6 +180,9 @@
                         (,class256 (:foreground ,darkgrey))))
    `(message-separator ((,class256 (:background ,header-line :foreground ,fg :extend t))))
 
+   ;;; bookmark
+   `(bookmark-face ((,class256 (:background nil :foreground ,yellow))))
+   
    ;;; org
    `(org-document-title ((,class256 (:foreground ,white :weight bold))))
    `(org-document-info ((,class256 (:foreground ,fg))))
