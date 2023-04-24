@@ -6,7 +6,6 @@ html {
 body {
     color:#000;
     margin: 0 auto;
-    max-width: 25cm;
     hyphens: auto;
     overflow-wrap: break-word;
     font-size:12pt;
@@ -50,31 +49,41 @@ body {
 .note > p, .warning > p, .tip > p, .important > p, .caution > p {
     margin-top:0;
 }
-
-@media screen {
+@media screen{
     body {
         background-color:#f0f0f0;
-        margin: 0 auto;
         padding-top: 1.5cm;
+        max-width: 25cm;
     }
     .content {
         background-color:#fff;
         border: 1px solid #e0e0e0;
         padding: 1cm 2cm 1cm 2cm;
+        margin: 0 auto;
     }
     .sidebar {
-        max-width: 22em;
+        max-width: 9cm;
+        margin: 0.5em -11.7cm 0.5em 1em;
         border: 1px solid #e0e0e0;
         border-radius: 0.5em;
         background-color: #fff;
-        margin: 0.5em -30em 0.5em 1em;
         padding: 0.5em;
-        padding-left: 0.7em;
         clear: right;
         float: right;
         font-size: small;
     }
 }
+
+@media only screen and (max-width: 43cm) {
+    .content {
+        max-width: 20cm;
+    }
+    .sidebar {
+        max-width: 7cm;
+        margin: 0.5em -9.7cm 0.5em 1em;
+    }
+}
+
 @media print {
     body {
         background-color: transparent;
