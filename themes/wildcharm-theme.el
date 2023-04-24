@@ -9,7 +9,7 @@
 
 ;;; Code:
 
-(deftheme wildcharm "Vibrant and playful.")
+(deftheme wildcharm "Simple mid-contrast dark theme.")
 
 (let ((classTC '((class color) (min-colors 257)))
       (class256 '((class color) (min-colors 256)))
