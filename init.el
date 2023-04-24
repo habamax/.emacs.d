@@ -46,6 +46,7 @@
 (setq disabled-command-function nil)
 (setq suggest-key-bindings t)
 (setq-default fill-column 80)
+(setq-default display-fill-column-indicator-character ?╎)
 (setq-default indent-tabs-mode nil)
 (setq-default isearch-lazy-count t)
 (setq search-whitespace-regexp ".*?")
@@ -159,9 +160,7 @@
          ("b" . habamax/next-buffer-like-this)
          ("B" . habamax/previous-buffer-like-this))
   :custom-face
-  (font-lock-comment-face ((t (:slant italic))))
-  :config
-  (setq display-fill-column-indicator-character ?╎))
+  (font-lock-comment-face ((t (:slant italic)))))
 
 (use-package habamax-dev
   :load-path "site-lisp"
