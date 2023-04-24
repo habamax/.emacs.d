@@ -8,7 +8,6 @@ body {
     line-height:1.4em;
     font-family:sans-serif;
 }
-
 .note::before, .warning::before, .tip::before, .caution::before, .important::before {
     content: attr(class);
     text-transform: uppercase;
