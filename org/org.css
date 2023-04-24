@@ -1,12 +1,12 @@
 /*--><![CDATA[/*><!--*/
 body {
-    color:#000;
+    color: #000;
     margin: 0 auto;
     hyphens: auto;
     overflow-wrap: break-word;
-    font-size:12pt;
-    line-height:1.4em;
-    font-family:sans-serif;
+    font-size: 12pt;
+    line-height: 1.4em;
+    font-family: sans-serif;
 }
 .note::before, .warning::before, .tip::before, .caution::before, .important::before {
     content: attr(class);
@@ -42,16 +42,16 @@ body {
     padding: 0.25em 1em;
 }
 .note > p, .warning > p, .tip > p, .important > p, .caution > p {
-    margin-top:0;
+    margin-top: 0;
 }
 @media screen{
     body {
-        background-color:#f0f0f0;
+        background-color: #f0f0f0;
         padding-top: 1.5cm;
         max-width: 25cm;
     }
     .content {
-        background-color:#fff;
+        background-color: #fff;
         border: 1px solid #e0e0e0;
         padding: 1cm 2cm 1cm 2cm;
         margin: 0 auto;
@@ -108,7 +108,7 @@ body {
     }
 
     pre, .org-src-container>pre {
-        overflow:auto;
+        overflow: auto;
         white-space: pre-wrap;
     }
     .org-src-container>pre:before {
@@ -118,625 +118,514 @@ body {
     }
 }
 a {
-    color:#527d9a;
-    text-decoration:none;
-    background-color:inherit;
-    font:inherit;
+    color: #527d9a;
+    text-decoration: none;
+    background-color: inherit;
+    font: inherit;
 }
 a:hover {
-    color:#035;
-    text-decoration:underline
+    color: #035;
+    text-decoration: underline
 }
 p {
-    margin:1em auto;
-    padding:0
+    margin: 1em auto;
+    padding: 0
 }
 dl, ol, ul {
-    margin:0 auto
+    margin: 0 auto
 }
 article, aside, details, figcaption, figure, footer,
 header, main, menu, nav, section, summary {
-    display:block
+    display: block
 }
 audio, canvas, progress, video {
-    display:inline-block
+    display: inline-block
 }
 audio:not([controls]) {
-    display:none;
-    height:0
+    display: none;
+    height: 0
 }
 progress {
-    vertical-align:baseline
+    vertical-align: baseline
 }
 abbr[title] {
-    border-bottom:none;
-    text-decoration:underline;
-    -webkit-text-decoration:underline dotted;
-    text-decoration:underline dotted
+    border-bottom: none;
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted
 }
 dfn {
-    font-style:italic
+    font-style: italic
 }
 mark {
-    background-color:#ff0;
-    color:#000
+    background-color: #ff0;
+    color: #000
 }
 small {
-    font-size:80%
+    font-size: 80%
 }
 sub, sup {
-    font-size:75%;
-    line-height:0;
-    position:relative;
-    vertical-align:baseline
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
 }
 sub {
-    bottom:-.25em
+    bottom: -.25em
 }
 sup {
-    top:-.5em
+    top: -.5em
 }
 img {
-    border-style:none
+    border-style: none
 }
 svg:not(:root) {
-    overflow:hidden
+    overflow: hidden
 }
 code, kbd, pre, samp {
-    font-family:monospace;
-    font-size:1em
+    font-family: monospace;
+    font-size: 1em
 }
 figure {
-    margin:1em 40px
+    margin: 1em 40px
 }
 hr {
-    box-sizing:content-box;
-    height:0;
-    overflow:visible
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
 }
 button, input, optgroup, select, textarea {
-    font:inherit;
-    margin:0
+    font: inherit;
+    margin: 0
 }
 optgroup {
-    font-weight:700
+    font-weight: 700
 }
 button, input {
-    overflow:visible
+    overflow: visible
 }
 button, select {
-    text-transform:none
+    text-transform: none
 }
 fieldset {
-    border:1px solid silver;
-    margin:0 2px;
-    padding:.35em .625em .75em
+    border: 1px solid silver;
+    margin: 0 2px;
+    padding: .35em .625em .75em
 }
 legend {
-    box-sizing:border-box;
-    color:inherit;
-    display:table;
-    max-width:100%;
-    padding:0;
-    white-space:normal
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal
 }
 textarea {
-    overflow:auto
+    overflow: auto
 }
 [type=checkbox], [type=radio] {
-    box-sizing:border-box;
-    padding:0
+    box-sizing: border-box;
+    padding: 0
 }
 .title {
-    margin:.8em auto;
-    color:#000;
+    margin: .8em auto;
+    color: #000;
     border-bottom: none;
 }
 .subtitle {
-    font-size:1.1em;
-    line-height:1.4;
-    font-weight:700;
-    margin:-1em auto 1em auto
+    font-size: 1.1em;
+    line-height: 1.4;
+    font-weight: 700;
+    margin: -1em auto 1em auto
 }
 .subtitle, .title {
-    text-align:center
+    text-align: center
 }
 .abstract {
-    margin:auto;
-    width:80%;
-    font-style:italic
+    margin: auto;
+    width: 80%;
+    font-style: italic
 }
 .abstract p:last-of-type:before {
-    content:"    ";
-    white-space:pre
+    content: "    ";
+    white-space: pre
 }
 .status {
-    font-size:90%;
-    margin:2em auto
+    font-size: 90%;
+    margin: 2em auto
 }
 [class^=section-number-] {
-    margin-right:.5em
+    margin-right: .5em
 }
 [id^=orgheadline] {
-    clear:both
+    clear: both
 }
 #footnotes {
-    font-size:90%
+    font-size: 90%
 }
 .footpara {
-    display:inline;
-    margin:.2em auto
+    display: inline;
+    margin: .2em auto
 }
 .footdef {
-    margin-bottom:1em
+    margin-bottom: 1em
 }
 .footdef sup {
-    padding-right:.5em
+    padding-right: .5em
 }
 figure {
-    padding:0;
-    margin:1em auto;
-    text-align:center
+    padding: 0;
+    margin: 1em auto;
+    text-align: center
 }
 img {
-    max-width:100%;
-    vertical-align:middle
+    max-width: 100%;
+    vertical-align: middle
 }
 h1, h2, h3, h4, h5, h6 {
-    color:#000000;
+    color: #000000;
     border-bottom: thin solid #e1e1e1;
-    line-height:1em;
-    margin-top:1.5em;
-    margin-bottom:0.5em;
+    line-height: 1em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
     padding: 0;
-    font-weight:bold;
-    font-family:serif
+    font-weight: bold;
+    font-family: serif
 }
 h1, h2, h3 {
-    line-height:1.4em
+    line-height: 1.4em
 }
 h4, h5, h6 {
-    font-size:1em;
+    font-size: 1em;
 }
 dt {
-    font-weight:700
+    font-weight: 700
 }
 table {
-    margin:1em auto;
-    border-top:2px solid;
-    border-collapse:collapse
+    margin: 1em auto;
+    border-top: 2px solid;
+    border-collapse: collapse
 }
 table, thead {
-    border-bottom:2px solid
+    border-bottom: 2px solid
 }
 table td+td, table th+th {
-    border-left:1px solid grey
+    border-left: 1px solid grey
 }
 table tr {
-    border-top:1px solid #d3d3d3
+    border-top: 1px solid #d3d3d3
 }
 td, th {
-    padding:.3em .6em;
-    vertical-align:middle
+    padding: .3em .6em;
+    vertical-align: middle
 }
 caption.t-above {
-    caption-side:top
+    caption-side: top
 }
 caption.t-bottom {
-    caption-side:bottom
+    caption-side: bottom
 }
 caption {
-    margin-bottom:.3em
+    margin-bottom: .3em
 }
 figcaption {
-    margin-top:.3em
+    margin-top: .3em
 }
 th.org-center, th.org-left, th.org-right {
-    text-align:center
+    text-align: center
 }
 td.org-right {
-    text-align:right
+    text-align: right
 }
 td.org-left {
-    text-align:left
+    text-align: left
 }
 td.org-center {
-    text-align:center
+    text-align: center
 }
 blockquote {
-    margin:1em 2em;
-    padding-left:1em;
-    border-left:3px solid #ccc
+    margin: 1em 2em;
+    padding-left: 1em;
+    border-left: 3px solid #ccc
 }
 kbd {
-    background-color:#f7f7f7;
-    font-size:80%;
-    margin:0 .1em;
-    padding:.1em .6em
+    background-color: #f7f7f7;
+    font-size: 80%;
+    margin: 0 .1em;
+    padding: .1em .6em
 }
 .done, .todo {
-    color:#fff;
-    padding:0 .3em;
-    border-radius:3px;
-    background-clip:padding-box;
-    font-family:monospace;
+    color: #fff;
+    padding: 0 .3em;
+    border-radius: 3px;
+    background-clip: padding-box;
+    font-family: monospace;
 }
 .todo {
-    background-color:red
+    background-color: red
 }
 .done {
-    background-color:green
+    background-color: green
 }
 .priority {
-    color:orange;
-    font-family:monospace
+    color: orange;
+    font-family: monospace
 }
 #table-of-contents li {
-    clear:both
+    clear: both
 }
 .tag {
-    font-family:monospace;
-    font-size:.7em;
-    font-weight:400
+    font-family: monospace;
+    font-size: .7em;
+    font-weight: 400
 }
 .tag span {
-    padding:.3em;
-    float:right;
-    margin-right:.5em;
-    border:1px solid #bbb;
-    border-radius:3px;
-    background-clip:padding-box;
-    color:#333;
-    background-color:#eee;
-    line-height:1
+    padding: .3em;
+    float: right;
+    margin-right: .5em;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    background-clip: padding-box;
+    color: #333;
+    background-color: #eee;
+    line-height: 1
 }
 .timestamp {
-    color:#bebebe;
-    font-size:90%
+    color: #bebebe;
+    font-size: 90%
 }
 .timestamp-kwd {
-    color:#5f9ea0
+    color: #5f9ea0
 }
 .org-right {
-    margin-left:auto;
-    margin-right:0;
-    text-align:right
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right
 }
 .org-left {
-    margin-left:0;
-    margin-right:auto;
-    text-align:left
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left
 }
 .org-center {
-    margin-left:auto;
-    margin-right:auto;
-    text-align:center
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center
 }
 .underline {
-    text-decoration:underline
+    text-decoration: underline
 }
 #postamble p,
 #preamble p {
-    font-size:90%;
-    margin:.2em
+    font-size: 90%;
+    margin: .2em
 }
 p.verse {
-    margin-left:3%
+    margin-left: 3%
 }
 :not(pre)>code {
-    padding:2px 5px;
-    margin:auto 1px;
-    border:1px solid #ddd;
-    background-color:#f7f7f3;
-    border-radius:3px;
-    background-clip:padding-box;
-    color:#000;
-    font-size:80%
+    padding: 2px 5px;
+    margin: auto 1px;
+    border: 1px solid #ddd;
+    background-color: #f7f7f3;
+    border-radius: 3px;
+    background-clip: padding-box;
+    color: #000;
+    font-size: 80%
 }
 
 /* highglighting */
 .org-function-name {
-    color:#af00af
+    color: #af00af
 }
 .org-keyword {
-    color:#005faf
+    color: #005faf
 }
 .org-builtin {
-    color:#870087
+    color: #870087
 }
 .org-string, .org-doc {
-    color:#008700
+    color: #008700
 }
 .org-comment,
 .org-comment-delimiter {
-    color:#8a8a8a;
-    font-style:italic;
+    color: #8a8a8a;
+    font-style: italic;
 }
 .org-preprocessor {
-    color:#008787
+    color: #008787
 }
 .org-type {
-    color:#af5f00
+    color: #af5f00
 }
 .org-variable-name {
-    color:#870087
+    color: #870087
 }
 .org-constant {
-    color:#af0000
+    color: #af0000
 }
 .org-warning {
-    color:#ff8c00;
-    font-weight:700
+    color: #ff8c00;
+    font-weight: 700
 }
 .org-error {
-    color:red;
-    font-weight:700
+    color: red;
+    font-weight: 700
 }
 .org-escape-glyph {
-    color:#8700ff
+    color: #8700ff
 }
 pre.example, .org-src-container {
-    border:1px solid #ccc;
-    background-color:#f7f7f3;
+    border: 1px solid #ccc;
+    background-color: #f7f7f3;
     border-radius: 3px;
-    line-height:1.3;
-    font-family:monospace;
-    margin:1em auto;
-    padding:.1em .5em;
-    position:relative
+    line-height: 1.3;
+    font-family: monospace;
+    margin: 1em auto;
+    padding: .1em .5em;
+    position: relative
 }
 pre.example {
-    padding:1em 0.5em;
+    padding: 1em 0.5em;
 }
 pre.src {
-    padding:1em 0.2em;
-    margin:0;
+    padding: 1em 0.2em;
+    margin: 0;
 }
 pre.example, .org-src-container>pre {
-    overflow:auto;
+    overflow: auto;
 }
 .org-src-container>pre:before {
-    display:block;
-    position:absolute;
-    background-color:#888;
-    top:0;
-    right:0;
-    padding:1mm 2mm;
-    border-bottom-left-radius:8px;
-    border-top-right-radius:2px;
-    border:0;
-    color:#fff;
+    display: block;
+    position: absolute;
+    background-color: #888;
+    top: 0;
+    right: 0;
+    padding: 1mm 2mm;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 2px;
+    border: 0;
+    color: #fff;
     font-size: 80%;
 }
 .org-src-container>pre.src-sh:before {
-    content:"sh"
+    content: "sh"
 }
 .org-src-container>pre.src-bash:before {
-    content:"bash"
+    content: "bash"
 }
 .org-src-container>pre.src-emacs-lisp:before {
-    content:"Emacs Lisp"
+    content: "Emacs Lisp"
 }
 .org-src-container>pre.src-elisp:before {
-    content:"Emacs Lisp";
+    content: "Emacs Lisp";
 }
 .org-src-container>pre.src-R:before {
-    content:"R"
+    content: "R"
 }
 .org-src-container>pre.src-cpp:before {
-    content:"C++"
+    content: "C++"
 }
 .org-src-container>pre.src-c:before {
-    content:"C"
+    content: "C"
 }
 .org-src-container>pre.src-html:before {
-    content:"HTML"
+    content: "HTML"
 }
 .org-src-container>pre.src-javascript:before,
 .org-src-container>pre.src-js:before {
-    content:"Javascript"
-}
-.org-src-container>pre.src-asymptote:before {
-    content:"Asymptote"
+    content: "Javascript"
 }
 .org-src-container>pre.src-awk:before {
-    content:"Awk"
+    content: "Awk"
 }
 .org-src-container>pre.src-C:before {
-    content:"C"
-}
-.org-src-container>pre.src-calc:before {
-    content:"Calc"
+    content: "C"
 }
 .org-src-container>pre.src-clojure:before {
-    content:"Clojure"
-}
-.org-src-container>pre.src-comint:before {
-    content:"comint"
+    content: "Clojure"
 }
 .org-src-container>pre.src-css:before {
-    content:"CSS"
-}
-.org-src-container>pre.src-D:before {
-    content:"D"
-}
-.org-src-container>pre.src-ditaa:before {
-    content:"Ditaa"
-}
-.org-src-container>pre.src-dot:before {
-    content:"Dot"
-}
-.org-src-container>pre.src-ebnf:before {
-    content:"ebnf"
-}
-.org-src-container>pre.src-forth:before {
-    content:"Forth"
-}
-.org-src-container>pre.src-F90:before {
-    content:"Fortran"
-}
-.org-src-container>pre.src-gnuplot:before {
-    content:"Gnuplot"
+    content: "CSS"
 }
 .org-src-container>pre.src-haskell:before {
-    content:"Haskell"
-}
-.org-src-container>pre.src-io:before {
-    content:"Io"
+    content: "Haskell"
 }
 .org-src-container>pre.src-java:before {
-    content:"Java"
+    content: "Java"
 }
 .org-src-container>pre.src-latex:before {
-    content:"LaTeX"
+    content: "LaTeX"
 }
 .org-src-container>pre.src-ledger:before {
-    content:"Ledger"
+    content: "Ledger"
 }
 .org-src-container>pre.src-ly:before {
-    content:"Lilypond"
+    content: "Lilypond"
 }
 .org-src-container>pre.src-lisp:before {
-    content:"Lisp"
+    content: "Lisp"
 }
 .org-src-container>pre.src-makefile:before {
-    content:"Make"
-}
-.org-src-container>pre.src-matlab:before {
-    content:"Matlab"
-}
-.org-src-container>pre.src-max:before {
-    content:"Maxima"
-}
-.org-src-container>pre.src-mscgen:before {
-    content:"Mscgen"
-}
-.org-src-container>pre.src-Caml:before {
-    content:"Objective"
-}
-.org-src-container>pre.src-octave:before {
-    content:"Octave"
-}
-.org-src-container>pre.src-org:before {
-    content:"Org"
+    content: "Make"
 }
 .org-src-container>pre.src-perl:before {
-    content:"Perl"
-}
-.org-src-container>pre.src-picolisp:before {
-    content:"Picolisp"
-}
-.org-src-container>pre.src-plantuml:before {
-    content:"PlantUML"
+    content: "Perl"
 }
 .org-src-container>pre.src-python:before {
-    content:"Python"
+    content: "Python"
 }
 .org-src-container>pre.src-ruby:before {
-    content:"Ruby"
-}
-.org-src-container>pre.src-sass:before {
-    content:"Sass"
-}
-.org-src-container>pre.src-scala:before {
-    content:"Scala"
+    content: "Ruby"
 }
 .org-src-container>pre.src-scheme:before {
-    content:"Scheme"
-}
-.org-src-container>pre.src-screen:before {
-    content:"Screen"
-}
-.org-src-container>pre.src-sed:before {
-    content:"Sed"
+    content: "Scheme"
 }
 .org-src-container>pre.src-shell:before {
-    content:"shell"
-}
-.org-src-container>pre.src-shen:before {
-    content:"Shen"
+    content: "shell"
 }
 .org-src-container>pre.src-sql:before {
-    content:"SQL"
-}
-.org-src-container>pre.src-sqlite:before {
-    content:"SQLite"
-}
-.org-src-container>pre.src-stan:before {
-    content:"Stan"
-}
-.org-src-container>pre.src-vala:before {
-    content:"Vala"
-}
-.org-src-container>pre.src-axiom:before {
-    content:"Axiom"
+    content: "SQL"
 }
 .org-src-container>pre.src-browser:before {
-    content:"HTML"
-}
-.org-src-container>pre.src-cypher:before {
-    content:"Neo4j"
+    content: "HTML"
 }
 .org-src-container>pre.src-elixir:before {
-    content:"Elixir"
-}
-.org-src-container>pre.src-request:before {
-    content:"http"
-}
-.org-src-container>pre.src-ipython:before {
-    content:"iPython"
+    content: "Elixir"
 }
 .org-src-container>pre.src-kotlin:before {
-    content:"Kotlin"
-}
-.org-src-container>pre.src-Flavored Erlang lfe:before {
-    content:"Lisp"
-}
-.org-src-container>pre.src-mongo:before {
-    content:"MongoDB"
-}
-.org-src-container>pre.src-prolog:before {
-    content:"Prolog"
-}
-.org-src-container>pre.src-rec:before {
-    content:"rec"
-}
-.org-src-container>pre.src-ML sml:before {
-    content:"Standard"
-}
-.org-src-container>pre.src-Translate translate:before {
-    content:"Google"
+    content: "Kotlin"
 }
 .org-src-container>pre.src-typescript:before {
-    content:"Typescript"
+    content: "Typescript"
 }
 .org-src-container>pre.src-rust:before {
-    content:"Rust"
+    content: "Rust"
 }
 .inlinetask {
-    background:#ffc;
-    border:2px solid grey;
-    margin:10px;
-    padding:10px
+    background: #ffc;
+    border: 2px solid grey;
+    margin: 10px;
+    padding: 10px
 }
 #org-div-home-and-up {
-    font-size:70%;
-    text-align:right;
-    white-space:nowrap
+    font-size: 70%;
+    text-align: right;
+    white-space: nowrap
 }
 .linenr {
-    font-size:90%
+    font-size: 90%
 }
 .code-highlighted {
-    background-color:#ff0
+    background-color: #ff0
 }
 #bibliography {
-    font-size:90%
+    font-size: 90%
 }
 #bibliography table {
-    width:100%
+    width: 100%
 }
 .creator {
-    display:block
+    display: block
 }
 /*]]>*/
