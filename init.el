@@ -314,7 +314,7 @@
         erc-kill-server-buffer-on-quit t)
   (setq erc-prompt-for-password nil
         erc-prompt-for-nickserv-password nil)
-  (defun habamax/erc-layout ()
+  (defun erc/emacs-vim ()
     (interactive)
     (delete-other-windows)
     (switch-to-buffer "#emacs")
