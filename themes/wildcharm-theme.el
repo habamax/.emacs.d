@@ -94,10 +94,10 @@
    `(tty-menu-enabled-face ((t (:background ,menu :foreground ,grey))))
    `(tty-menu-disabled-face ((t (:background ,menu :foreground ,darkgrey))))
    `(tty-menu-selected-face ((t (:background ,mode-line-active-2 :foreground ,grey :weight bold))))
-   
+
    `(show-paren-match ((,class256 :foreground ,match-paren :weight bold)))
    `(show-paren-mismatch ((,class256 :background ,match-paren :foreground ,white :weight bold)))
-   
+
    ;;; font-lock
    `(font-lock-string-face ((,class256 (:foreground ,bright-green))))
    `(font-lock-comment-face ((,classTC (:foreground ,comment))
@@ -124,7 +124,7 @@
 
    ;;; widget
    `(widget-field ((,class256 (:background ,header-line :foreground ,fg :extend t))))
-   
+
    ;;; dired
    `(dired-header ((,class256 (:foreground ,white :weight bold))))
    `(dired-directory ((,class256 (:inherit font-lock-keyword-face :weight bold))))
@@ -168,7 +168,7 @@
    `(log-view-message ((,classTC (:foreground ,comment))
                        (,class256 (:foreground ,darkgrey))))
    `(log-view-commit-body ((,class256 (:foreground ,fg))))
-   
+
    ;;; message
    `(message-header-name ((,class256 (:foreground ,magenta))))
    `(message-header-subject ((,class256 (:foreground ,white :weight bold))))
@@ -180,7 +180,7 @@
 
    ;;; bookmark
    `(bookmark-face ((,class256 (:background nil :foreground ,yellow))))
-   
+
    ;;; org
    `(org-meta-line ((,classTC (:foreground ,comment))
                     (t (:foreground ,darkgrey))))
@@ -220,7 +220,7 @@
    `(org-imminent-deadline ((,class256 (:foreground ,bright-yellow :weight bold))))
    `(org-time-grid ((,class256 (:foreground ,non-text))))
    `(org-agenda-current-time ((,class256 (:foreground ,cyan))))
-   
+
    ;;; gnus
    `(gnus-button ((,class256 (:underline t))))
    `(gnus-group-mail-1 ((,class256 (:foreground ,bright-green :weight bold))))
@@ -324,7 +324,7 @@
    `(vc-missing-state ((,class256 (:foreground ,magenta))))
    `(vc-needs-update-state ((,class256 (:foreground ,green))))
    `(vc-removed-state ((,class256 (:foreground ,bright-red))))
-   
+
    ;;; git-commit
    `(git-commit-summary ((,class256 (:foreground ,white :weight bold))))
    `(git-commit-nonempty-second-line ((,class256 (:foreground ,bright-red :weight bold))))
@@ -355,7 +355,7 @@
                    (,class16 (:background ,diff-removed-bg-tty))))
    `(smerge-refined-added ((t (:background ,green :foreground ,black))))
    `(smerge-refined-removed ((t (:background ,red :foreground ,black))))
-   
+
    ;;; erc
    `(erc-timestamp-face ((,classTC (:foreground ,comment))
                          (,class256 (:foreground ,darkgrey))))
@@ -404,7 +404,7 @@
    `(calendar-weekday-header ((,class256 (:foreground ,bright-yellow))))
    `(calendar-weekend-header ((,class256 (:foreground ,bright-blue))))
    `(calendar-today ((,class256 (:foreground ,bright-green))))
-   
+
    ;;; elfeed
    `(elfeed-log-date-face ((,class256 (:foreground ,yellow))))
    `(elfeed-log-error-level-face ((,class256 (:foreground ,red))))
