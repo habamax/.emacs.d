@@ -300,10 +300,11 @@
   (define-abbrev org-mode-abbrev-table "bimp" "" 'org-ad-important :system t)
   (define-abbrev org-mode-abbrev-table "bsrc" "" 'org-src :system t)
   :custom-face
-  (org-agenda-structure ((t (:height 1.2))))
+  (org-agenda-structure ((t (:height 1.3))))
   (org-agenda-date-today ((t (:height 1.1))))
-  (org-level-1 ((t (:height 1.2))))
-  (org-level-2 ((t (:height 1.1)))))
+  (org-level-1 ((t (:height 1.3))))
+  (org-level-2 ((t (:height 1.2))))
+  (org-level-3 ((t (:height 1.1)))))
 
 (use-package markdown-mode
   :mode "\\.txt$"
