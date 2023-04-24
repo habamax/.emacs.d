@@ -147,12 +147,16 @@
          ("C-c t SPC" . whitespace-mode)
          ("C-c t s" . flyspell-mode)
          ("C-c t l" . hl-line-mode)
+         ("C-c t f" . display-fill-column-indicator-mode)
          :repeat-map habamax-duplicate-line-repeat-map
          ("d" . habamax/duplicate-line)
          :repeat-map habamax-buffers-like-this-map
          ("b" . habamax/next-buffer-like-this)
          ("B" . habamax/previous-buffer-like-this))
-    :custom-face (font-lock-comment-face ((t (:slant italic)))))
+  :custom-face
+  (font-lock-comment-face ((t (:slant italic))))
+  :config
+  (setq display-fill-column-indicator-character ?╎))
 
 (use-package habamax-dev
   :load-path "site-lisp"
