@@ -11,10 +11,14 @@
 
 ;;; disable gc for init
 (setq gc-cons-threshold 64000000)
-(add-hook 'after-init-hook (lambda () (setq gc-cons-threshold (default-value 'gc-cons-threshold))))
+(add-hook
+ 'after-init-hook
+ (lambda () (setq gc-cons-threshold (default-value 'gc-cons-threshold))))
 
 ;;; emacsclient to focus new frame
-(add-hook 'server-after-make-frame-hook (lambda () (select-frame-set-input-focus (selected-frame))))
+(add-hook
+ 'server-after-make-frame-hook
+ (lambda () (select-frame-set-input-focus (selected-frame))))
 
 (setq user-full-name "Maxim Kim"
       user-mail-address "habamax@gmail.com")
@@ -97,7 +101,8 @@
 
 (require 'use-package)
 
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") 'append)
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/") 'append)
 
 (use-package windows
   :ensure nil
@@ -242,7 +247,8 @@
   (setq org-agenda-files '("todo.org" "notes.org"))
   (setq org-refile-use-outline-path 'file
         org-refile-targets '((org-agenda-files :maxlevel . 1)))
-  (setq org-todo-keywords '((sequence "TODO" "DELEGATED" "WAITING" "|" "CANCELLED" "DONE")))
+  (setq org-todo-keywords '((sequence "TODO" "DELEGATED" "WAITING"
+                                      "|" "CANCELLED" "DONE")))
   (setq org-todo-keyword-faces
         '(("CANCELLED" . font-lock-type-face)
           ("WAITING" . font-lock-function-name-face)
@@ -259,7 +265,8 @@
         ("r" "Random note" entry (file "notes.org")
          "* %<%Y-%m-%d %H:%M> %?\n\n%i\n" :empty-lines 1 :prepend t)
         ("m" "Meeting notes" entry (file "journal/2023.org")
-         "* %<%Y-%m-%d %H:%M> Meeting Notes\n\n*Attendees:*\n\n%?\n\n*Status:*\n\n" :empty-lines 1 :prepend t)))
+         "* %<%Y-%m-%d %H:%M> Meeting Notes\n\n*Attendees:*\n\n%?\n\n*Status:*\n\n"
+         :empty-lines 1 :prepend t)))
   (setq org-export-with-sub-superscripts '{}
         org-export-headline-levels 5
         org-export-with-email t)
@@ -275,12 +282,18 @@
                   (insert-file-contents (concat user-emacs-directory "org/org.css"))
                   (buffer-string))
                 "</style>\n"))
-  (define-skeleton org-ad-note "Org note admonition" nil "#+begin_note\n" _ "\n#+end_note")
-  (define-skeleton org-ad-tip "Org tip admonition" nil "#+begin_tip\n" _ "\n#+end_tip")
-  (define-skeleton org-ad-warning "Org warning admonition" nil "#+begin_warning\n" _ "\n#+end_warning")
-  (define-skeleton org-ad-caution "Org caution admonition" nil "#+begin_caution\n" _ "\n#+end_caution")
-  (define-skeleton org-ad-important "Org important admonition" nil "#+begin_important\n" _ "\n#+end_important")
-  (define-skeleton org-src "Org source block" nil "#+begin_src" _ "\n#+end_src")
+  (define-skeleton org-ad-note "Org note admonition" nil
+    "#+begin_note\n" _ "\n#+end_note")
+  (define-skeleton org-ad-tip "Org tip admonition" nil
+    "#+begin_tip\n" _ "\n#+end_tip")
+  (define-skeleton org-ad-warning "Org warning admonition" nil
+    "#+begin_warning\n" _ "\n#+end_warning")
+  (define-skeleton org-ad-caution "Org caution admonition" nil
+    "#+begin_caution\n" _ "\n#+end_caution")
+  (define-skeleton org-ad-important "Org important admonition" nil
+    "#+begin_important\n" _ "\n#+end_important")
+  (define-skeleton org-src "Org source block" nil
+    "#+begin_src" _ "\n#+end_src")
   (define-abbrev org-mode-abbrev-table "bnot" "" 'org-ad-note :system t)
   (define-abbrev org-mode-abbrev-table "btip" "" 'org-ad-tip :system t)
   (define-abbrev org-mode-abbrev-table "bwar" "" 'org-ad-warn :system t)
@@ -304,7 +317,8 @@
   (setq markdown-fontify-code-blocks-natively t)
   (setq markdown-unordered-list-item-prefix "  - ")
   (setq markdown-asymmetric-header t)
-  (setq markdown-command "pandoc -s -M fontsize=18pt -M maxwidth=60em --highlight-style tango"))
+  (setq markdown-command
+        "pandoc -s -M fontsize=18pt -M maxwidth=60em --highlight-style tango"))
 
 (use-package erc
   :ensure nil
@@ -315,7 +329,8 @@
         erc-track-minor-mode t
         erc-hide-list '("JOIN" "PART" "QUIT")
         erc-join-buffer 'bury
-        erc-autojoin-channels-alist '(("Libera.Chat" "#emacs" "#vim" "#python" "#zig"))
+        erc-autojoin-channels-alist '(("Libera.Chat"
+                                       "#emacs" "#vim" "#python" "#zig"))
         erc-server-reconnect-attempts 5
         erc-server-reconnect-timeout 3)
   (setq erc-kill-queries-on-quit t
@@ -332,7 +347,8 @@
 (use-package erc-hl-nicks
   :after erc
   :config
-  (erc-hl-nicks-force-nick-face "habamax" (face-attribute 'font-lock-constant-face :foreground)))
+  (erc-hl-nicks-force-nick-face
+   "habamax" (face-attribute 'font-lock-constant-face :foreground)))
 
 (use-package webpaste
   :commands (webpaste-paste-buffer webpaste-paste-region))
