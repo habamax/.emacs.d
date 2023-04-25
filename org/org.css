@@ -11,9 +11,10 @@ body {
 .note::before, .warning::before, .tip::before, .caution::before, .important::before {
     content: attr(class);
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: normal;
     width: fit-content;
-    padding: 0 0.5rem;
+    padding: 0 0.7em;
+    line-height: 1.4em;
     border-radius: 0.45rem;
     display: block;
     color: #fff;
