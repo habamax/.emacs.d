@@ -63,7 +63,7 @@ body {
         border: 1px solid #e0e0e0;
         border-radius: 0.5em;
         background-color: #fff;
-        padding: 0.5em;
+        padding: 0 0.5em 0 1em;
         clear: right;
         float: right;
         font-size: small;
@@ -102,7 +102,7 @@ body {
         border: 1px solid #e0e0e0;
         border-radius: 0.5em;
         background-color: #fff;
-        padding: 0.5em;
+        padding: 0 0.5em 0 1em;
         font-size: small;
     }
 
