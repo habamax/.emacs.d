@@ -158,9 +158,7 @@
          ("d" . habamax/duplicate-line)
          :repeat-map habamax-buffers-like-this-map
          ("b" . habamax/next-buffer-like-this)
-         ("B" . habamax/previous-buffer-like-this))
-  :custom-face
-  (font-lock-comment-face ((t (:slant italic)))))
+         ("B" . habamax/previous-buffer-like-this)))
 
 (use-package habamax-dev
   :load-path "site-lisp"
