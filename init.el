@@ -255,13 +255,11 @@
          "* TODO %?\n%U" :empty-lines 1 :prepend t)
         ("T" "Todo with link" entry (file "todo.org")
          "* TODO %?\n%U\n\n%i\n%a" :empty-lines 1 :prepend t)
-        ("j" "Journal" entry (file "journal/2023.org")
+        ("n" "Note" entry (file "notes.org")
          "* %<%Y-%m-%d %H:%M> %?\n\n%i\n" :empty-lines 1 :prepend t)
-        ("J" "Journal with link" entry (file "journal/2023.org")
+        ("N" "Note with link" entry (file "notes.org")
          "* %<%Y-%m-%d %H:%M> %?\n%i\n%a" :empty-lines 1 :prepend t)
-        ("r" "Random note" entry (file "notes.org")
-         "* %<%Y-%m-%d %H:%M> %?\n\n%i\n" :empty-lines 1 :prepend t)
-        ("m" "Meeting notes" entry (file "journal/2023.org")
+        ("m" "Meeting notes" entry (file "notes.org")
          "* %<%Y-%m-%d %H:%M> Meeting Notes\n\n*Attendees:*\n\n%?\n\n*Status:*\n\n"
          :empty-lines 1 :prepend t)))
   (setq org-export-with-sub-superscripts '{}
