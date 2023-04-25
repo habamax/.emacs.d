@@ -49,7 +49,6 @@
 (setq-default display-fill-column-indicator-character ?╎)
 (setq-default indent-tabs-mode nil)
 (setq-default isearch-lazy-count t)
-(setq search-whitespace-regexp ".*?")
 (setq-default abbrev-mode t)
 (setq-default line-number-mode t)
 (setq describe-bindings-outline t)
