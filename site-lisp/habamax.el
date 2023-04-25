@@ -173,17 +173,9 @@ See `sort-regexp-fields'."
   (if (eq (car custom-enabled-themes) 'wildcharm)
       (progn
         (disable-theme 'wildcharm)
-        (when (display-graphic-p)
-          (set-background-color "#f7f7f3")
-          (set-foreground-color "#000000")
-          (set-face-background 'fringe "#f7f7f3")))
-          (set-face-foreground 'font-lock-comment-face "#808080")
-          (set-face-foreground 'font-lock-keyword-face "#870087")
-          (set-face-foreground 'font-lock-string-face "#af0000")
-          (set-face-foreground 'font-lock-function-name-face "#005faf")
-          (set-face-foreground 'font-lock-type-face "#008700")
-          (set-face-attribute 'region nil :background "#005faf" :foreground "#ffffff")
-    (load-theme 'wildcharm t)))
+        (set-face-attribute 'region nil :background "#005faf" :foreground "#ffffff")
+        (set-face-attribute 'fringe nil :background "#ffffff" :foreground "#909090"))
+      (load-theme 'wildcharm t)))
 
 
 (provide 'habamax)
