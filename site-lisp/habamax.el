@@ -173,8 +173,7 @@ See `sort-regexp-fields'."
   (if (eq (car custom-enabled-themes) 'wildcharm)
       (progn
         (disable-theme 'wildcharm)
-        (set-face-attribute 'region nil :background "#005faf" :foreground "#ffffff")
-        (set-face-attribute 'fringe nil :background "#ffffff" :foreground "#909090"))
+        (set-face-attribute 'region nil :background "#005faf" :foreground "#ffffff"))
       (load-theme 'wildcharm t)))
 
 
