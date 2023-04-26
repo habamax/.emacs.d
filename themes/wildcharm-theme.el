@@ -53,7 +53,7 @@
    `(link-visited
      ((,class256 (:foreground ,darkgrey :underline t))))
    `(highlight
-     ((,class256 (:background ,bright-blue :foreground ,black))))
+     ((,class256 (:inherit default :background ,bright-blue :foreground ,black))))
    `(region
      ((,class256 (:background ,blue :foreground ,bg))))
    `(secondary-selection
