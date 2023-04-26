@@ -301,7 +301,8 @@
    `(org-verbatim
      ((,class256 (:inherit org-code))))
    `(org-tag
-     ((,class256 (:foreground ,bright-blue))))
+     ((,classTC (:foreground ,comment :weight normal))
+      (,class256 (:foreground ,darkgrey :weight normal))))
    `(org-block
      ((t (:foreground ,fg))))
    `(org-level-1
@@ -330,7 +331,8 @@
    `(org-headline-done
      ((,class256 (:foreground ,nil))))
    `(org-checkbox
-     ((,class256 (:foreground ,darkgrey :weight normal))))
+     ((,classTC (:foreground ,comment :weight normal))
+      (,class256 (:foreground ,darkgrey :weight normal))))
    `(org-dispatcher-highlight
      ((,class256 (:foreground ,bright-red :weight bold))))
    `(org-agenda-structure
