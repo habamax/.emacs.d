@@ -256,9 +256,9 @@
         ("T" "Todo with link" entry (file "todo.org")
          "* TODO %?\n%U\n\n%i\n%a" :empty-lines 1 :prepend t)
         ("n" "Note" entry (file "notes.org")
-         "* %?\n%U\n%i\n" :empty-lines 1 :prepend t)
+         "* %?\n%T\n%i\n" :empty-lines 1 :prepend t)
         ("N" "Note with link" entry (file "notes.org")
-         "* %?\n%U\n%i\n%a" :empty-lines 1 :prepend t)
+         "* %?\n%T\n%i\n%a" :empty-lines 1 :prepend t)
         ("m" "Meeting notes" entry (file "notes.org")
          "* Meeting Notes\n%U\n\n*Attendees:*\n\n%?\n\n*Status:*\n\n"
          :empty-lines 1 :prepend t)))
