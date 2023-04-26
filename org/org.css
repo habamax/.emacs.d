@@ -296,7 +296,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     font-family: serif;
 }
-h2, h3, h4 {
+h2 {
     border-bottom: thin solid #e1e1e1;
 }
 h1 {font-size: 1.6em}
