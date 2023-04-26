@@ -342,11 +342,11 @@
    `(org-date-selected
      ((,class256 (:background ,bright-magenta :foreground ,bg))))
    `(org-agenda-date
-     ((,class256 (:foreground ,fg :weight normal))))
+     ((,class256 (:foreground ,blue :weight normal))))
+   `(org-agenda-date-today
+     ((,class256 (:foreground ,bright-blue))))
    `(org-agenda-done
      ((,class256 (:foreground ,bright-green))))
-   `(org-agenda-date-today
-     ((,class256 (:foreground ,bright-cyan))))
    `(org-scheduled-today
      ((,class256 (:foreground ,bright-green))))
    `(org-scheduled
@@ -358,9 +358,10 @@
    `(org-imminent-deadline
      ((,class256 (:foreground ,bright-red :weight bold))))
    `(org-time-grid
-     ((,class256 (:foreground ,non-text))))
+     ((,classTC (:foreground ,comment :weight normal))
+      (,class256 (:foreground ,darkgrey :weight normal))))
    `(org-agenda-current-time
-     ((,class256 (:foreground ,cyan))))
+     ((,class256 (:foreground ,bright-blue))))
 
    ;;; gnus
    `(gnus-button
