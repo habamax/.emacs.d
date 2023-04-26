@@ -256,11 +256,11 @@
         ("T" "Todo with link" entry (file "todo.org")
          "* TODO %?\n%U\n\n%i\n%a" :empty-lines 1 :prepend t)
         ("n" "Note" entry (file "notes.org")
-         "* %<%Y-%m-%d %H:%M> %?\n\n%i\n" :empty-lines 1 :prepend t)
+         "* %?\n%U\n%i\n" :empty-lines 1 :prepend t)
         ("N" "Note with link" entry (file "notes.org")
-         "* %<%Y-%m-%d %H:%M> %?\n%i\n%a" :empty-lines 1 :prepend t)
+         "* %?\n%U\n%i\n%a" :empty-lines 1 :prepend t)
         ("m" "Meeting notes" entry (file "notes.org")
-         "* %<%Y-%m-%d %H:%M> Meeting Notes\n\n*Attendees:*\n\n%?\n\n*Status:*\n\n"
+         "* Meeting Notes\n%U\n\n*Attendees:*\n\n%?\n\n*Status:*\n\n"
          :empty-lines 1 :prepend t)))
   (setq org-export-with-sub-superscripts '{}
         org-export-headline-levels 5
