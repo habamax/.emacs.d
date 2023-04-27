@@ -243,8 +243,11 @@
 
 (use-package org
   :ensure nil
-  :bind (("C-c oc" . org-capture)
-         ("C-c oa" . org-agenda)
+  :bind (("C-c o c" . org-capture)
+         ("C-c o a" . org-agenda)
+         ("C-c o a" . org-agenda)
+         ("C-c o n" . org/notes)
+         ("C-c o t" . org/todo)
          :repeat-map habamax-org-map
          ("t" . org-todo))
   :mode (("\\.org$" . org-mode))
@@ -303,7 +306,13 @@
   (define-abbrev org-mode-abbrev-table "bwar" "" 'org-ad-warn :system t)
   (define-abbrev org-mode-abbrev-table "bcau" "" 'org-ad-caution :system t)
   (define-abbrev org-mode-abbrev-table "bimp" "" 'org-ad-important :system t)
-  (define-abbrev org-mode-abbrev-table "bsrc" "" 'org-src :system t))
+  (define-abbrev org-mode-abbrev-table "bsrc" "" 'org-src :system t)
+  (defun org/notes ()
+    (interactive)
+    (find-file (concat org-directory "/notes.org")))
+  (defun org/todo ()
+    (interactive)
+    (find-file (concat org-directory "/todo.org"))))
 
 (use-package markdown-mode
   :mode "\\.txt$"
