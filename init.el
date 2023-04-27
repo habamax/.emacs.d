@@ -29,9 +29,13 @@
 
 (if +IS-WINDOWS+
     (cond ((find-font (font-spec :name "JetBrains Mono NL"))
-           (add-to-list 'default-frame-alist '(font . "JetBrains Mono NL-14")))
+           (add-to-list 'default-frame-alist '(font . "JetBrains Mono NL-14"))
+           (set-face-attribute 'fixed-pitch nil :font "JetBrains Mono NL-14")
+           (set-face-attribute 'fixed-pitch-serif nil :font "JetBrains Mono NL-14"))
           ((find-font (font-spec :name "Consolas"))
-           (add-to-list 'default-frame-alist '(font . "Consolas-14"))))
+           (add-to-list 'default-frame-alist '(font . "Consolas-14"))
+           (set-face-attribute 'fixed-pitch nil :font "Consolas-14")
+           (set-face-attribute 'fixed-pitch-serif nil :font "Consolas-14")))
   (add-to-list 'default-frame-alist '(font . "Monospace-16")))
 
 (when +IS-WINDOWS+
