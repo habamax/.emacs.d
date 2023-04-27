@@ -152,6 +152,7 @@
          ("M-s g" . habamax/grep-current-word)
          ("M-s t" . habamax/grep-todo)
          ("C-c m" . imenu)
+         ("C-c o i" . habamax/init-file)
          ("C-c t n" . display-line-numbers-mode)
          ("C-c t SPC" . whitespace-mode)
          ("C-c t s" . flyspell-mode)
@@ -162,7 +163,11 @@
          ("d" . habamax/duplicate-line)
          :repeat-map habamax-buffers-like-this-map
          ("b" . habamax/next-buffer-like-this)
-         ("B" . habamax/previous-buffer-like-this)))
+         ("B" . habamax/previous-buffer-like-this))
+  :config
+  (defun habamax/init-file ()
+    (interactive)
+    (find-file user-init-file)))
 
 (use-package habamax-dev
   :load-path "site-lisp"
