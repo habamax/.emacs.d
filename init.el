@@ -273,7 +273,7 @@
         ("N" "Note with link" entry (file "notes.org")
          "* %?\n%T\n%i\n%a" :empty-lines 1 :prepend t)
         ("m" "Meeting notes" entry (file "notes.org")
-         "* Meeting Notes\n%U\n\n*Attendees:*\n\n%?\n\n*Status:*\n\n"
+         "* Meeting Notes\n%T\n\n*Attendees:*\n\n%?\n\n*Status:*\n\n"
          :empty-lines 1 :prepend t)))
   (setq org-export-with-sub-superscripts '{}
         org-export-headline-levels 5
