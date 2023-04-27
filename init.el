@@ -28,14 +28,15 @@
   (load custom-file))
 
 (if +IS-WINDOWS+
-    (cond ((find-font (font-spec :name "JetBrains Mono NL"))
-           (add-to-list 'default-frame-alist '(font . "JetBrains Mono NL-14"))
-           (set-face-attribute 'fixed-pitch nil :font "JetBrains Mono NL-14")
-           (set-face-attribute 'fixed-pitch-serif nil :font "JetBrains Mono NL-14"))
-          ((find-font (font-spec :name "Consolas"))
-           (add-to-list 'default-frame-alist '(font . "Consolas-14"))
-           (set-face-attribute 'fixed-pitch nil :font "Consolas-14")
-           (set-face-attribute 'fixed-pitch-serif nil :font "Consolas-14")))
+    (let ((fonts '(("JetBrains Mono NL" . "JetBrains Mono NL-14")
+                   ("Cascadia Mono SemiLight" . "Cascadia Mono SemiLight-14")
+                   ("Consolas" . "Consolas-14"))))
+      (cl-dolist (fnt fonts)
+        (when (find-font (font-spec :name (car fnt)))
+          (add-to-list 'default-frame-alist `(font . ,(cdr fnt)))
+          (set-face-attribute 'fixed-pitch nil :font (cdr fnt))
+          (set-face-attribute 'fixed-pitch-serif nil :font (cdr fnt))
+          (cl-return))))
   (add-to-list 'default-frame-alist '(font . "Monospace-16")))
 
 (when +IS-WINDOWS+
