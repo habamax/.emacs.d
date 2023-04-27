@@ -253,8 +253,7 @@
          ("t" . org-todo))
   :mode (("\\.org$" . org-mode))
   :config
-  (let ((docs (getenv "DOCS")))
-    (setq org-directory (if docs docs "~/docs")))
+  (setq org-directory (or (getenv "DOCS") "~/docs"))
   (setq org-agenda-files '("todo.org" "notes.org"))
   (setq org-refile-use-outline-path 'file
         org-refile-targets '((org-agenda-files :maxlevel . 1)))
