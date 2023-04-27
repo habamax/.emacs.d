@@ -28,9 +28,9 @@
   (load custom-file))
 
 (if +IS-WINDOWS+
-    (let ((fonts '(("JetBrains Mono NL" . "JetBrains Mono NL-14")
-                   ("Cascadia Mono SemiLight" . "Cascadia Mono SemiLight-14")
-                   ("Consolas" . "Consolas-14"))))
+    (let ((fonts '(("JetBrains Mono NL" . "JetBrains Mono NL-12")
+                   ("Cascadia Mono SemiLight" . "Cascadia Mono SemiLight-12")
+                   ("Consolas" . "Consolas-12"))))
       (cl-dolist (fnt fonts)
         (when (find-font (font-spec :name (car fnt)))
           (add-to-list 'default-frame-alist `(font . ,(cdr fnt)))
