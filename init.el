@@ -56,6 +56,7 @@
 (setq-default isearch-lazy-count t)
 (setq-default abbrev-mode t)
 (setq-default line-number-mode t)
+(setq describe-bindings-outline t)
 
 ;;; Simple HTML renderer to use default font.
 (setq shr-use-fonts nil)
