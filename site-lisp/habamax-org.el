@@ -49,9 +49,7 @@
              "{$image = [System.Windows.Forms.Clipboard]::GetImage();"
              "[System.Drawing.Bitmap]$image.Save('"
              filename
-             "',[System.Drawing.Imaging.ImageFormat]::Png);"
-             "Write-Output 'clipboard content saved as file'}"
-             "else {Write-Output 'clipboard does not contain image data'}\"")
+             "',[System.Drawing.Imaging.ImageFormat]::Png);}\"")
        (concat "wl-paste > " filename)))
     (insert (concat "[[file:" filename "]]"))))
 
