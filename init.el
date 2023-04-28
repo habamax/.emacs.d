@@ -186,6 +186,57 @@
   (add-hook 'python-mode-hook
             (lambda () (local-set-key [f5] 'habamax-dev/run-python-file))))
 
+(use-package org
+  :ensure nil
+  :bind (("C-c o c" . org-capture)
+         ("C-c o a" . org-agenda)
+         ("C-c o n" . org/notes)
+         ("C-c o t" . org/todo)
+         ("C-c o s" . org/insert-screenshot)
+         :repeat-map habamax-org-map
+         ("t" . org-todo))
+  :mode (("\\.org$" . org-mode))
+  :config
+  (require 'habamax-org)
+  (setq org-directory (or (getenv "DOCS") "~/docs"))
+  (setq org-agenda-files '("todo.org" "notes.org"))
+  (setq org-refile-use-outline-path 'file
+        org-refile-targets '((org-agenda-files :maxlevel . 1)))
+  (setq org-todo-keywords '((sequence "TODO" "DELEGATED" "WAITING"
+                                      "|" "CANCELLED" "DONE")))
+  (setq org-todo-keyword-faces
+        '(("CANCELLED" . font-lock-type-face)
+          ("WAITING" . font-lock-function-name-face)
+          ("DELEGATED" . font-lock-preprocessor-face)))
+  (setq org-capture-templates
+      '(("t" "Todo" entry (file "todo.org")
+         "* TODO %?\n%U" :empty-lines 1 :prepend t)
+        ("T" "Todo with link" entry (file "todo.org")
+         "* TODO %?\n%U\n\n%i\n%a" :empty-lines 1 :prepend t)
+        ("n" "Note" entry (file "notes.org")
+         "* %?\n%T\n%i\n" :empty-lines 1 :prepend t)
+        ("N" "Note with link" entry (file "notes.org")
+         "* %?\n%T\n%i\n%a" :empty-lines 1 :prepend t)
+        ("m" "Meeting notes" entry (file "notes.org")
+         "* Meeting Notes\n%T\n\n*Attendees:*\n\n%?\n\n*Status:*\n\n"
+         :empty-lines 1 :prepend t)))
+  (setq org-export-with-sub-superscripts '{}
+        org-export-headline-levels 5
+        org-export-with-email t)
+  (setq org-html-doctype "html5"
+        org-html-html5-fancy t
+        org-html-checkbox-type 'html
+        org-html-validation-link nil)
+  (setq org-html-head-include-default-style nil
+        org-html-htmlize-output-type 'css)
+  (setq org-html-style
+        (concat "<style type=\"text/css\">\n"
+                (with-temp-buffer
+                  (insert-file-contents (concat user-emacs-directory "org/org.css"))
+                  (buffer-string))
+                "</style>\n")))
+
+
 (use-package marginalia
   :init
   (marginalia-mode))
@@ -242,79 +293,6 @@
 (use-package magit
   :commands (magit-status)
   :bind ("C-x g" . magit-file-dispatch))
-
-(use-package org
-  :ensure nil
-  :bind (("C-c o c" . org-capture)
-         ("C-c o a" . org-agenda)
-         ("C-c o a" . org-agenda)
-         ("C-c o n" . org/notes)
-         ("C-c o t" . org/todo)
-         :repeat-map habamax-org-map
-         ("t" . org-todo))
-  :mode (("\\.org$" . org-mode))
-  :config
-  (setq org-directory (or (getenv "DOCS") "~/docs"))
-  (setq org-agenda-files '("todo.org" "notes.org"))
-  (setq org-refile-use-outline-path 'file
-        org-refile-targets '((org-agenda-files :maxlevel . 1)))
-  (setq org-todo-keywords '((sequence "TODO" "DELEGATED" "WAITING"
-                                      "|" "CANCELLED" "DONE")))
-  (setq org-todo-keyword-faces
-        '(("CANCELLED" . font-lock-type-face)
-          ("WAITING" . font-lock-function-name-face)
-          ("DELEGATED" . font-lock-preprocessor-face)))
-  (setq org-capture-templates
-      '(("t" "Todo" entry (file "todo.org")
-         "* TODO %?\n%U" :empty-lines 1 :prepend t)
-        ("T" "Todo with link" entry (file "todo.org")
-         "* TODO %?\n%U\n\n%i\n%a" :empty-lines 1 :prepend t)
-        ("n" "Note" entry (file "notes.org")
-         "* %?\n%T\n%i\n" :empty-lines 1 :prepend t)
-        ("N" "Note with link" entry (file "notes.org")
-         "* %?\n%T\n%i\n%a" :empty-lines 1 :prepend t)
-        ("m" "Meeting notes" entry (file "notes.org")
-         "* Meeting Notes\n%T\n\n*Attendees:*\n\n%?\n\n*Status:*\n\n"
-         :empty-lines 1 :prepend t)))
-  (setq org-export-with-sub-superscripts '{}
-        org-export-headline-levels 5
-        org-export-with-email t)
-  (setq org-html-doctype "html5"
-        org-html-html5-fancy t
-        org-html-checkbox-type 'html
-        org-html-validation-link nil)
-  (setq org-html-head-include-default-style nil
-        org-html-htmlize-output-type 'css)
-  (setq org-html-style 
-        (concat "<style type=\"text/css\">\n"
-                (with-temp-buffer
-                  (insert-file-contents (concat user-emacs-directory "org/org.css"))
-                  (buffer-string))
-                "</style>\n"))
-  (define-skeleton org-ad-note "Org note admonition" nil
-    "#+begin_note\n" _ "\n#+end_note")
-  (define-skeleton org-ad-tip "Org tip admonition" nil
-    "#+begin_tip\n" _ "\n#+end_tip")
-  (define-skeleton org-ad-warning "Org warning admonition" nil
-    "#+begin_warning\n" _ "\n#+end_warning")
-  (define-skeleton org-ad-caution "Org caution admonition" nil
-    "#+begin_caution\n" _ "\n#+end_caution")
-  (define-skeleton org-ad-important "Org important admonition" nil
-    "#+begin_important\n" _ "\n#+end_important")
-  (define-skeleton org-src "Org source block" nil
-    "#+begin_src" _ "\n#+end_src")
-  (define-abbrev org-mode-abbrev-table "bnot" "" 'org-ad-note :system t)
-  (define-abbrev org-mode-abbrev-table "btip" "" 'org-ad-tip :system t)
-  (define-abbrev org-mode-abbrev-table "bwar" "" 'org-ad-warn :system t)
-  (define-abbrev org-mode-abbrev-table "bcau" "" 'org-ad-caution :system t)
-  (define-abbrev org-mode-abbrev-table "bimp" "" 'org-ad-important :system t)
-  (define-abbrev org-mode-abbrev-table "bsrc" "" 'org-src :system t)
-  (defun org/notes ()
-    (interactive)
-    (find-file (concat org-directory "/notes.org")))
-  (defun org/todo ()
-    (interactive)
-    (find-file (concat org-directory "/todo.org"))))
 
 (use-package markdown-mode
   :mode "\\.txt$"
