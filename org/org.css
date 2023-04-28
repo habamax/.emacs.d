@@ -124,10 +124,10 @@ a:visited {
     color: #100070;
 }
 [role=doc-toc] a {
-    text-decoration: none;    
+    text-decoration: none;
 }
 [role=doc-toc] a:hover {
-    text-decoration: underline;    
+    text-decoration: underline;
 }
 [role=doc-toc] ul {
     list-style-type: none;
