@@ -57,6 +57,7 @@
 (setq-default abbrev-mode t)
 (setq-default line-number-mode t)
 (setq describe-bindings-outline t)
+(setq set-mark-command-repeat-pop t)
 
 ;;; Simple HTML renderer to use default font.
 (setq shr-use-fonts nil)
