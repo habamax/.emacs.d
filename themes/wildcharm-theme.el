@@ -297,7 +297,7 @@
    `(org-drawer
      ((,class256 (:foreground ,special))))
    `(org-code
-     ((,class256 (:foreground ,yellow))))
+     ((,class256 (:foreground ,cyan))))
    `(org-verbatim
      ((,class256 (:inherit org-code))))
    `(org-tag
