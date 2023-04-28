@@ -262,61 +262,6 @@
                                       (space-mark 32 [183][46])
                                       (space-mark 160 [164][95]))))
 
-
-(use-package notmuch
-  :ensure nil
-  :if (executable-find "notmuch")
-  :commands (notmuch)
-  :config
-  (setq notmuch-show-logo nil
-        notmuch-column-control 1.0
-        notmuch-hello-auto-refresh t
-        notmuch-hello-recent-searches-max 20
-        notmuch-hello-thousands-separator ""
-        notmuch-hello-sections '(notmuch-hello-insert-saved-searches)
-        notmuch-show-all-tags-list t)
-  (setq notmuch-search-oldest-first nil
-        ;; notmuch-search-result-format
-        ;; '(("date" . "%12s  ")
-        ;;   ("count" . "%-7s  ")
-        ;;   ("authors" . "%-20s  ")
-        ;;   ("subject" . "%-80s  ")
-        ;;   ("tags" . "(%s)"))
-        ;; notmuch-tree-result-format
-        ;; '(("date" . "%12s  ")
-        ;;   ("authors" . "%-20s  ")
-        ;;   ((("tree" . "%s")
-        ;;     ("subject" . "%s"))
-        ;;    . " %-80s  ")
-        ;;   ("tags" . "(%s)"))
-        notmuch-show-empty-saved-searches t
-        notmuch-saved-searches
-        `(( :name "📥 inbox"
-            :query "tag:inbox"
-            :sort-order newest-first
-            :key ,(kbd "i"))
-          ( :name "💬 unread (inbox)"
-            :query "tag:unread and tag:inbox"
-            :sort-order newest-first
-            :key ,(kbd "u"))
-          ;; ;; Emacs
-          ;; ( :name "🔨 emacs-devel"
-          ;;   :query "(from:emacs-devel@gnu.org or to:emacs-devel@gnu.org) not tag:archived"
-          ;;   :sort-order newest-first
-          ;;   :key ,(kbd "e d"))
-          ;; ( :name "🦄 emacs-orgmode"
-          ;;   :query "(from:emacs-orgmode@gnu.org or to:emacs-orgmode@gnu.org) not tag:archived"
-          ;;   :sort-order newest-first
-          ;;   :key ,(kbd "e o"))
-          ))
-  (setq notmuch-archive-tags nil
-        notmuch-message-replied-tags '("+replied")
-        notmuch-message-forwarded-tags '("+forwarded")
-        notmuch-show-mark-read-tags '("-unread")
-        notmuch-draft-tags '("+draft")
-        notmuch-draft-folder "drafts"
-        notmuch-draft-save-plaintext 'ask))
-
 (use-package magit
   :commands (magit-status)
   :bind ("C-x g" . magit-file-dispatch))
@@ -373,6 +318,62 @@
   :commands (lorem-ipsum-insert-sentences lorem-ipsum-insert-paragraphs))
 
 (use-package gdscript-mode)
+
 (use-package zig-mode)
+
+(use-package notmuch
+  :ensure nil
+  :if (executable-find "notmuch")
+  :commands (notmuch)
+  :config
+  (setq notmuch-show-logo nil
+        notmuch-column-control 1.0
+        notmuch-hello-auto-refresh t
+        notmuch-hello-recent-searches-max 20
+        notmuch-hello-thousands-separator ""
+        notmuch-hello-sections '(notmuch-hello-insert-saved-searches)
+        notmuch-show-all-tags-list t)
+  (setq notmuch-search-oldest-first nil
+        ;; notmuch-search-result-format
+        ;; '(("date" . "%12s  ")
+        ;;   ("count" . "%-7s  ")
+        ;;   ("authors" . "%-20s  ")
+        ;;   ("subject" . "%-80s  ")
+        ;;   ("tags" . "(%s)"))
+        ;; notmuch-tree-result-format
+        ;; '(("date" . "%12s  ")
+        ;;   ("authors" . "%-20s  ")
+        ;;   ((("tree" . "%s")
+        ;;     ("subject" . "%s"))
+        ;;    . " %-80s  ")
+        ;;   ("tags" . "(%s)"))
+        notmuch-show-empty-saved-searches t
+        notmuch-saved-searches
+        `(( :name "📥 inbox"
+            :query "tag:inbox"
+            :sort-order newest-first
+            :key ,(kbd "i"))
+          ( :name "💬 unread (inbox)"
+            :query "tag:unread and tag:inbox"
+            :sort-order newest-first
+            :key ,(kbd "u"))
+          ;; ;; Emacs
+          ;; ( :name "🔨 emacs-devel"
+          ;;   :query "(from:emacs-devel@gnu.org or to:emacs-devel@gnu.org) not tag:archived"
+          ;;   :sort-order newest-first
+          ;;   :key ,(kbd "e d"))
+          ;; ( :name "🦄 emacs-orgmode"
+          ;;   :query "(from:emacs-orgmode@gnu.org or to:emacs-orgmode@gnu.org) not tag:archived"
+          ;;   :sort-order newest-first
+          ;;   :key ,(kbd "e o"))
+          ))
+  (setq notmuch-archive-tags nil
+        notmuch-message-replied-tags '("+replied")
+        notmuch-message-forwarded-tags '("+forwarded")
+        notmuch-show-mark-read-tags '("-unread")
+        notmuch-draft-tags '("+draft")
+        notmuch-draft-folder "drafts"
+        notmuch-draft-save-plaintext 'ask))
+
 
 ;;; init.el ends here
