@@ -41,16 +41,18 @@
                            "_" (format-time-string "%Y%m%d_%H%M%S") ".png"))
          (filename (concat img-dir "/" img-name)))
     (make-directory img-dir :parents)
-    ;; TODO: Windows only, find a way to "paste" in wayland.
+    ;; Windows -- use powershell, other(implicit linux) -- use wl-paste
     (shell-command
-     (concat "powershell -command \"Add-Type -AssemblyName System.Windows.Forms;"
+     (if +IS-WINDOWS+
+         (concat "powershell -command \"Add-Type -AssemblyName System.Windows.Forms;"
              "if ($([System.Windows.Forms.Clipboard]::ContainsImage()))"
              "{$image = [System.Windows.Forms.Clipboard]::GetImage();"
              "[System.Drawing.Bitmap]$image.Save('"
              filename
              "',[System.Drawing.Imaging.ImageFormat]::Png);"
              "Write-Output 'clipboard content saved as file'}"
-             "else {Write-Output 'clipboard does not contain image data'}\""))
+             "else {Write-Output 'clipboard does not contain image data'}\"")
+       (concat "wl-paste > " filename)))
     (insert (concat "[[file:" filename "]]"))))
 
 
