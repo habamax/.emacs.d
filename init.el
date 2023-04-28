@@ -159,8 +159,10 @@
          ("C-c t SPC" . whitespace-mode)
          ("C-c t s" . flyspell-mode)
          ("C-c t l" . hl-line-mode)
+         ("C-c t l" . hl-line-mode)
          ("C-c t f" . display-fill-column-indicator-mode)
          ("C-c t b" . habamax/toggle-bg)
+         ("C-c t v" . visible-mode)
          :repeat-map habamax-duplicate-line-repeat-map
          ("d" . habamax/duplicate-line)
          :repeat-map habamax-buffers-like-this-map
