@@ -349,31 +349,30 @@
         ;;   ("tags" . "(%s)"))
         notmuch-show-empty-saved-searches t
         notmuch-saved-searches
-        `(( :name "📥 inbox"
-            :query "tag:inbox"
+        `(( :name "📥 Inbox"
+            :query "folder:/Inbox/ or tag:inbox"
             :sort-order newest-first
             :key ,(kbd "i"))
-          ( :name "💬 unread (inbox)"
-            :query "tag:unread and tag:inbox"
+          ( :name "💬 Unread (inbox)"
+            :query "tag:unread and folder:/Inbox/"
             :sort-order newest-first
             :key ,(kbd "u"))
-          ;; ;; Emacs
-          ;; ( :name "🔨 emacs-devel"
-          ;;   :query "(from:emacs-devel@gnu.org or to:emacs-devel@gnu.org) not tag:archived"
-          ;;   :sort-order newest-first
-          ;;   :key ,(kbd "e d"))
-          ;; ( :name "🦄 emacs-orgmode"
-          ;;   :query "(from:emacs-orgmode@gnu.org or to:emacs-orgmode@gnu.org) not tag:archived"
-          ;;   :sort-order newest-first
-          ;;   :key ,(kbd "e o"))
-          ))
-  (setq notmuch-archive-tags nil
-        notmuch-message-replied-tags '("+replied")
-        notmuch-message-forwarded-tags '("+forwarded")
-        notmuch-show-mark-read-tags '("-unread")
-        notmuch-draft-tags '("+draft")
-        notmuch-draft-folder "drafts"
-        notmuch-draft-save-plaintext 'ask))
+          ( :name "📚 Archive"
+            :query "folder:/Archive/"
+            :sort-order newest-first
+            :key ,(kbd "a"))
+          ( :name "💩 Trash"
+            :query "folder:/Trash/"
+            :sort-order newest-first
+            :key ,(kbd "t"))
+          ( :name "📨 Sent"
+            :query "folder:/Sent/"
+            :sort-order newest-first
+            :key ,(kbd "s"))
+          ( :name "📝 Drafts"
+            :query "folder:/Drafts/"
+            :sort-order newest-first
+            :key ,(kbd "d")))))
 
 
 ;;; init.el ends here
