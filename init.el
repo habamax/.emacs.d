@@ -238,7 +238,6 @@
                   (buffer-string))
                 "</style>\n")))
 
-
 (use-package marginalia
   :init
   (marginalia-mode))
