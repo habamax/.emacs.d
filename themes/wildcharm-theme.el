@@ -751,6 +751,23 @@
    `(eshell-ls-special
      ((,class256 (:foreground ,magenta))))
 
+   ;;; emms
+   `(emms-playlist-selected-face
+     ((,class256 (:foreground ,bright-green :weight bold))))
+   `(emms-playlist-track-face
+     ((,class256 (:foreground ,fg))))   
+   `(emms-browser-track-face
+     ((,class256 (:inherit emms-playlist-track-face))))
+   `(emms-browser-artist-face
+     ((,class256 (:foreground ,blue))))
+   `(emms-browser-album-face
+     ((,class256 (:foreground ,bright-yellow))))
+   `(emms-browser-composer-face
+     ((,class256 (:foreground ,bright-cyan))))
+   `(emms-browser-performer-face
+     ((,class256 (:foreground ,bright-magenta))))
+   `(emms-browser-year/genre-face
+     ((,class256 (:foreground ,bright-red))))
    ))
 
 ;;;###autoload
