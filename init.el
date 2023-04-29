@@ -369,6 +369,7 @@
   :config
   (emms-all)
   (setq emms-player-list '(emms-player-mpv emms-player-vlc)
-        emms-info-functions '(emms-info-native)))
+        emms-info-functions '(emms-info-native))
+  (setq emms-source-file-default-directory "~/Music/"))
 
 ;;; init.el ends here
