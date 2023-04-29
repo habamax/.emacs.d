@@ -10,22 +10,22 @@
 (deftheme wildcharm-light "Simple mid-contrast light theme.")
 
 (let ((class256 '((class color) (min-colors 256)))
-      (fg "#000000")(bg "#f7f7f3")
+      (fg "#000000")(bg "#ffffff")
       (black "#000000")(darkgrey "#808080")
       (red "#af0000")(bright-red "#d70000")
       (green "#008700")(bright-green "#5faf5f")
       (yellow "#af5f00")(bright-yellow "#d78700")
       (blue "#005faf")(bright-blue "#0087d7")
       (magenta "#870087")(bright-magenta "#af00af")
-      (cyan "#008787")(bright-cyan "#00afaf")
+      (cyan "#005f5f")(bright-cyan "#008787")
       (grey "#d0d0d0")(white "#ffffff")
+      (special "#875fff")
       (match-paren "#ff00af")(non-text "#b2b2b2")
-      (mode-line-active-1 "#d0d0d0")(mode-line-inactive-1 "#e0e0e0")
-      (mode-line-active-2 "#d0d0d0")(mode-line-inactive-2 "#303030")
+      (mode-line-active "#d0d0d0")(mode-line-inactive "#e0e0e0")
       (menu "#262626")
       (header-line "#bcbcbc")
-      (special "#875fff")(hl-line "#e0e0e0")
-      (block "#121214")
+      (hl-line "#eeeeee")
+      (block "#eeeeee")
       (diff-added-bg "#afd7af")
       (diff-refine-added-bg "#afd7d7")
       (diff-added-fg "#005f00")
@@ -46,9 +46,9 @@
    `(link-visited
      ((,class256 (:foreground ,darkgrey :underline t))))
    `(highlight
-     ((,class256 (:background ,bright-blue :foreground ,white))))
+     ((,class256 (:background ,blue :foreground ,white))))
    `(region
-     ((,class256 (:background ,blue :foreground ,bg))))
+     ((,class256 (:background ,bright-blue :foreground ,bg))))
    `(secondary-selection
      ((,class256 (:background ,cyan :foreground ,bg))))
    `(trailing-whitespace
@@ -70,10 +70,10 @@
    `(nobreak-hyphen
      ((,class256 (:inherit 'escape-glyph))))
    `(mode-line
-     ((,class256 (:background ,mode-line-active-1 :foreground ,fg
+     ((,class256 (:background ,mode-line-active :foreground ,fg
                               :box (:line-width 1 :color ,non-text)))))
    `(mode-line-inactive
-     ((,class256 (:background ,mode-line-inactive-1 :foreground ,darkgrey
+     ((,class256 (:background ,mode-line-inactive :foreground ,darkgrey
                               :box (:line-width 1 :color ,grey)))))
    `(mode-line-highlight
      ((,class256 (:background ,bg
@@ -86,13 +86,13 @@
      ((,class256 (:background ,header-line :foreground ,fg :extend t
                               :box (:line-width 1 :color ,white)))))
    `(vertical-border
-     ((,class256 (:background ,non-text :foreground ,non-text))))
+     ((,class256 (:background ,mode-line-inactive :foreground ,mode-line-inactive))))
    `(window-divider
-     ((t (:foreground ,mode-line-inactive-1))))
+     ((t (:foreground ,mode-line-inactive))))
    `(window-divider-first-pixel
-     ((t (:foreground ,mode-line-active-1))))
+     ((t (:foreground ,mode-line-active))))
    `(window-divider-last-pixel
-     ((t (:foreground ,mode-line-active-1))))
+     ((t (:foreground ,mode-line-active))))
    `(minibuffer-prompt
      ((,class256 (:foreground ,bright-yellow :weight bold))))
    `(fringe
@@ -102,12 +102,12 @@
      ((t (:background ,fg))))
    ;; -tool-bar
    `(tab-bar
-     ((,class256 (:background ,mode-line-inactive-1 :foreground ,darkgrey))))
+     ((,class256 (:background ,mode-line-inactive :foreground ,darkgrey))))
    `(tab-bar-tab
-     ((,class256 (:background ,mode-line-active-1 :foreground ,black :weight bold
+     ((,class256 (:background ,mode-line-active :foreground ,black :weight bold
                               :box (:line-width 1 :color ,non-text)))))
    `(tab-bar-tab-inactive
-     ((t (:background nil :foreground ,grey))))
+     ((t (:background nil :foreground ,fg))))
    `(help-key-binding
      ((,class256 (:background nil :foreground ,cyan
                               :box (:line-width (1 . -1) :color ,cyan)))))
@@ -118,13 +118,13 @@
    `(success
      ((,class256 (:foreground ,bright-green :weight bold))))
    `(menu
-     ((t (:background ,mode-line-inactive-2 :foreground ,grey))))
+     ((t (:background ,mode-line-inactive :foreground ,fg))))
    `(tty-menu-enabled-face
-     ((t (:background ,menu :foreground ,grey))))
+     ((t (:background ,menu :foreground ,fg))))
    `(tty-menu-disabled-face
-     ((t (:background ,menu :foreground ,darkgrey))))
+     ((t (:background ,menu :foreground ,fg))))
    `(tty-menu-selected-face
-     ((t (:background ,mode-line-active-2 :foreground ,grey :weight bold))))
+     ((t (:background ,mode-line-active :foreground ,fg :weight bold))))
 
    `(show-paren-match
      ((,class256 :foreground ,match-paren :weight bold)))
@@ -163,7 +163,7 @@
 
    ;;; replace.el
    `(match
-     ((,class256 (:background ,bright-cyan :foreground ,fg))))
+     ((,class256 (:background ,bright-cyan :foreground ,white))))
 
    ;;; global-hl-line-mode
    `(hl-line
@@ -288,21 +288,21 @@
    `(org-block
      ((t (:foreground ,fg))))
    `(org-level-1
-     ((,class256 (:foreground ,blue :weight bold))))
+     ((,class256 (:foreground ,black :weight bold))))
    `(org-level-2
-     ((,class256 (:foreground ,blue :weight bold))))
+     ((,class256 (:foreground ,black :weight bold))))
    `(org-level-3
-     ((,class256 (:foreground ,blue :weight bold))))
+     ((,class256 (:foreground ,black :weight bold))))
    `(org-level-4
-     ((,class256 (:foreground ,blue :weight bold))))
+     ((,class256 (:foreground ,black :weight bold))))
    `(org-level-5
-     ((,class256 (:foreground ,blue :weight bold))))
+     ((,class256 (:foreground ,black :weight bold))))
    `(org-level-6
-     ((,class256 (:foreground ,blue :weight bold))))
+     ((,class256 (:foreground ,black :weight bold))))
    `(org-level-7
-     ((,class256 (:foreground ,blue :weight bold))))
+     ((,class256 (:foreground ,black :weight bold))))
    `(org-level-8
-     ((,class256 (:foreground ,blue :weight bold))))
+     ((,class256 (:foreground ,black :weight bold))))
    `(org-todo
      ((,class256 (:foreground ,yellow :weight bold))))
    `(org-done

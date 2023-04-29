@@ -3,8 +3,7 @@
 
 ;;; Commentary:
 
-;; Dark theme with mid-contrast colors.
-;; Background in GUI has a bit of a bluish tint.
+;; Dark theme with contrast colors.
 ;; TUI has no background defined, i.e. depends on terminal.
 
 ;;; Code:
@@ -15,7 +14,7 @@
       (class256 '((class color) (min-colors 256)))
       (class16 '((class color) (min-colors 16)))
       (classTTY '((type tty)))
-      (fg "#d0d0d0")(bg "#1c1f26")
+      (fg "#d0d0d0") (bg "#000000")
       (black "#000000")(darkgrey "#808080")
       (red "#d75f5f")(bright-red "#ff5f87")
       (green "#00af5f")(bright-green "#00d75f")
@@ -24,14 +23,13 @@
       (magenta "#d787d7")(bright-magenta "#ff87ff")
       (cyan "#00afaf")(bright-cyan "#00d7d7")
       (grey "#d0d0d0")(white "#ffffff")
-      (comment "#707780")
+      (special "#875fff")
       (match-paren "#ff00af")(non-text "#585858")
-      (mode-line-active-1 "#404348")(mode-line-inactive-1 "#303338")
-      (mode-line-active-2 "#444444")(mode-line-inactive-2 "#303030")
+      (mode-line-active "#444444")(mode-line-inactive "#303030")
       (menu "#262626")
-      (header-line "#32363a")
-      (special "#875fff")(hl-line "#3a3d42")
-      (block "#121214")(block-tty "#121212")
+      (header-line "#444444")
+      (hl-line "#3a3a3a")
+      (block "#121212")
       (diff-added-bg "#3f4f3f")(diff-added-bg-tty "#005f00")
       (diff-refine-added-bg "#3f6f4f")(diff-refine-added-bg-tty "#005f5f")
       (diff-added-fg "#afffaf")
@@ -77,13 +75,11 @@
    `(nobreak-hyphen
      ((,class256 (:inherit 'escape-glyph))))
    `(mode-line
-     ((,class256 (:background ,mode-line-active-1 :foreground ,grey
-                              :box (:line-width 1 :color ,non-text)))
-      (,class16 (:background ,mode-line-active-2 :foreground ,grey))))
+     ((,class256 (:background ,mode-line-active :foreground ,grey
+                              :box (:line-width 1 :color ,non-text)))))
    `(mode-line-inactive
-     ((,class256 (:background ,mode-line-inactive-1 :foreground ,darkgrey
-                              :box (:line-width 1 :color ,black)))
-      (,class16 (:background ,mode-line-inactive-2 :foreground ,darkgrey))))
+     ((,class256 (:background ,mode-line-inactive :foreground ,darkgrey
+                              :box (:line-width 1 :color ,black)))))
    `(mode-line-highlight
      ((,class256 (:background ,black
                               :box (:line-width 1 :color ,non-text)))))
@@ -95,14 +91,13 @@
      ((,class256 (:background ,header-line :foreground ,fg :extend t
                               :box (:line-width 1 :color ,black)))))
    `(vertical-border
-     ((,classTTY (:background ,mode-line-inactive-2 :foreground ,mode-line-inactive-2))
-      (,class256 (:background ,non-text :foreground ,non-text))))
+     ((,class256 (:background ,mode-line-inactive :foreground ,mode-line-inactive))))
    `(window-divider
-     ((t (:foreground ,mode-line-inactive-1))))
+     ((t (:foreground ,mode-line-inactive))))
    `(window-divider-first-pixel
-     ((t (:foreground ,mode-line-active-1))))
+     ((t (:foreground ,mode-line-active))))
    `(window-divider-last-pixel
-     ((t (:foreground ,mode-line-active-1))))
+     ((t (:foreground ,mode-line-active))))
    ;; internal-border, not sure what exactly it affects...
    ;; child-frame-border, not sure neither...
    `(minibuffer-prompt
@@ -114,12 +109,10 @@
      ((t (:background "#ffffff"))))
    ;; -tool-bar
    `(tab-bar
-     ((,class256 (:background ,mode-line-inactive-1 :foreground ,darkgrey))
-      (,class16 (:background ,mode-line-inactive-2 :foreground ,darkgrey))))
+     ((,class256 (:background ,mode-line-inactive :foreground ,darkgrey))))
    `(tab-bar-tab
-     ((,class256 (:background ,mode-line-active-1 :foreground ,white :weight bold
-                              :box (:line-width 1 :color ,non-text)))
-      (,class16 (:background ,mode-line-active-2 :foreground ,white :weight bold))))
+     ((,class256 (:background ,mode-line-active :foreground ,white :weight bold
+                              :box (:line-width 1 :color ,non-text)))))
    `(tab-bar-tab-inactive
      ((t (:background nil :foreground ,grey))))
    `(help-key-binding
@@ -132,13 +125,13 @@
    `(success
      ((,class256 (:foreground ,bright-green :weight bold))))
    `(menu
-     ((t (:background ,mode-line-inactive-2 :foreground ,grey))))
+     ((t (:background ,mode-line-inactive :foreground ,grey))))
    `(tty-menu-enabled-face
      ((t (:background ,menu :foreground ,grey))))
    `(tty-menu-disabled-face
      ((t (:background ,menu :foreground ,darkgrey))))
    `(tty-menu-selected-face
-     ((t (:background ,mode-line-active-2 :foreground ,grey :weight bold))))
+     ((t (:background ,mode-line-active :foreground ,grey :weight bold))))
 
    `(show-paren-match
      ((,class256 :foreground ,match-paren :weight bold)))
@@ -149,8 +142,7 @@
    `(font-lock-string-face
      ((,class256 (:foreground ,bright-green))))
    `(font-lock-comment-face
-     ((,classTC (:foreground ,comment))
-      (t (:foreground ,darkgrey))))
+     ((,class256 (:foreground ,darkgrey))))
    `(font-lock-keyword-face
      ((,class256 (:foreground ,bright-blue))))
    `(font-lock-preprocessor-face
@@ -216,8 +208,7 @@
    `(completions-first-difference
      ((,class256 (:foreground ,bright-magenta))))
    `(completions-annotations
-     ((,classTC (:foreground ,comment))
-      (t (:foreground ,darkgrey))))
+     ((,class256 (:foreground ,darkgrey))))
 
    ;;; ido
    `(ido-first-match
@@ -225,8 +216,7 @@
    `(ido-only-match
      ((,class256 (:inherit 'ido-first-match))))
    `(ido-virtual
-     ((,classTC (:foreground ,comment))
-      (,class256 (:foreground ,darkgrey))))
+     ((,class256 (:foreground ,darkgrey))))
    `(ido-subdir
      ((,class256 (:foreground ,white :weight bold))))
    ;; check how good it is
@@ -239,8 +229,7 @@
    `(compilation-mode-line-exit
      ((,class256 (:foreground ,green :weight bold))))
    `(compilation-line-number
-     ((,classTC (:foreground ,comment))
-      (,class256 (:foreground ,darkgrey))))
+     ((,class256 (:foreground ,darkgrey))))
 
    ;;; whitespace
    `(whitespace-space
@@ -258,8 +247,7 @@
 
    ;;; vc
    `(log-view-message
-     ((,classTC (:foreground ,comment))
-      (,class256 (:foreground ,darkgrey))))
+     ((,class256 (:foreground ,darkgrey))))
    `(log-view-commit-body
      ((,class256 (:foreground ,fg))))
 
@@ -273,8 +261,7 @@
    `(message-header-other
      ((,class256 (:foreground ,fg))))
    `(message-header-cc
-     ((,classTC (:foreground ,comment))
-      (,class256 (:foreground ,darkgrey))))
+     ((,class256 (:foreground ,darkgrey))))
    `(message-separator
      ((,class256 (:background ,header-line :foreground ,fg :extend t))))
 
@@ -284,8 +271,7 @@
 
    ;;; org
    `(org-meta-line
-     ((,classTC (:foreground ,comment))
-      (t (:foreground ,darkgrey))))
+     ((,class256 (:foreground ,darkgrey))))
    `(org-document-info-keyword
      ((t (:inherit org-meta-line))))
    `(org-special-keyword
@@ -305,38 +291,35 @@
    `(org-verbatim
      ((,class256 (:inherit org-code))))
    `(org-tag
-     ((,classTC (:foreground ,comment :weight normal))
-      (,class256 (:foreground ,darkgrey :weight normal))))
+     ((,class256 (:foreground ,darkgrey :weight normal))))
    `(org-block
      ((t (:foreground ,fg))))
    `(org-level-1
-     ((,class256 (:foreground ,bright-blue :weight bold))))
+     ((,class256 (:foreground ,white :weight bold))))
    `(org-level-2
-     ((,class256 (:foreground ,bright-blue :weight bold))))
+     ((,class256 (:foreground ,white :weight bold))))
    `(org-level-3
-     ((,class256 (:foreground ,bright-blue :weight bold))))
+     ((,class256 (:foreground ,white :weight bold))))
    `(org-level-4
-     ((,class256 (:foreground ,bright-blue :weight bold))))
+     ((,class256 (:foreground ,white :weight bold))))
    `(org-level-5
-     ((,class256 (:foreground ,bright-blue :weight bold))))
+     ((,class256 (:foreground ,white :weight bold))))
    `(org-level-6
-     ((,class256 (:foreground ,bright-blue :weight bold))))
+     ((,class256 (:foreground ,white :weight bold))))
    `(org-level-7
-     ((,class256 (:foreground ,bright-blue :weight bold))))
+     ((,class256 (:foreground ,white :weight bold))))
    `(org-level-8
-     ((,class256 (:foreground ,bright-blue :weight bold))))
+     ((,class256 (:foreground ,white :weight bold))))
    `(org-todo
      ((,class256 (:foreground ,yellow :weight bold))))
    `(org-done
      ((,class256 (:foreground ,green :weight bold))))
    `(org-date
-     ((,classTC (:foreground ,comment :underline t))
-      (t (:foreground ,darkgrey :underline t))))
+     ((,class256 (:foreground ,darkgrey :underline t))))
    `(org-headline-done
      ((,class256 (:foreground ,nil))))
    `(org-checkbox
-     ((,classTC (:foreground ,comment :weight normal))
-      (,class256 (:foreground ,darkgrey :weight normal))))
+     ((,class256 (:foreground ,darkgrey :weight normal))))
    `(org-dispatcher-highlight
      ((,class256 (:foreground ,bright-red :weight bold))))
    `(org-agenda-structure
@@ -362,8 +345,7 @@
    `(org-imminent-deadline
      ((,class256 (:foreground ,bright-red :weight bold))))
    `(org-time-grid
-     ((,classTC (:foreground ,comment :weight normal))
-      (,class256 (:foreground ,darkgrey :weight normal))))
+     ((,class256 (:foreground ,darkgrey :weight normal))))
    `(org-agenda-current-time
      ((,class256 (:foreground ,bright-blue))))
 
@@ -471,8 +453,7 @@
    `(gnus-cite-11
      ((,class256 (:foreground ,darkgrey))))
    `(mm-uu-extract
-     ((,classTC (:background ,block :foreground ,yellow))
-      (,class256 (:background ,block-tty :foreground ,yellow))))
+     ((,class256 (:background ,block :foreground ,yellow))))
 
    ;;; shr
    `(shr-h1
@@ -506,15 +487,13 @@
    `(markdown-list-face
      ((,class256 (:foreground ,bright-yellow))))
    `(markdown-markup-face
-     ((,classTC (:foreground ,comment))
-      (,class256 (:foreground ,darkgrey))))
+     ((,class256 (:foreground ,darkgrey))))
    `(markdown-inline-code-face
      ((,class256 (:foreground ,green))))
    `(markdown-language-keyword-face
      ((,class256 (:foreground ,cyan))))
    `(markdown-gfm-checkbox-face
-     ((,classTC (:foreground ,comment))
-      (,class256 (:foreground ,darkgrey))))
+     ((,class256 (:foreground ,darkgrey))))
 
    ;;; diff
    `(diff-header
@@ -618,11 +597,9 @@
 
    ;;; erc
    `(erc-timestamp-face
-     ((,classTC (:foreground ,comment))
-      (,class256 (:foreground ,darkgrey))))
+     ((,class256 (:foreground ,darkgrey))))
    `(erc-notice-face
-     ((,classTC (:foreground ,comment))
-      (,class256 (:foreground ,darkgrey))))
+     ((,class256 (:foreground ,darkgrey))))
    `(erc-nick-default-face
      ((,class256 (:foreground ,blue))))
    `(erc-current-nick-face
@@ -678,11 +655,9 @@
 
    ;;; rcirc
    `(rcirc-server
-     ((,classTC (:foreground ,comment))
-      (,class256 (:foreground ,darkgrey))))
+     ((,class256 (:foreground ,darkgrey))))
    `(rcirc-timestamp
-     ((,classTC (:foreground ,comment))
-      (,class256 (:foreground ,darkgrey))))
+     ((,class256 (:foreground ,darkgrey))))
    `(rcirc-prompt
      ((,class256 (:foreground ,bright-magenta))))
    `(rcirc-url
@@ -716,8 +691,7 @@
    `(elfeed-log-debug-level-face
      ((,class256 (:foreground ,magenta))))
    `(elfeed-search-date-face
-     ((,classTC (:foreground ,comment))
-      (,class256 (:foreground ,darkgrey))))
+     ((,class256 (:foreground ,darkgrey))))
    `(elfeed-search-title-face
      ((,class256 (:foreground ,grey))))
    `(elfeed-search-unread-title-face
@@ -743,8 +717,7 @@
    `(eshell-ls-archive
      ((,class256 (:foreground ,yellow))))
    `(eshell-ls-backup
-     ((,classTC (:foreground ,comment))
-      (,class256 (:foreground ,darkgrey))))
+     ((,class256 (:foreground ,darkgrey))))
    `(eshell-ls-unreadable
      ((,class256 (:foreground ,non-text))))
    `(eshell-ls-missing
@@ -752,8 +725,7 @@
    `(eshell-ls-product
      ((,class256 (:foreground ,white))))
    `(eshell-ls-readonly
-     ((,classTC (:foreground ,comment))
-      (,class256 (:foreground ,darkgrey))))
+     ((,class256 (:foreground ,darkgrey))))
    `(eshell-ls-special
      ((,class256 (:foreground ,magenta))))
 
