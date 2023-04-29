@@ -720,7 +720,7 @@
 
    ;;; emms
    `(emms-playlist-selected-face
-     ((,class256 (:foreground ,bright-green :weight bold))))
+     ((,class256 (:foreground ,blue :weight bold))))
    `(emms-playlist-track-face
      ((,class256 (:foreground ,fg))))
    `(emms-browser-track-face
@@ -728,13 +728,13 @@
    `(emms-browser-artist-face
      ((,class256 (:foreground ,blue))))
    `(emms-browser-album-face
-     ((,class256 (:foreground ,bright-yellow))))
+     ((,class256 (:foreground ,yellow))))
    `(emms-browser-composer-face
-     ((,class256 (:foreground ,bright-cyan))))
+     ((,class256 (:foreground ,cyan))))
    `(emms-browser-performer-face
-     ((,class256 (:foreground ,bright-magenta))))
+     ((,class256 (:foreground ,magenta))))
    `(emms-browser-year/genre-face
-     ((,class256 (:foreground ,bright-red))))
+     ((,class256 (:foreground ,red))))
    ))
 
 ;;;###autoload

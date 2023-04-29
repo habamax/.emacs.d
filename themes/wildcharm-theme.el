@@ -732,7 +732,7 @@
 
    ;;; emms
    `(emms-playlist-selected-face
-     ((,class256 (:foreground ,bright-green :weight bold))))
+     ((,class256 (:foreground ,bright-blue :weight bold))))
    `(emms-playlist-track-face
      ((,class256 (:foreground ,fg))))   
    `(emms-browser-track-face
