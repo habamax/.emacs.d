@@ -324,8 +324,12 @@
 (use-package notmuch
   :ensure nil
   :if (executable-find "notmuch")
-  :commands (notmuch)
+  :commands (notmuch notmuch-sync)
   :config
+  (defun notmuch-sync ()
+    (interactive)
+    (when (executable-find "mbsync")
+      (compile "mbsync -a && notmuch new")))
   (setq notmuch-show-logo nil
         notmuch-hello-auto-refresh t
         notmuch-hello-recent-searches-max 20
