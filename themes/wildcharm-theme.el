@@ -187,7 +187,11 @@
    ;;; widget
    `(widget-field
      ((,class256 (:background ,header-line :foreground ,fg :extend t))))
-
+   `(widget-button-pressed
+     ((,class256 (:foreground ,red))))
+   `(widget-documentation
+     ((,class256 (:foreground ,green))))
+   
    ;;; dired
    `(dired-header
      ((,class256 (:foreground ,white :weight bold))))
