@@ -170,11 +170,12 @@ See `sort-regexp-fields'."
 ;;;###autoload
 (defun habamax/toggle-bg ()
   (interactive)
-  (if (eq (car custom-enabled-themes) 'wildcharm)
-      (progn
-        (disable-theme 'wildcharm)
-        (set-face-attribute 'region nil :background "#005faf" :foreground "#ffffff"))
-      (load-theme 'wildcharm t)))
+  (let ((current-theme (car custom-enabled-themes)))
+    (dolist (loaded-theme custom-enabled-themes)
+      (disable-theme loaded-theme))
+    (if (eq current-theme 'wildcharm)
+        (load-theme 'wildcharm-light t)
+      (load-theme 'wildcharm t))))
 
 
 (provide 'habamax)
