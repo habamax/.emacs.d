@@ -91,7 +91,8 @@
      ((,class256 (:background ,header-line :foreground ,fg :extend t
                               :box (:line-width 1 :color ,black)))))
    `(vertical-border
-     ((,class256 (:background ,mode-line-inactive :foreground ,mode-line-inactive))))
+     ((,classTTY (:background ,mode-line-inactive :foreground ,mode-line-inactive))
+      (,class256 (:background ,non-text :foreground ,non-text))))
    `(window-divider
      ((t (:foreground ,mode-line-inactive))))
    `(window-divider-first-pixel

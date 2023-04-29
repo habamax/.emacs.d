@@ -10,6 +10,7 @@
 (deftheme wildcharm-light "Simple mid-contrast light theme.")
 
 (let ((class256 '((class color) (min-colors 256)))
+      (classTTY '((type tty)))
       (fg "#000000")(bg "#ffffff")
       (black "#000000")(darkgrey "#808080")
       (red "#af0000")(bright-red "#d70000")
@@ -86,7 +87,8 @@
      ((,class256 (:background ,header-line :foreground ,fg :extend t
                               :box (:line-width 1 :color ,white)))))
    `(vertical-border
-     ((,class256 (:background ,mode-line-inactive :foreground ,mode-line-inactive))))
+     ((,classTTY (:background ,mode-line-inactive :foreground ,mode-line-inactive))
+      (,class256 (:background ,non-text :foreground ,non-text))))
    `(window-divider
      ((t (:foreground ,mode-line-inactive))))
    `(window-divider-first-pixel
