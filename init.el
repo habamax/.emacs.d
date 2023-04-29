@@ -327,26 +327,12 @@
   :commands (notmuch)
   :config
   (setq notmuch-show-logo nil
-        notmuch-column-control 1.0
         notmuch-hello-auto-refresh t
         notmuch-hello-recent-searches-max 20
-        notmuch-hello-thousands-separator ""
-        notmuch-hello-sections '(notmuch-hello-insert-saved-searches)
+        notmuch-hello-sections '(notmuch-hello-insert-saved-searches
+                                 notmuch-hello-insert-alltags)
         notmuch-show-all-tags-list t)
   (setq notmuch-search-oldest-first nil
-        ;; notmuch-search-result-format
-        ;; '(("date" . "%12s  ")
-        ;;   ("count" . "%-7s  ")
-        ;;   ("authors" . "%-20s  ")
-        ;;   ("subject" . "%-80s  ")
-        ;;   ("tags" . "(%s)"))
-        ;; notmuch-tree-result-format
-        ;; '(("date" . "%12s  ")
-        ;;   ("authors" . "%-20s  ")
-        ;;   ((("tree" . "%s")
-        ;;     ("subject" . "%s"))
-        ;;    . " %-80s  ")
-        ;;   ("tags" . "(%s)"))
         notmuch-show-empty-saved-searches t
         notmuch-saved-searches
         `(( :name "📥 Inbox"
@@ -357,7 +343,7 @@
             :query "tag:unread and folder:/Inbox/"
             :sort-order newest-first
             :key ,(kbd "u"))
-          ( :name "📚 Archive"
+          ( :name "📚 All"
             :query "folder:/Archive/"
             :sort-order newest-first
             :key ,(kbd "a"))
