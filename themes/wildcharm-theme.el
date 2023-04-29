@@ -597,7 +597,13 @@
      ((,class256 (:foreground ,bright-green))))
    `(magit-diffstat-removed
      ((,class256 (:foreground ,bright-red))))
-
+   `(magit-log-author
+     ((,class256 (:foreground ,bright-red))))
+   `(magit-log-graph
+     ((,class256 (:foreground ,darkgrey))))
+   `(magit-log-date
+     ((,class256 (:foreground ,darkgrey))))
+   
    ;;; smerge
    `(smerge-lower
      ((,class256 (:background ,diff-added-bg))
