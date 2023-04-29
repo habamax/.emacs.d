@@ -365,7 +365,7 @@
            :key ,(kbd "d")))))
 
 (use-package emms
-  :commands emms
+  :commands (emms emms-add-directory-tree)
   :config
   (emms-all)
   (setq emms-player-list '(emms-player-mpv emms-player-vlc)
