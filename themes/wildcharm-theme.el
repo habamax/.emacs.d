@@ -310,21 +310,21 @@
    `(org-block
      ((t (:foreground ,fg))))
    `(org-level-1
-     ((,class256 (:foreground ,white :weight bold))))
+     ((,class256 (:foreground ,bright-blue :weight bold))))
    `(org-level-2
-     ((,class256 (:foreground ,white :weight bold))))
+     ((,class256 (:foreground ,bright-blue :weight bold))))
    `(org-level-3
-     ((,class256 (:foreground ,white :weight bold))))
+     ((,class256 (:foreground ,bright-blue :weight bold))))
    `(org-level-4
-     ((,class256 (:foreground ,white :weight bold))))
+     ((,class256 (:foreground ,bright-blue :weight bold))))
    `(org-level-5
-     ((,class256 (:foreground ,white :weight bold))))
+     ((,class256 (:foreground ,bright-blue :weight bold))))
    `(org-level-6
-     ((,class256 (:foreground ,white :weight bold))))
+     ((,class256 (:foreground ,bright-blue :weight bold))))
    `(org-level-7
-     ((,class256 (:foreground ,white :weight bold))))
+     ((,class256 (:foreground ,bright-blue :weight bold))))
    `(org-level-8
-     ((,class256 (:foreground ,white :weight bold))))
+     ((,class256 (:foreground ,bright-blue :weight bold))))
    `(org-todo
      ((,class256 (:foreground ,yellow :weight bold))))
    `(org-done
@@ -346,9 +346,9 @@
    `(org-date-selected
      ((,class256 (:background ,bright-magenta :foreground ,bg))))
    `(org-agenda-date
-     ((,class256 (:foreground ,blue :weight normal))))
+     ((,class256 (:foreground ,cyan :weight normal))))
    `(org-agenda-date-today
-     ((,class256 (:foreground ,bright-blue))))
+     ((,class256 (:foreground ,blue :weight bold))))
    `(org-agenda-done
      ((,class256 (:foreground ,bright-green))))
    `(org-scheduled-today

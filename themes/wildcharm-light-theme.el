@@ -10,7 +10,7 @@
 (deftheme wildcharm-light "Simple mid-contrast light theme.")
 
 (let ((class256 '((class color) (min-colors 256)))
-      (fg "#000000")(bg "#ffffff")
+      (fg "#000000")(bg "#f7f7f3")
       (black "#000000")(darkgrey "#808080")
       (red "#af0000")(bright-red "#d70000")
       (green "#008700")(bright-green "#5faf5f")
@@ -23,7 +23,7 @@
       (mode-line-active-1 "#d0d0d0")(mode-line-inactive-1 "#e0e0e0")
       (mode-line-active-2 "#d0d0d0")(mode-line-inactive-2 "#303030")
       (menu "#262626")
-      (header-line "#32363a")
+      (header-line "#bcbcbc")
       (special "#875fff")(hl-line "#e0e0e0")
       (block "#121214")
       (diff-added-bg "#afd7af")
@@ -84,7 +84,7 @@
      ((,class256 (:weight bold))))
    `(header-line
      ((,class256 (:background ,header-line :foreground ,fg :extend t
-                              :box (:line-width 1 :color ,black)))))
+                              :box (:line-width 1 :color ,white)))))
    `(vertical-border
      ((,class256 (:background ,non-text :foreground ,non-text))))
    `(window-divider
@@ -99,7 +99,7 @@
      ((t (:foreground ,non-text :background ,bg))))
    ;; -scroll-bar
    `(cursor
-     ((t (:background "#ffffff"))))
+     ((t (:background ,fg))))
    ;; -tool-bar
    `(tab-bar
      ((,class256 (:background ,mode-line-inactive-1 :foreground ,darkgrey))))
@@ -288,21 +288,21 @@
    `(org-block
      ((t (:foreground ,fg))))
    `(org-level-1
-     ((,class256 (:foreground ,black :weight bold))))
+     ((,class256 (:foreground ,blue :weight bold))))
    `(org-level-2
-     ((,class256 (:foreground ,black :weight bold))))
+     ((,class256 (:foreground ,blue :weight bold))))
    `(org-level-3
-     ((,class256 (:foreground ,black :weight bold))))
+     ((,class256 (:foreground ,blue :weight bold))))
    `(org-level-4
-     ((,class256 (:foreground ,black :weight bold))))
+     ((,class256 (:foreground ,blue :weight bold))))
    `(org-level-5
-     ((,class256 (:foreground ,black :weight bold))))
+     ((,class256 (:foreground ,blue :weight bold))))
    `(org-level-6
-     ((,class256 (:foreground ,black :weight bold))))
+     ((,class256 (:foreground ,blue :weight bold))))
    `(org-level-7
-     ((,class256 (:foreground ,black :weight bold))))
+     ((,class256 (:foreground ,blue :weight bold))))
    `(org-level-8
-     ((,class256 (:foreground ,black :weight bold))))
+     ((,class256 (:foreground ,blue :weight bold))))
    `(org-todo
      ((,class256 (:foreground ,yellow :weight bold))))
    `(org-done
@@ -322,9 +322,9 @@
    `(org-date-selected
      ((,class256 (:background ,bright-magenta :foreground ,bg))))
    `(org-agenda-date
-     ((,class256 (:foreground ,blue :weight normal))))
+     ((,class256 (:foreground ,cyan :weight normal))))
    `(org-agenda-date-today
-     ((,class256 (:foreground ,bright-blue))))
+     ((,class256 (:foreground ,blue :weight bold))))
    `(org-agenda-done
      ((,class256 (:foreground ,bright-green))))
    `(org-scheduled-today
