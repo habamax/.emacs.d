@@ -364,5 +364,11 @@
             :sort-order newest-first
             :key ,(kbd "d")))))
 
+(use-package emms
+  :commands emms
+  :config
+  (emms-all)
+  (setq emms-player-list '(emms-player-mpv emms-player-vlc)
+        emms-info-functions '(emms-info-native)))
 
 ;;; init.el ends here
