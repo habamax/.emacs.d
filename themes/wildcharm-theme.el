@@ -297,21 +297,21 @@
    `(org-block
      ((t (:foreground ,fg))))
    `(org-level-1
-     ((,class256 (:foreground ,white :weight bold))))
+     ((,class256 (:foreground ,white :weight bold :height 1.3))))
    `(org-level-2
-     ((,class256 (:foreground ,white :weight bold))))
+     ((,class256 (:foreground ,white :weight bold :height 1.2))))
    `(org-level-3
-     ((,class256 (:foreground ,white :weight bold))))
+     ((,class256 (:foreground ,white :weight bold :height 1.1))))
    `(org-level-4
-     ((,class256 (:foreground ,white :weight bold))))
+     ((,class256 (:foreground ,white :weight bold :height 1.1))))
    `(org-level-5
-     ((,class256 (:foreground ,white :weight bold))))
+     ((,class256 (:foreground ,white :weight bold :height 1.1))))
    `(org-level-6
-     ((,class256 (:foreground ,white :weight bold))))
+     ((,class256 (:foreground ,white :weight bold :height 1.1))))
    `(org-level-7
-     ((,class256 (:foreground ,white :weight bold))))
+     ((,class256 (:foreground ,white :weight bold :height 1.1))))
    `(org-level-8
-     ((,class256 (:foreground ,white :weight bold))))
+     ((,class256 (:foreground ,white :weight bold :height 1.1))))
    `(org-todo
      ((,class256 (:foreground ,yellow :weight bold))))
    `(org-done
@@ -325,15 +325,15 @@
    `(org-dispatcher-highlight
      ((,class256 (:foreground ,bright-red :weight bold))))
    `(org-agenda-structure
-     ((,class256 (:foreground ,white :weight bold))))
+     ((,class256 (:foreground ,white :weight bold :height 1.3))))
    `(org-agenda-structure-filter
-     ((,class256 (:foreground ,bright-red :weight bold))))
+     ((,class256 (:foreground ,bright-red :weight bold :height 1.3))))
    `(org-date-selected
      ((,class256 (:background ,bright-magenta :foreground ,bg))))
    `(org-agenda-date
      ((,class256 (:foreground ,cyan :weight normal))))
    `(org-agenda-date-today
-     ((,class256 (:foreground ,blue :weight bold))))
+     ((,class256 (:foreground ,blue :weight bold :height 1.1))))
    `(org-agenda-done
      ((,class256 (:foreground ,bright-green))))
    `(org-scheduled-today
