@@ -4,6 +4,7 @@
 ;;; Commentary:
 
 ;; Light theme with mid-contrast colors.
+;; Should look mostly the same in GUI and TUI with 256 colors support.
 
 ;;; Code:
 

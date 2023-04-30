@@ -5,6 +5,7 @@
 
 ;; Dark theme with contrast colors.
 ;; TUI has no background defined, i.e. depends on terminal.
+;; Should look mostly the same in GUI and TUI with 256 colors support.
 
 ;;; Code:
 
