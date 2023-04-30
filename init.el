@@ -326,10 +326,6 @@
   :if (executable-find "notmuch")
   :commands (notmuch notmuch-sync)
   :config
-  (defun notmuch-sync ()
-    (interactive)
-    (when (executable-find "mbsync")
-      (compile "mbsync -a && notmuch new")))
   (setq notmuch-show-logo nil
         notmuch-hello-auto-refresh t
         notmuch-hello-recent-searches-max 20
@@ -362,7 +358,28 @@
           (:name "📝 Drafts"
            :query "folder:/Drafts/"
            :sort-order newest-first
-           :key ,(kbd "d")))))
+           :key ,(kbd "d"))))
+  (defun notmuch-sync ()
+    (interactive)
+    (when (executable-find "mbsync")
+      (compile "mbsync -a && notmuch new")))
+  (defun notmuch-delete ()
+    "It doesn't delete in gmail... Just put emails from Inbox to All..."
+    (interactive)
+    (let* ((del-tag "deleted")
+           (count
+            (string-to-number
+             (with-temp-buffer
+               (shell-command
+                (format "notmuch count tag:%s" del-tag) t)
+               (buffer-substring-no-properties (point-min) (1- (point-max))))))
+           (mail (if (> count 1) "mails" "mail")))
+      (unless (> count 0)
+        (user-error "No mail marked as `%s'" del-tag))
+      (when (yes-or-no-p
+             (format "Delete %d %s marked as `%s'?" count mail del-tag))
+        (shell-command
+         (format "notmuch search --output=files --format=text0 tag:%s | xargs -r0 rm" del-tag))))))
 
 (use-package emms
   :commands (emms emms-add-directory-tree)
