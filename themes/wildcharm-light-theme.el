@@ -76,7 +76,7 @@
                               :box (:line-width 1 :color ,non-text)))))
    `(mode-line-inactive
      ((,class256 (:background ,mode-line-inactive :foreground ,darkgrey
-                              :box (:line-width 1 :color ,grey)))))
+                              :box (:line-width 1 :color ,white)))))
    `(mode-line-highlight
      ((,class256 (:background ,bg
                               :box (:line-width 1 :color ,non-text)))))
