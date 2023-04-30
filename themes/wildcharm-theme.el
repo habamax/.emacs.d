@@ -24,7 +24,7 @@
       (magenta "#d787d7")(bright-magenta "#ff87ff")
       (cyan "#00afaf")(bright-cyan "#00d7d7")
       (grey "#d0d0d0")(white "#ffffff")
-      (special "#875fff")
+      (special "#875fff")(comment "#87875f")
       (match-paren "#ff00af")(non-text "#585858")
       (mode-line-active "#444444")(mode-line-inactive "#303030")
       (menu "#262626")
@@ -144,7 +144,7 @@
    `(font-lock-string-face
      ((,class256 (:foreground ,bright-green))))
    `(font-lock-comment-face
-     ((,class256 (:foreground ,darkgrey))))
+     ((,class256 (:foreground ,comment))))
    `(font-lock-keyword-face
      ((,class256 (:foreground ,bright-blue))))
    `(font-lock-preprocessor-face
