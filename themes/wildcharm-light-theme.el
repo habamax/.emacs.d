@@ -97,7 +97,7 @@
    `(window-divider-last-pixel
      ((t (:foreground ,mode-line-active))))
    `(minibuffer-prompt
-     ((,class256 (:foreground ,bright-yellow :weight bold))))
+     ((,class256 (:foreground ,yellow :weight bold))))
    `(fringe
      ((t (:foreground ,non-text :background ,bg))))
    ;; -scroll-bar
@@ -119,7 +119,7 @@
    `(warning
      ((,class256 (:foreground ,yellow :weight bold))))
    `(success
-     ((,class256 (:foreground ,bright-green :weight bold))))
+     ((,class256 (:foreground ,green :weight bold))))
    `(menu
      ((t (:background ,mode-line-inactive :foreground ,fg))))
    `(tty-menu-enabled-face
@@ -221,7 +221,7 @@
 
    ;;; compilation
    `(compilation-mode-line-fail
-     ((,class256 (:foreground ,bright-red :weight bold))))
+     ((,class256 (:foreground ,red :weight bold))))
    `(compilation-mode-line-exit
      ((,class256 (:foreground ,green :weight bold))))
    `(compilation-line-number
@@ -349,13 +349,13 @@
    `(gnus-button
      ((,class256 (:underline t))))
    `(gnus-group-mail-1
-     ((,class256 (:foreground ,bright-green :weight bold))))
+     ((,class256 (:foreground ,green :weight bold))))
    `(gnus-group-mail-1-empty
-     ((,class256 (:foreground ,bright-green))))
+     ((,class256 (:foreground ,green))))
    `(gnus-group-mail-2
-     ((,class256 (:foreground ,bright-yellow :weight bold))))
+     ((,class256 (:foreground ,yellow :weight bold))))
    `(gnus-group-mail-2-empty
-     ((,class256 (:foreground ,bright-yellow))))
+     ((,class256 (:foreground ,yellow))))
    `(gnus-group-mail-3
      ((,class256 (:foreground ,fg :weight bold))))
    `(gnus-group-mail-3-empty
@@ -377,13 +377,13 @@
    `(gnus-group-mail-low-empty
      ((,class256 (:foreground ,darkgrey))))
    `(gnus-group-news-1
-     ((,class256 (:foreground ,bright-green :weight bold))))
+     ((,class256 (:foreground ,green :weight bold))))
    `(gnus-group-news-1-empty
-     ((,class256 (:foreground ,bright-green))))
+     ((,class256 (:foreground ,green))))
    `(gnus-group-news-2
-     ((,class256 (:foreground ,bright-yellow :weight bold))))
+     ((,class256 (:foreground ,yellow :weight bold))))
    `(gnus-group-news-2-empty
-     ((,class256 (:foreground ,bright-yellow))))
+     ((,class256 (:foreground ,yellow))))
    `(gnus-group-news-3
      ((,class256 (:foreground ,fg :weight bold))))
    `(gnus-group-news-3-empty
@@ -411,7 +411,7 @@
    `(gnus-summary-normal-read
      ((,class256 (:foreground ,fg))))
    `(gnus-summary-normal-ticked
-     ((,class256 (:foreground ,bright-yellow))))
+     ((,class256 (:foreground ,yellow))))
    `(gnus-summary-normal-ancient
      ((,class256 (:foreground ,fg))))
    `(gnus-summary-cancelled
@@ -425,27 +425,27 @@
    `(gnus-header-subject
      ((,class256 (:foreground ,black :weight bold))))
    `(gnus-cite-attribution
-     ((,class256 (:foreground ,bright-green :weight bold :slant normal :underline nil))))
+     ((,class256 (:foreground ,green :weight bold :slant normal :underline nil))))
    `(gnus-cite-1
-     ((,class256 (:foreground ,bright-green))))
-   `(gnus-cite-2
-     ((,class256 (:foreground ,bright-yellow))))
-   `(gnus-cite-3
-     ((,class256 (:foreground ,bright-blue))))
-   `(gnus-cite-4
-     ((,class256 (:foreground ,bright-magenta))))
-   `(gnus-cite-5
-     ((,class256 (:foreground ,bright-cyan))))
-   `(gnus-cite-6
      ((,class256 (:foreground ,green))))
-   `(gnus-cite-7
+   `(gnus-cite-2
      ((,class256 (:foreground ,yellow))))
-   `(gnus-cite-8
+   `(gnus-cite-3
      ((,class256 (:foreground ,blue))))
-   `(gnus-cite-9
+   `(gnus-cite-4
      ((,class256 (:foreground ,magenta))))
-   `(gnus-cite-10
+   `(gnus-cite-5
      ((,class256 (:foreground ,cyan))))
+   `(gnus-cite-6
+     ((,class256 (:foreground ,bright-green))))
+   `(gnus-cite-7
+     ((,class256 (:foreground ,bright-yellow))))
+   `(gnus-cite-8
+     ((,class256 (:foreground ,bright-blue))))
+   `(gnus-cite-9
+     ((,class256 (:foreground ,bright-magenta))))
+   `(gnus-cite-10
+     ((,class256 (:foreground ,bright-cyan))))
    `(gnus-cite-11
      ((,class256 (:foreground ,darkgrey))))
    `(mm-uu-extract
@@ -475,13 +475,13 @@
    `(markdown-header-face
      ((,class256 (:foreground ,black :weight bold))))
    `(markdown-header-delimiter-face
-     ((,class256 (:foreground ,bright-blue :weight bold))))
+     ((,class256 (:foreground ,blue :weight bold))))
    `(markdown-header-rule-face
-     ((,class256 (:foreground ,bright-blue :weight bold))))
+     ((,class256 (:foreground ,blue :weight bold))))
    `(markdown-code-face
      ((,class256 (:foreground ,fg))))
    `(markdown-list-face
-     ((,class256 (:foreground ,bright-yellow))))
+     ((,class256 (:foreground ,yellow))))
    `(markdown-markup-face
      ((,class256 (:foreground ,darkgrey))))
    `(markdown-inline-code-face
@@ -493,15 +493,15 @@
 
    ;;; diff
    `(diff-header
-     ((,class256 (:foreground ,bright-blue :weight bold))))
+     ((,class256 (:foreground ,blue :weight bold))))
    `(diff-file-header
      ((,class256 (:foreground ,black))))
    `(diff-hunk-header
-     ((,class256 (:foreground ,bright-yellow :weight bold))))
+     ((,class256 (:foreground ,yellow :weight bold))))
    `(diff-added
      ((,class256 (:background ,diff-added-bg :foreground ,diff-added-fg))))
    `(diff-indicator-added
-     ((t (:inherit 'diff-added :foreground ,bright-green))))
+     ((t (:inherit 'diff-added :foreground ,green))))
    `(diff-refine-added
      ((,class256 (:background ,diff-refine-added-bg :foreground ,diff-added-fg))))
    `(diff-removed
@@ -509,7 +509,7 @@
    `(diff-refine-removed
      ((,class256 (:background ,diff-refine-removed-bg :foreground ,diff-removed-fg))))
    `(diff-indicator-removed
-     ((t (:inherit 'diff-removed :foreground ,bright-red))))
+     ((t (:inherit 'diff-removed :foreground ,red))))
 
    ;;; vc
    `(vc-edited-state
@@ -525,29 +525,29 @@
    `(vc-needs-update-state
      ((,class256 (:foreground ,green))))
    `(vc-removed-state
-     ((,class256 (:foreground ,bright-red))))
+     ((,class256 (:foreground ,red))))
 
    ;;; git-commit
    `(git-commit-summary
      ((,class256 (:foreground ,black :weight bold))))
    `(git-commit-nonempty-second-line
-     ((,class256 (:foreground ,bright-red :weight bold))))
+     ((,class256 (:foreground ,red :weight bold))))
 
    ;;; magit
    `(magit-section-heading
-     ((,class256 (:foreground ,bright-yellow :weight bold))))
+     ((,class256 (:foreground ,yellow :weight bold))))
    `(magit-section-heading-selection
-     ((,class256 (:foreground ,yellow))))
+     ((,class256 (:foreground ,bright-yellow))))
    `(magit-section-highlight
      ((,class256 (:background ,hl-line))))
    `(magit-branch-local
-     ((,class256 (:foreground ,bright-blue))))
+     ((,class256 (:foreground ,blue))))
    `(magit-branch-remote
-     ((,class256 (:foreground ,bright-green))))
+     ((,class256 (:foreground ,green))))
    `(magit-cherry-equivalent
-     ((,class256 (:foreground ,bright-magenta))))
+     ((,class256 (:foreground ,magenta))))
    `(magit-cherry-unmatched
-     ((,class256 (:foreground ,bright-cyan))))
+     ((,class256 (:foreground ,cyan))))
    `(magit-bisect-bad
      ((,class256 (:foreground ,red))))
    `(magit-bisect-good
@@ -565,11 +565,11 @@
    `(magit-diff-lines-heading
      ((,class256 (:background ,green :foreground ,black))))
    `(magit-diffstat-added
-     ((,class256 (:foreground ,bright-green))))
+     ((,class256 (:foreground ,green))))
    `(magit-diffstat-removed
-     ((,class256 (:foreground ,bright-red))))
+     ((,class256 (:foreground ,red))))
    `(magit-log-author
-     ((,class256 (:foreground ,bright-red))))
+     ((,class256 (:foreground ,red))))
    `(magit-log-graph
      ((,class256 (:foreground ,darkgrey))))
    `(magit-log-date
@@ -593,15 +593,15 @@
    `(erc-nick-default-face
      ((,class256 (:foreground ,blue))))
    `(erc-current-nick-face
-     ((,class256 (:foreground ,bright-red))))
+     ((,class256 (:foreground ,red))))
    `(erc-nick-msg-face
-     ((,class256 (:foreground ,bright-yellow))))
+     ((,class256 (:foreground ,yellow))))
    `(erc-input-face
-     ((,class256 (:foreground ,bright-green))))
+     ((,class256 (:foreground ,green))))
    `(erc-error-face
-     ((,class256 (:foreground ,red))))
+     ((,class256 (:foreground ,bright-red))))
    `(erc-dangerous-host-face
-     ((,class256 (:foreground ,red))))
+     ((,class256 (:foreground ,bright-red))))
    `(erc-direct-msg-face
      ((,class256 (:foreground ,yellow))))
    `(erc-button
@@ -663,11 +663,11 @@
    `(calendar-month-header
      ((,class256 (:foreground ,black :weight bold))))
    `(calendar-weekday-header
-     ((,class256 (:foreground ,bright-blue))))
+     ((,class256 (:foreground ,blue))))
    `(calendar-weekend-header
-     ((,class256 (:foreground ,bright-yellow))))
+     ((,class256 (:foreground ,yellow))))
    `(calendar-today
-     ((,class256 (:foreground ,bright-green))))
+     ((,class256 (:foreground ,green))))
 
    ;;; elfeed
    `(elfeed-log-date-face
@@ -689,20 +689,20 @@
    `(elfeed-search-feed-face
      ((,class256 (:foreground ,green))))
    `(elfeed-search-tag-face
-     ((,class256 (:foreground ,bright-yellow))))
+     ((,class256 (:foreground ,yellow))))
    `(elfeed-search-unread-count-face
-     ((,class256 (:foreground ,bright-blue))))
+     ((,class256 (:foreground ,blue))))
 
    ;;; eshell
    `(eshell-prompt
      ((,class256 (:foreground ,bright-magenta :weight bold))))
    `(eshell-ls-directory
-     ((,class256 (:foreground ,bright-blue :weight bold))))
+     ((,class256 (:foreground ,blue :weight bold))))
    `(eshell-ls-symlink
-     ((,class256 (:foreground ,bright-cyan :weight bold))))
+     ((,class256 (:foreground ,cyan :weight bold))))
    `(eshell-ls-executable
-     ((,class256 (:foreground ,bright-green :weight bold))))
-   `(eshell-ls-clutter
+     ((,class256 (:foreground ,green :weight bold))))
+   `(eshell-ls-cluttern
      ((,class256 (:foreground ,red))))
    `(eshell-ls-archive
      ((,class256 (:foreground ,yellow))))
