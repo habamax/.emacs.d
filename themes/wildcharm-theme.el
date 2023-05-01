@@ -179,6 +179,15 @@
      ((,class256 (:background ,hl-line :foreground nil))))
 
    ;;; widget
+   `(custom-button
+     ((,class256 (:background ,header-line :foreground ,fg :extend t
+                              :box (:line-width (2 . 2) :style released-button)))))
+   `(custom-button-pressed
+     ((,class256 (:background ,header-line :foreground ,fg :extend t
+                              :box (:line-width (2 . 2) :style pressed-button)))))
+   `(custom-button-mouse
+     ((,class256 (:background ,non-text :foreground ,fg :extend t
+                              :box (:line-width (2 . 2) :style released-button)))))
    `(widget-field
      ((,class256 (:background ,header-line :foreground ,fg :extend t))))
    `(widget-button-pressed
