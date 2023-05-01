@@ -730,7 +730,7 @@
 
    ;;; eww
    `(eww-form-text
-     ((,class256 (:background ,grey :foreground ,black))))
+     ((,class256 (:inherit widget-field))))
    `(eww-form-submit
      ((,class256 (:inherit custom-button))))
    
