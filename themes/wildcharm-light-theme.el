@@ -331,7 +331,7 @@
    `(org-agenda-done
      ((,class256 (:foreground ,bright-green))))
    `(org-scheduled-today
-     ((,class256 (:foreground ,bright-green))))
+     ((,class256 (:foreground ,green))))
    `(org-scheduled
      ((,class256 (:foreground ,yellow))))
    `(org-scheduled-previously
