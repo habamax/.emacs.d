@@ -22,6 +22,7 @@
       (cyan "#005f5f")(bright-cyan "#008787")
       (grey "#d0d0d0")(white "#ffffff")
       (special "#875fff")(comment "#87875f")
+      (yellow1 "#d7af5f")(yellow2 "#ffd75f")
       (match-paren "#ff00af")(non-text "#b2b2b2")
       (mode-line-active "#d0d0d0")(mode-line-inactive "#e4e4e4")
       (menu "#262626")
@@ -159,6 +160,10 @@
    ;;; isearch
    `(isearch
      ((,class256 (:background ,bright-yellow :foreground ,bg))))
+   `(isearch-group-1
+     ((,class256 (:background ,yellow2 :foreground ,black))))
+   `(isearch-group-2
+     ((,class256 (:background ,yellow1 :foreground ,black))))
    `(lazy-highlight
      ((,class256 (:background ,green :foreground ,bg))))
    `(isearch-fail
