@@ -65,6 +65,7 @@
 
 ;;; Simple HTML renderer to use default font.
 (setq shr-use-fonts nil)
+(setq shr-color-visible-luminance-min 78)
 
 ;;; ripgrep as grep
 (setq grep-command "rg -nS --no-heading "
