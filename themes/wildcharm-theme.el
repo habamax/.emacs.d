@@ -283,7 +283,7 @@
    `(org-block-end-line
      ((t (:inherit org-block-begin-line))))
    `(org-document-title
-     ((,class256 (:foreground ,white :weight bold))))
+     ((,class256 (:foreground ,white :weight bold :height 1.3))))
    `(org-document-info
      ((,class256 (:foreground ,fg))))
    `(org-drawer
