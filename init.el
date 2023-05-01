@@ -207,7 +207,7 @@
   :config
   (require 'habamax-org)
   (setq org-directory (or (getenv "DOCS") "~/docs"))
-  (setq org-agenda-files '("todo.org" "notes.org"))
+  (setq org-agenda-files '("todo.org" "notes.org" "birthdays.org"))
   (setq org-refile-use-outline-path 'file
         org-refile-targets '((org-agenda-files :maxlevel . 1)))
   (setq org-todo-keywords '((sequence "TODO" "DELEGATED" "WAITING"
