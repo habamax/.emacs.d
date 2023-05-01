@@ -158,7 +158,7 @@
 
    ;;; isearch
    `(isearch
-     ((,class256 (:background ,yellow :foreground ,bg))))
+     ((,class256 (:background ,bright-yellow :foreground ,bg))))
    `(lazy-highlight
      ((,class256 (:background ,green :foreground ,bg))))
    `(isearch-fail
