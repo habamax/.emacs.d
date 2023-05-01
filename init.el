@@ -196,6 +196,8 @@
   :ensure nil
   :bind (("C-c o c" . org-capture)
          ("C-c o a" . org-agenda)
+         ("C-c o l" . org-store-link)
+         ("C-c o L" . org-insert-link)
          ("C-c o n" . org/notes)
          ("C-c o t" . org/todo)
          ("C-c o s" . org/insert-screenshot)
