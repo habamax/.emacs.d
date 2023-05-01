@@ -369,10 +369,10 @@ kbd {
     font-family: monospace;
 }
 .todo {
-    background-color: red
+    background-color: #d7875f;
 }
 .done {
-    background-color: green
+    background-color: #5faf00;
 }
 .priority {
     color: orange;
