@@ -719,6 +719,12 @@
    `(eshell-ls-special
      ((,class256 (:foreground ,magenta))))
 
+   ;;; eww
+   `(eww-form-text
+     ((,class256 (:background ,grey :foreground ,black))))
+   `(eww-form-submit
+     ((,class256 (:inherit custom-button))))
+   
    ;;; emms
    `(emms-playlist-selected-face
      ((,class256 (:foreground ,blue :weight bold))))
