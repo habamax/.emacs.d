@@ -144,6 +144,7 @@
 
 (use-package habamax
   :load-path "site-lisp"
+  :commands init-file
   :bind (("M-;" . habamax/toggle-comment)
          ("M-o" . delete-blank-lines)
          ("M-n" . habamax/move-line-down)
@@ -159,7 +160,6 @@
          ("M-s g" . habamax/grep-current-word)
          ("M-s t" . habamax/grep-todo)
          ("C-c m" . imenu)
-         ("C-c v i" . habamax/init-file)
          ("C-c t n" . display-line-numbers-mode)
          ("C-c t SPC" . whitespace-mode)
          ("C-c t s" . flyspell-mode)
@@ -174,7 +174,7 @@
          ("b" . habamax/next-buffer-like-this)
          ("B" . habamax/previous-buffer-like-this))
   :config
-  (defun habamax/init-file ()
+  (defun init-file ()
     (interactive)
     (find-file user-init-file)))
 
@@ -195,12 +195,11 @@
 
 (use-package org
   :ensure nil
+  :commands (todo notes)
   :bind (("C-c o c" . org-capture)
          ("C-c o a" . org-agenda)
          ("C-c o l" . org-store-link)
          ("C-c o L" . org-insert-link)
-         ("C-c v n" . org/notes)
-         ("C-c v t" . org/todo)
          ("C-c o s" . org/insert-screenshot)
          :repeat-map habamax-org-map
          ("t" . org-todo))
