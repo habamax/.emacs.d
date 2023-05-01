@@ -20,14 +20,15 @@
 (define-abbrev org-mode-abbrev-table "bimp" "" 'org-ad-important :system t)
 (define-abbrev org-mode-abbrev-table "bsrc" "" 'org-src :system t)
 
+
 ;;;###autoload
-(defun org/notes ()
+(defun notes ()
   (interactive)
   (find-file (concat org-directory "/notes.org")))
 
 
 ;;;###autoload
-(defun org/todo ()
+(defun todo ()
   (interactive)
   (find-file (concat org-directory "/todo.org")))
 
