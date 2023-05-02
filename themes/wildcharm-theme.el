@@ -109,7 +109,7 @@
      ((t (:foreground ,non-text :background ,bg))))
    ;; -scroll-bar
    `(cursor
-     ((t (:background "#ffffff"))))
+     ((t (:background "#ff7f3f"))))
    ;; -tool-bar
    `(tab-bar
      ((,class256 (:background ,mode-line-inactive :foreground ,darkgrey))))
