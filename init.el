@@ -32,15 +32,17 @@
   (load custom-file))
 
 (if +IS-WINDOWS+
-    (let ((fonts '(("JetBrains Mono NL" . "JetBrains Mono NL-12")
-                   ("Cascadia Mono SemiLight" . "Cascadia Mono SemiLight-12")
-                   ("Consolas" . "Consolas-12"))))
+    (let ((fonts '(("JetBrains Mono NL" . "13")
+                   ("Cascadia Mono SemiLight" . "13")
+                   ("Consolas" . "13"))))
       (cl-dolist (fnt fonts)
-        (when (find-font (font-spec :name (car fnt)))
-          (add-to-list 'default-frame-alist `(font . ,(cdr fnt)))
-          (set-face-attribute 'fixed-pitch nil :font (cdr fnt))
-          (set-face-attribute 'fixed-pitch-serif nil :font (cdr fnt))
-          (cl-return))))
+        (let ((fnt-name (car fnt))
+              (fnt-spec (format "%s-%s" (car fnt) (cdr fnt))))
+          (when (find-font (font-spec :name fnt-name))
+            (add-to-list 'default-frame-alist `(font . ,fnt-spec))
+            (set-face-attribute 'fixed-pitch nil :font fnt-spec)
+            (set-face-attribute 'fixed-pitch-serif nil :font fnt-spec)
+            (cl-return)))))
   (add-to-list 'default-frame-alist '(font . "Monospace-16")))
 
 (when +IS-WINDOWS+
