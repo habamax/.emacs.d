@@ -16,7 +16,7 @@
  
 (setq-default
  default-frame-alist
- '((height . 40) (width . 160)
+ '((fullscreen . maximized)
    (horizontal-scroll-bars . nil)
    (vertical-scroll-bars . nil)
    (menu-bar-lines . 0)
