@@ -62,6 +62,7 @@
 (setq-default line-number-mode t)
 (setq describe-bindings-outline t)
 (setq set-mark-command-repeat-pop t)
+(setq show-paren-when-point-inside-paren t)
 
 ;;; Simple HTML renderer to use default font.
 (setq shr-use-fonts nil)
