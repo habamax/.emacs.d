@@ -339,15 +339,15 @@
    `(org-date-selected
      ((,class256 (:background ,bright-magenta :foreground ,bg))))
    `(org-agenda-date
-     ((,class256 (:foreground ,cyan :weight normal))))
+     ((,class256 (:foreground ,fg :weight normal))))
    `(org-agenda-date-today
      ((,class256 (:foreground ,blue :weight bold :height 1.1))))
    `(org-agenda-done
-     ((,class256 (:foreground ,bright-green))))
-   `(org-scheduled-today
      ((,class256 (:foreground ,green))))
+   `(org-scheduled-today
+     ((,class256 (:foreground ,bright-cyan))))
    `(org-scheduled
-     ((,class256 (:foreground ,yellow))))
+     ((,class256 (:foreground ,cyan))))
    `(org-scheduled-previously
      ((,class256 (:foreground ,red))))
    `(org-upcoming-deadline
@@ -358,6 +358,8 @@
      ((,class256 (:foreground ,darkgrey :weight normal))))
    `(org-agenda-current-time
      ((,class256 (:foreground ,bright-blue))))
+   `(org-table
+     ((,class256 (:foreground ,fg))))
 
    ;;; gnus
    `(gnus-button
