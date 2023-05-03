@@ -754,7 +754,9 @@
      ((,class256 (:inherit widget-field))))
    `(eww-form-submit
      ((,class256 (:inherit custom-button))))
-   
+   `(eww-form-file
+     ((,class256 (:inherit custom-button))))
+      
    ;;; emms
    `(emms-playlist-selected-face
      ((,class256 (:foreground ,bright-blue :weight bold))))
