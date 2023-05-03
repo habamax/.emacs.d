@@ -297,7 +297,7 @@
    `(org-block-end-line
      ((t (:inherit org-block-begin-line))))
    `(org-document-title
-     ((,class256 (:foreground ,white :weight bold :height 1.3))))
+     ((,class256 (:foreground ,white :weight bold))))
    `(org-document-info
      ((,class256 (:foreground ,fg))))
    `(org-drawer
@@ -339,15 +339,15 @@
    `(org-dispatcher-highlight
      ((,class256 (:foreground ,bright-red :weight bold))))
    `(org-agenda-structure
-     ((,class256 (:foreground ,white :weight bold :height 1.3))))
+     ((,class256 (:foreground ,white :weight bold))))
    `(org-agenda-structure-filter
-     ((,class256 (:foreground ,bright-red :weight bold :height 1.3))))
+     ((,class256 (:foreground ,bright-red :weight bold))))
    `(org-date-selected
      ((,class256 (:background ,bright-magenta :foreground ,bg))))
    `(org-agenda-date
      ((,class256 (:foreground ,fg :weight normal))))
    `(org-agenda-date-today
-     ((,class256 (:foreground ,blue :weight bold :height 1.1))))
+     ((,class256 (:foreground ,blue :weight bold))))
    `(org-agenda-done
      ((,class256 (:foreground ,bright-green))))
    `(org-scheduled-today
