@@ -305,27 +305,27 @@
    `(org-block
      ((t (:foreground ,fg))))
    `(org-level-1
-     ((,class256 (:foreground ,black :weight bold :height 1.3))))
+     ((,class256 (:foreground ,black :weight bold))))
    `(org-level-2
-     ((,class256 (:foreground ,black :weight bold :height 1.2))))
+     ((,class256 (:foreground ,black :weight bold))))
    `(org-level-3
-     ((,class256 (:foreground ,black :weight bold :height 1.1))))
+     ((,class256 (:foreground ,black :weight bold))))
    `(org-level-4
-     ((,class256 (:foreground ,black :weight bold :height 1.1))))
+     ((,class256 (:foreground ,black :weight bold))))
    `(org-level-5
-     ((,class256 (:foreground ,black :weight bold :height 1.1))))
+     ((,class256 (:foreground ,black :weight bold))))
    `(org-level-6
-     ((,class256 (:foreground ,black :weight bold :height 1.1))))
+     ((,class256 (:foreground ,black :weight bold))))
    `(org-level-7
-     ((,class256 (:foreground ,black :weight bold :height 1.1))))
+     ((,class256 (:foreground ,black :weight bold))))
    `(org-level-8
-     ((,class256 (:foreground ,black :weight bold :height 1.1))))
+     ((,class256 (:foreground ,black :weight bold))))
    `(org-todo
      ((,class256 (:foreground ,yellow :weight bold))))
    `(org-done
      ((,class256 (:foreground ,green :weight bold))))
    `(org-date
-     ((,class256 (:foreground ,darkgrey :underline t))))
+     ((,class256 (:foreground ,darkgrey))))
    `(org-headline-done
      ((,class256 (:foreground ,nil))))
    `(org-checkbox
