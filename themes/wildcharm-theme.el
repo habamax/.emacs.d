@@ -749,6 +749,8 @@
 
    ;;; eww
    `(eww-form-text
+     ((,class256 (:inherit widget-field :box (:foreground ,darkgrey)))))
+   `(eww-form-textarea
      ((,class256 (:inherit widget-field))))
    `(eww-form-submit
      ((,class256 (:inherit custom-button))))
