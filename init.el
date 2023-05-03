@@ -248,7 +248,6 @@
 (use-package dictionary
   :ensure nil
   :commands dictionary-lookup-definition
-  :bind ("C-c l" . dictionary-lookup-definition)
   :config
   (setq dictionary-server "dict.org"))
 
