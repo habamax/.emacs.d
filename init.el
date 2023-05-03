@@ -213,12 +213,6 @@
   (setq org-agenda-files '("todo.org" "notes.org" "birthdays.org"))
   (setq org-refile-use-outline-path 'file
         org-refile-targets '((org-agenda-files :maxlevel . 1)))
-  (setq org-todo-keywords '((sequence "TODO" "DELEGATED" "WAITING"
-                                      "|" "CANCELLED" "DONE")))
-  (setq org-todo-keyword-faces
-        '(("CANCELLED" . font-lock-type-face)
-          ("WAITING" . font-lock-function-name-face)
-          ("DELEGATED" . font-lock-preprocessor-face)))
   (setq org-capture-templates
       '(("t" "Todo" entry (file "todo.org")
          "* TODO %?\n%U" :empty-lines 1 :prepend t)
