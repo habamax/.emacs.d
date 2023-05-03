@@ -43,7 +43,7 @@
             (set-face-attribute 'fixed-pitch nil :font fnt-spec)
             (set-face-attribute 'fixed-pitch-serif nil :font fnt-spec)
             (cl-return)))))
-  (add-to-list 'default-frame-alist '(font . "Monospace-16")))
+  (add-to-list 'default-frame-alist '(font . "Monospace-18")))
 
 (when +IS-WINDOWS+
   (set-language-environment 'utf-8)
