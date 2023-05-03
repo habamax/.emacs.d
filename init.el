@@ -380,7 +380,8 @@
       (when (yes-or-no-p
              (format "Delete %d %s marked as `%s'?" count mail del-tag))
         (shell-command
-         (format "notmuch search --output=files --format=text0 tag:%s | xargs -r0 rm" del-tag))))))
+         (format "notmuch search --output=files --format=text0 tag:%s | xargs -r0 rm"
+                 del-tag))))))
 
 (use-package emms
   :commands (emms emms-add-directory-tree)
