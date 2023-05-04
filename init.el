@@ -191,8 +191,7 @@
 (use-package habamax-dev
   :load-path "site-lisp"
   :commands (habamax-dev/run-c-file
-             habamax-dev/run-python-file
-             habamax-dev/run-cargo)
+             habamax-dev/run-python-file)
   :init
   (add-hook 'c-mode-hook
             (lambda ()
