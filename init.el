@@ -220,17 +220,17 @@
   (setq org-refile-use-outline-path 'file
         org-refile-targets '((org-agenda-files :maxlevel . 1)))
   (setq org-capture-templates
-      '(("t" "Todo" entry (file "todo.org")
-         "* TODO %?\n%U" :empty-lines 1 :prepend t)
-        ("T" "Todo with link" entry (file "todo.org")
-         "* TODO %?\n%U\n\n%i\n%a" :empty-lines 1 :prepend t)
-        ("n" "Note" entry (file "notes.org")
-         "* %?\n%T\n%i\n" :empty-lines 1 :prepend t)
-        ("N" "Note with link" entry (file "notes.org")
-         "* %?\n%T\n%i\n%a" :empty-lines 1 :prepend t)
-        ("m" "Meeting notes" entry (file "notes.org")
-         "* Meeting Notes\n%T\n\nAttendees:\n\n%?\n\nStatus:\n\n"
-         :empty-lines 1 :prepend t)))
+        '(("t" "Todo" entry (file "todo.org")
+           "* TODO %?\n%U" :empty-lines 1 :prepend t)
+          ("T" "Todo with link" entry (file "todo.org")
+           "* TODO %?\n%U\n\n%i\n%a" :empty-lines 1 :prepend t)
+          ("n" "Note" entry (file "notes.org")
+           "* %?\n%T\n%i\n" :empty-lines 1 :prepend t)
+          ("N" "Note with link" entry (file "notes.org")
+           "* %?\n%T\n%i\n%a" :empty-lines 1 :prepend t)
+          ("m" "Meeting notes" entry (file "notes.org")
+           "* Meeting Notes\n%T\n\nAttendees:\n\n%?\n\nStatus:\n\n"
+           :empty-lines 1 :prepend t)))
   (setq org-export-with-sub-superscripts '{}
         org-export-headline-levels 5
         org-export-with-email t)
