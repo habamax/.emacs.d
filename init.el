@@ -45,6 +45,9 @@
             (cl-return)))))
   (add-to-list 'default-frame-alist '(font . "Monospace-18")))
 
+(when (getenv "WSLENV")
+  (xclip-mode 1))
+
 (when +IS-WINDOWS+
   (set-language-environment 'utf-8)
   (setq default-buffer-file-coding-system 'utf-8-unix))
