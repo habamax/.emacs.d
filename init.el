@@ -106,8 +106,8 @@
 
 ;;; use packages
 (unless (package-installed-p 'use-package)
-    (package-refresh-contents)
-    (package-install 'use-package))
+  (package-refresh-contents)
+  (package-install 'use-package))
 
 (setq-default
  package-native-compile t
