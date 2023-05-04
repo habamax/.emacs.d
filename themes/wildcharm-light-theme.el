@@ -189,6 +189,8 @@
                               :box (:line-width (2 . 2) :style released-button)))))
    `(widget-field
      ((,class256 (:background ,header-line :foreground ,fg :extend t))))
+   `(widget-inactive
+     ((,class256 (:foreground ,darkgrey))))
    `(widget-button-pressed
      ((,class256 (:foreground ,bright-red))))
    `(widget-documentation
