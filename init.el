@@ -137,13 +137,18 @@
         '(("\\*e?shell\\*"
            (display-buffer-in-side-window)
            (window-height . 0.3)
-           (side . top)
-           (slot . 0))
+           (side . bottom)
+           (slot . -1))
           ("\\*\\(grep\\|compilation\\|godot - .+\\)\\*"
            (display-buffer-in-side-window)
            (window-height . 0.3)
            (side . bottom)
-           (slot . 0)))))
+           (slot . 0))
+          ("\\*Customize .*\\*"
+           (display-buffer-in-side-window)
+           (window-width . 0.3)
+           (side . right)
+           (slot . -1)))))
 
 (use-package habamax
   :load-path "site-lisp"
