@@ -23,6 +23,7 @@
       (grey "#d0d0d0")(white "#ffffff")
       (special "#875fff")(comment "#87875f")
       (yellow1 "#d7af5f")(yellow2 "#ffd75f")
+      (grey1 "#dadada")(grey2 "#eeeeee")
       (match-paren "#ff00af")(non-text "#b2b2b2")
       (mode-line-active "#d0d0d0")(mode-line-inactive "#e4e4e4")
       (menu "#262626")
@@ -576,6 +577,14 @@
      ((,class256 (:foreground ,green))))
    `(magit-bisect-skip
      ((,class256 (:foreground ,yellow))))
+   `(magit-diff-hunk-heading
+     ((t (:background ,grey1))))
+   `(magit-diff-hunk-heading-highlight
+     ((t (:background ,grey1 :weight bold))))
+   `(magit-diff-context
+     ((t (:foreground ,fg))))
+   `(magit-diff-context-highlight
+     ((t (:background ,grey2))))
    `(magit-diff-added
      ((t (:inherit 'diff-added))))
    `(magit-diff-added-highlight
