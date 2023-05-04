@@ -199,7 +199,11 @@
      ((,class256 (:foreground ,red))))
    `(widget-documentation
      ((,class256 (:foreground ,green))))
-   
+
+   ;;; customize
+   `(custom-variable-tag
+     ((,class256 (:foreground ,white :weight bold))))
+      
    ;;; dired
    `(dired-header
      ((,class256 (:foreground ,white :weight bold))))

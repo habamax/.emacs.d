@@ -193,7 +193,11 @@
      ((,class256 (:foreground ,bright-red))))
    `(widget-documentation
      ((,class256 (:foreground ,green))))
-   
+
+   ;;; customize
+   `(custom-variable-tag
+     ((,class256 (:weight bold))))
+      
    ;;; dired
    `(dired-header
      ((,class256 (:foreground ,fg :weight bold))))
