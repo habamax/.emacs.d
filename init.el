@@ -66,7 +66,8 @@
 (setq set-mark-command-repeat-pop t)
 (setq show-paren-when-point-inside-paren t)
 
-(setq epa-pinentry-mode 'loopback)
+(when +IS-WINDOWS+
+  (setq epa-pinentry-mode 'loopback))
 
 ;;; Simple HTML renderer to use default font.
 (setq shr-use-fonts nil)
