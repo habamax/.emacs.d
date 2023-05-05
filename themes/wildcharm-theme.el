@@ -646,6 +646,14 @@
      ((,classTTY (:inherit warning :underline t))
       (t (:underline (:style wave :color ,bright-yellow)))))
    
+   ;;; flymake
+   `(flymake-error
+     ((,classTTY (:inherit error :underline t))
+      (t (:underline (:style wave :color ,bright-red)))))
+   `(flymake-warning
+     ((,classTTY (:inherit warning :underline t))
+      (t (:underline (:style wave :color ,bright-yellow)))))
+   
    ;;; erc
    `(erc-timestamp-face
      ((,class256 (:foreground ,darkgrey))))
