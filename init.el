@@ -97,7 +97,9 @@
 (recentf-mode 1)
 (repeat-mode t)
 (winner-mode t)
-(fido-vertical-mode 1)
+
+;; try vertico instead
+;; (fido-vertical-mode 1)
 
 (setq completion-auto-help 'always
       completion-show-help nil)
@@ -203,6 +205,11 @@
               (c-toggle-comment-style -1)))
   (add-hook 'python-mode-hook
             (lambda () (local-set-key [f5] 'habamax-dev/run-python-file))))
+
+(use-package vertico
+  :init
+  (setq completion-styles '(flex))
+  (vertico-mode))
 
 (use-package org
   :ensure nil
