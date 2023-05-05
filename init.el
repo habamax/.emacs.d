@@ -315,6 +315,11 @@
 (use-package lorem-ipsum
   :commands (lorem-ipsum-insert-sentences lorem-ipsum-insert-paragraphs))
 
+(use-package company
+  :commands (company-mode global-company-mode)
+  :config
+  (company-tng-mode 1))
+
 (use-package gdscript-mode)
 
 (use-package zig-mode)
