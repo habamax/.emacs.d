@@ -638,6 +638,14 @@
    `(epa-validity-disabled
      ((,class256 (:foreground ,darkgrey))))
 
+   ;;; flyspell
+   `(flyspell-incorrect
+     ((,classTTY (:inherit error :underline t))
+      (t (:underline (:style wave :color ,bright-red)))))
+   `(flyspell-duplicate
+     ((,classTTY (:inherit warning :underline t))
+      (t (:underline (:style wave :color ,bright-yellow)))))
+   
    ;;; erc
    `(erc-timestamp-face
      ((,class256 (:foreground ,darkgrey))))
