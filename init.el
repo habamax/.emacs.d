@@ -173,6 +173,7 @@
          ("C-c t n" . display-line-numbers-mode)
          ("C-c t SPC" . whitespace-mode)
          ("C-c t s" . flyspell-mode)
+         ("C-c t m" . flymake-mode)
          ("C-c t l" . hl-line-mode)
          ("C-c t l" . hl-line-mode)
          ("C-c t f" . display-fill-column-indicator-mode)
