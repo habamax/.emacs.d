@@ -628,6 +628,16 @@
    `(smerge-refined-removed
      ((t (:background ,red :foreground ,black))))
 
+   ;;; epa
+   `(epa-validity-high
+     ((,class256 (:foreground ,bright-green :weight bold))))
+   `(epa-validity-medium
+     ((,class256 (:foreground ,bright-cyan :weight bold))))
+   `(epa-validity-low
+     ((,class256 (:foreground ,yellow))))
+   `(epa-validity-disabled
+     ((,class256 (:foreground ,darkgrey))))
+
    ;;; erc
    `(erc-timestamp-face
      ((,class256 (:foreground ,darkgrey))))
