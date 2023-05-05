@@ -803,6 +803,11 @@
      ((,class256 (:foreground ,magenta))))
    `(emms-browser-year/genre-face
      ((,class256 (:foreground ,red))))
+
+   ;;; vertico
+   `(vertico-current
+     ((,class256 (:inherit hl-line))))
+   
    ))
 
 ;;;###autoload
