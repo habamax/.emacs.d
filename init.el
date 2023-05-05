@@ -313,9 +313,9 @@
   :commands (lorem-ipsum-insert-sentences lorem-ipsum-insert-paragraphs))
 
 (use-package xclip
-  :if (or (getenv "WSLENV") (not (display-graphic-p)))
   :init
-  (xclip-mode 1))
+  (when (getenv "WSLENV")
+    (xclip-mode 1)))
 
 (use-package company
   :commands (company-mode global-company-mode)
