@@ -314,7 +314,7 @@
 
 (use-package xclip
   :init
-  (when (getenv "WSLENV")
+  (when (and (eq system-type 'gnu/linux) (not (display-graphic-p)))
     (xclip-mode 1)))
 
 (use-package company
