@@ -15,11 +15,6 @@
  'after-init-hook
  (lambda () (setq gc-cons-threshold (default-value 'gc-cons-threshold))))
 
-;;; emacsclient to focus new frame
-(add-hook
- 'server-after-make-frame-hook
- (lambda () (select-frame-set-input-focus (selected-frame))))
-
 (setq user-full-name "Maxim Kim"
       user-mail-address "habamax@gmail.com"
       send-mail-function 'smtpmail-send-it
