@@ -678,7 +678,7 @@
    `(erc-prompt-face
      ((,class256 (:background nil :foreground ,bright-magenta :weight bold))))
    `(erc-action-face
-     ((,class256 (:background nil :foreground ,cyan :weight bold))))
+     ((,class256 (:background nil :foreground ,comment))))
    `(fg:erc-face0
      ((,class256 (:foreground ,black))))
    `(fg:erc-face1
