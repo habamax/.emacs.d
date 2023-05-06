@@ -217,6 +217,13 @@
          ("C-c o l" . org-store-link)
          ("C-c o L" . org-insert-link)
          ("C-c o s" . org/insert-screenshot)
+         :map org-mode-map
+         ("C-c i s" . org-src)
+         ("C-c i c" . org-ad-caution)
+         ("C-c i n" . org-ad-note)
+         ("C-c i t" . org-ad-tip)
+         ("C-c i w" . org-ad-warning)
+         ("C-c i i" . org-ad-important)
          :repeat-map habamax-org-map
          ("t" . org-todo))
   :mode (("\\.org$" . org-mode))
