@@ -206,9 +206,14 @@
   (add-hook 'python-mode-hook
             (lambda () (local-set-key [f5] 'habamax-dev/run-python-file))))
 
+(use-package orderless
+  :config
+  (setq completion-styles '(orderless basic))
+  (setq orderless-matching-styles
+        '(orderless-literal orderless-initialism orderless-flex)))
+
 (use-package vertico
   :init
-  (setq completion-styles '(flex))
   (vertico-mode))
 
 (use-package org
