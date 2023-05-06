@@ -200,15 +200,19 @@
   (add-hook 'python-mode-hook
             (lambda () (local-set-key [f5] 'habamax-dev/run-python-file))))
 
+(use-package vertico
+  :init
+  (vertico-mode))
+
+(use-package marginalia
+  :init
+  (marginalia-mode))
+
 (use-package orderless
   :config
   (setq completion-styles '(orderless basic))
   (setq orderless-matching-styles
         '(orderless-literal orderless-initialism orderless-flex)))
-
-(use-package vertico
-  :init
-  (vertico-mode))
 
 (use-package org
   :ensure nil
@@ -254,10 +258,6 @@
                   (insert-file-contents (concat user-emacs-directory "org/org.css"))
                   (buffer-string))
                 "</style>\n")))
-
-(use-package marginalia
-  :init
-  (marginalia-mode))
 
 (use-package dictionary
   :ensure nil
