@@ -819,7 +819,21 @@
    ;;; vertico
    `(vertico-current
      ((,class256 (:inherit hl-line))))
+
+   ;;; orderless
+   `(orderless-match-face-0
+     ((,class256 (:foreground ,bright-blue :weight bold))))
+   `(orderless-match-face-1
+     ((,class256 (:foreground ,bright-magenta :weight bold))))
+   `(orderless-match-face-2
+     ((,class256 (:foreground ,bright-green :weight bold))))
+   `(orderless-match-face-3
+     ((,class256 (:foreground ,bright-yellow :weight bold))))
    
+   ;;; marginalia
+   `(marginalia-key
+     ((,class256 (:foreground ,cyan))))
+
    ))
 
 ;;;###autoload
