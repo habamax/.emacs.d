@@ -209,7 +209,7 @@
   (marginalia-mode))
 
 (use-package orderless
-  :config
+  :init
   (setq completion-styles '(orderless basic))
   (setq orderless-matching-styles
         '(orderless-literal orderless-initialism orderless-flex)))
