@@ -98,12 +98,6 @@
 (repeat-mode t)
 (winner-mode t)
 
-;; try vertico instead
-;; (fido-vertical-mode 1)
-
-(setq completion-auto-help 'always
-      completion-show-help nil)
-
 (if (window-system)
     (cd "~/"))
 
