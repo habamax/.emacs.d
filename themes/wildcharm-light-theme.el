@@ -806,7 +806,7 @@
 
    ;;; vertico
    `(vertico-current
-     ((,class256 (:inherit hl-line))))
+     ((,class256 (:background ,hl-line))))
 
    ;;; orderless
    `(orderless-match-face-0
