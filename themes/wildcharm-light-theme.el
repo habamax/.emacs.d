@@ -30,11 +30,9 @@
       (header-line "#dadada")
       (hl-line "#eeeeee")
       (block "#eeeeee")
-      (diff-added-bg "#afd7af")
-      (diff-refine-added-bg "#afd7d7")
+      (diff-added-bg "#afd7af") (diff-refine-added-bg "#afd7d7")
       (diff-added-fg "#005f00")
-      (diff-removed-bg "#d7afaf")
-      (diff-refine-removed-bg "#d7d7af")
+      (diff-removed-bg "#d7afaf") (diff-refine-removed-bg "#d7d7af")
       (diff-removed-fg "#5f0000"))
 
   (custom-theme-set-faces
