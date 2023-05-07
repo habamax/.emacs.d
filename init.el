@@ -216,6 +216,8 @@
          ("C-x p b" . consult-project-buffer)
          ("C-x r b" . consult-bookmark)
          ("C-c m" . consult-imenu)
+         ("M-g o" . consult-outline)
+         ("M-s r" . consult-ripgrep)
          ("M-y" . consult-yank-pop)))
 
 (use-package org
