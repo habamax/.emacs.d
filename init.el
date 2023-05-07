@@ -218,6 +218,7 @@
          ("C-c o L" . org-insert-link)
          ("C-c o s" . org/insert-screenshot)
          :map org-mode-map
+         ("M-g o" . org-goto)
          ("C-c i s" . org/insert-src)
          ("C-c i c" . org/insert-ad-caution)
          ("C-c i n" . org/insert-ad-note)
@@ -229,6 +230,7 @@
   :mode (("\\.org$" . org-mode))
   :config
   (require 'habamax-org)
+  (setq org-goto-interface 'outline-path-completion)
   (setq org-directory (or (getenv "DOCS") "~/docs"))
   (setq org-agenda-files '("todo.org" "notes.org" "birthdays.org"))
   (setq org-refile-use-outline-path 'file
