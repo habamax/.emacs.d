@@ -153,7 +153,7 @@
          ("M-p" . habamax/move-line-up)
          ("C-w" . habamax/kill-region)
          ("M-w" . habamax/kill-ring-save)
-         ;; ("C-x C-r" . habamax/recentf-open)
+         ("C-x C-r" . habamax/recentf-open)
          ("C-c b" . habamax/next-buffer-like-this)
          ("C-c B" . habamax/previous-buffer-like-this)
          ("C-c i d" . habamax/insert-current-date)
@@ -161,7 +161,7 @@
          ("C-c d" . habamax/duplicate-line)
          ("M-s g" . habamax/grep-current-word)
          ("M-s t" . habamax/grep-todo)
-         ;; ("C-c m" . imenu)
+         ("C-c m" . imenu)
          ("C-c t n" . display-line-numbers-mode)
          ("C-c t SPC" . whitespace-mode)
          ("C-c t s" . flyspell-mode)
@@ -208,18 +208,6 @@
   (setq completion-styles '(orderless basic))
   (setq orderless-matching-styles
         '(orderless-literal orderless-initialism orderless-flex)))
-
-(use-package consult
-  :bind (("C-x b" . consult-buffer)
-         ("C-x 4 b" . consult-buffer-other-window)
-         ("C-x 5 b" . consult-buffer-other-frame)
-         ("C-x p b" . consult-project-buffer)
-         ("C-x r b" . consult-bookmark)
-         ("C-x C-r" . consult-recent-file)
-         ("C-c m" . consult-imenu)
-         ("M-g o" . consult-outline)
-         ("M-s r" . consult-ripgrep)
-         ("M-y" . consult-yank-pop)))
 
 (use-package org
   :ensure nil
