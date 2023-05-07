@@ -218,12 +218,12 @@
          ("C-c o L" . org-insert-link)
          ("C-c o s" . org/insert-screenshot)
          :map org-mode-map
-         ("C-c i s" . org-src)
-         ("C-c i c" . org-ad-caution)
-         ("C-c i n" . org-ad-note)
-         ("C-c i t" . org-ad-tip)
-         ("C-c i w" . org-ad-warning)
-         ("C-c i i" . org-ad-important)
+         ("C-c i s" . org/insert-src)
+         ("C-c i c" . org/insert-ad-caution)
+         ("C-c i n" . org/insert-ad-note)
+         ("C-c i t" . org/insert-ad-tip)
+         ("C-c i w" . org/insert-ad-warning)
+         ("C-c i i" . org/insert-ad-important)
          :repeat-map habamax-org-map
          ("t" . org-todo))
   :mode (("\\.org$" . org-mode))

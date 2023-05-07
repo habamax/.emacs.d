@@ -1,6 +1,30 @@
 ;;; habamax-org.el  -*- lexical-binding: t; -*-
 
 ;;;###autoload
+(define-skeleton org/insert-ad-note "Org note admonition" nil
+  "#+begin_note\n" _ "\n#+end_note")
+
+;;;###autoload
+(define-skeleton org/insert-ad-tip "Org tip admonition" nil
+  "#+begin_tip\n" _ "\n#+end_tip")
+
+;;;###autoload
+(define-skeleton org/insert-ad-warning "Org warning admonition" nil
+  "#+begin_warning\n" _ "\n#+end_warning")
+
+;;;###autoload
+(define-skeleton org/insert-ad-caution "Org caution admonition" nil
+  "#+begin_caution\n" _ "\n#+end_caution")
+
+;;;###autoload
+(define-skeleton org/insert-ad-important "Org important admonition" nil
+  "#+begin_important\n" _ "\n#+end_important")
+
+;;;###autoload
+(define-skeleton org/insert-src "Org source block" nil
+  "#+begin_src" _ "\n#+end_src")
+
+;;;###autoload
 (defun notes ()
   (interactive)
   (find-file (concat org-directory "/notes.org")))
