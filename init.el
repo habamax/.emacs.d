@@ -161,7 +161,7 @@
          ("C-c d" . habamax/duplicate-line)
          ("M-s g" . habamax/grep-current-word)
          ("M-s t" . habamax/grep-todo)
-         ("C-c m" . imenu)
+         ;; ("C-c m" . imenu)
          ("C-c t n" . display-line-numbers-mode)
          ("C-c t SPC" . whitespace-mode)
          ("C-c t s" . flyspell-mode)
@@ -208,6 +208,15 @@
   (setq completion-styles '(orderless basic))
   (setq orderless-matching-styles
         '(orderless-literal orderless-initialism orderless-flex)))
+
+(use-package consult
+  :bind (("C-x b" . consult-buffer)
+         ("C-x 4 b" . consult-buffer-other-window)
+         ("C-x 5 b" . consult-buffer-other-frame)
+         ("C-x p b" . consult-project-buffer)
+         ("C-x r b" . consult-bookmark)
+         ("C-c m" . consult-imenu)
+         ("M-y" . consult-yank-pop)))
 
 (use-package org
   :ensure nil
