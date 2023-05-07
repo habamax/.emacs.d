@@ -819,6 +819,8 @@
    ;;; marginalia
    `(marginalia-key
      ((,class256 (:foreground ,cyan))))
+   `(marginalia-date
+     ((,class256 (:foreground ,yellow))))
    
    ;;; consult
    `(consult-file
