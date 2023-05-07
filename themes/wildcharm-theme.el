@@ -834,6 +834,11 @@
    `(marginalia-key
      ((,class256 (:foreground ,cyan))))
 
+   ;;; consult
+   `(consult-file
+     ((,class256 (:foreground ,darkgrey))))
+   `(consult-bookmark
+     ((,class256 (:foreground ,comment))))   
    ))
 
 ;;;###autoload
