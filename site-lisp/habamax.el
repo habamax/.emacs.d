@@ -155,7 +155,8 @@ See `sort-regexp-fields'."
 (defun habamax/insert-current-date ()
   "Insert current date. Replace ISO date under cursor with current date."
   (interactive)
-  (when (string-match "[0-9]\\{4\\}-[0-9]\\{2\\}-[0-9]\\{2\\}" (concat "" (thing-at-point 'symbol t)))
+  (when (string-match "[0-9]\\{4\\}-[0-9]\\{2\\}-[0-9]\\{2\\}"
+                      (concat "" (thing-at-point 'symbol t)))
     (let ((bounds (bounds-of-thing-at-point 'symbol)))
       (delete-region (car bounds) (cdr bounds))))
   (insert (format-time-string "%Y-%m-%d")))
