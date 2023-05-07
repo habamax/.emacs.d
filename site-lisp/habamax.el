@@ -165,7 +165,10 @@ See `sort-regexp-fields'."
 ;;;###autoload
 (defun habamax/recentf-open ()
   (interactive)
-  (find-file (completing-read "Open recent: " recentf-list)))
+  (find-file
+   (completing-read "Open recent: "
+                    (mapcar #'abbreviate-file-name
+                            (bound-and-true-p recentf-list)))))
 
 
 ;;;###autoload
