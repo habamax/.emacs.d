@@ -410,4 +410,11 @@
         emms-info-functions '(emms-info-native))
   (setq emms-source-file-default-directory "~/Music/"))
 
+(use-package elfeed
+  :config
+  (let* ((feed-dir (or (getenv "DOCS") "~/docs"))
+         (feeds (concat feed-dir "/emacs/elfeeds.el")))
+    (when (file-exists-p feeds)
+      (load feeds))))
+
 ;;; init.el ends here
