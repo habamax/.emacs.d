@@ -154,7 +154,7 @@
          ("M-p" . habamax/move-line-up)
          ("C-w" . habamax/kill-region)
          ("M-w" . habamax/kill-ring-save)
-         ;; ("C-x C-r" . habamax/recentf-open)
+         ("C-x C-r" . habamax/recentf-open)
          ("C-c b" . habamax/next-buffer-like-this)
          ("C-c B" . habamax/previous-buffer-like-this)
          ("C-c i d" . habamax/insert-current-date)
@@ -162,7 +162,7 @@
          ("C-c d" . habamax/duplicate-line)
          ("M-s g" . habamax/grep-current-word)
          ("M-s t" . habamax/grep-todo)
-         ;; ("C-c m" . imenu)
+         ("C-c m" . imenu)
          ("C-c t n" . display-line-numbers-mode)
          ("C-c t SPC" . whitespace-mode)
          ("C-c t s" . flyspell-mode)
@@ -210,18 +210,6 @@
   (setq orderless-matching-styles
         '(orderless-literal orderless-initialism orderless-flex)))
 
-(use-package consult
-  :bind (("C-x b" . consult-buffer)
-         ("C-x 4 b" . consult-buffer-other-window)
-         ("C-x 5 b" . consult-buffer-other-frame)
-         ("C-x p b" . consult-project-buffer)
-         ("C-x r b" . consult-bookmark)
-         ("C-x C-r" . consult-recent-file)
-         ("C-c m" . consult-imenu)
-         ("M-g o" . consult-outline)
-         ("M-s G" . consult-grep)
-         ("M-y" . consult-yank-pop)))
-
 (use-package org
   :ensure nil
   :commands (todo notes)
@@ -231,7 +219,7 @@
          ("C-c o L" . org-insert-link)
          ("C-c o s" . org/insert-screenshot)
          :map org-mode-map
-         ;; ("M-g o" . org-goto)
+         ("M-g o" . org-goto)
          ("C-c i s" . org/insert-src)
          ("C-c i c" . org/insert-ad-caution)
          ("C-c i n" . org/insert-ad-note)
@@ -330,6 +318,8 @@
     (switch-to-buffer "#emacs")
     (switch-to-buffer-other-window "#vim")
     (other-window 1)))
+
+(use-package erc-hl-nicks :after erc)
 
 (use-package webpaste
   :commands (webpaste-paste-buffer webpaste-paste-region))
