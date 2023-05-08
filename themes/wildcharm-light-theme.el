@@ -738,7 +738,7 @@
    `(elfeed-search-date-face
      ((,class256 (:foreground ,darkgrey))))
    `(elfeed-search-title-face
-     ((,class256 (:foreground ,grey))))
+     ((,class256 (:foreground ,black))))
    `(elfeed-search-unread-title-face
      ((,class256 (:foreground ,black :weight bold))))
    `(elfeed-search-feed-face
