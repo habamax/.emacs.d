@@ -331,8 +331,6 @@
     (switch-to-buffer-other-window "#vim")
     (other-window 1)))
 
-(use-package erc-hl-nicks :after erc)
-
 (use-package webpaste
   :commands (webpaste-paste-buffer webpaste-paste-region))
 
