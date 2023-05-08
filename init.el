@@ -284,7 +284,6 @@
   :bind ("C-x g" . magit-file-dispatch))
 
 (use-package markdown-mode
-  :mode "\\.txt$"
   :bind (:map markdown-mode-map
               ("M-n" . nil)
               ("M-p" . nil))
