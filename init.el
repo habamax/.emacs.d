@@ -301,7 +301,6 @@
   :config
   (when (not +IS-WINDOWS+) (erc-notifications-mode t))
   (setq erc-nick '("habamax" "mxmkm")
-        erc-track-minor-mode t
         erc-hide-list '("JOIN" "PART" "QUIT")
         erc-join-buffer 'bury
         erc-autojoin-channels-alist '(("Libera.Chat"
