@@ -358,30 +358,14 @@
   (setq notmuch-search-oldest-first nil
         notmuch-show-empty-saved-searches t
         notmuch-saved-searches
-        `((:name "📥 Inbox"
-           :query "folder:/Inbox/ or tag:inbox"
-           :sort-order newest-first
-           :key ,(kbd "i"))
-          (:name "💬 Unread (inbox)"
-           :query "tag:unread and folder:/Inbox/"
+        `((:name "Unread"
+           :query "folder:/Inbox/ and tag:unread"
            :sort-order newest-first
            :key ,(kbd "u"))
-          (:name "📚 All"
-           :query "folder:/Archive/"
+          (:name "All"
+           :query "folder:/Inbox/ or tag:inbox"
            :sort-order newest-first
-           :key ,(kbd "a"))
-          (:name "💩 Trash"
-           :query "folder:/Trash/"
-           :sort-order newest-first
-           :key ,(kbd "t"))
-          (:name "📨 Sent"
-           :query "folder:/Sent/"
-           :sort-order newest-first
-           :key ,(kbd "s"))
-          (:name "📝 Drafts"
-           :query "folder:/Drafts/"
-           :sort-order newest-first
-           :key ,(kbd "d"))))
+           :key ,(kbd "a"))))
   (defun notmuch-sync ()
     (interactive)
     (when (executable-find "mbsync")
