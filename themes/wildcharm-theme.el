@@ -848,10 +848,13 @@
      ((,class256 (:foreground ,red))))
    `(notmuch-tag-flagged
      ((,class256 (:foreground ,blue))))
+   `(notmuch-search-flagged-face
+     ((,class256 (:foreground ,blue))))
+   `(notmuch-tag-added
+     ((,class256 (:underline ,green))))
    ;; XXX: should check for gui or strikethrough support...
    `(notmuch-tag-deleted
-     ((,class256 (:strike-through ,red))))
-   
+     ((,class256 (:strike-through ,red))))   
    ))
 
 ;;;###autoload
