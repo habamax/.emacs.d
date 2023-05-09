@@ -25,6 +25,10 @@
   "#+begin_src" _ "\n#+end_src")
 
 ;;;###autoload
+(define-skeleton org/insert-quote "Org quote block" nil
+  "#+begin_quote\n" _ "\n#+end_quote")
+
+;;;###autoload
 (defun notes ()
   (interactive)
   (find-file (concat org-directory "/notes.org")))

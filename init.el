@@ -221,6 +221,7 @@
          :map org-mode-map
          ("M-g o" . org-goto)
          ("C-c i s" . org/insert-src)
+         ("C-c i q" . org/insert-quote)
          ("C-c i c" . org/insert-ad-caution)
          ("C-c i n" . org/insert-ad-note)
          ("C-c i t" . org/insert-ad-tip)
