@@ -840,7 +840,18 @@
    `(consult-file
      ((,class256 (:foreground ,darkgrey))))
    `(consult-bookmark
-     ((,class256 (:foreground ,comment))))   
+     ((,class256 (:foreground ,comment))))
+
+   `(notmuch-tag-face
+     ((,class256 (:foreground ,green))))
+   `(notmuch-tag-unread
+     ((,class256 (:foreground ,red))))
+   `(notmuch-tag-flagged
+     ((,class256 (:foreground ,blue))))
+   ;; XXX: should check for gui or strikethrough support...
+   `(notmuch-tag-deleted
+     ((,class256 (:strike-through ,red))))
+   
    ))
 
 ;;;###autoload
