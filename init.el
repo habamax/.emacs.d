@@ -331,8 +331,9 @@
   (defun erc/layout2 ()
     (interactive)
     (delete-other-windows)
-    (switch-to-buffer "#emacs")
     (split-window-right)
+    (switch-to-buffer "#emacs")
+    (windmove-right)
     (switch-to-buffer "#vim")
     (windmove-left)))
 
