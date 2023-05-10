@@ -39,24 +39,43 @@ Otherwise call well known `comment-dwim'"
 
 
 ;;;###autoload
-(defun habamax/move-line-up ()
-  "Move up current line."
-  (interactive)
-  (let ((column (current-column)))
-    (transpose-lines 1)
-    (forward-line -2)
-    (move-to-column column t)))
+(defun habamax/move-text (arg)
+  "Move region or line up/down depending on arg."
+  (cond
+   ((and mark-active transient-mark-mode)
+    (if (> (point) (mark))
+        (exchange-point-and-mark))
+    (let ((column (current-column))
+          (text (delete-and-extract-region (point) (mark))))
+      (forward-line arg)
+      (move-to-column column t)
+      (set-mark (point))
+      (insert text)
+      (exchange-point-and-mark)
+      (setq deactivate-mark nil)))
+   (t
+    (let ((column (current-column)))
+      (beginning-of-line)
+      (when (or (> arg 0) (not (bobp)))
+        (forward-line)
+        (when (or (< arg 0) (not (eobp)))
+          (transpose-lines arg))
+        (forward-line -1))
+      (move-to-column column t)))))
 
 
 ;;;###autoload
-(defun habamax/move-line-down ()
-  "Move down current line."
-  (interactive)
-  (let ((column (current-column)))
-    (forward-line 1)
-    (transpose-lines 1)
-    (forward-line -1)
-    (move-to-column column t)))
+(defun habamax/move-line-up (arg)
+  "Move up region/line."
+  (interactive "*p")
+  (habamax/move-text (- arg)))
+
+
+;;;###autoload
+(defun habamax/move-line-down (arg)
+  "Move down region/line."
+  (interactive "*p")
+  (habamax/move-text arg))
 
 
 ;; Next buffer with the same mode
