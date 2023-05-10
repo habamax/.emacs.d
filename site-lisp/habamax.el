@@ -90,21 +90,6 @@ Otherwise call well known `comment-dwim'"
 
 
 ;;;###autoload
-(defun habamax/locate-project-root ()
-  "Return path to the project root defined by markers."
-  (interactive)
-  (setq project-marker-regex
-        (mapconcat 'identity
-                   '("\\(.git\\)"
-                     "\\(.hg\\)")
-                   "\\|"))
-  (locate-dominating-file
-   default-directory
-   (lambda (parent)
-     (directory-files parent nil project-marker-regex))))
-
-
-;;;###autoload
 (defun habamax/kill-region ()
   "Kill region if mark is active, kill whole line otherwise."
   (interactive)
