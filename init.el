@@ -9,12 +9,6 @@
 ;;; How long it took this time?
 (add-hook 'emacs-startup-hook (lambda () (message "%s" (emacs-init-time))))
 
-;;; disable gc for init
-(setq gc-cons-threshold 64000000)
-(add-hook
- 'after-init-hook
- (lambda () (setq gc-cons-threshold (default-value 'gc-cons-threshold))))
-
 (setq user-full-name "Maxim Kim"
       user-mail-address "habamax@gmail.com"
       send-mail-function 'smtpmail-send-it

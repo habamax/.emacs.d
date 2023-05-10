@@ -9,6 +9,12 @@
 
 ;;; Code:
 
+;;; disable gc for init
+(setq gc-cons-threshold most-positive-fixnum)
+(add-hook
+ 'after-init-hook
+ (lambda () (setq gc-cons-threshold 800000)))
+
 (defconst +IS-OSX+ (eq system-type 'darwin))
 (defconst +IS-WINDOWS+ (eq system-type 'windows-nt))
 
