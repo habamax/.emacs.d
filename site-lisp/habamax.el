@@ -13,9 +13,11 @@
 Otherwise call well known `comment-dwim'"
   (interactive "*P")
   (comment-normalize-vars)
-  (if (and (not mark-active) (save-excursion (beginning-of-line) (not (looking-at "\\s-*$"))))
+  (if (and (not mark-active)
+           (save-excursion (beginning-of-line) (not (looking-at "\\s-*$"))))
       (progn
-        (comment-or-uncomment-region (line-beginning-position) (line-end-position))
+        (comment-or-uncomment-region (line-beginning-position)
+                                     (line-end-position))
         (forward-line))
     (comment-dwim arg)))
 
