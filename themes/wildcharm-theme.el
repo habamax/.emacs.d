@@ -26,7 +26,7 @@
       (grey "#d0d0d0")(white "#ffffff")
       (special "#875fff")(comment "#87875f")
       (yellow1 "#d7af5f")(yellow2 "#ffd75f")
-      (grey1 "#5f5f5f")(grey2 "#444444")
+      (grey1 "#5f5f5f")(grey2 "#3a3a3a")(grey3 "#303030")
       (match-paren "#ff00af")(non-text "#585858")
       (mode-line-active "#444444")(mode-line-inactive "#303030")
       (menu "#262626")
@@ -206,7 +206,7 @@
    ;;; customize
    `(custom-variable-tag
      ((,class256 (:foreground ,white :weight bold))))
-      
+
    ;;; dired
    `(dired-header
      ((,class256 (:foreground ,white :weight bold))))
@@ -615,7 +615,7 @@
      ((,class256 (:foreground ,darkgrey))))
    `(magit-log-date
      ((,class256 (:foreground ,darkgrey))))
-   
+
    ;;; smerge
    `(smerge-lower
      ((,class256 (:background ,diff-added-bg))
@@ -645,7 +645,7 @@
    `(flyspell-duplicate
      ((,classTTY (:inherit warning :underline t))
       (t (:underline (:style wave :color ,bright-yellow)))))
-   
+
    ;;; flymake
    `(flymake-error
      ((,classTTY (:inherit error :underline t))
@@ -653,7 +653,7 @@
    `(flymake-warning
      ((,classTTY (:inherit warning :underline t))
       (t (:underline (:style wave :color ,bright-yellow)))))
-   
+
    ;;; erc
    `(erc-timestamp-face
      ((,class256 (:foreground ,darkgrey))))
@@ -797,12 +797,12 @@
      ((,class256 (:inherit custom-button))))
    `(eww-form-file
      ((,class256 (:inherit custom-button))))
-      
+
    ;;; emms
    `(emms-playlist-selected-face
      ((,class256 (:foreground ,bright-blue :weight bold))))
    `(emms-playlist-track-face
-     ((,class256 (:foreground ,fg))))   
+     ((,class256 (:foreground ,fg))))
    `(emms-browser-track-face
      ((,class256 (:inherit emms-playlist-track-face))))
    `(emms-browser-artist-face
@@ -829,32 +829,35 @@
      ((,class256 (:foreground ,bright-green :weight bold))))
    `(orderless-match-face-3
      ((,class256 (:foreground ,bright-yellow :weight bold))))
-   
+
    ;;; marginalia
    `(marginalia-key
      ((,class256 (:foreground ,cyan))))
    `(marginalia-date
      ((,class256 (:foreground ,yellow))))
-   
+
    ;;; consult
    `(consult-file
      ((,class256 (:foreground ,darkgrey))))
    `(consult-bookmark
      ((,class256 (:foreground ,comment))))
 
+   ;;; notmuch
+   `(notmuch-message-summary-face
+     ((,class256 (:background ,grey3))))
    `(notmuch-tag-face
-     ((,class256 (:foreground ,green))))
+     ((,class256 (:foreground ,darkgrey))))
    `(notmuch-tag-unread
-     ((,class256 (:foreground ,red))))
+     ((,class256 (:foreground ,green))))
    `(notmuch-tag-flagged
      ((,class256 (:foreground ,blue))))
    `(notmuch-search-flagged-face
      ((,class256 (:foreground ,blue))))
    `(notmuch-tag-added
-     ((,class256 (:underline ,green))))
+     ((,class256 (:underline ,cyan))))
    ;; XXX: should check for gui or strikethrough support...
    `(notmuch-tag-deleted
-     ((,class256 (:strike-through ,red))))   
+     ((,class256 (:foreground ,red :strike-through ,red))))
    ))
 
 ;;;###autoload

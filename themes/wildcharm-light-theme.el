@@ -23,7 +23,7 @@
       (grey "#d0d0d0")(white "#ffffff")
       (special "#875fff")(comment "#87875f")
       (yellow1 "#d7af5f")(yellow2 "#ffd75f")
-      (grey1 "#dadada")(grey2 "#eeeeee")
+      (grey1 "#dadada")(grey2 "#eeeeee")(grey3 "#e4e4e4")
       (match-paren "#ff00af")(non-text "#b2b2b2")
       (mode-line-active "#d0d0d0")(mode-line-inactive "#e4e4e4")
       (menu "#262626")
@@ -198,7 +198,7 @@
    ;;; customize
    `(custom-variable-tag
      ((,class256 (:weight bold))))
-      
+
    ;;; dired
    `(dired-header
      ((,class256 (:foreground ,fg :weight bold))))
@@ -603,7 +603,7 @@
      ((,class256 (:foreground ,darkgrey))))
    `(magit-log-date
      ((,class256 (:foreground ,darkgrey))))
-   
+
    ;;; smerge
    `(smerge-lower
      ((,class256 (:background ,diff-added-bg))))
@@ -623,7 +623,7 @@
      ((,class256 (:foreground ,yellow))))
    `(epa-validity-disabled
      ((,class256 (:foreground ,darkgrey))))
-   
+
    ;;; flyspell
    `(flyspell-incorrect
      ((,classTTY (:inherit error :underline t))
@@ -631,7 +631,7 @@
    `(flyspell-duplicate
      ((,classTTY (:inherit warning :underline t))
       (t (:underline (:style wave :color ,bright-yellow)))))
-   
+
    ;;; flymake
    `(flymake-error
      ((,classTTY (:inherit error :underline t))
@@ -639,7 +639,7 @@
    `(flymake-warning
      ((,classTTY (:inherit warning :underline t))
       (t (:underline (:style wave :color ,bright-yellow)))))
-   
+
    ;;; erc
    `(erc-timestamp-face
      ((,class256 (:foreground ,darkgrey))))
@@ -783,7 +783,7 @@
      ((,class256 (:inherit custom-button))))
    `(eww-form-file
      ((,class256 (:inherit custom-button))))
-   
+
    ;;; emms
    `(emms-playlist-selected-face
      ((,class256 (:foreground ,blue :weight bold))))
@@ -821,26 +821,30 @@
      ((,class256 (:foreground ,cyan))))
    `(marginalia-date
      ((,class256 (:foreground ,yellow))))
-   
+
    ;;; consult
    `(consult-file
      ((,class256 (:foreground ,darkgrey))))
    `(consult-bookmark
-     ((,class256 (:foreground ,comment))))   
+     ((,class256 (:foreground ,comment))))
 
+   ;;; notmuch
+   `(notmuch-message-summary-face
+     ((,class256 (:background ,grey3))))
    `(notmuch-tag-face
-     ((,class256 (:foreground ,green))))
+     ((,class256 (:foreground ,darkgrey))))
    `(notmuch-tag-unread
-     ((,class256 (:foreground ,red))))
+     ((,class256 (:foreground ,green))))
    `(notmuch-tag-flagged
      ((,class256 (:foreground ,blue))))
    `(notmuch-search-flagged-face
      ((,class256 (:foreground ,blue))))
    `(notmuch-tag-added
-     ((,class256 (:underline ,green))))
+     ((,class256 (:underline ,cyan))))
    ;; XXX: should check for gui or strikethrough support...
    `(notmuch-tag-deleted
-     ((,class256 (:strike-through ,red))))   
+     ((,class256 (:foreground ,red :strike-through ,red))))
+
    ))
 
 ;;;###autoload
