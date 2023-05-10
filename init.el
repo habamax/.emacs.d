@@ -421,4 +421,8 @@
     (when (file-exists-p feeds)
       (load feeds))))
 
+(use-package restclient
+  :commands (restclient-mode)
+  :mode (("\\.http\\'" . restclient-mode)))
+
 ;;; init.el ends here
