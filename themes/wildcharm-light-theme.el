@@ -27,7 +27,7 @@
       (match-paren "#ff00af")(non-text "#b2b2b2")
       (mode-line-active "#d0d0d0")(mode-line-inactive "#e4e4e4")
       (menu "#262626")
-      (header-line "#d7d7ff")
+      (header-line "#afafaf")
       (hl-line "#eeeeee")
       (block "#eeeeee")
       (diff-added-bg "#afd7af")(diff-refine-added-bg "#afd7d7")

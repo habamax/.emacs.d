@@ -30,7 +30,7 @@
       (match-paren "#ff00af")(non-text "#585858")
       (mode-line-active "#444444")(mode-line-inactive "#303030")
       (menu "#262626")
-      (header-line "#5f5f87")
+      (header-line "#585858")
       (hl-line "#3a3a3a")
       (block "#1c1c1c")
       (diff-added-bg "#3f4f3f")(diff-added-bg-tty "#005f00")
@@ -91,7 +91,7 @@
    `(mode-line-buffer-id
      ((,class256 (:weight bold))))
    `(header-line
-     ((,class256 (:background ,header-line :foreground ,white :extend t
+     ((,class256 (:background ,header-line :foreground ,fg :extend t
                               :box (:line-width 1 :color ,black)))))
    `(vertical-border
      ((,classTTY (:background ,mode-line-inactive :foreground ,mode-line-inactive))
