@@ -226,6 +226,7 @@
          ("t" . org-todo))
   :mode (("\\.org$" . org-mode))
   :config
+  (define-key org-mode-map (kbd "C-c C-r") verb-command-map)
   (require 'habamax-org)
   (setq org-goto-interface 'outline-path-completion)
   (setq org-directory (or (getenv "DOCS") "~/docs"))
@@ -259,6 +260,10 @@
                   (insert-file-contents (concat user-emacs-directory "org/org.css"))
                   (buffer-string))
                 "</style>\n")))
+
+(use-package verb
+  :config
+  (setq verb-auto-kill-response-buffers t))
 
 (use-package dictionary
   :ensure nil
@@ -416,8 +421,5 @@
     (when (file-exists-p feeds)
       (load feeds))))
 
-(use-package restclient
-  :commands (restclient-mode)
-  :mode (("\\.http\\'" . restclient-mode)))
 
 ;;; init.el ends here
