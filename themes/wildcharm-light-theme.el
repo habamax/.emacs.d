@@ -26,7 +26,7 @@
       (grey1 "#dadada")(grey2 "#e4e4e4")(grey3 "#eeeeee")
       (match-paren "#ff00af")(non-text "#b2b2b2")
       (mode-line-active "#d0d0d0")(mode-line-inactive "#e4e4e4")
-      (menu "#262626")
+      (menu "#eeeeee")
       (header-line "#d7d7d7")
       (hl-line "#eeeeee")
       (block "#eeeeee")
@@ -125,7 +125,7 @@
    `(tty-menu-enabled-face
      ((t (:background ,menu :foreground ,fg))))
    `(tty-menu-disabled-face
-     ((t (:background ,menu :foreground ,fg))))
+     ((t (:background ,menu :foreground ,darkgrey))))
    `(tty-menu-selected-face
      ((t (:background ,mode-line-active :foreground ,fg :weight bold))))
 
