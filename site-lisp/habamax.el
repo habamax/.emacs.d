@@ -207,7 +207,7 @@ See `sort-regexp-fields'."
 	(let ((secret (plist-get found :secret))
               (user (plist-get found :user)))
           (base64url-encode-string
-           (format "Basic %s:%s"
+           (format "%s:%s"
                   user
                   (if (functionp secret)
                       (funcall secret)
