@@ -190,7 +190,7 @@ See `sort-regexp-fields'."
 
 ;;;###autoload
 (defun habamax/auth-secret (host)
-    "Return secret/password for specified host from auth-sources."
+    "Return secret(password) for specified host from auth-sources."
     (let ((found (nth 0 (auth-source-search :host host :create nil))))
       (when found
 	(let ((secret (plist-get found :secret)))
