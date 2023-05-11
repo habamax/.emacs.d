@@ -99,7 +99,7 @@
    `(minibuffer-prompt
      ((,class256 (:foreground ,yellow :weight bold))))
    `(fringe
-     ((t (:foreground ,non-text :background ,bg))))
+     ((t (:foreground ,non-text :background nil))))
    ;; -scroll-bar
    `(cursor
      ((t (:background ,fg))))
