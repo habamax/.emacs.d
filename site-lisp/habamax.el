@@ -188,6 +188,32 @@ See `sort-regexp-fields'."
       (load-theme 'wildcharm t))))
 
 
+;;;###autoload
+(defun habamax/auth-secret (host)
+    "Return secret/password for specified host from auth-sources."
+    (let ((found (nth 0 (auth-source-search :host host :create nil))))
+      (when found
+	(let ((secret (plist-get found :secret)))
+	  (if (functionp secret)
+	      (funcall secret)
+	    secret)))))
+
+
+;;;###autoload
+(defun habamax/auth-basic (host)
+    "Return base64 encoded login:password for specified host from auth-sources."
+    (let ((found (nth 0 (auth-source-search :host host :create nil))))
+      (when found
+	(let ((secret (plist-get found :secret))
+              (user (plist-get found :user)))
+          (base64url-encode-string
+           (format "Basic %s:%s"
+                  user
+                  (if (functionp secret)
+                      (funcall secret)
+                    secret)))))))
+
+
 (provide 'habamax)
 
 ;;; habamax.el ends here
