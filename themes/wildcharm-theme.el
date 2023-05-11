@@ -26,11 +26,11 @@
       (grey "#d0d0d0")(white "#ffffff")
       (special "#875fff")(comment "#87875f")
       (yellow1 "#d7af5f")(yellow2 "#ffd75f")
-      (grey1 "#5f5f5f")(grey2 "#3a3a3a")(grey3 "#303030")
+      (grey1 "#5f5f5f")(grey2 "#444444")(grey3 "#3a3a3a")(grey4 "#303030")
       (match-paren "#ff00af")(non-text "#585858")
       (mode-line-active "#444444")(mode-line-inactive "#303030")
       (menu "#262626")
-      (header-line "#444444")
+      (header-line "#5f5f87")
       (hl-line "#3a3a3a")
       (block "#1c1c1c")
       (diff-added-bg "#3f4f3f")(diff-added-bg-tty "#005f00")
@@ -91,7 +91,7 @@
    `(mode-line-buffer-id
      ((,class256 (:weight bold))))
    `(header-line
-     ((,class256 (:background ,header-line :foreground ,fg :extend t
+     ((,class256 (:background ,header-line :foreground ,white :extend t
                               :box (:line-width 1 :color ,black)))))
    `(vertical-border
      ((,classTTY (:background ,mode-line-inactive :foreground ,mode-line-inactive))
@@ -186,16 +186,16 @@
 
    ;;; widget
    `(custom-button
-     ((,class256 (:background ,header-line :foreground ,fg :extend t
+     ((,class256 (:background ,grey2 :foreground ,fg :extend t
                               :box (:line-width (2 . 2) :style released-button)))))
    `(custom-button-pressed
-     ((,class256 (:background ,header-line :foreground ,fg :extend t
+     ((,class256 (:background ,grey2 :foreground ,fg :extend t
                               :box (:line-width (2 . 2) :style pressed-button)))))
    `(custom-button-mouse
      ((,class256 (:background ,non-text :foreground ,fg :extend t
                               :box (:line-width (2 . 2) :style released-button)))))
    `(widget-field
-     ((,class256 (:background ,header-line :foreground ,fg :extend t))))
+     ((,class256 (:background ,grey2 :foreground ,fg :extend t))))
    `(widget-inactive
      ((,class256 (:foreground ,darkgrey))))
    `(widget-button-pressed
@@ -286,7 +286,7 @@
    `(message-header-cc
      ((,class256 (:foreground ,darkgrey))))
    `(message-separator
-     ((,class256 (:background ,header-line :foreground ,fg :extend t))))
+     ((,class256 (:background ,grey2 :foreground ,fg :extend t))))
 
    ;;; bookmark
    `(bookmark-face
@@ -594,7 +594,7 @@
    `(magit-diff-context
      ((t (:foreground ,fg))))
    `(magit-diff-context-highlight
-     ((t (:background ,grey2))))
+     ((t (:background ,grey3))))
    `(magit-diff-added
      ((t (:inherit 'diff-added))))
    `(magit-diff-added-highlight
@@ -844,7 +844,7 @@
 
    ;;; notmuch
    `(notmuch-message-summary-face
-     ((,class256 (:background ,grey3))))
+     ((,class256 (:background ,grey4))))
    `(notmuch-tag-face
      ((,class256 (:foreground ,darkgrey))))
    `(notmuch-tag-unread

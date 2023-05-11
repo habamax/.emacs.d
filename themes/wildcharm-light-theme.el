@@ -23,11 +23,11 @@
       (grey "#d0d0d0")(white "#ffffff")
       (special "#875fff")(comment "#87875f")
       (yellow1 "#d7af5f")(yellow2 "#ffd75f")
-      (grey1 "#dadada")(grey2 "#eeeeee")(grey3 "#e4e4e4")
+      (grey1 "#dadada")(grey2 "#e4e4e4")(grey3 "#eeeeee")
       (match-paren "#ff00af")(non-text "#b2b2b2")
       (mode-line-active "#d0d0d0")(mode-line-inactive "#e4e4e4")
       (menu "#262626")
-      (header-line "#dadada")
+      (header-line "#d7d7ff")
       (hl-line "#eeeeee")
       (block "#eeeeee")
       (diff-added-bg "#afd7af")(diff-refine-added-bg "#afd7d7")
@@ -178,16 +178,16 @@
 
    ;;; widget
    `(custom-button
-     ((,class256 (:background ,header-line :foreground ,fg :extend t
+     ((,class256 (:background ,grey1 :foreground ,fg :extend t
                               :box (:line-width (2 . 2) :style released-button)))))
    `(custom-button-pressed
-     ((,class256 (:background ,header-line :foreground ,fg :extend t
+     ((,class256 (:background ,grey1 :foreground ,fg :extend t
                               :box (:line-width (2 . 2) :style pressed-button)))))
    `(custom-button-mouse
      ((,class256 (:background ,hl-line :foreground ,fg :extend t
                               :box (:line-width (2 . 2) :style released-button)))))
    `(widget-field
-     ((,class256 (:background ,header-line :foreground ,fg :extend t))))
+     ((,class256 (:background ,grey1 :foreground ,fg :extend t))))
    `(widget-inactive
      ((,class256 (:foreground ,darkgrey))))
    `(widget-button-pressed
@@ -278,7 +278,7 @@
    `(message-header-cc
      ((,class256 (:foreground ,darkgrey))))
    `(message-separator
-     ((,class256 (:background ,header-line :foreground ,fg :extend t))))
+     ((,class256 (:background ,grey1 :foreground ,fg :extend t))))
 
    ;;; bookmark
    `(bookmark-face
@@ -582,7 +582,7 @@
    `(magit-diff-context
      ((t (:foreground ,fg))))
    `(magit-diff-context-highlight
-     ((t (:background ,grey2))))
+     ((t (:background ,grey3))))
    `(magit-diff-added
      ((t (:inherit 'diff-added))))
    `(magit-diff-added-highlight
@@ -830,7 +830,7 @@
 
    ;;; notmuch
    `(notmuch-message-summary-face
-     ((,class256 (:background ,grey3))))
+     ((,class256 (:background ,grey2))))
    `(notmuch-tag-face
      ((,class256 (:foreground ,darkgrey))))
    `(notmuch-tag-unread
