@@ -92,7 +92,7 @@
      ((,class256 (:weight bold))))
    `(header-line
      ((,class256 (:background ,header-line :foreground ,fg :extend t
-                              :box (:line-width 1 :color ,black)))))
+                              :box (:line-width 1 :color ,darkgrey)))))
    `(vertical-border
      ((,classTTY (:background ,mode-line-inactive :foreground ,mode-line-inactive))
       (,class256 (:background ,non-text :foreground ,non-text))))
