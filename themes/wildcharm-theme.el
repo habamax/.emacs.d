@@ -659,14 +659,14 @@
      ((,class256 (:foreground ,darkgrey))))
    `(erc-notice-face
      ((,class256 (:foreground ,darkgrey))))
-   `(erc-nick-default-face
-     ((,class256 (:foreground ,bright-blue))))
+   `(erc-my-nick-face
+     ((,class256 (:foreground ,bright-red :weight bold))))
    `(erc-current-nick-face
      ((,class256 (:foreground ,bright-red))))
    `(erc-nick-msg-face
      ((,class256 (:foreground ,bright-yellow))))
    `(erc-input-face
-     ((,class256 (:foreground ,bright-green))))
+     ((,class256 (:foreground ,fg))))
    `(erc-error-face
      ((,class256 (:foreground ,red))))
    `(erc-dangerous-host-face
