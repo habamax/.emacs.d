@@ -712,7 +712,7 @@
    `(rcirc-nick-in-message
      ((,class256 (:foreground ,bright-red :weight bold))))
    `(rcirc-other-nick
-     ((,class256 (:foreground ,bright-yellow))))
+     ((,class256 (:foreground ,blue))))
 
    ;;; calendar
    `(calendar-month-header

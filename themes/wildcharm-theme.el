@@ -660,7 +660,7 @@
    `(erc-notice-face
      ((,class256 (:foreground ,darkgrey))))
    `(erc-nick-default-face
-     ((,class256 (:foreground ,blue))))
+     ((,class256 (:foreground ,bright-blue))))
    `(erc-current-nick-face
      ((,class256 (:foreground ,bright-red))))
    `(erc-nick-msg-face
@@ -726,7 +726,7 @@
    `(rcirc-nick-in-message
      ((,class256 (:foreground ,bright-red :weight bold))))
    `(rcirc-other-nick
-     ((,class256 (:foreground ,bright-yellow))))
+     ((,class256 (:foreground ,bright-blue))))
 
    ;;; calendar
    `(calendar-month-header
