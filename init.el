@@ -336,8 +336,6 @@
     (switch-to-buffer "#vim")
     (windmove-left)))
 
-(use-package erc-hl-nicks :after erc)
-
 (use-package webpaste
   :commands (webpaste-paste-buffer webpaste-paste-region))
 
