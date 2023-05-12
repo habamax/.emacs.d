@@ -336,7 +336,12 @@
     (switch-to-buffer "#vim")
     (windmove-left)))
 
-(use-package erc-hl-nicks :after erc)
+(use-package erc-hl-nicks
+  :after erc
+  :config
+  ;; TODO: make sure when theme is switched this is re-applied...
+  (erc-hl-nicks-force-nick-face "habamax"
+                                (face-background 'font-lock-constant-face)))
 
 (use-package webpaste
   :commands (webpaste-paste-buffer webpaste-paste-region))
