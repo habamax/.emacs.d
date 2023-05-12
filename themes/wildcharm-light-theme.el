@@ -652,7 +652,7 @@
    `(erc-nick-msg-face
      ((,class256 (:foreground ,yellow))))
    `(erc-input-face
-     ((,class256 (:foreground ,fg))))
+     ((,class256 (:foreground ,green))))
    `(erc-error-face
      ((,class256 (:foreground ,bright-red))))
    `(erc-dangerous-host-face
