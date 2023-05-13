@@ -111,10 +111,6 @@
   :bind (("<f8>" . window-toggle-side-windows)
          ("C-c w" . winner-undo)
          ("C-c W" . winner-redo)
-         ("M-<right>" . windmove-swap-states-right)
-         ("M-<left>" . windmove-swap-states-left)
-         ("M-<up>" . windmove-swap-states-up)
-         ("M-<down>" . windmove-swap-states-down)
          ("M-`" . other-frame)
          :repeat-map habamax-other-frame-map
          ("o" . other-frame)
