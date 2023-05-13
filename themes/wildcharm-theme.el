@@ -861,7 +861,7 @@
 
    ;;; verb (org based restclient)
    `(verb-http-keyword
-     ((,class256 (:foreground ,bright-blue :weight bold))))
+     ((,class256 (:foreground ,bright-blue))))
    `(verb-header
      ((,class256 (:foreground ,bright-yellow))))
    `(verb-code-tag
