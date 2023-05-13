@@ -845,6 +845,14 @@
    `(notmuch-tag-deleted
      ((,class256 (:foreground ,red :strike-through ,red))))
 
+   ;;; verb (org based restclient)
+   `(verb-http-keyword
+     ((,class256 (:foreground ,blue :weight bold))))
+   `(verb-header
+     ((,class256 (:foreground ,yellow))))
+   `(verb-code-tag
+     ((,class256 (:foreground ,cyan))))
+   
    ))
 
 ;;;###autoload

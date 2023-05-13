@@ -858,6 +858,15 @@
    ;; XXX: should check for gui or strikethrough support...
    `(notmuch-tag-deleted
      ((,class256 (:foreground ,red :strike-through ,red))))
+
+   ;;; verb (org based restclient)
+   `(verb-http-keyword
+     ((,class256 (:foreground ,bright-blue :weight bold))))
+   `(verb-header
+     ((,class256 (:foreground ,bright-yellow))))
+   `(verb-code-tag
+     ((,class256 (:foreground ,cyan))))
+   
    ))
 
 ;;;###autoload
