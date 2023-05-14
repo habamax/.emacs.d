@@ -866,7 +866,11 @@
      ((,class256 (:foreground ,bright-yellow))))
    `(verb-code-tag
      ((,class256 (:foreground ,cyan))))
-   
+
+   ;;; sly
+   `(sly-mrepl-output-face
+     ((,class256 (:foreground ,cyan))))
+
    ))
 
 ;;;###autoload
