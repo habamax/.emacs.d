@@ -1,3 +1,3 @@
 # Emacs config
 
-Huh.
+`¯\_(ツ)_/¯`
