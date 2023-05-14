@@ -49,11 +49,13 @@
 (setq-default display-fill-column-indicator-character ?╎)
 (setq-default indent-tabs-mode nil)
 (setq-default isearch-lazy-count t)
-(setq-default abbrev-mode t)
 (setq-default line-number-mode t)
 (setq describe-bindings-outline t)
 (setq set-mark-command-repeat-pop t)
 (setq show-paren-when-point-inside-paren t)
+
+(setq-default abbrev-mode t)
+(quietly-read-abbrev-file (concat user-emacs-directory "abbrevs"))
 
 (when +IS-WINDOWS+
   (setq epa-pinentry-mode 'loopback))
