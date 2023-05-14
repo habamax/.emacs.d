@@ -304,10 +304,11 @@
 (use-package erc-hl-nicks
   :after erc
   :config
-  ;; TODO: make sure when theme is switched this is re-applied...
-  ;; There is no theme change hook though.
-  (erc-hl-nicks-force-nick-face "habamax"
-                                (face-background 'font-lock-constant-face)))
+  (defun erc-nick-hl-override ()
+    (erc-hl-nicks-force-nick-face "habamax"
+                                  (face-background 'font-lock-constant-face)))
+  (erc-nick-hl-override)
+  (add-hook 'wildcharm-hook 'erc-nick-hl-override))
 
 (use-package webpaste
   :commands (webpaste-paste-buffer webpaste-paste-region))

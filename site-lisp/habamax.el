@@ -177,6 +177,8 @@ See `sort-regexp-fields'."
                             (bound-and-true-p recentf-list)))))
 
 
+(defvar wildcharm-hook nil "After wildcharm-(light-)theme is loaded.")
+
 ;;;###autoload
 (defun habamax/toggle-bg ()
   (interactive)
@@ -185,7 +187,8 @@ See `sort-regexp-fields'."
       (disable-theme loaded-theme))
     (if (eq current-theme 'wildcharm)
         (load-theme 'wildcharm-light t)
-      (load-theme 'wildcharm t))))
+      (load-theme 'wildcharm t)))
+  (run-hooks 'wildcharm-hook))
 
 
 ;;;###autoload
