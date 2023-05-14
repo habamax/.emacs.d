@@ -336,6 +336,7 @@
   :after erc
   :config
   ;; TODO: make sure when theme is switched this is re-applied...
+  ;; There is no theme change hook though.
   (erc-hl-nicks-force-nick-face "habamax"
                                 (face-background 'font-lock-constant-face)))
 
