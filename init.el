@@ -205,13 +205,12 @@
 (use-package org
   :ensure nil
   :commands (todo notes)
-  :bind (("C-c o c" . org-capture)
-         ("C-c o a" . org-agenda)
-         ("C-c o l" . org-store-link)
-         ("C-c o L" . org-insert-link)
-         ("C-c o s" . org/insert-screenshot)
+  :bind (("C-c c" . org-capture)
+         ("C-c a" . org-agenda)
+         ("C-c l" . org-store-link)
          :map org-mode-map
          ("M-g o" . org-goto)
+         ("C-c i S" . org/insert-screenshot)
          ("C-c i s" . org/insert-src)
          ("C-c i q" . org/insert-quote)
          ("C-c i e" . org/insert-example)
