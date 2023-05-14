@@ -359,6 +359,8 @@
   :config
   (company-tng-mode 1))
 
+(use-package sly)
+
 (use-package gdscript-mode)
 
 (use-package zig-mode)
