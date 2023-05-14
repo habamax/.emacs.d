@@ -2,7 +2,7 @@
 
 ;;; Commentary:
 
-;; habamax's personal Emacs configuration
+;; ¯\_(ツ)_/¯
 
 ;;; Code:
 

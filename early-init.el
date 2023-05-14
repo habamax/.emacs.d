@@ -2,9 +2,7 @@
 
 ;;; Commentary:
 
-;; habamax's personal Emacs configuration
-
-;; Things to be loaded early, like theme, which would prevent unwanted white
+;; Things to be loaded early, e.g. set up theme to prevent unwanted white
 ;; background turning into dark one.
 
 ;;; Code:
