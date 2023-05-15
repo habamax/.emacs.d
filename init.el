@@ -213,6 +213,7 @@
          ("C-c m" . consult-imenu)
          ("M-g o" . consult-outline)
          ("M-s G" . consult-grep)
+         ("M-s r" . consult-ripgrep)
          ("M-y" . consult-yank-pop))
   :config
   (setq consult-preview-key "M-."))
