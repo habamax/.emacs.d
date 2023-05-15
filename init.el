@@ -365,7 +365,8 @@
   (add-to-list 'completion-at-point-functions #'cape-dabbrev)
   (add-to-list 'completion-at-point-functions #'cape-file))
 
-(use-package eglot)
+(use-package eglot
+  :commands eglot)
 
 (use-package gdscript-mode
   :custom
