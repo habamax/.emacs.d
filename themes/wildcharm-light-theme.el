@@ -281,7 +281,7 @@
      ((,class256 (:background ,grey1 :foreground ,fg :extend t))))
    `(message-mml
      ((,class256 (:foreground ,comment))))
-   
+
    ;;; bookmark
    `(bookmark-face
      ((,class256 (:background nil :foreground ,yellow))))
@@ -854,7 +854,7 @@
      ((,class256 (:foreground ,yellow))))
    `(verb-code-tag
      ((,class256 (:foreground ,cyan))))
-   
+
    ;;; sly
    `(sly-mrepl-output-face
      ((,class256 (:foreground ,cyan))))
