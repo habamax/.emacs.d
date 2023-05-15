@@ -13,6 +13,10 @@
  'after-init-hook
  (lambda () (setq gc-cons-threshold 800000)))
 
+(setq inhibit-startup-message t
+      inhibit-splash-screen t
+      initial-scratch-message ";; Welcome, habamax!\n;; Have fun with Emacs!\n\n")
+
 (defconst +IS-OSX+ (eq system-type 'darwin))
 (defconst +IS-WINDOWS+ (eq system-type 'windows-nt))
 
@@ -25,10 +29,6 @@
    (vertical-scroll-bars . nil)
    (menu-bar-lines . 0)
    (tool-bar-lines . 0)))
-
-(setq inhibit-startup-message t
-      inhibit-splash-screen t
-      initial-scratch-message ";; Welcome, habamax!\n;; Have fun with Emacs!\n\n")
 
 (add-to-list 'custom-theme-load-path (expand-file-name "themes/" user-emacs-directory))
 (load-theme 'wildcharm t)
