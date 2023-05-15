@@ -329,9 +329,15 @@
 ;; XXX: check terminal support
 ;; https://codeberg.org/akib/emacs-corfu-terminal
 (use-package corfu
+  :custom
+  (corfu-cycle t)
+  (corfu-preselect 'prompt)
+  :bind (:map corfu-map
+              ("TAB" . corfu-next)
+              ([tab] . corfu-next)
+              ("S-TAB" . corfu-previous)
+              ([backtab] . corfu-previous))
   :init
-  ;; (setq corfu-auto t
-  ;;       corfu-quit-no-match 'separator)
   (global-corfu-mode))
 
 (use-package cape
