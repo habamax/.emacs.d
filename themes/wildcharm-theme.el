@@ -873,6 +873,14 @@
    `(sly-mrepl-output-face
      ((,class256 (:foreground ,cyan))))
 
+   ;;; corfu
+   `(corfu-default
+     ((,class256 (:background ,grey3))))
+   `(corfu-current
+     ((,class256 (:background ,grey1))))
+   `(corfu-bar
+     ((,class256 (:background ,grey))))
+
    ))
 
 ;;;###autoload
