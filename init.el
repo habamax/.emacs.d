@@ -147,7 +147,9 @@
          ("M-p" . habamax/move-line-up)
          ("C-w" . habamax/kill-region)
          ("M-w" . habamax/kill-ring-save)
+         ;;; Use Consult versions instead
          ;; ("C-x C-r" . habamax/recentf-open)
+         ;; ("C-c m" . imenu)
          ("C-c b" . habamax/next-buffer-like-this)
          ("C-c B" . habamax/previous-buffer-like-this)
          ("C-c i d" . habamax/insert-current-date)
@@ -155,7 +157,6 @@
          ("C-c d" . habamax/duplicate-line)
          ("M-s g" . habamax/grep-current-word)
          ("M-s t" . habamax/grep-todo)
-         ;; ("C-c m" . imenu)
          ("C-c t n" . display-line-numbers-mode)
          ("C-c t SPC" . whitespace-mode)
          ("C-c t s" . flyspell-mode)
