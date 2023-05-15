@@ -342,8 +342,6 @@
   (when (and (eq system-type 'gnu/linux) (not (display-graphic-p)))
     (xclip-mode 1)))
 
-;; XXX: check terminal support
-;; https://codeberg.org/akib/emacs-corfu-terminal
 (use-package corfu
   :custom
   (corfu-cycle t)
@@ -355,6 +353,12 @@
               ([backtab] . corfu-previous))
   :init
   (global-corfu-mode))
+
+(use-package corfu-terminal
+  :if (not (display-graphic-p))
+  :after corfu
+  :init
+  (corfu-terminal-mode t))
 
 (use-package cape
   :init
