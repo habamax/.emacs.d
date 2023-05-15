@@ -330,8 +330,8 @@
 ;; https://codeberg.org/akib/emacs-corfu-terminal
 (use-package corfu
   :init
-  (setq corfu-auto t
-        corfu-quit-no-match 'separator)
+  ;; (setq corfu-auto t
+  ;;       corfu-quit-no-match 'separator)
   (global-corfu-mode))
 
 (use-package cape
