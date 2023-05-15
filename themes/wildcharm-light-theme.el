@@ -866,7 +866,9 @@
      ((,class256 (:background ,grey1))))
    `(corfu-bar
      ((,class256 (:background ,grey))))
-   
+   `(corfu-border
+     ((,class256 (:background ,grey))))
+
    ))
 
 ;;;###autoload
