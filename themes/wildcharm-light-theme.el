@@ -279,7 +279,9 @@
      ((,class256 (:foreground ,darkgrey))))
    `(message-separator
      ((,class256 (:background ,grey1 :foreground ,fg :extend t))))
-
+   `(message-mml
+     ((,class256 (:foreground ,comment))))
+   
    ;;; bookmark
    `(bookmark-face
      ((,class256 (:background nil :foreground ,yellow))))
