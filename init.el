@@ -365,9 +365,13 @@
   (add-to-list 'completion-at-point-functions #'cape-dabbrev)
   (add-to-list 'completion-at-point-functions #'cape-file))
 
-(use-package sly)
+(use-package eglot)
 
-(use-package gdscript-mode)
+(use-package gdscript-mode
+  :custom
+  (gdscript-eglot-version 3))
+
+(use-package sly)
 
 (use-package zig-mode)
 
