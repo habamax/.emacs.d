@@ -326,11 +326,6 @@
   (when (and (eq system-type 'gnu/linux) (not (display-graphic-p)))
     (xclip-mode 1)))
 
-;; (use-package company
-;;   :commands (company-mode global-company-mode)
-;;   :config
-;;   (company-tng-mode 1))
-
 ;; XXX: check terminal support
 ;; https://codeberg.org/akib/emacs-corfu-terminal
 (use-package corfu
