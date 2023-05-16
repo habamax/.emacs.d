@@ -212,12 +212,16 @@
          ("C-x r b" . consult-bookmark)
          ("C-x C-r" . consult-recent-file)
          ("C-c m" . consult-imenu)
+         ("C-c M" . consult-imenu-multi)
          ("M-g o" . consult-outline)
          ("M-s G" . consult-grep)
          ("M-s r" . consult-ripgrep)
          ("M-y" . consult-yank-pop))
   :config
-  (setq consult-preview-key "M-."))
+  (consult-customize
+   consult--source-bookmark consult--source-file-register
+   consult--source-recent-file consult--source-project-recent-file
+   :preview-key "M-."))
 
 (use-package org
   :ensure nil
@@ -352,7 +356,9 @@
               ("S-TAB" . corfu-previous)
               ([backtab] . corfu-previous))
   :init
-  (global-corfu-mode))
+  (global-corfu-mode)
+  :config
+  (corfu-popupinfo-mode))
 
 (use-package corfu-terminal
   :if (not (display-graphic-p))
