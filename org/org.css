@@ -59,13 +59,21 @@ body {
     }
     .sidebar {
         max-width: 9cm;
+        width: 9cm;
         margin: 0.5em -11.7cm 0.5em 1em;
-        border: 1px solid #e0e0e0;
-        border-radius: 0.5em;
-        background-color: #fff;
         padding: 0 0.5em 0 1em;
         clear: right;
         float: right;
+        font-size: small;
+    }
+    .sidenote {
+        max-width: 9cm;
+        width: 8cm;
+        margin: 0.5em 0 0.5em -10.5cm;
+        padding: 0 0.5em 0 0;
+        clear: left;
+        float: left;
+        text-align:right;
         font-size: small;
     }
 }
@@ -98,7 +106,7 @@ body {
         orphans: 3;
         widows: 3;
     }
-    .sidebar {
+    .sidebar, sidenote {
         border: 1px solid #e0e0e0;
         border-radius: 0.5em;
         background-color: #fff;
