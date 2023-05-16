@@ -371,6 +371,15 @@
   (add-to-list 'completion-at-point-functions #'cape-dabbrev)
   (add-to-list 'completion-at-point-functions #'cape-file))
 
+(use-package tempel
+  :init
+  (defun templ-setup-capf ()
+    (setq completion-at-point-functions
+          (cons #'tempel-expand
+                completion-at-point-functions)))
+  (add-hook 'prog-mode-hook 'templ-setup-capf)
+  (add-hook 'text-mode-hook 'templ-setup-capf))
+
 (use-package eglot
   :commands eglot)
 
