@@ -465,7 +465,7 @@ p.verse {
 }
 .org-comment,
 .org-comment-delimiter {
-    color: #8a8a8a;
+    color: #87875f;
     font-style: italic;
 }
 .org-preprocessor {
