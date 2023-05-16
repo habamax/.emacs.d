@@ -829,6 +829,8 @@
      ((,class256 (:foreground ,darkgrey))))
    `(consult-bookmark
      ((,class256 (:foreground ,comment))))
+   `(consult-highlight-match
+     ((,class256 (:background ,grey1))))
 
    ;;; notmuch
    `(notmuch-message-summary-face
