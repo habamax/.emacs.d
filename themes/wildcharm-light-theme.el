@@ -24,7 +24,8 @@
       (special "#875fff")(comment "#87875f")
       (yellow1 "#d7af5f")(yellow2 "#ffd75f")
       (grey1 "#dadada")(grey2 "#e4e4e4")(grey3 "#eeeeee")
-      (match-paren "#ff00af")(non-text "#b2b2b2")
+      (non-text "#b2b2b2")
+      (match-paren "#ff00af")(match "#d7d7d7")
       (mode-line-active "#d0d0d0")(mode-line-inactive "#e4e4e4")
       (menu "#eeeeee")
       (header-line "#d7d7d7")
@@ -170,7 +171,7 @@
 
    ;;; replace.el
    `(match
-     ((,class256 (:background ,bright-cyan :foreground ,white))))
+     ((,class256 (:background ,match))))
 
    ;;; global-hl-line-mode
    `(hl-line
@@ -830,7 +831,7 @@
    `(consult-bookmark
      ((,class256 (:foreground ,comment))))
    `(consult-highlight-match
-     ((,class256 (:background ,grey1))))
+     ((,class256 (:background ,match))))
 
    ;;; notmuch
    `(notmuch-message-summary-face
