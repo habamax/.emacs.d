@@ -1,8 +1,22 @@
 ;;-*-coding: utf-8;-*-
 (define-abbrev-table 'global-abbrev-table
   '(
-    ("MK" "Maxim KIM")
-    ("teh" "the")
     ("shrug" "¯\\_(ツ)_/¯")
-   ))
-
+    ("teh" "the")
+    ("latex" "LaTeX")
+    ("adn" "and")
+    ("tihs" "this")
+    ("thsi" "this")
+    ("taht" "that")
+    ("thta" "that")
+    ("htat" "that")
+    ("waht" "what")
+    ("whta" "what")
+    ("hwat" "what")
+    ("rigth" "right")
+    ("lenght" "length")
+    ("knwo" "know")
+    ("kwno" "know")
+    ("konw" "know")
+    ("clena" "clean")
+))
