@@ -354,6 +354,8 @@
   (add-to-list 'completion-at-point-functions #'cape-file))
 
 (use-package tempel
+  :bind (("M-*" . tempel-complete)
+         ("M-+" . tempel-insert))
   :init
   (defun templ-setup-capf ()
     (setq completion-at-point-functions
