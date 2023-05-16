@@ -152,7 +152,6 @@
          ;; ("C-c m" . imenu)
          ("C-c b" . habamax/next-buffer-like-this)
          ("C-c B" . habamax/previous-buffer-like-this)
-         ("C-c i d" . habamax/insert-current-date)
          ([remap list-buffers] . ibuffer)
          ("C-c d" . habamax/duplicate-line)
          ("M-s g" . habamax/grep-current-word)
@@ -231,15 +230,6 @@
          ("C-c l" . org-store-link)
          :map org-mode-map
          ;; ("M-g o" . org-goto)
-         ("C-c i S" . org/insert-screenshot)
-         ("C-c i s" . org/insert-src)
-         ("C-c i q" . org/insert-quote)
-         ("C-c i e" . org/insert-example)
-         ("C-c i c" . org/insert-ad-caution)
-         ("C-c i n" . org/insert-ad-note)
-         ("C-c i t" . org/insert-ad-tip)
-         ("C-c i w" . org/insert-ad-warning)
-         ("C-c i i" . org/insert-ad-important)
          :repeat-map habamax-org-map
          ("t" . org-todo))
   :mode (("\\.org$" . org-mode))

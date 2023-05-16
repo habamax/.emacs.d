@@ -1,6 +1,5 @@
 ;;; habamax-org.el  -*- lexical-binding: t; -*-
 
-
 (setq org-directory (or (getenv "DOCS") "~/docs"))
 (setq org-agenda-files '("todo.org" "notes.org" "birthdays.org"))
 
@@ -72,39 +71,6 @@
                 (insert-file-contents (concat user-emacs-directory "org/org.css"))
                 (buffer-string))
               "</style>\n"))
-(setq org-goto-interface 'outline-path-completion)
-
-;;;###autoload
-(define-skeleton org/insert-ad-note "Org note admonition" nil
-  "#+begin_note\n" _ "\n#+end_note")
-
-;;;###autoload
-(define-skeleton org/insert-ad-tip "Org tip admonition" nil
-  "#+begin_tip\n" _ "\n#+end_tip")
-
-;;;###autoload
-(define-skeleton org/insert-ad-warning "Org warning admonition" nil
-  "#+begin_warning\n" _ "\n#+end_warning")
-
-;;;###autoload
-(define-skeleton org/insert-ad-caution "Org caution admonition" nil
-  "#+begin_caution\n" _ "\n#+end_caution")
-
-;;;###autoload
-(define-skeleton org/insert-ad-important "Org important admonition" nil
-  "#+begin_important\n" _ "\n#+end_important")
-
-;;;###autoload
-(define-skeleton org/insert-src "Org source block" nil
-  "#+begin_src" _ "\n#+end_src")
-
-;;;###autoload
-(define-skeleton org/insert-example "Org example block" nil
-  "#+begin_example\n" _ "\n#+end_example")
-
-;;;###autoload
-(define-skeleton org/insert-quote "Org quote block" nil
-  "#+begin_quote\n" _ "\n#+end_quote")
 
 ;;;###autoload
 (defun notes ()
