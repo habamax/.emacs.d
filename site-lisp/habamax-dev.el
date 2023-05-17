@@ -1,6 +1,5 @@
 ;;; habamax-dev.el  -*- lexical-binding: t; -*-
 
-;;;###autoload
 (defun habamax-dev/run-c-file ()
   "Compile and run single c file"
   (interactive)
@@ -14,7 +13,6 @@
                " && " (shell-quote-argument file-name))))))
 
 
-;;;###autoload
 (defun habamax-dev/run-python-file ()
   "Compile and run single python file"
   (interactive)

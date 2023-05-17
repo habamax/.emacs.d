@@ -72,17 +72,14 @@
                 (buffer-string))
               "</style>\n"))
 
-;;;###autoload
 (defun notes ()
   (interactive)
   (find-file (concat org-directory "/notes.org")))
 
-;;;###autoload
 (defun todo ()
   (interactive)
   (find-file (concat org-directory "/todo.org")))
 
-;;;###autoload
 (defun org/insert-screenshot ()
   (interactive)
   (let* ((img-dir (concat (file-name-sans-extension (buffer-file-name))

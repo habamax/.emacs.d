@@ -6,8 +6,14 @@
 
 ;;; Code:
 
+
+;;; Visit emacs init file
+(defun init-file ()
+  (interactive)
+  (find-file user-init-file))
+
+
 ;;; Comment a line.
-;;;###autoload
 (defun habamax/toggle-comment (arg)
   "Comment or uncomment current line if mark region is not active.
 Otherwise call well known `comment-dwim'"
@@ -22,7 +28,6 @@ Otherwise call well known `comment-dwim'"
     (comment-dwim arg)))
 
 
-;;;###autoload
 (defun habamax/duplicate-line (arg)
   "Duplicate current line, leaving point in lower line."
   (interactive "*p")
@@ -40,7 +45,6 @@ Otherwise call well known `comment-dwim'"
   (next-line arg))
 
 
-;;;###autoload
 (defun habamax/move-text (arg)
   "Move region or line up/down depending on arg."
   (cond
@@ -66,14 +70,12 @@ Otherwise call well known `comment-dwim'"
       (move-to-column column t)))))
 
 
-;;;###autoload
 (defun habamax/move-line-up (arg)
   "Move up region/line."
   (interactive "*p")
   (habamax/move-text (- arg)))
 
 
-;;;###autoload
 (defun habamax/move-line-down (arg)
   "Move down region/line."
   (interactive "*p")
@@ -81,7 +83,6 @@ Otherwise call well known `comment-dwim'"
 
 
 ;; Next buffer with the same mode
-;;;###autoload
 (defun habamax/next-buffer-like-this ()
   "Open next buffer with the same major mode as current."
   (interactive)
@@ -96,7 +97,6 @@ Otherwise call well known `comment-dwim'"
 
 
 ;; Previous buffer with the same mode
-;;;###autoload
 (defun habamax/previous-buffer-like-this ()
   "Open previous buffer with the same major mode as current."
   (interactive)
@@ -110,7 +110,6 @@ Otherwise call well known `comment-dwim'"
       (previous-buffer))))
 
 
-;;;###autoload
 (defun habamax/kill-region ()
   "Kill region if mark is active, kill whole line otherwise."
   (interactive)
@@ -119,7 +118,6 @@ Otherwise call well known `comment-dwim'"
     (kill-region (line-beginning-position) (line-beginning-position 2))))
 
 
-;;;###autoload
 (defun habamax/kill-ring-save ()
   "Save region in kill ring if mark is active, save whole line otherwise."
   (interactive)
@@ -128,14 +126,12 @@ Otherwise call well known `comment-dwim'"
     (kill-ring-save (line-beginning-position) (line-beginning-position 2))))
 
 
-;;;###autoload
 (defun habamax/grep-current-word ()
   "Search current word using `grep' and `grep-command'"
   (interactive)
   (grep (concat grep-command (current-word) " .")))
 
 
-;;;###autoload
 (defun habamax/grep-todo ()
   "Search current TODO:, FIXME: and XXX: using `grep' and `grep-command'"
   (interactive)
@@ -143,7 +139,6 @@ Otherwise call well known `comment-dwim'"
 
 
 ;;;; sort words
-;;;###autoload
 (defun habamax/sort-words (reverse beg end)
   "Sort words in region alphabetically, in REVERSE if negative.
 
@@ -157,7 +152,6 @@ See `sort-regexp-fields'."
   (sort-regexp-fields reverse "\\w+" "\\&" beg end))
 
 
-;;;###autoload
 (defun habamax/insert-current-date ()
   "Insert current date. Replace ISO date under cursor with current date."
   (interactive)
@@ -168,7 +162,6 @@ See `sort-regexp-fields'."
   (insert (format-time-string "%Y-%m-%d")))
 
 
-;;;###autoload
 (defun habamax/recentf-open ()
   (interactive)
   (find-file
@@ -179,7 +172,6 @@ See `sort-regexp-fields'."
 
 (defvar wildcharm-hook nil "After wildcharm-(light-)theme is loaded.")
 
-;;;###autoload
 (defun habamax/toggle-bg ()
   (interactive)
   (let ((current-theme (car custom-enabled-themes)))
@@ -191,7 +183,6 @@ See `sort-regexp-fields'."
   (run-hooks 'wildcharm-hook))
 
 
-;;;###autoload
 (defun habamax/auth-secret (host)
     "Return secret(password) for specified host from auth-sources."
     (let ((found (nth 0 (auth-source-search :host host :create nil))))
@@ -202,7 +193,7 @@ See `sort-regexp-fields'."
 	    secret)))))
 
 
-;;;###autoload
+
 (defun habamax/auth-basic (host)
     "Return base64 encoded login:password for specified host from auth-sources."
     (let ((found (nth 0 (auth-source-search :host host :create nil))))
