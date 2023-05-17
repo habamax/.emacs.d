@@ -25,7 +25,7 @@
       (yellow1 "#d7af5f")(yellow2 "#ffd75f")
       (grey1 "#dadada")(grey2 "#e4e4e4")(grey3 "#eeeeee")
       (non-text "#b2b2b2")
-      (match-paren "#ff00af")(match "#d7d7d7")
+      (match-paren "#ff00af")(match "#ffd7ff")
       (mode-line-active "#d0d0d0")(mode-line-inactive "#e4e4e4")
       (menu "#eeeeee")
       (header-line "#d7d7d7")
