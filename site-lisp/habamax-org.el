@@ -23,10 +23,12 @@
 (setq org-agenda-custom-commands
       '(("n" "Daily agenda"
          ((agenda ""
-                  ((org-agenda-overriding-header "AGENDA\n")))
+                  ((org-agenda-overriding-header
+                    (format "%1$s AGENDA %1$s\n" (make-string 29 ?─)))))
           (alltodo "*"
-                  ((org-agenda-block-separator ?─)
-                   (org-agenda-overriding-header "\nTASKS\n")))))))
+                  ((org-agenda-block-separator nil)
+                   (org-agenda-overriding-header
+                    (format "\n%1$s TASKS %1$s\n" (make-string 29 ?─)))))))))
 
 (setq org-export-with-sub-superscripts '{}
       org-export-headline-levels 5
