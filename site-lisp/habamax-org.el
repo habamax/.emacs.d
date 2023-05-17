@@ -4,7 +4,9 @@
 (setq org-agenda-files '("todo.org" "notes.org" "birthdays.org"))
 
 (setq org-refile-use-outline-path 'file
-      org-refile-targets '((org-agenda-files :maxlevel . 1)))
+      org-refile-targets
+      `((org-agenda-files :maxlevel . 1)
+        (,(directory-files-recursively org-directory "\\.org$") :maxlevel . 1)))
 
 (setq org-capture-templates
       '(("t" "Todo" entry (file "todo.org")
