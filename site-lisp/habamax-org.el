@@ -19,42 +19,13 @@
          "* Meeting Notes\n%T\n\nAttendees:\n\n%?\n\nStatus:\n\n"
          :empty-lines 1 :prepend t)))
 
-;; (setq org-agenda-custom-commands
-;;       '(("n" "Daily agenda"
-;;          ((tags-todo "*"
-;;                 ((org-agenda-overriding-header "IMPORTANT TASKS\n")
-;;                  (org-agenda-block-separator nil)
-;;                  (org-agenda-skip-function '(org-agenda-skip-if nil '(timestamp)))
-;;                  (org-agenda-skip-function
-;;                   `(org-agenda-skip-entry-if
-;;                     'notregexp ,(format "\\[#%s\\]"
-;;                                         (char-to-string org-priority-highest))))))
-;;           (agenda ""
-;;                   ((org-agenda-overriding-header "\nAGENDA\n")
-;;                    (org-agenda-block-separator nil)
-;;                    (org-agenda-format-date "%A %-e %B %Y")
-;;                    (org-agenda-span 1)
-;;                    (org-deadline-warning-days 0)
-;;                    (org-scheduled-past-days 0)))
-;;           (agenda ""
-;;                   ((org-agenda-start-on-weekday nil)
-;;                    (org-agenda-start-day "+1d")
-;;                    (org-agenda-span 3)
-;;                    (org-deadline-warning-days 0)
-;;                    (org-agenda-block-separator nil)
-;;                    (org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-;;                    (org-agenda-overriding-header "\nNext three days\n")))
-;;           (agenda ""
-;;                   ((org-agenda-time-grid nil)
-;;                    (org-agenda-start-on-weekday nil)
-;;                    (org-agenda-start-day "+4d")
-;;                    (org-agenda-span 14)
-;;                    (org-agenda-show-all-dates nil)
-;;                    (org-deadline-warning-days 0)
-;;                    (org-agenda-block-separator nil)
-;;                    (org-agenda-entry-types '(:deadline))
-;;                    (org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
-;;                    (org-agenda-overriding-header "\nUpcoming deadlines (+14d)\n")))))))
+(setq org-agenda-custom-commands
+      '(("n" "Daily agenda"
+         ((agenda ""
+                  ((org-agenda-overriding-header "AGENDA\n")))
+          (alltodo "*"
+                  ((org-agenda-block-separator ?─)
+                   (org-agenda-overriding-header "\nTASKS\n")))))))
 
 (setq org-export-with-sub-superscripts '{}
       org-export-headline-levels 5
