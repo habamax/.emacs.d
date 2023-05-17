@@ -140,16 +140,12 @@
 
 (use-package habamax
   :load-path "site-lisp"
-  :commands init-file
   :bind (("M-;" . habamax/toggle-comment)
          ("M-o" . delete-blank-lines)
          ("M-n" . habamax/move-line-down)
          ("M-p" . habamax/move-line-up)
          ("C-w" . habamax/kill-region)
          ("M-w" . habamax/kill-ring-save)
-         ;;; Use Consult versions instead
-         ;; ("C-x C-r" . habamax/recentf-open)
-         ;; ("C-c m" . imenu)
          ("C-c b" . habamax/next-buffer-like-this)
          ("C-c B" . habamax/previous-buffer-like-this)
          ([remap list-buffers] . ibuffer)
@@ -170,10 +166,8 @@
          :repeat-map habamax-buffers-like-this-map
          ("b" . habamax/next-buffer-like-this)
          ("B" . habamax/previous-buffer-like-this))
-  :config
-  (defun init-file ()
-    (interactive)
-    (find-file user-init-file)))
+  :init
+  (require 'habamax))
 
 (use-package habamax-dev
   :load-path "site-lisp"
