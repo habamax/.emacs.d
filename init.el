@@ -230,7 +230,15 @@
   :mode (("\\.org$" . org-mode))
   :config
   (define-key org-mode-map (kbd "C-c C-r") verb-command-map)
-  (require 'habamax-org))
+  (require 'habamax-org)
+  :custom-face
+  (org-document-title ((t (:height 1.4))))
+  (org-agenda-structure ((t (:height 1.4))))
+  (org-agenda-date-today ((t (:height 1.3))))
+  (org-agenda-date ((t (:height 1.2))))
+  (org-level-1 ((t (:height 1.4))))
+  (org-level-2 ((t (:height 1.2))))
+  (org-level-3 ((t (:height 1.1)))))
 
 (use-package verb
   :config
