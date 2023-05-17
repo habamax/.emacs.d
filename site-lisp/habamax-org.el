@@ -24,11 +24,19 @@
       '(("n" "Daily agenda"
          ((agenda ""
                   ((org-agenda-overriding-header
-                    (format "%1$s AGENDA %1$s\n" (make-string 29 ?─)))))
+                    (let* ((caption "── AGENDA ")
+                           (width (- (window-width) (length caption))))
+                      (format "%s%s\n"
+                              caption
+                              (make-string width ?─))))))
           (alltodo "*"
                   ((org-agenda-block-separator nil)
                    (org-agenda-overriding-header
-                    (format "\n%1$s TASKS %1$s\n" (make-string 29 ?─)))))))))
+                    (let* ((caption "── TASKS ")
+                           (width (- (window-width) (length caption))))
+                      (format "\n%s%s\n"
+                              caption
+                              (make-string width ?─))))))))))
 
 (setq org-export-with-sub-superscripts '{}
       org-export-headline-levels 5
