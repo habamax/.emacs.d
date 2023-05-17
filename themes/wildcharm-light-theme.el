@@ -347,9 +347,11 @@
    `(org-date-selected
      ((,class256 (:background ,bright-magenta :foreground ,bg))))
    `(org-agenda-date
-     ((,class256 (:foreground ,fg :weight normal))))
+     ((,class256 (:foreground ,blue :weight normal))))
    `(org-agenda-date-today
-     ((,class256 (:foreground ,blue :weight bold))))
+     ((,class256 (:foreground ,bright-magenta :weight bold))))
+   `(org-agenda-current-time
+     ((,class256 (:foreground ,bright-magenta))))
    `(org-agenda-done
      ((,class256 (:foreground ,green))))
    `(org-scheduled-today
@@ -364,8 +366,6 @@
      ((,class256 (:foreground ,bright-red :weight bold))))
    `(org-time-grid
      ((,class256 (:foreground ,darkgrey :weight normal))))
-   `(org-agenda-current-time
-     ((,class256 (:foreground ,bright-blue))))
    `(org-table
      ((,class256 (:foreground ,fg))))
 
