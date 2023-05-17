@@ -50,7 +50,8 @@
 (setq org-html-style
       (concat "<style type=\"text/css\">\n"
               (with-temp-buffer
-                (insert-file-contents (concat user-emacs-directory "org/org.css"))
+                (insert-file-contents
+                 (concat user-emacs-directory "org/org.css"))
                 (buffer-string))
               "</style>\n"))
 
@@ -73,12 +74,13 @@
     ;; Windows -- use powershell, other(implicit linux) -- use wl-paste
     (shell-command
      (if +IS-WINDOWS+
-         (concat "powershell -command \"Add-Type -AssemblyName System.Windows.Forms;"
-                 "if ($([System.Windows.Forms.Clipboard]::ContainsImage()))"
-                 "{$image = [System.Windows.Forms.Clipboard]::GetImage();"
-                 "[System.Drawing.Bitmap]$image.Save('"
-                 filename
-                 "',[System.Drawing.Imaging.ImageFormat]::Png);}\"")
+         (concat
+          "powershell -command \"Add-Type -AssemblyName System.Windows.Forms;"
+          "if ($([System.Windows.Forms.Clipboard]::ContainsImage()))"
+          "{$image = [System.Windows.Forms.Clipboard]::GetImage();"
+          "[System.Drawing.Bitmap]$image.Save('"
+          filename
+          "',[System.Drawing.Imaging.ImageFormat]::Png);}\"")
        (concat "wl-paste > " filename)))
     (insert (concat "[[file:" filename "]]"))))
 
