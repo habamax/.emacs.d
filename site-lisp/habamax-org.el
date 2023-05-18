@@ -23,7 +23,9 @@
 (setq org-agenda-custom-commands
       '(("n" "Daily agenda"
          ((agenda ""
-                  ((org-agenda-overriding-header
+                  ((org-agenda-start-day "-1d")
+                   (org-agenda-span 3)
+                   (org-agenda-overriding-header
                     (let* ((caption "── AGENDA ")
                            (width (- (window-width) (length caption))))
                       (format "%s%s\n"
