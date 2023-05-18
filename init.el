@@ -205,7 +205,7 @@
          ("C-c C-c f" . consult-focus-lines)
          ("C-c C-c k" . consult-keep-lines)
          ("M-g o" . consult-outline)
-         ("M-g g" . consult-goto-line)
+         ([remap goto-line] . consult-goto-line)
          ("M-s G" . consult-grep)
          ("M-s r" . consult-ripgrep)
          ("M-y" . consult-yank-pop))
