@@ -27,7 +27,7 @@
                    (org-agenda-span 3)
                    (org-agenda-overriding-header
                     (let* ((caption "── AGENDA ")
-                           (width (- (window-width) (length caption) 1)))
+                           (width (- (window-width) (length caption))))
                       (format "%s%s\n"
                               caption
                               (make-string width ?─))))))
@@ -35,7 +35,7 @@
                   ((org-agenda-block-separator nil)
                    (org-agenda-overriding-header
                     (let* ((caption "── TASKS ")
-                           (width (- (window-width) (length caption) 1)))
+                           (width (- (window-width) (length caption))))
                       (format "\n%s%s\n"
                               caption
                               (make-string width ?─))))))))))
