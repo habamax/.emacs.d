@@ -22,8 +22,8 @@
 
 (if +IS-WINDOWS+
     (let ((fonts '(("JetBrains Mono NL" . "14")
-                   ("Cascadia Mono SemiLight" . "14")
-                   ("Consolas" . "14"))))
+                   ("Dejavu Sans Mono"  . "14")
+                   ("Consolas"          . "14"))))
       (cl-dolist (fnt fonts)
         (let ((fnt-name (car fnt))
               (fnt-spec (format "%s-%s" (car fnt) (cdr fnt))))
