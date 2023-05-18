@@ -200,13 +200,7 @@
         '(orderless-literal orderless-initialism orderless-flex)))
 
 (use-package consult
-  :bind (;; ("C-x b" . consult-buffer)
-         ;; ("C-x 4 b" . consult-buffer-other-window)
-         ;; ("C-x 5 b" . consult-buffer-other-frame)
-         ;; ("C-x p b" . consult-project-buffer)
-         ;; ("C-x r b" . consult-bookmark)
-         ;; ("C-x C-r" . consult-recent-file)
-         ("C-c m" . consult-imenu)
+  :bind (("C-c m" . consult-imenu)
          ("C-c M" . consult-imenu-multi)
          ("M-g o" . consult-outline)
          ("M-s G" . consult-grep)
