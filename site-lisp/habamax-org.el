@@ -21,9 +21,31 @@
          :empty-lines 1 :prepend t)))
 
 (setq org-agenda-custom-commands
-      '(("n" "Daily agenda"
+      '(("k" "Work Agenda"
          ((agenda ""
-                  ((org-agenda-start-day "-1d")
+                  ((org-agenda-skip-function
+                    '(org-agenda-skip-entry-if 'notregexp ":work:"))
+                   (org-agenda-start-day "-1d")
+                   (org-agenda-span 3)
+                   (org-agenda-overriding-header
+                    (let* ((caption "── WORK AGENDA ")
+                           (width (- (window-width) (length caption))))
+                      (format "%s%s\n"
+                              caption
+                              (make-string width ?─))))))
+          (tags-todo "work"
+                  ((org-agenda-block-separator nil)
+                   (org-agenda-overriding-header
+                    (let* ((caption "── WORK TASKS ")
+                           (width (- (window-width) (length caption))))
+                      (format "\n%s%s\n"
+                              caption
+                              (make-string width ?─))))))))
+        ("n" "Personal Agenda"
+         ((agenda ""
+                  ((org-agenda-skip-function
+                    '(org-agenda-skip-entry-if 'regexp ":work:"))
+                   (org-agenda-start-day "-1d")
                    (org-agenda-span 3)
                    (org-agenda-overriding-header
                     (let* ((caption "── AGENDA ")
@@ -31,7 +53,7 @@
                       (format "%s%s\n"
                               caption
                               (make-string width ?─))))))
-          (alltodo "*"
+          (tags-todo "-work"
                   ((org-agenda-block-separator nil)
                    (org-agenda-overriding-header
                     (let* ((caption "── TASKS ")
