@@ -295,6 +295,12 @@
    `(bookmark-face
      ((,class256 (:background nil :foreground ,yellow))))
 
+   ;;; info
+   `(info-title-4
+     ((,class256 (:foreground ,white :weight bold))))
+   `(info-node
+     ((,class256 (:foreground ,bright-yellow :weight bold))))
+   
    ;;; org
    `(org-meta-line
      ((,class256 (:foreground ,darkgrey))))
