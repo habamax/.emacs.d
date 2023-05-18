@@ -32,9 +32,12 @@
                            (width (- (window-width) (length caption))))
                       (format "%s%s\n"
                               caption
-                              (make-string width ?─))))))
-          (tags-todo "work"
-                  ((org-agenda-block-separator nil)
+                              (make-string width ?─)))
+                    )))
+          (alltodo "*"
+                  ((org-agenda-skip-function
+                    '(org-agenda-skip-entry-if 'notregexp ":work:"))
+                   (org-agenda-block-separator nil)
                    (org-agenda-overriding-header
                     (let* ((caption "── WORK TASKS ")
                            (width (- (window-width) (length caption))))
@@ -53,8 +56,10 @@
                       (format "%s%s\n"
                               caption
                               (make-string width ?─))))))
-          (tags-todo "-work"
-                  ((org-agenda-block-separator nil)
+          (alltodo "*"
+                  ((org-agenda-skip-function
+                    '(org-agenda-skip-entry-if 'regexp ":work:"))
+                   (org-agenda-block-separator nil)
                    (org-agenda-overriding-header
                     (let* ((caption "── TASKS ")
                            (width (- (window-width) (length caption))))
