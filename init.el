@@ -217,11 +217,7 @@
   :commands (todo notes)
   :bind (("C-c c" . org-capture)
          ("C-c a" . org-agenda)
-         ("C-c l" . org-store-link)
-         :map org-mode-map
-         ;; ("M-g o" . org-goto)
-         :repeat-map habamax-org-map
-         ("t" . org-todo))
+         ("C-c l" . org-store-link))
   :mode (("\\.org$" . org-mode))
   :config
   (define-key org-mode-map (kbd "C-c C-r") verb-command-map)
