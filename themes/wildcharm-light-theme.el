@@ -888,7 +888,7 @@
    `(rainbow-delimiters-depth-4-face
      ((,class256 (:foreground ,magenta))))
    `(rainbow-delimiters-depth-5-face
-     ((,class256 (:foreground ,green))))
+     ((,class256 (:foreground ,bright-blue))))
    `(rainbow-delimiters-depth-6-face
      ((,class256 (:foreground ,red))))
    `(rainbow-delimiters-depth-7-face
