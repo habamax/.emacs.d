@@ -139,7 +139,7 @@
      ((t (:background ,mode-line-active :foreground ,grey :weight bold))))
 
    `(show-paren-match
-     ((,class256 :foreground ,match-paren :weight bold)))
+     ((,class256 :foreground ,match-paren :weight bold :underline t)))
    `(show-paren-mismatch
      ((,class256 :background ,match-paren :foreground ,white :weight bold)))
 
