@@ -369,6 +369,11 @@
   (add-hook 'prog-mode-hook 'templ-setup-capf)
   (add-hook 'text-mode-hook 'templ-setup-capf))
 
+(use-package rainbow-delimiters
+  :commands rainbow-delimiters-mode
+  :init
+  (add-hook 'emacs-lisp-mode-hook #'rainbow-delimiters-mode))
+
 (use-package eglot
   :commands eglot)
 
