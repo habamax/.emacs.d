@@ -229,7 +229,7 @@
   :bind (("C-c c" . org-capture)
          ("C-c a" . org-agenda)
          ("C-c l" . org-store-link))
-  :mode (("\\.org$" . org-mode))
+  ;; :mode (("\\.org$" . org-mode))
   :config
   (define-key org-mode-map (kbd "C-c C-r") verb-command-map)
   (require 'habamax-org)
