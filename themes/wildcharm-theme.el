@@ -892,6 +892,26 @@
    `(corfu-border
      ((,class256 (:background ,darkgrey))))
 
+   ;;; rainbow-delimiters
+   `(rainbow-delimiters-depth-1-face
+     ((,class256 (:foreground ,bright-blue))))
+   `(rainbow-delimiters-depth-2-face
+     ((,class256 (:foreground ,bright-yellow))))
+   `(rainbow-delimiters-depth-3-face
+     ((,class256 (:foreground ,bright-cyan))))
+   `(rainbow-delimiters-depth-4-face
+     ((,class256 (:foreground ,bright-magenta))))
+   `(rainbow-delimiters-depth-5-face
+     ((,class256 (:foreground ,bright-green))))
+   `(rainbow-delimiters-depth-6-face
+     ((,class256 (:foreground ,red))))
+   `(rainbow-delimiters-depth-7-face
+     ((,class256 (:foreground ,cyan))))
+   `(rainbow-delimiters-depth-8-face
+     ((,class256 (:foreground ,yellow))))
+   `(rainbow-delimiters-depth-9-face
+     ((,class256 (:foreground ,special))))
+   
    ))
 
 ;;;###autoload
