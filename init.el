@@ -320,12 +320,7 @@
 (use-package erc-hl-nicks
   :after erc
   :config
-  (defun erc-nick-hl-override ()
-    (erc-hl-nicks-refresh-colors)
-    (erc-hl-nicks-force-nick-face "habamax"
-                                  (face-background 'font-lock-constant-face)))
-  (erc-nick-hl-override)
-  (add-hook 'wildcharm-hook 'erc-nick-hl-override))
+  (add-hook 'wildcharm-hook 'erc-hl-nicks-refresh-colors))
 
 (use-package webpaste
   :commands (webpaste-paste-buffer webpaste-paste-region))
