@@ -2,6 +2,8 @@
 
 (setq org-directory (or (getenv "DOCS") "~/docs"))
 (setq org-agenda-files '("todo.org" "notes.org" "birthdays.org"))
+(setq org-agenda-inhibit-startup t)
+(setq org-agenda-use-tag-inheritance nil)
 
 (setq org-refile-use-outline-path 'file
       org-refile-targets
