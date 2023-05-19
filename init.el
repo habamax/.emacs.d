@@ -345,13 +345,16 @@
   :init
   (global-corfu-mode)
   :config
-  (corfu-popupinfo-mode))
+  (when (display-graphic-p)
+    (corfu-popupinfo-mode)))
 
 (use-package corfu-terminal
   :if (not (display-graphic-p))
   :after corfu
   :init
-  (corfu-terminal-mode t))
+  (corfu-terminal-mode t)
+  (corfu-echo-mode t))
+
 
 (use-package cape
   :init
