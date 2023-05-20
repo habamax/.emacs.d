@@ -72,11 +72,6 @@
 (setq grep-command "rg -nS --no-heading "
       grep-use-null-device nil)
 
-;;; dired
-(setq ls-lisp-dirs-first t)
-(setq dired-listing-switches "-lah --group-directories-first"
-      dired-dwim-target t)
-
 ;;; Store all backup and autosave files in the tmp dir
 (setq backup-directory-alist `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
@@ -194,6 +189,15 @@
               (c-toggle-comment-style -1)))
   (add-hook 'python-mode-hook
             (lambda () (local-set-key [f5] 'habamax-dev/run-python-file))))
+
+(use-package dired
+  :ensure nil
+  :hook (dired-mode . dired-hide-details-mode)
+  :config
+  (setq ls-lisp-dirs-first t)
+  (setq dired-listing-switches "-lah --group-directories-first"
+        dired-dwim-target t
+        dired-hide-details-hide-symlink-targets nil))
 
 (use-package vertico
   :init
