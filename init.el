@@ -4,6 +4,8 @@
 
 ;; ¯\_(ツ)_/¯
 
+;; Maxim Kim <habamax@gmail.com>
+
 ;;; Code:
 
 ;;; How long it took this time?
