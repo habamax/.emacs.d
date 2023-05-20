@@ -11,16 +11,16 @@
 ;;; How long it took this time?
 (add-hook 'emacs-startup-hook (lambda () (message "%s" (emacs-init-time))))
 
+(setq custom-file (concat user-emacs-directory "custom.el"))
+(when (file-exists-p custom-file)
+  (load custom-file))
+
 (setq user-full-name "Maxim Kim"
       user-mail-address "habamax@gmail.com"
       send-mail-function 'smtpmail-send-it
       smtpmail-smtp-server "smtp.gmail.com"
       smtpmail-stream-type 'starttls
       smtpmail-smtp-service 587)
-
-(setq custom-file (concat user-emacs-directory "custom.el"))
-(when (file-exists-p custom-file)
-  (load custom-file))
 
 (if +IS-WINDOWS+
     (let ((fonts '(("JetBrains Mono NL" . "14")
@@ -102,82 +102,66 @@
  use-package-always-defer t
  use-package-enable-imenu-support t)
 
+
 (require 'use-package)
 
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") 'append)
 
-(use-package windows
-  :ensure nil
-  :bind (("<f8>" . window-toggle-side-windows)
-         ("C-c w" . winner-undo)
-         ("C-c W" . winner-redo)
-         ("S-<right>" . windmove-right)
-         ("S-<left>" . windmove-left)
-         ("S-<up>" . windmove-up)
-         ("S-<down>" . windmove-down)
-         ("M-<right>" . windmove-swap-states-right)
-         ("M-<left>" . windmove-swap-states-left)
-         ("M-<up>" . windmove-swap-states-up)
-         ("M-<down>" . windmove-swap-states-down)
-         ("M-`" . other-frame)
-         :repeat-map habamax-other-frame-map
-         ("o" . other-frame)
-         :repeat-map habamax-winner-map
-         ("w" . winner-undo)
-         ("W" . winner-redo))
-  :init
-  (setq display-buffer-alist
-        '(("\\*e?shell\\*"
-           (display-buffer-in-side-window)
-           (window-height . 0.3)
-           (side . bottom)
-           (slot . -1))
-          ("\\*\\(grep\\|compilation\\|godot - .+\\)\\*"
-           (display-buffer-in-side-window)
-           (window-height . 0.3)
-           (side . bottom)
-           (slot . 0))
-          ("\\*Customize .*\\*"
-           (display-buffer-in-side-window)
-           (window-width . 0.3)
-           (side . right)
-           (slot . -1)))))
-
-(use-package habamax
+(use-package emacs
   :load-path "site-lisp"
-  :bind (("M-;" . habamax/toggle-comment)
-         ("M-o" . delete-blank-lines)
-         ("M-n" . habamax/move-line-down)
-         ("M-p" . habamax/move-line-up)
-         ("C-w" . habamax/kill-region)
-         ("M-w" . habamax/kill-ring-save)
-         ("C-c b" . habamax/next-buffer-like-this)
-         ("C-c B" . habamax/previous-buffer-like-this)
-         ("C-x C-r" . habamax/recentf-open)
-         ([remap list-buffers] . ibuffer)
-         ("C-c d" . habamax/duplicate-line)
-         ("M-s g" . habamax/grep-current-word)
-         ("M-s t" . habamax/grep-todo)
-         ("C-c t n" . display-line-numbers-mode)
-         ("C-c t SPC" . whitespace-mode)
-         ("C-c t s" . flyspell-mode)
-         ("C-c t m" . flymake-mode)
-         ("C-c t l" . hl-line-mode)
-         ("C-c t l" . hl-line-mode)
-         ("C-c t f" . display-fill-column-indicator-mode)
-         ("C-c t b" . habamax/toggle-bg)
-         ("C-c t v" . visible-mode)
-         :repeat-map habamax-duplicate-line-repeat-map
-         ("d" . habamax/duplicate-line)
-         :repeat-map habamax-buffers-like-this-map
-         ("b" . habamax/next-buffer-like-this)
-         ("B" . habamax/previous-buffer-like-this))
+  :bind
+  (("M-;" . habamax/toggle-comment)
+   ("M-o" . delete-blank-lines)
+   ("M-n" . habamax/move-line-down)
+   ("M-p" . habamax/move-line-up)
+   ("C-w" . habamax/kill-region)
+   ("M-w" . habamax/kill-ring-save)
+   ("C-c b" . habamax/next-buffer-like-this)
+   ("C-c B" . habamax/previous-buffer-like-this)
+   ("C-x C-r" . habamax/recentf-open)
+   ([remap list-buffers] . ibuffer)
+   ("C-c d" . habamax/duplicate-line)
+   ("M-s g" . habamax/grep-current-word)
+   ("M-s t" . habamax/grep-todo)
+   ("C-c t n" . display-line-numbers-mode)
+   ("C-c t SPC" . whitespace-mode)
+   ("C-c t s" . flyspell-mode)
+   ("C-c t m" . flymake-mode)
+   ("C-c t l" . hl-line-mode)
+   ("C-c t l" . hl-line-mode)
+   ("C-c t f" . display-fill-column-indicator-mode)
+   ("C-c t b" . habamax/toggle-bg)
+   ("C-c t v" . visible-mode)
+   ("<f8>" . window-toggle-side-windows)
+   ("C-c w" . winner-undo)
+   ("C-c W" . winner-redo)
+   ("S-<right>" . windmove-right)
+   ("S-<left>" . windmove-left)
+   ("S-<up>" . windmove-up)
+   ("S-<down>" . windmove-down)
+   ("M-<right>" . windmove-swap-states-right)
+   ("M-<left>" . windmove-swap-states-left)
+   ("M-<up>" . windmove-swap-states-up)
+   ("M-<down>" . windmove-swap-states-down)
+   ("M-`" . other-frame)
+   :repeat-map habamax-other-frame-map
+   ("o" . other-frame)
+   :repeat-map habamax-winner-map
+   ("w" . winner-undo)
+   ("W" . winner-redo)
+   :repeat-map habamax-duplicate-line-repeat-map
+   ("d" . habamax/duplicate-line)
+   :repeat-map habamax-buffers-like-this-map
+   ("b" . habamax/next-buffer-like-this)
+   ("B" . habamax/previous-buffer-like-this))
   :init
+  (require 'habamax-windows)
+  :config
   (require 'habamax))
 
 (use-package habamax-dev
-  :load-path "site-lisp"
+  :ensure nil
   :commands (habamax-dev/run-c-file
              habamax-dev/run-python-file)
   :init
@@ -235,7 +219,6 @@
   :bind (("C-c c" . org-capture)
          ("C-c a" . org-agenda)
          ("C-c l" . org-store-link))
-  ;; :mode (("\\.org$" . org-mode))
   :config
   (define-key org-mode-map (kbd "C-c C-r") verb-command-map)
   (require 'habamax-org)
@@ -284,44 +267,10 @@
 
 (use-package erc
   :ensure nil
+  :load-path "site-lisp"
   :commands erc
   :config
-  (when (not +IS-WINDOWS+) (erc-notifications-mode t))
-  (setq erc-nick '("habamax" "mxmkm")
-        erc-hide-list '("JOIN" "PART" "QUIT")
-        erc-join-buffer 'bury
-        erc-autojoin-channels-alist '(("Libera.Chat"
-                                       "#emacs" "#vim" "#python" "#zig"))
-        erc-server-reconnect-attempts 5
-        erc-server-reconnect-timeout 3)
-  (setq erc-kill-queries-on-quit t
-        erc-kill-server-buffer-on-quit t)
-  (setq erc-prompt-for-password nil
-        erc-prompt-for-nickserv-password nil)
-  (defun erc/layout4 ()
-    (interactive)
-    (delete-other-windows)
-    (split-window-right)
-    (split-window-below)
-    (windmove-right)
-    (split-window-below)
-    (windmove-left)
-    (switch-to-buffer "#emacs")
-    (windmove-right)
-    (switch-to-buffer "#vim")
-    (windmove-down)
-    (switch-to-buffer "#zig")
-    (windmove-left)
-    (switch-to-buffer "#python")
-    (windmove-up))
-  (defun erc/layout2 ()
-    (interactive)
-    (delete-other-windows)
-    (split-window-right)
-    (switch-to-buffer "#emacs")
-    (windmove-right)
-    (switch-to-buffer "#vim")
-    (windmove-left)))
+  (require 'habamax-erc))
 
 (use-package erc-hl-nicks
   :after erc
@@ -394,45 +343,7 @@
   :if (executable-find "notmuch")
   :commands (notmuch notmuch-sync)
   :config
-  (setq notmuch-show-logo nil
-        notmuch-hello-auto-refresh t
-        notmuch-hello-recent-searches-max 20
-        notmuch-hello-sections '(notmuch-hello-insert-saved-searches
-                                 notmuch-hello-insert-alltags)
-        notmuch-show-all-tags-list t)
-  (setq notmuch-search-oldest-first nil
-        notmuch-show-empty-saved-searches t
-        notmuch-saved-searches
-        `((:name "Unread"
-           :query "folder:/Inbox/ and tag:unread"
-           :sort-order newest-first
-           :key ,(kbd "u"))
-          (:name "All"
-           :query "folder:/Inbox/ or tag:inbox"
-           :sort-order newest-first
-           :key ,(kbd "a"))))
-  (defun notmuch-sync ()
-    (interactive)
-    (when (executable-find "mbsync")
-      (compile "mbsync -a && notmuch new")))
-  (defun notmuch-delete ()
-    "It doesn't delete in gmail... Just put emails from Inbox to All..."
-    (interactive)
-    (let* ((del-tag "deleted")
-           (count
-            (string-to-number
-             (with-temp-buffer
-               (shell-command
-                (format "notmuch count tag:%s" del-tag) t)
-               (buffer-substring-no-properties (point-min) (1- (point-max))))))
-           (mail (if (> count 1) "mails" "mail")))
-      (unless (> count 0)
-        (user-error "No mail marked as `%s'" del-tag))
-      (when (yes-or-no-p
-             (format "Delete %d %s marked as `%s'?" count mail del-tag))
-        (shell-command
-         (format "notmuch search --output=files --format=text0 tag:%s | %s"
-                 del-tag "xargs -r0 rm"))))))
+  (require 'habamax-notmuch))
 
 (use-package emms
   :commands (emms emms-add-directory-tree)
