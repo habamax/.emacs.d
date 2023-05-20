@@ -109,7 +109,7 @@
              '("melpa" . "https://melpa.org/packages/") 'append)
 
 (use-package emacs
-  :load-path "site-lisp"
+  :load-path "lisp"
   :bind
   (("M-;" . habamax/toggle-comment)
    ("M-o" . delete-blank-lines)
@@ -267,7 +267,6 @@
 
 (use-package erc
   :ensure nil
-  :load-path "site-lisp"
   :commands erc
   :config
   (require 'habamax-erc))
