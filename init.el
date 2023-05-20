@@ -335,7 +335,9 @@
   :custom
   (gdscript-eglot-version 3))
 
-(use-package sly)
+(use-package sly
+  :config
+  (setq-default sly-symbol-completion-mode nil))
 
 (use-package zig-mode)
 
