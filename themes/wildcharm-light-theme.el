@@ -829,7 +829,7 @@
    `(marginalia-key
      ((,class256 (:foreground ,cyan))))
    `(marginalia-date
-     ((,class256 (:foreground ,yellow))))
+     ((,class256 (:foreground ,darkgrey))))
 
    ;;; consult
    `(consult-file
