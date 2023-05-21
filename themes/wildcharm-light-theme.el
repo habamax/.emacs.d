@@ -292,7 +292,7 @@
      ((,class256 (:foreground ,black :weight bold))))
    `(info-node
      ((,class256 (:foreground ,yellow :weight bold))))
-   
+
    ;;; org
    `(org-meta-line
      ((,class256 (:foreground ,darkgrey))))
@@ -897,6 +897,13 @@
      ((,class256 (:foreground ,bright-yellow))))
    `(rainbow-delimiters-depth-9-face
      ((,class256 (:foreground ,special))))
+
+   `(tempel-default
+     ((,class256 (:background ,diff-added-bg))))
+   `(tempel-field
+     ((,class256 (:background ,diff-added-bg))))
+   `(tempel-form
+     ((,class256 (:background nil))))
 
    ))
 

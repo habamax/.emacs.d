@@ -300,7 +300,7 @@
      ((,class256 (:foreground ,white :weight bold))))
    `(info-node
      ((,class256 (:foreground ,bright-yellow :weight bold))))
-   
+
    ;;; org
    `(org-meta-line
      ((,class256 (:foreground ,darkgrey))))
@@ -537,19 +537,19 @@
    `(diff-hunk-header
      ((,class256 (:foreground ,bright-yellow :weight bold))))
    `(diff-added
-     ((,class256 (:background ,diff-added-bg :foreground ,diff-added-fg))
-      (,class16 (:background ,diff-added-bg-tty :foreground ,diff-added-fg))))
+     ((,classTC (:background ,diff-added-bg :foreground ,diff-added-fg))
+      (t (:background ,diff-added-bg-tty :foreground ,diff-added-fg))))
    `(diff-indicator-added
      ((t (:inherit 'diff-added :foreground ,bright-green))))
    `(diff-refine-added
-     ((,class256 (:background ,diff-refine-added-bg :foreground ,diff-added-fg))
-      (,class16 (:background ,diff-refine-added-bg-tty :foreground ,diff-added-fg))))
+     ((,classTC (:background ,diff-refine-added-bg :foreground ,diff-added-fg))
+      (t (:background ,diff-refine-added-bg-tty :foreground ,diff-added-fg))))
    `(diff-removed
-     ((,class256 (:background ,diff-removed-bg :foreground ,diff-removed-fg))
-      (,class16 (:background ,diff-removed-bg-tty :foreground ,diff-removed-fg))))
+     ((,classTC (:background ,diff-removed-bg :foreground ,diff-removed-fg))
+      (t (:background ,diff-removed-bg-tty :foreground ,diff-removed-fg))))
    `(diff-refine-removed
-     ((,class256 (:background ,diff-refine-removed-bg :foreground ,diff-removed-fg))
-      (,class16 (:background ,diff-refine-removed-bg-tty :foreground ,diff-removed-fg))))
+     ((,classTC (:background ,diff-refine-removed-bg :foreground ,diff-removed-fg))
+      (t (:background ,diff-refine-removed-bg-tty :foreground ,diff-removed-fg))))
    `(diff-indicator-removed
      ((t (:inherit 'diff-removed :foreground ,bright-red))))
 
@@ -627,11 +627,11 @@
 
    ;;; smerge
    `(smerge-lower
-     ((,class256 (:background ,diff-added-bg))
-      (,class16 (:background ,diff-added-bg-tty))))
+     ((,classTC (:background ,diff-added-bg))
+      (t (:background ,diff-added-bg-tty))))
    `(smerge-upper
-     ((,class256 (:background ,diff-removed-bg))
-      (,class16 (:background ,diff-removed-bg-tty))))
+     ((,classTC (:background ,diff-removed-bg))
+      (t (:background ,diff-removed-bg-tty))))
    `(smerge-refined-added
      ((t (:background ,green :foreground ,black))))
    `(smerge-refined-removed
@@ -852,7 +852,7 @@
      ((,class256 (:foreground ,comment))))
    `(consult-highlight-match
      ((,class256 (:background ,match))))
-   
+
    ;;; notmuch
    `(notmuch-message-summary-face
      ((,class256 (:background ,grey4))))
@@ -911,7 +911,16 @@
      ((,class256 (:foreground ,yellow))))
    `(rainbow-delimiters-depth-9-face
      ((,class256 (:foreground ,special))))
-   
+
+   `(tempel-default
+     ((,classTC (:background ,diff-added-bg))
+      (t (:background ,diff-added-bg-tty))))
+   `(tempel-field
+     ((,classTC (:background ,diff-added-bg))
+      (t (:background ,diff-added-bg-tty))))
+   `(tempel-form
+     ((,class256 (:background nil))))
+
    ))
 
 ;;;###autoload
