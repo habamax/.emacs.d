@@ -157,22 +157,9 @@
    ("B" . habamax/previous-buffer-like-this))
   :init
   (require 'habamax-windows)
+  (require 'habamax-dev)
   :config
   (require 'habamax))
-
-(use-package habamax-dev
-  :ensure nil
-  :commands (habamax-dev/run-c-file
-             habamax-dev/run-python-file)
-  :init
-  (add-hook 'c-mode-hook
-            (lambda ()
-              (local-set-key [f5] 'habamax-dev/run-c-file)
-              (c-set-style "linux")
-              (setq-local c-basic-offset 4)
-              (c-toggle-comment-style -1)))
-  (add-hook 'python-mode-hook
-            (lambda () (local-set-key [f5] 'habamax-dev/run-python-file))))
 
 (use-package dired
   :ensure nil

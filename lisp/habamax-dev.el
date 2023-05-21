@@ -1,5 +1,17 @@
 ;;; habamax-dev.el  -*- lexical-binding: t; -*-
 
+
+(add-hook 'c-mode-hook
+          (lambda ()
+            (local-set-key [f5] 'habamax-dev/run-c-file)
+            (c-set-style "linux")
+            (setq-local c-basic-offset 4)
+            (c-toggle-comment-style -1)))
+
+(add-hook 'python-mode-hook
+          (lambda () (local-set-key [f5] 'habamax-dev/run-python-file)))
+
+
 (defun habamax-dev/run-c-file ()
   "Compile and run single c file"
   (interactive)
