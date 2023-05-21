@@ -2,6 +2,11 @@
 ;;; Commentary:
 ;;; Code:
 
+(defun erc-habamax ()
+  "Connect to Libera.Chat."
+  (interactive)
+  (erc :server "irc.libera.chat" :port 6667 :nick "habamax"))
+
 (when (not +IS-WINDOWS+) (erc-notifications-mode t))
 (setq erc-nick '("habamax" "mxmkm")
       erc-hide-list '("JOIN" "PART" "QUIT")

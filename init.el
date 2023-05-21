@@ -269,7 +269,7 @@
 
 (use-package erc
   :ensure nil
-  :commands erc
+  :commands erc-habamax
   :config
   (require 'habamax-erc))
 
