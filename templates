@@ -5,6 +5,10 @@ fundamental-mode
 (shrug "¯\\_(ツ)_/¯")
 (maxim "Maxim Kim")
 
+fundamental-mode :when (re-search-backward "Maxim Kim" (line-beginning-position) 'noerror)
+
+(Kim "Kim <habamax@gmail.com>")
+
 prog-mode
 
 (fixme (if (derived-mode-p 'emacs-lisp-mode) ";; " comment-start) "FIXME ")
@@ -67,7 +71,6 @@ text-mode
 (calc (p "taylor(sin(x),x=0,3)" formula) n "----" n (format "%s" (calc-eval formula)))
 
 org-mode
-
 
 (title "#+title: " p n "#+author: Maxim Kim")
 (caption "#+caption: ")
