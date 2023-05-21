@@ -102,7 +102,6 @@
  use-package-always-defer t
  use-package-enable-imenu-support t)
 
-
 (require 'use-package)
 
 (add-to-list 'package-archives
