@@ -19,10 +19,13 @@
                :query "folder:/Inbox/ or tag:inbox"
                :sort-order newest-first
                :key ,(kbd "a"))))
+
 (defun notmuch-sync ()
   (interactive)
+  (notmuch-delete)
   (when (executable-find "mbsync")
     (compile "mbsync -a && notmuch new")))
+
 (defun notmuch-delete ()
   "It doesn't delete in gmail... Just put emails from Inbox to All..."
   (interactive)
@@ -35,9 +38,7 @@
              (buffer-substring-no-properties (point-min) (1- (point-max))))))
          (mail (if (> count 1) "mails" "mail")))
     (unless (> count 0)
-      (user-error "No mail marked as `%s'" del-tag))
-    (when (yes-or-no-p
-           (format "Delete %d %s marked as `%s'?" count mail del-tag))
+      (format "Deleting %d %s marked as `%s'..." count mail del-tag)
       (shell-command
        (format "notmuch search --output=files --format=text0 tag:%s | %s"
                del-tag "xargs -r0 rm")))))
