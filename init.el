@@ -306,7 +306,6 @@
   (corfu-terminal-mode t)
   (corfu-echo-mode t))
 
-
 (use-package cape
   :init
   (add-to-list 'completion-at-point-functions #'cape-dabbrev)
