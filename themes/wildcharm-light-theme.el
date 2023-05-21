@@ -53,7 +53,7 @@
    `(region
      ((,class256 (:background ,bright-blue :foreground ,bg))))
    `(secondary-selection
-     ((,class256 (:background ,cyan :foreground ,bg))))
+     ((,class256 (:background ,bright-cyan :foreground ,bg))))
    `(trailing-whitespace
      ((,class256 (:foreground ,red :weight bold))))
    `(line-number
