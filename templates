@@ -50,10 +50,10 @@ emacs-lisp-mode
 (command "(defun " p " (" p ")\n  \"" p "\"" n> "(interactive" p ")" n> r> ")")
 (advice "(defun " (p "adv" name) " (&rest app)" n> p n> "(apply app))" n>
         "(advice-add #'" (p "fun") " " (p ":around") " #'" (s name) ")")
-(header ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name)))
-        " -- " p " -*- lexical-binding: t -*-" n
-        ";;; Commentary:" n ";;; Code:" n n)
-(provide "(provide '" (file-name-base (or (buffer-file-name) (buffer-name))) ")" n
+(package ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name)))
+         " -- " p " -*- lexical-binding: t -*-" n
+         ";;; Commentary:" p n ";;; Code:" n n q n
+         "(provide '" (file-name-base (or (buffer-file-name) (buffer-name))) ")" n
          ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name)))
          " ends here" n)
 
