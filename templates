@@ -5,7 +5,7 @@ fundamental-mode
 (shrug "¯\\_(ツ)_/¯")
 (maxim "Maxim Kim")
 
-fundamental-mode :when (re-search-backward "Maxim Kim" (line-beginning-position) 'noerror)
+fundamental-mode :when (re-search-backward "Maxim Kim$" (line-beginning-position) 'noerror)
 
 (Kim "Kim <habamax@gmail.com>")
 
