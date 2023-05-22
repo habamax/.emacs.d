@@ -313,7 +313,8 @@
 (use-package rainbow-delimiters
   :commands rainbow-delimiters-mode
   :init
-  (add-hook 'emacs-lisp-mode-hook #'rainbow-delimiters-mode))
+  (add-hook 'emacs-lisp-mode-hook #'rainbow-delimiters-mode)
+  (add-hook 'lisp-mode-hook #'rainbow-delimiters-mode))
 
 (use-package eglot
   :commands eglot)
