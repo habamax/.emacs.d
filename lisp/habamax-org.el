@@ -1,11 +1,15 @@
 ;;; habamax-org.el  -*- lexical-binding: t; -*-
 
-(setq org-directory (or (getenv "DOCS") "~/docs"))
-(setq org-agenda-files '("todo.org" "notes.org" "birthdays.org"))
+(setq org-directory (or (getenv "ORG") "~/org"))
+(setq org-agenda-files '("todo.org" "notes.org" "dates.org"
+                         "work.org" "misc.org"))
+(setq org-archive-location "archive/%s_archive::")
 
-(setq org-refile-use-outline-path 'file
-      org-refile-targets
+(setq org-refile-use-outline-path 'file)
+(setq org-refile-targets
       `((,(directory-files-recursively org-directory "\\.org$") :maxlevel . 1)))
+;; (setq org-refile-targets
+;;       `((org-agenda-files :maxlevel . 1)))
 
 (setq org-capture-templates
       '(("t" "Todo" entry (file "todo.org")
@@ -84,18 +88,16 @@
                 (buffer-string))
               "</style>\n"))
 
-(defun notes ()
+(defun org ()
   (interactive)
-  (find-file (concat org-directory "/notes.org")))
-
-(defun todo ()
-  (interactive)
-  (find-file (concat org-directory "/todo.org")))
+  (find-file
+   (concat org-directory "/"
+           (completing-read "Open org file: " org-agenda-files))))
 
 (defun org/insert-screenshot ()
   (interactive)
-  (let* ((img-dir (concat (file-name-sans-extension (buffer-file-name))
-                          "_img"))
+  (let* ((img-dir (concat "img_"
+                          (file-name-sans-extension (buffer-file-name))))
          (img-name (concat (file-name-sans-extension (buffer-name))
                            "_" (format-time-string "%Y%m%d_%H%M%S") ".png"))
          (filename (concat img-dir "/" img-name)))
