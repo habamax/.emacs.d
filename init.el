@@ -205,7 +205,7 @@
 
 (use-package org
   :ensure nil
-  :commands (todo notes)
+  :commands (org)
   :bind (("C-c c" . org-capture)
          ("C-c a" . org-agenda)
          ("C-c l" . org-store-link))
