@@ -346,10 +346,10 @@
 
 (use-package elfeed
   :config
-  (let* ((feed-dir (or (getenv "DOCS") "~/docs"))
-         (feeds (concat feed-dir "/emacs/elfeeds.el")))
-    (when (file-exists-p feeds)
-      (load feeds))))
+  (when-let* ((feed-dir (or (getenv "ORG") "~/org"))
+              (feeds (concat feed-dir "/ext/elfeeds.el"))
+              (file-exists-p feeds))
+    (load feeds)))
 
 
 ;;; init.el ends here
