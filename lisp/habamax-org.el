@@ -1,15 +1,18 @@
 ;;; habamax-org.el  -*- lexical-binding: t; -*-
 
 (setq org-directory (or (getenv "ORG") "~/org"))
-(setq org-agenda-files '("todo.org" "notes.org" "dates.org"
-                         "work.org" "misc.org"))
 (setq org-archive-location "archive/%s_archive::")
+(setq org-agenda-files
+      (append
+       '("todo.org" "notes.org" "dates.org" "work.org")
+       (mapcar
+        (lambda (f) (concat "projects/" f))
+        (directory-files (concat org-directory "/projects")
+                         nil "^[^.].*\\.org$"))))
 
 (setq org-refile-use-outline-path 'file)
 (setq org-refile-targets
       `((,(directory-files-recursively org-directory "\\.org$") :maxlevel . 1)))
-;; (setq org-refile-targets
-;;       `((org-agenda-files :maxlevel . 1)))
 
 (setq org-capture-templates
       '(("t" "Todo" entry (file "todo.org")
