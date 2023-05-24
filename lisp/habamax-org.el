@@ -99,8 +99,10 @@
 
 (defun org/insert-screenshot ()
   (interactive)
-  (let* ((img-dir (concat "img_"
-                          (file-name-sans-extension (buffer-file-name))))
+  (let* ((img-dir (concat
+                   (file-name-directory (buffer-file-name))
+                   "img-"
+                   (file-name-sans-extension (buffer-name))))
          (img-name (concat (file-name-sans-extension (buffer-name))
                            "_" (format-time-string "%Y%m%d_%H%M%S") ".png"))
          (filename (concat img-dir "/" img-name)))
