@@ -135,7 +135,7 @@ Otherwise call well known `comment-dwim'"
 (defun habamax/grep-todo ()
   "Search current TODO:, FIXME: and XXX: using `grep' and `grep-command'"
   (interactive)
-  (grep (concat grep-command "\\(TODO\\|FIXME\\|XXX\\): .")))
+  (grep (concat grep-command "\"(TODO|FIXME|XXX):\" .")))
 
 
 ;;;; sort words
