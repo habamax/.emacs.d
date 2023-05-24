@@ -112,7 +112,7 @@
 (use-package habamax
   :load-path "lisp"
   :bind
-  (("C-c i" . init-file)
+  (("C-c o i" . init-file)
    ("M-;" . habamax/toggle-comment)
    ("M-o" . delete-blank-lines)
    ("M-n" . habamax/move-line-down)
@@ -217,7 +217,7 @@
   :bind (("C-c c" . org-capture)
          ("C-c a" . org-agenda)
          ("C-c l" . org-store-link)
-         ("C-c o" . org))
+         ("C-c o o" . org))
   :config
   (define-key org-mode-map (kbd "C-c C-r") verb-command-map)
   (require 'habamax-org)
