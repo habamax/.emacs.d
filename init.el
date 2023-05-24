@@ -285,9 +285,7 @@
   :commands (lorem-ipsum-insert-sentences lorem-ipsum-insert-paragraphs))
 
 (use-package xclip
-  :init
-  (when (and (eq system-type 'gnu/linux) (not (display-graphic-p)))
-    (xclip-mode 1)))
+  :commands xclip-mode)
 
 (use-package corfu
   :init
