@@ -209,10 +209,7 @@
          ("M-s r" . consult-ripgrep)
          ("M-y" . consult-yank-pop))
   :config
-  (consult-customize
-   consult--source-bookmark consult--source-file-register
-   consult--source-recent-file consult--source-project-recent-file
-   :preview-key "M-."))
+  (setq consult-preview-key "M-."))
 
 (use-package org
   :ensure nil
