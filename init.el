@@ -138,25 +138,34 @@
    ("M-<f1>" . window-toggle-side-windows)
    ("C-c w" . winner-undo)
    ("C-c W" . winner-redo)
-   ("S-<right>" . windmove-right)
-   ("S-<left>" . windmove-left)
-   ("S-<up>" . windmove-up)
-   ("S-<down>" . windmove-down)
-   ("M-<right>" . windmove-swap-states-right)
-   ("M-<left>" . windmove-swap-states-left)
-   ("M-<up>" . windmove-swap-states-up)
-   ("M-<down>" . windmove-swap-states-down)
+   ("C-c <right>" . windmove-right)
+   ("C-c <left>" . windmove-left)
+   ("C-c <up>" . windmove-up)
+   ("C-c <down>" . windmove-down)
+   ("C-c S-<right>" . windmove-swap-states-right)
+   ("C-c S-<left>" . windmove-swap-states-left)
+   ("C-c S-<up>" . windmove-swap-states-up)
+   ("C-c S-<down>" . windmove-swap-states-down)
    ("M-`" . other-frame)
-   :repeat-map habamax-other-frame-map
+   :repeat-map habamax-other-frame-repeat-map
    ("o" . other-frame)
-   :repeat-map habamax-winner-map
+   :repeat-map habamax-winner-repeat-map
    ("w" . winner-undo)
    ("W" . winner-redo)
    :repeat-map habamax-duplicate-line-repeat-map
    ("d" . habamax/duplicate-line)
-   :repeat-map habamax-buffers-like-this-map
+   :repeat-map habamax-buffers-like-this-repeat-map
    ("b" . habamax/next-buffer-like-this)
-   ("B" . habamax/previous-buffer-like-this))
+   ("B" . habamax/previous-buffer-like-this)
+   :repeat-map habamax-windmove-repeat-map
+   ("<right>" . windmove-right)
+   ("<left>" . windmove-left)
+   ("<up>" . windmove-up)
+   ("<down>" . windmove-down)
+   ("S-<right>" . windmove-swap-states-right)
+   ("S-<left>" . windmove-swap-states-left)
+   ("S-<up>" . windmove-swap-states-up)
+   ("S-<down>" . windmove-swap-states-down))
   :init
   (require 'habamax-windows)
   (require 'habamax-dev)
