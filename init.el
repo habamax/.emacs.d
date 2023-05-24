@@ -110,10 +110,11 @@
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") 'append)
 
-(use-package emacs
+(use-package habamax
   :load-path "lisp"
   :bind
-  (("M-;" . habamax/toggle-comment)
+  (("C-c i" . init-file)
+   ("M-;" . habamax/toggle-comment)
    ("M-o" . delete-blank-lines)
    ("M-n" . habamax/move-line-down)
    ("M-p" . habamax/move-line-up)
@@ -169,9 +170,7 @@
    ("S-<down>" . windmove-swap-states-down))
   :init
   (require 'habamax-windows)
-  (require 'habamax-dev)
-  :config
-  (require 'habamax))
+  (require 'habamax-dev))
 
 (use-package dired
   :ensure nil
