@@ -23,7 +23,7 @@
       smtpmail-smtp-service 587)
 
 (if +IS-WINDOWS+
-    (let ((fonts '(("Iosevka Term SS04" . "14")
+    (let ((fonts '(("Iosevka Term SS04" . "17")
                    ("JetBrains Mono NL" . "14")
                    ("Dejavu Sans Mono"  . "14")
                    ("Consolas"          . "14"))))
