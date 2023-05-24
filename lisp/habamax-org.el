@@ -1,5 +1,8 @@
 ;;; habamax-org.el  -*- lexical-binding: t; -*-
 
+(add-hook 'org-mode-hook 'auto-fill-mode)
+(setq org-log-done 'time)
+
 (setq org-directory (or (getenv "ORG") "~/org"))
 (setq org-archive-location "archive/%s_archive::")
 (setq org-agenda-files
@@ -13,8 +16,6 @@
 (setq org-refile-use-outline-path 'file)
 (setq org-refile-targets
       `((,(directory-files-recursively org-directory "\\.org$") :maxlevel . 1)))
-
-(setq org-log-done 'time)
 
 (setq org-capture-templates
       '(("t" "Todo" entry (file "todo.org")
