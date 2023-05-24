@@ -37,45 +37,24 @@
                     '(org-agenda-skip-entry-if 'notregexp ":work:"))
                    (org-agenda-start-day "-1d")
                    (org-agenda-span 3)
-                   (org-agenda-overriding-header
-                    (let* ((caption "── WORK AGENDA ")
-                           (width (- (window-width) (length caption))))
-                      (format "%s%s\n"
-                              caption
-                              (make-string width ?─)))
-                    )))
+                   (org-agenda-overriding-header "WORK AGENDA\n")))
           (alltodo "*"
                   ((org-agenda-skip-function
                     '(org-agenda-skip-entry-if 'notregexp ":work:"))
                    (org-agenda-block-separator nil)
-                   (org-agenda-overriding-header
-                    (let* ((caption "── WORK TASKS ")
-                           (width (- (window-width) (length caption))))
-                      (format "\n%s%s\n"
-                              caption
-                              (make-string width ?─))))))))
+                   (org-agenda-overriding-header "\nWORK TASKS\n")))))
         ("n" "Personal Agenda"
          ((agenda ""
                   ((org-agenda-skip-function
                     '(org-agenda-skip-entry-if 'regexp ":work:"))
                    (org-agenda-start-day "-1d")
                    (org-agenda-span 3)
-                   (org-agenda-overriding-header
-                    (let* ((caption "── AGENDA ")
-                           (width (- (window-width) (length caption))))
-                      (format "%s%s\n"
-                              caption
-                              (make-string width ?─))))))
+                   (org-agenda-overriding-header "AGENDA\n")))
           (alltodo "*"
                   ((org-agenda-skip-function
                     '(org-agenda-skip-entry-if 'regexp ":work:"))
                    (org-agenda-block-separator nil)
-                   (org-agenda-overriding-header
-                    (let* ((caption "── TASKS ")
-                           (width (- (window-width) (length caption))))
-                      (format "\n%s%s\n"
-                              caption
-                              (make-string width ?─))))))))))
+                   (org-agenda-overriding-header "\nTASKS\n")))))))
 
 (setq org-export-with-sub-superscripts '{}
       org-export-headline-levels 5
