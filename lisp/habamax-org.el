@@ -104,7 +104,7 @@
                    "img-"
                    (file-name-sans-extension (buffer-name))))
          (img-name (concat (file-name-sans-extension (buffer-name))
-                           "_" (format-time-string "%Y%m%d_%H%M%S") ".png"))
+                           "-" (format-time-string "%Y%m%d-%H%M%S") ".png"))
          (filename (concat img-dir "/" img-name)))
     (make-directory img-dir :parents)
     ;; Windows -- use powershell, other(implicit linux) -- use wl-paste
