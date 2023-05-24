@@ -313,7 +313,7 @@
    `(org-code
      ((,class256 (:foreground ,cyan))))
    `(org-verbatim
-     ((,class256 (:inherit org-code))))
+     ((,class256 (:foreground ,magenta))))
    `(org-tag
      ((,class256 (:foreground ,darkgrey :weight normal))))
    `(org-block
