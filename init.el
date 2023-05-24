@@ -86,6 +86,8 @@
 (savehist-mode 1)
 (recentf-mode 1)
 (repeat-mode t)
+
+(setq winner-dont-bind-my-keys t)
 (winner-mode t)
 
 (if (window-system)
