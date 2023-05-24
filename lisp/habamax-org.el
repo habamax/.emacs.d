@@ -14,6 +14,8 @@
 (setq org-refile-targets
       `((,(directory-files-recursively org-directory "\\.org$") :maxlevel . 1)))
 
+(setq org-log-done 'time)
+
 (setq org-capture-templates
       '(("t" "Todo" entry (file "todo.org")
          "* TODO %?\n%U" :empty-lines 1 :prepend t)
