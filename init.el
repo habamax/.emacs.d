@@ -356,5 +356,4 @@
               (file-exists-p feeds))
     (load feeds)))
 
-
 ;;; init.el ends here
