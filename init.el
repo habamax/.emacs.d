@@ -12,8 +12,6 @@
 (add-hook 'emacs-startup-hook (lambda () (message "%s" (emacs-init-time))))
 
 (setq custom-file (concat user-emacs-directory "custom.el"))
-(when (file-exists-p custom-file)
-  (load custom-file))
 
 (setq user-full-name "Maxim Kim"
       user-mail-address "habamax@gmail.com"
