@@ -11,7 +11,7 @@
 ;;; How long it took this time?
 (add-hook 'emacs-startup-hook (lambda () (message "%s" (emacs-init-time))))
 
-(setq custom-file (concat user-emacs-directory "custom.el"))
+(setq custom-file (make-temp-file "custom-emacs"))
 
 (setq user-full-name "Maxim Kim"
       user-mail-address "habamax@gmail.com"
