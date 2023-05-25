@@ -325,6 +325,13 @@
   :commands eglot)
 
 (use-package gdscript-mode
+  :bind
+  (:map gdscript-mode-map
+        ("<f5>" . habamax-gdscript-run-project)
+        ("<f6>" . habamax-gdscript-run-current)
+        ("<f7>" . recompile))
+  :config
+  (require 'habamax-gdscript)
   :custom
   (gdscript-eglot-version 3))
 
