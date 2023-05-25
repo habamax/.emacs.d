@@ -57,9 +57,9 @@
    `(highlight
      ((,class256 (:background ,bright-blue :foreground ,black))))
    `(region
-     ((,class256 (:background ,blue :foreground ,bg))))
+     ((,class256 (:background ,bg :foreground ,blue :inverse-video t))))
    `(secondary-selection
-     ((,class256 (:background ,cyan :foreground ,bg))))
+     ((,class256 (:background ,bg :foreground ,cyan :inverse-video t))))
    `(trailing-whitespace
      ((,class256 (:foreground ,red :weight bold))))
    `(line-number
