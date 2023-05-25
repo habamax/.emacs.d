@@ -20,47 +20,27 @@
       smtpmail-stream-type 'starttls
       smtpmail-smtp-service 587)
 
-(if +IS-WINDOWS+
-    (let ((fonts '(("JetBrains Mono NL" . "14")
-                   ("Dejavu Sans Mono"  . "14")
-                   ("Consolas"          . "14"))))
-      (cl-dolist (fnt fonts)
-        (let ((fnt-name (car fnt))
-              (fnt-spec (format "%s-%s" (car fnt) (cdr fnt))))
-          (when (find-font (font-spec :name fnt-name))
-            (add-to-list 'default-frame-alist `(font . ,fnt-spec))
-            (set-face-attribute 'fixed-pitch nil :font fnt-spec)
-            (set-face-attribute 'fixed-pitch-serif nil :font fnt-spec)
-            (cl-return)))))
-  (add-to-list 'default-frame-alist '(font . "Monospace-18")))
-
-(when +IS-WINDOWS+
-  (set-language-environment 'utf-8)
-  (setq default-buffer-file-coding-system 'utf-8-unix))
-
 (setq default-input-method 'russian-computer)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
+
 (setq ring-bell-function #'ignore)
 (setq scroll-error-top-bottom t)
 (setq disabled-command-function nil)
-(setq suggest-key-bindings t)
-(setq-default fill-column 80)
-(setq-default display-fill-column-indicator-character ?╎)
+(setq-default fill-column 80
+              display-fill-column-indicator-character ?╎)
 (setq-default indent-tabs-mode nil)
 (setq-default isearch-lazy-count t)
 (setq-default line-number-mode t
               column-number-mode t)
-(setq describe-bindings-outline t)
+(setq describe-bindings-outline t
+      suggest-key-bindings t)
 (setq set-mark-command-repeat-pop t)
 (setq show-paren-when-point-inside-paren t)
 (setq tab-always-indent 'complete)
 
 (setq-default abbrev-mode t)
 (quietly-read-abbrev-file (concat user-emacs-directory "abbrevs"))
-
-(when +IS-WINDOWS+
-  (setq epa-pinentry-mode 'loopback))
 
 ;;; Simple HTML renderer to use default font.
 (setq shr-use-fonts nil)
@@ -91,18 +71,37 @@
 (if (window-system)
     (cd "~/"))
 
+;; window layout
+(setq display-buffer-alist
+      '(("\\*e?shell\\*"
+         (display-buffer-in-side-window)
+         (window-height . 0.3)
+         (side . bottom)
+         (slot . -1))
+        ("\\*\\(grep\\|compilation\\|godot - .+\\)\\*"
+         (display-buffer-in-side-window)
+         (window-height . 0.3)
+         (side . bottom)
+         (slot . 0))
+        ("\\*Customize .*\\*"
+         (display-buffer-in-side-window)
+         (window-width . 0.3)
+         (side . right)
+         (slot . -1))))
+
 ;;; use packages
+(require 'package)
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
+
+(require 'use-package)
 
 (setq-default
  package-native-compile t
  use-package-always-ensure t
  use-package-always-defer t
  use-package-enable-imenu-support t)
-
-(require 'use-package)
 
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") 'append)
@@ -166,7 +165,8 @@
    ("S-<up>" . windmove-swap-states-up)
    ("S-<down>" . windmove-swap-states-down))
   :init
-  (require 'habamax-windows)
+  (when +IS-WINDOWS+
+    (require 'habamax-windows))
   (require 'habamax-dev))
 
 (use-package dired
