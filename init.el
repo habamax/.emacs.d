@@ -38,6 +38,7 @@
 (setq set-mark-command-repeat-pop t)
 (setq show-paren-when-point-inside-paren t)
 (setq tab-always-indent 'complete)
+(setq compilation-scroll-output t)
 
 (setq-default abbrev-mode t)
 (quietly-read-abbrev-file (concat user-emacs-directory "abbrevs"))
