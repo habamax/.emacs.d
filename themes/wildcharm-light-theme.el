@@ -1,10 +1,11 @@
-;;; wildcharm-light-theme.el --- light wildcharm theme -*- lexical-binding: t; -*-
+;;; wildcharm-light-theme.el --- port of vim-wildcharm colorscheme -*- lexical-binding: t; -*-
 ;; Author: Maxim Kim <habamax@gmail.com>
 
 ;;; Commentary:
 
 ;; Light theme with mid-contrast colors.
 ;; Should look mostly the same in GUI and TUI with 256 colors support.
+;; NOTE: it is not exactly the same as in vim.
 
 ;;; Code:
 
