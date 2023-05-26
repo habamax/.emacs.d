@@ -18,6 +18,11 @@
 (setq erc-prompt-for-password nil
       erc-prompt-for-nickserv-password nil)
 
+(when-let* ((ext-dir (or (getenv "ORG") "~/org"))
+            (ext (concat ext-dir "/ext/erc-ignore.el"))
+            (file-exists-p ext))
+  (load ext))
+
 (defun erc-habamax ()
   "Connect to Libera.Chat."
   (interactive)
