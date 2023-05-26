@@ -2,12 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
-(defun erc-habamax ()
-  "Connect to Libera.Chat."
-  (interactive)
-  (erc :server "irc.libera.chat" :port 6667 :nick "habamax"))
-
 (when (not +IS-WINDOWS+) (erc-notifications-mode t))
+
 (setq erc-nick '("habamax" "mxmkm")
       erc-hide-list '("JOIN" "PART" "QUIT")
       erc-join-buffer 'bury
@@ -15,10 +11,18 @@
                                      "#emacs" "#vim" "#python" "#zig"))
       erc-server-reconnect-attempts 5
       erc-server-reconnect-timeout 3)
+
 (setq erc-kill-queries-on-quit t
       erc-kill-server-buffer-on-quit t)
+
 (setq erc-prompt-for-password nil
       erc-prompt-for-nickserv-password nil)
+
+(defun erc-habamax ()
+  "Connect to Libera.Chat."
+  (interactive)
+  (erc :server "irc.libera.chat" :port 6667 :nick "habamax"))
+
 (defun erc/layout4 ()
   (interactive)
   (delete-other-windows)
