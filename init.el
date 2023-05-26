@@ -229,6 +229,8 @@
   (org-level-2 ((t (:height 1.2))))
   (org-level-3 ((t (:height 1.1)))))
 
+(use-package htmlize)
+
 (use-package verb
   :config
   (setq verb-auto-kill-response-buffers t))
