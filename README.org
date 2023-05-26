@@ -1,1 +1,3 @@
 #+title: ¯\_(ツ)_/¯
+
+There is time for vim, there is time for emacs.
