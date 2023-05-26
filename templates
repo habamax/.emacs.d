@@ -72,25 +72,25 @@ text-mode
 
 org-mode
 
-(title "#+title: " p n "#+author: Maxim Kim")
-(caption "#+caption: ")
-(center "#+begin_center" n> r> n "#+end_center")
-(begin "#+begin_" (s name) n> r> n "#+end_" name)
-(quote "#+begin_quote" n> r> n "#+end_quote")
-(example "#+begin_example" n> r> n "#+end_example")
+(tit "#+title: " p n "#+author: Maxim Kim")
+(cap "#+caption: ")
+(cen "#+begin_center" n> r> n "#+end_center")
+(beg "#+begin_" (s name) n> r> n "#+end_" name)
+(quo "#+begin_quote" n> r> n "#+end_quote")
+(ex "#+begin_example" n> r> n "#+end_example")
 (verse "#+begin_verse" n> r> n "#+end_verse")
 (src "#+begin_src " p n> r> n "#+end_src")
 (gnuplot "#+begin_src gnuplot :var data=" (p "table") " :file " (p "plot.png") n> r> n "#+end_src" :post (org-edit-src-code))
 (elisp "#+begin_src emacs-lisp" n> r> n "#+end_src" :post (org-edit-src-code))
 (inlsrc "src_" p "{" q "}")
 (sidenote "#+begin_sidenote" n> r> n "#+end_sidenote")
-(sidebar "#+begin_sidebar" n> r> n "#+end_sidebar")
+(side "#+begin_sidebar" n> r> n "#+end_sidebar")
 ;; admonitions
 (tip "#+begin_tip" n> r> n "#+end_tip")
 (note "#+begin_note" n> r> n "#+end_note")
 (warn "#+begin_warning" n> r> n "#+end_warning")
-(caution "#+begin_caution" n> r> n "#+end_caution")
-(important "#+begin_important" n> r> n "#+end_important")
+(cau "#+begin_caution" n> r> n "#+end_caution")
+(imp "#+begin_important" n> r> n "#+end_important")
 
 
 ;; Local Variables:
