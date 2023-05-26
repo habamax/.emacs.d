@@ -133,6 +133,7 @@
    ("C-c t f" . display-fill-column-indicator-mode)
    ("C-c t b" . habamax/toggle-bg)
    ("C-c t v" . visible-mode)
+   ("C-x I" . habamax/insert-lorem)
    ("C-`" . window-toggle-side-windows)
    ("M-<f1>" . window-toggle-side-windows)
    ("C-c w" . winner-undo)

@@ -170,6 +170,19 @@ See `sort-regexp-fields'."
                             (bound-and-true-p recentf-list)))))
 
 
+(defun habamax/insert-lorem ()
+  (interactive)
+  (let ((path (concat user-emacs-directory "lorem/")))
+    (insert-file-contents
+     (concat
+      path
+      (completing-read
+       "Insert lorem: "
+       (directory-files path
+                        nil
+                        directory-files-no-dot-files-regexp))))))
+
+
 (defvar wildcharm-hook nil "After wildcharm-(light-)theme is loaded.")
 
 (defun habamax/toggle-bg ()
