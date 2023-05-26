@@ -266,6 +266,7 @@
         "pandoc -s -M fontsize=18pt -M maxwidth=60em --highlight-style tango"))
 
 (use-package erc
+  :load-path "lisp"
   :ensure nil
   :commands erc-habamax
   :config
@@ -325,6 +326,7 @@
   :commands eglot)
 
 (use-package gdscript-mode
+  :load-path "lisp"
   :bind
   (:map gdscript-mode-map
         ("<f5>" . habamax-gdscript-run-project)
@@ -342,6 +344,7 @@
 (use-package zig-mode)
 
 (use-package notmuch
+  :load-path "lisp"
   :ensure nil
   :if (executable-find "notmuch")
   :commands (notmuch notmuch-sync)
