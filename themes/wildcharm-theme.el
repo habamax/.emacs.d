@@ -32,7 +32,7 @@
       (match-paren "#ff00af")(match "#5f005f")
       (mode-line-active "#444444")(mode-line-inactive "#303030")
       (menu "#262626")
-      (header-line "#585858")
+      (header-line "#262626")
       (hl-line "#3a3a3a")
       (block "#1c1c1c")
       (diff-added-bg "#3f4f3f")(diff-added-bg-tty "#005f00")
@@ -94,7 +94,7 @@
      ((,class256 (:weight bold))))
    `(header-line
      ((,class256 (:background ,header-line :foreground ,fg :extend t
-                              :box (:line-width 1 :color ,darkgrey)))))
+                              :box (:line-width 1 :color ,mode-line-active)))))
    `(vertical-border
      ((,classTTY (:background ,mode-line-inactive :foreground ,mode-line-inactive))
       (,class256 (:background ,non-text :foreground ,non-text))))
