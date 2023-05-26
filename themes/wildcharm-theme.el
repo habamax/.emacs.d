@@ -911,7 +911,7 @@
    `(rainbow-delimiters-depth-8-face
      ((,class256 (:foreground ,cyan))))
    `(rainbow-delimiters-depth-9-face
-     ((,class256 (:foreground ,special))))
+     ((,class256 (:foreground ,yellow))))
 
    `(tempel-default
      ((,classTC (:background ,diff-added-bg))
