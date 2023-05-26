@@ -27,7 +27,7 @@
       (grey "#d0d0d0")(white "#ffffff")
       (special "#875fff")(comment "#87875f")
       (yellow1 "#d7af5f")(yellow2 "#ffd75f")
-      (grey1 "#5f5f5f")(grey2 "#444444")(grey3 "#3a3a3a")(grey4 "#303030")
+      (grey1 "#303030")(grey2 "#262626")(grey3 "#1c1c1c")
       (non-text "#585858")
       (match-paren "#ff00af")(match "#5f005f")
       (mode-line-active "#444444")(mode-line-inactive "#303030")
@@ -856,7 +856,7 @@
 
    ;;; notmuch
    `(notmuch-message-summary-face
-     ((,class256 (:background ,grey4))))
+     ((,class256 (:background ,grey1))))
    `(notmuch-tag-face
      ((,class256 (:foreground ,darkgrey))))
    `(notmuch-tag-unread
