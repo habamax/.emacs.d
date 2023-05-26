@@ -282,9 +282,6 @@
 (use-package rainbow-mode
   :commands (rainbow-mode))
 
-(use-package lorem-ipsum
-  :commands (lorem-ipsum-insert-sentences lorem-ipsum-insert-paragraphs))
-
 (use-package xclip
   :commands xclip-mode)
 
