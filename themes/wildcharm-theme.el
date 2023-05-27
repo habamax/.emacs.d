@@ -31,7 +31,7 @@
       (non-text "#585858")
       (match-paren "#ff00af")(match "#5f005f")
       (mode-line-active "#444444")(mode-line-inactive "#303030")
-      (menu "#262626")
+      (menu "#444444")
       (header-line "#262626")
       (hl-line "#3a3a3a")
       (block "#1c1c1c")
@@ -137,7 +137,7 @@
    `(tty-menu-disabled-face
      ((t (:background ,menu :foreground ,darkgrey))))
    `(tty-menu-selected-face
-     ((t (:background ,mode-line-active :foreground ,grey :weight bold))))
+     ((t (:background ,grey2 :foreground ,grey :weight bold))))
 
    `(show-paren-match
      ((,class256 :foreground ,match-paren :weight bold :underline t)))
