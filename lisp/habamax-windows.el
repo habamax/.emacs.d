@@ -5,23 +5,20 @@
 
 ;;; Code:
 
-(require 'cl-macs)
-
 (set-language-environment 'utf-8)
 (setq default-buffer-file-coding-system 'utf-8-unix)
 (setq epa-pinentry-mode 'loopback)
 
-(let ((fonts '(("JetBrains Mono NL" . "14")
-               ("Dejavu Sans Mono"  . "14")
-               ("Consolas"          . "14"))))
-  (cl-dolist (fnt fonts)
-    (let ((fnt-name (car fnt))
-          (fnt-spec (format "%s-%s" (car fnt) (cdr fnt))))
-      (when (find-font (font-spec :name fnt-name))
-        (add-to-list 'default-frame-alist `(font . ,fnt-spec))
-        (set-face-attribute 'fixed-pitch nil :font fnt-spec)
-        (set-face-attribute 'fixed-pitch-serif nil :font fnt-spec)
-        (cl-return)))))
+(when-let* ((fonts '(("JetBrains Mono NL" . "14")
+                     ("Dejavu Sans Mono"  . "14")
+                     ("Consolas"          . "14")))
+            (font (seq-find
+                   (lambda (f) (find-font (font-spec :name (car f))))
+                   fonts))
+            (font-spec (format "%s-%s" (car font) (cdr font))))
+  (add-to-list 'default-frame-alist `(font . ,font-spec))
+  (set-face-attribute 'fixed-pitch nil :font font-spec)
+  (set-face-attribute 'fixed-pitch-serif nil :font font-spec))
 
 (provide 'habamax-windows)
 ;;; habamax-windows.el ends here
