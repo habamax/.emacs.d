@@ -9,8 +9,8 @@
 (setq default-buffer-file-coding-system 'utf-8-unix)
 (setq epa-pinentry-mode 'loopback)
 
-(when-let* ((fonts '(("JetBrains Mono NL" . "14")
-                     ("Dejavu Sans Mono"  . "14")
+(when-let* ((fonts '(("Iosevka Term SS04" . "17")
+                     ("JetBrains Mono NL" . "14")
                      ("Consolas"          . "14")))
             (font (seq-find
                    (lambda (f) (find-font (font-spec :name (car f))))
