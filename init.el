@@ -79,7 +79,7 @@
          (window-height . 0.3)
          (side . bottom)
          (slot . -1))
-        ("\\*\\(grep\\|compilation\\|godot - .+\\)\\*"
+        ("\\*\\(grep\\|compilation\\)\\*"
          (display-buffer-in-side-window)
          (window-height . 0.3)
          (side . bottom)
