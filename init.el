@@ -146,6 +146,8 @@
    ("C-c S-<left>" . windmove-swap-states-left)
    ("C-c S-<up>" . windmove-swap-states-up)
    ("C-c S-<down>" . windmove-swap-states-down)
+   ("C-=" . text-scale-adjust)
+   ("C--" . text-scale-adjust)
    ("M-`" . other-frame)
    :repeat-map habamax-other-frame-repeat-map
    ("o" . other-frame)
