@@ -15,10 +15,10 @@
             (font (seq-find
                    (lambda (f) (find-font (font-spec :name (car f))))
                    fonts))
-            (font-spec (format "%s-%s" (car font) (cdr font))))
-  (add-to-list 'default-frame-alist `(font . ,font-spec))
-  (set-face-attribute 'fixed-pitch nil :font font-spec)
-  (set-face-attribute 'fixed-pitch-serif nil :font font-spec))
+            (name (format "%s-%s" (car font) (cdr font))))
+  (add-to-list 'default-frame-alist `(font . ,name))
+  (set-face-attribute 'fixed-pitch nil :font name)
+  (set-face-attribute 'fixed-pitch-serif nil :font name))
 
 (provide 'habamax-windows)
 ;;; habamax-windows.el ends here
