@@ -148,6 +148,7 @@
    ("C-c S-<down>" . windmove-swap-states-down)
    ("C-=" . text-scale-adjust)
    ("C--" . text-scale-adjust)
+   ("C-c SPC SPC" . delete-trailing-whitespace)
    ("M-`" . other-frame)
    :repeat-map habamax-other-frame-repeat-map
    ("o" . other-frame)
