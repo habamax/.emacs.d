@@ -111,6 +111,7 @@
   :load-path "lisp"
   :bind
   (("C-c o i" . habamax/init-file)
+   ("C-c o s" . habamax/secrets)
    ("M-;" . habamax/toggle-comment)
    ("M-o" . delete-blank-lines)
    ("M-n" . habamax/move-line-down)

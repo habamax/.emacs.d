@@ -14,6 +14,10 @@
   (interactive)
   (find-file user-init-file))
 
+(defun habamax/secrets ()
+  (interactive)
+  (find-file (concat (or (getenv "ORG") "~/org") "/habamax.org.gpg")))
+
 ;;; Comment a line.
 (defun habamax/toggle-comment (arg)
   "Comment or uncomment current line if mark region is not active.
