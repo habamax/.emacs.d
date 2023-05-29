@@ -1,7 +1,5 @@
 ;;; early-init.el --- emacs early init file -*- lexical-binding: t; -*-
-
 ;;; Commentary:
-
 ;; Things to be loaded early, e.g. set up theme to prevent unwanted white
 ;; background turning into dark one.
 

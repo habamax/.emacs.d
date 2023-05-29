@@ -1,6 +1,6 @@
 ;;; habamax-org.el  -*- lexical-binding: t; -*-
-
-;; Code:
+;;; Commentary:
+;;; Code:
 
 (add-hook 'org-mode-hook 'auto-fill-mode)
 (setq org-log-done 'time)
@@ -104,3 +104,4 @@
     (insert (concat "[[file:" filename "]]"))))
 
 (provide 'habamax-org)
+;;; habamax-org.el ends here

@@ -1,5 +1,4 @@
 ;;; habamax-windows.el -- windows settings -*- lexical-binding: t -*-
-
 ;;; Commentary:
 ;; Settings related to MS Windows
 

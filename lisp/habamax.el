@@ -1,7 +1,5 @@
 ;;; habamax.el --- miscelaneous habamax functions -*- lexical-binding: t; -*-
-
 ;;; Commentary:
-
 ;;  Bunch of misc functions.
 
 ;;; Code:
@@ -210,5 +208,4 @@ See `sort-regexp-fields'."
                     secret)))))))
 
 (provide 'habamax)
-
 ;;; habamax.el ends here

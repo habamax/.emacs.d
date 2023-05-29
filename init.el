@@ -1,11 +1,7 @@
 ;;; init.el --- emacs init file -*- lexical-binding: t; -*-
-
 ;;; Commentary:
-
 ;; ¯\_(ツ)_/¯
-
 ;; Maxim Kim <habamax@gmail.com>
-
 ;;; Code:
 
 ;;; How long it took this time?
