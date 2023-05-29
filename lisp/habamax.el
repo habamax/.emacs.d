@@ -10,7 +10,7 @@
 (defvar wildcharm-hook nil "After wildcharm-(light-)theme is loaded.")
 
 ;;; Visit emacs init file
-(defun init-file ()
+(defun habamax/init-file ()
   (interactive)
   (find-file user-init-file))
 

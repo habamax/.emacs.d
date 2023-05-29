@@ -110,7 +110,7 @@
 (use-package habamax
   :load-path "lisp"
   :bind
-  (("C-c o i" . init-file)
+  (("C-c o i" . habamax/init-file)
    ("M-;" . habamax/toggle-comment)
    ("M-o" . delete-blank-lines)
    ("M-n" . habamax/move-line-down)
