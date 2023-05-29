@@ -1,5 +1,7 @@
 ;;; habamax-org.el  -*- lexical-binding: t; -*-
 
+;; Code:
+
 (add-hook 'org-mode-hook 'auto-fill-mode)
 (setq org-log-done 'time)
 
@@ -102,6 +104,5 @@
           "',[System.Drawing.Imaging.ImageFormat]::Png);}\"")
        (concat "wl-paste > " filename)))
     (insert (concat "[[file:" filename "]]"))))
-
 
 (provide 'habamax-org)

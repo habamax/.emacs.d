@@ -1,5 +1,6 @@
 ;;; habamax-dev.el  -*- lexical-binding: t; -*-
-
+;;; Commentary:
+;;; Code:
 
 (add-hook 'c-mode-hook
           (lambda ()
@@ -10,7 +11,6 @@
 
 (add-hook 'python-mode-hook
           (lambda () (local-set-key [f5] 'habamax-dev/run-python-file)))
-
 
 (defun habamax-dev/run-c-file ()
   "Compile and run single c file"
@@ -24,7 +24,6 @@
                " && chmod +x " (shell-quote-argument file-name)
                " && " (shell-quote-argument file-name))))))
 
-
 (defun habamax-dev/run-python-file ()
   "Compile and run single python file"
   (interactive)
@@ -33,5 +32,5 @@
       (compile
        (concat "python " (shell-quote-argument file-name))))))
 
-
 (provide 'habamax-dev)
+;;; habamax-dev.el ends here
