@@ -336,7 +336,8 @@
   (:map gdscript-mode-map
         ("<f5>" . habamax-gdscript/run-project)
         ("<f6>" . habamax-gdscript/run-current)
-        ("C-c r" . habamax-gdscript/run-scene)
+        ("C-c C-r" . habamax-gdscript/run-scene)
+        ("C-c n" . nil)
         ("<f7>" . recompile))
   :config
   (require 'habamax-gdscript)
