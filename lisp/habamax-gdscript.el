@@ -7,10 +7,14 @@
   (let ((default-directory (project-root (project-current))))
     (compile (concat "godot" " " scene-file))))
 
+(defun habamax-gdscript--strip-scene-file (scene-file)
+  "Return relative scene name without .tscn extension."
+  (file-relative-name (file-name-sans-extension scene-file)))
+
 (defun habamax-gdscript--find-scene ()
   "Find all scene files in current project."
   (let ((default-directory (project-root (project-current))))
-    (mapcar #'file-relative-name
+    (mapcar #'habamax-gdscript--strip-scene-file
             (directory-files-recursively default-directory "\\.tscn"))))
 
 (defun habamax-gdscript/run-current ()
@@ -30,7 +34,8 @@
   (let ((default-directory (project-root (project-current))))
     (habamax-gdscript--run-scene
      (concat
-      (completing-read "Run scene: " (habamax-gdscript--find-scene))))))
+      (completing-read "Run scene: " (habamax-gdscript--find-scene))
+      ".tscn"))))
 
 (provide 'habamax-gdscript)
 ;;; habamax-gdscript.el ends here
