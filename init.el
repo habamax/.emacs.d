@@ -365,7 +365,7 @@
 (use-package elfeed
   :config
   (when-let* ((feed-dir (or (getenv "ORG") "~/org"))
-              (feeds (concat feed-dir "/ext/elfeeds.el"))
+              (feeds (concat feed-dir "/.conf/elfeeds.el"))
               (file-exists-p feeds))
     (load feeds)))
 
