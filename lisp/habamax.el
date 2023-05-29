@@ -6,12 +6,13 @@
 
 ;;; Code:
 
+;; to be used with habamax/toggle-bg
+(defvar wildcharm-hook nil "After wildcharm-(light-)theme is loaded.")
 
 ;;; Visit emacs init file
 (defun init-file ()
   (interactive)
   (find-file user-init-file))
-
 
 ;;; Comment a line.
 (defun habamax/toggle-comment (arg)
@@ -26,7 +27,6 @@ Otherwise call well known `comment-dwim'"
                                      (line-end-position))
         (forward-line))
     (comment-dwim arg)))
-
 
 (defun habamax/duplicate-line (arg)
   "Duplicate current line, leaving point in lower line."
@@ -43,7 +43,6 @@ Otherwise call well known `comment-dwim'"
           (insert line)
           (setq count (1- count))))))
   (next-line arg))
-
 
 (defun habamax/move-text (arg)
   "Move region or line up/down depending on arg."
@@ -69,18 +68,15 @@ Otherwise call well known `comment-dwim'"
         (forward-line -1))
       (move-to-column column t)))))
 
-
 (defun habamax/move-line-up (arg)
   "Move up region/line."
   (interactive "*p")
   (habamax/move-text (- arg)))
 
-
 (defun habamax/move-line-down (arg)
   "Move down region/line."
   (interactive "*p")
   (habamax/move-text arg))
-
 
 ;; Next buffer with the same mode
 (defun habamax/next-buffer-like-this ()
@@ -95,7 +91,6 @@ Otherwise call well known `comment-dwim'"
          (not (equal b-name (buffer-name))))
       (next-buffer))))
 
-
 ;; Previous buffer with the same mode
 (defun habamax/previous-buffer-like-this ()
   "Open previous buffer with the same major mode as current."
@@ -109,14 +104,12 @@ Otherwise call well known `comment-dwim'"
          (not (equal b-name (buffer-name))))
       (previous-buffer))))
 
-
 (defun habamax/kill-region ()
   "Kill region if mark is active, kill whole line otherwise."
   (interactive)
   (if mark-active
       (kill-region (region-beginning) (region-end))
     (kill-region (line-beginning-position) (line-beginning-position 2))))
-
 
 (defun habamax/kill-ring-save ()
   "Save region in kill ring if mark is active, save whole line otherwise."
@@ -125,18 +118,15 @@ Otherwise call well known `comment-dwim'"
       (kill-ring-save (region-beginning) (region-end))
     (kill-ring-save (line-beginning-position) (line-beginning-position 2))))
 
-
 (defun habamax/grep-current-word ()
   "Search current word using `grep' and `grep-command'"
   (interactive)
   (grep (concat grep-command (current-word) " .")))
 
-
 (defun habamax/grep-todo ()
   "Search current TODO:, FIXME: and XXX: using `grep' and `grep-command'"
   (interactive)
   (grep (concat grep-command "\"(TODO|FIXME|XXX):\" .")))
-
 
 ;;;; sort words
 (defun habamax/sort-words (reverse beg end)
@@ -151,24 +141,12 @@ See `sort-regexp-fields'."
   (interactive "*P\nr")
   (sort-regexp-fields reverse "\\w+" "\\&" beg end))
 
-
-(defun habamax/insert-current-date ()
-  "Insert current date. Replace ISO date under cursor with current date."
-  (interactive)
-  (when (string-match "[0-9]\\{4\\}-[0-9]\\{2\\}-[0-9]\\{2\\}"
-                      (concat "" (thing-at-point 'symbol t)))
-    (let ((bounds (bounds-of-thing-at-point 'symbol)))
-      (delete-region (car bounds) (cdr bounds))))
-  (insert (format-time-string "%Y-%m-%d")))
-
-
 (defun habamax/recentf-open ()
   (interactive)
   (find-file
    (completing-read "Open recent: "
                     (mapcar #'abbreviate-file-name
                             (bound-and-true-p recentf-list)))))
-
 
 (defun habamax/insert-lorem ()
   (interactive)
@@ -182,9 +160,6 @@ See `sort-regexp-fields'."
                         nil
                         directory-files-no-dot-files-regexp))))))
 
-
-(defvar wildcharm-hook nil "After wildcharm-(light-)theme is loaded.")
-
 (defun habamax/toggle-bg ()
   (interactive)
   (let ((current-theme (car custom-enabled-themes)))
@@ -195,7 +170,6 @@ See `sort-regexp-fields'."
       (load-theme 'wildcharm t)))
   (run-hooks 'wildcharm-hook))
 
-
 (defun habamax/auth-secret (host)
     "Return secret(password) for specified host from auth-sources."
     (let ((found (nth 0 (auth-source-search :host host :create nil))))
@@ -204,8 +178,6 @@ See `sort-regexp-fields'."
 	  (if (functionp secret)
 	      (funcall secret)
 	    secret)))))
-
-
 
 (defun habamax/auth-basic (host)
     "Return base64 encoded login:password for specified host from auth-sources."
@@ -219,7 +191,6 @@ See `sort-regexp-fields'."
                   (if (functionp secret)
                       (funcall secret)
                     secret)))))))
-
 
 (provide 'habamax)
 
