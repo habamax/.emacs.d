@@ -76,8 +76,6 @@
                 (buffer-string))
               "</style>\n"))
 
-(setq org-edit-src-content-indentation 0)
-
 (defun org ()
   (interactive)
   (find-file
