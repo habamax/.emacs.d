@@ -16,7 +16,11 @@
 
 (defun habamax/secrets ()
   (interactive)
-  (find-file (concat (or (getenv "ORG") "~/org") "/habamax.org.gpg")))
+  (find-file
+   (completing-read "Secret file: "
+                    (directory-files-recursively
+                     (or (getenv "ORG") "~/org")
+                     "\\.org\\.gpg$"))))
 
 ;;; Comment a line.
 (defun habamax/toggle-comment (arg)
