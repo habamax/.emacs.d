@@ -2,10 +2,12 @@
 ;;; Commentary:
 ;;; Code:
 
+(defvar habamax/godot-executable "godot")
+
 (defun habamax-gdscript--run-scene (scene-file)
   "Run `scene-file' with godot."
   (let ((default-directory (project-root (project-current))))
-    (compile (concat "godot" " " scene-file))))
+    (compile (concat habamax/godot-executable " " scene-file))))
 
 (defun habamax-gdscript--strip-scene-file (scene-file)
   "Return relative scene name without .tscn extension."
