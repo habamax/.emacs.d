@@ -68,6 +68,12 @@
 (if (window-system)
     (cd "~/"))
 
+;; terminal truncate/wrap symbols
+(set-display-table-slot standard-display-table
+                        'truncation (make-glyph-code ?… 'line-number-minor-tick))
+(set-display-table-slot standard-display-table
+                        'wrap (make-glyph-code ?↩ 'line-number-minor-tick))
+
 ;; window layout
 (setq display-buffer-alist
       '(("\\*\\(.*-\\)?e?shell\\*"
