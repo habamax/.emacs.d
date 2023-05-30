@@ -70,7 +70,7 @@
 
 ;; window layout
 (setq display-buffer-alist
-      '(("\\*\\(.*-\\)?eshell\\*"
+      '(("\\*\\(.*-\\)?e?shell\\*"
          (display-buffer-in-side-window)
          (window-height . 0.3)
          (side . bottom)
