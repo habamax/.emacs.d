@@ -16,10 +16,8 @@
       smtpmail-stream-type 'starttls
       smtpmail-smtp-service 587)
 
-(setq default-input-method 'russian-computer)
-
 (defalias 'yes-or-no-p 'y-or-n-p)
-
+(setq default-input-method 'russian-computer)
 (setq ring-bell-function #'ignore)
 (setq scroll-error-top-bottom t)
 (setq disabled-command-function nil)
@@ -33,6 +31,8 @@
 (setq show-paren-when-point-inside-paren t)
 (setq tab-always-indent 'complete)
 (setq compilation-scroll-output t)
+(setq vc-follow-symlinks t)
+(setq tab-bar-show 1)
 
 (setq-default abbrev-mode t)
 (quietly-read-abbrev-file (concat user-emacs-directory "abbrevs"))
@@ -49,22 +49,14 @@
 (setq backup-directory-alist `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
 
-(setq vc-follow-symlinks t)
-
-(setq tab-bar-show 1)
-
+(setq winner-dont-bind-my-keys t)
+(winner-mode t)
 (electric-pair-mode t)
 (delete-selection-mode t)
 (save-place-mode 1)
 (savehist-mode 1)
 (recentf-mode 1)
 (repeat-mode t)
-
-(setq winner-dont-bind-my-keys t)
-(winner-mode t)
-
-(if (window-system)
-    (cd "~/"))
 
 ;; terminal truncate/wrap symbols
 (set-display-table-slot standard-display-table
@@ -89,6 +81,9 @@
          (window-width . 0.3)
          (side . right)
          (slot . -1))))
+
+(if (window-system)
+    (cd "~/"))
 
 ;;; use packages
 (require 'package)
