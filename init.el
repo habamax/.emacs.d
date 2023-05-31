@@ -329,6 +329,9 @@
 (use-package eglot
   :commands eglot)
 
+(use-package devdocs
+  :bind (("C-h D" . devdocs-lookup)))
+
 (use-package gdscript-mode
   :load-path "lisp"
   :bind
