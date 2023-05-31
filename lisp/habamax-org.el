@@ -76,11 +76,13 @@
                 (buffer-string))
               "</style>\n"))
 
-(defun org ()
+(defun org/open-agenda-file ()
   (interactive)
-  (find-file
-   (concat org-directory "/"
-           (completing-read "Open org file: " org-agenda-files))))
+  (thread-last
+    org-agenda-files
+    (completing-read "Open org file: ")
+    (concat org-directory "/")
+    (find-file)))
 
 (defun org/insert-screenshot ()
   (interactive)
