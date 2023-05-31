@@ -12,22 +12,16 @@
   (interactive)
   (find-file user-init-file))
 
-(defun habamax--strip-secret-file (secret-file)
-  "Return relative secret file name without extension."
-  (file-relative-name (file-name-sans-extension secret-file)))
-
 (defun habamax/secrets ()
   "Select and open gpg file from org directory."
   (interactive)
   (let ((default-directory (or (getenv "ORG") "~/org")))
-    (find-file
-     (concat
-      (completing-read "Open secret: "
-                       (mapcar #'habamax--strip-secret-file
-                               (directory-files-recursively
-                                default-directory
-                                "\\.gpg$")))
-      ".gpg"))))
+    (thread-first
+      (lambda (f) (file-relative-name (file-name-sans-extension f)))
+      (mapcar (directory-files-recursively default-directory "\\.gpg$"))
+      ((lambda (files) (completing-read "Open secret: " files)))
+      (concat ".gpg")
+      (find-file))))
 
 ;;; Comment a line.
 (defun habamax/toggle-comment (arg)
