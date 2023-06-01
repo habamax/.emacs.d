@@ -170,8 +170,6 @@
    ("S-<left>" . windmove-swap-states-left)
    ("S-<up>" . windmove-swap-states-up)
    ("S-<down>" . windmove-swap-states-down))
-  :custom-face
-  (font-lock-comment-face ((t (:slant italic))))
   :init
   (when +IS-WINDOWS+
     (require 'habamax-windows))
