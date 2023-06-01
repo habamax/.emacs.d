@@ -112,6 +112,7 @@
   :bind
   (("C-c o i" . habamax/init-file)
    ("C-c o s" . habamax/secrets)
+   ("C-c o r" . habamax/recentf-open)
    ("M-;" . habamax/toggle-comment)
    ("M-o" . delete-blank-lines)
    ("M-n" . habamax/move-line-down)
@@ -120,7 +121,6 @@
    ("M-w" . habamax/kill-ring-save)
    ("C-c b" . habamax/next-buffer-like-this)
    ("C-c B" . habamax/previous-buffer-like-this)
-   ("C-x C-r" . habamax/recentf-open)
    ([remap list-buffers] . ibuffer)
    ("C-c d" . habamax/duplicate-line)
    ("M-s >" . habamax/grep-current-word)
