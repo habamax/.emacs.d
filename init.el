@@ -7,6 +7,10 @@
 ;;; How long it took this time?
 (add-hook 'emacs-startup-hook (lambda () (message "%s" (emacs-init-time))))
 
+(set-language-environment 'utf-8)
+(setq default-input-method 'russian-computer)
+(setq default-buffer-file-coding-system 'utf-8-unix)
+
 (setq custom-file (make-temp-file "custom-emacs"))
 
 (setq user-full-name "Maxim Kim"
@@ -17,7 +21,6 @@
       smtpmail-smtp-service 587)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
-(setq default-input-method 'russian-computer)
 (setq ring-bell-function #'ignore)
 (setq scroll-error-top-bottom t)
 (setq disabled-command-function nil)
