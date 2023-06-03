@@ -91,9 +91,6 @@
          (side . right)
          (slot . -1))))
 
-(if (window-system)
-    (cd "~/"))
-
 ;;; use packages
 (require 'package)
 (unless (package-installed-p 'use-package)
