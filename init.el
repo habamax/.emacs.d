@@ -279,7 +279,7 @@
 (use-package erc
   :load-path "lisp"
   :ensure nil
-  :commands erc-habamax
+  :commands habamax-erc
   :config
   (require 'habamax-erc))
 

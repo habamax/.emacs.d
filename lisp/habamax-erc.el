@@ -23,7 +23,7 @@
             (file-exists-p file))
   (load file))
 
-(defun erc-habamax ()
+(defun habamax-erc ()
   "Connect to Libera.Chat."
   (interactive)
   (erc :server "irc.libera.chat" :port 6667 :nick "habamax"))
