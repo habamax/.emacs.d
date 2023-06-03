@@ -111,9 +111,9 @@
 (use-package habamax
   :load-path "lisp"
   :bind
-  (("C-c o i" . habamax/init-file)
+  (("C-c o i" . habamax/init)
    ("C-c o s" . habamax/secrets)
-   ("C-c o r" . habamax/recentf-open)
+   ("C-c o r" . habamax/recentf)
    ("M-;" . habamax/toggle-comment)
    ("M-o" . delete-blank-lines)
    ("M-n" . habamax/move-line-down)

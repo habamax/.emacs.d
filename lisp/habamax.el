@@ -8,7 +8,7 @@
 (defvar wildcharm-hook nil "After wildcharm-(light-)theme is loaded.")
 
 ;;; Visit emacs init file
-(defun habamax/init-file ()
+(defun habamax/init ()
   (interactive)
   (find-file user-init-file))
 
@@ -150,7 +150,7 @@ See `sort-regexp-fields'."
   (interactive "*P\nr")
   (sort-regexp-fields reverse "\\w+" "\\&" beg end))
 
-(defun habamax/recentf-open ()
+(defun habamax/recentf ()
   (interactive)
   (find-file
    (completing-read "Open recent: "
