@@ -211,11 +211,16 @@
          ("M-s s" . consult-line)
          ("M-s M-s" . consult-line)
          ("M-g o" . consult-outline)
+         ([remap goto-line] . consult-goto-line)
          ("M-s g" . consult-grep)
          ("M-s r" . consult-ripgrep)
          ("M-y" . consult-yank-pop))
   :config
-  (setq consult-preview-key "M-."))
+  (setq consult-preview-key "M-.")
+  (consult-customize
+   consult-goto-line consult-line
+   consult-focus-lines consult-keep-lines
+   :preview-key 'any))
 
 (use-package org
   :ensure nil
