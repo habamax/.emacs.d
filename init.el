@@ -93,9 +93,7 @@
 
 ;;; use packages
 (require 'package)
-(setq
- package-native-compile t
- package-quickstart t)
+(setq package-native-compile t)
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") 'append)
 
