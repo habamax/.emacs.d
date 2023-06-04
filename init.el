@@ -93,20 +93,21 @@
 
 ;;; use packages
 (require 'package)
+(setq-default
+ package-native-compile t
+ package-quickstart t)
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/") 'append)
+
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
 
 (require 'use-package)
-
 (setq-default
- package-native-compile t
  use-package-always-ensure t
  use-package-always-defer t
  use-package-enable-imenu-support t)
-
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/") 'append)
 
 (use-package habamax
   :load-path "lisp"
