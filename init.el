@@ -211,7 +211,6 @@
          ("M-s s" . consult-line)
          ("M-s M-s" . consult-line)
          ("M-g o" . consult-outline)
-         ([remap goto-line] . consult-goto-line)
          ("M-s g" . consult-grep)
          ("M-s r" . consult-ripgrep)
          ("M-y" . consult-yank-pop))
