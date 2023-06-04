@@ -844,7 +844,7 @@
    `(notmuch-message-summary-face
      ((,class256 (:background ,grey2))))
    `(notmuch-tag-face
-     ((,class256 (:foreground ,darkgrey))))
+     ((,class256 (:foreground ,yellow))))
    `(notmuch-tag-unread
      ((,class256 (:foreground ,green))))
    `(notmuch-tag-flagged
