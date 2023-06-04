@@ -93,7 +93,7 @@
 
 ;;; use packages
 (require 'package)
-(setq-default
+(setq
  package-native-compile t
  package-quickstart t)
 (add-to-list 'package-archives
@@ -104,10 +104,9 @@
   (package-install 'use-package))
 
 (require 'use-package)
-(setq-default
+(setq
  use-package-always-ensure t
- use-package-always-defer t
- use-package-enable-imenu-support t)
+ use-package-always-defer t)
 
 (use-package habamax
   :load-path "lisp"
