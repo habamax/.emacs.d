@@ -64,7 +64,6 @@
 (savehist-mode 1)
 (repeat-mode t)
 
-
 ;; terminal truncate/wrap symbols
 (set-display-table-slot standard-display-table
                         'truncation
