@@ -216,7 +216,7 @@
   (consult-customize
    consult-goto-line consult-line
    consult-focus-lines consult-keep-lines
-   :preview-key 'any))
+   :preview-key '(:debounce 0.4 any))
 
 (use-package org
   :ensure nil
