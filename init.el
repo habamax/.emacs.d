@@ -285,15 +285,6 @@
   :config
   (add-hook 'wildcharm-hook 'erc-hl-nicks-refresh-colors))
 
-(use-package webpaste
-  :commands (webpaste-paste-buffer webpaste-paste-region))
-
-(use-package rainbow-mode
-  :commands (rainbow-mode))
-
-(use-package xclip
-  :commands xclip-mode)
-
 (use-package corfu
   :init
   (global-corfu-mode)
@@ -329,6 +320,19 @@
   :init
   (add-hook 'emacs-lisp-mode-hook #'rainbow-delimiters-mode)
   (add-hook 'lisp-mode-hook #'rainbow-delimiters-mode))
+
+(use-package webpaste
+  :commands (webpaste-paste-buffer webpaste-paste-region))
+
+(use-package rainbow-mode
+  :commands (rainbow-mode))
+
+(use-package xclip
+  :commands xclip-mode)
+
+(use-package ansi-color
+  :ensure nil
+  :hook (compilation-filter . ansi-color-compilation-filter))
 
 (use-package eglot
   :commands eglot)
