@@ -371,11 +371,20 @@
 
 (use-package emms
   :commands (emms emms-add-directory-tree)
+  :bind (("C-c SPC m 1" . habamax/emms-play-main)
+         ("C-c SPC m r" . emms-random)
+         ("C-c SPC m n" . emms-next))
   :config
   (emms-all)
+  (defun habamax/emms-play-main ()
+    (interactive)
+    (emms-play-directory-tree "~/Music/main")
+    (emms-shuffle)
+    (emms-random))
   (setq emms-player-list '(emms-player-mpv emms-player-vlc)
         emms-info-functions '(emms-info-native))
-  (setq emms-source-file-default-directory "~/Music/"))
+  (setq emms-source-file-default-directory "~/Music/")
+  (setq emms-playlist-repeat t))
 
 (use-package elfeed
   :config
