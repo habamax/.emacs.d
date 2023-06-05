@@ -930,4 +930,4 @@
                (file-name-as-directory (file-name-directory load-file-name))))
 
 (provide-theme 'wildcharm)
-;;; wilcharm-theme.el ends here
+;;; wildcharm-theme.el ends here
