@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
-(when (not +IS-WINDOWS+) (erc-notifications-mode t))
+(unless +IS-WINDOWS+ (erc-notifications-mode t))
 
 (setq erc-nick '("habamax" "mxmkm")
       erc-hide-list '("JOIN" "PART" "QUIT")
