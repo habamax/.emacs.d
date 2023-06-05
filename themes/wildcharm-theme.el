@@ -146,7 +146,7 @@
 
    ;;; font-lock
    `(font-lock-string-face
-     ((,class256 (:foreground ,green))))
+     ((,class256 (:foreground ,bright-green))))
    `(font-lock-comment-face
      ((,class256 (:foreground ,comment))))
    `(font-lock-keyword-face
