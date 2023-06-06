@@ -34,9 +34,5 @@
   (interactive)
   (emms-play-streamlist "http://www.ibiblio.org/wcpe/wcpe.pls"))
 
-(defun habamax/emms-stream-sheena ()
-  (interactive)
-  (emms-play-streamlist "http://www.wfmu.org/wfmu.pls"))
-
 (provide 'habamax-emms)
 ;;; habamax-emms.el ends here

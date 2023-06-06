@@ -377,7 +377,6 @@
          ("C-c SPC m 2" . habamax/emms-stream-trance)
          ("C-c SPC m 3" . habamax/emms-stream-smooth-jazz)
          ("C-c SPC m 4" . habamax/emms-stream-ambient)
-         ("C-c SPC m 5" . habamax/emms-stream-sheena)
          ("C-c SPC m s" . emms-stop)
          ("C-c SPC m r" . emms-random)
          ("C-c SPC m n" . emms-next))
