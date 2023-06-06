@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
+(require 'project)
+
 (defvar habamax/godot-executable "godot")
 
 (defun habamax-gdscript--run-scene (scene-file)
