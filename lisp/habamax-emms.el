@@ -3,7 +3,8 @@
 ;;; Code:
 
 (emms-all)
-(setq emms-player-list '(emms-player-mpv))
+(setq emms-player-list
+      (if +IS-WINDOWS+ '(emms-player-mplayer) '(emms-player-mpv)))
 (setq emms-info-functions '(emms-info-native))
 (setq emms-source-file-default-directory "~/Music/")
 (setq emms-playlist-repeat t)
