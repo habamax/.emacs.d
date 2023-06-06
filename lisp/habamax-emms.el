@@ -3,8 +3,8 @@
 ;;; Code:
 
 (emms-all)
-(setq emms-player-list '(emms-player-mpv emms-player-vlc)
-      emms-info-functions '(emms-info-native))
+(setq emms-player-list '(emms-player-mpv emms-player-vlc))
+(setq emms-info-functions '(emms-info-native))
 (setq emms-source-file-default-directory "~/Music/")
 (setq emms-playlist-repeat t)
 
