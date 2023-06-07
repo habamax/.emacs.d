@@ -25,7 +25,7 @@
       (magenta "#d787d7")(bright-magenta "#ff87ff")
       (cyan "#00afaf")(bright-cyan "#00d7d7")
       (grey "#d0d0d0")(white "#ffffff")
-      (special "#875fff")(comment "#87875f")
+      (purple "#875fff")(comment "#87875f")
       (yellow1 "#d7af5f")(yellow2 "#ffd75f")
       (grey1 "#303030")(grey2 "#262626")(grey3 "#1c1c1c")
       (non-text "#585858")
@@ -72,11 +72,11 @@
    `(line-number-minor-tick
      ((,class256 (:inherit default :foreground ,darkgrey))))
    `(escape-glyph
-     ((,class256 (:foreground ,special))))
+     ((,class256 (:foreground ,bright-yellow))))
    `(homoglyph
      ((,class256 (:inherit 'escape-glyph))))
    `(nobreak-space
-     ((,class256 (:foreground ,special :underline t))))
+     ((,class256 (:foreground ,bright-yellow :underline t))))
    `(nobreak-hyphen
      ((,class256 (:inherit 'escape-glyph))))
    `(mode-line
@@ -152,7 +152,7 @@
    `(font-lock-keyword-face
      ((,class256 (:foreground ,bright-blue))))
    `(font-lock-preprocessor-face
-     ((,class256 (:foreground ,bright-cyan))))
+     ((,class256 (:foreground ,purple))))
    `(font-lock-builtin-face
      ((,class256 (:foreground ,magenta))))
    `(font-lock-type-face
@@ -318,7 +318,7 @@
    `(org-document-info
      ((,class256 (:foreground ,fg))))
    `(org-drawer
-     ((,class256 (:foreground ,special))))
+     ((,class256 (:foreground ,purple))))
    `(org-code
      ((,class256 (:foreground ,cyan))))
    `(org-verbatim
