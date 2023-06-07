@@ -672,7 +672,7 @@
    `(erc-button
      ((,class256 (:background nil :foreground nil :underline t))))
    `(erc-prompt-face
-     ((,class256 (:background nil :foreground ,bright-magenta :weight bold))))
+     ((,class256 (:background nil :foreground ,black :weight bold))))
    `(erc-action-face
      ((,class256 (:background nil :foreground ,comment))))
    `(fg:erc-face0
@@ -714,7 +714,7 @@
    `(rcirc-timestamp
      ((,class256 (:foreground ,darkgrey))))
    `(rcirc-prompt
-     ((,class256 (:foreground ,bright-magenta))))
+     ((,class256 (:foreground ,black :weight bold))))
    `(rcirc-url
      ((,class256 (:background nil :foreground nil :underline t))))
    `(rcirc-my-nick
