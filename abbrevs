@@ -2,7 +2,6 @@
 (define-abbrev-table 'global-abbrev-table
   '(
     ("shrug" "¯\\_(ツ)_/¯")
-    ("emacs" "Emacs")
     ("latex" "LaTeX")
     ("teh" "the")
     ("hte" "the")
