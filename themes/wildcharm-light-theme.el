@@ -66,11 +66,11 @@
    `(line-number-minor-tick
      ((,class256 (:inherit default :foreground ,darkgrey))))
    `(escape-glyph
-     ((,class256 (:foreground ,bright-yellow))))
+     ((,class256 (:foreground ,red))))
    `(homoglyph
      ((,class256 (:inherit 'escape-glyph))))
    `(nobreak-space
-     ((,class256 (:foreground ,bright-yellow :underline t))))
+     ((,class256 (:foreground ,red :underline t))))
    `(nobreak-hyphen
      ((,class256 (:inherit 'escape-glyph))))
    `(mode-line
@@ -168,7 +168,7 @@
    `(lazy-highlight
      ((,class256 (:background ,green :foreground ,bg))))
    `(isearch-fail
-     ((,class256 (:background ,red :foreground ,bg))))
+     ((,class256 (:background ,diff-removed-bg :foreground ,diff-removed-fg))))
 
    ;;; replace.el
    `(match
