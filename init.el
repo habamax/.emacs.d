@@ -290,6 +290,13 @@
   :init
   (global-corfu-mode)
   :config
+  (defun corfu-enable-in-minibuffer ()
+  "Enable Corfu in the minibuffer if `completion-at-point' is bound."
+  (when (where-is-internal #'completion-at-point (list (current-local-map)))
+    (setq-local corfu-echo-delay nil
+                corfu-popupinfo-delay nil)
+    (corfu-mode 1)))
+  (add-hook 'minibuffer-setup-hook #'corfu-enable-in-minibuffer)
   (when (display-graphic-p)
     (corfu-popupinfo-mode)))
 
