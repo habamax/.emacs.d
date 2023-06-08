@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
+(setq org-modules nil)
+
 (add-hook 'org-mode-hook 'auto-fill-mode)
 (setq org-log-done 'time)
 
