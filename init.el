@@ -308,12 +308,12 @@
   :bind (("M-*" . tempel-complete)
          ("M-+" . tempel-insert))
   :init
-  (defun templ-setup-capf ()
+  (defun tempel-setup-capf ()
     (setq completion-at-point-functions
           (cons #'tempel-expand
                 completion-at-point-functions)))
-  (add-hook 'prog-mode-hook 'templ-setup-capf)
-  (add-hook 'text-mode-hook 'templ-setup-capf))
+  (add-hook 'prog-mode-hook 'tempel-setup-capf)
+  (add-hook 'text-mode-hook 'tempel-setup-capf))
 
 (use-package rainbow-delimiters
   :commands rainbow-delimiters-mode
