@@ -168,13 +168,13 @@
 
    ;;; isearch
    `(isearch
-     ((,class256 (:background ,bright-yellow :foreground ,black))))
+     ((,class256 (:background ,black :foreground ,bright-yellow :inverse-video t))))
    `(isearch-group-1
-     ((,class256 (:background ,yellow2 :foreground ,black))))
+     ((,class256 (:background ,black :foreground ,yellow2 :inverse-video t))))
    `(isearch-group-2
-     ((,class256 (:background ,yellow1 :foreground ,black))))
+     ((,class256 (:background ,black :foreground ,yellow1 :inverse-video t))))
    `(lazy-highlight
-     ((,class256 (:background ,bright-green :foreground ,black))))
+     ((,class256 (:background ,black :foreground ,bright-green :inverse-video t))))
    `(isearch-fail
      ((,classTC (:background ,diff-removed-bg :foreground ,diff-removed-fg))
       (t (:background ,diff-removed-bg-tty :foreground ,diff-removed-fg))))

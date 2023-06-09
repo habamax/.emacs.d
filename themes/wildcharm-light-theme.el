@@ -23,7 +23,7 @@
       (cyan "#005f5f")(bright-cyan "#008787")
       (grey "#d0d0d0")(white "#ffffff")
       (purple "#5f00d7")(comment "#87875f")
-      (yellow1 "#d7af5f")(yellow2 "#ffd75f")
+      (yellow1 "#875f00")(yellow2 "#af5f00")
       (grey1 "#dadada")(grey2 "#e4e4e4")(grey3 "#eeeeee")
       (non-text "#b2b2b2")
       (match-paren "#ff00af")(match "#ffd7ff")
@@ -160,13 +160,13 @@
 
    ;;; isearch
    `(isearch
-     ((,class256 (:background ,bright-yellow :foreground ,bg))))
+     ((,class256 (:background ,white :foreground ,bright-yellow :inverse-video t))))
    `(isearch-group-1
-     ((,class256 (:background ,yellow2 :foreground ,black))))
+     ((,class256 (:background ,white :foreground ,yellow2 :inverse-video t))))
    `(isearch-group-2
-     ((,class256 (:background ,yellow1 :foreground ,black))))
+     ((,class256 (:background ,white :foreground ,yellow1 :inverse-video t))))
    `(lazy-highlight
-     ((,class256 (:background ,green :foreground ,bg))))
+     ((,class256 (:background ,white :foreground ,green :inverse-video t))))
    `(isearch-fail
      ((,class256 (:background ,diff-removed-bg :foreground ,diff-removed-fg))))
 
