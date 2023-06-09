@@ -19,8 +19,7 @@
 
 (setq org-refile-use-outline-path 'file)
 (setq org-reverse-note-order t)
-(setq org-refile-targets
-      `((,(directory-files-recursively org-directory "\\.org$") :maxlevel . 1)))
+(setq org-refile-targets '((org-agenda-files :maxlevel . 1)))
 
 (setq org-capture-templates
       '(("t" "Todo" entry (file "todo.org")
