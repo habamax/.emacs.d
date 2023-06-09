@@ -217,6 +217,10 @@
    consult-focus-lines consult-keep-lines
    :preview-key '(:debounce 0.4 any)))
 
+(use-package paredit
+  :hook ((emacs-lisp-mode . paredit-mode)
+         (lisp-mode . paredit-mode)))
+
 (use-package org
   :ensure nil
   :commands (org)
