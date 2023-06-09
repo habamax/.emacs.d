@@ -218,6 +218,10 @@
    :preview-key '(:debounce 0.4 any)))
 
 (use-package paredit
+  :bind
+  (:map paredit-mode-map
+        ("M-s" . nil)
+        ("C-M-j" . paredit-splice-sexp))
   :hook ((emacs-lisp-mode . paredit-mode)
          (lisp-mode . paredit-mode)))
 
