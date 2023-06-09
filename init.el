@@ -127,7 +127,6 @@
    ("C-c t s" . flyspell-mode)
    ("C-c t m" . flymake-mode)
    ("C-c t l" . hl-line-mode)
-   ("C-c t l" . hl-line-mode)
    ("C-c t f" . display-fill-column-indicator-mode)
    ("C-c t b" . habamax/toggle-bg)
    ("C-c t v" . visible-mode)
