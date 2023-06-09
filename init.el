@@ -223,7 +223,8 @@
         ("M-s" . nil)
         ("C-M-j" . paredit-splice-sexp))
   :hook ((emacs-lisp-mode . paredit-mode)
-         (lisp-mode . paredit-mode)))
+         (lisp-mode . paredit-mode)
+         (sly-mrepl-mode . paredit-mode)))
 
 (use-package org
   :ensure nil
