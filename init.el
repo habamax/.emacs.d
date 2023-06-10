@@ -227,6 +227,8 @@
          (lisp-mode . paredit-mode)
          (sly-mrepl-mode . paredit-mode)))
 
+(use-package wgrep)
+
 (use-package org
   :ensure nil
   :commands (org)
