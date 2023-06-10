@@ -146,6 +146,7 @@
    ("C-=" . text-scale-adjust)
    ("C--" . text-scale-adjust)
    ("C-c SPC SPC" . delete-trailing-whitespace)
+   ("C-c SPC r" . revert-buffer)
    ("M-`" . other-frame)
    :repeat-map habamax-other-frame-repeat-map
    ("o" . other-frame)
