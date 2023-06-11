@@ -28,6 +28,7 @@
               display-fill-column-indicator-character ?╎)
 (setq-default indent-tabs-mode nil)
 (setq-default isearch-lazy-count t)
+(setq search-whitespace-regexp ".*?")
 (setq-default line-number-mode t
               column-number-mode t)
 (setq set-mark-command-repeat-pop t)
