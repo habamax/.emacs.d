@@ -220,17 +220,6 @@
    consult-focus-lines consult-keep-lines
    :preview-key '(:debounce 0.4 any)))
 
-(use-package paredit
-  :bind
-  (:map paredit-mode-map
-        ("M-s")
-        ("C-M-j" . paredit-splice-sexp))
-  :hook ((emacs-lisp-mode . paredit-mode)
-         (lisp-mode . paredit-mode)
-         (sly-mrepl-mode . paredit-mode)))
-
-(use-package wgrep)
-
 (use-package org
   :ensure nil
   :commands (org)
@@ -337,6 +326,8 @@
 (use-package webpaste
   :commands (webpaste-paste-buffer webpaste-paste-region))
 
+(use-package wgrep)
+
 (use-package rainbow-mode
   :commands (rainbow-mode))
 
@@ -368,6 +359,15 @@
   (require 'habamax-gdscript)
   :custom
   (gdscript-eglot-version 3))
+
+(use-package paredit
+  :bind
+  (:map paredit-mode-map
+        ("M-s")
+        ("C-M-j" . paredit-splice-sexp))
+  :hook ((emacs-lisp-mode . paredit-mode)
+         (lisp-mode . paredit-mode)
+         (sly-mrepl-mode . paredit-mode)))
 
 (use-package sly
   :config
