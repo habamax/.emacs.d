@@ -223,7 +223,7 @@
 (use-package paredit
   :bind
   (:map paredit-mode-map
-        ("M-s" . nil)
+        ("M-s")
         ("C-M-j" . paredit-splice-sexp))
   :hook ((emacs-lisp-mode . paredit-mode)
          (lisp-mode . paredit-mode)
@@ -269,8 +269,8 @@
 
 (use-package markdown-mode
   :bind (:map markdown-mode-map
-              ("M-n" . nil)
-              ("M-p" . nil))
+              ("M-n")
+              ("M-p"))
   :config
   (setq markdown-fontify-code-blocks-natively t)
   (setq markdown-unordered-list-item-prefix "  - ")
@@ -361,8 +361,8 @@
         ("<f6>" . habamax-gdscript/run-current)
         ("C-c r" . habamax-gdscript/run-scene)
         ("C-c C-r" . recompile)
-        ("C-c n" . nil)
         ("<f7>" . recompile)
+        ("C-c n")
         ("<f9>"))
   :config
   (require 'habamax-gdscript)
