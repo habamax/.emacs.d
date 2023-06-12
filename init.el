@@ -362,7 +362,8 @@
         ("C-c r" . habamax-gdscript/run-scene)
         ("C-c C-r" . recompile)
         ("C-c n" . nil)
-        ("<f7>" . recompile))
+        ("<f7>" . recompile)
+        ("<f9>"))
   :config
   (require 'habamax-gdscript)
   :custom
