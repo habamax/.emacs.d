@@ -56,7 +56,7 @@
 (setq winner-dont-bind-my-keys t)
 (winner-mode t)
 
-(setq recentf-max-saved-items 100)
+(setq recentf-max-saved-items 1000)
 (recentf-mode 1)
 
 (electric-pair-mode t)
