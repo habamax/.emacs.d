@@ -198,7 +198,7 @@
   :init
   (setq completion-styles '(orderless basic))
   (setq orderless-matching-styles
-        '(orderless-literal orderless-initialism orderless-flex)))
+        '(orderless-literal orderless-prefixes orderless-flex)))
 
 (use-package consult
   :bind (("C-c m" . consult-imenu)
