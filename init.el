@@ -218,6 +218,7 @@
   (consult-customize
    consult-goto-line consult-line
    consult-focus-lines consult-keep-lines
+   consult-theme
    :preview-key '(:debounce 0.4 any)))
 
 (use-package org
