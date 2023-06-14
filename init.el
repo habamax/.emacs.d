@@ -178,8 +178,7 @@
 (use-package dired
   :ensure nil
   :bind (:map dired-mode-map
-              ("b" . dired-up-directory)
-              ("<mouse-2>" . dired-find-file))
+              ("b" . dired-up-directory))
   :hook (dired-mode . dired-hide-details-mode)
   :config
   (setq ls-lisp-dirs-first t)
