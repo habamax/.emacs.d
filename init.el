@@ -4,7 +4,6 @@
 ;; Maxim Kim <habamax@gmail.com>
 ;;; Code:
 
-;;; How long it took this time?
 (add-hook 'emacs-startup-hook (lambda () (message "%s" (emacs-init-time))))
 
 (set-language-environment 'utf-8)
