@@ -109,7 +109,6 @@
   :bind
   (("C-c o i" . habamax/init)
    ("C-c o s" . habamax/secrets)
-   ("C-c o r" . habamax/recentf)
    ("M-;" . habamax/toggle-comment)
    ("M-o" . delete-blank-lines)
    ("M-n" . habamax/move-line-down)
@@ -202,6 +201,7 @@
 (use-package consult
   :bind (("C-c m" . consult-imenu)
          ("C-c M" . consult-imenu-multi)
+         ("C-c o r" . consult-recent-file)
          ("C-c C-c f" . consult-focus-lines)
          ("C-c C-c k" . consult-keep-lines)
          ("M-s s" . consult-line)
