@@ -238,12 +238,6 @@
   :config
   (setq verb-auto-kill-response-buffers t))
 
-(use-package dictionary
-  :ensure nil
-  :commands dictionary-lookup-definition
-  :config
-  (setq dictionary-server "dict.org"))
-
 (use-package whitespace
   :ensure nil
   :commands (whitespace-mode)
@@ -256,30 +250,6 @@
 (use-package magit
   :commands (magit-status)
   :bind ("C-x g" . magit-file-dispatch))
-
-(use-package markdown-mode
-  :bind (:map markdown-mode-map
-              ("M-n")
-              ("M-p"))
-  :config
-  (setq markdown-fontify-code-blocks-natively t)
-  (setq markdown-unordered-list-item-prefix "  - ")
-  (setq markdown-asymmetric-header t)
-  (setq markdown-command
-        "pandoc -s -M fontsize=18pt -M maxwidth=60em --highlight-style tango"))
-
-(use-package erc
-  :load-path "lisp"
-  :ensure nil
-  :commands habamax-erc
-  :config
-  (require 'habamax-erc))
-
-(use-package erc-hl-nicks
-  :after erc
-  :config
-  (setq erc-hl-nicks-minimum-contrast-ratio 5)
-  (add-hook 'wildcharm-hook 'erc-hl-nicks-refresh-colors))
 
 (use-package corfu
   :init
@@ -376,6 +346,23 @@
 
 (use-package zig-mode)
 
+(use-package dictionary
+  :ensure nil
+  :commands dictionary-lookup-definition
+  :config
+  (setq dictionary-server "dict.org"))
+
+(use-package markdown-mode
+  :bind (:map markdown-mode-map
+              ("M-n")
+              ("M-p"))
+  :config
+  (setq markdown-fontify-code-blocks-natively t)
+  (setq markdown-unordered-list-item-prefix "  - ")
+  (setq markdown-asymmetric-header t)
+  (setq markdown-command
+        "pandoc -s -M fontsize=18pt -M maxwidth=60em --highlight-style tango"))
+
 (use-package notmuch
   :load-path "lisp"
   :ensure nil
@@ -404,5 +391,18 @@
               (feeds (concat feed-dir "/.conf/elfeeds.el"))
               (file-exists-p feeds))
     (load feeds)))
+
+(use-package erc
+  :load-path "lisp"
+  :ensure nil
+  :commands habamax-erc
+  :config
+  (require 'habamax-erc))
+
+(use-package erc-hl-nicks
+  :after erc
+  :config
+  (setq erc-hl-nicks-minimum-contrast-ratio 5)
+  (add-hook 'wildcharm-hook 'erc-hl-nicks-refresh-colors))
 
 ;;; init.el ends here
