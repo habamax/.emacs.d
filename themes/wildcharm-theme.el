@@ -300,6 +300,8 @@
    ;;; info
    `(info-title-4
      ((,class256 (:foreground ,white :weight bold))))
+   `(info-menu-header
+     ((,class256 (:inherit info-title-3))))
    `(info-node
      ((,class256 (:foreground ,bright-yellow :weight bold))))
 

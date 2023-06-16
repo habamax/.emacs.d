@@ -291,6 +291,8 @@
    ;;; info
    `(info-title-4
      ((,class256 (:foreground ,black :weight bold))))
+   `(info-menu-header
+     ((,class256 (:inherit info-title-3))))
    `(info-node
      ((,class256 (:foreground ,yellow :weight bold))))
 
