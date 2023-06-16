@@ -52,7 +52,7 @@
    `(shadow
      ((,class256 (:foreground ,non-text))))
    `(link
-     ((,class256 (:foreground ,bright-blue :underline t))))
+     ((,class256 (:foreground ,blue :underline t))))
    `(link-visited
      ((,class256 (:foreground ,darkgrey :underline t))))
    `(highlight
@@ -687,7 +687,7 @@
    `(erc-direct-msg-face
      ((,class256 (:foreground ,yellow))))
    `(erc-button
-     ((,class256 (:background nil :foreground ,bright-blue :underline t))))
+     ((,class256 (:background nil :foreground ,blue :underline t))))
    `(erc-prompt-face
      ((,class256 (:background nil :foreground ,white :weight bold))))
    `(erc-action-face
@@ -733,7 +733,7 @@
    `(rcirc-prompt
      ((,class256 (:foreground ,white :weight bold))))
    `(rcirc-url
-     ((,class256 (:background nil :foreground ,bright-blue :underline t))))
+     ((,class256 (:background nil :foreground ,blue :underline t))))
    `(rcirc-my-nick
      ((,class256 (:foreground ,bright-red :weight bold))))
    `(rcirc-nick-in-message
