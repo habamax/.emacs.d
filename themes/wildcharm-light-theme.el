@@ -46,9 +46,9 @@
    `(shadow
      ((,class256 (:foreground ,non-text))))
    `(link
-     ((,class256 (:foreground ,fg :underline t))))
+     ((,class256 (:foreground ,blue :underline t))))
    `(link-visited
-     ((,class256 (:foreground ,darkgrey :underline t))))
+     ((,class256 (:foreground ,magenta :underline t))))
    `(highlight
      ((,class256 (:background ,blue :foreground ,white))))
    `(region
@@ -672,7 +672,7 @@
    `(erc-direct-msg-face
      ((,class256 (:foreground ,yellow))))
    `(erc-button
-     ((,class256 (:background nil :foreground nil :underline t))))
+     ((,class256 (:background nil :foreground ,blue :underline t))))
    `(erc-prompt-face
      ((,class256 (:background nil :foreground ,black :weight bold))))
    `(erc-action-face
@@ -718,7 +718,7 @@
    `(rcirc-prompt
      ((,class256 (:foreground ,black :weight bold))))
    `(rcirc-url
-     ((,class256 (:background nil :foreground nil :underline t))))
+     ((,class256 (:background nil :foreground ,blue :underline t))))
    `(rcirc-my-nick
      ((,class256 (:foreground ,bright-red :weight bold))))
    `(rcirc-nick-in-message
