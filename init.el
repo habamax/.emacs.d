@@ -323,7 +323,7 @@
         ("<f5>" . habamax-gdscript/run-project)
         ("<f6>" . habamax-gdscript/run-current)
         ("C-c r" . habamax-gdscript/run-scene)
-        ("C-c C-r" . recompile)
+        ("C-c C-r" . habamax-gdscript/run-last)
         ("<f7>" . recompile)
         ("C-c n")
         ("<f9>"))

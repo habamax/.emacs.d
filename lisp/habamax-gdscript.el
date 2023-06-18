@@ -41,5 +41,12 @@
       (completing-read "Run scene: " (habamax-gdscript--find-scene))
       ".tscn"))))
 
+(defun habamax-gdscript/run-last ()
+  "Run last scene."
+  (interactive)
+  (cond
+   ((string-match "^godot" compile-command) (recompile))
+   (t (habamax-gdscript/run-current))))
+
 (provide 'habamax-gdscript)
 ;;; habamax-gdscript.el ends here
