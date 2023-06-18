@@ -199,7 +199,11 @@
         '(orderless-literal orderless-prefixes orderless-flex)))
 
 (use-package consult
-  :bind (("C-c m" . consult-imenu)
+  :bind (([remap switch-to-buffer] . consult-buffer)
+         ([remap switch-to-buffer-other-window] . consult-buffer-other-window)
+         ([remap switch-to-buffer-other-frame] . consult-buffer-other-frame)
+         ([remap project-switch-to-buffer] . consult-project-buffer)
+         ("C-c m" . consult-imenu)
          ("C-c M" . consult-imenu-multi)
          ("M-X" . consult-mode-command)
          ("C-c o r" . consult-recent-file)
@@ -216,6 +220,11 @@
          ("M-y" . consult-yank-pop))
   :config
   (setq consult-preview-key "M-.")
+  (setq consult-buffer-sources
+        '(consult--source-hidden-buffer
+          consult--source-modified-buffer
+          consult--source-buffer
+          consult--source-recent-file))
   (consult-customize
    consult-goto-line consult-line
    consult-focus-lines consult-keep-lines
