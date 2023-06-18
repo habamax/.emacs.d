@@ -201,11 +201,13 @@
 (use-package consult
   :bind (("C-c m" . consult-imenu)
          ("C-c M" . consult-imenu-multi)
+         ("M-X" . consult-mode-command)
          ("C-c o r" . consult-recent-file)
          ("C-c C-c f" . consult-focus-lines)
          ("C-c C-c k" . consult-keep-lines)
          ("M-s s" . consult-line)
          ("M-s M-s" . consult-line)
+         ("M-s S" . consult-line-multi)
          ("M-g o" . consult-outline)
          ("C-c o a" . consult-org-agenda)
          ([remap goto-line] . consult-goto-line)
