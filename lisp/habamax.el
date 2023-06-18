@@ -8,11 +8,11 @@
 (defvar wildcharm-hook nil "After wildcharm-(light-)theme is loaded.")
 
 ;;; Visit emacs init file
-(defun habamax/init ()
+(defun habamax/open-init-file ()
   (interactive)
   (find-file user-init-file))
 
-(defun habamax/secrets ()
+(defun habamax/open-secret-file ()
   "Select and open gpg file from org directory."
   (interactive)
   (let ((default-directory (or (getenv "ORG") "~/org")))
@@ -22,6 +22,13 @@
       ((lambda (files) (completing-read "Open secret: " files)))
       (concat ".gpg")
       (find-file))))
+
+(defun habamax/open-recent-file ()
+  (interactive)
+  (find-file
+   (completing-read "Open recent: "
+                    (mapcar #'abbreviate-file-name
+                            (bound-and-true-p recentf-list)))))
 
 ;;; Comment a line.
 (defun habamax/toggle-comment (arg)
@@ -149,13 +156,6 @@ affects the sort order.
 See `sort-regexp-fields'."
   (interactive "*P\nr")
   (sort-regexp-fields reverse "\\w+" "\\&" beg end))
-
-(defun habamax/recentf ()
-  (interactive)
-  (find-file
-   (completing-read "Open recent: "
-                    (mapcar #'abbreviate-file-name
-                            (bound-and-true-p recentf-list)))))
 
 (defun habamax/insert-lorem ()
   (interactive)
