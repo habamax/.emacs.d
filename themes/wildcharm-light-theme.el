@@ -101,7 +101,7 @@
    `(minibuffer-prompt
      ((,class256 (:foreground ,yellow :weight bold))))
    `(fringe
-     ((t (:foreground ,non-text :background nil))))
+     ((t (:foreground ,non-text :background unspecified))))
    ;; -scroll-bar
    `(cursor
      ((t (:background ,fg))))
@@ -112,9 +112,9 @@
      ((,class256 (:background ,mode-line-active :foreground ,black :weight bold
                               :box (:line-width 1 :color ,non-text)))))
    `(tab-bar-tab-inactive
-     ((t (:background nil :foreground ,fg))))
+     ((t (:background unspecified :foreground ,fg))))
    `(help-key-binding
-     ((,class256 (:background nil :foreground ,cyan
+     ((,class256 (:background unspecified :foreground ,cyan
                               :box (:line-width (1 . -1) :color ,cyan)))))
    `(error
      ((,class256 (:foreground ,bright-red :weight bold))))
@@ -176,7 +176,7 @@
 
    ;;; global-hl-line-mode
    `(hl-line
-     ((,class256 (:background ,hl-line :foreground nil))))
+     ((,class256 (:background ,hl-line :foreground unspecified))))
 
    ;;; widget
    `(custom-button
@@ -250,7 +250,7 @@
 
    ;;; whitespace
    `(whitespace-space
-     ((,class256 (:background nil :foreground ,non-text))))
+     ((,class256 (:background unspecified :foreground ,non-text))))
    `(whitespace-line
      ((,class256 nil)))
    `(whitespace-trailing
@@ -286,7 +286,7 @@
 
    ;;; bookmark
    `(bookmark-face
-     ((,class256 (:background nil :foreground ,yellow))))
+     ((,class256 (:background unspecified :foreground ,yellow))))
 
    ;;; info
    `(info-title-4
@@ -344,7 +344,7 @@
    `(org-date
      ((,class256 (:foreground ,darkgrey))))
    `(org-headline-done
-     ((,class256 (:foreground ,nil))))
+     ((,class256 (:foreground unspecified))))
    `(org-checkbox
      ((,class256 (:foreground ,darkgrey :weight normal))))
    `(org-dispatcher-highlight
@@ -448,7 +448,7 @@
    `(gnus-summary-normal-ancient
      ((,class256 (:foreground ,fg))))
    `(gnus-summary-cancelled
-     ((,class256 (:background nil :foreground ,red))))
+     ((,class256 (:background unspecified :foreground ,red))))
    `(gnus-header-name
      ((,class256 (:foreground ,magenta))))
    `(gnus-header-from
@@ -672,11 +672,11 @@
    `(erc-direct-msg-face
      ((,class256 (:foreground ,yellow))))
    `(erc-button
-     ((,class256 (:background nil :foreground ,blue :underline t))))
+     ((,class256 (:background unspecified :foreground ,blue :underline t))))
    `(erc-prompt-face
-     ((,class256 (:background nil :foreground ,black :weight bold))))
+     ((,class256 (:background unspecified :foreground ,black :weight bold))))
    `(erc-action-face
-     ((,class256 (:background nil :foreground ,comment))))
+     ((,class256 (:background unspecified :foreground ,comment))))
    `(fg:erc-face0
      ((,class256 (:foreground ,black))))
    `(fg:erc-face1
@@ -718,7 +718,7 @@
    `(rcirc-prompt
      ((,class256 (:foreground ,black :weight bold))))
    `(rcirc-url
-     ((,class256 (:background nil :foreground ,blue :underline t))))
+     ((,class256 (:background unspecified :foreground ,blue :underline t))))
    `(rcirc-my-nick
      ((,class256 (:foreground ,bright-red :weight bold))))
    `(rcirc-nick-in-message
@@ -906,7 +906,7 @@
    `(tempel-field
      ((,class256 (:background ,diff-added-bg))))
    `(tempel-form
-     ((,class256 (:background nil))))
+     ((,class256 (:background unspecified))))
 
    ))
 
