@@ -1,7 +1,6 @@
-;;-*-coding: utf-8;-*-
+;;-*-coding: utf-8; mode: emacs-lisp -*-
 (define-abbrev-table 'global-abbrev-table
-  '(
-    ("shrug" "¯\\_(ツ)_/¯")
+  '(("shrug" "¯\\_(ツ)_/¯")
     ("latex" "LaTeX")
     ("teh" "the")
     ("hte" "the")
@@ -19,5 +18,8 @@
     ("knwo" "know")
     ("kwno" "know")
     ("konw" "know")
-    ("clena" "clean")
-))
+    ("clena" "clean")))
+
+(define-abbrev-table 'erc-mode-abbrev-table
+  '(("alis" "/msg alis LIST")
+    ("regain" "/msg nickserv REGAIN habamax")))
