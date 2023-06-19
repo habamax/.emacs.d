@@ -326,7 +326,6 @@
   :bind (("C-h D" . devdocs-lookup)))
 
 (use-package gdscript-mode
-  :load-path "lisp"
   :bind
   (:map gdscript-mode-map
         ("<f5>" . habamax-gdscript/run-project)
@@ -374,7 +373,6 @@
         "pandoc -s -M fontsize=18pt -M maxwidth=60em --highlight-style tango"))
 
 (use-package notmuch
-  :load-path "lisp"
   :ensure nil
   :if (executable-find "notmuch")
   :commands (notmuch notmuch-sync)
@@ -382,7 +380,6 @@
   (require 'habamax-notmuch))
 
 (use-package emms
-  :load-path "lisp"
   :commands (emms emms-add-directory-tree)
   :bind (("C-c SPC m m" . habamax/emms-play-main)
          ("C-c SPC m 1" . habamax/emms-stream-dnb)
@@ -403,7 +400,6 @@
     (load feeds)))
 
 (use-package erc
-  :load-path "lisp"
   :ensure nil
   :commands habamax-erc
   :config
