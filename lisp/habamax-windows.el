@@ -15,14 +15,5 @@
   (set-face-attribute 'fixed-pitch nil :font name)
   (set-face-attribute 'fixed-pitch-serif nil :font name))
 
-(when (member "Segoe UI Emoji" (font-family-list))
-  (set-fontset-font
-    t 'emoji (font-spec :family "Segoe UI Emoji") nil 'prepend))
-
-;; (when (member "Noto Color Emoji" (font-family-list))
-;;   (set-fontset-font
-;;     t 'emoji (font-spec :family "Noto Color Emoji") nil 'prepend))
-
-
 (provide 'habamax-windows)
 ;;; habamax-windows.el ends here
