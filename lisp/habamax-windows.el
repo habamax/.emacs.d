@@ -8,7 +8,7 @@
                      ("JetBrains Mono NL"  . "14")
                      ("Consolas"           . "14")))
             (font (seq-find
-                   (lambda (f) (find-font (font-spec :name (car f))))
+                   (lambda (f) (member (car f) (font-family-list)))
                    fonts))
             (name (format "%s-%s" (car font) (cdr font))))
   (add-to-list 'default-frame-alist `(font . ,name))
