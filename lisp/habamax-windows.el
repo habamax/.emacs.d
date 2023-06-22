@@ -5,8 +5,8 @@
 ;;; Code:
 
 (when-let* ((fonts '(("Iosevka Fixed SS04" . "17")
-                     ("JetBrains Mono NL" . "14")
-                     ("Consolas"          . "14")))
+                     ("JetBrains Mono NL"  . "14")
+                     ("Consolas"           . "14")))
             (font (seq-find
                    (lambda (f) (find-font (font-spec :name (car f))))
                    fonts))
