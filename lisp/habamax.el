@@ -180,14 +180,23 @@ See `sort-regexp-fields'."
       (load-theme 'wildcharm t)))
   (run-hooks 'wildcharm-hook))
 
+(defun habamax/toggle-alpha ()
+  "Toggle alpha-background (transparency)."
+  (interactive)
+  (set-frame-parameter nil
+                       'alpha-background 
+                       (pcase (frame-parameter nil 'alpha-background)
+                         (100 95)
+                         (t 100))))
+
 (defun habamax/auth-secret (host)
-    "Return secret(password) for specified host from auth-sources."
-    (let ((found (nth 0 (auth-source-search :host host :create nil))))
-      (when found
-	(let ((secret (plist-get found :secret)))
-	  (if (functionp secret)
-	      (funcall secret)
-	    secret)))))
+  "Return secret(password) for specified host from auth-sources."
+  (let ((found (nth 0 (auth-source-search :host host :create nil))))
+    (when found
+      (let ((secret (plist-get found :secret)))
+	(if (functionp secret)
+	    (funcall secret)
+	  secret)))))
 
 (defun habamax/auth-basic (host)
     "Return base64 encoded login:password for specified host from auth-sources."
