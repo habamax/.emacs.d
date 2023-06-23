@@ -23,7 +23,7 @@
 (setq-default
  default-frame-alist
  '((font . "Monospace-18")
-   (alpha-background . 95)
+   (alpha-background . 92)
    (fullscreen . maximized)
    (horizontal-scroll-bars . nil)
    (vertical-scroll-bars . nil)
