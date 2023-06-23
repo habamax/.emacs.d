@@ -170,6 +170,7 @@ See `sort-regexp-fields'."
                         directory-files-no-dot-files-regexp))))))
 
 (defun habamax/toggle-bg ()
+  "Toggle dark/light wildcharm theme."
   (interactive)
   (let ((current-theme (car custom-enabled-themes)))
     (dolist (loaded-theme custom-enabled-themes)
