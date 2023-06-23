@@ -183,7 +183,7 @@ See `sort-regexp-fields'."
   (interactive)
   (thread-last
     (pcase (frame-parameter nil 'alpha-background)
-      (100 95)(t 100))
+      (100 95)(_ 100))
     (set-frame-parameter nil 'alpha-background)))
 
 (defun habamax/auth-secret (host)
