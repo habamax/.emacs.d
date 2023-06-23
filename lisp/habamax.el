@@ -172,12 +172,10 @@ See `sort-regexp-fields'."
 (defun habamax/toggle-bg ()
   "Toggle dark/light wildcharm theme."
   (interactive)
-  (let ((current-theme (car custom-enabled-themes)))
+  (let ((theme (car custom-enabled-themes)))
     (dolist (loaded-theme custom-enabled-themes)
       (disable-theme loaded-theme))
-    (if (eq current-theme 'wildcharm)
-        (load-theme 'wildcharm-light t)
-      (load-theme 'wildcharm t)))
+    (load-theme (if (eq theme 'wildcharm) 'wildcharm-light 'wildcharm) t))
   (run-hooks 'wildcharm-hook))
 
 (defun habamax/toggle-alpha ()
