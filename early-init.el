@@ -30,7 +30,8 @@
    (menu-bar-lines . 0)
    (tool-bar-lines . 0)))
 
-(add-to-list 'custom-theme-load-path (expand-file-name "themes/" user-emacs-directory))
+(add-to-list 'custom-theme-load-path
+             (expand-file-name "themes/" user-emacs-directory))
 (load-theme 'wildcharm t)
 
 ;;; early-init.el ends here
