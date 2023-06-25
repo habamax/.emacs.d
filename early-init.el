@@ -12,8 +12,7 @@
  (lambda () (setq gc-cons-threshold 800000)))
 
 (setq inhibit-startup-message t
-      inhibit-splash-screen t
-      initial-scratch-message nil)
+      inhibit-splash-screen t)
 
 (defconst +IS-OSX+ (eq system-type 'darwin))
 (defconst +IS-WINDOWS+ (eq system-type 'windows-nt))
