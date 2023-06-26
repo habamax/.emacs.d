@@ -119,7 +119,7 @@
    ("C-c b" . habamax/next-buffer-like-this)
    ("C-c B" . habamax/previous-buffer-like-this)
    ([remap list-buffers] . ibuffer)
-   ("C-c d" . habamax/duplicate-line)
+   ("C-c d" . duplicate-dwim)
    ("M-s >" . habamax/grep-current-word)
    ("M-s t" . habamax/grep-todo)
    ("C-c t n" . display-line-numbers-mode)
@@ -154,8 +154,8 @@
    :repeat-map habamax-winner-repeat-map
    ("w" . winner-undo)
    ("W" . winner-redo)
-   :repeat-map habamax-duplicate-line-repeat-map
-   ("d" . habamax/duplicate-line)
+   :repeat-map habamax-duplicate-repeat-map
+   ("d" . duplicate-dwim)
    :repeat-map habamax-buffers-like-this-repeat-map
    ("b" . habamax/next-buffer-like-this)
    ("B" . habamax/previous-buffer-like-this)

@@ -44,22 +44,6 @@ Otherwise call well known `comment-dwim'"
         (forward-line))
     (comment-dwim arg)))
 
-(defun habamax/duplicate-line (arg)
-  "Duplicate current line, leaving point in lower line."
-  (interactive "*p")
-  (let ((bol (save-excursion (beginning-of-line) (point)))
-        eol)
-    (save-excursion
-      (end-of-line)
-      (setq eol (point))
-      (let ((line (buffer-substring bol eol))
-            (count arg))
-        (while (> count 0)
-          (newline)
-          (insert line)
-          (setq count (1- count))))))
-  (next-line arg))
-
 (defun habamax/move-text (arg)
   "Move region or line up/down depending on arg."
   (cond
