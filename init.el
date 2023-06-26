@@ -39,7 +39,7 @@
 (setq tab-bar-show 1)
 
 (setq-default abbrev-mode t)
-(quietly-read-abbrev-file (concat user-emacs-directory "abbrevs"))
+(quietly-read-abbrev-file (expand-file-name "abbrevs" user-emacs-directory))
 
 ;;; Simple HTML renderer to use default font.
 (setq shr-use-fonts nil)
