@@ -171,7 +171,7 @@
   :init
   (when +IS-WINDOWS+
     (require 'habamax-windows))
-  (when (or +IS-WINDOWS+ (getenv "WSLENV"))
+  (when (or +IS-WINDOWS+ +IS-WSL+)
     (setq epa-pinentry-mode 'loopback))
   (require 'habamax-dev))
 

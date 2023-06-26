@@ -16,6 +16,7 @@
 
 (defconst +IS-OSX+ (eq system-type 'darwin))
 (defconst +IS-WINDOWS+ (eq system-type 'windows-nt))
+(defconst +IS-WSL+ (getenv "WSLENV"))
 
 (setq-default load-prefer-newer t)
 
