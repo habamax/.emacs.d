@@ -41,15 +41,15 @@
 (setq-default abbrev-mode t)
 (quietly-read-abbrev-file (expand-file-name "abbrevs" user-emacs-directory))
 
-;;; Simple HTML renderer to use default font.
+;; Simple HTML renderer to use default font.
 (setq shr-use-fonts nil)
 (setq shr-color-visible-luminance-min 78)
 
-;;; ripgrep as grep
+;; ripgrep as grep
 (setq grep-command "rg -nS --no-heading "
       grep-use-null-device nil)
 
-;;; Store all backup and autosave files in the tmp dir
+;; Store all backup and autosave files in the tmp dir
 (setq backup-directory-alist `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
 
@@ -91,18 +91,12 @@
          (side . right)
          (slot . -1))))
 
-;;; use packages
-(require 'package)
-(setq package-native-compile t)
+;; packages
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") 'append)
 
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
-
-(require 'use-package)
-(setq use-package-always-ensure t
+(setq package-native-compile t
+      use-package-always-ensure t
       use-package-always-defer t)
 
 (use-package habamax
