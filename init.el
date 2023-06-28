@@ -165,6 +165,8 @@
   :init
   (when +IS-WINDOWS+
     (require 'habamax-windows))
+  (when +IS-WSL+
+    (setq browse-url-firefox-program "firefox.exe"))
   (when (or +IS-WINDOWS+ +IS-WSL+)
     (setq epa-pinentry-mode 'loopback))
   (require 'habamax-dev))
