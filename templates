@@ -23,6 +23,8 @@ lisp-mode emacs-lisp-mode
 
 emacs-lisp-mode
 
+(> "(thread-first " q ")")
+(>> "(thread-last " q ")")
 (def "(defun " p " (" p ")\n  \"" p "\"" n> r> ")")
 (let "(let ((" p "))" n> r> ")")
 (let* "(let* ((" p "))" n> r> ")")
