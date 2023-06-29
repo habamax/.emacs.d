@@ -1,14 +1,13 @@
 ;;; habamax.el --- miscelaneous habamax functions -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;  Bunch of misc functions.
-
 ;;; Code:
 
-;; to be used with habamax/toggle-bg
+;; Complements habamax/toggle-bg
 (defvar wildcharm-hook nil "After wildcharm-(light-)theme is loaded.")
 
-;;; Visit emacs init file
 (defun habamax/open-init-file ()
+  "Open init.el."
   (interactive)
   (find-file user-init-file))
 
@@ -24,13 +23,13 @@
       (find-file))))
 
 (defun habamax/open-recent-file ()
+  "Select and open recent file."
   (interactive)
   (find-file
    (completing-read "Open recent: "
                     (mapcar #'abbreviate-file-name
                             (bound-and-true-p recentf-list)))))
 
-;;; Comment a line.
 (defun habamax/toggle-comment (arg)
   "Comment or uncomment current line if mark region is not active.
 Otherwise call well known `comment-dwim'"
@@ -78,7 +77,6 @@ Otherwise call well known `comment-dwim'"
   (interactive "*p")
   (habamax/move-text arg))
 
-;; Next buffer with the same mode
 (defun habamax/next-buffer-like-this ()
   "Open next buffer with the same major mode as current."
   (interactive)
@@ -91,7 +89,6 @@ Otherwise call well known `comment-dwim'"
          (not (equal b-name (buffer-name))))
       (next-buffer))))
 
-;; Previous buffer with the same mode
 (defun habamax/previous-buffer-like-this ()
   "Open previous buffer with the same major mode as current."
   (interactive)
@@ -128,20 +125,9 @@ Otherwise call well known `comment-dwim'"
   (interactive)
   (grep (concat grep-command "\"(TODO|FIXME|XXX):\" .")))
 
-;;;; sort words
-(defun habamax/sort-words (reverse beg end)
-  "Sort words in region alphabetically, in REVERSE if negative.
-
-Prefixed with negative \\[universal-argument], sorts in reverse.
-
-The variable `sort-fold-case' determines whether alphabetic case
-affects the sort order.
-
-See `sort-regexp-fields'."
-  (interactive "*P\nr")
-  (sort-regexp-fields reverse "\\w+" "\\&" beg end))
-
 (defun habamax/insert-lorem ()
+  "Select and insert text file from lorem/ directory located in
+`user-emacs-directory'"
   (interactive)
   (let ((path (concat user-emacs-directory "lorem/")))
     (insert-file-contents
