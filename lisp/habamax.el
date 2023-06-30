@@ -27,8 +27,7 @@
   (interactive)
   (find-file
    (completing-read "Open recent: "
-                    (mapcar #'abbreviate-file-name
-                            (bound-and-true-p recentf-list)))))
+                    (bound-and-true-p recentf-list))))
 
 (defun habamax/toggle-comment (arg)
   "Comment or uncomment current line if mark region is not active.
