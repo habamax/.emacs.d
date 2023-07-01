@@ -122,8 +122,7 @@
    `(tab-bar-tab-inactive
      ((t (:background unspecified :foreground ,grey))))
    `(help-key-binding
-     ((,class256 (:background unspecified :foreground ,cyan
-                              :box (:line-width (1 . -1) :color ,cyan)))))
+     ((,class256 (:background unspecified :foreground ,cyan :weight bold))))
    `(error
      ((,class256 (:foreground ,bright-red :weight bold))))
    `(warning
