@@ -45,7 +45,7 @@
   (custom-theme-set-faces
    'wildcharm
 
-   ;;; standard faces
+   ;; standard faces
    `(default
       ((,classTTY (:background unspecified, :foreground unspecified))
        (t (:background ,bg :foreground ,fg))))
@@ -143,7 +143,7 @@
    `(show-paren-mismatch
      ((,class256 :background ,match-paren :foreground ,white :weight bold)))
 
-   ;;; font-lock
+   ;; font-lock
    `(font-lock-string-face
      ((,class256 (:foreground ,bright-green))))
    `(font-lock-comment-face
@@ -165,7 +165,7 @@
    `(font-lock-warning-face
      ((,class256 (:foreground ,yellow :weight bold))))
 
-   ;;; isearch
+   ;; isearch
    `(isearch
      ((,class256 (:background ,black :foreground ,bright-yellow :inverse-video t))))
    `(isearch-group-1
@@ -178,15 +178,15 @@
      ((,classTC (:background ,diff-removed-bg :foreground ,diff-removed-fg))
       (t (:background ,diff-removed-bg-tty :foreground ,diff-removed-fg))))
 
-   ;;; replace.el
+   ;; replace.el
    `(match
      ((,class256 (:background ,match))))
 
-   ;;; global-hl-line-mode
+   ;; global-hl-line-mode
    `(hl-line
      ((,class256 (:background ,hl-line :foreground unspecified))))
 
-   ;;; widget
+   ;; widget
    `(custom-button
      ((,class256 (:background ,grey2 :foreground ,fg :extend t
                               :box (:line-width (2 . 2) :style released-button)))))
@@ -205,11 +205,11 @@
    `(widget-documentation
      ((,class256 (:foreground ,green))))
 
-   ;;; customize
+   ;; customize
    `(custom-variable-tag
      ((,class256 (:foreground ,white :weight bold))))
 
-   ;;; dired
+   ;; dired
    `(dired-header
      ((,class256 (:foreground ,white :weight bold))))
    `(dired-directory
@@ -223,7 +223,7 @@
    `(dired-perm-write
      ((,class256 (:foreground ,yellow :inherit nil))))
 
-   ;;; completion
+   ;; completion
    `(icomplete-first-match
      ((,class256 (:foreground ,bright-green :weight bold))))
    `(icomplete-selected-match
@@ -235,7 +235,7 @@
    `(completions-annotations
      ((,class256 (:foreground ,darkgrey))))
 
-   ;;; ido
+   ;; ido
    `(ido-first-match
      ((,class256 (:foreground ,bright-green :weight bold))))
    `(ido-only-match
@@ -248,7 +248,7 @@
    `(ido-indicator
      ((,class256 (:background ,red :foreground ,bright-yellow))))
 
-   ;;; compilation
+   ;; compilation
    `(compilation-mode-line-fail
      ((,class256 (:foreground ,red :weight bold))))
    `(compilation-mode-line-exit
@@ -256,7 +256,7 @@
    `(compilation-line-number
      ((,class256 (:foreground ,darkgrey))))
 
-   ;;; whitespace
+   ;; whitespace
    `(whitespace-space
      ((,class256 (:background unspecified :foreground ,non-text))))
    `(whitespace-line
@@ -270,13 +270,13 @@
    `(whitespace-empty
      ((,class256 (:background ,yellow))))
 
-   ;;; vc
+   ;; vc
    `(log-view-message
      ((,class256 (:foreground ,darkgrey))))
    `(log-view-commit-body
      ((,class256 (:foreground ,fg))))
 
-   ;;; message
+   ;; message
    `(message-header-name
      ((,class256 (:foreground ,magenta))))
    `(message-header-subject
@@ -292,11 +292,11 @@
    `(message-mml
      ((,class256 (:foreground ,comment))))
 
-   ;;; bookmark
+   ;; bookmark
    `(bookmark-face
      ((,class256 (:background unspecified :foreground ,yellow))))
 
-   ;;; info
+   ;; info
    `(info-title-4
      ((,class256 (:foreground ,white :weight bold))))
    `(info-menu-header
@@ -304,7 +304,11 @@
    `(info-node
      ((,class256 (:foreground ,bright-yellow :weight bold))))
 
-   ;;; org
+   ;; edmacro
+   `(edmacro-label
+     ((,class256 (:foreground ,bright-blue :weight bold))))
+   
+   ;; org
    `(org-meta-line
      ((,class256 (:foreground ,darkgrey))))
    `(org-document-info-keyword
@@ -386,7 +390,7 @@
    `(org-table
      ((,class256 (:foreground ,fg))))
 
-   ;;; gnus
+   ;; gnus
    `(gnus-button
      ((,class256 (:underline t))))
    `(gnus-group-mail-1
@@ -492,7 +496,7 @@
    `(mm-uu-extract
      ((,class256 (:background ,block :foreground ,yellow))))
 
-   ;;; shr
+   ;; shr
    `(shr-h1
      ((,class256 (:foreground ,white :weight bold :height 1.6))))
    `(shr-h2
@@ -506,13 +510,13 @@
    `(shr-h6
      ((,class256 (:foreground ,white :weight bold :height 1.0))))
 
-   ;;; dictionary
+   ;; dictionary
    `(dictionary-word-definition-face
      ((,class256 (:family nil))))
    `(dictionary-reference-face
      ((,class256 (:foreground ,yellow))))
 
-   ;;; markdown
+   ;; markdown
    `(markdown-header-face
      ((,class256 (:foreground ,white :weight bold))))
    `(markdown-header-delimiter-face
@@ -532,7 +536,7 @@
    `(markdown-gfm-checkbox-face
      ((,class256 (:foreground ,darkgrey))))
 
-   ;;; diff
+   ;; diff
    `(diff-header
      ((,class256 (:foreground ,bright-blue :weight bold))))
    `(diff-file-header
@@ -556,7 +560,7 @@
    `(diff-indicator-removed
      ((t (:inherit 'diff-removed :foreground ,bright-red))))
 
-   ;;; vc
+   ;; vc
    `(vc-edited-state
      ((,class256 (:foreground ,yellow))))
    `(vc-conflict-state
@@ -572,13 +576,13 @@
    `(vc-removed-state
      ((,class256 (:foreground ,bright-red))))
 
-   ;;; git-commit
+   ;; git-commit
    `(git-commit-summary
      ((,class256 (:foreground ,white :weight bold))))
    `(git-commit-nonempty-second-line
      ((,class256 (:foreground ,bright-red :weight bold))))
 
-   ;;; magit
+   ;; magit
    `(magit-section-heading
      ((,class256 (:foreground ,bright-yellow :weight bold))))
    `(magit-section-heading-selection
@@ -628,7 +632,7 @@
    `(magit-log-date
      ((,class256 (:foreground ,darkgrey))))
 
-   ;;; smerge
+   ;; smerge
    `(smerge-lower
      ((,classTC (:background ,diff-added-bg))
       (t (:background ,diff-added-bg-tty))))
@@ -640,7 +644,7 @@
    `(smerge-refined-removed
      ((t (:background ,red :foreground ,black))))
 
-   ;;; epa
+   ;; epa
    `(epa-validity-high
      ((,class256 (:foreground ,bright-green :weight bold))))
    `(epa-validity-medium
@@ -650,7 +654,7 @@
    `(epa-validity-disabled
      ((,class256 (:foreground ,darkgrey))))
 
-   ;;; flyspell
+   ;; flyspell
    `(flyspell-incorrect
      ((,classTTY (:inherit error :underline t))
       (t (:underline (:style wave :color ,bright-red)))))
@@ -658,7 +662,7 @@
      ((,classTTY (:inherit warning :underline t))
       (t (:underline (:style wave :color ,bright-yellow)))))
 
-   ;;; flymake
+   ;; flymake
    `(flymake-error
      ((,classTTY (:inherit error :underline t))
       (t (:underline (:style wave :color ,bright-red)))))
@@ -666,7 +670,7 @@
      ((,classTTY (:inherit warning :underline t))
       (t (:underline (:style wave :color ,bright-yellow)))))
 
-   ;;; erc
+   ;; erc
    `(erc-timestamp-face
      ((,class256 (:foreground ,darkgrey))))
    `(erc-notice-face
@@ -724,7 +728,7 @@
    `(fg:erc-face15
      ((,class256 (:foreground ,white))))
 
-   ;;; rcirc
+   ;; rcirc
    `(rcirc-server
      ((,class256 (:foreground ,darkgrey))))
    `(rcirc-timestamp
@@ -740,7 +744,7 @@
    `(rcirc-other-nick
      ((,class256 (:foreground ,bright-blue))))
 
-   ;;; calendar
+   ;; calendar
    `(calendar-month-header
      ((,class256 (:foreground ,white :weight bold))))
    `(calendar-weekday-header
@@ -750,7 +754,7 @@
    `(calendar-today
      ((,class256 (:foreground ,bright-green))))
 
-   ;;; elfeed
+   ;; elfeed
    `(elfeed-log-date-face
      ((,class256 (:foreground ,yellow))))
    `(elfeed-log-error-level-face
@@ -774,7 +778,7 @@
    `(elfeed-search-unread-count-face
      ((,class256 (:foreground ,bright-blue))))
 
-   ;;; eshell
+   ;; eshell
    `(eshell-prompt
      ((,class256 (:foreground ,bright-magenta :weight bold))))
    `(eshell-ls-directory
@@ -800,7 +804,7 @@
    `(eshell-ls-special
      ((,class256 (:foreground ,magenta))))
 
-   ;;; eww
+   ;; eww
    `(eww-form-text
      ((,class256 (:inherit widget-field :box (:foreground ,darkgrey)))))
    `(eww-form-textarea
@@ -810,7 +814,7 @@
    `(eww-form-file
      ((,class256 (:inherit custom-button))))
 
-   ;;; emms
+   ;; emms
    `(emms-playlist-selected-face
      ((,class256 (:foreground ,bright-blue :weight bold))))
    `(emms-playlist-track-face
@@ -828,11 +832,11 @@
    `(emms-browser-year/genre-face
      ((,class256 (:foreground ,bright-red))))
 
-   ;;; vertico
+   ;; vertico
    `(vertico-current
      ((,class256 (:background ,hl-line))))
 
-   ;;; orderless
+   ;; orderless
    `(orderless-match-face-0
      ((,class256 (:foreground ,bright-blue :weight bold))))
    `(orderless-match-face-1
@@ -842,13 +846,13 @@
    `(orderless-match-face-3
      ((,class256 (:foreground ,bright-yellow :weight bold))))
 
-   ;;; marginalia
+   ;; marginalia
    `(marginalia-key
      ((,class256 (:foreground ,cyan))))
    `(marginalia-date
      ((,class256 (:foreground ,darkgrey))))
 
-   ;;; consult
+   ;; consult
    `(consult-file
      ((,class256 (:foreground ,darkgrey))))
    `(consult-bookmark
@@ -856,7 +860,7 @@
    `(consult-highlight-match
      ((,class256 (:background ,match))))
 
-   ;;; notmuch
+   ;; notmuch
    `(notmuch-message-summary-face
      ((,class256 (:background ,grey1))))
    `(notmuch-tag-face
@@ -873,7 +877,7 @@
    `(notmuch-tag-deleted
      ((,class256 (:foreground ,red :strike-through ,red))))
 
-   ;;; verb (org based restclient)
+   ;; verb (org based restclient)
    `(verb-http-keyword
      ((,class256 (:foreground ,bright-blue))))
    `(verb-header
@@ -881,11 +885,11 @@
    `(verb-code-tag
      ((,class256 (:foreground ,cyan))))
 
-   ;;; sly
+   ;; sly
    `(sly-mrepl-output-face
      ((,class256 (:foreground ,cyan))))
 
-   ;;; corfu
+   ;; corfu
    `(corfu-default
      ((,class256 (:background ,grey3))))
    `(corfu-current
@@ -895,7 +899,7 @@
    `(corfu-border
      ((,class256 (:background ,darkgrey))))
 
-   ;;; rainbow-delimiters
+   ;; rainbow-delimiters
    `(rainbow-delimiters-depth-1-face
      ((,class256 (:foreground ,fg))))
    `(rainbow-delimiters-depth-2-face
