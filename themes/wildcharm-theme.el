@@ -672,7 +672,7 @@
 
    ;; erc
    `(erc-timestamp-face
-     ((,class256 (:foreground ,darkgrey))))
+     ((,class256 (:foreground ,cyan))))
    `(erc-notice-face
      ((,class256 (:foreground ,darkgrey))))
    `(erc-my-nick-face
@@ -682,7 +682,7 @@
    `(erc-nick-msg-face
      ((,class256 (:foreground ,bright-yellow))))
    `(erc-input-face
-     ((,class256 (:foreground ,bright-green))))
+     ((,class256 (:foreground ,purple))))
    `(erc-error-face
      ((,class256 (:foreground ,red))))
    `(erc-dangerous-host-face
