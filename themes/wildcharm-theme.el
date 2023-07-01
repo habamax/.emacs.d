@@ -732,7 +732,7 @@
    `(rcirc-server
      ((,class256 (:foreground ,darkgrey))))
    `(rcirc-timestamp
-     ((,class256 (:foreground ,darkgrey))))
+     ((,class256 (:foreground ,cyan))))
    `(rcirc-prompt
      ((,class256 (:foreground ,white :weight bold))))
    `(rcirc-url
