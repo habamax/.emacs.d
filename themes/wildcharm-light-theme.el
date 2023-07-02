@@ -114,7 +114,7 @@
    `(tab-bar-tab-inactive
      ((t (:background unspecified :foreground ,fg))))
    `(help-key-binding
-     ((,class256 (:background unspecified :foreground ,cyan :weight bold))))
+     ((,class256 (:background unspecified :foreground ,bright-cyan :weight bold))))
    `(error
      ((,class256 (:foreground ,bright-red :weight bold))))
    `(warning
