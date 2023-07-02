@@ -96,6 +96,7 @@
              '("melpa" . "https://melpa.org/packages/") 'append)
 
 (setq package-native-compile t
+      native-comp-async-report-warnings-errors nil
       use-package-always-ensure t
       use-package-always-defer t)
 
