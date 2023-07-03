@@ -106,6 +106,7 @@
   (("C-c o i" . habamax/open-init-file)
    ("C-c o s" . habamax/open-secret-file)
    ("M-;" . habamax/toggle-comment)
+   ("C-^" . habamax/join-line)
    ("M-o" . delete-blank-lines)
    ("M-n" . habamax/move-line-down)
    ("M-p" . habamax/move-line-up)

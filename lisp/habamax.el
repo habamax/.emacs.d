@@ -42,6 +42,11 @@ Otherwise call well known `comment-dwim'"
         (forward-line))
     (comment-dwim arg)))
 
+(defun habamax/join-line ()
+  "Join next line."
+  (interactive)
+  (delete-indentation 1))
+
 (defun habamax/move-text (arg)
   "Move region or line up/down depending on arg."
   (cond
