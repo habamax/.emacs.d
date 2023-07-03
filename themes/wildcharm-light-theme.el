@@ -581,6 +581,8 @@
      ((,class256 (:foreground ,blue))))
    `(magit-branch-remote
      ((,class256 (:foreground ,green))))
+   `(magit-tag
+     ((,class256 (:foreground ,bright-yellow))))
    `(magit-cherry-equivalent
      ((,class256 (:foreground ,magenta))))
    `(magit-cherry-unmatched
