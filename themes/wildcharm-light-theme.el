@@ -927,9 +927,7 @@
    `(tempel-field
      ((,class256 (:background ,diff-added-bg))))
    `(tempel-form
-     ((,class256 (:background unspecified))))
-
-   ))
+     ((,class256 (:background unspecified))))))
 
 ;;;###autoload
 (when load-file-name

@@ -943,9 +943,7 @@
      ((,classTC (:background ,diff-added-bg))
       (t (:background ,diff-added-bg-tty))))
    `(tempel-form
-     ((,class256 (:background unspecified))))
-
-   ))
+     ((,class256 (:background unspecified))))))
 
 ;;;###autoload
 (when load-file-name
