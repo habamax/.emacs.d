@@ -37,6 +37,7 @@
 (setq compilation-scroll-output t)
 (setq vc-follow-symlinks t)
 (setq tab-bar-show 1)
+(setq bookmark-save-flag 1)
 
 (setq-default abbrev-mode t)
 (quietly-read-abbrev-file (expand-file-name "abbrevs" user-emacs-directory))
