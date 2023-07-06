@@ -258,9 +258,17 @@
                                       (space-mark 32 [183][46])
                                       (space-mark 160 [164][95]))))
 
+(use-package ediff
+  :ensure nil
+  :config
+  (setq ediff-split-window-function 'split-window-horizontally)
+  (setq ediff-window-setup-function 'ediff-setup-windows-plain))
+
 (use-package magit
   :commands (magit-status)
-  :bind ("C-x g" . magit-file-dispatch))
+  :bind ("C-x g" . magit-file-dispatch)
+  :config
+  (setq magit-save-repository-buffers 'dontask))
 
 (use-package corfu
   :init
