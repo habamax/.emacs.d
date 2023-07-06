@@ -58,7 +58,7 @@
       (diff-refine-removed-bg "#6f4f3f")(diff-refine-removed-bg-tty "#870000")
       (diff-removed-fg "#ffd7d7")
       (diff-changed-bg "#4f4f3f")(diff-changed-bg-tty "#5f5f00")
-      (diff-refine-changed-bg "#4f4f3f")(diff-refine-changed-bg-tty "#875f00")
+      (diff-refine-changed-bg "#7f7f5f")(diff-refine-changed-bg-tty "#87875f")
       (diff-changed-fg "#ffffd7"))
 
   (custom-theme-set-faces
