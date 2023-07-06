@@ -650,6 +650,28 @@
    `(magit-log-date
      ((,class256 (:foreground ,darkgrey))))
 
+   ;; ediff
+   `(ediff-current-diff-A
+     ((,classTC (:background ,diff-removed-bg))
+      (t (:background ,diff-removed-bg-tty))))
+   `(ediff-current-diff-B
+     ((,classTC (:background ,diff-added-bg))
+      (t (:background ,diff-added-bg-tty))))
+   `(ediff-fine-diff-A
+     ((,classTC (:background ,diff-refine-removed-bg :foreground ,diff-removed-fg))
+      (t (:background ,diff-refine-removed-bg-tty :foreground ,diff-removed-fg))))
+   `(ediff-fine-diff-B
+     ((,classTC (:background ,diff-refine-added-bg :foreground ,diff-added-fg))
+      (t (:background ,diff-refine-added-bg-tty :foreground ,diff-added-fg))))
+   `(ediff-even-diff-A
+     ((,class256 (:background ,grey2))))
+   `(ediff-even-diff-B
+     ((,class256 (:background ,grey2))))
+   `(ediff-odd-diff-A
+     ((,class256 (:background ,grey2))))
+   `(ediff-odd-diff-B
+     ((,class256 (:background ,grey2))))
+
    ;; smerge
    `(smerge-lower
      ((,classTC (:background ,diff-added-bg))
