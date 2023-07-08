@@ -123,7 +123,7 @@ Otherwise call well known `comment-dwim'"
   "Save region in kill ring if mark is active, save whole line otherwise."
   (interactive)
   (if mark-active
-      (kill-ring-save (region-beginning) (region-end))
+      (kill-ring-save (region-beginning) (region-end) (use-region-p))
     (kill-ring-save (line-beginning-position) (line-beginning-position 2))))
 
 (defun habamax/grep-current-word ()
