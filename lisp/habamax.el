@@ -29,6 +29,13 @@
    (completing-read "Open recent: "
                     (bound-and-true-p recentf-list))))
 
+(defun habamax/toggle-eshell ()
+  "Toggle eshell."
+  (interactive)
+  (if-let (esh-win (get-buffer-window "*eshell*"))
+      (delete-window esh-win)
+    (eshell)))
+
 (defun habamax/toggle-comment (arg)
   "Comment or uncomment current line if mark region is not active.
 Otherwise call well known `comment-dwim'"
