@@ -404,20 +404,6 @@
                  " && chmod +x " (shell-quote-argument file-name)
                  " && " (shell-quote-argument file-name)))))))
 
-(use-package python
-  :ensure nil
-  :bind
-  (:map python-mode-map
-        ("<f5>" . habamax-py/run-file))
-  :config
-  (defun habamax-py/run-file ()
-    "Compile and run single python file"
-    (interactive)
-    (unless (not buffer-file-name)
-      (let ((file-name buffer-file-name))
-        (compile
-         (concat "python " (shell-quote-argument file-name)))))))
-
 (use-package outline
   :ensure nil
   :bind (("<backtab>" . outline-cycle-buffer)
