@@ -172,8 +172,7 @@
   (when +IS-WSL+
     (setq browse-url-firefox-program "firefox.exe"))
   (when (or +IS-WINDOWS+ +IS-WSL+)
-    (setq epa-pinentry-mode 'loopback))
-  (require 'habamax-dev))
+    (setq epa-pinentry-mode 'loopback)))
 
 (use-package dired
   :ensure nil
@@ -367,6 +366,57 @@
   (setq-default sly-symbol-completion-mode nil))
 
 (use-package zig-mode)
+
+(use-package python
+  :ensure nil
+  :bind
+  (:map python-mode-map
+        ("<f5>" . run-py-file))
+  :config
+  (defun run-py-file ()
+    "Compile and run single python file"
+    (interactive)
+    (when-let ((file-name buffer-file-name))
+      (compile
+       (concat "python " (shell-quote-argument file-name))))))
+
+(use-package cc-mode
+  :ensure nil
+  :bind
+  (:map c-mode-map
+        ("<f5>" . run-c-file))
+  :init
+  (add-hook 'c-mode-hook
+            (lambda ()
+              (c-set-style "linux")
+              (setq-local c-basic-offset 4)
+              (c-toggle-comment-style -1)))
+  :config
+  (defun run-c-file ()
+    "Compile and run single c file"
+    (interactive)
+    (unless (or (file-exists-p "makefile")
+                (file-exists-p "Makefile")
+                (not buffer-file-name))
+      (let ((file-name (file-name-sans-extension buffer-file-name)))
+        (compile
+         (concat "make -k " (shell-quote-argument file-name)
+                 " && chmod +x " (shell-quote-argument file-name)
+                 " && " (shell-quote-argument file-name)))))))
+
+(use-package python
+  :ensure nil
+  :bind
+  (:map python-mode-map
+        ("<f5>" . habamax-py/run-file))
+  :config
+  (defun habamax-py/run-file ()
+    "Compile and run single python file"
+    (interactive)
+    (unless (not buffer-file-name)
+      (let ((file-name buffer-file-name))
+        (compile
+         (concat "python " (shell-quote-argument file-name)))))))
 
 (use-package outline
   :ensure nil
