@@ -12,6 +12,12 @@
 (add-hook 'python-mode-hook
           (lambda () (local-set-key [f5] 'habamax-dev/run-python-file)))
 
+(add-hook 'pascal-mode-hook
+          (lambda ()
+            (setq-local pascal-indent-level 4)
+            (local-set-key [f5] 'habamax-dev/run-pascal-file)))
+
+
 (defun habamax-dev/run-c-file ()
   "Compile and run single c file"
   (interactive)
@@ -31,6 +37,16 @@
     (let ((file-name buffer-file-name))
       (compile
        (concat "python " (shell-quote-argument file-name))))))
+
+(defun habamax-dev/run-pascal-file ()
+  "Compile and run single pascal file"
+  (interactive)
+  (when-let* ((file-name buffer-file-name)
+              (prg-name (file-name-sans-extension file-name)))
+    (compile
+     (format "fpc %s && %s"
+             (shell-quote-argument file-name)
+             (shell-quote-argument prg-name)))))
 
 (provide 'habamax-dev)
 ;;; habamax-dev.el ends here
