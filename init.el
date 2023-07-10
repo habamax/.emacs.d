@@ -380,6 +380,23 @@
       (compile
        (concat "python " (shell-quote-argument file-name))))))
 
+(use-package pascal
+  :ensure nil
+  :bind
+  (:map pascal-mode-map
+        ("<f5>" . run-pascal-file))
+  :config
+  (setq-local pascal-indent-level 4)
+  (defun run-pascal-file ()
+    "Compile and run single pascal file"
+    (interactive)
+    (when-let* ((file-name buffer-file-name)
+                (prg-name (file-name-sans-extension file-name)))
+      (compile
+       (format "fpc %s && %s"
+               (shell-quote-argument file-name)
+               (shell-quote-argument prg-name))))))
+
 (use-package cc-mode
   :ensure nil
   :bind
