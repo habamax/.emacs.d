@@ -5,10 +5,21 @@
 (unless +IS-WINDOWS+ (erc-notifications-mode t))
 
 (setq erc-nick '("habamax" "mxmkm")
-      erc-hide-list '("JOIN" "PART" "QUIT")
       erc-join-buffer 'bury
       erc-server-reconnect-attempts 5
       erc-server-reconnect-timeout 3)
+
+(setq erc-hide-list
+      '("JOIN" "PART" "QUIT"
+        "301"                           ; away notice
+        "305"                           ; return from awayness
+        "306"                           ; set awayness
+        "324"                           ; modes
+        "329"                           ; channel creation date
+        "332"                           ; topic notice
+        "333"                           ; who set the topic
+        "353"                           ; Names notice 
+        ))
 
 (setq erc-autojoin-channels-alist
       '(("Libera.Chat"
