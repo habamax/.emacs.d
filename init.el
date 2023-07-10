@@ -285,7 +285,7 @@
     (corfu-popupinfo-mode)))
 
 (use-package corfu-terminal
-  :if (not (display-graphic-p))
+  :unless (display-graphic-p)
   :after corfu
   :init
   (corfu-terminal-mode t)
