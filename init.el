@@ -386,7 +386,7 @@
   (:map pascal-mode-map
         ("<f5>" . run-pascal-file))
   :config
-  (setq-local pascal-indent-level 4)
+  (setq pascal-indent-level 4)
   (defun run-pascal-file ()
     "Compile and run single pascal file"
     (interactive)
