@@ -351,6 +351,8 @@
      ((,class256 (:foreground ,cyan))))
    `(org-verbatim
      ((,class256 (:foreground ,magenta))))
+   `(org-latex-and-related
+     ((,class256 (:foreground ,yellow))))
    `(org-tag
      ((,class256 (:foreground ,darkgrey :weight normal))))
    `(org-block
@@ -908,9 +910,9 @@
 
    ;; orderless
    `(orderless-match-face-0
-     ((,class256 (:foreground ,bright-blue :weight bold))))
+     ((,class256 (:foreground ,bright-red :weight bold))))
    `(orderless-match-face-1
-     ((,class256 (:foreground ,bright-magenta :weight bold))))
+     ((,class256 (:foreground ,bright-blue :weight bold))))
    `(orderless-match-face-2
      ((,class256 (:foreground ,bright-green :weight bold))))
    `(orderless-match-face-3
