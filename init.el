@@ -109,6 +109,8 @@
    ("C-`" . habamax/toggle-eshell)
    ("M-;" . habamax/toggle-comment)
    ("C-^" . habamax/join-line)
+   ("C-c DEL" . kill-backward-up-list)
+   ("C-c C-d" . delete-pair)
    ("M-o" . delete-blank-lines)
    ("M-n" . habamax/move-line-down)
    ("M-p" . habamax/move-line-up)
