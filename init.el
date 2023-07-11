@@ -422,11 +422,6 @@
                  " && chmod +x " (shell-quote-argument file-name)
                  " && " (shell-quote-argument file-name)))))))
 
-(use-package outline
-  :ensure nil
-  :bind (("<backtab>" . outline-cycle-buffer)
-         ("C-c TAB" . outline-cycle)))
-
 (use-package dictionary
   :ensure nil
   :commands dictionary-lookup-definition
