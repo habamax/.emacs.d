@@ -376,9 +376,10 @@
   (defun run-py-file ()
     "Compile and run single python file"
     (interactive)
-    (when-let ((file-name buffer-file-name))
+    (when-let ((file-name buffer-file-name)
+               (python (if (executable-find "python3") "python3" "python")))
       (compile
-       (concat "python " (shell-quote-argument file-name))))))
+       (concat python " " (shell-quote-argument file-name))))))
 
 (use-package pascal
   :ensure nil
