@@ -353,6 +353,7 @@
   (gdscript-eglot-version 3))
 
 (use-package paredit
+  :disabled
   :bind
   (:map paredit-mode-map
         ("M-s")
