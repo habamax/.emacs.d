@@ -479,7 +479,6 @@
 (use-package erc-hl-nicks
   :after erc
   :config
-  (setq erc-hl-nicks-minimum-contrast-ratio 5)
   (add-hook 'wildcharm-hook 'erc-hl-nicks-refresh-colors))
 
 ;;; init.el ends here
