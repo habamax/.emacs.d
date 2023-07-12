@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 
-;;; disable gc for init
 (setq gc-cons-threshold most-positive-fixnum)
 (add-hook
  'after-init-hook
