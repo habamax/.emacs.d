@@ -357,16 +357,6 @@
   :custom
   (gdscript-eglot-version 3))
 
-(use-package paredit
-  :disabled
-  :bind
-  (:map paredit-mode-map
-        ("M-s")
-        ("C-M-j" . paredit-splice-sexp))
-  :hook ((emacs-lisp-mode . paredit-mode)
-         (lisp-mode . paredit-mode)
-         (sly-mrepl-mode . paredit-mode)))
-
 (use-package sly
   :config
   (setq-default sly-symbol-completion-mode nil))
