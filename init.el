@@ -107,6 +107,7 @@
   :bind
   (("C-c o i" . habamax/open-init-file)
    ("C-c o s" . habamax/open-secret-file)
+   ("C-c o f" . habamax/open-filemanager)
    ("C-`" . habamax/toggle-eshell)
    ("M-;" . habamax/toggle-comment)
    ("C-^" . habamax/join-line)

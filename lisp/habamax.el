@@ -167,6 +167,24 @@ Otherwise call well known `comment-dwim'"
       (100 95)(_ 100))
     (set-frame-parameter nil 'alpha-background)))
 
+(defun habamax/open-filemanager ()
+  "Open filemanager for the current file."
+  (interactive)
+  (let ((filename (or (buffer-file-name)
+                      (dired-get-file-for-visit))))
+    (cond
+     ((and +IS-WINDOWS+ filename)
+      (call-process-shell-command
+       (format "explorer.exe /select, \"%s\""
+               (string-replace "/" "\\" filename))))
+     ((and +IS-WSL+ filename) ; TODO: fix for WSL
+      (call-process-shell-command
+       (format "explorer.exe /select, \"%s\""
+               (string-replace "/" "\\" filename))))
+     (filename
+      (call-process-shell-command
+       (format "nautilus --select \"%s\" &" filename))))))
+
 (defun habamax/auth-secret (host)
   "Return secret(password) for specified host from auth-sources."
   (let ((found (nth 0 (auth-source-search :host host :create nil))))
