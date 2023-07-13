@@ -164,7 +164,7 @@ Otherwise call well known `comment-dwim'"
   (interactive)
   (thread-last
     (pcase (frame-parameter nil 'alpha-background)
-      (100 92)(_ 100))
+      (100 95)(_ 100))
     (set-frame-parameter nil 'alpha-background)))
 
 (defun habamax/auth-secret (host)

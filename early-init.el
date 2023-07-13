@@ -19,7 +19,7 @@
 (setq-default
  default-frame-alist
  '((font . "Monospace-18")
-   (alpha-background . 92)
+   (alpha-background . 95)
    (width . 130) (height . 30)
    (fullscreen . maximized)
    (horizontal-scroll-bars . nil)
