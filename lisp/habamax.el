@@ -177,10 +177,12 @@ Otherwise call well known `comment-dwim'"
       (call-process-shell-command
        (format "explorer.exe /select, \"%s\""
                (string-replace "/" "\\" filename))))
-     ((and +IS-WSL+ filename) ; TODO: fix for WSL
+     ((and +IS-WSL+ filename)
       (call-process-shell-command
        (format "explorer.exe /select, \"%s\""
-               (string-replace "/" "\\" filename))))
+               (if (string-match "/mnt/[c-z]/.*" filename)
+                   (string-trim (shell-command-to-string (concat "wslpath -w '" filename "'")))
+                 (string-replace "/" "\\" filename)))))
      (filename
       (call-process-shell-command
        (format "nautilus --select \"%s\" &" filename))))))
