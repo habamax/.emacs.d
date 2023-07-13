@@ -167,8 +167,8 @@ Otherwise call well known `comment-dwim'"
       (100 95)(_ 100))
     (set-frame-parameter nil 'alpha-background)))
 
-(defun habamax/open-filemanager ()
-  "Open filemanager for the current file."
+(defun habamax/open-file-manager ()
+  "Open file-manager for the current file."
   (interactive)
   (let ((filename (or (buffer-file-name)
                       (dired-get-file-for-visit))))
