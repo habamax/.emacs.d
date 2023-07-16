@@ -109,6 +109,7 @@
    ("C-c o s" . habamax/open-secret-file)
    ("C-c o f" . habamax/open-file-manager)
    ("C-`" . habamax/toggle-eshell)
+   ("C-<f1>" . habamax/toggle-eshell)
    ("M-;" . habamax/toggle-comment)
    ("C-^" . habamax/join-line)
    ("C-c DEL" . kill-backward-up-list)
