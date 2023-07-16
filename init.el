@@ -425,6 +425,15 @@
   :config
   (setq dictionary-server "dict.org"))
 
+(use-package eww
+  :ensure nil
+  :bind
+  (:map eww-mode-map
+        ("j" . habamax-eww-jump-to-url-on-page)
+        ("J" . habamax-eww-visit-url-on-page))
+  :config
+  (require 'habamax-eww))
+
 (use-package markdown-mode
   :bind (:map markdown-mode-map
               ("M-n")
