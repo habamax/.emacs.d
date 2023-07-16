@@ -77,7 +77,7 @@
                 (buffer-string))
               "</style>\n"))
 
-(defun habamax-org/open-org-file ()
+(defun habamax-org/open-file ()
   (interactive)
   (let ((default-directory org-directory))
     (project-find-file)))
