@@ -82,6 +82,11 @@
   (let ((default-directory org-directory))
     (project-find-file)))
 
+(defun habamax-org/search ()
+  (interactive)
+  (let ((default-directory org-directory))
+    (consult-ripgrep)))
+
 (defun habamax-org/insert-screenshot ()
   (interactive)
   (let* ((img-dir (concat "img-"

@@ -244,6 +244,7 @@
          ("C-c a" . org-agenda)
          ("C-c l" . org-store-link)
          ("C-c o o" . habamax-org/open-file)
+         ("M-s 1" . habamax-org/search))
   :config
   (define-key org-mode-map (kbd "C-c C-r") verb-command-map)
   (require 'habamax-org))
