@@ -315,7 +315,8 @@
   (add-hook 'text-mode-hook 'tempel-setup-capf))
 
 (use-package iedit
-  :bind (("C-c ;" . iedit-mode)))
+  :bind (("C-c ;" . iedit-mode)
+         ("C-;" . iedit-mode)))
 
 (use-package rainbow-delimiters
   :commands rainbow-delimiters-mode
