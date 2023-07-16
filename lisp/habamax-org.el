@@ -77,15 +77,12 @@
                 (buffer-string))
               "</style>\n"))
 
-(defun org/open-agenda-file ()
+(defun habamax-org/open-org-file ()
   (interactive)
-  (thread-last
-    org-agenda-files
-    (completing-read "Open org file: ")
-    (concat org-directory "/")
-    (find-file)))
+  (let ((default-directory org-directory))
+    (project-find-file)))
 
-(defun org/insert-screenshot ()
+(defun habamax-org/insert-screenshot ()
   (interactive)
   (let* ((img-dir (concat "img-"
                           (file-name-sans-extension (buffer-name))))
