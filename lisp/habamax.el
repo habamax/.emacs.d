@@ -140,7 +140,7 @@ Otherwise call well known `comment-dwim'"
   "Select and insert text file from lorem/ directory located in
 `user-emacs-directory'"
   (interactive)
-  (let ((path (concat user-emacs-directory "lorem/")))
+  (let ((path (locate-user-emacs-file "lorem/")))
     (insert-file-contents
      (concat
       path

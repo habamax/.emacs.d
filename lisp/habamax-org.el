@@ -73,7 +73,7 @@
       (concat "<style type=\"text/css\">\n"
               (with-temp-buffer
                 (insert-file-contents
-                 (concat user-emacs-directory "org/org.css"))
+                 (locate-user-emacs-file "org/org.css"))
                 (buffer-string))
               "</style>\n"))
 

@@ -28,7 +28,7 @@
    (tool-bar-lines . 0)))
 
 (add-to-list 'custom-theme-load-path
-             (expand-file-name "themes/" user-emacs-directory))
+             (locate-user-emacs-file "themes/"))
 (add-to-list 'custom-theme-load-path "~/prj/wildcharm-theme/")
 (with-demoted-errors "Error: %S" (load-theme 'wildcharm t))
 
