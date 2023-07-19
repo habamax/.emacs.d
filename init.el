@@ -365,8 +365,6 @@
   :config
   (setq-default sly-symbol-completion-mode nil))
 
-(use-package zig-mode)
-
 (use-package python
   :ensure nil
   :bind
