@@ -422,12 +422,6 @@
                  " && chmod +x " (shell-quote-argument file-name)
                  " && " (shell-quote-argument file-name)))))))
 
-(use-package dictionary
-  :ensure nil
-  :commands dictionary-lookup-definition
-  :config
-  (setq dictionary-server "dict.org"))
-
 (use-package eww
   :ensure nil
   :bind
