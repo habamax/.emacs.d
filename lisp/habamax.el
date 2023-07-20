@@ -126,6 +126,27 @@ Otherwise call well known `comment-dwim'"
       (kill-ring-save (region-beginning) (region-end) (use-region-p))
     (kill-ring-save (line-beginning-position) (line-beginning-position 2))))
 
+(defun in-string-p ()
+  "True if the parse state is within a double-quote-delimited string."
+  (let ((point (point)))
+     (beginning-of-defun)
+     (and (nth 3 (parse-partial-sexp (point) point))
+          t)))
+
+(defun habamax/slurp-forward ()
+  "Basic implementation of a slurp forward."
+  (interactive)
+  (save-excursion
+    (when (in-string-p)
+      (up-list 1 t))
+    (up-list)
+    (when-let ((close (char-before))
+               (start (point)))
+      (delete-char -1)
+      (forward-sexp)
+      (insert close)
+      (indent-region start (point) nil))))
+
 (defun habamax/grep-current-word ()
   "Search current word using `grep' and `grep-command'"
   (interactive)
