@@ -421,6 +421,10 @@
                  " && chmod +x " (shell-quote-argument file-name)
                  " && " (shell-quote-argument file-name)))))))
 
+(use-package lua-mode
+  :config
+  (setq lua-indent-level 4))
+
 (use-package eww
   :ensure nil
   :bind
