@@ -130,9 +130,9 @@ Otherwise call well known `comment-dwim'"
   "Basic implementation of a slurp forward."
   (interactive)
   (save-excursion
-    (call-interactively #'up-list)
+    (up-list 1 t t)
     (when (char-equal (char-before) ?\")
-      (call-interactively #'up-list))
+      (up-list 1 t t))
     (when-let ((close (char-before))
                (start (point)))
       (delete-char -1)
