@@ -52,7 +52,7 @@
       (hl-line "#3a3a3a")
       (block "#1c1c1c")
       (diff-added-bg "#3f4f3f")(diff-added-bg-tty "#005f00")
-      (diff-refine-added-bg "#3f6f4f")(diff-refine-added-bg-tty "#00875f")
+      (diff-refine-added-bg "#3f6f4f")(diff-refine-added-bg-tty "#005f5f")
       (diff-added-fg "#afffaf")
       (diff-removed-bg "#4f3f3f")(diff-removed-bg-tty "#5f0000")
       (diff-refine-removed-bg "#6f4f3f")(diff-refine-removed-bg-tty "#870000")
@@ -252,6 +252,10 @@
    `(custom-button-mouse
      ((,class256 (:background ,non-text :foreground ,fg :extend t
                               :box (:line-width (2 . 2) :style released-button)))))
+   `(custom-state
+     ((,class256 (:foreground ,green))))
+   `(custom-group-tag
+     ((,class256 (:foreground ,bright-magenta :weight bold))))
    `(widget-field
      ((,class256 (:background ,grey2 :foreground ,fg :extend t))))
    `(widget-inactive
@@ -647,8 +651,13 @@
      ((,class256 (:foreground ,green))))
    `(vc-removed-state
      ((,class256 (:foreground ,bright-red))))
+   `(log-edit-header
+     ((,class256 (:foreground ,bright-magenta :weight bold))))
    `(log-edit-summary
      ((,class256 (:foreground ,white :weight bold))))
+   `(log-edit-headers-separator
+     ((,classTC (:background ,darkgrey :height 0.1 :extend t))
+      (,class256 (:background unspecified))))
    `(log-view-message
      ((,class256 (:foreground ,darkgrey))))
    `(log-view-commit-body
