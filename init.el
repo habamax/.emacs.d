@@ -425,6 +425,8 @@
   :config
   (setq lua-indent-level 4))
 
+(use-package fennel-mode)
+
 (use-package eww
   :ensure nil
   :bind
