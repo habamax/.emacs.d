@@ -364,7 +364,8 @@
 
 (use-package sly
   :config
-  (setq-default sly-symbol-completion-mode nil))
+  (setq-default sly-symbol-completion-mode nil)
+  (setq inferior-lisp-program "sbcl"))
 
 (use-package python
   :ensure nil
