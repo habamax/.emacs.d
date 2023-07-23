@@ -40,6 +40,10 @@
 (setq tab-bar-show 1)
 (setq bookmark-save-flag 1)
 
+(setq completion-auto-select 'second-tab
+      completion-auto-wrap t
+      completions-max-height 20)
+
 (setq-default abbrev-mode t)
 (quietly-read-abbrev-file (locate-user-emacs-file "abbrevs"))
 
