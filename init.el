@@ -315,9 +315,10 @@
          ("M-+" . tempel-insert))
   :init
   (defun tempel-setup-capf ()
-    (setq completion-at-point-functions
-          (cons #'tempel-expand
-                completion-at-point-functions)))
+    (setq-local completion-at-point-functions
+                (cons #'tempel-expand
+                      completion-at-point-functions)))
+  (add-hook 'sly-mode-hook 'tempel-setup-capf)
   (add-hook 'prog-mode-hook 'tempel-setup-capf)
   (add-hook 'text-mode-hook 'tempel-setup-capf))
 
