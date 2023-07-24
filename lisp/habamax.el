@@ -178,7 +178,7 @@ Otherwise call well known `comment-dwim'"
   (interactive)
   (thread-last
     (pcase (frame-parameter nil 'alpha-background)
-      (100 90)(_ 100))
+      (90 100)(_ 90))
     (set-frame-parameter nil 'alpha-background)))
 
 (defun habamax/open-file-manager ()
