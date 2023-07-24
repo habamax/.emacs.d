@@ -643,8 +643,8 @@
    `(log-edit-summary
      ((,class256 (:foreground ,black :weight bold))))
    `(log-edit-headers-separator
-      ((,classTTY (:background unspecified))
-       (,classTC (:background ,grey :height 0.1 :extend t))))
+     ((,classTC (:background ,grey :height 0.1 :extend t))
+      (,class256 (:background unspecified))))
    `(log-view-message
      ((,class256 (:foreground ,darkgrey))))
    `(log-view-commit-body
@@ -1010,8 +1010,12 @@
 
    ;; sly
    `(sly-mrepl-output-face
-     ((,class256 (:foreground ,cyan))))
-
+     ((,class256 (:foreground ,fg))))
+   `(sly-mrepl-note-face
+     ((,class256 (:foreground ,yellow))))
+   `(sly-action-face
+     ((,class256 (:foreground ,bright-blue :weight bold))))
+   
    ;; corfu
    `(corfu-default
      ((,class256 (:background ,grey3))))
