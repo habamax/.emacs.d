@@ -370,7 +370,9 @@
 (use-package sly
   :config
   (setq-default sly-symbol-completion-mode nil)
-  (setq inferior-lisp-program "sbcl"))
+  (setq sly-lisp-implementations
+        '((sbcl ("sbcl") :coding-system utf-8-unix)))
+  (setq sly-default-lisp 'sbcl))
 
 (use-package python
   :ensure nil
