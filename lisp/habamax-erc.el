@@ -23,8 +23,8 @@
 
 (setq erc-autojoin-channels-alist
       '(("Libera.Chat"
-         "#emacs" "#vim"
-         "#python" "#commonlisp")))
+         "#emacs" "#vim" "#python" "#fennel"
+         "#lispgames" "#commonlisp")))
 
 (setq erc-kill-queries-on-quit t
       erc-kill-server-buffer-on-quit t)
