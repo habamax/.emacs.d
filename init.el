@@ -190,6 +190,7 @@
               ("b" . dired-up-directory))
   :hook (dired-mode . dired-hide-details-mode)
   :config
+  (setq dired-jump-map nil)
   (setq ls-lisp-dirs-first t)
   (setq dired-kill-when-opening-new-dired-buffer t)
   (setq dired-listing-switches "-lAhv --group-directories-first"
