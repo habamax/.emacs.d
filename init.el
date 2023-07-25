@@ -1,8 +1,6 @@
 ;;; init.el --- emacs init file -*- lexical-binding: t; -*-
 ;;; Commentary:
-;;
 ;; Maxim Kim <habamax@gmail.com>
-;;
 ;;; Code:
 
 (add-hook 'emacs-startup-hook (lambda () (message "%s" (emacs-init-time))))
