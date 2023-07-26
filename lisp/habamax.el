@@ -29,6 +29,11 @@
    (completing-read "Open recent: "
                     (bound-and-true-p recentf-list))))
 
+(defun habamax/open-scratch ()
+  "Open *scratch* buffer."
+  (interactive)
+  (switch-to-buffer (get-scratch-buffer-create)))
+
 (defun habamax/toggle-eshell ()
   "Toggle eshell."
   (interactive)
