@@ -426,6 +426,8 @@
      ((,class256 (:foreground ,green :weight bold))))
    `(org-date
      ((,class256 (:foreground ,darkgrey))))
+   `(org-sexp-date
+     ((,class256 (:foreground ,cyan))))
    `(org-headline-done
      ((,class256 (:foreground unspecified))))
    `(org-checkbox
@@ -801,6 +803,10 @@
      ((t (:background ,red :foreground ,black))))
 
    ;; epa
+   `(epa-mark
+     ((,class256 (:foreground ,bright-red :weight bold))))
+   `(epa-string
+     ((,class256 (:foreground ,bright-green))))
    `(epa-validity-high
      ((,class256 (:foreground ,bright-green :weight bold))))
    `(epa-validity-medium
