@@ -323,7 +323,14 @@
 
 (use-package iedit
   :bind (("C-c ;" . iedit-mode)
-         ("C-;" . iedit-mode)))
+         ("C-;" . iedit-mode)
+         ("M-n" . habamax-iedit-dwim)
+         ("M-p" . habamax-iedit-dwim))
+  :config
+  (defun habamax-iedit-dwim ()
+    "Select a single thing for iedit-mode."
+    (interactive)
+    (iedit-mode 1)))
 
 (use-package rainbow-delimiters
   :commands rainbow-delimiters-mode
