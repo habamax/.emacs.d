@@ -59,40 +59,6 @@ Otherwise call well known `comment-dwim'"
   (interactive)
   (delete-indentation 1))
 
-(defun habamax/move-text (arg)
-  "Move region or line up/down depending on arg."
-  (cond
-   ((and mark-active transient-mark-mode)
-    (if (> (point) (mark))
-        (exchange-point-and-mark))
-    (let ((column (current-column))
-          (text (delete-and-extract-region (point) (mark))))
-      (forward-line arg)
-      (move-to-column column t)
-      (set-mark (point))
-      (insert text)
-      (exchange-point-and-mark)
-      (setq deactivate-mark nil)))
-   (t
-    (let ((column (current-column)))
-      (beginning-of-line)
-      (when (or (> arg 0) (not (bobp)))
-        (forward-line)
-        (when (or (< arg 0) (not (eobp)))
-          (transpose-lines arg))
-        (forward-line -1))
-      (move-to-column column t)))))
-
-(defun habamax/move-line-up (arg)
-  "Move up region/line."
-  (interactive "*p")
-  (habamax/move-text (- arg)))
-
-(defun habamax/move-line-down (arg)
-  "Move down region/line."
-  (interactive "*p")
-  (habamax/move-text arg))
-
 (defun habamax/next-buffer-like-this ()
   "Open next buffer with the same major mode as current."
   (interactive)

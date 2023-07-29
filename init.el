@@ -119,8 +119,6 @@
    ("C-c DEL" . kill-backward-up-list)
    ("C-c C-d" . delete-pair)
    ("M-o" . delete-blank-lines)
-   ("M-n" . habamax/move-line-down)
-   ("M-p" . habamax/move-line-up)
    ("C-w" . habamax/kill-region)
    ("M-w" . habamax/kill-ring-save)
    ("C-c b" . habamax/next-buffer-like-this)
