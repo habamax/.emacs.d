@@ -22,13 +22,6 @@
       (concat ".gpg")
       (find-file))))
 
-(defun habamax/open-recent-file ()
-  "Select and open recent file."
-  (interactive)
-  (find-file
-   (completing-read "Open recent: "
-                    (bound-and-true-p recentf-list))))
-
 (defun habamax/toggle-eshell ()
   "Toggle eshell."
   (interactive)
