@@ -68,6 +68,7 @@
 (save-place-mode 1)
 (savehist-mode 1)
 (repeat-mode t)
+(pixel-scroll-precision-mode 1)
 
 ;; terminal truncate/wrap symbols
 (set-display-table-slot standard-display-table
