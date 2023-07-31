@@ -206,7 +206,7 @@
    `(font-lock-number-face
      ((,class256 (:foreground ,red))))   
    `(font-lock-comment-face
-     ((,class256 (:foreground ,comment))))
+     ((,class256 (:foreground ,blue))))
    `(font-lock-keyword-face
      ((,class256 (:foreground ,white :weight bold))))
    `(font-lock-preprocessor-face
