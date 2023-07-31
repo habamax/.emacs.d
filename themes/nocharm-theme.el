@@ -214,7 +214,7 @@
    `(font-lock-builtin-face
      ((,class256 (:foreground unspecified))))
    `(font-lock-type-face
-     ((,class256 (:foreground unspecified))))
+     ((,class256 (:foreground ,white :weight bold))))
    `(font-lock-function-name-face
      ((,class256 (:foreground unspecified))))
    `(font-lock-function-call-face
@@ -225,6 +225,8 @@
      ((,class256 (:foreground unspecified))))
    `(font-lock-constant-face
      ((,class256 (:foreground unspecified))))
+   `(font-lock-escape-face
+     ((,class256 (:foreground ,purple))))
    `(font-lock-warning-face
      ((,class256 (:foreground ,yellow :weight bold))))
 
