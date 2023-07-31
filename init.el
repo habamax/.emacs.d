@@ -102,8 +102,7 @@
 (when (treesit-language-available-p 'c)
   (add-to-list 'major-mode-remap-alist '(c-mode . c-ts-mode))
   (add-to-list 'major-mode-remap-alist '(c++-mode . c++-ts-mode))
-  (add-to-list 'major-mode-remap-alist
-               '(c-or-c++-mode . c-or-c++-ts-mode)))
+  (add-to-list 'major-mode-remap-alist '(c-or-c++-mode . c-or-c++-ts-mode)))
 
 ;; packages
 (add-to-list 'package-archives
