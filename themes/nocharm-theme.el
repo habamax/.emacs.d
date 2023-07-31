@@ -283,9 +283,9 @@
 
    ;; dired
    `(dired-header
-     ((,class256 (:foreground ,white :weight bold))))
+     ((,class256 (:foreground ,bright-blue :weight bold))))
    `(dired-directory
-     ((,class256 (:foreground ,darkgrey :weight bold))))
+     ((,class256 (:foreground ,white :weight bold))))
    `(dired-symlink
      ((,class256 (:foreground ,cyan :weight bold :inherit nil))))
    `(dired-broken-symlink
