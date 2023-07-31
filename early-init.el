@@ -27,5 +27,5 @@
 
 (add-to-list 'custom-theme-load-path (locate-user-emacs-file "themes/"))
 (add-to-list 'custom-theme-load-path "~/prj/wildcharm-theme/")
-(ignore-errors (load-theme 'wildcharm t))
+(ignore-errors (load-theme 'nocharm t))
 ;;; early-init.el ends here
