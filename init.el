@@ -96,6 +96,15 @@
          (side . right)
          (slot . -1))))
 
+;; treesitter
+(when (treesit-language-available-p 'python)
+  (add-to-list 'major-mode-remap-alist '(python-mode . python-ts-mode)))
+(when (treesit-language-available-p 'c)
+  (add-to-list 'major-mode-remap-alist '(c-mode . c-ts-mode))
+  (add-to-list 'major-mode-remap-alist '(c++-mode . c++-ts-mode))
+  (add-to-list 'major-mode-remap-alist
+               '(c-or-c++-mode . c-or-c++-ts-mode)))
+
 ;; packages
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") 'append)
