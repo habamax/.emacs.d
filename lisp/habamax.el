@@ -129,7 +129,7 @@ Otherwise call well known `comment-dwim'"
   (let ((theme (car custom-enabled-themes)))
     (dolist (loaded-theme custom-enabled-themes)
       (disable-theme loaded-theme))
-    (load-theme (if (eq theme 'wildcharm) 'wildcharm-light 'wildcharm) t))
+    (load-theme (if (eq theme 'nocharm) 'nocharm-light 'nocharm) t))
   (run-hooks 'wildcharm-hook))
 
 (defun habamax/toggle-alpha ()
