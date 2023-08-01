@@ -425,29 +425,19 @@
                (shell-quote-argument file-name)
                (shell-quote-argument prg-name))))))
 
-(use-package cc-mode
+(use-package c-mode
   :ensure nil
-  :bind
-  (:map c-mode-map
-        ("<f5>" . run-c-file))
   :init
   (add-hook 'c-mode-hook
             (lambda ()
               (c-set-style "linux")
               (setq-local c-basic-offset 4)
               (c-toggle-comment-style -1)))
-  :config
-  (defun run-c-file ()
-    "Compile and run single c file"
-    (interactive)
-    (unless (or (file-exists-p "makefile")
-                (file-exists-p "Makefile")
-                (not buffer-file-name))
-      (let ((file-name (file-name-sans-extension buffer-file-name)))
-        (compile
-         (concat "make -k " (shell-quote-argument file-name)
-                 " && chmod +x " (shell-quote-argument file-name)
-                 " && " (shell-quote-argument file-name)))))))
+  (add-hook 'c-ts-mode-hook
+            (lambda ()
+              (setq-local c-ts-mode-indent-style 'linux)
+              (setq-local c-ts-mode-indent-offset 4)
+              (c-ts-mode-toggle-comment-style -1))))
 
 (use-package lua-mode
   :config
