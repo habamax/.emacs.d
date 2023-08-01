@@ -98,15 +98,17 @@
 
 ;; treesitter
 (when (treesit-available-p)
-  (when (treesit-language-available-p 'python)
-    (add-to-list 'major-mode-remap-alist '(python-mode . python-ts-mode)))
-  (when (treesit-language-available-p 'c)
-    (add-to-list 'major-mode-remap-alist '(c-mode . c-ts-mode)))
-  (when (treesit-language-available-p 'cpp)
-    (add-to-list 'major-mode-remap-alist '(c++-mode . c++-ts-mode)))
-  (when (and (treesit-language-available-p 'c)
-             (treesit-language-available-p 'cpp))
-    (add-to-list 'major-mode-remap-alist '(c-or-c++-mode . c-or-c++-ts-mode))))
+  (setq major-mode-remap-alist
+        '((yaml-mode . yaml-ts-mode)
+          (c-mode . c-ts-mode)
+          (c++-mode . c++-ts-mode)
+          (c-or-c++-mode . c-or-c++-ts-mode)
+          (js2-mode . js-ts-mode)
+          (typescript-mode . typescript-ts-mode)
+          (json-mode . json-ts-mode)
+          (css-mode . css-ts-mode)
+          (python-mode . python-ts-mode)
+          (gdscript-mode . gdscript-ts-mode))))
 
 ;; packages
 (add-to-list 'package-archives
