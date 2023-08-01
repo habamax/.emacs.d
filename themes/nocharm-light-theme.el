@@ -198,7 +198,7 @@
    `(font-lock-number-face
      ((,class256 (:foreground ,red))))   
    `(font-lock-comment-face
-     ((,class256 (:foreground ,blue))))
+     ((,class256 (:foreground ,bright-blue))))
    `(font-lock-keyword-face
      ((,class256 (:foreground ,black :weight bold))))
    `(font-lock-preprocessor-face
@@ -1031,7 +1031,7 @@
 
    ;; verb (org based restclient)
    `(verb-http-keyword
-     ((,class256 (:foreground ,blue))))
+     ((,class256 (:foreground ,magenta :weight bold))))
    `(verb-header
      ((,class256 (:foreground ,yellow))))
    `(verb-code-tag
@@ -1059,21 +1059,21 @@
    `(rainbow-delimiters-depth-1-face
      ((,class256 (:foreground ,fg))))
    `(rainbow-delimiters-depth-2-face
-     ((,class256 (:foreground ,blue))))
-   `(rainbow-delimiters-depth-3-face
      ((,class256 (:foreground ,yellow))))
+   `(rainbow-delimiters-depth-3-face
+     ((,class256 (:foreground ,blue))))
    `(rainbow-delimiters-depth-4-face
-     ((,class256 (:foreground ,cyan))))
-   `(rainbow-delimiters-depth-5-face
      ((,class256 (:foreground ,magenta))))
+   `(rainbow-delimiters-depth-5-face
+     ((,class256 (:foreground ,cyan))))
    `(rainbow-delimiters-depth-6-face
-     ((,class256 (:foreground ,bright-blue))))
-   `(rainbow-delimiters-depth-7-face
      ((,class256 (:foreground ,red))))
+   `(rainbow-delimiters-depth-7-face
+     ((,class256 (:foreground ,bright-blue))))
    `(rainbow-delimiters-depth-8-face
-     ((,class256 (:foreground ,bright-cyan))))
-   `(rainbow-delimiters-depth-9-face
      ((,class256 (:foreground ,bright-yellow))))
+   `(rainbow-delimiters-depth-9-face
+     ((,class256 (:foreground ,bright-cyan))))
 
    ;; rst
    `(rst-level-1
