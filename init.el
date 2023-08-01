@@ -98,7 +98,7 @@
 
 ;; treesitter
 (when (treesit-available-p)
-  (setq treesit-font-lock-level 2)
+  (setq treesit-font-lock-level 3)
   (setq major-mode-remap-alist
         '((yaml-mode . yaml-ts-mode)
           (c-mode . c-ts-mode)
