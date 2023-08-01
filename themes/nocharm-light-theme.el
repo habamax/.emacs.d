@@ -3,7 +3,7 @@
 ;; Author: Maxim Kim <habamax@gmail.com>
 ;; URL: https://github.com/habamax/nocharm-theme
 ;; Package-Requires: ((emacs "24.1"))
-;; Package-Version: 0.4
+;; Package-Version: 0.1
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,12 +20,12 @@
 
 ;;; Commentary:
 
-;; High-contrast light Emacs theme.
-;; - Should look mostly the same in GUI and TUI with 256 colors support.
+;; Light Emacs theme with less syntax highlighting.
+
 
 ;;; Code:
 
-(deftheme nocharm-light "High-contrast light Emacs theme.")
+(deftheme nocharm-light "No charm light Emacs theme.")
 
 (let ((classTC '((class color) (min-colors 257)))
       (class256 '((class color) (min-colors 256)))
