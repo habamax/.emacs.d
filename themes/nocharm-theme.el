@@ -200,9 +200,9 @@
 
    ;; font-lock
    `(font-lock-string-face
-     ((,class256 (:foreground ,green))))
+     ((,class256 (:foreground ,bright-green))))
    `(font-lock-number-face
-     ((,class256 (:foreground ,red))))   
+     ((,class256 (:foreground ,bright-red))))   
    `(font-lock-comment-face
      ((,class256 (:foreground ,blue))))
    `(font-lock-keyword-face
