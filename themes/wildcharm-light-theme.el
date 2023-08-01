@@ -213,9 +213,9 @@
    `(font-lock-function-call-face
      ((,class256 (:foreground ,magenta))))
    `(font-lock-variable-name-face
-     ((,class256 (:foreground ,cyan))))
+     ((,class256 (:foreground ,bright-cyan))))
    `(font-lock-property-use-face
-     ((,class256 (:foreground ,fg))))
+     ((,class256 (:foreground ,cyan))))
    `(font-lock-constant-face
      ((,class256 (:foreground ,red))))
    `(font-lock-warning-face
@@ -812,6 +812,10 @@
    `(flymake-warning
      ((,classTTY (:inherit warning :underline t))
       (t (:underline (:style wave :color ,bright-yellow)))))
+
+   ;; eglot
+   `(eglot-highlight-symbol-face
+     ((,class256 (:background ,match))))
 
    ;; erc
    `(erc-timestamp-face
