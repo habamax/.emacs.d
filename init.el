@@ -96,20 +96,6 @@
          (side . right)
          (slot . -1))))
 
-;; treesitter
-(when (treesit-available-p)
-  (setq treesit-font-lock-level 3)
-  (setq major-mode-remap-alist
-        '((yaml-mode . yaml-ts-mode)
-          (c-mode . c-ts-mode)
-          (c++-mode . c++-ts-mode)
-          (c-or-c++-mode . c-or-c++-ts-mode)
-          (javascript-mode . js-ts-mode)
-          (js-json-mode . json-ts-mode)
-          (css-mode . css-ts-mode)
-          (python-mode . python-ts-mode)
-          (gdscript-mode . gdscript-ts-mode))))
-
 ;; packages
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") 'append)
@@ -378,6 +364,22 @@
 (use-package eglot
   :commands eglot)
 
+(use-package treesit
+  :ensure nil
+  :when (treesit-available-p)
+  :init
+  (setq treesit-font-lock-level 3)  
+  (setq major-mode-remap-alist
+        '((yaml-mode . yaml-ts-mode)
+          (c-mode . c-ts-mode)
+          (c++-mode . c++-ts-mode)
+          (c-or-c++-mode . c-or-c++-ts-mode)
+          (javascript-mode . js-ts-mode)
+          (js-json-mode . json-ts-mode)
+          (css-mode . css-ts-mode)
+          (python-mode . python-ts-mode)
+          (gdscript-mode . gdscript-ts-mode))))
+
 (use-package devdocs
   :bind (("C-h D" . devdocs-lookup)))
 
@@ -405,9 +407,10 @@
 
 (use-package python
   :ensure nil
-  :bind
-  (:map python-mode-map
-        ("<f5>" . run-py-file))
+  :bind (:map python-mode-map
+              ("<f5>" . run-py-file)
+              :map python-ts-mode-map
+              ("<f5>" . run-py-file))
   :config
   (defun run-py-file ()
     "Compile and run single python file"
@@ -434,19 +437,23 @@
                (shell-quote-argument file-name)
                (shell-quote-argument prg-name))))))
 
-(use-package c-mode
+(use-package c-ts-mode
+  :ensure nil
+  :init
+  (add-hook 'c-ts-mode-hook
+            (lambda ()
+              (setq-local c-ts-mode-indent-style 'linux)
+              (setq-local c-ts-mode-indent-offset 4)
+              (c-ts-mode-toggle-comment-style -1))))
+
+(use-package cc-mode
   :ensure nil
   :init
   (add-hook 'c-mode-hook
             (lambda ()
               (c-set-style "linux")
               (setq-local c-basic-offset 4)
-              (c-toggle-comment-style -1)))
-  (add-hook 'c-ts-mode-hook
-            (lambda ()
-              (setq-local c-ts-mode-indent-style 'linux)
-              (setq-local c-ts-mode-indent-offset 4)
-              (c-ts-mode-toggle-comment-style -1))))
+              (c-toggle-comment-style -1))))
 
 (use-package lua-mode
   :config
