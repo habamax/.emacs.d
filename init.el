@@ -256,6 +256,12 @@
    consult-theme
    :preview-key '(:debounce 0.4 any)))
 
+(use-package embark
+  :bind (("C-." . embark-act)
+         ("M-." . embark-dwim)))
+
+(use-package embark-consult)
+
 (use-package org
   :ensure nil
   :commands (org)
