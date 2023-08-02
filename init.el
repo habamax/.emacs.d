@@ -261,8 +261,6 @@
          ("C-." . embark-act)
          ("M-." . embark-dwim)))
 
-(use-package embark-consult)
-
 (use-package org
   :ensure nil
   :commands (org)
