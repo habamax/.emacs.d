@@ -279,7 +279,10 @@
 
 (use-package verb
   :config
-  (setq verb-auto-kill-response-buffers t))
+  (setq verb-auto-kill-response-buffers t)
+  (when (and (treesit-available-p)
+             (treesit-language-available-p 'json))
+    (setq verb-json-use-mode 'json-ts-mode)))
 
 (use-package whitespace
   :ensure nil
