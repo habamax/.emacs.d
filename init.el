@@ -511,6 +511,8 @@
 
 (use-package erc-hl-nicks
   :after erc
+  :custom
+  (erc-hl-nicks-skip-nicks '("habamax"))
   :config
   (add-hook 'wildcharm-hook 'erc-hl-nicks-refresh-colors))
 
