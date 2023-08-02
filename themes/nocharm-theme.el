@@ -1028,6 +1028,38 @@
      ((,class256 (:foreground ,cyan))))
    `(marginalia-date
      ((,class256 (:foreground ,darkgrey))))
+   `(marginalia-size
+     ((,class256 (:foreground ,bright-red))))
+   `(marginalia-key
+     ((,class256 (:foreground ,bright-cyan))))
+   `(marginalia-char
+     ((,class256 (:foreground ,bright-cyan))))
+   `(marginalia-list
+     ((,class256 (:foreground ,bright-red))))
+   `(marginalia-mode
+     ((,class256 (:foreground ,bright-cyan))))
+   `(marginalia-null
+     ((,class256 (:foreground ,non-text))))
+   `(marginalia-true
+     ((,class256 (:foreground ,bright-magenta))))
+   `(marginalia-type
+     ((,class256 (:foreground ,bright-cyan))))
+   `(marginalia-value
+     ((,class256 (:foreground ,bright-cyan))))
+   `(marginalia-number
+     ((,class256 (:foreground ,bright-red))))
+   `(marginalia-string
+     ((,class256 (:foreground ,bright-green))))
+   `(marginalia-symbol
+     ((,class256 (:foreground ,bright-yellow))))
+   `(marginalia-file-owner
+     ((,class256 (:foreground ,purple))))
+   `(marginalia-file-priv-no
+     ((,class256 (:foreground ,non-text))))
+   `(marginalia-file-priv-dir
+     ((,class256 (:foreground unspecified :weight bold))))
+   `(marginalia-file-priv-read
+     ((,class256 (:foreground unspecified))))
 
    ;; consult
    `(consult-file
