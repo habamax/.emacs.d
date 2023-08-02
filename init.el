@@ -257,7 +257,7 @@
    :preview-key '(:debounce 0.4 any)))
 
 (use-package embark
-  :bind (("C-c ." . embark-act)
+  :bind (("C-c RET" . embark-act)
          ("C-." . embark-act)
          ("M-." . embark-dwim)))
 
