@@ -25,6 +25,7 @@
 (setq-default fill-column 80
               display-fill-column-indicator-character ?╎)
 (setq sentence-end-double-space nil)
+(setq duplicate-line-final-position -1)
 (setq-default indent-tabs-mode nil)
 (setq-default isearch-lazy-count t)
 (setq search-whitespace-regexp ".*?")
