@@ -185,7 +185,9 @@
           #'(lambda (theme)
               (when (and (eq theme 'wildcharm-light)
                          (display-graphic-p))
-                (set-face-attribute 'default nil :background "#fcfcf7")))))
+                (set-face-attribute 'default
+                                    (selected-frame)
+                                    :background "#fcfcf7")))))
 
 (use-package dired
   :ensure nil
