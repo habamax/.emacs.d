@@ -362,7 +362,7 @@
   :ensure nil
   :when (treesit-available-p)
   :init
-  (setq treesit-font-lock-level 3)  
+  (setq treesit-font-lock-level 3)
   (setq major-mode-remap-alist
         '((yaml-mode . yaml-ts-mode)
           (c-mode . c-ts-mode)
