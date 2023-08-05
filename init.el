@@ -481,6 +481,35 @@
   (setq markdown-command
         "pandoc -s -M fontsize=18pt -M maxwidth=60em --highlight-style tango"))
 
+(use-package gnus
+  :ensure nil
+  :commands gnus
+  :config
+  (setq gnus-select-method
+        '(nnimap "gmail"
+                 (nnimap-address "imap.gmail.com")
+                 (nnimap-server-port 993)
+                 (nnimap-stream ssl)
+                 (nnmail-expiry-wait immediate)))
+  (setq nnmail-expiry-target "nnimap+gmail:[Gmail]/Trash"
+        nnmail-expiry-wait 'immediate)
+  (setq gnus-secondary-select-methods
+        '((nntp "news.gwene.org")))
+  (setq
+   gnus-summary-line-format "%U%R%z %&user-date; ╎ %(%-23,23f%) ╎ %B%S\n"
+   gnus-user-date-format-alist '((t . "%Y-%m-%d %H:%M"))
+   gnus-summary-thread-gathering-function 'gnus-gather-threads-by-references
+   gnus-thread-sort-functions '((not gnus-thread-sort-by-number))
+   gnus-sum-thread-tree-false-root ""
+   gnus-sum-thread-tree-indent " "
+   gnus-sum-thread-tree-leaf-with-other "├► "
+   gnus-sum-thread-tree-root ""
+   gnus-sum-thread-tree-single-leaf "╰► "
+   gnus-sum-thread-tree-vertical "│")
+  (setq gnus-list-groups-with-ticked-articles nil)
+  (setq gnus-group-mode-line-format "%%b")
+  (add-hook 'gnus-group-mode-hook 'gnus-topic-mode))
+
 (use-package notmuch
   :ensure nil
   :if (executable-find "notmuch")
