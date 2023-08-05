@@ -238,9 +238,9 @@
    `(font-lock-function-call-face
      ((,class256 (:foreground ,magenta))))
    `(font-lock-variable-name-face
-     ((,class256 (:foreground ,bright-cyan))))
-   `(font-lock-property-use-face
      ((,class256 (:foreground ,cyan))))
+   `(font-lock-property-use-face
+     ((,class256 (:foreground ,fg))))
    `(font-lock-constant-face
      ((,class256 (:foreground ,bright-red))))
    `(font-lock-escape-face
@@ -778,7 +778,25 @@
      ((,class256 (:background ,grey1 :foreground ,white))))
    `(magit-blame-highlight
      ((,class256 (:background ,grey1 :foreground ,white))))
-
+   `(magit-reflog-amend
+     ((,class256 (:foreground ,magenta))))
+   `(magit-reflog-merge
+     ((,class256 (:foreground ,green))))
+   `(magit-reflog-other
+     ((,class256 (:foreground ,cyan))))
+   `(magit-reflog-reset
+     ((,class256 (:foreground ,red))))
+   `(magit-reflog-commit
+     ((,class256 (:foreground ,green))))
+   `(magit-reflog-rebase
+     ((,class256 (:foreground ,magenta))))
+   `(magit-reflog-remote
+     ((,class256 (:foreground ,cyan))))
+   `(magit-reflog-checkout
+     ((,class256 (:foreground ,blue))))
+   `(magit-reflog-cherry-pick
+     ((,class256 (:foreground ,green))))
+    
    ;; ediff
    `(ediff-current-diff-A
      ((,classTC (:background ,diff-removed-bg))
