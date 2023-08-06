@@ -155,6 +155,8 @@
    ("C-c SPC SPC" . delete-trailing-whitespace)
    ("C-c SPC u" . revert-buffer)
    ("M-`" . other-frame)
+   ("M-N" . habamax/move-line-down)
+   ("M-P" . habamax/move-line-up)
    :repeat-map habamax-other-frame-repeat-map
    ("o" . other-frame)
    :repeat-map habamax-winner-repeat-map
