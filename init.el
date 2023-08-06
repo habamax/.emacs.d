@@ -489,9 +489,9 @@
         '(nnimap "gmail"
                  (nnimap-address "imap.gmail.com")
                  (nnimap-server-port 993)
-                 (nnimap-stream ssl)))
-  (setq nnmail-expiry-target "nnimap+gmail:[Gmail]/Trash"
-        nnmail-expiry-wait 'immediate)
+                 (nnimap-stream ssl)
+                 (nnmail-expiry-target "nnimap+gmail:[Gmail]/Trash")
+                 (nnmail-expiry-wait immediate)))
   (setq gnus-secondary-select-methods
         '((nntp "news.gmane.io")))
   (setq
