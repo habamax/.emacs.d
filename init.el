@@ -496,7 +496,7 @@
   (setq nnmail-expiry-target "nnimap+gmail:[Gmail]/Trash"
         nnmail-expiry-wait 'immediate)
   (setq gnus-secondary-select-methods
-        '((nntp "news.gwene.org")))
+        '((nntp "news.gmane.io")))
   (setq
    gnus-summary-line-format "%U%R%z %&user-date; ╎ %(%-23,23f%) ╎ %B%S\n"
    gnus-user-date-format-alist '((t . "%Y-%m-%d %H:%M"))
