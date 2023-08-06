@@ -99,25 +99,6 @@ Otherwise call well known `comment-dwim'"
       (insert close)
       (indent-region start (point) nil))))
 
-(defun habamax/move-line-up ()
-  "Move up current line."
-  (interactive)
-  (let ((column (current-column)))
-    (transpose-lines 1)
-    (previous-line 2)
-    (move-to-column column t)
-    (indent-according-to-mode)))
-
-(defun habamax/move-line-down ()
-  "Move down current line."
-  (interactive)
-  (let ((column (current-column)))
-    (next-line)
-    (transpose-lines 1)
-    (previous-line)
-    (move-to-column column t)
-    (indent-according-to-mode)))
-
 (defun habamax/grep-current-word ()
   "Search current word using `grep' and `grep-command'"
   (interactive)
