@@ -410,8 +410,7 @@
     (interactive)
     (when-let ((file-name buffer-file-name)
                (python (if (executable-find "python3") "python3" "python")))
-      (compile
-       (concat python " " (shell-quote-argument file-name))))))
+      (compile (concat python " " (shell-quote-argument file-name))))))
 
 (use-package pascal
   :ensure nil
