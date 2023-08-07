@@ -12,6 +12,7 @@
                    fonts))
             (name (format "%s-%s" (car font) (cdr font))))
   (add-to-list 'default-frame-alist `(font . ,name))
+  (set-face-attribute 'variable-pitch nil :font name)
   (set-face-attribute 'fixed-pitch nil :font name)
   (set-face-attribute 'fixed-pitch-serif nil :font name))
 
