@@ -180,14 +180,7 @@
   (when +IS-WSL+
     (setq browse-url-firefox-program "firefox.exe"))
   (when (or +IS-WINDOWS+ +IS-WSL+)
-    (setq epa-pinentry-mode 'loopback))
-  (add-hook 'enable-theme-functions
-          #'(lambda (theme)
-              (when (and (eq theme 'wildcharm-light)
-                         (display-graphic-p))
-                (set-face-attribute 'default
-                                    (selected-frame)
-                                    :background "#fcfcf7")))))
+    (setq epa-pinentry-mode 'loopback)))
 
 (use-package dired
   :ensure nil
