@@ -1,3 +1,3 @@
 alias ll ls -lah $*
 alias ff find-file $1
-alias wildcharm cp ~/prj/wildcharm-theme/*.el $user-emacs-directory/themes/
+alias wildcharm cp $user-emacs-directory/themes/wildcharm*.el  ~/prj/wildcharm-theme/

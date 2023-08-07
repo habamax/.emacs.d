@@ -1081,6 +1081,16 @@
      ((,class256 (:foreground ,cyan))))
    `(marginalia-date
      ((,class256 (:foreground ,darkgrey))))
+   `(marginalia-file-priv-dir
+     ((,class256 (:foreground unspecified :weight bold))))
+   `(marginalia-file-priv-link
+     ((,class256 (:foreground ,bright-cyan))))
+   `(marginalia-file-priv-read
+     ((,class256 (:foreground ,bright-magenta))))
+   `(marginalia-file-priv-write
+     ((,class256 (:foreground ,bright-blue))))
+   `(marginalia-file-priv-exec
+     ((,class256 (:foreground ,bright-yellow))))
 
    ;; consult
    `(consult-file
