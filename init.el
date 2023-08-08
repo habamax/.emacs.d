@@ -98,9 +98,9 @@
          (slot . -1))))
 
 ;; packages
-(require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/") 'append)
+(with-eval-after-load 'package
+  (add-to-list 'package-archives
+               '("melpa" . "https://melpa.org/packages/") 'append))
 
 (setq package-native-compile t
       native-comp-async-report-warnings-errors nil
