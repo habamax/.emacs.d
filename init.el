@@ -7,7 +7,7 @@
 
 (set-language-environment 'utf-8)
 (setq default-input-method 'russian-computer)
-(setq default-buffer-file-coding-system 'utf-8-unix)
+(setq-default buffer-file-coding-system 'utf-8-unix)
 
 (setq custom-file (make-temp-file "custom-emacs"))
 
