@@ -34,13 +34,12 @@
 Otherwise call well known `comment-dwim'"
   (interactive "*P")
   (comment-normalize-vars)
-  (if (and (not mark-active)
-           (save-excursion (beginning-of-line) (not (looking-at "\\s-*$"))))
-      (progn
-        (comment-or-uncomment-region (line-beginning-position)
-                                     (line-end-position))
-        (forward-line))
-    (comment-dwim arg)))
+  (cond
+   ((use-region-p)
+    (comment-dwim arg))
+   ((save-excursion (beginning-of-line) (not (looking-at "\\s-*$")))
+    (comment-or-uncomment-region (line-beginning-position) (line-end-position))
+    (forward-line))))
 
 (defun habamax/join-line ()
   "Join next line."
