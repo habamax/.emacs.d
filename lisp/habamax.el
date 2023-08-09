@@ -73,14 +73,14 @@ Otherwise call well known `comment-dwim'"
 (defun habamax/kill-region ()
   "Kill region if mark is active, kill whole line otherwise."
   (interactive)
-  (if mark-active
+  (if (use-region-p)
       (kill-region (region-beginning) (region-end) (use-region-p))
     (kill-region (line-beginning-position) (line-beginning-position 2))))
 
 (defun habamax/kill-ring-save ()
   "Save region in kill ring if mark is active, save whole line otherwise."
   (interactive)
-  (if mark-active
+  (if (use-region-p)
       (kill-ring-save (region-beginning) (region-end) (use-region-p))
     (kill-ring-save (line-beginning-position) (line-beginning-position 2))))
 
