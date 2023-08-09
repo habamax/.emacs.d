@@ -37,7 +37,7 @@ Otherwise call well known `comment-dwim'"
   (cond
    ((use-region-p)
     (comment-dwim arg))
-   ((save-excursion (beginning-of-line) (not (looking-at "\\s-*$")))
+   (t
     (comment-or-uncomment-region (line-beginning-position) (line-end-position))
     (forward-line))))
 
