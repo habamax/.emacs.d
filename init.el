@@ -90,12 +90,7 @@
          (display-buffer-in-side-window)
          (window-height . 0.3)
          (side . bottom)
-         (slot . 0))
-        ("\\*Customize .*\\*"
-         (display-buffer-in-side-window)
-         (window-width . 0.3)
-         (side . right)
-         (slot . -1))))
+         (slot . 0))))
 
 ;; packages
 (with-eval-after-load 'package
