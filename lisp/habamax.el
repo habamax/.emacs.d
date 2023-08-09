@@ -125,10 +125,7 @@ Otherwise call well known `comment-dwim'"
 (defun habamax/toggle-bg ()
   "Toggle dark/light wildcharm theme."
   (interactive)
-  (let ((theme (car custom-enabled-themes)))
-    (dolist (loaded-theme custom-enabled-themes)
-      (disable-theme loaded-theme))
-    (load-theme (if (eq theme 'wildcharm) 'wildcharm-light 'wildcharm) t))
+  (theme-choose-variant t)
   (run-hooks 'wildcharm-hook))
 
 (defun habamax/toggle-alpha ()
