@@ -474,6 +474,9 @@
 
 (use-package gnus
   :ensure nil
+  :bind (:map gnus-topic-mode-map
+              ("<tab>" . gnus-topic-select-group)
+              ("TAB" . gnus-topic-select-group))
   :commands gnus
   :config
   (setq gnus-select-method
