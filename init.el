@@ -140,8 +140,6 @@
    ("C-c t a" . habamax/toggle-alpha)
    ("C-c t v" . visible-mode)
    ("C-x I" . habamax/insert-lorem)
-   ("<f9>" . window-toggle-side-windows)
-   ("<f10>" . window-toggle-side-windows)
    ("C-x w w" . winner-undo)
    ("C-x w h" . windmove-left)
    ("C-x w j" . windmove-down)
