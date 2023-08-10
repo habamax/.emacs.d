@@ -110,7 +110,7 @@
    ("C-c o f" . habamax/open-file-manager)
    ("C-c o x" . scratch-buffer)
    ("C-`" . habamax/toggle-eshell)
-   ("C-<f1>" . habamax/toggle-eshell)
+   ("M-<f1>" . habamax/toggle-eshell)
    ("M-;" . habamax/toggle-comment)
    ("C-^" . habamax/join-line)
    ("M-]" . habamax/slurp-forward)
