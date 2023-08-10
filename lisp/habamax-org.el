@@ -4,6 +4,8 @@
 
 (setq org-modules nil)
 
+(setq org-cycle-separator-lines 0)
+
 (add-hook 'org-mode-hook 'auto-fill-mode)
 (setq org-log-done 'time)
 
