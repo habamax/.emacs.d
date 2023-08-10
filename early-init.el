@@ -5,7 +5,7 @@
 (setq gc-cons-threshold most-positive-fixnum)
 (add-hook
  'after-init-hook
- (lambda () (setq gc-cons-threshold 800000)))
+ (lambda () (setq gc-cons-threshold 10485760)))
 
 (setq inhibit-startup-message t
       inhibit-splash-screen t)
