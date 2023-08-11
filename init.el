@@ -158,7 +158,8 @@
    :repeat-map habamax-buffers-like-this-repeat-map
    ("b" . habamax/next-buffer-like-this)
    ("B" . habamax/previous-buffer-like-this)
-   :repeat-map habamax-windmove-repeat-map
+   :repeat-map other-window-repeat-map
+   ("q" . delete-window)
    ("h" . windmove-left)
    ("j" . windmove-down)
    ("k" . windmove-up)
