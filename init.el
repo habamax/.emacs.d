@@ -38,6 +38,7 @@
 (setq vc-follow-symlinks t)
 (setq tab-bar-show 1)
 (setq bookmark-save-flag 1)
+(setq large-file-warning-threshold 10485760)
 
 (setq completion-auto-select 'second-tab
       completion-auto-wrap t
