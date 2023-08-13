@@ -448,6 +448,20 @@
 
 (use-package fennel-mode)
 
+(use-package tuareg
+  :init
+  (add-hook 'tuareg-mode-hook
+            (lambda() (setq tuareg-mode-name "🐫"))))
+
+(use-package ocamlformat
+  :after tuareg)
+
+(use-package dune
+  :after tuareg)
+
+(use-package dune-format
+  :after dune)
+
 (use-package eww
   :ensure nil
   :bind
