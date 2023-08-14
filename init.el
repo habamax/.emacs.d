@@ -448,10 +448,7 @@
 
 (use-package fennel-mode)
 
-(use-package tuareg
-  :init
-  (add-hook 'tuareg-mode-hook
-            (lambda() (setq tuareg-mode-name "🐫"))))
+(use-package tuareg)
 
 (use-package ocamlformat
   :after tuareg)
