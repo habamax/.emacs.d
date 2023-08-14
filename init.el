@@ -28,7 +28,6 @@
 (setq duplicate-line-final-position -1)
 (setq-default indent-tabs-mode nil)
 (setq-default isearch-lazy-count t)
-(setq-default show-trailing-whitespace t)
 (setq search-whitespace-regexp ".*?")
 (setq-default line-number-mode t
               column-number-mode t)
