@@ -36,11 +36,12 @@
 (setq tab-always-indent 'complete)
 (setq compilation-scroll-output t)
 (setq vc-follow-symlinks t)
+(setq bookmark-save-flag 1)
+(setq large-file-warning-threshold 10485760)
+
 (setq tab-bar-show 1
       tab-bar-auto-width-max '(400 30)
       tab-bar-close-button-show nil)
-(setq bookmark-save-flag 1)
-(setq large-file-warning-threshold 10485760)
 
 (setq completion-auto-select 'second-tab
       completion-auto-wrap t
