@@ -195,14 +195,17 @@
         dired-hide-details-hide-symlink-targets nil))
 
 (use-package vertico
-  :init
+  :defer 0.2
+  :config
   (vertico-mode))
 
 (use-package marginalia
-  :init
+  :defer 0.5
+  :config
   (marginalia-mode))
 
 (use-package orderless
+  :after vertico
   :init
   (setq completion-styles '(orderless basic))
   (setq orderless-matching-styles
@@ -290,9 +293,9 @@
   (setq magit-save-repository-buffers 'dontask))
 
 (use-package corfu
-  :init
-  (global-corfu-mode)
+  :defer 1
   :config
+  (global-corfu-mode)
   (when (display-graphic-p)
     (corfu-popupinfo-mode)))
 
