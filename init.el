@@ -293,7 +293,6 @@
   :init
   (global-corfu-mode)
   :config
-  (corfu-echo-mode t)
   (when (display-graphic-p)
     (corfu-popupinfo-mode)))
 
