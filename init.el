@@ -195,15 +195,18 @@
         dired-hide-details-hide-symlink-targets nil))
 
 (use-package vertico
-  :init
+  :defer 0.1
+  :config
   (vertico-mode))
 
 (use-package marginalia
-  :init
+  :defer 0.2
+  :config
   (marginalia-mode))
 
 (use-package orderless
-  :init
+  :defer 0.2
+  :config
   (setq completion-styles '(orderless basic))
   (setq orderless-matching-styles
         '(orderless-literal orderless-prefixes orderless-flex)))
@@ -245,7 +248,8 @@
          ("C-." . embark-act)
          ("M-." . embark-dwim)))
 
-(use-package embark-consult)
+(use-package embark-consult
+  :after embark)
 
 (use-package org
   :ensure nil
@@ -290,9 +294,9 @@
   (setq magit-save-repository-buffers 'dontask))
 
 (use-package corfu
-  :init
-  (global-corfu-mode)
+  :defer 0.5
   :config
+  (global-corfu-mode)
   (when (display-graphic-p)
     (corfu-popupinfo-mode)))
 
@@ -301,10 +305,6 @@
   :after corfu
   :init
   (corfu-terminal-mode t))
-
-(use-package cape
-  :init
-  (add-to-list 'completion-at-point-functions #'cape-file))
 
 (use-package tempel
   :bind (("M-*" . tempel-complete)
@@ -330,7 +330,6 @@
     (iedit-mode 1)))
 
 (use-package rainbow-delimiters
-  :commands rainbow-delimiters-mode
   :init
   (add-hook 'emacs-lisp-mode-hook #'rainbow-delimiters-mode)
   (add-hook 'lisp-mode-hook #'rainbow-delimiters-mode))
