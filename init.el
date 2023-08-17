@@ -178,7 +178,14 @@
   (when +IS-WSL+
     (setq browse-url-firefox-program "firefox.exe"))
   (when (or +IS-WINDOWS+ +IS-WSL+)
-    (setq epa-pinentry-mode 'loopback)))
+    (setq epa-pinentry-mode 'loopback))
+  :custom-face
+  (org-document-title ((t (:height 1.5))))
+  (org-agenda-structure ((t (:height 1.5))))
+  (outline-1 ((t (:height 1.5))))
+  (outline-2 ((t (:height 1.3))))
+  (outline-3 ((t (:height 1.1))))
+  (font-lock-comment-face ((t (:slant italic)))))
 
 (use-package dired
   :ensure nil
