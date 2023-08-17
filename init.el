@@ -184,8 +184,7 @@
   (org-agenda-structure ((t (:height 1.5))))
   (outline-1 ((t (:height 1.5))))
   (outline-2 ((t (:height 1.3))))
-  (outline-3 ((t (:height 1.1))))
-  (font-lock-comment-face ((t (:slant italic)))))
+  (outline-3 ((t (:height 1.1)))))
 
 (use-package dired
   :ensure nil
