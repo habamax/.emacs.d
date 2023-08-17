@@ -300,8 +300,7 @@
   :init
   (global-corfu-mode)
   :config
-  (when (display-graphic-p)
-    (corfu-popupinfo-mode)))
+  (corfu-popupinfo-mode))
 
 (use-package corfu-terminal
   :unless (display-graphic-p)
