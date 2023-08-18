@@ -269,8 +269,9 @@
          ("p" . org-previous-visible-heading)
          ("M-f" . org-next-block)
          ("M-b" . org-previous-block)
-         ("<tab>" . org-next-link)
-         ("<backtab>" . org-previous-link))
+         ("<tab>" . org-cycle)
+         ("C-n" . org-next-link)
+         ("C-p" . org-previous-link))
   :config
   (define-key org-mode-map (kbd "C-c C-r") verb-command-map)
   (require 'habamax-org))
