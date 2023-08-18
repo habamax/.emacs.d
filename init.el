@@ -261,7 +261,14 @@
          ("C-c a" . org-agenda)
          ("C-c l" . org-store-link)
          ("C-c o o" . habamax-org/open-file)
-         ("M-s 1" . habamax-org/search))
+         ("M-s 1" . habamax-org/search)
+         :repeat-map habamax-org-repeat-map
+         ("f" . org-forward-heading-same-level)
+         ("b" . org-backward-heading-same-level)
+         ("M-f" . org-next-block)
+         ("M-b" . org-previous-block)
+         ("n" . org-next-link)
+         ("N" . org-previous-link))
   :config
   (define-key org-mode-map (kbd "C-c C-r") verb-command-map)
   (require 'habamax-org))
