@@ -180,6 +180,10 @@
   (when (or +IS-WINDOWS+ +IS-WSL+)
     (setq epa-pinentry-mode 'loopback))
   :custom-face
+  (tab-bar-tab ((((class color) (min-colors 257) (background light))
+                 (:background "#f7f7f0" :box (:color "#d7d7d0")))
+                (((class color) (min-colors 257) (background dark))
+                 (:background "#474740" :box (:color "#373730")))))
   (org-document-title ((t (:height 1.5))))
   (org-agenda-structure ((t (:height 1.5))))
   (outline-1 ((t (:height 1.5))))
