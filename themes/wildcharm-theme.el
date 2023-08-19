@@ -109,7 +109,7 @@
    `(homoglyph
      ((,class256 (:inherit 'escape-glyph))))
    `(nobreak-space
-     ((,class256 (:foreground ,red :underline t))))
+     ((,class256 (:inherit 'escape-glyph :underline t))))
    `(nobreak-hyphen
      ((,class256 (:inherit 'escape-glyph))))
    `(mode-line
@@ -480,6 +480,8 @@
       (t (:foreground ,magenta))))
    `(org-formula
      ((,class256 (:foreground ,bright-red))))
+   `(org-footnote
+     ((,class256 (:foreground ,darkgrey))))
    `(org-latex-and-related
      ((,class256 (:foreground ,yellow))))
    `(org-tag

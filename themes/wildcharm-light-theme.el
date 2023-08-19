@@ -103,7 +103,7 @@
    `(homoglyph
      ((,class256 (:inherit 'escape-glyph))))
    `(nobreak-space
-     ((,class256 (:foreground ,red :underline t))))
+     ((,class256 (:inherit 'escape-glyph :underline t))))
    `(nobreak-hyphen
      ((,class256 (:inherit 'escape-glyph))))
    `(mode-line
@@ -467,6 +467,8 @@
    `(org-verbatim
      ((,classTC (:background ,code-block :foreground ,magenta :extend t))
       (t (:foreground ,magenta))))
+   `(org-footnote
+     ((,class256 (:foreground ,darkgrey))))
    `(org-formula
      ((,class256 (:foreground ,red))))
    `(org-latex-and-related
