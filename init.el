@@ -270,6 +270,7 @@
          ("M-f" . org-next-block)
          ("M-b" . org-previous-block)
          ("<tab>" . org-cycle)
+         ("TAB" . org-cycle)
          ("C-n" . org-next-link)
          ("C-p" . org-previous-link))
   :config
