@@ -270,8 +270,8 @@
          ("M-f" . org-next-block)
          ("M-b" . org-previous-block)
          ("TAB" . org-cycle)
-         ("C-n" . org-next-link)
-         ("C-p" . org-previous-link))
+         ("N" . org-next-link)
+         ("P" . org-previous-link))
   :config
   (define-key org-mode-map (kbd "C-c C-r") verb-command-map)
   (require 'habamax-org))
