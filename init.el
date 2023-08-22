@@ -271,6 +271,7 @@
          ("M-f" . org-next-block)
          ("M-b" . org-previous-block)
          ("TAB" . org-cycle)
+         ("<backtab>" . org-shifttab)
          ("N" . org-next-link)
          ("P" . org-previous-link))
   :config
