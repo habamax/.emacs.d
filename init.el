@@ -5,11 +5,10 @@
 
 (add-hook 'emacs-startup-hook (lambda () (message "%s" (emacs-init-time))))
 
-(set-language-environment 'utf-8)
-(setq default-input-method 'russian-computer)
-(setq-default buffer-file-coding-system 'utf-8-unix)
-
 (setq custom-file (make-temp-file "custom-emacs"))
+
+(setq-default buffer-file-coding-system 'utf-8-unix)
+(setq default-input-method 'russian-computer)
 
 (setq user-full-name "Maxim Kim"
       user-mail-address "habamax@gmail.com"
