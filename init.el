@@ -129,6 +129,7 @@
    ("C-c d" . duplicate-dwim)
    ("M-s >" . habamax/grep-current-word)
    ("M-s t" . habamax/grep-todo)
+   ("C-c t r" . habamax/reload-current-theme)
    ("C-c t n" . display-line-numbers-mode)
    ("C-c t SPC" . whitespace-mode)
    ("C-c t s" . flyspell-mode)

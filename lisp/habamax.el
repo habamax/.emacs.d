@@ -131,6 +131,13 @@ Otherwise call well known `comment-dwim'"
       (90 nil)(_ 90))
     (set-frame-parameter nil 'alpha-background)))
 
+(defun habamax/reload-current-theme ()
+  "Reload current theme."
+  (interactive)
+  (let ((theme (car custom-enabled-themes)))
+    (mapc #'disable-theme custom-enabled-themes)
+    (load-theme theme t)))
+
 (defun habamax/open-file-manager ()
   "Open file-manager for the current file."
   (interactive)
