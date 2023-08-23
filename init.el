@@ -349,6 +349,13 @@
 (use-package webpaste
   :commands (webpaste-paste-buffer webpaste-paste-region))
 
+(use-package igist
+  :commands igist-dispatch
+  :bind (:map igist-edit-gist
+              ("M-o"))
+  :config
+  (setq igist-auth-marker 'igist))
+
 (use-package wgrep)
 
 (use-package rainbow-mode
