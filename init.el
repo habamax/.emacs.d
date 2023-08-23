@@ -483,7 +483,14 @@
 (use-package markdown-mode
   :bind (:map markdown-mode-map
               ("M-n")
-              ("M-p"))
+              ("M-p")
+         :repeat-map habamax-org-repeat-map
+         ("f" . markdown-outline-next-same-level)
+         ("b" . markdown-outline-previous-same-level)
+         ("n" . markdown-outline-next)
+         ("p" . markdown-outline-previous)
+         ("TAB" . markdown-cycle)
+         ("<backtab>" . markdown-shifttab))
   :config
   (setq markdown-fontify-code-blocks-natively t)
   (setq markdown-unordered-list-item-prefix "  - ")
