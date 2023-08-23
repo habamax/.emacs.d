@@ -491,7 +491,7 @@
   :bind (:map markdown-mode-map
               ("M-n")
               ("M-p")
-         :repeat-map habamax-org-repeat-map
+         :repeat-map habamax-markdown-repeat-map
          ("f" . markdown-outline-next-same-level)
          ("b" . markdown-outline-previous-same-level)
          ("n" . markdown-outline-next)
