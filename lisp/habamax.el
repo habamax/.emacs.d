@@ -4,7 +4,7 @@
 ;;; Code:
 
 ;; Complements habamax/toggle-bg
-(defvar wildcharm-hook nil "After wildcharm-(light-)theme is loaded.")
+(defvar toggle-theme-hook nil "After theme is toggled withing habamax/toggle-bg.")
 
 (defun habamax/open-init-file ()
   "Open init.el."
@@ -120,8 +120,8 @@ Otherwise call well known `comment-dwim'"
   (interactive)
   (let ((theme (car custom-enabled-themes)))
     (mapc #'disable-theme custom-enabled-themes)
-    (load-theme (if (eq theme 'wildcharm) 'wildcharm-light 'wildcharm) t))
-  (run-hooks 'wildcharm-hook))
+    (load-theme (if (eq theme 'wildcharm) 'sandcastle 'wildcharm) t))
+  (run-hooks 'toggle-theme-hook))
 
 (defun habamax/toggle-alpha ()
   "Toggle alpha-background (transparency)."
