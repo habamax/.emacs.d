@@ -189,16 +189,16 @@
     (when (eq 'wildcharm-light (car custom-enabled-themes))
       (set-face-attribute 'default nil
                           :background "#e7e6e0")
-      (set-face-attribute 'hl-line nil
-                          :background "#d7d6d0")
+      ;; (set-face-attribute 'hl-line nil
+      ;;                     :background "#d7d6d0")
       (set-face-attribute 'line-number nil
                           :foreground "#a7a6a0")))
   (defun wildcharm-b ()
     (when (eq 'wildcharm-light (car custom-enabled-themes))
       (set-face-attribute 'default nil
                           :background "#f0f3f7")
-      (set-face-attribute 'hl-line nil
-                          :background "#e0e3e7")
+      ;; (set-face-attribute 'hl-line nil
+      ;;                     :background "#e0e3e7")
       (set-face-attribute 'line-number nil
                           :foreground "#a0a3a7")))
   (add-hook 'wildcharm-hook 'wildcharm-s))
