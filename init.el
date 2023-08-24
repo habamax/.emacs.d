@@ -135,7 +135,7 @@
    ("C-c t m" . flymake-mode)
    ("C-c t l" . hl-line-mode)
    ("C-c t f" . display-fill-column-indicator-mode)
-   ("C-c t b" . habamax/toggle-bg)
+   ("C-c t t" . habamax/toggle-theme)
    ("C-c t a" . habamax/toggle-alpha)
    ("C-c t v" . visible-mode)
    ("C-x I" . habamax/insert-lorem)

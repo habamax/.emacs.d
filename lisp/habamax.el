@@ -3,8 +3,8 @@
 ;;  Bunch of misc functions.
 ;;; Code:
 
-;; Complements habamax/toggle-bg
-(defvar toggle-theme-hook nil "After theme is toggled withing habamax/toggle-bg.")
+;; Complements habamax/toggle-theme
+(defvar toggle-theme-hook nil "After theme is toggled withing habamax/toggle-theme.")
 
 (defun habamax/open-init-file ()
   "Open init.el."
@@ -115,8 +115,8 @@ Otherwise call well known `comment-dwim'"
                         nil
                         directory-files-no-dot-files-regexp))))))
 
-(defun habamax/toggle-bg ()
-  "Toggle dark/light wildcharm theme."
+(defun habamax/toggle-theme ()
+  "Toggle dark/light themes."
   (interactive)
   (let ((theme (car custom-enabled-themes)))
     (mapc #'disable-theme custom-enabled-themes)
