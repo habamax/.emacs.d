@@ -340,7 +340,7 @@
    `(icomplete-first-match
      ((,class256 (:foreground ,green :weight bold))))
    `(icomplete-selected-match
-     ((,class256 (:background ,hl-line))))
+     ((,class256 (:inherit hl-line))))
    `(completions-common-part
      ((,class256 (:foreground ,red :weight bold))))
    `(completions-first-difference
@@ -771,7 +771,7 @@
    `(magit-section-heading-selection
      ((,class256 (:foreground ,bright-yellow))))
    `(magit-section-highlight
-     ((,class256 (:background ,hl-line))))
+     ((,class256 (:inherit hl-line))))
    `(magit-branch-local
      ((,class256 (:foreground ,blue))))
    `(magit-branch-remote
