@@ -1111,7 +1111,7 @@
 
    ;; vertico
    `(vertico-current
-     ((,class256 (:background ,hl-line))))
+     ((,class256 (:inherit hl-line))))
 
    ;; orderless
    `(orderless-match-face-0
