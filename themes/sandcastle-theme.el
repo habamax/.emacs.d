@@ -63,7 +63,7 @@
        (outline-6 "#af875f")
        (outline-7 "#005f87")
        (outline-8 darkgrey)
-       (code-block "#eeede7"))
+       (code-block "#f0efe9"))
 
   (custom-theme-set-faces
    'sandcastle
