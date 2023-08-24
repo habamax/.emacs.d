@@ -183,7 +183,17 @@
   (org-agenda-structure ((t (:height 1.5))))
   (outline-1 ((t (:height 1.5))))
   (outline-2 ((t (:height 1.3))))
-  (outline-3 ((t (:height 1.1)))))
+  (outline-3 ((t (:height 1.1))))
+  :config
+  (defun wildcharm-y ()
+    (when (eq 'wildcharm-light (car custom-enabled-themes))
+      (set-face-attribute 'default nil
+                          :background "#f7f5f0")))
+  (defun wildcharm-b ()
+    (when (eq 'wildcharm-light (car custom-enabled-themes))
+      (set-face-attribute 'default nil
+                          :background "#f0f3f7")))
+  (add-hook 'wildcharm-hook 'wildcharm-b))
 
 (use-package dired
   :ensure nil
