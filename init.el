@@ -188,7 +188,7 @@
   (defun wildcharm-y ()
     (when (eq 'wildcharm-light (car custom-enabled-themes))
       (set-face-attribute 'default nil
-                          :background "#f7f5f0")))
+                          :background "#f7f6f0")))
   (defun wildcharm-b ()
     (when (eq 'wildcharm-light (car custom-enabled-themes))
       (set-face-attribute 'default nil
