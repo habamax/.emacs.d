@@ -1,4 +1,4 @@
-;;; sandcastle-theme.el --- Light yellowish theme -*- lexical-binding: t; -*-
+;;; sandcastle-theme.el --- Greyellowish theme -*- lexical-binding: t; -*-
 
 ;; Author: Maxim Kim <habamax@gmail.com>
 ;; URL: https://github.com/habamax/sandcastle-theme
@@ -20,13 +20,13 @@
 
 ;;; Commentary:
 
-;; Light yellowish Emacs theme.
+;; Greyellowish Emacs theme.
 ;; GUI only.
 
 ;;; Code:
 
 (deftheme sandcastle
-  "Light Emacs theme with yellowish background.")
+  "Light greyellowish Emacs theme.")
 
 (let* ((fg "#000000")(bg "#e7e6e0")
        (black "#000000")(darkgrey "#808080")
