@@ -929,7 +929,7 @@
    `(erc-nick-msg-face
      ((t (:foreground ,yellow))))
    `(erc-input-face
-     ((t (:foreground ,red))))
+     ((t (:foreground ,purple))))
    `(erc-error-face
      ((t (:foreground ,bright-red))))
    `(erc-dangerous-host-face
@@ -985,9 +985,9 @@
    `(rcirc-url
      ((t (:background unspecified :foreground ,blue :underline t))))
    `(rcirc-my-nick
-     ((t (:foreground ,red :weight bold))))
+     ((t (:foreground ,bright-red :weight bold))))
    `(rcirc-nick-in-message
-     ((t (:foreground ,red :weight bold))))
+     ((t (:foreground ,bright-red :weight bold))))
    `(rcirc-other-nick
      ((t (:foreground ,blue))))
 
