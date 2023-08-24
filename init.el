@@ -192,7 +192,11 @@
   (defun wildcharm-b ()
     (when (eq 'wildcharm-light (car custom-enabled-themes))
       (set-face-attribute 'default nil
-                          :background "#f0f3f7")))
+                          :background "#f0f3f7")
+      (set-face-attribute 'hl-line nil
+                          :background "#e0e3e7")
+      (set-face-attribute 'line-number nil
+                          :foreground "#a0a3a7")))
   (add-hook 'wildcharm-hook 'wildcharm-b))
 
 (use-package dired
