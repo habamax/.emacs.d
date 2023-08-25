@@ -928,7 +928,7 @@
    `(erc-my-nick-face
      ((t (:foreground ,red :weight bold))))
    `(erc-current-nick-face
-     ((t (:foreground ,red))))
+     ((t (:foreground ,red :weight bold))))
    `(erc-nick-msg-face
      ((t (:foreground ,yellow))))
    `(erc-input-face
