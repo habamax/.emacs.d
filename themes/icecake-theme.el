@@ -50,7 +50,7 @@
        (block "#d0d6d7")
        (diff-added-bg "#afd7b7")(diff-refine-added-bg "#d7fce3")
        (diff-added-fg "#005f00")
-       (diff-removed-bg "#d7afb7")(diff-refine-removed-bg "#fcd7e0")
+       (diff-removed-bg "#dfd0ca")(diff-refine-removed-bg "#fcd7e0")
        (diff-removed-fg "#5f0000")
        (diff-changed-bg "#d7d5af")(diff-refine-changed-bg "#fffcd7")
        (diff-changed-fg "#5f5f00")
