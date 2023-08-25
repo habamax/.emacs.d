@@ -43,7 +43,7 @@
        (grey1 "#dad9d3")(grey2 "#efeee9")(grey3 "#f7f6f0")
        (non-text "#a7a6a0")
        (match-paren "#ff00af")(match "#f0d7f0")
-       (mode-line-active "#cecec0")(mode-line-inactive "#d0cfc9")
+       (mode-line-active "#c9c8b9")(mode-line-inactive "#d0cfc9")
        (menu "#efeee9")
        (header-line "#dbdad4")
        (hl-line "#d9d8d2")
