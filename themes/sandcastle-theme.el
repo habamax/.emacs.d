@@ -741,7 +741,8 @@
    `(log-edit-summary
      ((t (:foreground ,black :weight bold))))
    `(log-edit-headers-separator
-     ((t (:background ,grey :height 0.1 :extend t))))
+     ((,classTTY (:background unspecified))
+      (t (:background ,grey :height 0.1 :extend t))))
    `(log-view-message
      ((t (:foreground ,darkgrey))))
    `(log-view-commit-body
