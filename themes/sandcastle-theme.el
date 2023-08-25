@@ -41,7 +41,7 @@
        (yellow1 "#875f00")(yellow2 "#af5f00")
        (grey1 "#dad9d3")(grey2 "#efeee9")(grey3 "#f7f6f0")
        (non-text "#a7a6a0")
-       (match-paren "#ff00af")(match "#ffd7ff")
+       (match-paren "#ff00af")(match "#f0d7f0")
        (mode-line-active "#d7d6d0")(mode-line-inactive "#eeede7")
        (menu "#efeee9")
        (header-line "#d7d6d0")
