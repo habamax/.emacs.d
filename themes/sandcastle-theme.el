@@ -28,7 +28,8 @@
 (deftheme sandcastle
   "Light greyellowish Emacs theme.")
 
-(let* ((fg "#000000")(bg "#e7e6e0")
+(let* ((classTTY '((type tty)))
+       (fg "#000000")(bg "#e7e6e0")
        (black "#000000")(darkgrey "#808080")
        (red "#af0000")(bright-red "#d70000")
        (green "#008700")(bright-green "#5faf5f")
@@ -118,7 +119,8 @@
      ((t (:background ,header-line :foreground ,fg :extend t
                               :box (:line-width 1 :color ,darkgrey)))))
    `(vertical-border
-     ((t (:background ,non-text :foreground ,non-text))))
+     ((,classTTY (:background ,mode-line-inactive :foreground ,mode-line-inactive))
+      (t (:background ,non-text :foreground ,non-text))))
    `(window-divider
      ((t (:foreground ,mode-line-inactive))))
    `(window-divider-first-pixel
