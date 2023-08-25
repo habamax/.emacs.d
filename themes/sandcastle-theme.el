@@ -30,7 +30,7 @@
 
 (let* ((classTTY '((type tty)))
        (fg "#000000")(bg "#e7e6e0")
-       (black "#000000")(darkgrey "#808080")
+       (black "#000000")(darkgrey "#707070")
        (red "#af0000")(bright-red "#d70000")
        (green "#008700")(bright-green "#5faf5f")
        (yellow "#af5f00")(bright-yellow "#d78700")
