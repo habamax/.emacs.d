@@ -1,7 +1,7 @@
 ;;; forgetmenot-theme.el --- A tribute to light-blue -*- lexical-binding: t; -*-
 
 ;; Author: Maxim Kim <habamax@gmail.com>
-;; URL: https://github.com/habamax/icing-theme
+;; URL: https://github.com/habamax/forgetmenot-theme (WIP)
 ;; Package-Requires: ((emacs "24.1"))
 ;; Package-Version: 0.1
 
