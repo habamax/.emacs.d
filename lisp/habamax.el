@@ -3,9 +3,6 @@
 ;;  Bunch of misc functions.
 ;;; Code:
 
-;; Complements habamax/toggle-theme
-(defvar toggle-theme-hook nil "After theme is toggled withing habamax/toggle-theme.")
-
 (defun habamax/open-init-file ()
   "Open init.el."
   (interactive)
@@ -118,10 +115,13 @@ Otherwise call well known `comment-dwim'"
 (defun habamax/toggle-theme ()
   "Toggle dark/light themes."
   (interactive)
-  (let ((theme (car custom-enabled-themes)))
+  (let* ((theme (car custom-enabled-themes))
+         (my-themes '((wildcharm . forgetmenot)
+                      (forgetmenot . sandcastle)
+                      (sandcastle . wildcharm)))
+         (next-theme (cdr (assoc theme my-themes))))
     (mapc #'disable-theme custom-enabled-themes)
-    (load-theme (if (eq theme 'wildcharm) 'sandcastle 'wildcharm) t))
-  (run-hooks 'toggle-theme-hook))
+    (load-theme (or next-theme 'wildcharm) t)))
 
 (defun habamax/toggle-alpha ()
   "Toggle alpha-background (transparency)."
