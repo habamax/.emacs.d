@@ -1,4 +1,4 @@
-;;; icecake-theme.el --- Kind of light-blue -*- lexical-binding: t; -*-
+;;; forgetmenot-theme.el --- A tribute to light-blue -*- lexical-binding: t; -*-
 
 ;; Author: Maxim Kim <habamax@gmail.com>
 ;; URL: https://github.com/habamax/icing-theme
@@ -21,19 +21,19 @@
 ;;; Commentary:
 
 ;; Emacs 29.1 made light-blue theme obsolete.
-;; This theme is a tribute to light-blue.
+;; Forget Me Not is a tribute to light-blue.
 ;; What if ...
 
 
 ;;; Code:
 
-(deftheme icecake
+(deftheme forgetmenot
   "Kind of light-blue Emacs theme.")
 
 (let* ((classTTY '((type tty)))
        (fg "#000000")(bg "#add8e6")
        (black "#000000")(darkgrey "#607a80")
-       (red "#af0000")(bright-red "#d70000")
+       (red "#af0000")(bright-red "#c70000")
        (green "#007f00")(bright-green "#3fbf3f")
        (yellow "#9f5f2f")(bright-yellow "#c0772f")
        (blue "#002faf")(bright-blue "#003fcd")
@@ -69,7 +69,7 @@
        (code-block "#b7e1ef"))
 
   (custom-theme-set-faces
-   'icecake
+   'forgetmenot
 
    ;; standard faces
    `(default
@@ -85,7 +85,7 @@
    `(region
      ((t (:background ,white :foreground ,region :inverse-video t))))
    `(secondary-selection
-     ((t (:background ,bg :foreground ,bright-cyan :inverse-video t))))
+     ((t (:background ,white :foreground ,bright-cyan :inverse-video t))))
    `(trailing-whitespace
      ((t (:foreground ,bright-red :inverse-video t))))
    `(line-number
@@ -166,7 +166,7 @@
    `(tab-line-close-highlight
      ((t (:background unspecified :foreground ,red))))
    `(help-key-binding
-     ((t (:background unspecified :foreground ,bright-cyan :weight bold))))
+     ((t (:background unspecified :foreground unspecified :weight bold))))
    `(error
      ((t (:foreground ,bright-red :weight bold))))
    `(warning
@@ -284,13 +284,13 @@
    ;; widget
    `(custom-button
      ((t (:background ,grey1 :foreground ,fg :extend t
-                              :box (:line-width (2 . 2) :style released-button)))))
+                      :box (:line-width (2 . 2) :style released-button)))))
    `(custom-button-pressed
      ((t (:background ,grey1 :foreground ,fg :extend t
-                              :box (:line-width (2 . 2) :style pressed-button)))))
+                      :box (:line-width (2 . 2) :style pressed-button)))))
    `(custom-button-mouse
      ((t (:background ,hl-line :foreground ,fg :extend t
-                              :box (:line-width (2 . 2) :style released-button)))))
+                      :box (:line-width (2 . 2) :style released-button)))))
    `(custom-state
      ((t (:foreground ,green))))
    `(custom-group-tag
@@ -1272,5 +1272,5 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'icecake)
-;;; icecake-theme.el ends here
+(provide-theme 'forgetmenot)
+;;; forgetmenot-theme.el ends here
