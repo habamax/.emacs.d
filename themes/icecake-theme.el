@@ -20,8 +20,10 @@
 
 ;;; Commentary:
 
-;; Kind of light-blue theme.
-;; GUI only.
+;; Emacs 29.1 made light-blue theme obsolete.
+;; This theme is a tribute to light-blue.
+;; What if ...
+
 
 ;;; Code:
 
@@ -34,7 +36,7 @@
        (red "#af0000")(bright-red "#d70000")
        (green "#007f00")(bright-green "#3fbf3f")
        (yellow "#9f5f2f")(bright-yellow "#c0772f")
-       (blue "#003faf")(bright-blue "#003fcd")
+       (blue "#0000af")(bright-blue "#003fcd")
        (magenta "#870087")(bright-magenta "#aa00aa")
        (cyan "#005f5f")(bright-cyan "#007a7a")
        (grey "#b0cad0")(white "#ffffff")
@@ -47,6 +49,7 @@
        (menu "#9dc8d6")
        (header-line "#9dc8d6")
        (hl-line "#a0cbd8")
+       (region "#0087d7")
        (block "#d0d6d7") ;;;XXX
        (diff-added-bg "#afd7b7")(diff-refine-added-bg "#d7fce3")
        (diff-added-fg "#005f00")
@@ -79,17 +82,17 @@
    `(link-visited
      ((t (:foreground ,magenta :underline t))))
    `(highlight
-     ((t (:background ,white :foreground ,cyan :inverse-video t))))
+     ((t (:background ,white :foreground ,blue :inverse-video t))))
    `(region
-     ((t (:background ,white :foreground ,bright-cyan :inverse-video t))))
+     ((t (:background ,white :foreground ,region :inverse-video t))))
    `(secondary-selection
-     ((t (:background ,bg :foreground ,bright-blue :inverse-video t))))
+     ((t (:background ,bg :foreground ,bright-cyan :inverse-video t))))
    `(trailing-whitespace
      ((t (:foreground ,bright-red :inverse-video t))))
    `(line-number
      ((t (:inherit default :foreground ,non-text))))
    `(line-number-current-line
-     ((t (:inherit default :foreground ,yellow :weight bold))))
+     ((t (:inherit default :foreground ,red :weight bold))))
    `(line-number-major-tick
      ((t (:inherit default :foreground ,darkgrey :weight bold))))
    `(line-number-minor-tick
