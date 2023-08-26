@@ -44,17 +44,17 @@
        (yellow1 "#875f00")(yellow2 "#af5f00")
        (grey1 "#9dc8d6")(grey2 "#b7e1ef")
        (non-text "#6d98a6")
-       (match-paren "#ff00af")(match "#f0d7f0")
+       (match-paren "#ff00af")(match "#d7a7d7")
        (mode-line-active "#eee8aa")(mode-line-inactive "#bfecf6")
        (menu "#9dc8d6")
        (header-line "#9dc8d6")
        (hl-line "#a0cbd8")
        (region "#0087d7")(highlight "#005faf")
-       (diff-added-bg "#afd7b7")(diff-refine-added-bg "#d7fce3")
+       (diff-added-bg "#a7d7b7")(diff-refine-added-bg "#b7e7c7")
        (diff-added-fg "#005f00")
-       (diff-removed-bg "#dfd0ca")(diff-refine-removed-bg "#fcd7e0")
+       (diff-removed-bg "#d7b7b7")(diff-refine-removed-bg "#eacaca")
        (diff-removed-fg "#5f0000")
-       (diff-changed-bg "#d7d5af")(diff-refine-changed-bg "#fffcd7")
+       (diff-changed-bg "#d7d5af")(diff-refine-changed-bg "#e7e5bf")
        (diff-changed-fg "#5f5f00")
        (diff-ancestor-bg "#afafd7")(diff-refine-ancestor-bg "#d7d7ff")
        (diff-ancestor-fg "#00005f")
@@ -322,9 +322,9 @@
 
    ;; dired
    `(dired-header
-     ((t (:foreground ,fg :weight bold))))
+     ((t (:foreground ,blue :weight bold))))
    `(dired-directory
-     ((t (:inherit font-lock-keyword-face :weight bold))))
+     ((t (:foreground unspecified :weight bold))))
    `(dired-symlink
      ((t (:foreground ,cyan :weight bold :inherit nil))))
    `(dired-broken-symlink
