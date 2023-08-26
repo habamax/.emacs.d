@@ -34,13 +34,13 @@
        (red "#af0000")(bright-red "#d70000")
        (green "#007f00")(bright-green "#3fbf3f")
        (yellow "#9f5f2f")(bright-yellow "#c0772f")
-       (blue "#001faf")(bright-blue "#003fcd")
+       (blue "#003faf")(bright-blue "#003fcd")
        (magenta "#870087")(bright-magenta "#aa00aa")
        (cyan "#005f5f")(bright-cyan "#007a7a")
-       (grey "#d0d0d0")(white "#ffffff")
+       (grey "#b0cad0")(white "#ffffff")
        (purple "#5f00d7")(comment "#4f6f8f")
        (yellow1 "#875f00")(yellow2 "#af5f00")
-       (grey1 "#d3d9da")(grey2 "#e9eeef")(grey3 "#f0f6f7")
+       (grey1 "#9dc8d6")(grey2 "#b7e1ef")
        (non-text "#6d98a6")
        (match-paren "#ff00af")(match "#f0d7f0")
        (mode-line-active "#eee8aa")(mode-line-inactive "#bfecf6")
@@ -79,11 +79,11 @@
    `(link-visited
      ((t (:foreground ,magenta :underline t))))
    `(highlight
-     ((t (:background ,white :foreground ,blue :inverse-video t))))
+     ((t (:background ,white :foreground ,cyan :inverse-video t))))
    `(region
-     ((t (:background ,bg :foreground ,bright-blue :inverse-video t))))
+     ((t (:background ,white :foreground ,bright-cyan :inverse-video t))))
    `(secondary-selection
-     ((t (:background ,bg :foreground ,bright-cyan :inverse-video t))))
+     ((t (:background ,bg :foreground ,bright-blue :inverse-video t))))
    `(trailing-whitespace
      ((t (:foreground ,bright-red :inverse-video t))))
    `(line-number
@@ -742,7 +742,7 @@
      ((t (:foreground ,black :weight bold))))
    `(log-edit-headers-separator
      ((,classTTY (:background unspecified))
-      (t (:background ,grey :height 0.1 :extend t))))
+      (t (:background ,non-text :height 0.1 :extend t))))
    `(log-view-message
      ((t (:foreground ,darkgrey))))
    `(log-view-commit-body
@@ -767,6 +767,10 @@
      ((t (:foreground ,green))))
    `(magit-tag
      ((t (:foreground ,bright-yellow))))
+   `(magit-dimmed
+     ((t (:foreground ,darkgrey))))
+   `(magit-hash
+     ((t (:foreground ,darkgrey))))
    `(magit-cherry-equivalent
      ((t (:foreground ,magenta))))
    `(magit-cherry-unmatched
@@ -784,7 +788,7 @@
    `(magit-diff-context
      ((t (:foreground ,fg))))
    `(magit-diff-context-highlight
-     ((t (:background ,grey3))))
+     ((t (:background ,grey2))))
    `(magit-diff-added
      ((t (:inherit 'diff-added))))
    `(magit-diff-added-highlight
@@ -1138,7 +1142,7 @@
 
    ;; notmuch
    `(notmuch-message-summary-face
-     ((t (:background ,grey2))))
+     ((t (:background ,grey1))))
    `(notmuch-tag-face
      ((t (:foreground ,yellow))))
    `(notmuch-tag-unread
@@ -1170,7 +1174,7 @@
 
    ;; corfu
    `(corfu-default
-     ((t (:background ,grey3))))
+     ((t (:background ,grey2))))
    `(corfu-current
      ((t (:background ,grey1))))
    `(corfu-bar
