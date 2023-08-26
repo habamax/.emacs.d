@@ -1,4 +1,4 @@
-;;; icecake-theme.el --- Bluish theme -*- lexical-binding: t; -*-
+;;; icecake-theme.el --- Kind of light-blue -*- lexical-binding: t; -*-
 
 ;; Author: Maxim Kim <habamax@gmail.com>
 ;; URL: https://github.com/habamax/icecake-theme
@@ -20,34 +20,34 @@
 
 ;;; Commentary:
 
-;; Bluish Emacs theme.
+;; Kind of light-blue theme.
 ;; GUI only.
 
 ;;; Code:
 
 (deftheme icecake
-  "Light bluish Emacs theme.")
+  "Kind of light-blue Emacs theme.")
 
 (let* ((classTTY '((type tty)))
-       (fg "#000000")(bg "#e0e6e7")
-       (black "#000000")(darkgrey "#808080")
+       (fg "#000000")(bg "#add8e6")
+       (black "#000000")(darkgrey "#607a80")
        (red "#af0000")(bright-red "#d70000")
-       (green "#008700")(bright-green "#5faf5f")
-       (yellow "#af5f00")(bright-yellow "#d78700")
-       (blue "#005faf")(bright-blue "#0087d7")
-       (magenta "#870087")(bright-magenta "#af00af")
-       (cyan "#005f5f")(bright-cyan "#008787")
+       (green "#007f00")(bright-green "#3fbf3f")
+       (yellow "#9f5f2f")(bright-yellow "#c0772f")
+       (blue "#001faf")(bright-blue "#003fcd")
+       (magenta "#870087")(bright-magenta "#aa00aa")
+       (cyan "#005f5f")(bright-cyan "#007a7a")
        (grey "#d0d0d0")(white "#ffffff")
-       (purple "#5f00d7")(comment "#7f6f4f")
+       (purple "#5f00d7")(comment "#4f6f8f")
        (yellow1 "#875f00")(yellow2 "#af5f00")
        (grey1 "#d3d9da")(grey2 "#e9eeef")(grey3 "#f0f6f7")
-       (non-text "#a0a6a7")
+       (non-text "#6d98a6")
        (match-paren "#ff00af")(match "#f0d7f0")
-       (mode-line-active "#d0d6d7")(mode-line-inactive "#e7edee")
-       (menu "#efeee9")
-       (header-line "#d0d6d7")
-       (hl-line "#d0d6d7")
-       (block "#d0d6d7")
+       (mode-line-active "#eee8aa")(mode-line-inactive "#bfecf6")
+       (menu "#9dc8d6")
+       (header-line "#9dc8d6")
+       (hl-line "#a0cbd8")
+       (block "#d0d6d7") ;;;XXX
        (diff-added-bg "#afd7b7")(diff-refine-added-bg "#d7fce3")
        (diff-added-fg "#005f00")
        (diff-removed-bg "#dfd0ca")(diff-refine-removed-bg "#fcd7e0")
@@ -64,7 +64,7 @@
        (outline-6 "#af875f")
        (outline-7 "#005f87")
        (outline-8 darkgrey)
-       (code-block "#e9eff0"))
+       (code-block "#b7e1ef"))
 
   (custom-theme-set-faces
    'icecake
@@ -107,7 +107,7 @@
                               :box (:line-width 1 :color ,non-text)))))
    `(mode-line-inactive
      ((t (:background ,mode-line-inactive :foreground ,darkgrey
-                              :box (:line-width 1 :color ,mode-line-active)))))
+                              :box (:line-width 1 :color ,non-text)))))
    `(mode-line-highlight
      ((t (:background ,bg
                               :box (:line-width 1 :color ,non-text)))))
@@ -225,7 +225,7 @@
    `(font-lock-comment-face
      ((t (:foreground ,comment))))
    `(font-lock-keyword-face
-     ((t (:foreground ,blue))))
+     ((t (:foreground ,bright-blue))))
    `(font-lock-preprocessor-face
      ((t (:foreground ,purple))))
    `(font-lock-builtin-face
