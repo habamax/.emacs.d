@@ -36,7 +36,7 @@
        (red "#af0000")(bright-red "#d70000")
        (green "#007f00")(bright-green "#3fbf3f")
        (yellow "#9f5f2f")(bright-yellow "#c0772f")
-       (blue "#0000af")(bright-blue "#0000cd")
+       (blue "#002faf")(bright-blue "#003fcd")
        (magenta "#870087")(bright-magenta "#aa00aa")
        (cyan "#005f5f")(bright-cyan "#007a7a")
        (grey "#b0cad0")(white "#ffffff")
@@ -227,7 +227,7 @@
    `(font-lock-comment-face
      ((t (:foreground ,comment))))
    `(font-lock-keyword-face
-     ((t (:foreground ,bright-blue))))
+     ((t (:foreground ,blue))))
    `(font-lock-preprocessor-face
      ((t (:foreground ,purple))))
    `(font-lock-builtin-face
