@@ -1,7 +1,7 @@
 ;;; icecake-theme.el --- Kind of light-blue -*- lexical-binding: t; -*-
 
 ;; Author: Maxim Kim <habamax@gmail.com>
-;; URL: https://github.com/habamax/icecake-theme
+;; URL: https://github.com/habamax/icing-theme
 ;; Package-Requires: ((emacs "24.1"))
 ;; Package-Version: 0.1
 
@@ -36,7 +36,7 @@
        (red "#af0000")(bright-red "#d70000")
        (green "#007f00")(bright-green "#3fbf3f")
        (yellow "#9f5f2f")(bright-yellow "#c0772f")
-       (blue "#0000af")(bright-blue "#003fcd")
+       (blue "#0000af")(bright-blue "#0000cd")
        (magenta "#870087")(bright-magenta "#aa00aa")
        (cyan "#005f5f")(bright-cyan "#007a7a")
        (grey "#b0cad0")(white "#ffffff")
@@ -49,8 +49,7 @@
        (menu "#9dc8d6")
        (header-line "#9dc8d6")
        (hl-line "#a0cbd8")
-       (region "#0087d7")
-       (block "#d0d6d7") ;;;XXX
+       (region "#0087d7")(highlight "#005faf")
        (diff-added-bg "#afd7b7")(diff-refine-added-bg "#d7fce3")
        (diff-added-fg "#005f00")
        (diff-removed-bg "#dfd0ca")(diff-refine-removed-bg "#fcd7e0")
@@ -82,7 +81,7 @@
    `(link-visited
      ((t (:foreground ,magenta :underline t))))
    `(highlight
-     ((t (:background ,white :foreground ,blue :inverse-video t))))
+     ((t (:background ,white :foreground ,highlight :inverse-video t))))
    `(region
      ((t (:background ,white :foreground ,region :inverse-video t))))
    `(secondary-selection
@@ -92,7 +91,7 @@
    `(line-number
      ((t (:inherit default :foreground ,non-text))))
    `(line-number-current-line
-     ((t (:inherit default :foreground ,red :weight bold))))
+     ((t (:inherit default :foreground ,black :weight bold))))
    `(line-number-major-tick
      ((t (:inherit default :foreground ,darkgrey :weight bold))))
    `(line-number-minor-tick
@@ -640,7 +639,7 @@
    `(gnus-cite-11
      ((t (:foreground ,darkgrey))))
    `(mm-uu-extract
-     ((t (:background ,block :foreground ,yellow))))
+     ((t (:background ,code-block :foreground ,yellow))))
 
    ;; highlight-changes
    `(highlight-changes
