@@ -130,7 +130,7 @@
    `(window-divider-last-pixel
      ((t (:foreground ,mode-line-active))))
    `(minibuffer-prompt
-     ((t (:foreground ,yellow :weight bold))))
+     ((t (:foreground unspecified :weight bold))))
    `(fringe
      ((t (:foreground ,non-text :background unspecified))))
    `(separator-line
