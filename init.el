@@ -151,6 +151,8 @@
    ("C-=" . text-scale-adjust)
    ("C--" . text-scale-adjust)
    ("C-c SPC SPC" . delete-trailing-whitespace)
+   :repeat-map habamax-toggle-theme-repeat-map
+   ("t" . habamax/toggle-theme)
    :repeat-map habamax-other-frame-repeat-map
    ("o" . other-frame)
    :repeat-map habamax-winner-repeat-map
