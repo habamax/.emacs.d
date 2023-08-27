@@ -116,9 +116,9 @@ Otherwise call well known `comment-dwim'"
   "Toggle dark/light themes."
   (interactive)
   (let* ((theme (car custom-enabled-themes))
-         (my-themes '((wildcharm . forgetmenot)
-                      (forgetmenot . sandcastle)
-                      (sandcastle . wildcharm)))
+         (my-themes '((wildcharm . wildcharm-light)
+                      (wildcharm-light . forget-me-not)
+                      (forget-me-not . sandcastle)))
          (next-theme (cdr (assoc theme my-themes))))
     (mapc #'disable-theme custom-enabled-themes)
     (load-theme (or next-theme 'wildcharm) t)))
