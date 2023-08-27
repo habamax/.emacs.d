@@ -707,11 +707,11 @@
 
    ;; vc
    `(vc-dir-header
-     ((t (:foreground ,magenta))))
+     ((t (:foreground unspecified :weight bold))))
    `(vc-dir-header-value
      ((t (:foreground ,fg))))
    `(vc-dir-directory
-     ((t (:foreground ,blue :weight bold))))
+     ((t (:foreground unspecified :weight bold))))
    `(vc-dir-file
      ((t (:foreground ,fg))))
    `(vc-dir-status-up-to-date
