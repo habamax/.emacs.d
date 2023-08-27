@@ -1,7 +1,7 @@
 ;;; forget-me-not-theme.el --- A tribute to light-blue -*- lexical-binding: t; -*-
 
 ;; Author: Maxim Kim <habamax@gmail.com>
-;; URL: https://github.com/habamax/forget-me-not-theme (WIP)
+;; URL: https://github.com/habamax/forget-me-not-theme
 ;; Package-Requires: ((emacs "24.1"))
 ;; Package-Version: 0.1
 
@@ -25,7 +25,7 @@
 ;;; Code:
 
 (deftheme forget-me-not
-  "Kind of light-blue Emacs theme.")
+  "A tribute to light-blue Emacs theme.")
 
 (let* ((classTTY '((type tty)))
        (fg "#000000")(bg "#add8e6")
