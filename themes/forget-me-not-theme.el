@@ -1,7 +1,7 @@
-;;; forgetmenot-theme.el --- A tribute to light-blue -*- lexical-binding: t; -*-
+;;; forget-me-not-theme.el --- A tribute to light-blue -*- lexical-binding: t; -*-
 
 ;; Author: Maxim Kim <habamax@gmail.com>
-;; URL: https://github.com/habamax/forgetmenot-theme (WIP)
+;; URL: https://github.com/habamax/forget-me-not-theme (WIP)
 ;; Package-Requires: ((emacs "24.1"))
 ;; Package-Version: 0.1
 
@@ -20,27 +20,24 @@
 
 ;;; Commentary:
 
-;; Emacs 29.1 made light-blue theme obsolete.
-;; Forget Me Not is a tribute to light-blue.
-;; What if ...
-
+;; forget-me-not is a tribute to light-blue theme, Emacs 29.1 made obsolete.
 
 ;;; Code:
 
-(deftheme forgetmenot
+(deftheme forget-me-not
   "Kind of light-blue Emacs theme.")
 
 (let* ((classTTY '((type tty)))
        (fg "#000000")(bg "#add8e6")
        (black "#000000")(darkgrey "#607a80")
        (red "#af0000")(bright-red "#c70000")
-       (green "#007f00")(bright-green "#3fbf3f")
+       (green "#007a00")(bright-green "#009a00")
        (yellow "#9f5f2f")(bright-yellow "#c0772f")
        (blue "#002faf")(bright-blue "#003fcd")
        (magenta "#870087")(bright-magenta "#aa00aa")
        (cyan "#005f5f")(bright-cyan "#007a7a")
        (grey "#b0cad0")(white "#ffffff")
-       (purple "#5f00d7")(comment "#4f6f8f")
+       (purple "#5700c7")(comment "#4f6f8f")
        (yellow1 "#875f00")(yellow2 "#af5f00")
        (grey1 "#9dc8d6")(grey2 "#b7e1ef")
        (non-text "#6d98a6")
@@ -69,7 +66,7 @@
        (code-block "#b7e1ef"))
 
   (custom-theme-set-faces
-   'forgetmenot
+   'forget-me-not
 
    ;; standard faces
    `(default
@@ -1271,5 +1268,5 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'forgetmenot)
-;;; forgetmenot-theme.el ends here
+(provide-theme 'forget-me-not)
+;;; forget-me-not-theme.el ends here
