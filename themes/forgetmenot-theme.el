@@ -106,20 +106,19 @@
      ((t (:inherit 'escape-glyph))))
    `(mode-line
      ((t (:background ,mode-line-active :foreground ,fg
-                              :box (:line-width 1 :color ,non-text)))))
+                      :box (:line-width 1 :color ,non-text)))))
    `(mode-line-inactive
      ((t (:background ,mode-line-inactive :foreground ,darkgrey
-                              :box (:line-width 1 :color ,non-text)))))
+                      :box (:line-width 1 :color ,non-text)))))
    `(mode-line-highlight
-     ((t (:background ,bg
-                              :box (:line-width 1 :color ,non-text)))))
+     ((t (:background ,bg :box (:line-width 1 :color ,non-text)))))
    `(mode-line-emphasis
      ((t (:weight bold))))
    `(mode-line-buffer-id
      ((t (:weight bold))))
    `(header-line
      ((t (:background ,header-line :foreground ,fg :extend t
-                              :box (:line-width 1 :color ,darkgrey)))))
+                      :box (:line-width 1 :color ,darkgrey)))))
    `(vertical-border
      ((,classTTY (:background ,mode-line-inactive :foreground ,mode-line-inactive))
       (t (:background ,non-text :foreground ,non-text))))
@@ -143,7 +142,7 @@
      ((t (:background ,mode-line-inactive :foreground ,darkgrey))))
    `(tab-bar-tab
      ((t (:background ,mode-line-active :foreground ,black :weight bold
-                              :box (:line-width 1 :color ,non-text)))))
+                      :box (:line-width 1 :color ,non-text)))))
    `(tab-bar-tab-inactive
      ((t (:background unspecified :foreground ,fg
                       :box (:line-width 1 :color ,non-text)))))
@@ -151,13 +150,13 @@
      ((t (:background ,mode-line-inactive :foreground ,darkgrey))))
    `(tab-line-tab
      ((t (:background ,mode-line-active :foreground ,black :weight bold
-                              :box (:line-width 1 :color ,non-text)))))
+                      :box (:line-width 1 :color ,non-text)))))
    `(tab-line-tab-current
      ((t (:background ,mode-line-active :foreground ,black :weight bold
-                              :box (:line-width 1 :color ,non-text)))))
+                      :box (:line-width 1 :color ,non-text)))))
    `(tab-line-highlight
      ((t (:background ,mode-line-active :foreground ,black :weight bold
-                              :box (:line-width 1 :color ,non-text)))))
+                      :box (:line-width 1 :color ,non-text)))))
    `(tab-line-tab-inactive
      ((t (:background unspecified :foreground ,fg
                       :box (:line-width 1 :color ,non-text)))))
