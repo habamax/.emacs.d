@@ -29,25 +29,24 @@
   "Light greyellowish Emacs theme.")
 
 (let* ((classTTY '((type tty)))
-       (fg "#000000")(bg "#e7e6e0")
+       (fg "#000000")(bg "#d7d6d0")
        (black "#000000")(darkgrey "#707070")
        (red "#af0000")(bright-red "#d70000")
-       (green "#008700")(bright-green "#5faf5f")
+       (green "#007f00")(bright-green "#1f9f1f")
        (yellow "#af5f00")(bright-yellow "#d78700")
        (blue "#005faf")(bright-blue "#0087d7")
-       (magenta "#870087")(bright-magenta "#af00af")
+       (magenta "#870087")(bright-magenta "#9f009f")
        (cyan "#005f5f")(bright-cyan "#008787")
        (grey "#d0d0d0")(white "#ffffff")
-       (purple "#5f00d7")(comment "#7f6f4f")
+       (purple "#4f00c7")(comment "#7f6f4f")
        (yellow1 "#875f00")(yellow2 "#af5f00")
-       (grey1 "#dad9d3")(grey2 "#efeee9")(grey3 "#f7f6f0")
-       (non-text "#a7a6a0")
-       (match-paren "#ff00af")(match "#f0d7f0")
-       (mode-line-active "#c9c8b9")(mode-line-inactive "#d0cfc9")
+       (grey1 "#cac9c3")(grey2 "#dfded9")(grey3 "#e7e6e0")
+       (non-text "#979690")
+       (match-paren "#ff00af")(match "#e0c7e0")
+       (mode-line-active "#b9b8a9")(mode-line-inactive "#c0bfb9")
        (menu "#efeee9")
-       (header-line "#dbdad4")
-       (hl-line "#d9d8d2")
-       (block "#d7d6d0")
+       (header-line "#cbcac4")
+       (hl-line "#c9c8c2")
        (diff-added-bg "#b7d7af")(diff-refine-added-bg "#e3fcd7")
        (diff-added-fg "#005f00")
        (diff-removed-bg "#d7b7af")(diff-refine-removed-bg "#fce0d7")
@@ -64,7 +63,7 @@
        (outline-6 "#af875f")
        (outline-7 "#005f87")
        (outline-8 darkgrey)
-       (code-block "#f0efe9"))
+       (code-block "#e0dfd9"))
 
   (custom-theme-set-faces
    'sandcastle
@@ -81,15 +80,15 @@
    `(highlight
      ((t (:background ,white :foreground ,blue :inverse-video t))))
    `(region
-     ((t (:background ,bg :foreground ,bright-blue :inverse-video t))))
+     ((t (:background ,white :foreground ,bright-blue :inverse-video t))))
    `(secondary-selection
-     ((t (:background ,bg :foreground ,bright-cyan :inverse-video t))))
+     ((t (:background ,white :foreground ,bright-cyan :inverse-video t))))
    `(trailing-whitespace
      ((t (:foreground ,bright-red :inverse-video t))))
    `(line-number
      ((t (:inherit default :foreground ,non-text))))
    `(line-number-current-line
-     ((t (:inherit default :foreground ,yellow :weight bold))))
+     ((t (:inherit default :foreground unspecified :weight bold))))
    `(line-number-major-tick
      ((t (:inherit default :foreground ,darkgrey :weight bold))))
    `(line-number-minor-tick
@@ -104,20 +103,20 @@
      ((t (:inherit 'escape-glyph))))
    `(mode-line
      ((t (:background ,mode-line-active :foreground ,fg
-                              :box (:line-width 1 :color ,non-text)))))
+                      :box (:line-width 1 :color ,non-text)))))
    `(mode-line-inactive
      ((t (:background ,mode-line-inactive :foreground ,darkgrey
-                              :box (:line-width 1 :color ,mode-line-active)))))
+                      :box (:line-width 1 :color ,mode-line-active)))))
    `(mode-line-highlight
      ((t (:background ,bg
-                              :box (:line-width 1 :color ,non-text)))))
+                      :box (:line-width 1 :color ,non-text)))))
    `(mode-line-emphasis
      ((t (:weight bold))))
    `(mode-line-buffer-id
      ((t (:weight bold))))
    `(header-line
      ((t (:background ,header-line :foreground ,fg :extend t
-                              :box (:line-width 1 :color ,darkgrey)))))
+                      :box (:line-width 1 :color ,darkgrey)))))
    `(vertical-border
      ((,classTTY (:background ,mode-line-inactive :foreground ,mode-line-inactive))
       (t (:background ,non-text :foreground ,non-text))))
@@ -141,7 +140,7 @@
      ((t (:background ,mode-line-inactive :foreground ,darkgrey))))
    `(tab-bar-tab
      ((t (:background ,mode-line-active :foreground ,black :weight bold
-                              :box (:line-width 1 :color ,non-text)))))
+                      :box (:line-width 1 :color ,non-text)))))
    `(tab-bar-tab-inactive
      ((t (:background unspecified :foreground ,fg
                       :box (:line-width 1 :color ,non-text)))))
@@ -149,13 +148,13 @@
      ((t (:background ,mode-line-inactive :foreground ,darkgrey))))
    `(tab-line-tab
      ((t (:background ,mode-line-active :foreground ,black :weight bold
-                              :box (:line-width 1 :color ,non-text)))))
+                      :box (:line-width 1 :color ,non-text)))))
    `(tab-line-tab-current
      ((t (:background ,mode-line-active :foreground ,black :weight bold
-                              :box (:line-width 1 :color ,non-text)))))
+                      :box (:line-width 1 :color ,non-text)))))
    `(tab-line-highlight
      ((t (:background ,mode-line-active :foreground ,black :weight bold
-                              :box (:line-width 1 :color ,non-text)))))
+                      :box (:line-width 1 :color ,non-text)))))
    `(tab-line-tab-inactive
      ((t (:background unspecified :foreground ,fg
                       :box (:line-width 1 :color ,non-text)))))
@@ -282,13 +281,13 @@
    ;; widget
    `(custom-button
      ((t (:background ,grey1 :foreground ,fg :extend t
-                              :box (:line-width (2 . 2) :style released-button)))))
+                      :box (:line-width (2 . 2) :style released-button)))))
    `(custom-button-pressed
      ((t (:background ,grey1 :foreground ,fg :extend t
-                              :box (:line-width (2 . 2) :style pressed-button)))))
+                      :box (:line-width (2 . 2) :style pressed-button)))))
    `(custom-button-mouse
      ((t (:background ,hl-line :foreground ,fg :extend t
-                              :box (:line-width (2 . 2) :style released-button)))))
+                      :box (:line-width (2 . 2) :style released-button)))))
    `(custom-state
      ((t (:foreground ,green))))
    `(custom-group-tag
@@ -637,7 +636,7 @@
    `(gnus-cite-11
      ((t (:foreground ,darkgrey))))
    `(mm-uu-extract
-     ((t (:background ,block :foreground ,yellow))))
+     ((t (:background ,code-block :foreground ,yellow))))
 
    ;; highlight-changes
    `(highlight-changes
@@ -742,7 +741,7 @@
      ((t (:foreground ,black :weight bold))))
    `(log-edit-headers-separator
      ((,classTTY (:background unspecified))
-      (t (:background ,grey :height 0.1 :extend t))))
+      (t (:background ,non-text :height 0.1 :extend t))))
    `(log-view-message
      ((t (:foreground ,darkgrey))))
    `(log-view-commit-body
