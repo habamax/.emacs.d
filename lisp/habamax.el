@@ -113,7 +113,7 @@ Otherwise call well known `comment-dwim'"
                         directory-files-no-dot-files-regexp))))))
 
 (defun habamax/toggle-theme ()
-  "Toggle dark/light themes."
+  "Toggle my themes."
   (interactive)
   (let* ((theme (car custom-enabled-themes))
          (my-themes '((wildcharm . wildcharm-light)
