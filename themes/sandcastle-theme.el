@@ -1,7 +1,7 @@
-;;; sandcastle-theme.el --- Greyellowish theme -*- lexical-binding: t; -*-
+;;; sandcastle-theme.el --- Light greyellow theme -*- lexical-binding: t; -*-
 
 ;; Author: Maxim Kim <habamax@gmail.com>
-;; URL: https://github.com/habamax/sandcastle-theme
+;; URL: https://github.com/habamax/sandcastle-theme (WIP)
 ;; Package-Requires: ((emacs "24.1"))
 ;; Package-Version: 0.1
 
@@ -20,13 +20,12 @@
 
 ;;; Commentary:
 
-;; Greyellowish Emacs theme.
-;; GUI only.
+;; Light greyellow Emacs theme.
 
 ;;; Code:
 
 (deftheme sandcastle
-  "Light greyellowish Emacs theme.")
+  "Light greyellow Emacs theme.")
 
 (let* ((classTTY '((type tty)))
        (fg "#000000")(bg "#d7d6d0")
@@ -127,7 +126,7 @@
    `(window-divider-last-pixel
      ((t (:foreground ,mode-line-active))))
    `(minibuffer-prompt
-     ((t (:foreground ,yellow :weight bold))))
+     ((t (:foreground unspecified :weight bold))))
    `(fringe
      ((t (:foreground ,non-text :background unspecified))))
    `(separator-line
@@ -319,9 +318,9 @@
 
    ;; dired
    `(dired-header
-     ((t (:foreground ,fg :weight bold))))
+     ((t (:foreground ,blue :weight bold))))
    `(dired-directory
-     ((t (:inherit font-lock-keyword-face :weight bold))))
+     ((t (:foreground unspecified :weight bold))))
    `(dired-symlink
      ((t (:foreground ,cyan :weight bold :inherit nil))))
    `(dired-broken-symlink
@@ -708,11 +707,11 @@
 
    ;; vc
    `(vc-dir-header
-     ((t (:foreground ,magenta))))
+     ((t (:foreground unspecified :weight bold))))
    `(vc-dir-header-value
-     ((t (:foreground ,fg))))
+     ((t (:foreground unspecified))))
    `(vc-dir-directory
-     ((t (:foreground ,blue :weight bold))))
+     ((t (:foreground unspecified :weight bold))))
    `(vc-dir-file
      ((t (:foreground ,fg))))
    `(vc-dir-status-up-to-date
