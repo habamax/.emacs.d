@@ -162,7 +162,7 @@
    `(tab-line-close-highlight
      ((t (:background unspecified :foreground ,red))))
    `(help-key-binding
-     ((t (:background unspecified :foreground ,bright-cyan :weight bold))))
+     ((t (:background unspecified :foreground unspecified :weight bold))))
    `(error
      ((t (:foreground ,bright-red :weight bold))))
    `(warning
