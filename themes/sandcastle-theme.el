@@ -31,7 +31,7 @@
        (fg "#000000")(bg "#d7d6d0")
        (black "#000000")(darkgrey "#707070")
        (red "#af0000")(bright-red "#d70000")
-       (green "#007f00")(bright-green "#1f9f1f")
+       (green "#2f7f00")(bright-green "#3f8f0f")
        (yellow "#af5f00")(bright-yellow "#d78700")
        (blue "#005faf")(bright-blue "#0078c7")
        (magenta "#870087")(bright-magenta "#9f009f")
