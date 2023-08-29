@@ -40,7 +40,8 @@
 
 (setq tab-bar-show 1
       tab-bar-auto-width-max '(400 30)
-      tab-bar-close-button-show nil)
+      tab-bar-close-button-show nil
+      tab-bar-new-button-show nil)
 
 (setq completion-auto-select 'second-tab
       completion-auto-wrap t
