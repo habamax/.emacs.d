@@ -88,6 +88,11 @@ Otherwise call well known `comment-dwim'"
       (insert close)
       (indent-region start (point) nil))))
 
+(defun habamax/diff-buffer ()
+  "Show diff for current buffer against file."
+  (interactive)
+  (diff-buffer-with-file (buffer-name)))
+
 (defun habamax/grep-current-word ()
   "Search current word using `grep' and `grep-command'"
   (interactive)
