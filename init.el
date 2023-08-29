@@ -138,7 +138,7 @@
    ("C-c t t" . habamax/toggle-theme)
    ("C-c t a" . habamax/toggle-alpha)
    ("C-c t v" . visible-mode)
-   ("C-c t d" . ediff-current-file)
+   ("C-c t d" . habamax/diff-current-buffer)
    ("C-x I" . habamax/insert-lorem)
    ("C-x w w" . winner-undo)
    ("C-x w h" . windmove-left)
