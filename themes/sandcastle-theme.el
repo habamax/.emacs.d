@@ -33,7 +33,7 @@
        (red "#af0000")(bright-red "#d70000")
        (green "#2f7f00")(bright-green "#3f8f0f")
        (yellow "#af5f00")(bright-yellow "#d78700")
-       (blue "#005faf")(bright-blue "#0078c7")
+       (blue "#004fa7")(bright-blue "#0078c7")
        (magenta "#870087")(bright-magenta "#9f009f")
        (cyan "#005f5f")(bright-cyan "#007f7f")
        (grey "#d0d0d0")(white "#ffffff")
