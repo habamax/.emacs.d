@@ -35,7 +35,7 @@
        (yellow "#9f5f2f")(bright-yellow "#c0772f")
        (blue "#002faf")(bright-blue "#003fcd")
        (magenta "#870087")(bright-magenta "#aa00aa")
-       (cyan "#005f5f")(bright-cyan "#007a7a")
+       (cyan "#004f5f")(bright-cyan "#006a7f")
        (grey "#b0cad0")(white "#ffffff")
        (purple "#5700c7")(comment "#4f6f8f")
        (yellow1 "#875f00")(yellow2 "#af5f00")
