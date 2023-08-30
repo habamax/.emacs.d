@@ -235,7 +235,9 @@
          ([remap goto-line] . consult-goto-line)
          ("M-s g" . consult-grep)
          ("M-s r" . consult-ripgrep)
-         ("M-y" . consult-yank-pop))
+         ("M-y" . consult-yank-pop)
+         :map org-mode-map
+         ("M-g i" . consult-org-heading))
   :config
   (setq consult-preview-key "M-.")
   (setq consult-buffer-sources
