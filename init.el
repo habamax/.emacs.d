@@ -235,9 +235,7 @@
          ([remap goto-line] . consult-goto-line)
          ("M-s g" . consult-grep)
          ("M-s r" . consult-ripgrep)
-         ("M-y" . consult-yank-pop)
-         :map org-mode-map
-         ("M-g i" . consult-org-heading))
+         ("M-y" . consult-yank-pop))
   :config
   (setq consult-preview-key "M-.")
   (setq consult-buffer-sources
@@ -267,6 +265,8 @@
          ("C-c l" . org-store-link)
          ("C-c o o" . habamax-org/open-file)
          ("M-s 1" . habamax-org/search)
+         :map org-mode-map
+         ("M-g i" . consult-org-heading)
          :repeat-map habamax-org-repeat-map
          ("f" . org-forward-heading-same-level)
          ("b" . org-backward-heading-same-level)
