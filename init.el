@@ -31,7 +31,6 @@
 (setq-default line-number-mode t
               column-number-mode t)
 (setq set-mark-command-repeat-pop t)
-(setq show-paren-when-point-inside-paren t)
 (setq tab-always-indent 'complete)
 (setq compilation-scroll-output t)
 (setq vc-follow-symlinks t)
