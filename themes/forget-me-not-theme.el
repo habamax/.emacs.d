@@ -37,7 +37,7 @@
        (magenta "#870087")(bright-magenta "#aa00aa")
        (cyan "#004f5f")(bright-cyan "#006a7f")
        (grey "#b0cad0")(white "#ffffff")
-       (purple "#5700c7")(comment "#4f6f8f")
+       (purple "#5700c7")(comment "#75787a")
        (yellow1 "#875f00")(yellow2 "#af5f00")
        (grey1 "#9dc8d6")(grey2 "#b7e1ef")
        (non-text "#6d98a6")
