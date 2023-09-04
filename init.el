@@ -35,7 +35,7 @@
 (setq compilation-scroll-output t)
 (setq vc-follow-symlinks t)
 (setq bookmark-save-flag 1)
-(setq large-file-warning-threshold 10485760)
+(setq large-file-warning-threshold 20971520)
 
 (setq tab-bar-show 1
       tab-bar-auto-width-max '(400 30)
