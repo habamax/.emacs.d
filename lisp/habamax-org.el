@@ -34,7 +34,7 @@
         ("N" "Note with link" entry (file "notes.org")
          "* %?\n%T\n%i\n%a" :empty-lines 1 :prepend t)
         ("m" "Meeting notes" entry (file "notes.org")
-         "* Meeting Notes\n%T\n\nAttendees:\n\n%?\n\nStatus:\n\n"
+         "* Meeting Notes\n%T\n\nAttendees:\n\n%?\n\nDetails:\n\n"
          :empty-lines 1 :prepend t)))
 
 (setq org-agenda-custom-commands
