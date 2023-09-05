@@ -1,7 +1,7 @@
-;;; sandcastle-theme.el --- Light greyellow theme -*- lexical-binding: t; -*-
+;;; sandcastle-theme.el --- Light mid(low) contrast Emacs theme -*- lexical-binding: t; -*-
 
 ;; Author: Maxim Kim <habamax@gmail.com>
-;; URL: https://github.com/habamax/sandcastle-theme (WIP)
+;; URL: https://github.com/habamax/sandcastle-theme
 ;; Package-Requires: ((emacs "24.1"))
 ;; Package-Version: 0.1
 
@@ -20,12 +20,12 @@
 
 ;;; Commentary:
 
-;; Light greyellow Emacs theme.
+;; Light mid(low) contrast Emacs theme.
 
 ;;; Code:
 
 (deftheme sandcastle
-  "Light greyellow Emacs theme.")
+  "Light mid(low) contrast Emacs theme.")
 
 (let* ((classTTY '((type tty)))
        (fg "#000000")(bg "#d7d6d0")
