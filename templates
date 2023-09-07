@@ -59,7 +59,6 @@ emacs-lisp-mode
          "(provide '" (file-name-base (or (buffer-file-name) (buffer-name))) ")" n
          ";;; " (file-name-nondirectory (or (buffer-file-name) (buffer-name)))
          " ends here" n)
-(autoload ";;;###autoload")
 
 text-mode
 
@@ -71,30 +70,32 @@ text-mode
       "+-" (make-string (length str) ?-) "-+" n)
 (cut "--8<---------------cut here---------------start------------->8---" n r n
      "--8<---------------cut here---------------end--------------->8---" n)
-(rot13 (p "plain text" text) n "----" n (rot13 text))
+(b64 (p "plain text" text)
+     n
+     (make-string (length text) ?-)
+     n
+     (base64-encode-string text))
 (calc (p "taylor(sin(x),x=0,3)" formula) n "----" n (format "%s" (calc-eval formula)))
 
 org-mode
 
 (tit "#+title: " p n "#+author: Maxim Kim")
-(cap "#+caption: ")
-(cen "#+begin_center" n> r> n "#+end_center")
-(beg "#+begin_" (s name) n> r> n "#+end_" name)
-(quo "#+begin_quote" n> r> n "#+end_quote")
+(be "#+begin_" (s name) n> r> n "#+end_" name)
+(ce "#+begin_center" n> r> n "#+end_center")
+(qu "#+begin_quote" n> r> n "#+end_quote")
 (ex "#+begin_example" n> r> n "#+end_example")
-(verse "#+begin_verse" n> r> n "#+end_verse")
+(ve "#+begin_verse" n> r> n "#+end_verse")
 (s "#+begin_src " p n> r> n "#+end_src")
 (gnuplot "#+begin_src gnuplot :var data=" (p "table") " :file " (p "plot.png") n> r> n "#+end_src" :post (org-edit-src-code))
-(elisp "#+begin_src emacs-lisp" n> r> n "#+end_src" :post (org-edit-src-code))
-(inlsrc "src_" p "{" q "}")
-(sidenote "#+begin_sidenote" n> r> n "#+end_sidenote")
-(side "#+begin_sidebar" n> r> n "#+end_sidebar")
+(el "#+begin_src emacs-lisp" n> r> n "#+end_src" :post (org-edit-src-code))
+(side "#+begin_sidenote" n> r> n "#+end_sidenote")
+(si "#+begin_sidebar" n> r> n "#+end_sidebar")
 ;; admonitions
-(tip "#+begin_tip" n> r> n "#+end_tip")
-(note "#+begin_note" n> r> n "#+end_note")
-(warn "#+begin_warning" n> r> n "#+end_warning")
-(cau "#+begin_caution" n> r> n "#+end_caution")
-(imp "#+begin_important" n> r> n "#+end_important")
+(ti "#+begin_tip" n> r> n "#+end_tip")
+(no "#+begin_note" n> r> n "#+end_note")
+(wa "#+begin_warning" n> r> n "#+end_warning")
+(ca "#+begin_caution" n> r> n "#+end_caution")
+(im "#+begin_important" n> r> n "#+end_important")
 
 
 ;; Local Variables:
