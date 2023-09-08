@@ -24,20 +24,39 @@ body {
 .note::before {
     background-color: #217ee7;
 }
+.note {
+    border: 1px solid #217ee7;
+    background-color: #f0f7fa;
+}
 .warning::before {
     background-color: #e18114;
+}
+.warning {
+    border: 1px solid #e18114;
+    background-color: #faf7f0;
 }
 .tip::before {
     background-color: #41af46;
 }
+.tip {
+    border: 1px solid #41af46;
+    background-color: #f0f7f0;
+}
 .caution::before {
     background-color: #a0439c;
+}
+.caution {
+    border: 1px solid #a0439c;
+    background-color: #f7f0f7;
 }
 .important::before {
     background-color: #d32f2f;
 }
+.important {
+    border: 1px solid #d32f2f;
+    background-color: #f7f0f0;
+}
 .note, .warning, .tip, .important, .caution {
-    border: 1px solid #d0d0d0;
     border-radius: 0.25em;
     margin: 2em 2%;
     padding: 0.25em 1em;
