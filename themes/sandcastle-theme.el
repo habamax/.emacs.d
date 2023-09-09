@@ -1183,6 +1183,8 @@
    ;; company
    `(company-tooltip
      ((t (:background ,grey3))))
+   `(company-tooltip-common
+     ((,class256 (:inherit completions-common-part))))
    `(company-tooltip-selection
      ((t (:background ,grey1))))
    `(company-tooltip-scrollbar-track
