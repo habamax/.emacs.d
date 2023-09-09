@@ -1180,6 +1180,16 @@
    `(corfu-border
      ((t (:background ,grey))))
 
+   ;; company
+   `(company-tooltip
+     ((t (:background ,grey2))))
+   `(company-tooltip-selection
+     ((t (:background ,grey1))))
+   `(company-tooltip-scrollbar-track
+     ((t (:background ,grey))))
+   `(company-tooltip-scrollbar-thumb
+     ((t (:background ,non-text))))
+
    ;; rainbow-delimiters
    `(rainbow-delimiters-depth-1-face
      ((t (:foreground ,fg))))
