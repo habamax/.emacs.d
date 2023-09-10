@@ -910,6 +910,10 @@
    `(eglot-highlight-symbol-face
      ((t (:background ,match))))
 
+   ;; lsp-mode
+   `(lsp-face-highlight-textual
+     ((t (:background ,match))))
+
    ;; wgrep
    `(wgrep-face
      ((t (:background ,diff-added-bg))))
