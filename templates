@@ -4,6 +4,11 @@ fundamental-mode
 (now (format-time-string "%Y-%m-%d %H:%M:%S"))
 (shrug "¯\\_(ツ)_/¯")
 (maxim "Maxim Kim")
+(base64 (p "plain text" text)
+     n
+     (make-string (length (base64-encode-string text)) ?~)
+     n q
+     (base64-encode-string text))
 
 fundamental-mode :when (re-search-backward "Maxim Kim$" (line-beginning-position) 'noerror)
 
@@ -70,11 +75,6 @@ text-mode
       "+-" (make-string (length str) ?-) "-+" n)
 (cut "--8<---------------cut here---------------start------------->8---" n r n
      "--8<---------------cut here---------------end--------------->8---" n)
-(b64 (p "plain text" text)
-     n
-     (make-string (length text) ?-)
-     n
-     (base64-encode-string text))
 (calc (p "taylor(sin(x),x=0,3)" formula) n "----" n (format "%s" (calc-eval formula)))
 
 org-mode
