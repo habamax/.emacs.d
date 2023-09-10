@@ -952,6 +952,10 @@
    `(eglot-highlight-symbol-face
      ((,class256 (:background ,match))))
 
+   ;; lsp-mode
+   `(lsp-face-highlight-textual
+     ((,class256 (:background ,match))))
+
    ;; wgrep
    `(wgrep-face
      ((,classTC (:background ,diff-added-bg))
@@ -1227,6 +1231,8 @@
      ((,class256 (:background ,grey3))))
    `(company-tooltip-common
      ((,class256 (:inherit completions-common-part))))
+   `(company-tooltip-annotation
+     ((,class256 (:inherit completions-annotations))))
    `(company-tooltip-selection
      ((,class256 (:background ,grey1))))
    `(company-tooltip-scrollbar-track

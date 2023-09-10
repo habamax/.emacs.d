@@ -1184,7 +1184,9 @@
    `(company-tooltip
      ((t (:background ,grey2))))
    `(company-tooltip-common
-     ((,class256 (:inherit completions-common-part))))
+     ((t (:inherit completions-common-part))))
+   `(company-tooltip-annotation
+     ((t (:inherit completions-annotations))))
    `(company-tooltip-selection
      ((t (:background ,grey1))))
    `(company-tooltip-scrollbar-track
