@@ -68,7 +68,7 @@
 (recentf-mode 1)
 
 (electric-pair-mode t)
-(delete-selection-mode t)
+(delete-selection-mode)
 (save-place-mode 1)
 (savehist-mode 1)
 (repeat-mode t)
