@@ -99,6 +99,9 @@ body {
     .content {
         max-width: 20cm;
     }
+    #postamble {
+        max-width: 22cm;
+    }
     .sidebar {
         max-width: 7cm;
         margin: 0.5em -9.7cm 0.5em 1em;
