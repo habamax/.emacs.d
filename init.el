@@ -62,17 +62,17 @@
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
 
 (setq winner-dont-bind-my-keys t)
-(winner-mode t)
+(winner-mode)
 
 (setq recentf-max-saved-items 1000)
-(recentf-mode 1)
+(recentf-mode)
 
-(electric-pair-mode t)
+(repeat-mode)
+(electric-pair-mode)
 (delete-selection-mode)
 (save-place-mode 1)
 (savehist-mode 1)
-(repeat-mode t)
-(pixel-scroll-precision-mode 1)
+(pixel-scroll-precision-mode)
 
 ;; terminal truncate/wrap symbols
 (set-display-table-slot standard-display-table
