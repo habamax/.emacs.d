@@ -71,6 +71,10 @@ body {
         padding: 1cm 2cm 1cm 2cm;
         margin: 0 auto;
     }
+    #postamble {
+        padding: 1cm 2cm 1cm 0cm;
+        margin: 0 auto;
+    }
     .sidebar {
         max-width: 9cm;
         width: 9cm;
