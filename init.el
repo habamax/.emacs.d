@@ -276,7 +276,8 @@
          ("TAB" . org-cycle)
          ("<backtab>" . org-shifttab)
          ("N" . org-next-link)
-         ("P" . org-previous-link))
+         ("P" . org-previous-link)
+         ("RET" . org-open-at-point))
   :config
   (define-key org-mode-map (kbd "C-c C-r") verb-command-map)
   (require 'habamax-org))
