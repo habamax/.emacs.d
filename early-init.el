@@ -9,7 +9,8 @@
 
 (setq inhibit-startup-message t
       inhibit-splash-screen t)
-(setq initial-scratch-message nil)
+(setq initial-scratch-message nil
+      initial-major-mode 'fundamental-mode)
 
 (defconst +IS-OSX+ (eq system-type 'darwin))
 (defconst +IS-WINDOWS+ (eq system-type 'windows-nt))
