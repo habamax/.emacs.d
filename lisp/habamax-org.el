@@ -80,17 +80,17 @@
                 (buffer-string))
               "</style>\n"))
 
-(defun habamax-org/open-file ()
+(defun habamax-org-open-file ()
   (interactive)
   (let ((default-directory org-directory))
     (project-find-file)))
 
-(defun habamax-org/search ()
+(defun habamax-org-search ()
   (interactive)
   (let ((default-directory org-directory))
     (consult-ripgrep)))
 
-(defun habamax-org/insert-screenshot ()
+(defun habamax-org-insert-screenshot ()
   (interactive)
   (let* ((img-dir (concat "img-"
                           (file-name-sans-extension (buffer-name))))
