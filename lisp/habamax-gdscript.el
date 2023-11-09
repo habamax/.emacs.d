@@ -58,5 +58,16 @@
    ((string-match "^godot" compile-command) (recompile))
    (t (habamax-gdscript-run-current))))
 
+(defun habamax-gdscript-ts-bool-hl ()
+  "Override treesit highlighting for `true' and `false'."
+  ;; (interactive)
+  (add-to-list 'treesit-font-lock-settings
+             (car (treesit-font-lock-rules
+                   :language 'gdscript
+                   :override t
+                   :feature 'boolean
+                   '([(false) (true)] @font-lock-constant-face)))
+             t))
+
 (provide 'habamax-gdscript)
 ;;; habamax-gdscript.el ends here

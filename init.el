@@ -346,6 +346,7 @@
   :bind (("C-h D" . devdocs-lookup)))
 
 (use-package gdscript-mode
+  :hook (gdscript-ts-mode . habamax-gdscript-ts-bool-hl)
   :bind
   (:map gdscript-ts-mode-map
         ("C-c <f5>" . habamax-gdscript-godot)
