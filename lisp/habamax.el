@@ -104,7 +104,7 @@ Otherwise call well known `comment-dwim'"
          (next-theme (seq-elt my-themes
                               (1+ (seq-position my-themes theme)))))
     (mapc #'disable-theme custom-enabled-themes)
-    (load-theme (or next-theme (car my-themes)) t)))
+    (ignore-errors (load-theme (or next-theme (car my-themes)) t))))
 
 (defun habamax-toggle-alpha ()
   "Toggle alpha-background (transparency)."
