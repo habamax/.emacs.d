@@ -281,20 +281,20 @@
   :config
   (setq magit-save-repository-buffers 'dontask))
 
-(use-package corfu
-  :hook ((prog-mode . corfu-mode))
-  :bind (:map corfu-map ("RET"))
-  :custom
-  (corfu-auto t)
-  (corfu-quit-no-match 'separator)
-  :config
-  (use-package corfu-terminal
-    :init
-    (corfu-terminal-mode)))
+;; (use-package corfu
+;;   :hook ((prog-mode . corfu-mode))
+;;   :bind (:map corfu-map ("RET"))
+;;   :custom
+;;   (corfu-auto t)
+;;   (corfu-quit-no-match 'separator)
+;;   :config
+;;   (use-package corfu-terminal
+;;     :init
+;;     (corfu-terminal-mode)))
 
-;; (use-package company
-;;   :diminish
-;;   :hook ((prog-mode . company-mode)))
+(use-package company
+  :diminish
+  :hook ((prog-mode . company-mode)))
 
 (use-package tempel
   :bind (("M-*" . tempel-complete)
