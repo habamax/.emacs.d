@@ -1033,7 +1033,7 @@
    `(erc-nick-msg-face
      ((,class256 (:foreground ,bright-yellow))))
    `(erc-input-face
-     ((,class256 (:foreground ,purple))))
+     ((,class256 (:foreground ,bright-green))))
    `(erc-error-face
      ((,class256 (:foreground ,red))))
    `(erc-dangerous-host-face
