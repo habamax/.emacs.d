@@ -3,21 +3,14 @@
 ;;  Bunch of misc functions.
 ;;; Code:
 
-(defun habamax-open-init-file ()
-  "Open init.el."
+(defun habamax-open-user-emacs-file ()
+  "Complete and open file from user emacs directory.
+Future history is set to init.el."
   (interactive)
-  (find-file user-init-file))
-
-(defun habamax-open-secret-file ()
-  "Select and open gpg file from org directory."
-  (interactive)
-  (let ((default-directory (or (getenv "ORG") "~/org")))
-    (thread-first
-      (lambda (f) (file-relative-name (file-name-sans-extension f)))
-      (mapcar (directory-files-recursively default-directory "\\.gpg$"))
-      ((lambda (files) (completing-read "Open secret: " files)))
-      (concat ".gpg")
-      (find-file))))
+  (let* ((pr (project-current nil (locate-user-emacs-file "")))
+         (root (project-root pr))
+         (dirs (list root)))
+    (project-find-file-in "init.el" dirs pr nil)))
 
 (defun habamax-toggle-comment (arg)
   "Comment or uncomment current line if mark region is not active.
@@ -35,30 +28,6 @@ Otherwise call well known `comment-dwim'"
   "Join next line."
   (interactive)
   (delete-indentation 1))
-
-(defun habamax-next-buffer-like-this ()
-  "Open next buffer with the same major mode as current."
-  (interactive)
-  (let ((b-name (buffer-name))
-        (b-mode mode-name))
-    (next-buffer)
-    (while
-        (and
-         (not (equal mode-name b-mode))
-         (not (equal b-name (buffer-name))))
-      (next-buffer))))
-
-(defun habamax-previous-buffer-like-this ()
-  "Open previous buffer with the same major mode as current."
-  (interactive)
-  (let ((b-name (buffer-name))
-        (b-mode mode-name))
-    (previous-buffer)
-    (while
-        (and
-         (not (equal mode-name b-mode))
-         (not (equal b-name (buffer-name))))
-      (previous-buffer))))
 
 (defun habamax-kill-region ()
   "Kill region if mark is active, kill whole line otherwise."
@@ -84,8 +53,18 @@ Otherwise call well known `comment-dwim'"
     (when-let ((close (char-before))
                (start (point)))
       (delete-char -1)
-      (forward-sexp)
+      (condition-case nil
+          (progn
+            (when (not
+                   (or (char-equal (char-after) 10)
+                       (char-equal (char-after) 41)))
+              (just-one-space))
+            (forward-sexp))
+        (error nil))
       (insert close)
+      (when (re-search-backward "^\s*)" nil t)
+        (delete-indentation))
+      (delete-trailing-whitespace start (point))
       (indent-region start (point) nil))))
 
 (defun habamax-diff-current-buffer ()
@@ -109,7 +88,7 @@ Otherwise call well known `comment-dwim'"
   (interactive)
   (let ((path (locate-user-emacs-file "lorem/")))
     (insert-file-contents
-     (concat
+     (file-name-concat
       path
       (completing-read
        "Insert lorem: "
@@ -121,11 +100,15 @@ Otherwise call well known `comment-dwim'"
   "Toggle my themes."
   (interactive)
   (let* ((theme (car custom-enabled-themes))
-         (my-themes '((wildcharm . wildcharm-light)
-                      (wildcharm-light . sandcastle)))
+         (my-themes '((nocharm-p . nocharm-y)
+                      (nocharm-y . nocharm)
+                      (nocharm . nocharm-light)
+                      (nocharm-light . nocharm-white)
+                      (nocharm-white . wildcharm)
+                      (wildcharm . wildcharm-light)))
          (next-theme (cdr (assoc theme my-themes))))
     (mapc #'disable-theme custom-enabled-themes)
-    (load-theme (or next-theme 'wildcharm) t)))
+    (load-theme (or next-theme 'nocharm-p) t)))
 
 (defun habamax-toggle-alpha ()
   "Toggle alpha-background (transparency)."
@@ -162,27 +145,38 @@ Otherwise call well known `comment-dwim'"
       (call-process-shell-command
        (format "nautilus --select \"%s\" &" filename))))))
 
+(defun habamax-web-search ()
+  "Search the web for the text in the region.
+If region is active, search the web for the text between region
+beginning and end. Else, prompt the user for a search string."
+  (interactive)
+  (let ((query (if (use-region-p)
+                   (buffer-substring (region-beginning) (region-end))
+                 (read-string "Search web for: "))))
+    (browse-url (format "https://google.com/search?q=%s"
+                        (url-hexify-string query)))))
+
 (defun habamax-auth-secret (host)
   "Return secret(password) for specified host from auth-sources."
   (let ((found (nth 0 (auth-source-search :host host :create nil))))
     (when found
       (let ((secret (plist-get found :secret)))
-	(if (functionp secret)
-	    (funcall secret)
-	  secret)))))
+        (if (functionp secret)
+            (funcall secret)
+          secret)))))
 
 (defun habamax-auth-basic (host)
-    "Return base64 encoded login:password for specified host from auth-sources."
-    (let ((found (nth 0 (auth-source-search :host host :create nil))))
-      (when found
-	(let ((secret (plist-get found :secret))
-              (user (plist-get found :user)))
-          (base64url-encode-string
-           (format "%s:%s"
-                  user
-                  (if (functionp secret)
-                      (funcall secret)
-                    secret)))))))
+  "Return base64 encoded login:password for specified host from auth-sources."
+  (let ((found (nth 0 (auth-source-search :host host :create nil))))
+    (when found
+      (let ((secret (plist-get found :secret))
+            (user (plist-get found :user)))
+        (base64url-encode-string
+         (format "%s:%s"
+                 user
+                 (if (functionp secret)
+                     (funcall secret)
+                   secret)))))))
 
 (provide 'habamax)
 ;;; habamax.el ends here

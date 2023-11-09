@@ -6,6 +6,16 @@
 
 (defvar habamax-godot-executable "godot")
 
+(defun habamax-gdscript-godot ()
+  (interactive)
+  (call-process-shell-command
+   (concat habamax-godot-executable
+           " --path "
+           (project-root (project-current))
+           " --editor "
+           (file-name-sans-extension (buffer-file-name)) ".tscn"
+           "&")))
+
 (defun habamax-gdscript--run-scene (scene-file)
   "Run `scene-file' with godot."
   (let ((default-directory (project-root (project-current))))

@@ -79,7 +79,7 @@ text-mode
 
 org-mode
 
-(tit "#+title: " p n "#+author: Maxim Kim")
+(tit "#+title: " p n "#+author: Maxim Kim" n "#+options: toc:nil num:nil")
 (be "#+begin_" (s name) n> r> n "#+end_" name)
 (ce "#+begin_center" n> r> n "#+end_center")
 (qu "#+begin_quote" n> r> n "#+end_quote")

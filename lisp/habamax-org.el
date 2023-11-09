@@ -16,8 +16,8 @@
       (append
        '("todo.org" "notes.org" "dates.org" "work.org")
        (mapcar
-        (lambda (f) (concat "projects/" f))
-        (directory-files (concat org-directory "/projects")
+        (lambda (f) (file-name-concat "projects" f))
+        (directory-files (file-name-concat org-directory "projects")
                          nil "^[^.].*\\.org$"))))
 
 (setq org-refile-use-outline-path 'file)
@@ -80,15 +80,20 @@
                 (buffer-string))
               "</style>\n"))
 
+(org-babel-do-load-languages
+ 'org-babel-load-languages '((gnuplot . t)))
+
 (defun habamax-org-open-file ()
   (interactive)
-  (let ((default-directory org-directory))
-    (project-find-file)))
+  (let* ((pr (project-current nil org-directory))
+         (root (project-root pr))
+         (dirs (list root)))
+    (project-find-file-in "todo.org" dirs pr nil)))
 
 (defun habamax-org-search ()
   (interactive)
   (let ((default-directory org-directory))
-    (consult-ripgrep)))
+    (call-interactively 'grep)))
 
 (defun habamax-org-insert-screenshot ()
   (interactive)
@@ -96,7 +101,7 @@
                           (file-name-sans-extension (buffer-name))))
          (img-name (concat (file-name-sans-extension (buffer-name))
                            "-" (format-time-string "%Y%m%d-%H%M%S") ".png"))
-         (filename (concat img-dir "/" img-name)))
+         (filename (file-name-concat img-dir img-name)))
     (make-directory img-dir :parents)
     ;; Windows -- use powershell, other(implicit linux) -- use wl-paste
     (shell-command
@@ -110,6 +115,17 @@
           "',[System.Drawing.Imaging.ImageFormat]::Png);}\"")
        (concat "wl-paste > " filename)))
     (insert (concat "[[file:" filename "]]"))))
+
+(defun habamax-org-capture (&optional goto)
+  "Call org-capture via completing read. GOTO as in `org-capture'"
+  (interactive)
+  (let ((label (completing-read
+                "Capture: "
+                (mapcar (lambda (s) (concat (cadr s)))
+                        org-capture-templates))))
+    (condition-case error
+        (org-capture goto (substring label 0 1))
+      ((error quit) (message "Capture aborted")))))
 
 (provide 'habamax-org)
 ;;; habamax-org.el ends here

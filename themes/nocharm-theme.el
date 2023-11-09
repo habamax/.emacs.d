@@ -1,7 +1,7 @@
-;;; wildcharm-theme.el --- Port of vim-wildcharm colorscheme -*- lexical-binding: t; -*-
+;;; nocharm-theme.el --- Minimal dark emacs theme -*- lexical-binding: t; -*-
 
 ;; Author: Maxim Kim <habamax@gmail.com>
-;; URL: https://github.com/habamax/wildcharm-theme
+;; URL: https://github.com/habamax/nocharm-theme
 ;; Package-Requires: ((emacs "24.1"))
 ;; Package-Version: 0.7
 
@@ -20,16 +20,12 @@
 
 ;;; Commentary:
 
-;; High-contrast dark Emacs theme.
-;; - Port of the dark background vim-wildcharm colorscheme.
-;; - TUI has no background defined, i.e. depends on terminal.
-;; - Should look mostly the same in GUI and TUI with 256 colors support.
+;; Minimal dark Emacs theme.
 
 ;;; Code:
 
-(deftheme wildcharm
-  "High-contrast dark Emacs theme."
-  :family 'wildcharm)
+(deftheme nocharm
+  "Minimal dark Emacs theme.")
 
 (let* ((classTC '((class color) (min-colors 257)))
        (class256 '((class color) (min-colors 256)))
@@ -42,8 +38,8 @@
        (blue "#0087d7")(bright-blue "#00afff")
        (magenta "#d787d7")(bright-magenta "#ff87ff")
        (cyan "#00afaf")(bright-cyan "#00d7d7")
-       (grey "#d0d0d0")(white "#ffffff")
-       (purple "#875fff")(comment "#87875f")
+       (grey "#d0d0d0")(white "#f0f0f0")
+       (purple "#875fff")(comment blue)
        (yellow1 "#d7af5f")(yellow2 "#ffd75f")
        (grey1 "#3a3a3a")(grey2 "#262626")
        (non-text "#585858")
@@ -82,7 +78,7 @@
        (code-block "#1F1F1F"))
 
   (custom-theme-set-faces
-   'wildcharm
+   'nocharm
 
    ;; standard faces
    `(default
@@ -91,9 +87,9 @@
    `(shadow
      ((,class256 (:foreground ,non-text))))
    `(link
-     ((,class256 (:foreground ,bright-blue :underline t))))
+     ((,class256 (:foreground unspecified :underline t))))
    `(link-visited
-     ((,class256 (:foreground ,magenta :underline t))))
+     ((,class256 (:foreground ,darkgrey :underline t))))
    `(highlight
      ((,class256 (:background ,black :foreground ,bright-blue :inverse-video t))))
    `(region
@@ -105,7 +101,7 @@
    `(line-number
      ((,class256 (:inherit default :foreground ,non-text))))
    `(line-number-current-line
-     ((,class256 (:inherit default :foreground ,yellow :weight bold))))
+     ((,class256 (:inherit default :foreground ,white :weight bold))))
    `(line-number-major-tick
      ((,class256 (:inherit default :foreground ,darkgrey :weight bold))))
    `(line-number-minor-tick
@@ -146,7 +142,7 @@
    ;; internal-border, not sure what exactly it affects...
    ;; child-frame-border, not sure neither...
    `(minibuffer-prompt
-     ((,class256 (:foreground ,bright-yellow :weight bold))))
+     ((,class256 (:foreground ,white :weight bold))))
    `(fringe
      ((t (:foreground ,non-text :background unspecified))))
    `(separator-line
@@ -182,7 +178,7 @@
    `(tab-line-close-highlight
      ((t (:background unspecified :foreground ,red))))
    `(help-key-binding
-     ((,class256 (:background unspecified :foreground ,cyan :weight bold))))
+     ((,class256 (:background unspecified :foreground ,white :weight bold))))
    `(error
      ((,class256 (:foreground ,bright-red :weight bold))))
    `(warning
@@ -239,21 +235,21 @@
 
    ;; font-lock
    `(font-lock-string-face
-     ((,class256 (:foreground ,bright-green :weight unspecified :slant unspecified))))
+     ((,class256 (:foreground ,cyan :weight unspecified :slant unspecified))))
    `(font-lock-comment-face
      ((,class256 (:foreground ,comment :weight unspecified :slant unspecified))))
    `(font-lock-keyword-face
-     ((,class256 (:foreground ,bright-blue :weight unspecified :slant unspecified))))
+     ((,class256 (:foreground ,white :weight bold :slant unspecified))))
    `(font-lock-preprocessor-face
-     ((,class256 (:foreground ,purple :weight unspecified :slant unspecified))))
+     ((,class256 (:foreground ,darkgrey :weight unspecified :slant unspecified))))
    `(font-lock-builtin-face
-     ((,class256 (:foreground ,magenta :weight unspecified :slant unspecified))))
+     ((,class256 (:foreground unspecified :weight unspecified :slant unspecified))))
    `(font-lock-type-face
-     ((,class256 (:foreground ,bright-yellow :weight unspecified :slant unspecified))))
+     ((,class256 (:foreground unspecified :weight unspecified :slant unspecified))))
    `(font-lock-function-name-face
-     ((,class256 (:foreground ,bright-magenta :weight unspecified :slant unspecified))))
+     ((,class256 (:foreground unspecified :weight unspecified :slant unspecified))))
    `(font-lock-variable-name-face
-     ((,class256 (:foreground ,bright-cyan :weight unspecified :slant unspecified))))
+     ((,class256 (:foreground unspecified :weight unspecified :slant unspecified))))
    `(font-lock-constant-face
      ((,class256 (:foreground ,bright-red :weight unspecified :slant unspecified))))
    `(font-lock-warning-face
@@ -264,13 +260,13 @@
    `(font-lock-escape-face
      ((,class256 (:foreground ,bright-yellow :weight unspecified :slant unspecified))))
    `(font-lock-function-call-face
-     ((,class256 (:foreground ,magenta :weight unspecified :slant unspecified))))
+     ((,class256 (:foreground unspecified :weight unspecified :slant unspecified))))
    `(font-lock-regexp-face
      ((,class256 (:foreground ,green :weight unspecified :slant unspecified))))
    `(font-lock-delimiter-face
      ((,class256 (:foreground ,bright-magenta :weight unspecified :slant unspecified))))
    `(font-lock-property-use-face
-     ((,class256 (:foreground ,cyan :weight unspecified :slant unspecified))))
+     ((,class256 (:foreground unspecified :weight unspecified :slant unspecified))))
    `(font-lock-bracket-face
      ((,class256 (:foreground ,purple :weight unspecified :slant unspecified))))
 
@@ -278,14 +274,17 @@
      ((,class256 (:foreground ,bright-cyan :weight bold :slant unspecified))))
 
    `(perl-non-scalar-variable
-     ((,class256 (:inherit font-lock-variable-name-face))))
+     ((t (:inherit font-lock-variable-name-face))))
 
    `(cperl-nonoverridable-face
-     ((,class256 (:background unspecified :foreground unspecified))))
+     ((t (:background unspecified :foreground unspecified))))
    `(cperl-hash-face
-     ((,class256 (:inherit font-lock-variable-name-face))))
+     ((t (:inherit font-lock-variable-name-face))))
    `(cperl-array-face
-     ((,class256 (:inherit font-lock-variable-name-face))))
+     ((t (:inherit font-lock-variable-name-face))))
+
+   `(sh-quoted-exec
+     ((,class256 (:inherit font-lock-string-face))))
 
    ;; isearch & search
    `(isearch
@@ -369,7 +368,7 @@
 
    ;; dired
    `(dired-header
-     ((,class256 (:foreground ,white :weight bold))))
+     ((,class256 (:foreground ,bright-blue :weight bold))))
    `(dired-directory
      ((,class256 (:inherit font-lock-keyword-face :weight bold))))
    `(dired-symlink
@@ -488,6 +487,12 @@
    `(outline-8
      ((,class256 (:foreground ,outline-8 :weight bold))))
 
+   ;; packages
+   `(package-status-dependency
+     ((t (:inherit package-status-installed))))
+   `(package-status-built-in
+     ((t (:inherit package-status-installed))))
+
    ;; org
    `(org-meta-line
      ((,class256 (:foreground ,darkgrey))))
@@ -499,9 +504,11 @@
      ((,classTC (:background ,code-block :foreground ,fg :extend t))
       (t (:foreground ,fg))))
    `(org-block-begin-line
-     ((t (:background unspecified :foreground ,darkgrey))))
+     ((,classTC (:background unspecified :foreground ,darkgrey))
+      (t (:foreground ,darkgrey))))
    `(org-block-end-line
-     ((t (:background unspecified :foreground ,darkgrey))))
+     ((,classTC (:background unspecified :foreground ,darkgrey))
+      (t (:foreground ,darkgrey))))
    `(org-document-title
      ((,class256 (:foreground ,white :weight bold))))
    `(org-document-info
@@ -519,7 +526,7 @@
    `(org-footnote
      ((,class256 (:foreground ,darkgrey))))
    `(org-ellipsis
-     ((,class256 (:foreground ,bright-yellow))))
+     ((,class256 (:foreground unspecified))))
    `(org-latex-and-related
      ((,class256 (:foreground ,yellow))))
    `(org-tag
@@ -747,9 +754,9 @@
 
    ;; diff
    `(diff-header
-     ((,class256 (:background ,grey2 :foreground ,bright-blue :weight bold))))
+     ((t (:background ,grey2 :foreground ,white :weight bold))))
    `(diff-file-header
-     ((,class256 (:background ,grey2 :foreground ,white))))
+     ((t (:background unspecified :foreground ,white))))
    `(diff-hunk-header
      ((,class256 (:foreground ,bright-yellow :weight bold))))
    `(diff-function
@@ -773,11 +780,11 @@
 
    ;; vc
    `(vc-dir-header
-     ((,class256 (:foreground ,bright-magenta))))
+     ((,class256 (:foreground ,white :weight bold))))
    `(vc-dir-header-value
      ((,class256 (:foreground ,fg))))
    `(vc-dir-directory
-     ((,class256 (:foreground ,bright-blue :weight bold))))
+     ((,class256 (:foreground ,white :weight bold))))
    `(vc-dir-file
      ((,class256 (:foreground ,fg))))
    `(vc-dir-status-up-to-date
@@ -830,7 +837,7 @@
    `(magit-branch-remote
      ((,class256 (:foreground ,bright-green))))
    `(magit-tag
-     ((,class256 (:foreground ,yellow))))
+     ((,class256 (:foreground ,bright-red))))
    `(magit-dimmed
      ((t (:foreground ,darkgrey))))
    `(magit-hash
@@ -1015,7 +1022,7 @@
 
    ;; erc
    `(erc-timestamp-face
-     ((,class256 (:foreground ,cyan))))
+     ((,class256 (:foreground ,darkgrey))))
    `(erc-notice-face
      ((,class256 (:foreground ,darkgrey))))
    `(erc-my-nick-face
@@ -1033,7 +1040,7 @@
    `(erc-direct-msg-face
      ((,class256 (:foreground ,yellow))))
    `(erc-button
-     ((,class256 (:background unspecified :foreground ,bright-blue :underline t))))
+     ((,class256 (:background unspecified :foreground unspecified :underline t))))
    `(erc-prompt-face
      ((,class256 (:background unspecified :foreground ,magenta :weight bold))))
    `(erc-action-face
@@ -1185,6 +1192,10 @@
    `(emms-browser-year/genre-face
      ((,class256 (:foreground ,bright-red))))
 
+   ;; world-clock
+   `(world-clock-label
+     ((t (:foreground ,white :weight bold))))
+
    ;; vertico
    `(vertico-current
      ((,class256 (:background ,hl-line))))
@@ -1205,7 +1216,7 @@
    `(marginalia-date
      ((,class256 (:foreground ,darkgrey))))
    `(marginalia-file-priv-dir
-     ((,class256 (:foreground ,darkgrey))))
+     ((,class256 (:foreground unspecified :weight bold))))
    `(marginalia-file-priv-link
      ((,class256 (:foreground ,bright-cyan))))
    `(marginalia-file-priv-read
@@ -1325,10 +1336,6 @@
    `(rst-definition
      ((,class256 (:foreground ,green))))
 
-   ;; sh
-   `(sh-quoted-exec
-     ((,class256 (:foreground ,bright-magenta))))
-
    ;; tuareg
    `(tuareg-font-lock-error-face
      ((,class256 (:foreground ,red :background ,white :inverse-video t))))
@@ -1373,5 +1380,5 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'wildcharm)
-;;; wildcharm-theme.el ends here
+(provide-theme 'nocharm)
+;;; nocharm-theme.el ends here

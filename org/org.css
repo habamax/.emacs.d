@@ -26,30 +26,35 @@ body {
 }
 .note {
     background-color: #f0f7fa;
+    border: solid 1px #d0d7da;
 }
 .important::before {
     background-color: #e18114;
 }
 .important {
     background-color: #faf7f0;
+    border: solid 1px #dad7d0;
 }
 .tip::before {
     background-color: #41af46;
 }
 .tip {
     background-color: #f0f7f0;
+    border: solid 1px #d0d7d0;
 }
 .caution::before {
     background-color: #a0439c;
 }
 .caution {
     background-color: #f7f0f7;
+    border: solid 1px #d7d0d7;
 }
 .warning::before {
     background-color: #d32f2f;
 }
 .warning {
     background-color: #f7f0f0;
+    border: solid 1px #d7d0d0;
 }
 .note, .warning, .tip, .important, .caution {
     border-radius: 0.25em;
@@ -72,7 +77,7 @@ body {
         margin: 0 auto;
     }
     #postamble {
-        padding: 1cm 2cm 1cm 0cm;
+        padding: 5mm 2cm 1cm 0cm;
         margin: 0 auto;
     }
     .sidebar {
@@ -135,7 +140,6 @@ body {
         padding: 0 0.5em 0 1em;
         font-size: small;
     }
-
     pre, .org-src-container>pre {
         overflow: auto;
         white-space: pre-wrap;
@@ -455,7 +459,8 @@ kbd {
 }
 #postamble p,
 #preamble p {
-    font-size: 90%;
+    font-size: small;
+    line-height: 1.2;
     margin: .2em
 }
 p.verse {
@@ -465,7 +470,7 @@ p.verse {
     padding: 2px 5px;
     margin: auto 1px;
     border: 1px solid #ddd;
-    background-color: #f7f7f3;
+    background-color: #f7f7f7;
     border-radius: 3px;
     background-clip: padding-box;
     color: #000;
@@ -515,7 +520,7 @@ p.verse {
 }
 pre.example, .org-src-container {
     border: 1px solid #ccc;
-    background-color: #f7f7f3;
+    background-color: #f7f7f7;
     border-radius: 3px;
     line-height: 1.3;
     font-family: monospace;
@@ -527,7 +532,7 @@ pre.example {
     padding: 1em 0.5em;
 }
 pre.src {
-    padding: 1em 0.2em;
+    padding: 1.2em 0.2em 1em 0.2em;
     margin: 0;
 }
 pre.example, .org-src-container>pre {
@@ -539,7 +544,7 @@ pre.example, .org-src-container>pre {
     background-color: #888;
     top: 0;
     right: 0;
-    padding: 1mm 2mm;
+    padding: 0.5pt 4pt 1pt 5pt;
     border-bottom-left-radius: 8px;
     border-top-right-radius: 2px;
     border: 0;

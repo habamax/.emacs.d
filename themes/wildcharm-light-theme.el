@@ -3,7 +3,7 @@
 ;; Author: Maxim Kim <habamax@gmail.com>
 ;; URL: https://github.com/habamax/wildcharm-theme
 ;; Package-Requires: ((emacs "24.1"))
-;; Package-Version: 0.6
+;; Package-Version: 0.7
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -68,6 +68,12 @@
        (outline-6 "#af875f")
        (outline-7 "#005f87")
        (outline-8 darkgrey)
+       (hi-yellow "#ffffaf")
+       (hi-pink "#ffafd7")
+       (hi-blue "#afd7ff")
+       (hi-green "#d7ffd7")
+       (hi-salmon "#ffd7af")
+       (hi-aquamarine "#d7ffff")
        (code-block "#f7f7f7"))
 
   (custom-theme-set-faces
@@ -225,45 +231,55 @@
 
    ;; font-lock
    `(font-lock-string-face
-     ((,class256 (:foreground ,green))))
+     ((,class256 (:foreground ,green :weight unspecified :slant unspecified))))
    `(font-lock-comment-face
-     ((,class256 (:foreground ,comment))))
+     ((,class256 (:foreground ,comment :weight unspecified :slant unspecified))))
    `(font-lock-keyword-face
-     ((,class256 (:foreground ,blue))))
+     ((,class256 (:foreground ,blue :weight unspecified :slant unspecified))))
    `(font-lock-preprocessor-face
-     ((,class256 (:foreground ,purple))))
+     ((,class256 (:foreground ,purple :weight unspecified :slant unspecified))))
    `(font-lock-builtin-face
-     ((,class256 (:foreground ,magenta))))
+     ((,class256 (:foreground ,magenta :weight unspecified :slant unspecified))))
    `(font-lock-type-face
-     ((,class256 (:foreground ,yellow))))
+     ((,class256 (:foreground ,yellow :weight unspecified :slant unspecified))))
    `(font-lock-function-name-face
-     ((,class256 (:foreground ,bright-magenta))))
+     ((,class256 (:foreground ,bright-magenta :weight unspecified :slant unspecified))))
    `(font-lock-variable-name-face
-     ((,class256 (:foreground ,bright-cyan))))
+     ((,class256 (:foreground ,bright-cyan :weight unspecified :slant unspecified))))
    `(font-lock-constant-face
-     ((,class256 (:foreground ,red))))
+     ((,class256 (:foreground ,red :weight unspecified :slant unspecified))))
    `(font-lock-warning-face
-     ((,class256 (:foreground ,bright-yellow :weight bold))))
+     ((,class256 (:foreground ,bright-yellow :weight bold :slant unspecified))))
 
    `(font-lock-number-face
-     ((,class256 (:foreground ,red))))
+     ((,class256 (:foreground ,red :weight unspecified :slant unspecified))))
    `(font-lock-escape-face
-     ((,class256 (:foreground ,yellow))))
+     ((,class256 (:foreground ,yellow :weight unspecified :slant unspecified))))
    `(font-lock-function-call-face
-     ((,class256 (:foreground ,magenta))))
+     ((,class256 (:foreground ,magenta :weight unspecified :slant unspecified))))
    `(font-lock-regexp-face
-     ((,class256 (:foreground ,bright-green))))
+     ((,class256 (:foreground ,bright-green :weight unspecified :slant unspecified))))
    `(font-lock-delimiter-face
-     ((,class256 (:foreground ,magenta))))
+     ((,class256 (:foreground ,magenta :weight unspecified :slant unspecified))))
    `(font-lock-property-use-face
-     ((,class256 (:foreground ,cyan))))
+     ((,class256 (:foreground ,cyan :weight unspecified :slant unspecified))))
    `(font-lock-bracket-face
-     ((,class256 (:foreground ,purple))))
+     ((,class256 (:foreground ,purple :weight unspecified :slant unspecified))))
 
    `(elisp-shorthand-font-lock-face
-     ((,class256 (:foreground ,bright-cyan :weight bold))))
+     ((,class256 (:foreground ,bright-cyan :weight bold :slant unspecified))))
 
-   ;; isearch
+   `(perl-non-scalar-variable
+     ((,class256 (:inherit font-lock-variable-name-face))))
+
+   `(cperl-nonoverridable-face
+     ((,class256 (:background unspecified :foreground unspecified))))
+   `(cperl-hash-face
+     ((,class256 (:inherit font-lock-variable-name-face))))
+   `(cperl-array-face
+     ((,class256 (:inherit font-lock-variable-name-face))))
+
+   ;; isearch & search
    `(isearch
      ((,class256 (:background ,white :foreground ,bright-yellow :inverse-video t))))
    `(isearch-group-1
@@ -274,6 +290,24 @@
      ((,class256 (:background ,white :foreground ,green :inverse-video t))))
    `(isearch-fail
      ((,class256 (:background ,diff-removed-bg :foreground ,diff-removed-fg))))
+   `(hi-yellow
+     ((,class256 (:background ,hi-yellow :foreground unspecified :inverse-video nil))))
+   `(hi-pink
+     ((,class256 (:background ,hi-pink :foreground unspecified :inverse-video nil))))
+   `(hi-blue
+     ((,class256 (:background ,hi-blue :foreground unspecified :inverse-video nil))))
+   `(hi-green
+     ((,class256 (:background ,hi-green :foreground unspecified :inverse-video nil))))
+   `(hi-salmon
+     ((,class256 (:background ,hi-salmon :foreground unspecified :inverse-video nil))))
+   `(hi-aquamarine
+     ((,class256 (:background ,hi-aquamarine :foreground unspecified :inverse-video nil))))
+   `(hi-red-b
+     ((,class256 (:background unspecified :foreground ,red :weight bold))))
+   `(hi-green-b
+     ((,class256 (:background unspecified :foreground ,green :weight bold))))
+   `(hi-blue-b
+     ((,class256 (:background unspecified :foreground ,blue :weight bold))))
 
    ;; replace.el
    `(match
@@ -283,7 +317,7 @@
    `(hl-line
      ((,class256 (:background ,hl-line :foreground unspecified))))
 
-   ;; widget
+   ;; customize & widget
    `(custom-button
      ((,class256 (:background ,grey1 :foreground ,fg :extend t
                               :box (:line-width (2 . 2) :style released-button)))))
@@ -297,6 +331,12 @@
      ((,class256 (:foreground ,green))))
    `(custom-group-tag
      ((,class256 (:foreground ,bright-magenta :weight bold))))
+   `(custom-variable-tag
+     ((,class256 (:background unspecified :foreground unspecified :weight bold))))
+   `(custom-comment
+     ((,class256 (:background unspecified :foreground ,comment :weight unspecified))))
+   `(custom-comment-tag
+     ((,class256 (:background unspecified :foreground unspecified :weight unspecified))))
    `(widget-field
      ((,class256 (:background ,grey1 :foreground ,fg :extend t))))
    `(widget-inactive
@@ -305,10 +345,6 @@
      ((,class256 (:foreground ,bright-red))))
    `(widget-documentation
      ((,class256 (:foreground ,green))))
-
-   ;; customize
-   `(custom-variable-tag
-     ((,class256 (:weight bold))))
 
    ;; shortdoc
    `(shortdoc-heading
@@ -386,6 +422,8 @@
    ;; message
    `(message-header-name
      ((,class256 (:foreground ,magenta))))
+   `(message-header-newsgroups
+     ((,class256 (:foreground ,black :weight bold))))
    `(message-header-subject
      ((,class256 (:foreground ,black :weight bold))))
    `(message-header-to
@@ -450,11 +488,9 @@
      ((,classTC (:background ,code-block :foreground ,fg :extend t))
       (t (:foreground ,fg))))
    `(org-block-begin-line
-     ((,classTC (:background ,code-block :foreground ,darkgrey :extend t))
-      (t (:foreground ,darkgrey))))
+     ((t (:background unspecified :foreground ,darkgrey))))
    `(org-block-end-line
-     ((,classTC (:background ,code-block :foreground ,darkgrey :extend t))
-      (t (:foreground ,darkgrey))))
+     ((t (:background unspecified :foreground ,darkgrey))))
    `(org-document-title
      ((,class256 (:foreground ,black :weight bold))))
    `(org-document-info
@@ -700,11 +736,13 @@
 
    ;; diff
    `(diff-header
-     ((,class256 (:foreground ,blue :weight bold))))
+     ((,class256 (:background ,grey3 :foreground ,blue :weight bold))))
    `(diff-file-header
-     ((,class256 (:foreground ,black))))
+     ((,class256 (:background ,grey3 :foreground ,black))))
    `(diff-hunk-header
      ((,class256 (:foreground ,yellow :weight bold))))
+   `(diff-function
+     ((,class256 (:foreground ,red :weight bold))))
    `(diff-added
      ((,class256 (:background ,diff-added-bg :foreground ,diff-added-fg))))
    `(diff-indicator-added
@@ -848,6 +886,11 @@
      ((,class256 (:foreground ,bright-blue))))
    `(magit-reflog-cherry-pick
      ((,class256 (:foreground ,bright-green))))
+
+   `(transient-key
+     ((,class256 (:inherit help-key-binding))))
+   `(transient-heading
+     ((,class256 (:inherit magit-section-heading))))
 
    ;; ediff
    `(ediff-current-diff-A
@@ -1157,7 +1200,7 @@
 
    ;; embark
    `(embark-keybinding
-     ((,class256 (:foreground ,bright-cyan :weight bold))))
+     ((,class256 (:inherit help-key-binding))))
 
    ;; notmuch
    `(notmuch-message-summary-face

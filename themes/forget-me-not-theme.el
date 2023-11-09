@@ -3,7 +3,7 @@
 ;; Author: Maxim Kim <habamax@gmail.com>
 ;; URL: https://github.com/habamax/forget-me-not-theme
 ;; Package-Requires: ((emacs "24.1"))
-;; Package-Version: 0.1
+;; Package-Version: 0.7
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -63,6 +63,12 @@
        (outline-6 "#af875f")
        (outline-7 "#005f87")
        (outline-8 darkgrey)
+       (hi-yellow "#ffffd7")
+       (hi-pink "#ffafd7")
+       (hi-blue "#87d7ff")
+       (hi-green "#d7ffd7")
+       (hi-salmon "#ffd7af")
+       (hi-aquamarine "#d7ffff")
        (code-block "#b7e1ef"))
 
   (custom-theme-set-faces
@@ -219,45 +225,55 @@
 
    ;; font-lock
    `(font-lock-string-face
-     ((t (:foreground ,green))))
+     ((t (:foreground ,green :weight unspecified :slant unspecified))))
    `(font-lock-comment-face
-     ((t (:foreground ,comment))))
+     ((t (:foreground ,comment :weight unspecified :slant unspecified))))
    `(font-lock-keyword-face
-     ((t (:foreground ,blue))))
+     ((t (:foreground ,blue :weight unspecified :slant unspecified))))
    `(font-lock-preprocessor-face
-     ((t (:foreground ,purple))))
+     ((t (:foreground ,purple :weight unspecified :slant unspecified))))
    `(font-lock-builtin-face
-     ((t (:foreground ,magenta))))
+     ((t (:foreground ,magenta :weight unspecified :slant unspecified))))
    `(font-lock-type-face
-     ((t (:foreground ,yellow))))
+     ((t (:foreground ,yellow :weight unspecified :slant unspecified))))
    `(font-lock-function-name-face
-     ((t (:foreground ,bright-magenta))))
+     ((t (:foreground ,bright-magenta :weight unspecified :slant unspecified))))
    `(font-lock-variable-name-face
-     ((t (:foreground ,bright-cyan))))
+     ((t (:foreground ,bright-cyan :weight unspecified :slant unspecified))))
    `(font-lock-constant-face
-     ((t (:foreground ,red))))
+     ((t (:foreground ,red :weight unspecified :slant unspecified))))
    `(font-lock-warning-face
-     ((t (:foreground ,bright-yellow :weight bold))))
+     ((t (:foreground ,bright-yellow :weight bold :slant unspecified))))
 
    `(font-lock-number-face
-     ((t (:foreground ,red))))
+     ((t (:foreground ,red :weight unspecified :slant unspecified))))
    `(font-lock-escape-face
-     ((t (:foreground ,yellow))))
+     ((t (:foreground ,yellow :weight unspecified :slant unspecified))))
    `(font-lock-function-call-face
-     ((t (:foreground ,magenta))))
+     ((t (:foreground ,magenta :weight unspecified :slant unspecified))))
    `(font-lock-regexp-face
-     ((t (:foreground ,bright-green))))
+     ((t (:foreground ,bright-green :weight unspecified :slant unspecified))))
    `(font-lock-delimiter-face
-     ((t (:foreground ,magenta))))
+     ((t (:foreground ,magenta :weight unspecified :slant unspecified))))
    `(font-lock-property-use-face
-     ((t (:foreground ,cyan))))
+     ((t (:foreground ,cyan :weight unspecified :slant unspecified))))
    `(font-lock-bracket-face
-     ((t (:foreground ,purple))))
+     ((t (:foreground ,purple :weight unspecified :slant unspecified))))
 
    `(elisp-shorthand-font-lock-face
-     ((t (:foreground ,bright-cyan :weight bold))))
+     ((t (:foreground ,bright-cyan :weight bold :slant unspecified))))
 
-   ;; isearch
+   `(perl-non-scalar-variable
+     ((t (:inherit font-lock-variable-name-face))))
+
+   `(cperl-nonoverridable-face
+     ((t (:background unspecified :foreground unspecified))))
+   `(cperl-hash-face
+     ((t (:inherit font-lock-variable-name-face))))
+   `(cperl-array-face
+     ((t (:inherit font-lock-variable-name-face))))
+
+   ;; isearch & search
    `(isearch
      ((t (:background ,white :foreground ,bright-yellow :inverse-video t))))
    `(isearch-group-1
@@ -268,6 +284,24 @@
      ((t (:background ,white :foreground ,green :inverse-video t))))
    `(isearch-fail
      ((t (:background ,diff-removed-bg :foreground ,diff-removed-fg))))
+   `(hi-yellow
+     ((t (:background ,hi-yellow :foreground unspecified :inverse-video nil))))
+   `(hi-pink
+     ((t (:background ,hi-pink :foreground unspecified :inverse-video nil))))
+   `(hi-blue
+     ((t (:background ,hi-blue :foreground unspecified :inverse-video nil))))
+   `(hi-green
+     ((t (:background ,hi-green :foreground unspecified :inverse-video nil))))
+   `(hi-salmon
+     ((t (:background ,hi-salmon :foreground unspecified :inverse-video nil))))
+   `(hi-aquamarine
+     ((t (:background ,hi-aquamarine :foreground unspecified :inverse-video nil))))
+   `(hi-red-b
+     ((t (:background unspecified :foreground ,red :weight bold))))
+   `(hi-green-b
+     ((t (:background unspecified :foreground ,green :weight bold))))
+   `(hi-blue-b
+     ((t (:background unspecified :foreground ,blue :weight bold))))
 
    ;; replace.el
    `(match
@@ -277,7 +311,7 @@
    `(hl-line
      ((t (:background ,hl-line :foreground unspecified))))
 
-   ;; widget
+   ;; customize & widget
    `(custom-button
      ((t (:background ,grey1 :foreground ,fg :extend t
                       :box (:line-width (2 . 2) :style released-button)))))
@@ -291,6 +325,12 @@
      ((t (:foreground ,green))))
    `(custom-group-tag
      ((t (:foreground ,bright-magenta :weight bold))))
+   `(custom-variable-tag
+     ((t (:background unspecified :foreground unspecified :weight bold))))
+   `(custom-comment
+     ((t (:background unspecified :foreground ,comment :weight unspecified))))
+   `(custom-comment-tag
+     ((t (:background unspecified :foreground unspecified :weight unspecified))))
    `(widget-field
      ((t (:background ,grey1 :foreground ,fg :extend t))))
    `(widget-inactive
@@ -299,10 +339,6 @@
      ((t (:foreground ,bright-red))))
    `(widget-documentation
      ((t (:foreground ,green))))
-
-   ;; customize
-   `(custom-variable-tag
-     ((t (:weight bold))))
 
    ;; shortdoc
    `(shortdoc-heading
@@ -380,6 +416,8 @@
    ;; message
    `(message-header-name
      ((t (:foreground ,magenta))))
+   `(message-header-newsgroups
+     ((t (:foreground ,black :weight bold))))
    `(message-header-subject
      ((t (:foreground ,black :weight bold))))
    `(message-header-to
@@ -443,9 +481,9 @@
    `(org-block
      ((t (:background ,code-block :foreground ,fg :extend t))))
    `(org-block-begin-line
-     ((t (:background ,code-block :foreground ,darkgrey :extend t))))
+     ((t (:background unspecified :foreground ,darkgrey))))
    `(org-block-end-line
-     ((t (:background ,code-block :foreground ,darkgrey :extend t))))
+     ((t (:background unspecified :foreground ,darkgrey))))
    `(org-document-title
      ((t (:foreground ,black :weight bold))))
    `(org-document-info
@@ -687,11 +725,13 @@
 
    ;; diff
    `(diff-header
-     ((t (:foreground ,blue :weight bold))))
+     ((t (:background ,grey1 :foreground ,blue :weight bold))))
    `(diff-file-header
      ((t (:foreground ,black))))
    `(diff-hunk-header
      ((t (:foreground ,yellow :weight bold))))
+   `(diff-function
+     ((t (:foreground ,red :weight bold))))
    `(diff-added
      ((t (:background ,diff-added-bg :foreground ,diff-added-fg))))
    `(diff-indicator-added
@@ -835,6 +875,11 @@
      ((t (:foreground ,bright-blue))))
    `(magit-reflog-cherry-pick
      ((t (:foreground ,bright-green))))
+
+   `(transient-key
+     ((t (:inherit help-key-binding))))
+   `(transient-heading
+     ((t (:inherit magit-section-heading))))
 
    ;; ediff
    `(ediff-current-diff-A
@@ -1140,7 +1185,7 @@
 
    ;; embark
    `(embark-keybinding
-     ((t (:foreground ,bright-cyan :weight bold))))
+     ((t (:inherit help-key-binding))))
 
    ;; notmuch
    `(notmuch-message-summary-face

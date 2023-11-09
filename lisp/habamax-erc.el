@@ -18,13 +18,12 @@
         "329"                           ; channel creation date
         "332"                           ; topic notice
         "333"                           ; who set the topic
-        "353"                           ; Names notice 
+        "353"                           ; Names notice
         ))
 
 (setq erc-autojoin-channels-alist
       '(("Libera.Chat"
-         "#emacs" "#vim" "#python" "#fennel"
-         "#lispgames" "#commonlisp")))
+         "#emacs" "#vim" "#perl" "#python" "#commonlisp")))
 
 (setq erc-kill-queries-on-quit t
       erc-kill-server-buffer-on-quit t)
@@ -33,7 +32,7 @@
       erc-prompt-for-nickserv-password nil)
 
 (when-let* ((dir (or (getenv "ORG") "~/org"))
-            (file (concat dir "/.conf/erc-ignore.el"))
+            (file (file-name-concat dir ".conf" "erc-ignore.el"))
             (file-exists-p file))
   (load file))
 

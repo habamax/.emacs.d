@@ -1,11 +1,11 @@
-;;; init.el --- emacs init file -*- lexical-binding: t; -*-
+;; init.el --- emacs init file -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;; Maxim Kim <habamax@gmail.com>
 ;;; Code:
 
 (add-hook 'emacs-startup-hook (lambda () (message "%s" (emacs-init-time))))
 
-(setq custom-file (make-temp-file "custom-emacs"))
+(setq custom-file (file-name-concat temporary-file-directory "custom-emacs"))
 
 (setq-default buffer-file-coding-system 'utf-8-unix)
 (setq default-input-method 'russian-computer)
@@ -17,34 +17,36 @@
       smtpmail-stream-type 'starttls
       smtpmail-smtp-service 587)
 
-(defalias 'yes-or-no-p 'y-or-n-p)
+(setq use-short-answers t)
 (setq ring-bell-function #'ignore)
 (setq scroll-error-top-bottom t)
 (setq disabled-command-function nil)
 (setq-default fill-column 80
               display-fill-column-indicator-character ?╎)
+(setq tab-always-indent 'complete)
 (setq sentence-end-double-space nil)
 (setq duplicate-line-final-position -1)
 (setq-default indent-tabs-mode nil)
-(setq-default isearch-lazy-count t)
+(setq-default show-trailing-whitespace nil)
 (setq search-whitespace-regexp ".*?")
-(setq-default line-number-mode t
-              column-number-mode t)
+(setq require-final-newline t)
 (setq set-mark-command-repeat-pop t)
-(setq tab-always-indent 'complete)
 (setq compilation-scroll-output t)
 (setq vc-follow-symlinks t)
 (setq bookmark-save-flag 1)
 (setq large-file-warning-threshold 20971520)
+(setq delete-pair-blink-delay 0)
 
 (setq tab-bar-show 1
-      tab-bar-auto-width-max '(400 30)
+      tab-bar-auto-width-max '(360 30)
       tab-bar-close-button-show nil
-      tab-bar-new-button-show nil)
+      tab-bar-format '(tab-bar-format-history
+                       tab-bar-format-tabs
+                       tab-bar-separator))
 
 (setq completion-auto-select 'second-tab
       completion-auto-wrap t
-      completions-max-height 20)
+      completions-max-height 12)
 
 (setq-default abbrev-mode t)
 (quietly-read-abbrev-file (locate-user-emacs-file "abbrevs"))
@@ -61,8 +63,12 @@
 (setq backup-directory-alist `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
 
-(setq winner-dont-bind-my-keys t)
-(winner-mode)
+(setq display-buffer-alist
+      '(("\\*Calendar*"
+         (display-buffer-at-bottom))
+        ("\\*.*eshell.*\\*"
+         (display-buffer-below-selected)
+         (window-height . 12))))
 
 (setq recentf-max-saved-items 1000)
 (recentf-mode)
@@ -74,26 +80,7 @@
 (savehist-mode 1)
 (pixel-scroll-precision-mode)
 
-;; terminal truncate/wrap symbols
-(set-display-table-slot standard-display-table
-                        'truncation
-                        (make-glyph-code ?… 'line-number-minor-tick))
-(set-display-table-slot standard-display-table
-                        'wrap
-                        (make-glyph-code ?↩ 'line-number-minor-tick))
-
-;; window layout
-(setq display-buffer-alist
-      '(("\\*\\(.*-\\)?e?shell\\*"
-         (display-buffer-in-side-window)
-         (window-height . 0.3)
-         (side . bottom)
-         (slot . -1))
-        ("\\*\\(grep\\|compilation\\)\\*"
-         (display-buffer-in-side-window)
-         (window-height . 0.3)
-         (side . bottom)
-         (slot . 0))))
+(defalias 'perl-mode 'cperl-mode)
 
 ;; packages
 (with-eval-after-load 'package
@@ -108,23 +95,21 @@
 (use-package habamax
   :load-path "lisp"
   :bind
-  (("C-c o i" . habamax-open-init-file)
-   ("C-c o s" . habamax-open-secret-file)
+  (("C-c o i" . habamax-open-user-emacs-file)
    ("C-c o f" . habamax-open-file-manager)
+   ("C-c o r" . recentf)
    ("C-c o x" . scratch-buffer)
-   ("C-`" . window-toggle-side-windows)
-   ("M-<f1>" . window-toggle-side-windows)
    ("M-;" . habamax-toggle-comment)
    ("C-^" . habamax-join-line)
    ("M-]" . habamax-slurp-forward)
    ("C-c DEL" . kill-backward-up-list)
    ("C-c C-d" . delete-pair)
    ("M-o" . delete-blank-lines)
-   ("C-c b" . habamax-next-buffer-like-this)
-   ("C-c B" . habamax-previous-buffer-like-this)
    ([remap list-buffers] . ibuffer)
+   ([remap eww-search-words] . habamax-web-search)
    ("C-c d" . duplicate-dwim)
    ("M-s >" . habamax-grep-current-word)
+   ("M-s g" . grep)
    ("M-s t" . habamax-grep-todo)
    ("C-c t r" . habamax-reload-current-theme)
    ("C-c t n" . display-line-numbers-mode)
@@ -138,7 +123,32 @@
    ("C-c t v" . visible-mode)
    ("C-c t d" . habamax-diff-current-buffer)
    ("C-x I" . habamax-insert-lorem)
-   ("C-x w w" . winner-undo)
+   ("C-=" . text-scale-adjust)
+   ("C--" . text-scale-adjust)
+   ("C-c SPC SPC" . delete-trailing-whitespace)
+   :repeat-map habamax-toggle-theme-repeat-map
+   ("t" . habamax-toggle-theme)
+   :repeat-map habamax-duplicate-repeat-map
+   ("d" . duplicate-dwim))
+  :init
+  (when +IS-WINDOWS+
+    (require 'habamax-windows))
+  (when +IS-WSL+
+    (setq browse-url-firefox-program "firefox.exe"))
+  (when (or +IS-WINDOWS+ +IS-WSL+)
+    (setq epg-pinentry-mode 'loopback))
+  :custom-face
+  (org-document-title ((t (:height 1.5))))
+  (org-agenda-structure ((t (:height 1.5))))
+  (outline-1 ((t (:height 1.5))))
+  (outline-2 ((t (:height 1.3))))
+  (outline-3 ((t (:height 1.1)))))
+
+(use-package windmove
+  :ensure nil
+  :bind
+  (("C-x w m" . delete-other-windows)
+   ("C-x w d" . delete-window)
    ("C-x w h" . windmove-left)
    ("C-x w j" . windmove-down)
    ("C-x w k" . windmove-up)
@@ -147,23 +157,9 @@
    ("C-x w J" . windmove-swap-states-down)
    ("C-x w K" . windmove-swap-states-up)
    ("C-x w L" . windmove-swap-states-right)
-   ("C-=" . text-scale-adjust)
-   ("C--" . text-scale-adjust)
-   ("C-c SPC SPC" . delete-trailing-whitespace)
-   :repeat-map habamax-toggle-theme-repeat-map
-   ("t" . habamax-toggle-theme)
-   :repeat-map habamax-other-frame-repeat-map
-   ("o" . other-frame)
-   :repeat-map habamax-winner-repeat-map
-   ("w" . winner-undo)
-   ("W" . winner-redo)
-   :repeat-map habamax-duplicate-repeat-map
-   ("d" . duplicate-dwim)
-   :repeat-map habamax-buffers-like-this-repeat-map
-   ("b" . habamax-next-buffer-like-this)
-   ("B" . habamax-previous-buffer-like-this)
-   :repeat-map other-window-repeat-map
-   ("q" . delete-window)
+   :repeat-map habamax-windmove-repeat-map
+   ("b" . balance-windows)
+   ("d" . delete-window)
    ("h" . windmove-left)
    ("j" . windmove-down)
    ("k" . windmove-up)
@@ -172,19 +168,19 @@
    ("J" . windmove-swap-states-down)
    ("K" . windmove-swap-states-up)
    ("L" . windmove-swap-states-right))
+  :config
+  (setq windmove-create-window t))
+
+(use-package winner-mode
+  :ensure nil
+  :bind
+  (("C-x w w" . winner-undo)
+   :repeat-map habamax-winner-repeat-map
+   ("w" . winner-undo)
+   ("W" . winner-redo))
   :init
-  (when +IS-WINDOWS+
-    (require 'habamax-windows))
-  (when +IS-WSL+
-    (setq browse-url-firefox-program "firefox.exe"))
-  (when (or +IS-WINDOWS+ +IS-WSL+)
-    (setq epa-pinentry-mode 'loopback))
-  :custom-face
-  (org-document-title ((t (:height 1.5))))
-  (org-agenda-structure ((t (:height 1.5))))
-  (outline-1 ((t (:height 1.5))))
-  (outline-2 ((t (:height 1.3))))
-  (outline-3 ((t (:height 1.1)))))
+  (setq winner-dont-bind-my-keys t)
+  (winner-mode))
 
 (use-package dired
   :ensure nil
@@ -200,11 +196,21 @@
         dired-dwim-target t
         dired-hide-details-hide-symlink-targets nil))
 
+(use-package diminish
+  :init
+  (diminish 'abbrev-mode)
+  (diminish 'eldoc-mode))
+
+(use-package icomplete
+  :config
+  (setq icomplete-compute-delay 0))
+
 (use-package vertico
   :init
   (vertico-mode))
 
 (use-package marginalia
+  :after vertico
   :init
   (marginalia-mode))
 
@@ -214,56 +220,21 @@
   (setq orderless-matching-styles
         '(orderless-literal orderless-prefixes orderless-flex)))
 
-(use-package consult
-  :bind (([remap switch-to-buffer] . consult-buffer)
-         ([remap switch-to-buffer-other-window] . consult-buffer-other-window)
-         ([remap switch-to-buffer-other-frame] . consult-buffer-other-frame)
-         ([remap project-switch-to-buffer] . consult-project-buffer)
-         ([remap imenu] . consult-imenu)
-         ("M-X" . consult-mode-command)
-         ("C-c o r" . consult-recent-file)
-         ("C-c C-c f" . consult-focus-lines)
-         ("C-c C-c k" . consult-keep-lines)
-         ("M-s s" . consult-line)
-         ("M-s M-s" . consult-line)
-         ("M-s S" . consult-line-multi)
-         ("M-g o" . consult-outline)
-         ("C-c o a" . consult-org-agenda)
-         ([remap goto-line] . consult-goto-line)
-         ("M-s g" . consult-grep)
-         ("M-s r" . consult-ripgrep)
-         ("M-y" . consult-yank-pop))
-  :config
-  (setq consult-preview-key "M-.")
-  (setq consult-buffer-sources
-        '(consult--source-hidden-buffer
-          consult--source-modified-buffer
-          consult--source-buffer
-          consult--source-recent-file))
-  (consult-customize
-   consult-goto-line consult-line
-   consult-focus-lines consult-keep-lines
-   consult-theme
-   :preview-key '(:debounce 0.4 any)))
-
 (use-package embark
   :bind (("C-c RET" . embark-act)
          ("C-." . embark-act)
          ("M-." . embark-dwim)))
 
-(use-package embark-consult
-  :after embark)
-
 (use-package org
   :ensure nil
-  :commands (org)
   :bind (("C-c c" . org-capture)
          ("C-c a" . org-agenda)
          ("C-c l" . org-store-link)
+         ("C-c I" . habamax-org-insert-screenshot)
          ("C-c o o" . habamax-org-open-file)
          ("M-s 1" . habamax-org-search)
          :map org-mode-map
-         ("M-g i" . consult-org-heading)
+         ("M-{") ("M-}")
          :repeat-map habamax-org-repeat-map
          ("f" . org-forward-heading-same-level)
          ("b" . org-backward-heading-same-level)
@@ -271,7 +242,7 @@
          ("p" . org-previous-visible-heading)
          ("M-f" . org-next-block)
          ("M-b" . org-previous-block)
-         ("TAB" . org-cycle)
+         ("v" . org-cycle)
          ("<backtab>" . org-shifttab)
          ("N" . org-next-link)
          ("P" . org-previous-link)
@@ -291,12 +262,11 @@
 
 (use-package whitespace
   :ensure nil
-  :commands (whitespace-mode)
+  :diminish whitespace-mode
+  :hook ((prog-mode text-mode) . whitespace-mode)
   :config
-  (setq whitespace-style '(face trailing tabs spaces tab-mark space-mark))
-  (setq whitespace-display-mappings '((tab-mark 9 [8250 9])
-                                      (space-mark 32 [183][46])
-                                      (space-mark 160 [164][95]))))
+  (setq whitespace-style '(face trailing tabs tab-mark))
+  (setq whitespace-display-mappings '((tab-mark 9 [8250 9]))))
 
 (use-package ediff
   :ensure nil
@@ -305,34 +275,24 @@
   (setq ediff-window-setup-function 'ediff-setup-windows-plain))
 
 (use-package magit
-  :commands (magit-status)
-  :bind ("C-x g" . magit-file-dispatch)
+  :bind (("C-x g" . magit-file-dispatch)
+         :map magit-mode-map ("C-<tab>"))
   :config
   (setq magit-save-repository-buffers 'dontask))
 
-(use-package corfu
-  :init
-  (global-corfu-mode)
-  :config
-  (corfu-popupinfo-mode))
-
-(use-package corfu-terminal
-  :unless (display-graphic-p)
-  :after corfu
-  :init
-  (corfu-terminal-mode t))
+(use-package company
+  :diminish
+  :hook ((prog-mode . company-mode)))
 
 (use-package tempel
   :bind (("M-*" . tempel-complete)
          ("M-+" . tempel-insert))
+  :hook ((sly-mode prog-mode text-mode) . tempel-setup-capf)
   :init
   (defun tempel-setup-capf ()
     (setq-local completion-at-point-functions
                 (cons #'tempel-expand
-                      completion-at-point-functions)))
-  (add-hook 'sly-mode-hook 'tempel-setup-capf)
-  (add-hook 'prog-mode-hook 'tempel-setup-capf)
-  (add-hook 'text-mode-hook 'tempel-setup-capf))
+                      completion-at-point-functions))))
 
 (use-package iedit
   :bind (("C-c ;" . iedit-mode)
@@ -346,24 +306,15 @@
     (iedit-mode 1)))
 
 (use-package rainbow-delimiters
-  :init
-  (add-hook 'emacs-lisp-mode-hook #'rainbow-delimiters-mode)
-  (add-hook 'lisp-mode-hook #'rainbow-delimiters-mode))
+  :hook ((emacs-lisp-mode lisp-mode) . rainbow-delimiters-mode))
 
 (use-package webpaste
   :commands (webpaste-paste-buffer webpaste-paste-region))
 
-(use-package igist
-  :commands igist-dispatch
-  :bind (:map igist-edit-gist
-              ("M-o"))
-  :config
-  (setq igist-auth-marker 'igist))
-
 (use-package wgrep)
 
 (use-package rainbow-mode
-  :commands (rainbow-mode))
+  :commands rainbow-mode)
 
 (use-package xclip
   :commands xclip-mode)
@@ -396,14 +347,14 @@
 
 (use-package gdscript-mode
   :bind
-  (:map gdscript-mode-map
+  (:map gdscript-ts-mode-map
+        ("C-c <f5>" . habamax-gdscript-godot)
         ("<f5>" . habamax-gdscript-run-project)
         ("<f6>" . habamax-gdscript-run-current)
         ("C-c r" . habamax-gdscript-run-scene)
         ("C-c C-r" . habamax-gdscript-run-last)
         ("<f7>" . recompile)
-        ("C-c n")
-        ("<f9>"))
+        ("C-c n") ("<f9>") ([remap mark-defun]))
   :config
   (require 'habamax-gdscript)
   :custom
@@ -430,23 +381,6 @@
                (python (if (executable-find "python3") "python3" "python")))
       (compile (concat python " " (shell-quote-argument file-name))))))
 
-(use-package pascal
-  :ensure nil
-  :bind
-  (:map pascal-mode-map
-        ("<f5>" . run-pascal-file))
-  :config
-  (setq pascal-indent-level 4)
-  (defun run-pascal-file ()
-    "Compile and run single pascal file"
-    (interactive)
-    (when-let* ((file-name buffer-file-name)
-                (prg-name (file-name-sans-extension file-name)))
-      (compile
-       (format "fpc %s && %s"
-               (shell-quote-argument file-name)
-               (shell-quote-argument prg-name))))))
-
 (use-package c-ts-mode
   :ensure nil
   :init
@@ -465,32 +399,6 @@
               (setq-local c-basic-offset 4)
               (c-toggle-comment-style -1))))
 
-(use-package lua-mode
-  :config
-  (setq lua-indent-level 4))
-
-(use-package fennel-mode)
-
-(use-package tuareg)
-
-(use-package ocamlformat
-  :after tuareg)
-
-(use-package dune
-  :after tuareg)
-
-(use-package dune-format
-  :after dune)
-
-(use-package eww
-  :ensure nil
-  :bind
-  (:map eww-mode-map
-        ("j" . habamax-eww-jump-to-url-on-page)
-        ("J" . habamax-eww-visit-url-on-page))
-  :config
-  (require 'habamax-eww))
-
 (use-package markdown-mode
   :bind (:map markdown-mode-map
               ("M-n")
@@ -500,7 +408,7 @@
          ("b" . markdown-outline-previous-same-level)
          ("n" . markdown-outline-next)
          ("p" . markdown-outline-previous)
-         ("TAB" . markdown-cycle)
+         ("v" . markdown-cycle)
          ("<backtab>" . markdown-shifttab))
   :config
   (setq markdown-fontify-code-blocks-natively t)
@@ -508,6 +416,28 @@
   (setq markdown-asymmetric-header t)
   (setq markdown-command
         "pandoc -s -M fontsize=18pt -M maxwidth=60em --highlight-style tango"))
+
+(use-package elfeed
+  :config
+  (when-let* ((feed-dir (or (getenv "ORG") "~/org"))
+              (feeds (file-name-concat feed-dir ".conf" "elfeeds.el"))
+              (file-exists-p feeds))
+    (load feeds)))
+
+(use-package erc
+  :ensure nil
+  :commands habamax-erc
+  :config
+  (require 'habamax-erc))
+
+(use-package eww
+  :ensure nil
+  :bind
+  (:map eww-mode-map
+        ("j" . habamax-eww-jump-to-url-on-page)
+        ("J" . habamax-eww-visit-url-on-page))
+  :config
+  (require 'habamax-eww))
 
 (use-package gnus
   :ensure nil
@@ -537,13 +467,6 @@
   (setq gnus-group-mode-line-format "%%b")
   (add-hook 'gnus-group-mode-hook 'gnus-topic-mode))
 
-(use-package notmuch
-  :ensure nil
-  :if (executable-find "notmuch")
-  :commands (notmuch notmuch-sync)
-  :config
-  (require 'habamax-notmuch))
-
 (use-package emms
   :commands (emms emms-add-directory-tree)
   :bind (("C-c SPC m m" . habamax-emms-play-main)
@@ -556,18 +479,5 @@
          ("C-c SPC m n" . emms-next))
   :config
   (require 'habamax-emms))
-
-(use-package elfeed
-  :config
-  (when-let* ((feed-dir (or (getenv "ORG") "~/org"))
-              (feeds (concat feed-dir "/.conf/elfeeds.el"))
-              (file-exists-p feeds))
-    (load feeds)))
-
-(use-package erc
-  :ensure nil
-  :commands habamax-erc
-  :config
-  (require 'habamax-erc))
 
 ;;; init.el ends here

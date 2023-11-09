@@ -8,9 +8,8 @@
  (lambda () (setq gc-cons-threshold 10485760)))
 
 (setq inhibit-startup-message t
-      inhibit-splash-screen t)
-(setq initial-scratch-message nil
-      initial-major-mode 'fundamental-mode)
+      inhibit-splash-screen t
+      initial-scratch-message nil)
 
 (defconst +IS-OSX+ (eq system-type 'darwin))
 (defconst +IS-WINDOWS+ (eq system-type 'windows-nt))
@@ -29,5 +28,5 @@
    (tool-bar-lines . 0)))
 
 (setq custom-theme-directory (locate-user-emacs-file "themes/"))
-(ignore-errors (load-theme 'wildcharm t))
+(ignore-errors (load-theme 'nocharm-p t))
 ;;; early-init.el ends here

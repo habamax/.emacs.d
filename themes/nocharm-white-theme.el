@@ -1,7 +1,7 @@
-;;; sandcastle-theme.el --- Light mid(low) contrast Emacs theme -*- lexical-binding: t; -*-
+;;; nocharm-white-theme.el --- Minimal low contrast light Emacs theme -*- lexical-binding: t; -*-
 
 ;; Author: Maxim Kim <habamax@gmail.com>
-;; URL: https://github.com/habamax/sandcastle-theme
+;; URL: https://github.com/habamax/nocharm-white-theme XXX: non-published!
 ;; Package-Requires: ((emacs "24.1"))
 ;; Package-Version: 0.7
 
@@ -20,37 +20,35 @@
 
 ;;; Commentary:
 
-;; Light mid(low) contrast Emacs theme.
-
 ;;; Code:
 
-(deftheme sandcastle
-  "Light mid(low) contrast Emacs theme.")
+(deftheme nocharm-white
+  "Minimal high contrast light Emacs theme.")
 
 (let* ((classTTY '((type tty)))
-       (fg "#000000")(bg "#d7d6d0")
-       (black "#000000")(darkgrey "#707070")
+       (fg "#000000")(bg "#ffffff")
+       (black "#000000")(darkgrey "#7f7f7f")
        (red "#af0000")(bright-red "#d70000")
-       (green "#2f7f00")(bright-green "#3f8f0f")
+       (green "#006f00")(bright-green "#3f8f0f")
        (yellow "#af5f00")(bright-yellow "#d78700")
        (blue "#004fa7")(bright-blue "#0078c7")
        (magenta "#870087")(bright-magenta "#9f009f")
        (cyan "#005f5f")(bright-cyan "#007f7f")
-       (grey "#d0d0d0")(white "#ffffff")
-       (purple "#4f00c7")(comment "#7f6f4f")
+       (grey "#bababa")(white "#ffffff")
+       (purple "#4f00c7")(comment blue)
        (yellow1 "#875f00")(yellow2 "#af5f00")
-       (grey1 "#cac9c3")(grey2 "#dfded9")(grey3 "#e7e6e0")
-       (non-text "#979690")
+       (grey1 "#dadada")(grey2 "#eeeeee")
+       (non-text "#878787")
        (match-paren "#ff00af")(match "#e0c7e0")
-       (mode-line-active "#bebaa9")(mode-line-inactive "#c0bfb9")
-       (menu "#efeee9")
-       (header-line "#cbcac4")
-       (hl-line "#c9c8c2")
-       (diff-added-bg "#b7d7af")(diff-refine-added-bg "#e3fcd7")
+       (mode-line-active "#d0d0d0")(mode-line-inactive "#e4e4e4")
+       (menu "#eeeeee")
+       (header-line "#d7d7d7")
+       (hl-line "#eeeeee")
+       (diff-added-bg "#afd7af")(diff-refine-added-bg "#d7ffd7")
        (diff-added-fg "#005f00")
-       (diff-removed-bg "#d7b7af")(diff-refine-removed-bg "#fce0d7")
+       (diff-removed-bg "#d7afaf")(diff-refine-removed-bg "#ffd7d7")
        (diff-removed-fg "#5f0000")
-       (diff-changed-bg "#d7d5af")(diff-refine-changed-bg "#fffcd7")
+       (diff-changed-bg "#d7d7af")(diff-refine-changed-bg "#ffffd7")
        (diff-changed-fg "#5f5f00")
        (diff-ancestor-bg "#afafd7")(diff-refine-ancestor-bg "#d7d7ff")
        (diff-ancestor-fg "#00005f")
@@ -62,16 +60,16 @@
        (outline-6 "#af875f")
        (outline-7 "#005f87")
        (outline-8 darkgrey)
-       (hi-yellow "#ffffd7")
+       (hi-yellow "#ffffaf")
        (hi-pink "#ffafd7")
        (hi-blue "#afd7ff")
        (hi-green "#d7ffd7")
        (hi-salmon "#ffd7af")
        (hi-aquamarine "#d7ffff")
-       (code-block "#e0dfd9"))
+       (code-block "#f7f7f7"))
 
   (custom-theme-set-faces
-   'sandcastle
+   'nocharm-white
 
    ;; standard faces
    `(default
@@ -79,9 +77,9 @@
    `(shadow
      ((t (:foreground ,non-text))))
    `(link
-     ((t (:foreground ,blue :underline t))))
+     ((t (:foreground unspecified :underline t))))
    `(link-visited
-     ((t (:foreground ,magenta :underline t))))
+     ((t (:foreground ,darkgrey :underline t))))
    `(highlight
      ((t (:background ,white :foreground ,blue :inverse-video t))))
    `(region
@@ -225,38 +223,38 @@
 
    ;; font-lock
    `(font-lock-string-face
-     ((t (:foreground ,green :weight unspecified :slant unspecified))))
+     ((t (:foreground ,cyan :weight unspecified :slant unspecified))))
    `(font-lock-comment-face
      ((t (:foreground ,comment :weight unspecified :slant unspecified))))
    `(font-lock-keyword-face
-     ((t (:foreground ,blue :weight unspecified :slant unspecified))))
+     ((t (:foreground unspecified :weight bold :slant unspecified))))
    `(font-lock-preprocessor-face
-     ((t (:foreground ,purple :weight unspecified :slant unspecified))))
+     ((t (:foreground ,darkgrey :weight unspecified :slant unspecified))))
    `(font-lock-builtin-face
-     ((t (:foreground ,magenta :weight unspecified :slant unspecified))))
+     ((t (:foreground unspecified :weight unspecified :slant unspecified))))
    `(font-lock-type-face
-     ((t (:foreground ,yellow :weight unspecified :slant unspecified))))
+     ((t (:foreground unspecified :weight unspecified :slant unspecified))))
    `(font-lock-function-name-face
-     ((t (:foreground ,bright-magenta :weight unspecified :slant unspecified))))
+     ((t (:foreground unspecified :weight unspecified :slant unspecified))))
    `(font-lock-variable-name-face
-     ((t (:foreground ,bright-cyan :weight unspecified :slant unspecified))))
+     ((t (:foreground unspecified :weight unspecified :slant unspecified))))
    `(font-lock-constant-face
      ((t (:foreground ,red :weight unspecified :slant unspecified))))
    `(font-lock-warning-face
-     ((t (:foreground ,bright-yellow :weight bold :slant unspecified))))
+     ((t (:foreground ,yellow :weight bold :slant unspecified))))
 
    `(font-lock-number-face
      ((t (:foreground ,red :weight unspecified :slant unspecified))))
    `(font-lock-escape-face
      ((t (:foreground ,yellow :weight unspecified :slant unspecified))))
    `(font-lock-function-call-face
-     ((t (:foreground ,magenta :weight unspecified :slant unspecified))))
+     ((t (:foreground unspecified :weight unspecified :slant unspecified))))
    `(font-lock-regexp-face
      ((t (:foreground ,bright-green :weight unspecified :slant unspecified))))
    `(font-lock-delimiter-face
      ((t (:foreground ,magenta :weight unspecified :slant unspecified))))
    `(font-lock-property-use-face
-     ((t (:foreground ,cyan :weight unspecified :slant unspecified))))
+     ((t (:foreground unspecified :weight unspecified :slant unspecified))))
    `(font-lock-bracket-face
      ((t (:foreground ,purple :weight unspecified :slant unspecified))))
 
@@ -272,6 +270,10 @@
      ((t (:inherit font-lock-variable-name-face))))
    `(cperl-array-face
      ((t (:inherit font-lock-variable-name-face))))
+
+   ;; sh
+   `(sh-quoted-exec
+     ((t (:inherit font-lock-string-face))))
 
    ;; isearch & search
    `(isearch
@@ -471,6 +473,12 @@
    `(outline-8
      ((t (:foreground ,outline-8 :weight bold))))
 
+   ;; packages
+   `(package-status-dependency
+     ((t (:inherit package-status-installed))))
+   `(package-status-built-in
+     ((t (:inherit package-status-installed))))
+
    ;; org
    `(org-meta-line
      ((t (:foreground ,darkgrey))))
@@ -497,7 +505,7 @@
    `(org-footnote
      ((t (:foreground ,darkgrey))))
    `(org-ellipsis
-     ((t (:foreground ,yellow))))
+     ((t (:foreground unspecified))))
    `(org-formula
      ((t (:foreground ,red))))
    `(org-latex-and-related
@@ -725,7 +733,7 @@
 
    ;; diff
    `(diff-header
-     ((t (:background ,grey1 :foreground ,blue :weight bold))))
+     ((t (:background ,grey2 :foreground ,black :weight bold))))
    `(diff-file-header
      ((t (:background unspecified :foreground ,black))))
    `(diff-hunk-header
@@ -804,7 +812,7 @@
    `(magit-branch-remote
      ((t (:foreground ,green))))
    `(magit-tag
-     ((t (:foreground ,bright-yellow))))
+     ((t (:foreground ,red))))
    `(magit-dimmed
      ((t (:foreground ,darkgrey))))
    `(magit-hash
@@ -826,7 +834,7 @@
    `(magit-diff-context
      ((t (:foreground ,fg))))
    `(magit-diff-context-highlight
-     ((t (:background ,grey3))))
+     ((t (:background ,grey2))))
    `(magit-diff-added
      ((t (:inherit 'diff-added))))
    `(magit-diff-added-highlight
@@ -973,7 +981,7 @@
 
    ;; erc
    `(erc-timestamp-face
-     ((t (:foreground ,bright-cyan))))
+     ((t (:foreground ,darkgrey))))
    `(erc-notice-face
      ((t (:foreground ,darkgrey))))
    `(erc-my-nick-face
@@ -991,7 +999,7 @@
    `(erc-direct-msg-face
      ((t (:foreground ,yellow))))
    `(erc-button
-     ((t (:background unspecified :foreground ,blue :underline t))))
+     ((t (:background unspecified :foreground unspecified :underline t))))
    `(erc-prompt-face
      ((t (:background unspecified :foreground ,bright-magenta :weight bold))))
    `(erc-action-face
@@ -1145,6 +1153,10 @@
    `(emms-browser-year/genre-face
      ((t (:foreground ,red))))
 
+   ;; world-clock
+   `(world-clock-label
+     ((t (:foreground unspecified :weight bold))))
+
    ;; vertico
    `(vertico-current
      ((t (:background ,hl-line))))
@@ -1165,7 +1177,7 @@
    `(marginalia-date
      ((t (:foreground ,darkgrey))))
    `(marginalia-file-priv-dir
-     ((t (:foreground ,darkgrey))))
+     ((t (:foreground unspecified :weight bold))))
    `(marginalia-file-priv-link
      ((t (:foreground ,cyan))))
    `(marginalia-file-priv-read
@@ -1189,7 +1201,7 @@
 
    ;; notmuch
    `(notmuch-message-summary-face
-     ((t (:background ,grey2))))
+     ((t (:background ,header-line))))
    `(notmuch-tag-face
      ((t (:foreground ,yellow))))
    `(notmuch-tag-unread
@@ -1221,7 +1233,7 @@
 
    ;; corfu
    `(corfu-default
-     ((t (:background ,grey3))))
+     ((t (:background ,grey2))))
    `(corfu-current
      ((t (:background ,grey1))))
    `(corfu-bar
@@ -1231,7 +1243,7 @@
 
    ;; company
    `(company-tooltip
-     ((t (:background ,grey3))))
+     ((t (:background ,grey2))))
    `(company-tooltip-common
      ((t (:inherit completions-common-part))))
    `(company-tooltip-annotation
@@ -1285,10 +1297,6 @@
    `(rst-definition
      ((t (:foreground ,green))))
 
-   ;; sh
-   `(sh-quoted-exec
-     ((t (:foreground ,bright-magenta))))
-
    ;; tuareg
    `(tuareg-font-lock-error-face
      ((t (:foreground ,bright-red :background ,white :inverse-video t))))
@@ -1331,5 +1339,5 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'sandcastle)
-;;; sandcastle-theme.el ends here
+(provide-theme 'nocharm-white)
+;;; nocharm-white-theme.el ends here
