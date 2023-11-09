@@ -282,7 +282,8 @@
 
 (use-package company
   :diminish
-  :hook ((prog-mode . company-mode)))
+  :hook ((prog-mode . company-mode))
+  (company-tng-mode))
 
 (use-package tempel
   :bind (("M-*" . tempel-complete)
