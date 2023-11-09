@@ -102,7 +102,7 @@ Otherwise call well known `comment-dwim'"
   (let* ((theme (car custom-enabled-themes))
          (my-themes '(nocharm-p nocharm-light wildcharm nocharm-white))
          (next-theme (seq-elt my-themes
-                              (1+ (seq-position my-themes theme)))))
+                              (1+ (or (seq-position my-themes theme) -1)))))
     (mapc #'disable-theme custom-enabled-themes)
     (ignore-errors (load-theme (or next-theme (car my-themes)) t))))
 
