@@ -991,7 +991,7 @@
    `(erc-nick-msg-face
      ((t (:foreground ,yellow))))
    `(erc-input-face
-     ((t (:foreground ,purple))))
+     ((t (:foreground ,green))))
    `(erc-error-face
      ((t (:foreground ,bright-red))))
    `(erc-dangerous-host-face
@@ -1041,7 +1041,7 @@
    `(rcirc-server
      ((t (:foreground ,darkgrey))))
    `(rcirc-timestamp
-     ((t (:foreground ,bright-cyan))))
+     ((t (:foreground ,darkgrey))))
    `(rcirc-prompt
      ((t (:foreground ,bright-magenta :weight bold))))
    `(rcirc-url

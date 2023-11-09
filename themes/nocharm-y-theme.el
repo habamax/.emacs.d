@@ -1033,7 +1033,7 @@
    `(erc-nick-msg-face
      ((,class256 (:foreground ,bright-yellow))))
    `(erc-input-face
-     ((,class256 (:foreground ,purple))))
+     ((,class256 (:foreground ,bright-green))))
    `(erc-error-face
      ((,class256 (:foreground ,red))))
    `(erc-dangerous-host-face
@@ -1083,7 +1083,7 @@
    `(rcirc-server
      ((,class256 (:foreground ,darkgrey))))
    `(rcirc-timestamp
-     ((,class256 (:foreground ,cyan))))
+     ((,class256 (:foreground ,darkgrey))))
    `(rcirc-prompt
      ((,class256 (:foreground ,magenta :weight bold))))
    `(rcirc-url
