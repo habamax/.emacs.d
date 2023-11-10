@@ -56,9 +56,10 @@
 (setq shr-use-fonts nil)
 (setq shr-color-visible-luminance-min 78)
 
-;; ripgrep as grep
+;; ripgrep as grep and project search
 (setq grep-command "rg -nS --no-heading "
       grep-use-null-device nil)
+(setq xref-search-program 'ripgrep)
 
 ;; Store all backup and autosave files in the tmp dir
 (setq backup-directory-alist `((".*" . ,temporary-file-directory)))
