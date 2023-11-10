@@ -45,7 +45,7 @@
                        tab-bar-separator))
 
 (setq completion-auto-select 'second-tab
-      completion-styles '(basic partial-completion flex)
+      completion-styles '(basic substring partial-completion flex)
       completion-auto-wrap t
       completions-max-height 12
       completion-cycle-threshold 3)
