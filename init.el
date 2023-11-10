@@ -45,6 +45,7 @@
                        tab-bar-separator))
 
 (setq completion-auto-select 'second-tab
+      completion-styles '(basic partial-completion flex)
       completion-auto-wrap t
       completions-max-height 12
       completion-cycle-threshold 3)
@@ -204,28 +205,10 @@
   (diminish 'eldoc-mode))
 
 (use-package icomplete
+  :init
+  (fido-mode)
   :config
   (setq icomplete-compute-delay 0))
-
-(use-package vertico
-  :init
-  (vertico-mode))
-
-(use-package marginalia
-  :after vertico
-  :init
-  (marginalia-mode))
-
-(use-package orderless
-  :init
-  (setq completion-styles '(orderless basic))
-  (setq orderless-matching-styles
-        '(orderless-literal orderless-prefixes orderless-flex)))
-
-(use-package embark
-  :bind (("C-c RET" . embark-act)
-         ("C-." . embark-act)
-         ("M-." . embark-dwim)))
 
 (use-package org
   :ensure nil
@@ -281,21 +264,6 @@
          :map magit-mode-map ("C-<tab>"))
   :config
   (setq magit-save-repository-buffers 'dontask))
-
-;; (use-package corfu
-;;   :hook ((prog-mode . corfu-mode))
-;;   :bind (:map corfu-map ("RET"))
-;;   :custom
-;;   (corfu-auto t)
-;;   (corfu-quit-no-match 'separator)
-;;   :config
-;;   (use-package corfu-terminal
-;;     :init
-;;     (corfu-terminal-mode)))
-
-(use-package company
-  :diminish
-  :hook ((prog-mode . company-mode)))
 
 (use-package tempel
   :bind (("M-*" . tempel-complete)
