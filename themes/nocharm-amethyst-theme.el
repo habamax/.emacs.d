@@ -1,7 +1,7 @@
-;;; nocharm-p-theme.el --- Minimal dark emacs theme -*- lexical-binding: t; -*-
+;;; nocharm-amethyst-theme.el --- Minimal dark emacs theme -*- lexical-binding: t; -*-
 
 ;; Author: Maxim Kim <habamax@gmail.com>
-;; URL: https://github.com/habamax/nocharm-p-theme
+;; URL: https://github.com/habamax/nocharm-amethyst-theme
 ;; Package-Requires: ((emacs "24.1"))
 ;; Package-Version: 0.7
 
@@ -24,7 +24,7 @@
 
 ;;; Code:
 
-(deftheme nocharm-p
+(deftheme nocharm-amethyst
   "Minimal dark Emacs theme with purple keywords.")
 
 (let* ((classTC '((class color) (min-colors 257)))
@@ -78,7 +78,7 @@
        (code-block "#1F1F1F"))
 
   (custom-theme-set-faces
-   'nocharm-p
+   'nocharm-amethyst
 
    ;; standard faces
    `(default
@@ -1381,5 +1381,5 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'nocharm-p)
-;;; nocharm-p-theme.el ends here
+(provide-theme 'nocharm-amethyst)
+;;; nocharm-amethyst-theme.el ends here

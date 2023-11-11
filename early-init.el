@@ -28,5 +28,5 @@
    (tool-bar-lines . 0)))
 
 (setq custom-theme-directory (locate-user-emacs-file "themes/"))
-(ignore-errors (load-theme 'nocharm-p t))
+(ignore-errors (load-theme 'nocharm-amethyst t))
 ;;; early-init.el ends here

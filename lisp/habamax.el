@@ -100,7 +100,7 @@ Otherwise call well known `comment-dwim'"
   "Toggle my themes."
   (interactive)
   (let* ((theme (car custom-enabled-themes))
-         (my-themes '(nocharm-p nocharm-light wildcharm nocharm-white))
+         (my-themes '(nocharm-amethyst nocharm-light wildcharm nocharm-white))
          (next-theme (seq-elt my-themes
                               (1+ (or (seq-position my-themes theme) -1)))))
     (mapc #'disable-theme custom-enabled-themes)
