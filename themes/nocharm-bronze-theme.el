@@ -1,7 +1,7 @@
-;;; nocharm-y-theme.el --- Minimal dark emacs theme -*- lexical-binding: t; -*-
+;;; nocharm-bronze-theme.el --- Minimal dark emacs theme -*- lexical-binding: t; -*-
 
 ;; Author: Maxim Kim <habamax@gmail.com>
-;; URL: https://github.com/habamax/nocharm-y-theme
+;; URL: https://github.com/habamax/nocharm-bronze-theme
 ;; Package-Requires: ((emacs "24.1"))
 ;; Package-Version: 0.7
 
@@ -24,7 +24,7 @@
 
 ;;; Code:
 
-(deftheme nocharm-y
+(deftheme nocharm-bronze
   "Minimal dark Emacs theme yellow keywords.")
 
 (let* ((classTC '((class color) (min-colors 257)))
@@ -78,7 +78,7 @@
        (code-block "#1F1F1F"))
 
   (custom-theme-set-faces
-   'nocharm-y
+   'nocharm-bronze
 
    ;; standard faces
    `(default
@@ -1381,5 +1381,5 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'nocharm-y)
-;;; nocharm-y-theme.el ends here
+(provide-theme 'nocharm-bronze)
+;;; nocharm-bronze-theme.el ends here
