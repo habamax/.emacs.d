@@ -100,11 +100,11 @@ Otherwise call well known `comment-dwim'"
   "Toggle my themes."
   (interactive)
   (let* ((theme (car custom-enabled-themes))
-         (my-themes '(nocharm-amethyst nocharm-light wildcharm nocharm-white))
-         (next-theme (seq-elt my-themes
-                              (1+ (or (seq-position my-themes theme) -1)))))
+         (idx (or (seq-position +THEMES+ theme) -1))
+         (next-theme (or (seq-elt +THEMES+ (1+ idx))
+                         (car +THEMES+))))
     (mapc #'disable-theme custom-enabled-themes)
-    (ignore-errors (load-theme (or next-theme (car my-themes)) t))))
+    (ignore-errors (load-theme next-theme t))))
 
 (defun habamax-toggle-alpha ()
   "Toggle alpha-background (transparency)."

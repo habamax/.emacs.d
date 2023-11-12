@@ -27,6 +27,10 @@
    (menu-bar-lines . 0)
    (tool-bar-lines . 0)))
 
+(defconst +THEMES+ '(nocharm-amethyst
+                     nocharm-light
+                     wildcharm
+                     nocharm-white))
 (setq custom-theme-directory (locate-user-emacs-file "themes/"))
-(ignore-errors (load-theme 'nocharm-amethyst t))
+(ignore-errors (load-theme (car +THEMES+) t))
 ;;; early-init.el ends here
