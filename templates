@@ -24,7 +24,7 @@ prog-mode
 lisp-mode emacs-lisp-mode
 
 (lam "(lambda (" p ")" n> r> ")")
-(la "(lambda (" p ") " q ")")
+(la "(lambda (" p ") " p ")")
 (l "(let ((" p "))" n> r> ")")
 (l* "(let* ((" p "))" n> r> ")")
 (il "(if-let ((" p "))" n> r> ")")
@@ -52,7 +52,7 @@ emacs-lisp-mode
 (f "(format \"" p "\"" q ")")
 (> "(thread-first " q ")")
 (>> "(thread-last " q ")")
-(def "(defun " p " (" p ")\n  \"" p "\"" n> r> ")")
+(def "(defun " (p "func-name") " (" p ")" n> "\"" p "\"" n> r> ")")
 (dot "(dotimes (" p ")" n> r> ")")
 (dol "(dolist (" p ")" n> r> ")")
 (loop "(cl-loop for " p " in " p " do" n> r> ")")
