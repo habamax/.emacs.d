@@ -100,7 +100,7 @@
   :bind
   (("C-c o i" . habamax-open-user-emacs-file)
    ("C-c o f" . habamax-open-file-manager)
-   ("C-c o r" . recentf)
+   ("C-x C-r" . recentf)
    ("C-c o x" . scratch-buffer)
    ("M-;" . habamax-toggle-comment)
    ("C-^" . habamax-join-line)
