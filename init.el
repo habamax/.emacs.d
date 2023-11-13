@@ -267,7 +267,10 @@
 
 (use-package tempel
   :bind (("M-*" . tempel-complete)
-         ("M-+" . tempel-insert))
+         ("M-+" . tempel-insert)
+         (:map tempel-map
+               ("<tab>" . tempel-next)
+               ("<backtab>" . tempel-previous)))
   :hook ((sly-mode prog-mode text-mode) . tempel-setup-capf)
   :init
   (defun tempel-setup-capf ()
