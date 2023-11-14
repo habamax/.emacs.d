@@ -262,9 +262,7 @@
 
 (use-package magit
   :bind (("C-x g" . magit-file-dispatch)
-         :map magit-mode-map ("C-<tab>"))
-  :config
-  (setq magit-save-repository-buffers 'dontask))
+         :map magit-mode-map ("C-<tab>")))
 
 (use-package tempel
   :bind (("M-*" . tempel-complete)
