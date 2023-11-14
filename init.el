@@ -50,6 +50,9 @@
       completion-auto-wrap t
       completions-max-height 12
       completion-cycle-threshold 3)
+(setq read-file-name-completion-ignore-case t
+      read-buffer-completion-ignore-case t
+      completion-ignore-case t)
 
 (setq-default abbrev-mode t)
 (quietly-read-abbrev-file (locate-user-emacs-file "abbrevs"))
