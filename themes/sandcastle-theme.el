@@ -921,9 +921,9 @@
    `(smerge-upper
      ((t (:background ,diff-removed-bg))))
    `(smerge-refined-added
-     ((t (:background ,green :foreground ,black))))
+     ((t (:background ,diff-refine-added-bg :foreground ,diff-added-fg))))
    `(smerge-refined-removed
-     ((t (:background ,red :foreground ,black))))
+     ((t (:background ,diff-refine-removed-bg :foreground ,diff-removed-fg))))
 
    ;; epa
    `(epa-mark
