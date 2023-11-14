@@ -27,7 +27,8 @@
    (menu-bar-lines . 0)
    (tool-bar-lines . 0)))
 
-(defconst +THEMES+ '(nocharm-amethyst
+(defconst +THEMES+ '(nocharm-bronze
+                     nocharm-amethyst
                      nocharm-light
                      wildcharm
                      nocharm-white))
