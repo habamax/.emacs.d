@@ -1256,6 +1256,8 @@
      ((t (:background ,non-text))))
 
    ;; rainbow-delimiters
+   `(rainbow-delimiters-base-error-face
+     ((t (:background ,grey2 :foreground ,red :weight bold))))
    `(rainbow-delimiters-depth-1-face
      ((t (:foreground ,fg))))
    `(rainbow-delimiters-depth-2-face
