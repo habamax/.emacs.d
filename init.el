@@ -46,6 +46,7 @@
 
 (setq completion-auto-select 'second-tab
       completion-styles '(basic substring partial-completion flex)
+      completion-show-help nil
       completion-auto-wrap t
       completions-max-height 12
       completion-cycle-threshold 3)
