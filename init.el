@@ -209,8 +209,6 @@
   (diminish 'eldoc-mode))
 
 (use-package icomplete
-  :init
-  (fido-mode)
   :config
   (setq icomplete-compute-delay 0))
 
@@ -262,6 +260,14 @@
   :config
   (setq ediff-split-window-function 'split-window-horizontally)
   (setq ediff-window-setup-function 'ediff-setup-windows-plain))
+
+(use-package vertico
+  :bind
+  (:map vertico-map
+        ("DEL" . vertico-directory-delete-char)
+        ("M-DEL" . vertico-directory-delete-word))
+  :init
+  (vertico-mode))
 
 (use-package magit
   :bind (("C-x g" . magit-file-dispatch)
