@@ -7,10 +7,10 @@
   "Complete and open file from user emacs directory.
 Future history is set to init.el."
   (interactive)
-  (let* ((pr (project-current nil (locate-user-emacs-file "")))
-         (root (project-root pr))
+  (let* ((project (project-current nil (locate-user-emacs-file "")))
+         (root (project-root project))
          (dirs (list root)))
-    (project-find-file-in "init.el" dirs pr nil)))
+    (project-find-file-in "init.el" dirs project nil)))
 
 (defun habamax-toggle-comment (arg)
   "Comment or uncomment current line if mark region is not active.
