@@ -208,9 +208,15 @@
   (diminish 'abbrev-mode)
   (diminish 'eldoc-mode))
 
-(use-package icomplete
+(use-package vertico
+  :bind
+  (:map vertico-map
+        ("DEL" . vertico-directory-delete-char)
+        ("M-DEL" . vertico-directory-delete-word))
   :init
-  (fido-mode)
+  (vertico-mode))
+
+(use-package icomplete
   :config
   (setq icomplete-compute-delay 0))
 
