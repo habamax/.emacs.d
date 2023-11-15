@@ -1086,7 +1086,7 @@
    `(rcirc-prompt
      ((,class256 (:foreground ,magenta :weight bold))))
    `(rcirc-url
-     ((,class256 (:background unspecified :foreground ,bright-blue :underline t))))
+     ((,class256 (:inherit link))))
    `(rcirc-my-nick
      ((,class256 (:foreground ,bright-red :weight bold))))
    `(rcirc-nick-in-message
