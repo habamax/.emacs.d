@@ -148,7 +148,10 @@ beginning and end. Else, prompt the user for a search string."
   (interactive)
   (let ((query (if (use-region-p)
                    (buffer-substring (region-beginning) (region-end))
-                 (read-string "Search web for: "))))
+                 (read-string "Search web for: "
+                              nil
+                              'web-search-history
+                              (word-at-point t)))))
     (browse-url (format "https://google.com/search?q=%s"
                         (url-hexify-string query)))))
 
