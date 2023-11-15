@@ -272,6 +272,7 @@
          ("M-+" . tempel-insert)
          (:map tempel-map
                ("<tab>" . tempel-next)
+               ("TAB" . tempel-next)
                ("<backtab>" . tempel-previous)))
   :hook ((sly-mode prog-mode text-mode) . tempel-setup-capf)
   :init
