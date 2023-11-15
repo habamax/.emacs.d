@@ -165,7 +165,7 @@
    ("C-x w K" . windmove-swap-states-up)
    ("C-x w L" . windmove-swap-states-right)
    :repeat-map habamax-windmove-repeat-map
-   ("b" . balance-windows)
+   ("=" . balance-windows)
    ("d" . delete-window)
    ("h" . windmove-left)
    ("j" . windmove-down)
