@@ -50,6 +50,7 @@ lisp-mode
 emacs-lisp-mode
 
 (f "(format \"" p "\"" q ")")
+(m "(message \"" p "\"" q ")")
 (> "(thread-first " q ")")
 (>> "(thread-last " q ")")
 (def "(defun " (p "func-name") " (" p ")" n> "\"" p "\"" n> r> ")")
