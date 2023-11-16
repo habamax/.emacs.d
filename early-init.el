@@ -28,10 +28,10 @@
    (tool-bar-lines . 0)))
 
 (defconst +THEMES+ '(nocharm-amethyst
+                     nocharm-bronze
                      nocharm-light
                      wildcharm
-                     nocharm-white
-                     nocharm-bronze))
+                     nocharm-white))
 (setq custom-theme-directory (locate-user-emacs-file "themes/"))
 (ignore-errors (load-theme (car +THEMES+) t))
 ;;; early-init.el ends here
