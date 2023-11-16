@@ -222,7 +222,7 @@
   (vertico-grid-mode)
   :custom
   (vertico-grid-separator "    ")
-  (vertico-count 5))
+  (vertico-count 3))
 
 (use-package org
   :ensure nil
