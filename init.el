@@ -211,11 +211,12 @@
 (use-package vertico
   :bind
   (:map vertico-map
+        ("M-j" . vertico-exit-input)
         ("DEL" . vertico-directory-delete-char)
         ("M-DEL" . vertico-directory-delete-word))
   :init
   (vertico-mode)
-  (vertico-grid-mode))
+  (vertico-flat-mode))
 
 (use-package icomplete
   :config
