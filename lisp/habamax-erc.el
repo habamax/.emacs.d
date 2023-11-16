@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
-(unless +IS-WINDOWS+ (erc-notifications-mode t))
+(unless (or +IS-WINDOWS+ +IS-WSL+) (erc-notifications-mode t))
 
 (setq erc-nick '("habamax" "mxmkm")
       erc-join-buffer 'bury
