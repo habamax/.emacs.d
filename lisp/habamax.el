@@ -3,6 +3,8 @@
 ;;  Bunch of misc functions.
 ;;; Code:
 
+(require 'thingatpt)
+
 (defun habamax-open-user-emacs-file ()
   "Complete and open file from user emacs directory.
 Future history is set to init.el."
