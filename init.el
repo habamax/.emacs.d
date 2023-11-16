@@ -143,7 +143,8 @@
   (when +IS-WINDOWS+
     (require 'habamax-windows))
   (when +IS-WSL+
-    (setq browse-url-firefox-program "firefox.exe"))
+    (setq browse-url-firefox-program "firefox.exe")
+    (defun browse-url-can-use-xdg-open () nil))
   (when (or +IS-WINDOWS+ +IS-WSL+)
     (setq epg-pinentry-mode 'loopback))
   :custom-face
