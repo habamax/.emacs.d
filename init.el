@@ -221,10 +221,6 @@
   (vertico-mode)
   (vertico-flat-mode))
 
-(use-package icomplete
-  :config
-  (setq icomplete-compute-delay 0))
-
 (use-package org
   :ensure nil
   :bind (("C-c c" . org-capture)
