@@ -75,7 +75,9 @@
          (display-buffer-at-bottom))
         ("\\*.*eshell.*\\*"
          (display-buffer-below-selected)
-         (window-height . 12))))
+         (window-height . 12))
+        ("\\*Customize.*\\*"
+         (display-buffer-use-least-recent-window))))
 
 (setq recentf-max-saved-items 1000)
 (recentf-mode)
