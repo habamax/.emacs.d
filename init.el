@@ -211,21 +211,17 @@
   (diminish 'abbrev-mode)
   (diminish 'eldoc-mode))
 
-;; (use-package vertico
-;;   :bind
-;;   (:map vertico-map
-;;         ("M-j" . vertico-exit-input)
-;;         ("DEL" . vertico-directory-delete-char)
-;;         ("M-DEL" . vertico-directory-delete-word))
-;;   :init
-;;   (vertico-mode)
-;;   (vertico-flat-mode))
-
-(use-package icomplete
+(use-package vertico
+  :bind
+  (:map vertico-map
+        ("M-j" . vertico-exit-input)
+        ("DEL" . vertico-directory-delete-char)
+        ("M-DEL" . vertico-directory-delete-word))
   :init
-  (fido-mode)
-  :config
-  (setq icomplete-compute-delay 0))
+  (vertico-mode)
+  (vertico-grid-mode)
+  :custom
+  (vertico-grid-separator "    "))
 
 (use-package org
   :ensure nil
