@@ -221,7 +221,7 @@
   (vertico-mode)
   (vertico-grid-mode)
   :custom
-  (vertico-grid-separator "    ")
+  (vertico-grid-separator "        ")
   (vertico-count 3))
 
 (use-package org
