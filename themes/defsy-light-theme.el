@@ -128,11 +128,17 @@
      ((t (:background ,code-block :extend t))))
    `(org-verbatim
      ((t (:background ,code-block :extend t))))
+   `(org-date
+     ((t (:foreground ,darkgrey))))
 
+   `(erc-button
+     ((t (:inherit link))))
+   `(erc-timestamp-face
+     ((t (:foreground ,darkgrey :weight unspecified))))
    `(erc-my-nick-face
-     ((t (:foreground ,red :weight bold))))
+     ((t (:foreground ,green :weight bold))))
    `(erc-input-face
-     ((t (:foreground ,red))))))
+     ((t (:foreground ,green))))))
 
 ;;;###autoload
 (when load-file-name

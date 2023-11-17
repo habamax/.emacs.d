@@ -133,16 +133,22 @@
      ((t (:background ,code-block :extend t))))
    `(org-verbatim
      ((t (:background ,code-block :extend t))))
+   `(org-date
+     ((t (:foreground ,darkgrey))))
 
    `(diff-header
      ((t (:background ,darkgrey2))))
    `(diff-file-header
      ((t (:background ,non-text))))
 
+   `(erc-button
+     ((t (:inherit link))))
+   `(erc-timestamp-face
+     ((t (:foreground ,darkgrey :weight unspecified))))
    `(erc-input-face
-     ((t (:foreground ,red))))
+     ((t (:foreground ,green))))
    `(erc-my-nick-face
-     ((t (:foreground ,red))))))
+     ((t (:foreground ,green))))))
 
 ;;;###autoload
 (when load-file-name
