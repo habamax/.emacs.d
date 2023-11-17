@@ -27,10 +27,10 @@
    (menu-bar-lines . 0)
    (tool-bar-lines . 0)))
 
-(defconst +THEMES+ '(wildcharm
-                     wildcharm-light
-                     def-dark
-                     def-light))
+(defconst +THEMES+ '(def-dark
+                     def-light
+                     wildcharm
+                     wildcharm-light))
 (setq custom-theme-directory (locate-user-emacs-file "themes/"))
 (ignore-errors (load-theme (car +THEMES+) t))
 ;;; early-init.el ends here
