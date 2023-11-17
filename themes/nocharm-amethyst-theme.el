@@ -268,7 +268,7 @@
    `(font-lock-property-use-face
      ((,class256 (:foreground unspecified :weight unspecified :slant unspecified))))
    `(font-lock-bracket-face
-     ((,class256 (:foreground ,purple :weight unspecified :slant unspecified))))
+     ((,class256 (:foreground ,darkgrey :weight unspecified :slant unspecified))))
 
    `(elisp-shorthand-font-lock-face
      ((,class256 (:foreground ,bright-cyan :weight bold :slant unspecified))))
