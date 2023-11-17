@@ -146,7 +146,9 @@
      ((t (:background ,non-text))))
 
    `(erc-prompt-face
-     ((t (:background ,fg :foreground ,bg :weight bold))))
+     ((t (:inverse-video t :weight bold))))
+   `(erc-notice-face
+     ((t (:foreground ,darkgrey))))
    `(erc-button
      ((t (:inherit link))))
    `(erc-timestamp-face
