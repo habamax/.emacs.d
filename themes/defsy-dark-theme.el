@@ -133,6 +133,11 @@
    `(org-verbatim
      ((t (:background ,code-block :extend t))))
 
+   `(diff-header
+     ((t (:background ,code-block))))
+   `(diff-file-header
+     ((t (:background ,non-text))))
+
    `(erc-input-face
      ((t (:foreground ,red))))
    `(erc-my-nick-face
