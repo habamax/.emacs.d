@@ -20,18 +20,14 @@
 (setq-default
  default-frame-alist
  '((font . "Monospace-18")
-   (alpha-background . 90)
    (fullscreen . maximized)
    (horizontal-scroll-bars . nil)
    (vertical-scroll-bars . nil)
    (menu-bar-lines . 0)
    (tool-bar-lines . 0)))
 
-(defconst +THEMES+ '(nocharm-amethyst
-                     nocharm-bronze
-                     nocharm-light
-                     wildcharm
-                     nocharm-white))
+(defconst +THEMES+ '(defsy-dark
+                     defsy-light))
 (setq custom-theme-directory (locate-user-emacs-file "themes/"))
 (ignore-errors (load-theme (car +THEMES+) t))
 ;;; early-init.el ends here
