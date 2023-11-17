@@ -30,6 +30,7 @@
 (let* ((fg "#d0d0d0")(bg "#121212")
        (black "#000000")
        (darkgrey "#808080")
+       (darkgrey2 "grey20")
        (red "#d75f5f")
        (green "#00af5f")
        (yellow "#d78700")
@@ -134,7 +135,7 @@
      ((t (:background ,code-block :extend t))))
 
    `(diff-header
-     ((t (:background ,code-block))))
+     ((t (:background ,darkgrey2))))
    `(diff-file-header
      ((t (:background ,non-text))))
 
