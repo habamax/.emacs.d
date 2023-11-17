@@ -135,6 +135,10 @@
      ((t (:background ,code-block :extend t))))
    `(org-date
      ((t (:foreground ,darkgrey))))
+   `(org-block-begin-line
+     ((t (:foreground ,darkgrey))))
+   `(org-block-end-line
+     ((t (:inherit org-block-begin-line))))
 
    `(diff-header
      ((t (:background ,darkgrey2))))
