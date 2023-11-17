@@ -21,6 +21,7 @@
  default-frame-alist
  '((font . "Monospace-18")
    (fullscreen . maximized)
+   (alpha-background . 90)
    (horizontal-scroll-bars . nil)
    (vertical-scroll-bars . nil)
    (menu-bar-lines . 0)
