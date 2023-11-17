@@ -156,7 +156,33 @@
    `(erc-input-face
      ((t (:foreground ,green))))
    `(erc-my-nick-face
-     ((t (:foreground ,green))))))
+     ((t (:foreground ,green))))
+
+   `(gnus-summary-selected
+     ((t (:inverse-video t :underline nil))))
+   `(gnus-summary-normal-unread
+     ((t (:foreground ,white :weight bold))))
+   `(gnus-summary-normal-read
+     ((t (:foreground ,fg))))
+   `(gnus-summary-normal-ticked
+     ((t (:foreground ,yellow))))
+   `(gnus-summary-normal-ancient
+     ((t (:foreground ,darkgrey))))
+   `(gnus-summary-cancelled
+     ((t (:background unspecified :foreground ,red))))
+   `(gnus-header
+     ((t (:inherit default))))
+   `(gnus-header-name
+     ((t (:foreground ,green :weight bold))))
+   `(gnus-header-from
+     ((t (:foreground ,red :weight bold))))
+   `(gnus-header-content
+     ((t (:foreground ,fg :weight normal :slant normal))))
+   `(gnus-header-subject
+     ((t (:foreground ,white :weight bold))))
+   `(gnus-header-newsgroups
+     ((t (:foreground ,white :weight bold))))))
+
 
 ;;;###autoload
 (when load-file-name
