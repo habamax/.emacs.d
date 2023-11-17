@@ -150,9 +150,14 @@
   :custom-face
   (org-document-title ((t (:height 1.5))))
   (org-agenda-structure ((t (:height 1.5))))
-  (outline-1 ((t (:height 1.5))))
-  (outline-2 ((t (:height 1.3))))
-  (outline-3 ((t (:height 1.1)))))
+  (outline-1 ((t (:height 1.5 :weight bold))))
+  (outline-2 ((t (:height 1.3 :weight bold))))
+  (outline-3 ((t (:height 1.1 :weight bold))))
+  (outline-4 ((t (:height 1.0 :weight bold))))
+  (outline-5 ((t (:height 1.0 :weight bold))))
+  (outline-6 ((t (:height 1.0 :weight bold))))
+  (outline-7 ((t (:height 1.0 :weight bold))))
+  (outline-8 ((t (:height 1.0 :weight bold)))))
 
 (use-package windmove
   :ensure nil
