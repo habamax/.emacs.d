@@ -27,18 +27,18 @@
 (deftheme def-light
   "Almost default light Emacs theme.")
 
-(let* ((fg "#000000")(bg "#ffffff")
-       (darkgrey "#7f7f7f")
-       (red "#af0000")
-       (green "#006f00")
-       (yellow "#af5f00")
-       (blue "#0078c7")
-       (non-text "#878787")
-       (match-paren "#ff00af")
-       (mode-line-active "#d0d0d0")
-       (mode-line-inactive "#e4e4e4")
-       (header-line "#d7d7d7")
-       (code-block "#f7f7f7"))
+(let ((fg "#000000")(bg "#ffffff")
+      (darkgrey "#7f7f7f")
+      (red "#af0000")
+      (green "#006f00")
+      (yellow "#af5f00")
+      (blue "#0078c7")
+      (non-text "#878787")
+      (match-paren "#ff00af")
+      (mode-line-active "#d0d0d0")
+      (mode-line-inactive "#e4e4e4")
+      (header-line "#d7d7d7")
+      (code-block "#f7f7f7"))
 
   (custom-theme-set-faces
    'def-light
