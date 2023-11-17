@@ -29,6 +29,7 @@
 
 (let ((fg "#000000")(bg "#ffffff")
       (darkgrey "#7f7f7f")
+      (grey "#bcbcbc")
       (red "#af0000")
       (green "#006f00")
       (yellow "#af5f00")
@@ -79,7 +80,7 @@
                       :box (:line-width 1 :color ,non-text)))))
    `(tab-bar-tab-inactive
      ((t (:background unspecified :foreground ,fg
-                      :box (:line-width 1 :color ,non-text)))))
+                      :box (:line-width 1 :color ,grey)))))
    `(tab-line
      ((t (:background ,mode-line-inactive :foreground ,darkgrey))))
    `(tab-line-tab
