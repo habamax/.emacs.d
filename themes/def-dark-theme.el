@@ -145,6 +145,8 @@
    `(diff-file-header
      ((t (:background ,non-text))))
 
+   `(erc-prompt-face
+     ((t (:background ,fg :foreground ,bg :weight bold))))
    `(erc-button
      ((t (:inherit link))))
    `(erc-timestamp-face

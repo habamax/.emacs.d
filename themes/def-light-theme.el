@@ -135,6 +135,8 @@
    `(org-block-end-line
      ((t (:inherit org-block-begin-line))))
 
+   `(erc-prompt-face
+     ((t (:background ,fg :foreground ,bg :weight bold))))
    `(erc-button
      ((t (:inherit link))))
    `(erc-timestamp-face
