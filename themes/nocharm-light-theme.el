@@ -259,7 +259,7 @@
      ((t (:foreground ,purple :weight unspecified :slant unspecified))))
 
    `(elisp-shorthand-font-lock-face
-     ((t (:foreground ,bright-cyan :weight bold :slant unspecified))))
+     ((t (:foreground unspecified :weight bold :slant unspecified))))
 
    `(perl-non-scalar-variable
      ((t (:inherit font-lock-variable-name-face))))
