@@ -78,31 +78,13 @@
    `(cursor
      ((t (:background ,white))))
    `(tab-bar
-     ((t (:background ,mode-line-inactive :foreground ,darkgrey))))
+     ((t (:background ,header-line :foreground ,fg))))
    `(tab-bar-tab
-     ((t (:background ,mode-line-active :foreground ,white :weight bold
-                              :box (:line-width 1 :color ,non-text)))))
+     ((t (:background ,mode-line-inactive :foreground ,grey :weight bold
+                      :box (:style released-button)))))
    `(tab-bar-tab-inactive
-     ((t (:background unspecified :foreground ,grey
-                      :box (:line-width 1 :color ,mode-line-active)))))
-   `(tab-line
-     ((t (:background ,mode-line-inactive :foreground ,darkgrey))))
-   `(tab-line-tab
-     ((t (:background ,mode-line-active :foreground ,white :weight bold
-                              :box (:line-width 1 :color ,non-text)))))
-   `(tab-line-tab-current
-     ((t (:background ,mode-line-active :foreground ,white :weight bold
-                              :box (:line-width 1 :color ,non-text)))))
-   `(tab-line-highlight
-     ((t (:background ,mode-line-active :foreground ,white :weight bold
-                              :box (:line-width 1 :color ,non-text)))))
-   `(tab-line-tab-inactive
-     ((t (:background unspecified :foreground ,grey
-                      :box (:line-width 1 :color ,non-text)))))
-   `(tab-line-tab-modified
-     ((t (:background unspecified :foreground ,green))))
-   `(tab-line-close-highlight
-     ((t (:background unspecified :foreground ,red))))
+     ((t (:background ,header-line :foreground ,darkgrey
+                      :box (:style released-button)))))
 
    `(show-paren-match
      ((t :foreground ,match-paren :weight bold)))
