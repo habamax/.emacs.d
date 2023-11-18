@@ -153,9 +153,11 @@
      ((t (:inherit link))))
    `(erc-timestamp-face
      ((t (:foreground ,darkgrey :weight unspecified))))
-   `(erc-input-face
-     ((t (:foreground ,green))))
    `(erc-my-nick-face
+     ((t (:foreground ,green :weight bold))))
+   `(erc-current-nick-face
+     ((t (:inherit erc-my-nick-face))))
+   `(erc-input-face
      ((t (:foreground ,green))))
 
    `(gnus-summary-selected
