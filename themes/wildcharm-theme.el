@@ -159,7 +159,7 @@
      ((,class256 (:background ,header-line :foreground ,fg))))
    `(tab-bar-tab
      ((,class256 (:background ,mode-line-inactive :foreground ,grey :weight bold
-                      :box (:style released-button)))))
+                              :box (:style released-button)))))
    `(tab-bar-tab-inactive
      ((t (:background ,header-line :foreground ,darkgrey
                       :box (:style released-button)))))
