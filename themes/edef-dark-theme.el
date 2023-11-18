@@ -97,6 +97,9 @@
    `(shortdoc-section
      ((t (:inherit default))))
 
+   `(link
+     ((t (:foreground ,blue :underline t))))
+
    `(whitespace-space
      ((t (:background unspecified :foreground ,non-text))))
    `(whitespace-line
