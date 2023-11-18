@@ -127,11 +127,11 @@
    `(erc-timestamp-face
      ((t (:foreground ,darkgrey :weight unspecified))))
    `(erc-my-nick-face
-     ((t (:foreground ,green :weight bold))))
+     ((t (:foreground ,red :weight bold))))
    `(erc-current-nick-face
      ((t (:inherit erc-my-nick-face))))
    `(erc-input-face
-     ((t (:foreground ,green))))
+     ((t (:foreground ,red))))
 
 
    `(gnus-summary-selected

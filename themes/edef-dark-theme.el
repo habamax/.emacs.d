@@ -32,6 +32,7 @@
       (darkgrey "#808080")
       (darkgrey2 "grey20")
       (red "#d75f5f")
+      (bright-red "#ff5f87")
       (green "#00af5f")
       (yellow "#d78700")
       (blue "#0087d7")
@@ -136,11 +137,11 @@
    `(erc-timestamp-face
      ((t (:foreground ,darkgrey :weight unspecified))))
    `(erc-my-nick-face
-     ((t (:foreground ,green :weight bold))))
+     ((t (:foreground ,bright-red :weight bold))))
    `(erc-current-nick-face
      ((t (:inherit erc-my-nick-face))))
    `(erc-input-face
-     ((t (:foreground ,green))))
+     ((t (:foreground ,bright-red))))
 
    `(gnus-summary-selected
      ((t (:inverse-video t :underline nil))))
