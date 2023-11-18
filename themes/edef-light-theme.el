@@ -1,7 +1,7 @@
-;;; def-dark-theme.el --- Almost default dark emacs theme -*- lexical-binding: t; -*-
+;;; edef-light-theme.el --- Almost default light Emacs theme -*- lexical-binding: t; -*-
 
 ;; Author: Maxim Kim <habamax@gmail.com>
-;; URL: https://github.com/habamax/def-dark-theme
+;; URL: https://github.com/habamax/edef-light-theme XXX: non-published!
 ;; Package-Requires: ((emacs "24.1"))
 ;; Package-Version: 0.7
 
@@ -20,32 +20,29 @@
 
 ;;; Commentary:
 
-;; Default emacs dark syntax colors, different chrome.
+;; Default emacs light syntax colors, different chrome.
 
 ;;; Code:
 
-(deftheme def-dark
-  "Almost default dark Emacs theme.")
+(deftheme edef-light
+  "Almost default light Emacs theme.")
 
-(let ((fg "#d0d0d0")(bg "#121212")
-      (black "#000000")
-      (darkgrey "#808080")
-      (darkgrey2 "grey20")
-      (red "#d75f5f")
-      (green "#00af5f")
-      (yellow "#d78700")
-      (blue "#0087d7")
-      (grey "#d0d0d0")
-      (white "#f0f0f0")
-      (non-text "#585858")
+(let ((fg "#000000")(bg "#ffffff")
+      (darkgrey "#7f7f7f")
+      (darkergrey "#5f5f5f")
+      (red "#af0000")
+      (green "#006f00")
+      (yellow "#af5f00")
+      (blue "#0078c7")
+      (non-text "#878787")
       (match-paren "#ff00af")
-      (mode-line-active "#444444")
-      (mode-line-inactive "#303030")
-      (header-line "#262626")
-      (code-block "#1F1F1F"))
+      (mode-line-active "#d0d0d0")
+      (mode-line-inactive "#e4e4e4")
+      (header-line "#d7d7d7")
+      (code-block "#f7f7f7"))
 
   (custom-theme-set-faces
-   'def-dark
+   'edef-light
 
    ;; standard faces
    `(default
@@ -59,37 +56,36 @@
    `(vertical-border
      ((t (:background ,mode-line-inactive :foreground ,non-text))))
    `(mode-line
-     ((t (:background ,mode-line-active :foreground ,grey
-                              :box (:style released-button)))))
+     ((t (:background ,mode-line-active :foreground ,fg
+                      :box (:style released-button)))))
    `(mode-line-inactive
      ((t (:background ,mode-line-inactive :foreground ,darkgrey
-                              :box (:line-width 1 :color ,mode-line-active)))))
+                      :box (:line-width 1 :color ,mode-line-active)))))
    `(mode-line-highlight
-     ((t (:background ,black
-                              :box (:line-width 1 :color ,non-text)))))
+     ((t (:background ,bg
+                      :box (:line-width 1 :color ,non-text)))))
    `(mode-line-emphasis
      ((t (:weight bold))))
    `(mode-line-buffer-id
      ((t (:weight bold))))
    `(header-line
      ((t (:background ,header-line :foreground ,fg :extend t
-                              :box (:line-width 1 :color ,mode-line-active)))))
-
+                      :box (:line-width 1 :color ,darkgrey)))))
    `(cursor
-     ((t (:background ,white))))
+     ((t (:background ,fg))))
    `(tab-bar
      ((t (:background ,header-line :foreground ,fg))))
    `(tab-bar-tab
-     ((t (:background ,mode-line-inactive :foreground ,grey :weight bold
+     ((t (:background ,mode-line-inactive :foreground ,fg :weight bold
                       :box (:style released-button)))))
    `(tab-bar-tab-inactive
-     ((t (:background ,header-line :foreground ,darkgrey
+     ((t (:background ,header-line :foreground ,darkergrey
                       :box (:style released-button)))))
 
    `(show-paren-match
      ((t :foreground ,match-paren :weight bold)))
    `(show-paren-mismatch
-     ((t :background ,match-paren :foreground ,white :weight bold)))
+     ((t :background ,match-paren :foreground ,fg :weight bold)))
 
    `(shortdoc-heading
      ((t (:inherit default :weight bold :height 1.3))))
@@ -110,7 +106,7 @@
      ((t (:background ,yellow))))
 
    `(org-block
-     ((t (:background ,code-block :foreground ,fg :extend t))))
+     ((t (:background ,code-block :extend t))))
    `(org-code
      ((t (:background ,code-block :extend t))))
    `(org-verbatim
@@ -121,11 +117,6 @@
      ((t (:foreground ,darkgrey))))
    `(org-block-end-line
      ((t (:inherit org-block-begin-line))))
-
-   `(diff-header
-     ((t (:background ,darkgrey2))))
-   `(diff-file-header
-     ((t (:background ,non-text))))
 
    `(erc-prompt-face
      ((t (:inverse-video t :weight bold))))
@@ -142,10 +133,11 @@
    `(erc-input-face
      ((t (:foreground ,green))))
 
+
    `(gnus-summary-selected
      ((t (:inverse-video t :underline nil))))
    `(gnus-summary-normal-unread
-     ((t (:foreground ,white :weight bold))))
+     ((t (:foreground ,fg :weight bold))))
    `(gnus-summary-normal-read
      ((t (:foreground ,fg))))
    `(gnus-summary-normal-ticked
@@ -163,15 +155,15 @@
    `(gnus-header-content
      ((t (:foreground ,fg :weight normal :slant normal))))
    `(gnus-header-subject
-     ((t (:foreground ,white :weight bold))))
+     ((t (:foreground ,fg :weight bold))))
    `(gnus-header-newsgroups
-     ((t (:foreground ,white :weight bold))))))
-
+     ((t (:foreground ,fg :weight bold))))
+   ))
 
 ;;;###autoload
 (when load-file-name
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'def-dark)
-;;; def-dark-theme.el ends here
+(provide-theme 'edef-light)
+;;; edef-light-theme.el ends here

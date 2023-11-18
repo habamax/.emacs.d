@@ -27,8 +27,8 @@
    (menu-bar-lines . 0)
    (tool-bar-lines . 0)))
 
-(defconst +THEMES+ '(def-dark
-                     def-light
+(defconst +THEMES+ '(edef-dark
+                     edef-light
                      wildcharm
                      wildcharm-light))
 (setq custom-theme-directory (locate-user-emacs-file "themes/"))
