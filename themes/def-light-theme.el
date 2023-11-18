@@ -57,7 +57,7 @@
      ((t (:background ,mode-line-inactive :foreground ,non-text))))
    `(mode-line
      ((t (:background ,mode-line-active :foreground ,fg
-                      :box (:line-width 1 :color ,non-text)))))
+                      :box (:style released-button)))))
    `(mode-line-inactive
      ((t (:background ,mode-line-inactive :foreground ,darkgrey
                       :box (:line-width 1 :color ,mode-line-active)))))
