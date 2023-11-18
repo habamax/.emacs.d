@@ -160,7 +160,7 @@
    `(gnus-header-name
      ((t (:foreground ,green :weight bold))))
    `(gnus-header-from
-     ((t (:foreground ,red :weight bold))))
+     ((t (:foreground ,bright-red :weight bold))))
    `(gnus-header-content
      ((t (:foreground ,fg :weight normal :slant normal))))
    `(gnus-header-subject
