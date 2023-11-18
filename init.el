@@ -38,7 +38,6 @@
 (setq delete-pair-blink-delay 0)
 
 (setq tab-bar-show 1
-      tab-bar-auto-width-max '(360 30)
       tab-bar-close-button-show nil
       tab-bar-format '(tab-bar-format-history
                        tab-bar-format-tabs
