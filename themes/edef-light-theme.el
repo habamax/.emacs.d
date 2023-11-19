@@ -72,6 +72,7 @@
    `(header-line
      ((t (:background ,header-line :foreground ,fg :extend t
                       :box (:line-width 1 :color ,darkgrey)))))
+
    `(cursor
      ((t (:background ,fg))))
 
@@ -83,6 +84,26 @@
    `(tab-bar-tab-inactive
      ((t (:background ,header-line :foreground ,darkergrey
                       :box (:style released-button)))))
+
+
+   `(tab-line
+     ((t (:background ,mode-line-inactive :foreground ,darkgrey))))
+   `(tab-line-tab
+     ((t (:background ,mode-line-active :foreground ,fg :weight bold
+                              :box (:line-width 1 :color ,non-text)))))
+   `(tab-line-tab-current
+     ((t (:background ,mode-line-active :foreground ,fg :weight bold
+                              :box (:line-width 1 :color ,non-text)))))
+   `(tab-line-highlight
+     ((t (:background ,mode-line-active :foreground ,fg :weight bold
+                              :box (:line-width 1 :color ,non-text)))))
+   `(tab-line-tab-inactive
+     ((t (:background unspecified :foreground ,fg
+                      :box (:line-width 1 :color ,non-text)))))
+   `(tab-line-tab-modified
+     ((t (:background unspecified :foreground ,green))))
+   `(tab-line-close-highlight
+     ((t (:background unspecified :foreground ,red))))
 
    `(show-paren-match
      ((t :foreground ,match-paren :weight bold)))
