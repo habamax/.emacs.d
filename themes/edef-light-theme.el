@@ -58,10 +58,10 @@
      ((t (:background ,mode-line-inactive :foreground ,non-text))))
    `(mode-line
      ((t (:background ,mode-line-active :foreground ,fg
-                      :box (:style released-button)))))
+                      :box (:line-width 1 :color ,non-text)))))
    `(mode-line-inactive
      ((t (:background ,mode-line-inactive :foreground ,darkgrey
-                      :box (:style released-button)))))
+                      :box (:line-width 1 :color ,mode-line-active)))))
    `(mode-line-highlight
      ((t (:background ,bg
                       :box (:line-width 1 :color ,non-text)))))

@@ -59,11 +59,11 @@
    `(vertical-border
      ((t (:background ,mode-line-inactive :foreground ,non-text))))
    `(mode-line
-     ((t (:background ,mode-line-active :foreground ,grey
-                              :box (:style released-button)))))
+     ((t (:background ,mode-line-active :foreground ,fg
+                      :box (:line-width 1 :color ,non-text)))))
    `(mode-line-inactive
      ((t (:background ,mode-line-inactive :foreground ,darkgrey
-                              :box (:style released-button)))))
+                      :box (:line-width 1 :color ,mode-line-active)))))
    `(mode-line-highlight
      ((t (:background ,black
                               :box (:line-width 1 :color ,non-text)))))
