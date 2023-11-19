@@ -87,6 +87,21 @@
      ((t (:background ,header-line :foreground ,darkgrey
                       :box (:style released-button)))))
 
+   ;; customize & widget
+   `(custom-button
+     ((t (:background ,darkgrey2 :foreground ,fg :extend t
+                      :box (:line-width (2 . 2) :style released-button)))))
+   `(custom-button-pressed
+     ((t (:background ,darkgrey2 :foreground ,fg :extend t
+                      :box (:line-width (2 . 2) :style pressed-button)))))
+   `(custom-button-mouse
+     ((t (:background ,non-text :foreground ,fg :extend t
+                      :box (:line-width (2 . 2) :style released-button)))))
+   `(widget-field
+     ((t (:background ,darkgrey2 :foreground ,fg :extend t))))
+   `(widget-inactive
+     ((t (:foreground ,darkgrey))))
+
    `(show-paren-match
      ((t :foreground ,match-paren :weight bold)))
    `(show-paren-mismatch
