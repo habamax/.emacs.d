@@ -66,7 +66,7 @@
                       :box (:line-width 1 :color ,mode-line-active)))))
    `(mode-line-highlight
      ((t (:background ,black
-                              :box (:line-width 1 :color ,non-text)))))
+                      :box (:line-width 1 :color ,non-text)))))
    `(mode-line-emphasis
      ((t (:weight bold))))
    `(mode-line-buffer-id
@@ -77,6 +77,7 @@
 
    `(cursor
      ((t (:background ,white))))
+
    `(tab-bar
      ((t (:background ,header-line :foreground ,fg))))
    `(tab-bar-tab

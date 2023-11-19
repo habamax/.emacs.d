@@ -74,6 +74,7 @@
                       :box (:line-width 1 :color ,darkgrey)))))
    `(cursor
      ((t (:background ,fg))))
+
    `(tab-bar
      ((t (:background ,header-line :foreground ,fg))))
    `(tab-bar-tab
