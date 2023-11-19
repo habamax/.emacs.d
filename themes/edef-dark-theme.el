@@ -127,6 +127,8 @@
    `(whitespace-empty
      ((t (:background ,yellow))))
 
+   `(org-ellipsis
+     ((t (:background unspecified :foreground unspecified :underline unspecified))))
    `(org-block
      ((t (:background ,code-block :foreground ,fg :extend t))))
    `(org-code

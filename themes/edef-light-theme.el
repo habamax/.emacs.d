@@ -106,6 +106,8 @@
    `(whitespace-empty
      ((t (:background ,yellow))))
 
+   `(org-ellipsis
+     ((t (:background unspecified :foreground unspecified :underline unspecified))))
    `(org-block
      ((t (:background ,code-block :extend t))))
    `(org-code
