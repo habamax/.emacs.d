@@ -113,7 +113,7 @@ Otherwise call well known `comment-dwim'"
   (interactive)
   (thread-last
     (pcase (frame-parameter nil 'alpha-background)
-      (90 nil)(_ 90))
+      (85 nil)(_ 85))
     (set-frame-parameter nil 'alpha-background)))
 
 (defun habamax-reload-current-theme ()
