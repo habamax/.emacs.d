@@ -1,7 +1,7 @@
-;;; nocharm-theme.el --- Minimal dark emacs theme -*- lexical-binding: t; -*-
+;;; nocharm-dark-theme.el --- Minimal dark emacs theme -*- lexical-binding: t; -*-
 
 ;; Author: Maxim Kim <habamax@gmail.com>
-;; URL: https://github.com/habamax/nocharm-theme
+;; URL: https://github.com/habamax/nocharm-dark-theme
 ;; Package-Requires: ((emacs "24.1"))
 ;; Package-Version: 0.7
 
@@ -24,7 +24,7 @@
 
 ;;; Code:
 
-(deftheme nocharm
+(deftheme nocharm-dark
   "Minimal dark Emacs theme.")
 
 (let* ((classTC '((class color) (min-colors 257)))
@@ -78,7 +78,7 @@
        (code-block "#1F1F1F"))
 
   (custom-theme-set-faces
-   'nocharm
+   'nocharm-dark
 
    ;; standard faces
    `(default
@@ -1382,5 +1382,5 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'nocharm)
-;;; nocharm-theme.el ends here
+(provide-theme 'nocharm-dark)
+;;; nocharm-dark-theme.el ends here

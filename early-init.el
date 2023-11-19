@@ -27,7 +27,9 @@
    (menu-bar-lines . 0)
    (tool-bar-lines . 0)))
 
-(defconst +THEMES+ '(edef-dark
+(defconst +THEMES+ '(nocharm-dark
+                     nocharm-light
+                     edef-dark
                      edef-light
                      wildcharm
                      wildcharm-light))

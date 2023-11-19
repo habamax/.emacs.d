@@ -1,7 +1,7 @@
-;;; nocharm-white-theme.el --- Minimal low contrast light Emacs theme -*- lexical-binding: t; -*-
+;;; nocharm-light-theme.el --- Minimal low contrast light Emacs theme -*- lexical-binding: t; -*-
 
 ;; Author: Maxim Kim <habamax@gmail.com>
-;; URL: https://github.com/habamax/nocharm-white-theme XXX: non-published!
+;; URL: https://github.com/habamax/nocharm-light-theme XXX: non-published!
 ;; Package-Requires: ((emacs "24.1"))
 ;; Package-Version: 0.7
 
@@ -22,7 +22,7 @@
 
 ;;; Code:
 
-(deftheme nocharm-white
+(deftheme nocharm-light
   "Minimal high contrast light Emacs theme.")
 
 (let* ((classTTY '((type tty)))
@@ -69,7 +69,7 @@
        (code-block "#f7f7f7"))
 
   (custom-theme-set-faces
-   'nocharm-white
+   'nocharm-light
 
    ;; standard faces
    `(default
@@ -1341,5 +1341,5 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'nocharm-white)
-;;; nocharm-white-theme.el ends here
+(provide-theme 'nocharm-light)
+;;; nocharm-light-theme.el ends here
