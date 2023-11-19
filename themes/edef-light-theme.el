@@ -132,7 +132,7 @@
    `(erc-current-nick-face
      ((t (:inherit erc-my-nick-face))))
    `(erc-input-face
-     ((t (:foreground ,red))))
+     ((t (:foreground ,green))))
 
 
    `(gnus-summary-selected

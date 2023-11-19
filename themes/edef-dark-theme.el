@@ -32,7 +32,7 @@
       (darkgrey "#808080")
       (darkgrey2 "#3a3a3a")
       (red "#d75f5f")(bright-red "#ff5f87")
-      (green "#00af5f")
+      (green "#00af5f")(bright-green "#00d75f")
       (yellow "#d78700")
       (blue "#0087d7")(bright-blue "#00afff")
       (grey "#d0d0d0")
@@ -158,7 +158,7 @@
    `(erc-current-nick-face
      ((t (:inherit erc-my-nick-face))))
    `(erc-input-face
-     ((t (:foreground ,bright-red))))
+     ((t (:foreground ,bright-green))))
 
    `(gnus-summary-selected
      ((t (:inverse-video t :underline nil))))
