@@ -30,12 +30,11 @@
 (let ((fg "#d0d0d0")(bg "#121212")
       (black "#000000")
       (darkgrey "#808080")
-      (darkgrey2 "grey20")
-      (red "#d75f5f")
-      (bright-red "#ff5f87")
+      (darkgrey2 "#3a3a3a")
+      (red "#d75f5f")(bright-red "#ff5f87")
       (green "#00af5f")
       (yellow "#d78700")
-      (blue "#0087d7")
+      (blue "#0087d7")(bright-blue "#00afff")
       (grey "#d0d0d0")
       (white "#f0f0f0")
       (non-text "#585858")
@@ -113,7 +112,7 @@
      ((t (:inherit default))))
 
    `(link
-     ((t (:foreground ,blue :underline t))))
+     ((t (:foreground ,bright-blue :underline t))))
 
    `(whitespace-space
      ((t (:background unspecified :foreground ,non-text))))
