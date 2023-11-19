@@ -53,6 +53,7 @@
 (setq read-file-name-completion-ignore-case t
       read-buffer-completion-ignore-case t
       completion-ignore-case t)
+(setq icomplete-compute-delay 0)
 
 (setq-default abbrev-mode t)
 (quietly-read-abbrev-file (locate-user-emacs-file "abbrevs"))
