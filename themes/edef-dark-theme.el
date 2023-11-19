@@ -54,8 +54,6 @@
      ((t (:foreground ,non-text))))
    `(region
      ((t (:background ,bg :foreground ,blue :inverse-video t))))
-   `(highlight
-     ((t (:background ,darkgrey2))))
    `(trailing-whitespace
      ((t (:foreground ,red :inverse-video t))))
    `(vertical-border
