@@ -159,33 +159,6 @@
   (outline-7 ((t (:height 1.0 :weight bold))))
   (outline-8 ((t (:height 1.0 :weight bold)))))
 
-(use-package windmove
-  :ensure nil
-  :bind
-  (("C-x w m" . delete-other-windows)
-   ("C-x w d" . delete-window)
-   ("C-x w h" . windmove-left)
-   ("C-x w j" . windmove-down)
-   ("C-x w k" . windmove-up)
-   ("C-x w l" . windmove-right)
-   ("C-x w H" . windmove-swap-states-left)
-   ("C-x w J" . windmove-swap-states-down)
-   ("C-x w K" . windmove-swap-states-up)
-   ("C-x w L" . windmove-swap-states-right)
-   :repeat-map habamax-windmove-repeat-map
-   ("=" . balance-windows)
-   ("d" . delete-window)
-   ("h" . windmove-left)
-   ("j" . windmove-down)
-   ("k" . windmove-up)
-   ("l" . windmove-right)
-   ("H" . windmove-swap-states-left)
-   ("J" . windmove-swap-states-down)
-   ("K" . windmove-swap-states-up)
-   ("L" . windmove-swap-states-right))
-  :config
-  (setq windmove-create-window t))
-
 (use-package winner-mode
   :ensure nil
   :bind
