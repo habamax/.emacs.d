@@ -152,13 +152,13 @@
      ((t (:background ,white))))
    ;; -tool-bar
    `(tab-bar
-     ((,class256 (:background ,mode-line-inactive :foreground ,darkgrey))))
+     ((,class256 (:background ,header-line :foreground ,fg))))
    `(tab-bar-tab
-     ((,class256 (:background ,mode-line-active :foreground ,white :weight bold
-                              :box (:line-width 1 :color ,non-text)))))
+     ((,class256 (:background ,mode-line-inactive :foreground ,fg :weight bold
+                              :box (:style released-button)))))
    `(tab-bar-tab-inactive
-     ((t (:background unspecified :foreground ,grey
-                      :box (:line-width 1 :color ,non-text)))))
+     ((,class256 (:background ,header-line :foreground ,darkgrey
+                              :box (:style released-button)))))
    `(tab-line
      ((,class256 (:background ,mode-line-inactive :foreground ,darkgrey))))
    `(tab-line-tab
@@ -1042,7 +1042,7 @@
    `(erc-button
      ((,class256 (:background unspecified :foreground unspecified :underline t))))
    `(erc-prompt-face
-     ((,class256 (:background unspecified :foreground ,magenta :weight bold))))
+     ((t (:background unspecified :foreground unspecified :inverse-video t :weight bold))))
    `(erc-action-face
      ((,class256 (:background unspecified :foreground ,comment))))
    `(fg:erc-face0

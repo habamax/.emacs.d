@@ -119,7 +119,7 @@
      ((t (:inherit org-block-begin-line))))
 
    `(erc-prompt-face
-     ((t (:inverse-video t :weight bold))))
+     ((t (:background unspecified :foreground unspecified :inverse-video t :weight bold))))
    `(erc-notice-face
      ((t (:foreground ,darkgrey))))
    `(erc-button

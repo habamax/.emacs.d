@@ -27,7 +27,7 @@
 
 (let* ((classTTY '((type tty)))
        (fg "#000000")(bg "#d3d3d3")
-       (black "#000000")(darkgrey "#707070")
+       (black "#000000")(darkgrey "#707070")(darkergrey "#5f5f5f")
        (red "#af0000")(bright-red "#d70000")
        (green "#006f00")(bright-green "#3f8f0f")
        (yellow "#af5f00")(bright-yellow "#d78700")
@@ -140,13 +140,13 @@
      ((t (:background ,fg))))
    ;; -tool-bar
    `(tab-bar
-     ((t (:background ,mode-line-inactive :foreground ,darkgrey))))
+     ((t (:background ,header-line :foreground ,fg))))
    `(tab-bar-tab
-     ((t (:background ,mode-line-active :foreground ,black :weight bold
-                      :box (:line-width 1 :color ,non-text)))))
+     ((t (:background ,mode-line-inactive :foreground ,fg :weight bold
+                      :box (:style released-button)))))
    `(tab-bar-tab-inactive
-     ((t (:background unspecified :foreground ,fg
-                      :box (:line-width 1 :color ,non-text)))))
+     ((t (:background ,header-line :foreground ,darkergrey
+                      :box (:style released-button)))))
    `(tab-line
      ((t (:background ,mode-line-inactive :foreground ,darkgrey))))
    `(tab-line-tab
@@ -991,7 +991,7 @@
    `(erc-nick-msg-face
      ((t (:foreground ,yellow))))
    `(erc-input-face
-     ((t (:foreground ,green))))
+     ((t (:foreground ,red))))
    `(erc-error-face
      ((t (:foreground ,bright-red))))
    `(erc-dangerous-host-face
@@ -1001,7 +1001,7 @@
    `(erc-button
      ((t (:background unspecified :foreground unspecified :underline t))))
    `(erc-prompt-face
-     ((t (:background unspecified :foreground ,bright-magenta :weight bold))))
+     ((t (:background unspecified :foreground unspecified :inverse-video t :weight bold))))
    `(erc-action-face
      ((t (:background unspecified :foreground ,comment))))
    `(fg:erc-face0
