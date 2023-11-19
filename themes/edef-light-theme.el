@@ -30,10 +30,11 @@
 (let ((fg "#000000")(bg "#ffffff")
       (darkgrey "#7f7f7f")
       (darkergrey "#5f5f5f")
+      (grey "#e4e4e4")
       (red "#af0000")
       (green "#006f00")
       (yellow "#af5f00")
-      (blue "#0078c7")
+      (blue "#0078c7")(bright-blue "#0087d7")
       (non-text "#878787")
       (match-paren "#ff00af")
       (mode-line-active "#d0d0d0")
@@ -50,7 +51,9 @@
    `(shadow
      ((t (:foreground ,non-text))))
    `(region
-     ((t (:background ,bg :foreground ,blue :inverse-video t))))
+     ((t (:background ,bg :foreground ,bright-blue :inverse-video t))))
+   `(highlight
+     ((t (:background ,grey))))
    `(trailing-whitespace
      ((t (:foreground ,red :inverse-video t))))
    `(vertical-border
