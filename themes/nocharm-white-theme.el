@@ -27,7 +27,7 @@
 
 (let* ((classTTY '((type tty)))
        (fg "#000000")(bg "#ffffff")
-       (black "#000000")(darkgrey "#7f7f7f")(darkergrey "#5f5f5f")
+       (black "#000000")(darkgrey "#808080")(darkergrey "#5f5f5f")
        (red "#af0000")(bright-red "#d70000")
        (green "#006f00")(bright-green "#3f8f0f")
        (yellow "#af5f00")(bright-yellow "#d78700")
@@ -35,10 +35,10 @@
        (magenta "#870087")(bright-magenta "#9f009f")
        (cyan "#005f5f")(bright-cyan "#007f7f")
        (grey "#bababa")(white "#ffffff")
-       (purple "#4f00c7")(comment blue)
+       (purple "#4f00c7")
        (yellow1 "#875f00")(yellow2 "#af5f00")
        (grey1 "#dadada")(grey2 "#eeeeee")
-       (non-text "#878787")
+       (non-text "#a8a8a8")
        (match-paren "#ff00af")(match "#e0c7e0")
        (mode-line-active "#d0d0d0")(mode-line-inactive "#e4e4e4")
        (menu "#eeeeee")
@@ -106,13 +106,13 @@
      ((t (:inherit 'escape-glyph))))
    `(mode-line
      ((t (:background ,mode-line-active :foreground ,fg
-                      :box (:line-width 1 :color ,non-text)))))
+                      :box (:style released-button)))))
    `(mode-line-inactive
      ((t (:background ,mode-line-inactive :foreground ,darkgrey
-                      :box (:line-width 1 :color ,mode-line-active)))))
+                      :box (:color ,mode-line-active)))))
    `(mode-line-highlight
      ((t (:background ,bg
-                      :box (:line-width 1 :color ,non-text)))))
+                      :box (:color ,non-text)))))
    `(mode-line-emphasis
      ((t (:weight bold))))
    `(mode-line-buffer-id
@@ -223,13 +223,13 @@
 
    ;; font-lock
    `(font-lock-string-face
-     ((t (:foreground ,cyan :weight unspecified :slant unspecified))))
+     ((t (:foreground ,green :weight unspecified :slant unspecified))))
    `(font-lock-comment-face
-     ((t (:foreground ,comment :weight unspecified :slant unspecified))))
+     ((t (:foreground ,darkgrey :weight unspecified :slant unspecified))))
    `(font-lock-keyword-face
      ((t (:foreground unspecified :weight bold :slant unspecified))))
    `(font-lock-preprocessor-face
-     ((t (:foreground ,darkgrey :weight unspecified :slant unspecified))))
+     ((t (:foreground unspecified :weight bold :slant unspecified))))
    `(font-lock-builtin-face
      ((t (:foreground unspecified :weight unspecified :slant unspecified))))
    `(font-lock-type-face
@@ -330,7 +330,7 @@
    `(custom-variable-tag
      ((t (:background unspecified :foreground unspecified :weight bold))))
    `(custom-comment
-     ((t (:background unspecified :foreground ,comment :weight unspecified))))
+     ((t (:background unspecified :foreground ,darkgrey :weight unspecified))))
    `(custom-comment-tag
      ((t (:background unspecified :foreground unspecified :weight unspecified))))
    `(widget-field
@@ -431,7 +431,7 @@
    `(message-separator
      ((t (:background ,grey1 :foreground ,fg :extend t))))
    `(message-mml
-     ((t (:foreground ,comment))))
+     ((t (:foreground ,darkgrey))))
 
    ;; bookmark
    `(bookmark-face
@@ -1003,7 +1003,7 @@
    `(erc-prompt-face
      ((t (:background unspecified :foreground unspecified :inverse-video t :weight bold))))
    `(erc-action-face
-     ((t (:background unspecified :foreground ,comment))))
+     ((t (:background unspecified :foreground ,darkgrey))))
    `(fg:erc-face0
      ((t (:foreground ,black))))
    `(fg:erc-face1
@@ -1191,7 +1191,7 @@
    `(consult-file
      ((t (:foreground ,darkgrey))))
    `(consult-bookmark
-     ((t (:foreground ,comment))))
+     ((t (:foreground ,darkgrey))))
    `(consult-highlight-match
      ((t (:background ,match))))
 

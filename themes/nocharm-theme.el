@@ -39,7 +39,7 @@
        (magenta "#d787d7")(bright-magenta "#ff87ff")
        (cyan "#00afaf")(bright-cyan "#00d7d7")
        (grey "#d0d0d0")(white "#f0f0f0")
-       (purple "#875fff")(comment blue)
+       (purple "#875fff")
        (yellow1 "#d7af5f")(yellow2 "#ffd75f")
        (grey1 "#3a3a3a")(grey2 "#262626")
        (non-text "#585858")
@@ -116,13 +116,13 @@
      ((,class256 (:inherit 'escape-glyph))))
    `(mode-line
      ((,class256 (:background ,mode-line-active :foreground ,grey
-                              :box (:line-width 1 :color ,non-text)))))
+                              :box (:style released-button)))))
    `(mode-line-inactive
      ((,class256 (:background ,mode-line-inactive :foreground ,darkgrey
-                              :box (:line-width 1 :color ,mode-line-active)))))
+                              :box (:color ,mode-line-active)))))
    `(mode-line-highlight
      ((,class256 (:background ,black
-                              :box (:line-width 1 :color ,non-text)))))
+                              :box (:color ,non-text)))))
    `(mode-line-emphasis
      ((,class256 (:weight bold))))
    `(mode-line-buffer-id
@@ -235,13 +235,13 @@
 
    ;; font-lock
    `(font-lock-string-face
-     ((,class256 (:foreground ,cyan :weight unspecified :slant unspecified))))
+     ((,class256 (:foreground ,bright-green :weight unspecified :slant unspecified))))
    `(font-lock-comment-face
-     ((,class256 (:foreground ,comment :weight unspecified :slant unspecified))))
+     ((,class256 (:foreground ,darkgrey :weight unspecified :slant unspecified))))
    `(font-lock-keyword-face
      ((,class256 (:foreground ,white :weight bold :slant unspecified))))
    `(font-lock-preprocessor-face
-     ((,class256 (:foreground ,darkgrey :weight unspecified :slant unspecified))))
+     ((,class256 (:foreground ,white :weight bold :slant unspecified))))
    `(font-lock-builtin-face
      ((,class256 (:foreground unspecified :weight unspecified :slant unspecified))))
    `(font-lock-type-face
@@ -342,7 +342,7 @@
    `(custom-variable-tag
      ((,class256 (:background unspecified :foreground ,white :weight bold))))
    `(custom-comment
-     ((,class256 (:background unspecified :foreground ,comment :weight unspecified))))
+     ((,class256 (:background unspecified :foreground ,darkgrey :weight unspecified))))
    `(custom-comment-tag
      ((,class256 (:background unspecified :foreground unspecified :weight unspecified))))
    `(widget-field
@@ -443,7 +443,7 @@
    `(message-separator
      ((,class256 (:background ,grey2 :foreground ,fg :extend t))))
    `(message-mml
-     ((,class256 (:foreground ,comment))))
+     ((,class256 (:foreground ,darkgrey))))
 
    ;; bookmark
    `(bookmark-face
@@ -1044,7 +1044,7 @@
    `(erc-prompt-face
      ((t (:background unspecified :foreground unspecified :inverse-video t :weight bold))))
    `(erc-action-face
-     ((,class256 (:background unspecified :foreground ,comment))))
+     ((,class256 (:background unspecified :foreground ,darkgrey))))
    `(fg:erc-face0
      ((,class256 (:foreground ,black))))
    `(fg:erc-face1
@@ -1230,7 +1230,7 @@
    `(consult-file
      ((,class256 (:foreground ,darkgrey))))
    `(consult-bookmark
-     ((,class256 (:foreground ,comment))))
+     ((,class256 (:foreground ,darkgrey))))
    `(consult-highlight-match
      ((,class256 (:background ,match))))
 
