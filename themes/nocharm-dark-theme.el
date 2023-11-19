@@ -119,7 +119,7 @@
                               :box (:style released-button)))))
    `(mode-line-inactive
      ((,class256 (:background ,mode-line-inactive :foreground ,darkgrey
-                              :box (:color ,mode-line-active)))))
+                              :box (:style released-button)))))
    `(mode-line-highlight
      ((,class256 (:background ,black
                               :box (:color ,non-text)))))

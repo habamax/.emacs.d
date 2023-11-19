@@ -60,7 +60,7 @@
                       :box (:style released-button)))))
    `(mode-line-inactive
      ((t (:background ,mode-line-inactive :foreground ,darkgrey
-                      :box (:line-width 1 :color ,mode-line-active)))))
+                      :box (:style released-button)))))
    `(mode-line-highlight
      ((t (:background ,bg
                       :box (:line-width 1 :color ,non-text)))))

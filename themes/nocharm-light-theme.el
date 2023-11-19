@@ -106,10 +106,10 @@
      ((t (:inherit 'escape-glyph))))
    `(mode-line
      ((t (:background ,mode-line-active :foreground ,fg
-                      :box (:style released-button)))))
+                      :box (:line-width (1 . -1) :style released-button)))))
    `(mode-line-inactive
      ((t (:background ,mode-line-inactive :foreground ,darkgrey
-                      :box (:color ,mode-line-active)))))
+                      :box (:line-width (1 . -1) :style released-button)))))
    `(mode-line-highlight
      ((t (:background ,bg
                       :box (:color ,non-text)))))
