@@ -21,15 +21,12 @@
  default-frame-alist
  '((font . "Monospace-18")
    (fullscreen . maximized)
-   (alpha-background . 90)
    (horizontal-scroll-bars . nil)
    (vertical-scroll-bars . nil)
    (menu-bar-lines . 0)
    (tool-bar-lines . 0)))
 
-(defconst +THEMES+ '(nocharm-dark
-                     nocharm-light
-                     edef-dark
+(defconst +THEMES+ '(edef-dark
                      edef-light
                      wildcharm
                      wildcharm-light))
