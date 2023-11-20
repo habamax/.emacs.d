@@ -53,7 +53,6 @@
 (setq read-file-name-completion-ignore-case t
       read-buffer-completion-ignore-case t
       completion-ignore-case t)
-(setq icomplete-compute-delay 0)
 
 (setq-default abbrev-mode t)
 (quietly-read-abbrev-file (locate-user-emacs-file "abbrevs"))
@@ -160,6 +159,12 @@
   (outline-7 ((t (:height 1.0 :weight bold))))
   (outline-8 ((t (:height 1.0 :weight bold)))))
 
+(use-package icomplete
+  :init
+  (fido-mode)
+  :config
+  (setq icomplete-compute-delay 0))
+
 (use-package winner-mode
   :ensure nil
   :bind
@@ -189,19 +194,6 @@
   :init
   (diminish 'abbrev-mode)
   (diminish 'eldoc-mode))
-
-(use-package vertico
-  :bind
-  (:map vertico-map
-        ("M-j" . vertico-exit-input)
-        ("DEL" . vertico-directory-delete-char)
-        ("M-DEL" . vertico-directory-delete-word))
-  :init
-  (vertico-mode)
-  (vertico-grid-mode)
-  :custom
-  (vertico-grid-separator "        ")
-  (vertico-count 3))
 
 (use-package org
   :ensure nil
