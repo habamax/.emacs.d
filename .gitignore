@@ -28,3 +28,4 @@
 /org-persist/
 /multisession/
 /tree-sitter/
+/local-init.el

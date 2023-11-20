@@ -142,6 +142,9 @@
    :repeat-map habamax-duplicate-repeat-map
    ("d" . duplicate-dwim))
   :init
+  (let ((local-init (locate-user-emacs-file "local-init.el")))
+    (when (file-exists-p local-init)
+      (load-file local-init)))
   (when +IS-WINDOWS+
     (require 'habamax-windows))
   (when +IS-WSL+
@@ -285,9 +288,6 @@
 
 (use-package rainbow-mode
   :commands rainbow-mode)
-
-(use-package xclip
-  :commands xclip-mode)
 
 (use-package ansi-color
   :ensure nil
