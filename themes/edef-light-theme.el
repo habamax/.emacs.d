@@ -1,7 +1,7 @@
 ;;; edef-light-theme.el --- Almost default light Emacs theme -*- lexical-binding: t; -*-
 
 ;; Author: Maxim Kim <habamax@gmail.com>
-;; URL: https://github.com/habamax/edef-light-theme XXX: non-published!
+;; URL: https://github.com/habamax/edef-theme XXX: non-published!
 ;; Package-Requires: ((emacs "24.1"))
 ;; Package-Version: 0.7
 

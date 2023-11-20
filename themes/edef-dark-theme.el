@@ -1,7 +1,7 @@
 ;;; edef-dark-theme.el --- Almost default dark emacs theme -*- lexical-binding: t; -*-
 
 ;; Author: Maxim Kim <habamax@gmail.com>
-;; URL: https://github.com/habamax/edef-dark-theme
+;; URL: https://github.com/habamax/edef-theme
 ;; Package-Requires: ((emacs "24.1"))
 ;; Package-Version: 0.7
 
