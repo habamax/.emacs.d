@@ -118,6 +118,13 @@
    `(shortdoc-section
      ((t (:inherit default))))
 
+   `(icomplete-first-match
+     ((t (:foreground ,green :weight bold))))
+   `(completions-common-part
+     ((t (:foreground ,blue :weight bold))))
+   `(completions-first-difference
+     ((t (:foreground ,red :weight bold))))
+
    `(whitespace-space
      ((t (:background unspecified :foreground ,non-text))))
    `(whitespace-line

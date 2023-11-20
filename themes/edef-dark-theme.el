@@ -138,6 +138,13 @@
    `(link
      ((t (:foreground ,bright-blue :underline t))))
 
+   `(icomplete-first-match
+     ((t (:foreground ,bright-green :weight bold))))
+   `(completions-common-part
+     ((t (:foreground ,bright-blue :weight bold))))
+   `(completions-first-difference
+     ((t (:foreground ,bright-red :weight bold))))
+
    `(whitespace-space
      ((t (:background unspecified :foreground ,non-text))))
    `(whitespace-line
