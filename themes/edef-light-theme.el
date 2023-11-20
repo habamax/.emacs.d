@@ -119,7 +119,7 @@
      ((t (:inherit default))))
 
    `(icomplete-first-match
-     ((t (:inherit highlight :foreground ,fg :weight bold))))
+     ((t (:foreground ,fg :weight bold))))
    `(completions-common-part
      ((t (:foreground ,blue :weight bold))))
    `(completions-first-difference
