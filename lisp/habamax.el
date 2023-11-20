@@ -45,30 +45,6 @@ Otherwise call well known `comment-dwim'"
       (kill-ring-save (region-beginning) (region-end) (use-region-p))
     (kill-ring-save (line-beginning-position) (line-beginning-position 2))))
 
-(defun habamax-slurp-forward ()
-  "Basic implementation of a slurp forward."
-  (interactive)
-  (save-excursion
-    (up-list 1 t t)
-    (when (char-equal (char-before) ?\")
-      (up-list 1 t t))
-    (when-let ((close (char-before))
-               (start (point)))
-      (delete-char -1)
-      (condition-case nil
-          (progn
-            (when (not
-                   (or (char-equal (char-after) 10)
-                       (char-equal (char-after) 41)))
-              (just-one-space))
-            (forward-sexp))
-        (error nil))
-      (insert close)
-      (when (re-search-backward "^\s*)" nil t)
-        (delete-indentation))
-      (delete-trailing-whitespace start (point))
-      (indent-region start (point) nil))))
-
 (defun habamax-diff-current-buffer ()
   "Search current word using `grep' and `grep-command'"
   (interactive)

@@ -112,7 +112,6 @@
    ("C-c o x" . scratch-buffer)
    ("M-;" . habamax-toggle-comment)
    ("C-^" . habamax-join-line)
-   ("M-]" . habamax-slurp-forward)
    ("C-c DEL" . kill-backward-up-list)
    ("C-c C-d" . delete-pair)
    ("M-o" . delete-blank-lines)
