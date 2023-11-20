@@ -220,6 +220,10 @@
    `(gnus-header-newsgroups
      ((t (:foreground ,white :weight bold))))
 
+   `(elfeed-search-title-face
+     ((t (:inherit default))))
+   `(elfeed-search-unread-title-face
+     ((t (:inherit default :foreground ,white :weight bold))))
    `(elfeed-search-feed-face
      ((t (:inherit font-lock-string-face))))
    `(elfeed-search-date-face
