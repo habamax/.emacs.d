@@ -224,6 +224,15 @@
    `(gnus-header-newsgroups
      ((t (:foreground ,white :weight bold))))
 
+   `(message-header-name
+     ((t (:inherit font-lock-type-face))))
+   `(message-header-subject
+     ((t (:inherit font-lock-string-face :weight bold))))
+   `(message-header-to
+     ((t (:inherit font-lock-preprocessor-face :weight bold))))
+   `(message-header-other
+     ((t (:inherit default))))
+
    `(elfeed-search-title-face
      ((t (:inherit default))))
    `(elfeed-search-unread-title-face

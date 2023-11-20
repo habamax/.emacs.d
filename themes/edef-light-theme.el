@@ -200,6 +200,15 @@
    `(gnus-header-newsgroups
      ((t (:foreground ,fg :weight bold))))
 
+   `(message-header-name
+     ((t (:inherit font-lock-type-face))))
+   `(message-header-subject
+     ((t (:inherit font-lock-string-face :weight bold))))
+   `(message-header-to
+     ((t (:inherit font-lock-preprocessor-face :weight bold))))
+   `(message-header-other
+     ((t (:inherit default))))
+
    `(elfeed-search-feed-face
      ((t (:inherit font-lock-string-face))))
    `(elfeed-search-date-face
