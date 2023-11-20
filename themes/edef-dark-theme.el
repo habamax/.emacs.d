@@ -42,6 +42,7 @@
       (mode-line-active "#444444")
       (mode-line-inactive "#303030")
       (header-line "#262626")
+      (isearch "palevioletred2")
       (lazy-hl "paleturquoise4")
       (code-block "#1F1F1F"))
 
@@ -79,6 +80,8 @@
    `(line-number-current-line
      ((t (:inherit default :foreground ,white :weight bold))))
 
+   `(isearch
+     ((t (:background ,isearch :foreground ,white))))
    `(lazy-highlight
      ((t (:background ,lazy-hl :foreground ,white))))
 

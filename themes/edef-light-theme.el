@@ -41,6 +41,7 @@
       (mode-line-inactive "#e4e4e4")
       (header-line "#d7d7d7")
       (lazy-hl "paleturquoise")
+      (isearch "magenta3")
       (code-block "#f7f7f7"))
 
   (custom-theme-set-faces
@@ -77,6 +78,8 @@
    `(line-number-current-line
      ((t (:inherit default :foreground ,fg :weight bold))))
 
+   `(isearch
+     ((t (:background ,isearch :foreground ,bg))))
    `(lazy-highlight
      ((t (:background ,lazy-hl :foreground ,fg))))
 
