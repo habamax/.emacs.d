@@ -54,6 +54,8 @@
       read-buffer-completion-ignore-case t
       completion-ignore-case t)
 
+(setq font-lock-maximum-decoration 2)
+
 (setq-default abbrev-mode t)
 (quietly-read-abbrev-file (locate-user-emacs-file "abbrevs"))
 
@@ -298,7 +300,7 @@
   :ensure nil
   :when (treesit-available-p)
   :init
-  (setq treesit-font-lock-level 3)
+  (setq treesit-font-lock-level 2)
   (setq major-mode-remap-alist
         '((yaml-mode . yaml-ts-mode)
           (c-mode . c-ts-mode)
