@@ -131,8 +131,6 @@
    `(whitespace-empty
      ((t (:background ,yellow))))
 
-   `(org-ellipsis
-     ((t (:background unspecified :foreground unspecified :underline unspecified))))
    `(org-block
      ((t (:background ,code-block :extend t))))
    `(org-code
@@ -145,6 +143,10 @@
      ((t (:foreground ,darkgrey))))
    `(org-block-end-line
      ((t (:inherit org-block-begin-line))))
+   `(org-ellipsis
+     ((t (:background unspecified :foreground unspecified :underline unspecified))))
+   `(org-special-keyword
+     ((t (:inherit font-lock-variable-name-face))))
 
    `(erc-prompt-face
      ((t (:background unspecified :foreground unspecified :inverse-video t :weight bold))))
