@@ -75,6 +75,9 @@
      ((t (:background ,header-line :foreground ,fg :extend t
                               :box (:line-width 1 :color ,mode-line-active)))))
 
+   `(line-number-current-line
+     ((t (:inherit default :foreground ,white :weight bold))))
+
    `(cursor
      ((t (:background ,white))))
 
