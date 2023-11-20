@@ -42,6 +42,7 @@
       (mode-line-active "#444444")
       (mode-line-inactive "#303030")
       (header-line "#262626")
+      (lazy-hl "paleturquoise4")
       (code-block "#1F1F1F"))
 
   (custom-theme-set-faces
@@ -77,6 +78,9 @@
 
    `(line-number-current-line
      ((t (:inherit default :foreground ,white :weight bold))))
+
+   `(lazy-highlight
+     ((t (:background ,lazy-hl :foreground ,white))))
 
    `(cursor
      ((t (:background ,white))))
