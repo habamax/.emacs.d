@@ -206,7 +206,13 @@
    `(gnus-header-subject
      ((t (:foreground ,white :weight bold))))
    `(gnus-header-newsgroups
-     ((t (:foreground ,white :weight bold))))))
+     ((t (:foreground ,white :weight bold))))
+
+   `(elfeed-search-feed-face
+     ((t (:inherit font-lock-string-face))))
+   `(elfeed-search-date-face
+     ((t (:inherit font-lock-preprocessor-face))))
+   ))
 
 
 ;;;###autoload
