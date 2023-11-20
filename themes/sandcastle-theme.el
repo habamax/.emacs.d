@@ -145,10 +145,10 @@
      ((t (:background ,mode-line-inactive :foreground ,darkgrey))))
    `(tab-bar-tab
      ((t (:background ,mode-line-active :foreground ,black :weight bold
-                      :box (:line-width 1 :color ,non-text)))))
+                      :box (:style released-button)))))
    `(tab-bar-tab-inactive
      ((t (:background unspecified :foreground ,fg
-                      :box (:line-width 1 :color ,non-text)))))
+                      :box (:style released-button)))))
    `(tab-line
      ((t (:background ,mode-line-inactive :foreground ,darkgrey))))
    `(tab-line-tab
