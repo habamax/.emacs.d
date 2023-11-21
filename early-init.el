@@ -31,5 +31,5 @@
                      def-dark
                      def-light))
 (setq custom-theme-directory (locate-user-emacs-file "themes/"))
-(ignore-errors (load-theme (car +THEMES+) t))
+(ignore-errors (load-theme (if +IS-WSL+ (cadr +THEMES+) (car +THEMES+)) t))
 ;;; early-init.el ends here
