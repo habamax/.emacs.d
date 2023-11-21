@@ -204,7 +204,7 @@
      ((t (:foreground ,fg :weight bold))))
 
    `(message-header-name
-     ((t (:inherit font-lock-type-face))))
+     ((t (:inherit gnus-header-name))))
    `(message-header-subject
      ((t (:inherit font-lock-string-face :weight bold))))
    `(message-header-to
