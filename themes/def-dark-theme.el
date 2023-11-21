@@ -44,7 +44,7 @@
       (header-line "#262626")
       (isearch "palevioletred2")
       (lazy-hl "paleturquoise4")
-      (code-block "#1F1F1F"))
+      (code-block "#1c1c1c"))
 
   (custom-theme-set-faces
    'def-dark
