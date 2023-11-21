@@ -1,7 +1,7 @@
-;;; edef-light-theme.el --- Almost default light Emacs theme -*- lexical-binding: t; -*-
+;;; def-dark-theme.el --- Almost default dark emacs theme -*- lexical-binding: t; -*-
 
 ;; Author: Maxim Kim <habamax@gmail.com>
-;; URL: https://github.com/habamax/edef-theme XXX: non-published!
+;; URL: https://github.com/habamax/def-theme
 ;; Package-Requires: ((emacs "24.1"))
 ;; Package-Version: 0.7
 
@@ -20,32 +20,34 @@
 
 ;;; Commentary:
 
-;; Default emacs light syntax colors, different chrome.
+;; Default emacs dark syntax colors, different chrome.
 
 ;;; Code:
 
-(deftheme edef-light
-  "Almost default light Emacs theme.")
+(deftheme def-dark
+  "Almost default dark Emacs theme.")
 
-(let ((fg "#000000")(bg "#ffffff")
-      (darkgrey "#7f7f7f")
-      (darkergrey "#5f5f5f")
-      (grey "#e4e4e4")
-      (red "#af0000")
-      (green "#006f00")
-      (yellow "#af5f00")
-      (blue "#0078c7")(bright-blue "#0087d7")
-      (non-text "#878787")
+(let ((fg "#d0d0d0")(bg "#121212")
+      (black "#000000")
+      (darkgrey "#808080")
+      (darkgrey2 "#3a3a3a")
+      (red "#d75f5f")(bright-red "#ff5f87")
+      (green "#00af5f")(bright-green "#00d75f")
+      (yellow "#d78700")
+      (blue "#0087d7")(bright-blue "#00afff")
+      (grey "#d0d0d0")
+      (white "#f0f0f0")
+      (non-text "#585858")
       (match-paren "#ff00af")
-      (mode-line-active "#d0d0d0")
-      (mode-line-inactive "#e4e4e4")
-      (header-line "#d7d7d7")
-      (lazy-hl "paleturquoise")
-      (isearch "magenta3")
-      (code-block "#f7f7f7"))
+      (mode-line-active "#444444")
+      (mode-line-inactive "#303030")
+      (header-line "#262626")
+      (isearch "palevioletred2")
+      (lazy-hl "paleturquoise4")
+      (code-block "#1F1F1F"))
 
   (custom-theme-set-faces
-   'edef-light
+   'def-dark
 
    ;; standard faces
    `(default
@@ -53,7 +55,7 @@
    `(shadow
      ((t (:foreground ,non-text))))
    `(region
-     ((t (:background ,bg :foreground ,bright-blue :inverse-video t))))
+     ((t (:background ,bg :foreground ,blue :inverse-video t))))
    `(trailing-whitespace
      ((t (:foreground ,red :inverse-video t))))
    `(vertical-border
@@ -65,7 +67,7 @@
      ((t (:background ,mode-line-inactive :foreground ,darkgrey
                       :box (:line-width 1 :color ,mode-line-active)))))
    `(mode-line-highlight
-     ((t (:background ,bg
+     ((t (:background ,black
                       :box (:line-width 1 :color ,non-text)))))
    `(mode-line-emphasis
      ((t (:weight bold))))
@@ -73,64 +75,82 @@
      ((t (:weight bold))))
    `(header-line
      ((t (:background ,header-line :foreground ,fg :extend t
-                      :box (:line-width 1 :color ,darkgrey)))))
+                              :box (:line-width 1 :color ,mode-line-active)))))
 
    `(line-number-current-line
-     ((t (:inherit default :foreground ,fg :weight bold))))
+     ((t (:inherit default :foreground ,white :weight bold))))
 
    `(isearch
-     ((t (:background ,isearch :foreground ,bg))))
+     ((t (:background ,isearch :foreground ,white))))
    `(lazy-highlight
-     ((t (:background ,lazy-hl :foreground ,fg))))
+     ((t (:background ,lazy-hl :foreground ,white))))
 
    `(cursor
-     ((t (:background ,fg))))
+     ((t (:background ,white))))
 
    `(tab-bar
      ((t (:background ,header-line :foreground ,fg))))
    `(tab-bar-tab
-     ((t (:background ,mode-line-inactive :foreground ,fg :weight bold
+     ((t (:background ,mode-line-inactive :foreground ,grey :weight bold
                       :box (:style released-button)))))
    `(tab-bar-tab-inactive
-     ((t (:background ,header-line :foreground ,darkergrey
+     ((t (:background ,header-line :foreground ,darkgrey
                       :box (:style released-button)))))
-
 
    `(tab-line
      ((t (:background ,mode-line-inactive :foreground ,darkgrey))))
    `(tab-line-tab
-     ((t (:background ,mode-line-active :foreground ,fg :weight bold
-                              :box (:line-width 1 :color ,non-text)))))
+     ((t (:background ,mode-line-active :foreground ,white :weight bold
+                      :box (:line-width 1 :color ,non-text)))))
    `(tab-line-tab-current
-     ((t (:background ,mode-line-active :foreground ,fg :weight bold
-                              :box (:line-width 1 :color ,non-text)))))
+     ((t (:background ,mode-line-active :foreground ,white :weight bold
+                      :box (:line-width 1 :color ,non-text)))))
    `(tab-line-highlight
-     ((t (:background ,mode-line-active :foreground ,fg :weight bold
-                              :box (:line-width 1 :color ,non-text)))))
+     ((t (:background ,mode-line-active :foreground ,white :weight bold
+                      :box (:line-width 1 :color ,non-text)))))
    `(tab-line-tab-inactive
-     ((t (:background unspecified :foreground ,fg
+     ((t (:background unspecified :foreground ,grey
                       :box (:line-width 1 :color ,non-text)))))
    `(tab-line-tab-modified
      ((t (:background unspecified :foreground ,green))))
    `(tab-line-close-highlight
      ((t (:background unspecified :foreground ,red))))
 
+
+   ;; customize & widget
+   `(custom-button
+     ((t (:background ,darkgrey2 :foreground ,fg :extend t
+                      :box (:line-width (2 . 2) :style released-button)))))
+   `(custom-button-pressed
+     ((t (:background ,darkgrey2 :foreground ,fg :extend t
+                      :box (:line-width (2 . 2) :style pressed-button)))))
+   `(custom-button-mouse
+     ((t (:background ,non-text :foreground ,fg :extend t
+                      :box (:line-width (2 . 2) :style released-button)))))
+   `(widget-field
+     ((t (:background ,darkgrey2 :foreground ,fg :extend t))))
+   `(widget-inactive
+     ((t (:foreground ,darkgrey))))
+
    `(show-paren-match
      ((t :foreground ,match-paren :weight bold)))
    `(show-paren-mismatch
-     ((t :background ,match-paren :foreground ,fg :weight bold)))
+     ((t :background ,match-paren :foreground ,white :weight bold)))
 
    `(shortdoc-heading
      ((t (:inherit default :weight bold :height 1.3))))
    `(shortdoc-section
      ((t (:inherit default))))
 
+   `(link
+     ((t (:foreground ,bright-blue :underline t))))
+
    `(icomplete-first-match
-     ((t (:foreground ,fg :weight bold))))
+     ((t (:foreground ,white :weight bold))))
    `(completions-common-part
-     ((t (:foreground ,blue :weight bold))))
+     ((t (:foreground ,bright-blue :weight bold))))
    `(completions-first-difference
-     ((t (:foreground ,red :weight bold))))
+     ((t (:foreground ,bright-red :weight bold))))
 
    `(whitespace-space
      ((t (:background unspecified :foreground ,non-text))))
@@ -146,7 +166,7 @@
      ((t (:background ,yellow))))
 
    `(org-block
-     ((t (:background ,code-block :extend t))))
+     ((t (:background ,code-block :foreground ,fg :extend t))))
    `(org-code
      ((t (:background ,code-block :extend t))))
    `(org-verbatim
@@ -162,6 +182,11 @@
    `(org-special-keyword
      ((t (:inherit font-lock-variable-name-face))))
 
+   `(diff-header
+     ((t (:background ,darkgrey2))))
+   `(diff-file-header
+     ((t (:background ,non-text))))
+
    `(erc-prompt-face
      ((t (:background unspecified :foreground unspecified :inverse-video t :weight bold))))
    `(erc-notice-face
@@ -171,17 +196,16 @@
    `(erc-timestamp-face
      ((t (:foreground ,darkgrey :weight unspecified))))
    `(erc-my-nick-face
-     ((t (:foreground ,red :weight bold))))
+     ((t (:foreground ,bright-red :weight bold))))
    `(erc-current-nick-face
      ((t (:inherit erc-my-nick-face))))
    `(erc-input-face
-     ((t (:foreground ,green))))
-
+     ((t (:foreground ,bright-green))))
 
    `(gnus-summary-selected
      ((t (:inverse-video t :underline nil))))
    `(gnus-summary-normal-unread
-     ((t (:foreground ,fg :weight bold))))
+     ((t (:foreground ,white :weight bold))))
    `(gnus-summary-normal-read
      ((t (:foreground ,fg))))
    `(gnus-summary-normal-ticked
@@ -195,13 +219,13 @@
    `(gnus-header-name
      ((t (:foreground ,green :weight bold))))
    `(gnus-header-from
-     ((t (:foreground ,red :weight bold))))
+     ((t (:foreground ,bright-red :weight bold))))
    `(gnus-header-content
      ((t (:foreground ,fg :weight normal :slant normal))))
    `(gnus-header-subject
-     ((t (:foreground ,fg :weight bold))))
+     ((t (:foreground ,white :weight bold))))
    `(gnus-header-newsgroups
-     ((t (:foreground ,fg :weight bold))))
+     ((t (:foreground ,white :weight bold))))
 
    `(message-header-name
      ((t (:inherit gnus-header-name))))
@@ -212,16 +236,21 @@
    `(message-header-other
      ((t (:inherit default))))
 
+   `(elfeed-search-title-face
+     ((t (:inherit default))))
+   `(elfeed-search-unread-title-face
+     ((t (:inherit default :foreground ,white :weight bold))))
    `(elfeed-search-feed-face
      ((t (:inherit font-lock-string-face))))
    `(elfeed-search-date-face
      ((t (:inherit font-lock-preprocessor-face))))
    ))
 
+
 ;;;###autoload
 (when load-file-name
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'edef-light)
-;;; edef-light-theme.el ends here
+(provide-theme 'def-dark)
+;;; def-dark-theme.el ends here

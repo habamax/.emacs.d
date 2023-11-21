@@ -28,8 +28,8 @@
 
 (defconst +THEMES+ '(wildcharm
                      wildcharm-light
-                     edef-dark
-                     edef-light))
+                     def-dark
+                     def-light))
 (setq custom-theme-directory (locate-user-emacs-file "themes/"))
 (ignore-errors (load-theme (car +THEMES+) t))
 ;;; early-init.el ends here
