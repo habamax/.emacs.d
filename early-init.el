@@ -26,10 +26,12 @@
    (menu-bar-lines . 0)
    (tool-bar-lines . 0)))
 
+(defconst +LIGHT-THEME+ (or +IS-WSL+ +IS-WINDOWS+))
 (defconst +THEMES+ '(wildcharm
                      wildcharm-light
                      def-dark
                      def-light))
 (setq custom-theme-directory (locate-user-emacs-file "themes/"))
-(ignore-errors (load-theme (if +IS-WSL+ (cadr +THEMES+) (car +THEMES+)) t))
+(ignore-errors
+  (load-theme (if +LIGHT-THEME+ (cadr +THEMES+) (car +THEMES+)) t))
 ;;; early-init.el ends here
