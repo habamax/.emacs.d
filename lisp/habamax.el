@@ -15,7 +15,7 @@ Future history is set to init.el."
     (project-find-file-in "init.el" dirs project nil)))
 
 (defun habamax-toggle-comment (arg)
-  "Comment or uncomment current line if mark region is not active.
+  "Comment or uncomment current line if region is not active.
 Otherwise call well known `comment-dwim'"
   (interactive "*P")
   (comment-normalize-vars)
