@@ -76,7 +76,7 @@
                       :box (:line-width 1 :color ,darkgrey)))))
 
    `(minibuffer-prompt
-     ((t (:foreground ,fg :weight bold))))
+     ((t (:inherit font-lock-variable-name-face :weight bold))))
 
    `(line-number-current-line
      ((t (:inherit default :foreground ,fg :weight bold))))
