@@ -75,6 +75,9 @@
      ((t (:background ,header-line :foreground ,fg :extend t
                       :box (:line-width 1 :color ,darkgrey)))))
 
+   `(minibuffer-prompt
+     ((t (:foreground ,fg :weight bold))))
+
    `(line-number-current-line
      ((t (:inherit default :foreground ,fg :weight bold))))
 
