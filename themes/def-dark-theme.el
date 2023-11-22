@@ -247,6 +247,9 @@
      ((t (:inherit font-lock-string-face))))
    `(elfeed-search-date-face
      ((t (:inherit font-lock-preprocessor-face))))
+
+   `(elisp-shorthand-font-lock-face
+     ((t (:inherit font-lock-keyword-face :weight bold))))
    ))
 
 
