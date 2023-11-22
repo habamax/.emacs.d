@@ -179,7 +179,8 @@
      ((t (:inherit erc-my-nick-face))))
    `(erc-input-face
      ((t (:foreground ,green))))
-
+   `(erc-action-face
+     ((t (:inherit font-lock-builtin-face))))
 
    `(gnus-summary-selected
      ((t (:inverse-video t :underline nil))))
