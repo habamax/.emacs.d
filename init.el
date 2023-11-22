@@ -434,7 +434,13 @@
    gnus-sum-thread-tree-vertical "│")
   (setq gnus-list-groups-with-ticked-articles nil)
   (setq gnus-group-mode-line-format "%%b")
-  (add-hook 'gnus-group-mode-hook 'gnus-topic-mode))
+  (add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
+  (when (not +IS-WINDOWS+)
+    (add-to-list
+     'mailcap-user-mime-data
+     '((viewer . "xdg-open %s 2> /dev/null")
+       (type . ".*")
+       (test . window-system)))))
 
 (use-package emms
   :commands (emms emms-add-directory-tree)
