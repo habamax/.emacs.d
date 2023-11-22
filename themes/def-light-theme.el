@@ -154,6 +154,8 @@
      ((t (:background ,code-block :extend t))))
    `(org-verbatim
      ((t (:background ,code-block :extend t))))
+   `(org-table
+     ((t (:inherit default))))
    `(org-date
      ((t (:foreground ,darkgrey))))
    `(org-block-begin-line
