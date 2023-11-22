@@ -243,6 +243,12 @@
    `(message-header-other
      ((t (:inherit default))))
 
+   `(log-view-message
+     ((t (:inherit font-lock-builtin-face))))
+
+   `(elisp-shorthand-font-lock-face
+     ((t (:inherit font-lock-keyword-face :weight bold))))
+
    `(elfeed-search-title-face
      ((t (:inherit default))))
    `(elfeed-search-unread-title-face
@@ -251,9 +257,6 @@
      ((t (:inherit font-lock-string-face))))
    `(elfeed-search-date-face
      ((t (:inherit font-lock-preprocessor-face))))
-
-   `(elisp-shorthand-font-lock-face
-     ((t (:inherit font-lock-keyword-face :weight bold))))
    ))
 
 
