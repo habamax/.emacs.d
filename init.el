@@ -303,6 +303,7 @@
           (c-mode . c-ts-mode)
           (c++-mode . c++-ts-mode)
           (c-or-c++-mode . c-or-c++-ts-mode)
+          (java-mode . java-ts-mode)
           (javascript-mode . js-ts-mode)
           (js-json-mode . json-ts-mode)
           (css-mode . css-ts-mode)
