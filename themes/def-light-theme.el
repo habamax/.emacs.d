@@ -172,7 +172,7 @@
    `(erc-button
      ((t (:inherit link))))
    `(erc-timestamp-face
-     ((t (:foreground ,darkgrey :weight unspecified))))
+     ((t (:inherit ,font-lock-variable-name-face :weight unspecified))))
    `(erc-my-nick-face
      ((t (:foreground ,red :weight bold))))
    `(erc-current-nick-face
