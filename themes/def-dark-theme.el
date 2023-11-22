@@ -246,6 +246,9 @@
    `(log-view-message
      ((t (:inherit font-lock-builtin-face))))
 
+   `(git-commit-summary
+     ((t (:foreground ,white :weight bold))))
+
    `(elisp-shorthand-font-lock-face
      ((t (:inherit font-lock-keyword-face :weight bold))))
 
