@@ -232,6 +232,9 @@
    `(elisp-shorthand-font-lock-face
      ((t (:inherit font-lock-keyword-face :weight bold))))
 
+   `(sh-heredoc
+     ((t (:inherit font-lock-string-face))))
+
    `(elfeed-search-feed-face
      ((t (:inherit font-lock-string-face))))
    `(elfeed-search-date-face
