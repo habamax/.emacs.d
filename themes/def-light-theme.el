@@ -218,6 +218,11 @@
    `(message-header-other
      ((t (:inherit default))))
 
+   `(dired-header
+     ((t (:inherit font-lock-type-face :weight bold))))
+   `(dired-directory
+     ((t (:inherit font-lock-function-name-face :weight bold))))
+
    `(log-view-message
      ((t (:inherit font-lock-builtin-face))))
 
