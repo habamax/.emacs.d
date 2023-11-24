@@ -84,7 +84,7 @@
      ((t (:inherit default :foreground ,white :weight bold))))
 
    `(isearch
-     ((t (:background ,isearch :foreground ,white))))
+     ((t (:background ,isearch :foreground ,bg))))
    `(lazy-highlight
      ((t (:background ,lazy-hl :foreground ,bg))))
 
