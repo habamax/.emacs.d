@@ -186,6 +186,8 @@
      ((t (:background unspecified :foreground unspecified :underline unspecified))))
    `(org-special-keyword
      ((t (:inherit font-lock-variable-name-face))))
+   `(org-meta-line
+     ((t (:inherit shadow))))
 
    `(diff-header
      ((t (:background ,darkgrey2))))
