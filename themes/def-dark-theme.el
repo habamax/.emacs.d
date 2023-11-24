@@ -86,7 +86,7 @@
    `(isearch
      ((t (:background ,isearch :foreground ,white))))
    `(lazy-highlight
-     ((t (:background ,lazy-hl :foreground ,white))))
+     ((t (:background ,lazy-hl :foreground ,bg))))
 
    `(cursor
      ((t (:background ,white))))
