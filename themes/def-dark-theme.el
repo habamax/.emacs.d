@@ -270,6 +270,9 @@
      ((t (:inherit font-lock-string-face))))
    `(elfeed-search-date-face
      ((t (:inherit font-lock-preprocessor-face))))
+
+   `(markdown-line-break-face
+     ((t (:inherit font-lock-constant-face))))
    ))
 
 
