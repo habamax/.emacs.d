@@ -40,7 +40,7 @@
       (mode-line-active "#d0d0d0")
       (mode-line-inactive "#e4e4e4")
       (header-line "#d7d7d7")
-      (lazy-hl "paleturquoise")
+      (lazy-hl "paleturquoise4")
       (isearch "magenta3")
       (code-block "#f7f7f7"))
 
@@ -84,7 +84,7 @@
    `(isearch
      ((t (:background ,isearch :foreground ,bg))))
    `(lazy-highlight
-     ((t (:background ,lazy-hl :foreground ,fg))))
+     ((t (:background ,lazy-hl :foreground ,bg))))
 
    `(cursor
      ((t (:background ,fg))))
