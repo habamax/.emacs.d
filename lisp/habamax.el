@@ -88,8 +88,7 @@ Otherwise call well known `comment-dwim'"
   "Toggle alpha-background (transparency)."
   (interactive)
   (thread-last
-    (pcase (frame-parameter nil 'alpha-background)
-      (85 nil)(_ 85))
+    (if (frame-parameter nil 'alpha-background) nil 85)
     (set-frame-parameter nil 'alpha-background)))
 
 (defun habamax-reload-current-theme ()
