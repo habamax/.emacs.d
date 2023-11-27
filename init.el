@@ -36,6 +36,7 @@
 (setq bookmark-save-flag 1)
 (setq large-file-warning-threshold 20971520)
 (setq delete-pair-blink-delay 0)
+(setq mouse-autoselect-window t)
 
 (setq tab-bar-show 1
       tab-bar-auto-width-max '(360 30)
