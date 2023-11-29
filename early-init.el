@@ -14,7 +14,7 @@
 (defconst +IS-OSX+ (eq system-type 'darwin))
 (defconst +IS-WINDOWS+ (eq system-type 'windows-nt))
 (defconst +IS-WSL+ (getenv "WSLENV"))
-(defconst +FONT+ (if +IS-WINDOWS+ "Consolas-16" "Monospace-18"))
+(defconst +FONT+ (if +IS-WINDOWS+ "Consolas-18" "Monospace-18"))
 
 (setq-default load-prefer-newer t)
 
