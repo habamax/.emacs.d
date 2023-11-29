@@ -14,12 +14,13 @@
 (defconst +IS-OSX+ (eq system-type 'darwin))
 (defconst +IS-WINDOWS+ (eq system-type 'windows-nt))
 (defconst +IS-WSL+ (getenv "WSLENV"))
+(defconst +FONT+ (if +IS-WINDOWS+ "Consolas-16" "Monospace-18"))
 
 (setq-default load-prefer-newer t)
 
 (setq-default
  default-frame-alist
- `((font . ,(if +IS-WINDOWS+ "Consolas-16" "Monospace-18"))
+ `((font . ,+FONT+)
    (fullscreen . maximized)
    (horizontal-scroll-bars . nil)
    (vertical-scroll-bars . nil)
