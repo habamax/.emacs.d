@@ -19,7 +19,7 @@
 
 (setq-default
  default-frame-alist
- '((font . "Monospace-18")
+ `((font . ,(if +IS-WINDOWS+ "Consolas-16" "Monospace-18"))
    (fullscreen . maximized)
    (horizontal-scroll-bars . nil)
    (vertical-scroll-bars . nil)

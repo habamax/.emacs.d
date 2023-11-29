@@ -143,8 +143,6 @@
    ("d" . duplicate-dwim))
   :init
   (require 'local-init (locate-user-emacs-file "local-init.el") t)
-  (when +IS-WINDOWS+
-    (require 'habamax-windows))
   (when +IS-WSL+
     (setq browse-url-firefox-program "firefox.exe")
     (defun browse-url-can-use-xdg-open () nil))
