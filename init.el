@@ -160,6 +160,10 @@
   (outline-7 ((t (:height 1.0 :weight bold))))
   (outline-8 ((t (:height 1.0 :weight bold)))))
 
+(use-package evil
+  :init
+  (evil-mode))
+
 (use-package icomplete
   :init
   (fido-mode)
