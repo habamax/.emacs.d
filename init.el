@@ -161,6 +161,13 @@
   (outline-8 ((t (:height 1.0 :weight bold)))))
 
 (use-package evil
+  :bind
+  (:map evil-normal-state-map
+        ("SPC b" . switch-to-buffer)
+        ("SPC e" . find-file)
+        ("SPC f e" . project-find-file)
+        ("SPC f i" . habamax-open-user-emacs-file)
+        ("SPC f m" . recentf))
   :init
   (evil-mode))
 
@@ -444,20 +451,5 @@
      '((viewer . "xdg-open %s 2> /dev/null")
        (type . ".*")
        (test . window-system)))))
-
-(use-package emms
-  :commands (emms emms-add-directory-tree)
-  :bind
-  (("C-c SPC m m" . habamax-emms-play-main)
-   ("C-c SPC m s" . emms-stop)
-   ("C-c SPC m r" . emms-random)
-   ("C-c SPC m n" . emms-next)
-   :repeat-map habamax-emms-repeat-map
-   ("n" . emms-next)
-   ("p" . emms-previous)
-   ("r" . emms-random)
-   ("SPC" . emms-pause))
-  :config
-  (require 'habamax-emms))
 
 ;;; init.el ends here
