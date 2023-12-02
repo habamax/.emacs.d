@@ -210,32 +210,6 @@
   (diminish 'abbrev-mode)
   (diminish 'eldoc-mode))
 
-(use-package org
-  :ensure nil
-  :bind (("C-c c" . org-capture)
-         ("C-c a" . org-agenda)
-         ("C-c l" . org-store-link)
-         ("C-c I" . habamax-org-insert-screenshot)
-         ("C-c o o" . habamax-org-open-file)
-         ("M-s 1" . habamax-org-search)
-         :map org-mode-map
-         ("M-{") ("M-}")
-         :repeat-map habamax-org-repeat-map
-         ("f" . org-forward-heading-same-level)
-         ("b" . org-backward-heading-same-level)
-         ("n" . org-next-visible-heading)
-         ("p" . org-previous-visible-heading)
-         ("M-f" . org-next-block)
-         ("M-b" . org-previous-block)
-         ("v" . org-cycle)
-         ("<backtab>" . org-shifttab)
-         ("N" . org-next-link)
-         ("P" . org-previous-link)
-         ("RET" . org-open-at-point))
-  :config
-  (define-key org-mode-map (kbd "C-c C-r") verb-command-map)
-  (require 'habamax-org))
-
 (use-package htmlize)
 
 (use-package verb
