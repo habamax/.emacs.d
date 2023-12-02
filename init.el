@@ -51,6 +51,7 @@
       completion-auto-wrap t
       completions-max-height 12
       completion-cycle-threshold 3)
+(setq icomplete-compute-delay 0)
 (setq read-file-name-completion-ignore-case t
       read-buffer-completion-ignore-case t
       completion-ignore-case t)
@@ -91,14 +92,51 @@
 (save-place-mode 1)
 (savehist-mode 1)
 (pixel-scroll-precision-mode)
+(fido-mode)
 
 (defalias 'perl-mode 'cperl-mode)
+(add-hook 'c-ts-mode-hook
+          (lambda ()
+            (setq-local c-ts-mode-indent-style 'linux)
+            (setq-local c-ts-mode-indent-offset 4)
+            (c-ts-mode-toggle-comment-style -1)))
+(add-hook 'c-mode-hook
+          (lambda ()
+            (c-set-style "linux")
+            (setq-local c-basic-offset 4)
+            (c-toggle-comment-style -1)))
 
 (when +IS-WSL+
   (setq browse-url-firefox-program "firefox.exe")
   (defun browse-url-can-use-xdg-open () nil))
 (when (or +IS-WINDOWS+ +IS-WSL+)
   (setq epg-pinentry-mode 'loopback))
+
+(add-to-list 'load-path (locate-user-emacs-file "lisp"))
+(require 'habamax)
+(require 'habamax-erc)
+
+(global-set-key (kbd "C-=") 'text-scale-adjust)
+(global-set-key (kbd "C--") 'text-scale-adjust)
+(global-set-key (kbd "M-;") 'habamax-toggle-comment)
+(global-set-key [remap list-buffers] 'ibuffer)
+(global-set-key [remap eww-search-words] 'habamax-web-search)
+(global-set-key (kbd "M-s >") 'habamax-grep-current-word)
+(global-set-key (kbd "M-s g") 'habamax-grep)
+(global-set-key (kbd "M-s t") 'habamax-grep-todo)
+(global-set-key (kbd "C-x I") 'habamax-insert-lorem)
+
+(custom-set-faces
+  '(org-document-title ((t (:height 1.5))))
+  '(org-agenda-structure ((t (:height 1.5))))
+  '(outline-1 ((t (:height 1.5 :weight bold))))
+  '(outline-2 ((t (:height 1.3 :weight bold))))
+  '(outline-3 ((t (:height 1.1 :weight bold))))
+  '(outline-4 ((t (:height 1.0 :weight bold))))
+  '(outline-5 ((t (:height 1.0 :weight bold))))
+  '(outline-6 ((t (:height 1.0 :weight bold))))
+  '(outline-7 ((t (:height 1.0 :weight bold))))
+  '(outline-8 ((t (:height 1.0 :weight bold)))))
 
 ;; packages
 (with-eval-after-load 'package
@@ -109,40 +147,6 @@
       native-comp-async-report-warnings-errors nil
       use-package-always-ensure t
       use-package-always-defer t)
-
-(use-package habamax
-  :load-path "lisp"
-  :bind
-  (("C-c o f" . habamax-open-file-manager)
-   ("M-;" . habamax-toggle-comment)
-   ("C-c DEL" . kill-backward-up-list)
-   ("C-c C-d" . delete-pair)
-   ([remap list-buffers] . ibuffer)
-   ([remap eww-search-words] . habamax-web-search)
-   ("M-s >" . habamax-grep-current-word)
-   ("M-s g" . grep)
-   ("M-s t" . habamax-grep-todo)
-   ("C-c t r" . habamax-reload-current-theme)
-   ("C-c t s" . flyspell-mode)
-   ("C-c t m" . flymake-mode)
-   ("C-c t f" . display-fill-column-indicator-mode)
-   ("C-c t v" . visible-mode)
-   ("C-x I" . habamax-insert-lorem)
-   ("C-=" . text-scale-adjust)
-   ("C--" . text-scale-adjust)
-   :repeat-map habamax-toggle-theme-repeat-map
-   ("t" . habamax-toggle-theme))
-  :custom-face
-  (org-document-title ((t (:height 1.5))))
-  (org-agenda-structure ((t (:height 1.5))))
-  (outline-1 ((t (:height 1.5 :weight bold))))
-  (outline-2 ((t (:height 1.3 :weight bold))))
-  (outline-3 ((t (:height 1.1 :weight bold))))
-  (outline-4 ((t (:height 1.0 :weight bold))))
-  (outline-5 ((t (:height 1.0 :weight bold))))
-  (outline-6 ((t (:height 1.0 :weight bold))))
-  (outline-7 ((t (:height 1.0 :weight bold))))
-  (outline-8 ((t (:height 1.0 :weight bold)))))
 
 (use-package evil
   :bind
@@ -162,22 +166,24 @@
    ("SPC z" . imenu)
    ("SPC T SPC" . delete-trailing-whitespace)
    ("SPC t n" . habamax-toggle-linenr)
+   ("SPC t s" . flyspell-mode)
+   ("SPC t m" . flymake-mode)
    ("SPC t a" . habamax-toggle-alpha)
    ("SPC t t" . habamax-toggle-theme)
+   ("SPC t r" . habamax-reload-current-theme)
    ("<backspace>" . dired-jump)
    :map
    minibuffer-mode-map
-   ("<escape>" . minibuffer-keyboard-quit))
+   ("<escape>" . minibuffer-keyboard-quit)
+   :repeat-map habamax-toggle-theme-repeat-map
+   ("t" . habamax-toggle-theme))
   :init
-  (evil-mode)
-  :config
-  (require 'habamax))
+  (evil-mode))
 
-(use-package icomplete
+(use-package evil-surround
+  :after evil
   :init
-  (fido-mode)
-  :config
-  (setq icomplete-compute-delay 0))
+  (global-evil-surround-mode 1))
 
 (use-package winner-mode
   :ensure nil
@@ -213,7 +219,6 @@
 
 (use-package whitespace
   :ensure nil
-  :diminish whitespace-mode
   :hook ((prog-mode text-mode) . whitespace-mode)
   :config
   (setq whitespace-style '(face trailing tabs tab-mark))
@@ -236,7 +241,7 @@
                ("<tab>" . tempel-next)
                ("TAB" . tempel-next)
                ("<backtab>" . tempel-previous)))
-  :hook ((sly-mode prog-mode text-mode) . tempel-setup-capf)
+  :hook ((prog-mode text-mode) . tempel-setup-capf)
   :init
   (defun tempel-setup-capf ()
     (setq-local completion-at-point-functions
@@ -308,24 +313,6 @@
                (python (if (executable-find "python3") "python3" "python")))
       (compile (concat python " " (shell-quote-argument file-name))))))
 
-(use-package c-ts-mode
-  :ensure nil
-  :init
-  (add-hook 'c-ts-mode-hook
-            (lambda ()
-              (setq-local c-ts-mode-indent-style 'linux)
-              (setq-local c-ts-mode-indent-offset 4)
-              (c-ts-mode-toggle-comment-style -1))))
-
-(use-package cc-mode
-  :ensure nil
-  :init
-  (add-hook 'c-mode-hook
-            (lambda ()
-              (c-set-style "linux")
-              (setq-local c-basic-offset 4)
-              (c-toggle-comment-style -1))))
-
 (use-package markdown-mode
   :bind (:map markdown-mode-map
               ("M-n")
@@ -343,11 +330,5 @@
   (setq markdown-asymmetric-header t)
   (setq markdown-command
         "pandoc -s -M fontsize=18pt -M maxwidth=60em --highlight-style tango"))
-
-(use-package erc
-  :ensure nil
-  :commands habamax-erc
-  :config
-  (require 'habamax-erc))
 
 ;;; init.el ends here

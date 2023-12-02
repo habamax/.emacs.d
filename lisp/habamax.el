@@ -27,25 +27,6 @@ Otherwise call well known `comment-dwim'"
     (comment-or-uncomment-region (line-beginning-position) (line-end-position))
     (forward-line))))
 
-(defun habamax-join-line ()
-  "Join next line."
-  (interactive)
-  (delete-indentation 1))
-
-(defun habamax-kill-region ()
-  "Kill region if mark is active, kill whole line otherwise."
-  (interactive)
-  (if (use-region-p)
-      (kill-region (region-beginning) (region-end) (use-region-p))
-    (kill-region (line-beginning-position) (line-beginning-position 2))))
-
-(defun habamax-kill-ring-save ()
-  "Save region in kill ring if mark is active, save whole line otherwise."
-  (interactive)
-  (if (use-region-p)
-      (kill-ring-save (region-beginning) (region-end) (use-region-p))
-    (kill-ring-save (line-beginning-position) (line-beginning-position 2))))
-
 (defun habamax-grep-current-word ()
   "Search current word using `grep' and `grep-command'"
   (interactive)
@@ -55,20 +36,6 @@ Otherwise call well known `comment-dwim'"
   "Search current TODO:, FIXME: and XXX: using `grep' and `grep-command'"
   (interactive)
   (grep (concat grep-command "\"(TODO|FIXME|XXX):\" .")))
-
-(defun habamax-insert-lorem ()
-  "Select and insert text file from lorem/ directory located in
-`user-emacs-directory'"
-  (interactive)
-  (let ((path (locate-user-emacs-file "lorem/")))
-    (insert-file-contents
-     (file-name-concat
-      path
-      (completing-read
-       "Insert lorem: "
-       (directory-files path
-                        nil
-                        directory-files-no-dot-files-regexp))))))
 
 (defun habamax-toggle-linenr ()
   "Toggle line numbers and hl-line-mode."
