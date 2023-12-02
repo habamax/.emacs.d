@@ -204,13 +204,6 @@
         dired-dwim-target t
         dired-hide-details-hide-symlink-targets nil))
 
-(use-package diminish
-  :init
-  (diminish 'abbrev-mode)
-  (diminish 'eldoc-mode))
-
-(use-package htmlize)
-
 (use-package verb
   :config
   (setq verb-auto-kill-response-buffers t)
