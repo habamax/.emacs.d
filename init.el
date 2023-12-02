@@ -141,7 +141,6 @@
    :repeat-map habamax-duplicate-repeat-map
    ("d" . duplicate-dwim))
   :init
-  (require 'local-init (locate-user-emacs-file "local-init.el") t)
   (when +IS-WSL+
     (setq browse-url-firefox-program "firefox.exe")
     (defun browse-url-can-use-xdg-open () nil))
@@ -163,20 +162,30 @@
   :bind
   (:map
    evil-normal-state-map
+   ("SPC v" . eval-last-sexp)
+   ("SPC V" . eval-defun)
    ("SPC b" . switch-to-buffer)
    ("SPC e" . find-file)
    ("SPC f e" . project-find-file)
+   ("SPC f p" . project-switch-project)
    ("SPC f i" . habamax-open-user-emacs-file)
    ("SPC f m" . recentf)
+   ("SPC f b" . bookmark-jump)
+   ("SPC f x" . scratch-buffer)
+   ("SPC 8" . habamax-grep-current-word)
+   ("SPC z" . imenu)
    ("SPC T SPC" . delete-trailing-whitespace)
    ("SPC t n" . habamax-toggle-linenr)
    ("SPC t a" . habamax-toggle-alpha)
    ("SPC t t" . habamax-toggle-theme)
+   ("<backspace>" . dired-jump)
    :map
    minibuffer-mode-map
    ("<escape>" . minibuffer-keyboard-quit))
   :init
-  (evil-mode))
+  (evil-mode)
+  (add-to-list 'evil-emacs-state-modes 'elfeed-search-mode)
+  (add-to-list 'evil-emacs-state-modes 'elfeed-show-mode))
 
 (use-package icomplete
   :init
@@ -280,17 +289,6 @@
     (setq-local completion-at-point-functions
                 (cons #'tempel-expand
                       completion-at-point-functions))))
-
-(use-package iedit
-  :bind (("C-c ;" . iedit-mode)
-         ("C-;" . iedit-mode)
-         ("M-n" . habamax-iedit-dwim)
-         ("M-p" . habamax-iedit-dwim))
-  :config
-  (defun habamax-iedit-dwim ()
-    "Select a single thing for iedit-mode."
-    (interactive)
-    (iedit-mode 1)))
 
 (use-package rainbow-delimiters
   :hook ((emacs-lisp-mode lisp-mode) . rainbow-delimiters-mode))
@@ -402,13 +400,6 @@
   (setq markdown-asymmetric-header t)
   (setq markdown-command
         "pandoc -s -M fontsize=18pt -M maxwidth=60em --highlight-style tango"))
-
-(use-package elfeed
-  :config
-  (when-let* ((feed-dir (or (getenv "ORG") "~/org"))
-              (feeds (file-name-concat feed-dir ".conf" "elfeeds.el"))
-              (file-exists-p feeds))
-    (load feeds)))
 
 (use-package erc
   :ensure nil
