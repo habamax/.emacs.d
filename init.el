@@ -278,9 +278,6 @@
           (python-mode . python-ts-mode)
           (gdscript-mode . gdscript-ts-mode))))
 
-(use-package devdocs
-  :bind (("C-h D" . devdocs-lookup)))
-
 (use-package gdscript-mode
   :hook (gdscript-ts-mode . habamax-gdscript-ts-bool-hl)
   :bind
