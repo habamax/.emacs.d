@@ -148,7 +148,6 @@
   :bind
   (:map
    evil-normal-state-map
-   ("SPC e e" . eval-last-sexp)
    ("SPC v" . eval-last-sexp)
    ("SPC V" . eval-defun)
    ("SPC b" . switch-to-buffer)
