@@ -94,6 +94,12 @@
 
 (defalias 'perl-mode 'cperl-mode)
 
+(when +IS-WSL+
+  (setq browse-url-firefox-program "firefox.exe")
+  (defun browse-url-can-use-xdg-open () nil))
+(when (or +IS-WINDOWS+ +IS-WSL+)
+  (setq epg-pinentry-mode 'loopback))
+
 ;; packages
 (with-eval-after-load 'package
   (add-to-list 'package-archives
@@ -107,45 +113,25 @@
 (use-package habamax
   :load-path "lisp"
   :bind
-  (("C-c o i" . habamax-open-user-emacs-file)
-   ("C-c o f" . habamax-open-file-manager)
-   ("C-c o r" . recentf)
-   ("C-c o x" . scratch-buffer)
+  (("C-c o f" . habamax-open-file-manager)
    ("M-;" . habamax-toggle-comment)
-   ("C-^" . habamax-join-line)
    ("C-c DEL" . kill-backward-up-list)
    ("C-c C-d" . delete-pair)
-   ("M-o" . delete-blank-lines)
    ([remap list-buffers] . ibuffer)
    ([remap eww-search-words] . habamax-web-search)
-   ("C-c d" . duplicate-dwim)
    ("M-s >" . habamax-grep-current-word)
    ("M-s g" . grep)
    ("M-s t" . habamax-grep-todo)
    ("C-c t r" . habamax-reload-current-theme)
-   ("C-c t n" . display-line-numbers-mode)
-   ("C-c t SPC" . whitespace-mode)
    ("C-c t s" . flyspell-mode)
    ("C-c t m" . flymake-mode)
-   ("C-c t l" . hl-line-mode)
    ("C-c t f" . display-fill-column-indicator-mode)
-   ("C-c t t" . habamax-toggle-theme)
-   ("C-c t a" . habamax-toggle-alpha)
    ("C-c t v" . visible-mode)
    ("C-x I" . habamax-insert-lorem)
    ("C-=" . text-scale-adjust)
    ("C--" . text-scale-adjust)
-   ("C-c SPC SPC" . delete-trailing-whitespace)
    :repeat-map habamax-toggle-theme-repeat-map
-   ("t" . habamax-toggle-theme)
-   :repeat-map habamax-duplicate-repeat-map
-   ("d" . duplicate-dwim))
-  :init
-  (when +IS-WSL+
-    (setq browse-url-firefox-program "firefox.exe")
-    (defun browse-url-can-use-xdg-open () nil))
-  (when (or +IS-WINDOWS+ +IS-WSL+)
-    (setq epg-pinentry-mode 'loopback))
+   ("t" . habamax-toggle-theme))
   :custom-face
   (org-document-title ((t (:height 1.5))))
   (org-agenda-structure ((t (:height 1.5))))
@@ -162,6 +148,7 @@
   :bind
   (:map
    evil-normal-state-map
+   ("SPC e e" . eval-last-sexp)
    ("SPC v" . eval-last-sexp)
    ("SPC V" . eval-defun)
    ("SPC b" . switch-to-buffer)
@@ -184,8 +171,8 @@
    ("<escape>" . minibuffer-keyboard-quit))
   :init
   (evil-mode)
-  (add-to-list 'evil-emacs-state-modes 'elfeed-search-mode)
-  (add-to-list 'evil-emacs-state-modes 'elfeed-show-mode))
+  :config
+  (require 'habamax))
 
 (use-package icomplete
   :init
