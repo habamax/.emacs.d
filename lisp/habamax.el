@@ -2,6 +2,7 @@
 ;;; Commentary:
 ;;  Bunch of misc functions.
 ;;; Code:
+;; todo: make it autoload?
 
 (require 'thingatpt)
 
