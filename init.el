@@ -74,6 +74,9 @@
 (setq backup-directory-alist `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
 
+(setq ediff-split-window-function 'split-window-horizontally)
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
+
 (setq display-buffer-alist
       '(("\\*Calendar*"
          (display-buffer-at-bottom))
@@ -137,6 +140,20 @@
   '(outline-6 ((t (:height 1.0 :weight bold))))
   '(outline-7 ((t (:height 1.0 :weight bold))))
   '(outline-8 ((t (:height 1.0 :weight bold)))))
+
+(when (treesit-available-p)
+  (setq treesit-font-lock-level 2)
+  (setq major-mode-remap-alist
+        '((yaml-mode . yaml-ts-mode)
+          (c-mode . c-ts-mode)
+          (c++-mode . c++-ts-mode)
+          (c-or-c++-mode . c-or-c++-ts-mode)
+          (java-mode . java-ts-mode)
+          (javascript-mode . js-ts-mode)
+          (js-json-mode . json-ts-mode)
+          (css-mode . css-ts-mode)
+          (python-mode . python-ts-mode)
+          (gdscript-mode . gdscript-ts-mode))))
 
 ;; packages
 (with-eval-after-load 'package
@@ -224,12 +241,6 @@
   (setq whitespace-style '(face trailing tabs tab-mark))
   (setq whitespace-display-mappings '((tab-mark 9 [8250 9]))))
 
-(use-package ediff
-  :ensure nil
-  :config
-  (setq ediff-split-window-function 'split-window-horizontally)
-  (setq ediff-window-setup-function 'ediff-setup-windows-plain))
-
 (use-package magit
   :bind (("C-x g" . magit-file-dispatch)
          :map magit-mode-map ("C-<tab>")))
@@ -266,23 +277,6 @@
 (use-package eglot
   :commands eglot)
 
-(use-package treesit
-  :ensure nil
-  :when (treesit-available-p)
-  :init
-  (setq treesit-font-lock-level 2)
-  (setq major-mode-remap-alist
-        '((yaml-mode . yaml-ts-mode)
-          (c-mode . c-ts-mode)
-          (c++-mode . c++-ts-mode)
-          (c-or-c++-mode . c-or-c++-ts-mode)
-          (java-mode . java-ts-mode)
-          (javascript-mode . js-ts-mode)
-          (js-json-mode . json-ts-mode)
-          (css-mode . css-ts-mode)
-          (python-mode . python-ts-mode)
-          (gdscript-mode . gdscript-ts-mode))))
-
 (use-package gdscript-mode
   :hook (gdscript-ts-mode . habamax-gdscript-ts-bool-hl)
   :bind
@@ -314,16 +308,6 @@
       (compile (concat python " " (shell-quote-argument file-name))))))
 
 (use-package markdown-mode
-  :bind (:map markdown-mode-map
-              ("M-n")
-              ("M-p")
-         :repeat-map habamax-markdown-repeat-map
-         ("f" . markdown-outline-next-same-level)
-         ("b" . markdown-outline-previous-same-level)
-         ("n" . markdown-outline-next)
-         ("p" . markdown-outline-previous)
-         ("v" . markdown-cycle)
-         ("<backtab>" . markdown-shifttab))
   :config
   (setq markdown-fontify-code-blocks-natively t)
   (setq markdown-unordered-list-item-prefix "  - ")
