@@ -45,11 +45,6 @@ Otherwise call well known `comment-dwim'"
       (kill-ring-save (region-beginning) (region-end) (use-region-p))
     (kill-ring-save (line-beginning-position) (line-beginning-position 2))))
 
-(defun habamax-diff-current-buffer ()
-  "Search current word using `grep' and `grep-command'"
-  (interactive)
-  (diff-buffer-with-file (buffer-name)))
-
 (defun habamax-grep-current-word ()
   "Search current word using `grep' and `grep-command'"
   (interactive)
@@ -73,6 +68,13 @@ Otherwise call well known `comment-dwim'"
        (directory-files path
                         nil
                         directory-files-no-dot-files-regexp))))))
+
+(defun habamax-toggle-linenr ()
+  "Toggle line numbers and hl-line-mode."
+  (interactive)
+  (setq-local display-line-numbers-type 'relative)
+  (display-line-numbers-mode 'toggle)
+  (hl-line-mode 'toggle))
 
 (defun habamax-toggle-theme ()
   "Toggle my themes."

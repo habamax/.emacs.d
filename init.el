@@ -132,7 +132,6 @@
    ("C-c t t" . habamax-toggle-theme)
    ("C-c t a" . habamax-toggle-alpha)
    ("C-c t v" . visible-mode)
-   ("C-c t d" . habamax-diff-current-buffer)
    ("C-x I" . habamax-insert-lorem)
    ("C-=" . text-scale-adjust)
    ("C--" . text-scale-adjust)
@@ -162,12 +161,20 @@
 
 (use-package evil
   :bind
-  (:map evil-normal-state-map
-        ("SPC b" . switch-to-buffer)
-        ("SPC e" . find-file)
-        ("SPC f e" . project-find-file)
-        ("SPC f i" . habamax-open-user-emacs-file)
-        ("SPC f m" . recentf))
+  (:map
+   evil-normal-state-map
+   ("SPC b" . switch-to-buffer)
+   ("SPC e" . find-file)
+   ("SPC f e" . project-find-file)
+   ("SPC f i" . habamax-open-user-emacs-file)
+   ("SPC f m" . recentf)
+   ("SPC T SPC" . delete-trailing-whitespace)
+   ("SPC t n" . habamax-toggle-linenr)
+   ("SPC t a" . habamax-toggle-alpha)
+   ("SPC t t" . habamax-toggle-theme)
+   :map
+   minibuffer-mode-map
+   ("<escape>" . minibuffer-keyboard-quit))
   :init
   (evil-mode))
 
@@ -408,15 +415,6 @@
   :commands habamax-erc
   :config
   (require 'habamax-erc))
-
-(use-package eww
-  :ensure nil
-  :bind
-  (:map eww-mode-map
-        ("j" . habamax-eww-jump-to-url-on-page)
-        ("J" . habamax-eww-visit-url-on-page))
-  :config
-  (require 'habamax-eww))
 
 (use-package gnus
   :ensure nil
