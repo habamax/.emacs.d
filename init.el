@@ -168,34 +168,35 @@
 (use-package evil
   :bind
   (:map
-   evil-normal-state-map
-   ("SPC v" . eval-last-sexp)
-   ("SPC V" . eval-defun)
-   ("SPC b" . switch-to-buffer)
-   ("SPC e" . find-file)
-   ("SPC f e" . project-find-file)
-   ("SPC f p" . project-switch-project)
-   ("SPC f i" . habamax-open-user-emacs-file)
-   ("SPC f m" . recentf)
-   ("SPC f b" . bookmark-jump)
-   ("SPC f x" . scratch-buffer)
-   ("SPC 8" . habamax-grep-current-word)
-   ("SPC z" . imenu)
-   ("SPC T SPC" . delete-trailing-whitespace)
-   ("SPC t n" . habamax-toggle-linenr)
-   ("SPC t s" . flyspell-mode)
-   ("SPC t m" . flymake-mode)
-   ("SPC t a" . habamax-toggle-alpha)
-   ("SPC t t" . habamax-toggle-theme)
-   ("SPC t r" . habamax-reload-current-theme)
-   ("<backspace>" . dired-jump)
-   :map
    minibuffer-mode-map
    ("<escape>" . minibuffer-keyboard-quit)
    :repeat-map habamax-toggle-theme-repeat-map
    ("t" . habamax-toggle-theme))
   :init
-  (evil-mode))
+  (evil-mode)
+  (evil-define-key 'normal 'global
+    (kbd "SPC v") 'eval-last-sexp
+    (kbd "SPC V") 'eval-defun
+    (kbd "SPC b") 'switch-to-buffer
+    (kbd "SPC e") 'find-file
+    (kbd "SPC f e") 'project-find-file
+    (kbd "SPC f p") 'project-switch-project
+    (kbd "SPC f i") 'habamax-open-user-emacs-file
+    (kbd "SPC f m") 'recentf
+    (kbd "SPC f b") 'bookmark-jump
+    (kbd "SPC f x") 'scratch-buffer
+    (kbd "SPC 8") 'habamax-grep-current-word
+    (kbd "SPC z") 'imenu
+    (kbd "SPC T SPC") 'delete-trailing-whitespace
+    (kbd "SPC t n") 'habamax-toggle-linenr
+    (kbd "SPC t s") 'flyspell-mode
+    (kbd "SPC t m") 'flymake-mode
+    (kbd "SPC t a") 'habamax-toggle-alpha
+    (kbd "SPC t t") 'habamax-toggle-theme
+    (kbd "SPC t r") 'habamax-reload-current-theme
+    (kbd "<backspace>") 'dired-jump)
+  (evil-define-key 'visual 'global
+    (kbd "SPC v") 'eval-region))
 
 (use-package evil-surround
   :after evil
