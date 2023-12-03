@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;  Bunch of misc functions.
 ;;; Code:
-;; todo: make it autoload?
 
 (require 'thingatpt)
 
@@ -27,6 +26,30 @@ Otherwise call well known `comment-dwim'"
     (comment-or-uncomment-region (line-beginning-position) (line-end-position))
     (forward-line))))
 
+(defun habamax-join-line ()
+  "Join next line."
+  (interactive)
+  (delete-indentation 1))
+
+(defun habamax-kill-region ()
+  "Kill region if mark is active, kill whole line otherwise."
+  (interactive)
+  (if (use-region-p)
+      (kill-region (region-beginning) (region-end) (use-region-p))
+    (kill-region (line-beginning-position) (line-beginning-position 2))))
+
+(defun habamax-kill-ring-save ()
+  "Save region in kill ring if mark is active, save whole line otherwise."
+  (interactive)
+  (if (use-region-p)
+      (kill-ring-save (region-beginning) (region-end) (use-region-p))
+    (kill-ring-save (line-beginning-position) (line-beginning-position 2))))
+
+(defun habamax-diff-current-buffer ()
+  "Search current word using `grep' and `grep-command'"
+  (interactive)
+  (diff-buffer-with-file (buffer-name)))
+
 (defun habamax-grep-current-word ()
   "Search current word using `grep' and `grep-command'"
   (interactive)
@@ -37,12 +60,19 @@ Otherwise call well known `comment-dwim'"
   (interactive)
   (grep (concat grep-command "\"(TODO|FIXME|XXX):\" .")))
 
-(defun habamax-toggle-linenr ()
-  "Toggle line numbers and hl-line-mode."
+(defun habamax-insert-lorem ()
+  "Select and insert text file from lorem/ directory located in
+`user-emacs-directory'"
   (interactive)
-  (setq-local display-line-numbers-type 'relative)
-  (display-line-numbers-mode 'toggle)
-  (hl-line-mode 'toggle))
+  (let ((path (locate-user-emacs-file "lorem/")))
+    (insert-file-contents
+     (file-name-concat
+      path
+      (completing-read
+       "Insert lorem: "
+       (directory-files path
+                        nil
+                        directory-files-no-dot-files-regexp))))))
 
 (defun habamax-toggle-theme ()
   "Toggle my themes."
